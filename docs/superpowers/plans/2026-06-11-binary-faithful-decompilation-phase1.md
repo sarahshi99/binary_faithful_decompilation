@@ -279,10 +279,12 @@ Create `analysis/decompile_faithfulness/compile.py` with:
 
 Implementation rules:
 
-- Write source to `<output_dir>/<case_id>__<candidate_id>__<opt_level>.c`.
-- Compile object with `/usr/bin/gcc -std=c11 -Wall -Wextra -Werror -<opt_level> -c source.c -o source.o`.
-- Compile executable with `/usr/bin/gcc -std=c11 -Wall -Wextra -Werror -<opt_level> source.c -o source.exe`.
+- Write function-only source to `<output_dir>/<case_id>__<candidate_id>__<opt_level>.function.c`.
+- Write harness source from `fixtures.render_translation_unit(...)` to `<output_dir>/<case_id>__<candidate_id>__<opt_level>.harness.c`.
+- Compile the object from the function-only source with `/usr/bin/gcc -std=c11 -Wall -Wextra -Werror -<opt_level> -c function.c -o function.o`.
+- Compile the executable from the harness source with `/usr/bin/gcc -std=c11 -Wall -Wextra -Werror -<opt_level> harness.c -o harness.exe`.
 - Run the executable only if both compile commands succeed.
+- Set `CompileResult.source_path` to the function-only source path so feature extraction remains tied to the candidate function, not the test harness.
 - Set `behavior_passed=True` only when executable exit code is `0`.
 - Capture stdout and stderr for all commands.
 
