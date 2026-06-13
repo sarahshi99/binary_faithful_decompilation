@@ -1,12 +1,32 @@
 # Binary-Faithful Decompilation Phase 1 Audit Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use `superpowers:executing-plans` only, or execute this plan manually in the current session. Do not use `superpowers:subagent-driven-development`, `superpowers:dispatching-parallel-agents`, Task/Spawn subagents, reviewer subagents, parallel-agent dispatch, `tool_search` discovery, or multi-agent reviewer discovery. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Build a CPU-only audit scaffold that tests whether recompiled binary feature distance can rank faithful C candidates above plausible-but-wrong candidates, then extend the same scaffold to slot-level localization and real-project transfer.
 
 **Architecture:** Add a small `analysis/decompile_faithfulness/` package with focused modules for source-known fixtures, compile/run gates, rule-based counterfactual generation, binary feature extraction, ranking metrics, reporting, and slot localization. Keep Phase 1A model-agnostic: no GPU, no training, no Ghidra/RetDec/angr dependency, and no LLM API calls are required for the first kill gate.
 
 **Tech Stack:** Python standard library, `/usr/bin/gcc`, `/usr/bin/objdump`, `/usr/bin/nm`, `/usr/bin/readelf`, direct `unittest` tests, compact JSON/Markdown outputs under `docs/paper_agent/` and optional larger artifacts under `analysis_outputs/decompile_faithfulness/`.
+
+---
+
+## Current State And Serial Execution Rules
+
+Status as of 2026-06-13 CST:
+
+- Branch: `phase1a-audit`.
+- Completed and committed: Tasks 1-5, through commit `267c0f9` (`analysis: add binary feature ranking audit`).
+- Initial Phase 1A result: `pairwise_auc=0.875`, `top1_faithful_rate=0.6667`, `verdict=inconclusive`, with a return-value operand-order blind spot.
+- Current uncommitted follow-up: Task 5.1 adds operand-sensitive `instruction_signature_l1`, regenerating Phase 1A to `pairwise_auc=1.0000`, `top1_faithful_rate=1.0000`, `verdict=continue`.
+- Before any new experiment, close Task 5.1: run fresh verification, do local diff review fallback, and commit only the Phase 1A.1 files.
+- Next experiment after Task 5.1 closes: Task 6, Phase 1B realistic negatives input format. Do not jump directly to Task 7 localization or Task 8 real-project transfer, because current evidence is still controlled mutation-style.
+
+Serial execution policy:
+
+- Execute one task at a time in the current Codex session.
+- Do not auto-discover or invoke subagent, reviewer, Task/Spawn, parallel-agent, or multi-agent tools.
+- If a review gate is needed, record `reviewer_gate_disabled`, run local diff review plus fresh verification, and continue.
+- If a future prompt manually names a Superpowers skill, run only that named skill; if it requires subagents or tool discovery, stop that path and use the local serial fallback.
 
 ---
 
@@ -719,6 +739,43 @@ git add \
   docs/superpowers/plans/2026-06-11-binary-faithful-decompilation-phase1.md
 git commit -m "analysis: add binary feature ranking audit"
 ```
+
+### Task 5.1: Operand-Sensitive Feature Follow-Up
+
+**Files:**
+- Modify: `analysis/decompile_faithfulness/features.py`
+- Modify: `analysis/decompile_faithfulness/report.py`
+- Modify: `tests/test_decompile_faithfulness_features.py`
+- Regenerate: `docs/paper_agent/decompile_faithfulness_phase1_audit.json`
+- Regenerate: `docs/paper_agent/decompile_faithfulness_phase1_audit.md`
+- Modify: `docs/paper_agent/decompile_faithfulness_phase1_audit.zh.md`
+- Regenerate: `analysis_outputs/decompile_faithfulness/phase1a/records.jsonl`
+
+- [x] **Step 1: Investigate zero-distance return-value failure**
+
+Compare `objdump -d` for `absdiff__original__O0.function.o` and `absdiff__mut_return_a_minus_b_to_b_minus_a__O0.function.o`.
+
+Finding: opcode counts, instruction counts, and immediate sets match, but operand order differs in the first return block. The original metric dropped operand-sensitive instruction signatures, so it assigned `distance=0.0` to a behavior-changing return-value mutation.
+
+- [x] **Step 2: Write failing regression test**
+
+Add `test_feature_distance_detects_operand_order_return_change` to `tests/test_decompile_faithfulness_features.py`.
+
+Expected before fix: failure with `AssertionError: 0.0 not greater than 0.0`.
+
+- [x] **Step 3: Implement minimal feature fix**
+
+Add `instruction_signature_counts` to `BinaryFeatureVector`, normalize disassembly operands, and add `instruction_signature_l1` to `feature_distance`.
+
+- [x] **Step 4: Regenerate audit**
+
+Run:
+
+```bash
+/home/shx/miniconda3/envs/dllm_env/bin/python -m analysis.decompile_faithfulness.run_candidate_ranking_audit
+```
+
+Expected after fix: `pairwise_auc=1.0`, `top1_faithful_rate=1.0`, `verdict=continue` on the controlled Phase 1A mutation set.
 
 ---
 

@@ -41,6 +41,14 @@ def write_markdown(path: Path, payload: dict[str, Any]) -> None:
         f"- Pairwise AUC: `{payload['pairwise_auc']:.4f}`",
         f"- Verdict: `{payload['verdict']}`",
         "",
+        "## Feature Set",
+        "",
+        (
+            "Phase 1A.1 includes an operand-sensitive `instruction_signature_l1` component. "
+            "This was added after the opcode/immediate/count-only metric missed the "
+            "`return a - b` -> `return b - a` behavior-changing counterfactual."
+        ),
+        "",
         "## Mutation Buckets",
         "",
         "| Mutation type | Candidate count | Mean distance |",
@@ -92,6 +100,16 @@ def write_markdown(path: Path, payload: dict[str, Any]) -> None:
                 "This is a controlled mutation-style audit, not a full decompilation system. "
                 "It only tests whether the proposed binary feature distance contains enough "
                 "faithfulness signal to justify the next experiment."
+            ),
+            "",
+            "## Next Route",
+            "",
+            (
+                "First close the uncommitted Phase 1A.1 follow-up with fresh verification, "
+                "local diff review fallback, and a focused commit. Then proceed serially to "
+                "Phase 1B realistic negatives input support. Phase 1C slot localization and "
+                "real-project transfer should wait until realistic negatives confirm that the "
+                "signal survives beyond controlled mutations."
             ),
             "",
         ]

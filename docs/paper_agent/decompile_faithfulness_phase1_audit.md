@@ -16,17 +16,21 @@ Can recompiled binary feature distance rank faithful C candidates above plausibl
 
 ## Metrics
 
-- Top-1 faithful rate: `0.6667`
-- Pairwise AUC: `0.8750`
-- Verdict: `inconclusive`
+- Top-1 faithful rate: `1.0000`
+- Pairwise AUC: `1.0000`
+- Verdict: `continue`
+
+## Feature Set
+
+Phase 1A.1 includes an operand-sensitive `instruction_signature_l1` component. This was added after the opcode/immediate/count-only metric missed the `return a - b` -> `return b - a` behavior-changing counterfactual.
 
 ## Mutation Buckets
 
 | Mutation type | Candidate count | Mean distance |
 |---|---:|---:|
-| `constant` | 1 | 1.0000 |
-| `predicate` | 2 | 2.0000 |
-| `return_value` | 1 | 0.0000 |
+| `constant` | 1 | 3.0000 |
+| `predicate` | 2 | 4.0000 |
+| `return_value` | 1 | 4.0000 |
 
 ## Kill Criterion
 
@@ -36,10 +40,10 @@ Can recompiled binary feature distance rank faithful C candidates above plausibl
 
 ## Interpretation
 
-The controlled ranking signal is inconclusive. Add more cases and harder negatives before deciding whether to keep or kill the method.
-
-## Observed Blind Spots
-
-The current feature set assigns zero mean distance to these wrong-candidate buckets: `return_value`. This means opcode/immediate/count features miss at least one semantic error family and should not be treated as a complete binary-faithfulness metric.
+The controlled ranking signal passes the first gate. The next step is to add realistic LLM/decompiler negatives before making paper-level claims.
 
 This is a controlled mutation-style audit, not a full decompilation system. It only tests whether the proposed binary feature distance contains enough faithfulness signal to justify the next experiment.
+
+## Next Route
+
+First close the uncommitted Phase 1A.1 follow-up with fresh verification, local diff review fallback, and a focused commit. Then proceed serially to Phase 1B realistic negatives input support. Phase 1C slot localization and real-project transfer should wait until realistic negatives confirm that the signal survives beyond controlled mutations.

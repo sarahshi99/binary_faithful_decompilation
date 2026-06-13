@@ -2,15 +2,15 @@
   "by_mutation_type": {
     "constant": {
       "candidate_count": 1,
-      "mean_distance": 1.0
+      "mean_distance": 3.0
     },
     "predicate": {
       "candidate_count": 2,
-      "mean_distance": 2.0
+      "mean_distance": 4.0
     },
     "return_value": {
       "candidate_count": 1,
-      "mean_distance": 0.0
+      "mean_distance": 4.0
     }
   },
   "candidate_count": 7,
@@ -19,10 +19,10 @@
   "excluded_compile_fail": 0,
   "faithful_count": 3,
   "opt_level": "O0",
-  "pairwise_auc": 0.875,
+  "pairwise_auc": 1.0,
   "plausible_wrong_count": 4,
   "records_path": "analysis_outputs/decompile_faithfulness/phase1a/records.jsonl",
-  "top1_faithful_count": 2,
-  "top1_faithful_rate": 0.6666666666666666,
-  "verdict": "inconclusive"
+  "top1_faithful_count": 3,
+  "top1_faithful_rate": 1.0,
+  "verdict": "continue"
 }

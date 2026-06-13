@@ -66,6 +66,31 @@ class DecompileFaithfulnessFeatureTest(unittest.TestCase):
         self.assertGreater(distance.total, 0.0)
         self.assertGreaterEqual(distance.components["immediate_symmetric_diff"], 1.0)
 
+    def test_feature_distance_detects_operand_order_return_change(self) -> None:
+        case = fixtures.case_by_id("absdiff")
+        wrong_source = case.function_source.replace("return a - b;", "return b - a;")
+        with tempfile.TemporaryDirectory() as td:
+            out = Path(td)
+            original = ccompile.compile_candidate(
+                case,
+                "original",
+                case.function_source,
+                out,
+                opt_level="O0",
+            )
+            wrong = ccompile.compile_candidate(
+                case,
+                "return_swap",
+                wrong_source,
+                out,
+                opt_level="O0",
+            )
+            left = features.extract_binary_features(original.object_path)
+            right = features.extract_binary_features(wrong.object_path)
+        distance = features.feature_distance(left, right)
+        self.assertGreater(distance.total, 0.0)
+        self.assertGreater(distance.components["instruction_signature_l1"], 0.0)
+
 
 if __name__ == "__main__":
     unittest.main()
