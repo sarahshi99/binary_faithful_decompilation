@@ -17,6 +17,8 @@ class BinaryFeatureVector:
     ret_count: int
     opcode_counts: dict[str, int]
     instruction_signature_counts: dict[str, int]
+    instruction_bigram_counts: dict[str, int]
+    branch_return_immediate_pair_counts: dict[str, int]
     immediates: set[str]
     symbols: set[str]
 
@@ -41,6 +43,8 @@ def extract_binary_features(object_path: Path) -> BinaryFeatureVector:
 
     opcode_counts: Counter[str] = Counter()
     instruction_signature_counts: Counter[str] = Counter()
+    instruction_signatures: list[str] = []
+    instructions: list[tuple[str, str]] = []
     immediates: set[str] = set()
     branch_count = 0
     call_count = 0
@@ -56,8 +60,11 @@ def extract_binary_features(object_path: Path) -> BinaryFeatureVector:
         parts = text.split(None, 1)
         opcode = parts[0].lower()
         operands = parts[1] if len(parts) > 1 else ""
+        instructions.append((opcode, operands))
         opcode_counts[opcode] += 1
-        instruction_signature_counts[_instruction_signature(opcode, operands)] += 1
+        signature = _instruction_signature(opcode, operands)
+        instruction_signature_counts[signature] += 1
+        instruction_signatures.append(signature)
         if opcode.startswith("j"):
             branch_count += 1
         if opcode.startswith("call"):
@@ -75,6 +82,8 @@ def extract_binary_features(object_path: Path) -> BinaryFeatureVector:
         ret_count=ret_count,
         opcode_counts=dict(opcode_counts),
         instruction_signature_counts=dict(instruction_signature_counts),
+        instruction_bigram_counts=dict(_bigrams(instruction_signatures)),
+        branch_return_immediate_pair_counts=dict(_branch_return_immediate_pairs(instructions)),
         immediates=immediates,
         symbols=symbols,
     )
@@ -83,6 +92,11 @@ def extract_binary_features(object_path: Path) -> BinaryFeatureVector:
 def feature_distance(left: BinaryFeatureVector, right: BinaryFeatureVector) -> FeatureDistance:
     opcodes = set(left.opcode_counts) | set(right.opcode_counts)
     signatures = set(left.instruction_signature_counts) | set(right.instruction_signature_counts)
+    bigrams = set(left.instruction_bigram_counts) | set(right.instruction_bigram_counts)
+    branch_return_pairs = (
+        set(left.branch_return_immediate_pair_counts)
+        | set(right.branch_return_immediate_pair_counts)
+    )
     components = {
         "instruction_count_abs": float(abs(left.instruction_count - right.instruction_count)),
         "branch_count_abs": float(abs(left.branch_count - right.branch_count)),
@@ -98,6 +112,24 @@ def feature_distance(left: BinaryFeatureVector, right: BinaryFeatureVector) -> F
                     - right.instruction_signature_counts.get(signature, 0)
                 )
                 for signature in signatures
+            )
+        ),
+        "instruction_bigram_l1": float(
+            sum(
+                abs(
+                    left.instruction_bigram_counts.get(bigram, 0)
+                    - right.instruction_bigram_counts.get(bigram, 0)
+                )
+                for bigram in bigrams
+            )
+        ),
+        "branch_return_immediate_pair_l1": float(
+            sum(
+                abs(
+                    left.branch_return_immediate_pair_counts.get(pair, 0)
+                    - right.branch_return_immediate_pair_counts.get(pair, 0)
+                )
+                for pair in branch_return_pairs
             )
         ),
         "immediate_symmetric_diff": float(len(left.immediates ^ right.immediates)),
@@ -121,6 +153,42 @@ def _normalize_immediate(value: str) -> str:
         hex_part = value[1:] if value[0] in "+-" else value
         return f"{sign}{int(hex_part, 16)}"
     return str(int(value, 10))
+
+
+def _bigrams(signatures: list[str]) -> Counter[str]:
+    return Counter(
+        f"{left} -> {right}"
+        for left, right in zip(signatures, signatures[1:])
+    )
+
+
+def _branch_return_immediate_pairs(instructions: list[tuple[str, str]]) -> Counter[str]:
+    pairs: Counter[str] = Counter()
+    for index, (opcode, _operands) in enumerate(instructions):
+        if not _is_conditional_jump(opcode):
+            continue
+        immediate = _next_return_immediate(instructions[index + 1 : index + 6])
+        if immediate is not None:
+            pairs[f"{opcode}->{immediate}"] += 1
+    return pairs
+
+
+def _is_conditional_jump(opcode: str) -> bool:
+    return opcode.startswith("j") and opcode not in {"jmp", "jmpq"}
+
+
+def _next_return_immediate(instructions: list[tuple[str, str]]) -> str | None:
+    for opcode, operands in instructions:
+        if opcode.startswith("ret") or _is_conditional_jump(opcode):
+            return None
+        if opcode.startswith("jmp"):
+            continue
+        if "%eax" not in operands and "%rax" not in operands:
+            continue
+        match = _IMMEDIATE_RE.search(operands)
+        if match:
+            return _normalize_immediate(match.group(0))
+    return None
 
 
 def _instruction_signature(opcode: str, operands: str) -> str:

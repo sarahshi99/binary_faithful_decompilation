@@ -1,0 +1,11 @@
+{
+  "faithful_count": 6,
+  "mean_faithful_slot_concentration": 0.5813286435106674,
+  "mean_wrong_slot_concentration": 0.7055957197683211,
+  "opt_level": "O2",
+  "pairwise_slot_concentration_auc": 0.5625,
+  "plausible_wrong_count": 8,
+  "record_count": 14,
+  "records_path": "analysis_outputs/decompile_faithfulness/phase1h_bigram_repair_phase1f/o2/records.jsonl",
+  "verdict": "inconclusive-or-redesign"
+}

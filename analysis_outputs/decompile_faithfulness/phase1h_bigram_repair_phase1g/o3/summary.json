@@ -1,0 +1,11 @@
+{
+  "faithful_count": 9,
+  "mean_faithful_slot_concentration": 0.3958454808989219,
+  "mean_wrong_slot_concentration": 0.569467261840386,
+  "opt_level": "O3",
+  "pairwise_slot_concentration_auc": 0.625,
+  "plausible_wrong_count": 12,
+  "record_count": 21,
+  "records_path": "analysis_outputs/decompile_faithfulness/phase1h_bigram_repair_phase1g/o3/records.jsonl",
+  "verdict": "weak-signal"
+}

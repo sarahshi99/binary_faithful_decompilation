@@ -27,7 +27,8 @@ Status as of 2026-06-13 CST:
 - Phase 1E multi-opt conservative score, using the minimum slot concentration across `O0/O1/O2/O3`, reaches `pairwise_auc=0.8472`.
 - Phase 1F adds `max3` and `sum_to_n` source-known cases. On the new cases alone, multi-opt min slot concentration reaches `pairwise_auc=0.7917`; combined across 5 cases / 35 candidates, it reaches `pairwise_auc=0.8250`.
 - Phase 1G adds `signum`, `is_power_of_two`, and `gcd_positive`. On these new cases alone, multi-opt min slot concentration drops to `pairwise_auc=0.6389`; combined across 8 cases / 56 candidates, it is borderline at `pairwise_auc=0.7552`.
-- Do not start Task 8 real-project transfer yet. The next method step should repair feature blind spots, especially operand/constant-sensitive signatures for return constants, compare immediates, condition direction, and sign-direction mistakes.
+- Phase 1H adds diagnostic order-sensitive components `instruction_bigram_l1` and `branch_return_immediate_pair_l1`. These expose the `signum` reversed-return blind spot (`branch_return_immediate_pair_l1=4.0` where old bag features were zero), but are not mapped into primary slot votes because simple order-sensitive voting can misread behavior-preserving rewrites.
+- Do not start Task 8 real-project transfer yet. The next method step should run a calibrated component-combination experiment over the source-known cases rather than hand-writing another single slot-vote rule.
 
 Serial execution policy:
 

@@ -1,0 +1,11 @@
+{
+  "faithful_count": 9,
+  "mean_faithful_slot_concentration": 0.35234235601315117,
+  "mean_wrong_slot_concentration": 0.6525345660503081,
+  "opt_level": "O1",
+  "pairwise_slot_concentration_auc": 0.7638888888888888,
+  "plausible_wrong_count": 12,
+  "record_count": 21,
+  "records_path": "analysis_outputs/decompile_faithfulness/phase1h_bigram_repair_phase1g/o1/records.jsonl",
+  "verdict": "continue-slot-calibration"
+}

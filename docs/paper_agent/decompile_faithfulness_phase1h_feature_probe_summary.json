@@ -1,0 +1,28 @@
+{
+  "case_count": 8,
+  "candidate_count": 56,
+  "faithful_count": 24,
+  "plausible_wrong_count": 32,
+  "diagnostic_components_added": [
+    "instruction_bigram_l1",
+    "branch_return_immediate_pair_l1"
+  ],
+  "primary_slot_vote_changed": false,
+  "combined_multi_opt": {
+    "min_slot_concentration_auc": 0.7552083333333334,
+    "mean_slot_concentration_auc": 0.75,
+    "max_slot_concentration_auc": 0.6979166666666666,
+    "range_slot_concentration_auc": 0.4270833333333333
+  },
+  "blind_spot_probe": {
+    "case_id": "signum",
+    "candidate_id": "manual_signum_reversed_signs",
+    "opt_level": "O0",
+    "instruction_bigram_l1": 4.0,
+    "branch_return_immediate_pair_l1": 4.0,
+    "instruction_signature_l1": 0.0,
+    "opcode_l1": 0.0,
+    "immediate_symmetric_diff": 0.0
+  },
+  "verdict": "diagnostic-feature-added-not-primary-score"
+}

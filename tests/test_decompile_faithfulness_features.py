@@ -91,6 +91,41 @@ class DecompileFaithfulnessFeatureTest(unittest.TestCase):
         self.assertGreater(distance.total, 0.0)
         self.assertGreater(distance.components["instruction_signature_l1"], 0.0)
 
+    def test_feature_distance_detects_same_instruction_bag_order_change(self) -> None:
+        case = fixtures.case_by_id("signum")
+        wrong_source = """int signum(int x) {
+    if (x < 0) {
+        return 1;
+    }
+    if (x > 0) {
+        return -1;
+    }
+    return 0;
+}
+"""
+        with tempfile.TemporaryDirectory() as td:
+            out = Path(td)
+            original = ccompile.compile_candidate(
+                case,
+                "original",
+                case.function_source,
+                out,
+                opt_level="O0",
+            )
+            wrong = ccompile.compile_candidate(
+                case,
+                "reversed_signs",
+                wrong_source,
+                out,
+                opt_level="O0",
+            )
+            left = features.extract_binary_features(original.object_path)
+            right = features.extract_binary_features(wrong.object_path)
+        distance = features.feature_distance(left, right)
+        self.assertEqual(distance.components["instruction_signature_l1"], 0.0)
+        self.assertGreater(distance.components["instruction_bigram_l1"], 0.0)
+        self.assertGreater(distance.components["branch_return_immediate_pair_l1"], 0.0)
+
 
 if __name__ == "__main__":
     unittest.main()
