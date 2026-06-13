@@ -46,4 +46,4 @@ This is a controlled mutation-style audit, not a full decompilation system. It o
 
 ## Next Route
 
-Phase 1B realistic negatives show that the naive global feature-distance ranker fails on behavior-preserving rewrites. Phase 1D slot calibration recovers signal at O0 but weakens at O2, so the next step is optimization-aware slot-local calibration before real-project transfer.
+Phase 1B realistic negatives show that the naive global feature-distance ranker fails on behavior-preserving rewrites. Phase 1D slot calibration recovers signal at O0 but weakens at O2. Phase 1E expands to 21 realistic candidates across `O0/O1/O2/O3`: single-opt slot AUCs are `0.9028/0.7361/0.6944/0.7500`, while raw global-distance AUCs are `0.1111/0.5000/0.5000/0.5833`. A multi-opt conservative score using the minimum slot concentration reaches `0.8472`, so the next step is to implement multi-opt slot-local calibration as the primary suspicion score before real-project transfer.

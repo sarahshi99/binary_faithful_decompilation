@@ -1,0 +1,11 @@
+{
+  "faithful_count": 9,
+  "mean_faithful_slot_concentration": 0.342907157335018,
+  "mean_wrong_slot_concentration": 0.6606230614851304,
+  "opt_level": "O1",
+  "pairwise_slot_concentration_auc": 0.7361111111111112,
+  "plausible_wrong_count": 12,
+  "record_count": 21,
+  "records_path": "analysis_outputs/decompile_faithfulness/phase1e_multi_opt_slot_calibration/o1/records.jsonl",
+  "verdict": "weak-signal"
+}

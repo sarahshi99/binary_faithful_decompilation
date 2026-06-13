@@ -15,7 +15,7 @@
 Status as of 2026-06-13 CST:
 
 - Branch: `phase1a-audit`.
-- Completed and committed: Tasks 1-7, through commit `81bfbc2` (`analysis: add binary feature slot localization audit`).
+- Completed and committed: Tasks 1-7 plus Phase 1D slot calibration, through commit `ccce212` (`analysis: add slot-local calibration audit`).
 - Initial Phase 1A result: `pairwise_auc=0.875`, `top1_faithful_rate=0.6667`, `verdict=inconclusive`, with a return-value operand-order blind spot.
 - Phase 1A.1 result: operand-sensitive `instruction_signature_l1` regenerates Phase 1A to `pairwise_auc=1.0000`, `top1_faithful_rate=1.0000`, `verdict=continue`.
 - Phase 1B input support is implemented, and Phase 1B realistic-negative smoke has been run with manual faithful rewrites and manual hard negatives.
@@ -23,7 +23,9 @@ Status as of 2026-06-13 CST:
 - Phase 1C controlled slot localization result: `hit_at_1=1.0000`, `hit_at_2=1.0000`, `hit_at_3=1.0000`.
 - Phase 1D slot-calibration result at `O0`: on the same realistic candidates, `pairwise_slot_concentration_auc=1.0000`, mean faithful slot concentration `0.6263`, mean wrong slot concentration `0.7559`, `verdict=continue-slot-calibration`.
 - Phase 1D O2 follow-up: `pairwise_slot_concentration_auc=0.6667`, mean faithful slot concentration `0.4352`, mean wrong slot concentration `0.7000`, `verdict=weak-signal`.
-- Do not start Task 8 real-project transfer yet. The next method step should expand optimization-aware slot-local calibration with more realistic hard negatives, faithful rewrites, and optimization levels.
+- Phase 1E expanded slot-calibration uses 21 realistic candidates across `O0/O1/O2/O3`: single-opt slot AUCs are `0.9028/0.7361/0.6944/0.7500`; raw global-distance AUCs are `0.1111/0.5000/0.5000/0.5833`.
+- Phase 1E multi-opt conservative score, using the minimum slot concentration across `O0/O1/O2/O3`, reaches `pairwise_auc=0.8472`.
+- Do not start Task 8 real-project transfer yet. The next method step should implement multi-opt slot-local calibration as the primary suspicion score, then broaden source-known cases before real-project transfer.
 
 Serial execution policy:
 

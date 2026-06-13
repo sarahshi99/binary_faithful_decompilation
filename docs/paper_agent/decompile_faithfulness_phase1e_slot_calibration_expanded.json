@@ -1,0 +1,66 @@
+{
+  "candidate_manifest": "docs/paper_agent/decompile_faithfulness_realistic_negatives_expanded.json",
+  "case_count": 3,
+  "candidate_count": 21,
+  "faithful_count": 9,
+  "plausible_wrong_count": 12,
+  "per_opt": {
+    "O0": {
+      "pairwise_slot_concentration_auc": 0.9027777777777778,
+      "global_distance_auc": 0.1111111111111111,
+      "mean_faithful_slot_concentration": 0.5035851790926348,
+      "mean_wrong_slot_concentration": 0.7481341264099884,
+      "verdict": "continue-slot-calibration"
+    },
+    "O1": {
+      "pairwise_slot_concentration_auc": 0.7361111111111112,
+      "global_distance_auc": 0.5,
+      "mean_faithful_slot_concentration": 0.342907157335018,
+      "mean_wrong_slot_concentration": 0.6606230614851304,
+      "verdict": "weak-signal"
+    },
+    "O2": {
+      "pairwise_slot_concentration_auc": 0.6944444444444444,
+      "global_distance_auc": 0.5,
+      "mean_faithful_slot_concentration": 0.3435295414462081,
+      "mean_wrong_slot_concentration": 0.6589234839234839,
+      "verdict": "weak-signal"
+    },
+    "O3": {
+      "pairwise_slot_concentration_auc": 0.75,
+      "global_distance_auc": 0.5833333333333334,
+      "mean_faithful_slot_concentration": 0.3621116176967241,
+      "mean_wrong_slot_concentration": 0.648258082497213,
+      "verdict": "continue-slot-calibration"
+    }
+  },
+  "multi_opt": {
+    "min_slot_concentration_auc": 0.8472222222222222,
+    "mean_slot_concentration_auc": 0.8055555555555556,
+    "max_slot_concentration_auc": 0.7638888888888888,
+    "range_slot_concentration_auc": 0.4305555555555556
+  },
+  "case_auc": {
+    "O0": {
+      "absdiff": 0.75,
+      "clamp8": 1.0,
+      "count_bits8": 0.9583333333333334
+    },
+    "O1": {
+      "absdiff": 0.6666666666666666,
+      "clamp8": 0.6666666666666666,
+      "count_bits8": 0.875
+    },
+    "O2": {
+      "absdiff": 0.6666666666666666,
+      "clamp8": 0.6666666666666666,
+      "count_bits8": 0.75
+    },
+    "O3": {
+      "absdiff": 0.6666666666666666,
+      "clamp8": 0.6666666666666666,
+      "count_bits8": 0.9166666666666666
+    }
+  },
+  "verdict": "continue-with-multi-opt-calibration"
+}

@@ -1,0 +1,11 @@
+{
+  "faithful_count": 9,
+  "mean_faithful_slot_concentration": 0.5035851790926348,
+  "mean_wrong_slot_concentration": 0.7481341264099884,
+  "opt_level": "O0",
+  "pairwise_slot_concentration_auc": 0.9027777777777778,
+  "plausible_wrong_count": 12,
+  "record_count": 21,
+  "records_path": "analysis_outputs/decompile_faithfulness/phase1e_slot_calibration_expanded_o0/records.jsonl",
+  "verdict": "continue-slot-calibration"
+}
