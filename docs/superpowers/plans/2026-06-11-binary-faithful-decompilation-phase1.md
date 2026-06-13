@@ -21,7 +21,9 @@ Status as of 2026-06-13 CST:
 - Phase 1B input support is implemented, and Phase 1B realistic-negative smoke has been run with manual faithful rewrites and manual hard negatives.
 - Phase 1B result: `pairwise_auc=0.5000`, `top1_faithful_rate=1.0000`, `verdict=kill-core-method` for the naive global feature-distance ranker.
 - Phase 1C controlled slot localization result: `hit_at_1=1.0000`, `hit_at_2=1.0000`, `hit_at_3=1.0000`.
-- Do not start Task 8 real-project transfer yet. The next method step should redesign scoring around slot-local feature mismatch and calibration rather than raw global source-candidate distance.
+- Phase 1D slot-calibration result at `O0`: on the same realistic candidates, `pairwise_slot_concentration_auc=1.0000`, mean faithful slot concentration `0.6263`, mean wrong slot concentration `0.7559`, `verdict=continue-slot-calibration`.
+- Phase 1D O2 follow-up: `pairwise_slot_concentration_auc=0.6667`, mean faithful slot concentration `0.4352`, mean wrong slot concentration `0.7000`, `verdict=weak-signal`.
+- Do not start Task 8 real-project transfer yet. The next method step should expand optimization-aware slot-local calibration with more realistic hard negatives, faithful rewrites, and optimization levels.
 
 Serial execution policy:
 

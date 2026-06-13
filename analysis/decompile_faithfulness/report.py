@@ -105,11 +105,10 @@ def write_markdown(path: Path, payload: dict[str, Any]) -> None:
             "## Next Route",
             "",
             (
-                "First close the uncommitted Phase 1A.1 follow-up with fresh verification, "
-                "local diff review fallback, and a focused commit. Then proceed serially to "
-                "Phase 1B realistic negatives input support. Phase 1C slot localization and "
-                "real-project transfer should wait until realistic negatives confirm that the "
-                "signal survives beyond controlled mutations."
+                "Phase 1B realistic negatives show that the naive global feature-distance "
+                "ranker fails on behavior-preserving rewrites. Phase 1D slot calibration "
+                "recovers signal at O0 but weakens at O2, so the next step is "
+                "optimization-aware slot-local calibration before real-project transfer."
             ),
             "",
         ]

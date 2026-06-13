@@ -46,4 +46,4 @@ This is a controlled mutation-style audit, not a full decompilation system. It o
 
 ## Next Route
 
-Phase 1B realistic negatives have now been run. With manual faithful rewrites and manual hard negatives included, the naive global feature-distance ranker falls to `pairwise_auc=0.5000`. Phase 1C controlled slot localization still reports `hit_at_1=1.0000`. The next step should not be real-project transfer yet; it should redesign the method around slot-local feature mismatch and calibration.
+Phase 1B realistic negatives show that the naive global feature-distance ranker fails on behavior-preserving rewrites. Phase 1D slot calibration recovers signal at O0 but weakens at O2, so the next step is optimization-aware slot-local calibration before real-project transfer.

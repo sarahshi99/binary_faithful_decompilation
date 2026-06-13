@@ -33,6 +33,23 @@ class DecompileFaithfulnessLocalizationTest(unittest.TestCase):
         self.assertAlmostEqual(summary["hit_at_1"], 0.5)
         self.assertAlmostEqual(summary["hit_at_2"], 1.0)
 
+    def test_slot_vote_concentration_tracks_localized_mismatch(self) -> None:
+        concentrated = {"constant": 9.0, "branch_predicate": 1.0, "control_structure": 0.0}
+        diffuse = {"constant": 4.0, "branch_predicate": 3.0, "control_structure": 3.0}
+        self.assertGreater(
+            localization.slot_vote_concentration(concentrated),
+            localization.slot_vote_concentration(diffuse),
+        )
+
+    def test_pairwise_suspicion_auc_treats_higher_score_as_more_wrong(self) -> None:
+        rows = [
+            localization.SuspicionRecord("a", "faithful", "faithful", 0.3),
+            localization.SuspicionRecord("a", "wrong", "plausible_wrong", 0.8),
+            localization.SuspicionRecord("b", "faithful", "faithful", 0.5),
+            localization.SuspicionRecord("b", "wrong", "plausible_wrong", 0.5),
+        ]
+        self.assertAlmostEqual(localization.pairwise_suspicion_auc(rows), 0.75)
+
 
 if __name__ == "__main__":
     unittest.main()

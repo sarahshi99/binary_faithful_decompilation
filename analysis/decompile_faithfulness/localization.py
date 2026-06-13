@@ -11,6 +11,14 @@ class LocalizationRecord:
     ranked_slots: list[str]
 
 
+@dataclass(frozen=True)
+class SuspicionRecord:
+    case_id: str
+    candidate_id: str
+    label: str
+    score: float
+
+
 def component_to_slot_votes(components: dict[str, float]) -> dict[str, float]:
     votes = {
         "branch_predicate": 0.0,
@@ -39,6 +47,13 @@ def component_to_slot_votes(components: dict[str, float]) -> dict[str, float]:
     return votes
 
 
+def slot_vote_concentration(votes: dict[str, float]) -> float:
+    total = sum(max(score, 0.0) for score in votes.values())
+    if total == 0.0:
+        return 0.0
+    return max(votes.values()) / total
+
+
 def rank_slots(votes: dict[str, float]) -> list[str]:
     return [
         slot
@@ -63,6 +78,23 @@ def compute_localization_summary(records: list[LocalizationRecord]) -> dict[str,
         "continue_to_sketch_localization": _hit_rate(records, 3) >= 0.70,
         "do_not_claim_localization": _hit_rate(records, 3) < 0.50,
     }
+
+
+def pairwise_suspicion_auc(records: list[SuspicionRecord]) -> float:
+    credit = 0.0
+    pairs = 0
+    for case_id in sorted({record.case_id for record in records}):
+        case_records = [record for record in records if record.case_id == case_id]
+        faithful = [record for record in case_records if record.label == "faithful"]
+        wrong = [record for record in case_records if record.label == "plausible_wrong"]
+        for faithful_record in faithful:
+            for wrong_record in wrong:
+                pairs += 1
+                if wrong_record.score > faithful_record.score:
+                    credit += 1.0
+                elif wrong_record.score == faithful_record.score:
+                    credit += 0.5
+    return credit / pairs if pairs else 0.0
 
 
 def _hit_rate(records: list[LocalizationRecord], k: int) -> float:
