@@ -28,7 +28,8 @@ Status as of 2026-06-13 CST:
 - Phase 1F adds `max3` and `sum_to_n` source-known cases. On the new cases alone, multi-opt min slot concentration reaches `pairwise_auc=0.7917`; combined across 5 cases / 35 candidates, it reaches `pairwise_auc=0.8250`.
 - Phase 1G adds `signum`, `is_power_of_two`, and `gcd_positive`. On these new cases alone, multi-opt min slot concentration drops to `pairwise_auc=0.6389`; combined across 8 cases / 56 candidates, it is borderline at `pairwise_auc=0.7552`.
 - Phase 1H adds diagnostic order-sensitive components `instruction_bigram_l1` and `branch_return_immediate_pair_l1`. These expose the `signum` reversed-return blind spot (`branch_return_immediate_pair_l1=4.0` where old bag features were zero), but are not mapped into primary slot votes because simple order-sensitive voting can misread behavior-preserving rewrites.
-- Do not start Task 8 real-project transfer yet. The next method step should run a calibrated component-combination experiment over the source-known cases rather than hand-writing another single slot-vote rule.
+- Phase 1I calibrated component-combination is negative: best in-sample AUC is `0.7604`, but leave-one-case-out AUC is only `0.6719`, with weak held-out performance on `signum`, `gcd_positive`, `max3`, and `sum_to_n`.
+- Do not start Task 8 real-project transfer. The next method step must redesign the representation or narrow the problem; simple binary feature distance, slot concentration, and small calibrated component combinations are not robust enough for real-project transfer.
 
 Serial execution policy:
 
