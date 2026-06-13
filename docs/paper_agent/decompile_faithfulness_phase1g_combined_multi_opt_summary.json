@@ -1,0 +1,31 @@
+{
+  "case_count": 8,
+  "candidate_count": 56,
+  "faithful_count": 24,
+  "plausible_wrong_count": 32,
+  "single_opt": {
+    "O0": {
+      "slot_concentration_auc": 0.8020833333333334,
+      "global_distance_auc": 0.16145833333333334
+    },
+    "O1": {
+      "slot_concentration_auc": 0.6979166666666666,
+      "global_distance_auc": 0.5260416666666666
+    },
+    "O2": {
+      "slot_concentration_auc": 0.6354166666666666,
+      "global_distance_auc": 0.5364583333333334
+    },
+    "O3": {
+      "slot_concentration_auc": 0.5885416666666666,
+      "global_distance_auc": 0.59375
+    }
+  },
+  "multi_opt": {
+    "min_slot_concentration_auc": 0.7552083333333334,
+    "mean_slot_concentration_auc": 0.75,
+    "max_slot_concentration_auc": 0.6979166666666666,
+    "range_slot_concentration_auc": 0.4270833333333333
+  },
+  "verdict": "borderline-continue-fix-feature-blind-spots"
+}

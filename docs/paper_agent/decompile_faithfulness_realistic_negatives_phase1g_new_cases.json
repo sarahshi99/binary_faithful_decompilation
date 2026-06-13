@@ -1,0 +1,143 @@
+[
+  {
+    "case_id": "signum",
+    "candidates": [
+      {
+        "candidate_id": "manual_signum_ternary_rewrite",
+        "label": "unknown",
+        "mutation_type": "manual_realistic_faithful",
+        "function_source": "int signum(int x) {\n    return (x > 0) ? 1 : ((x < 0) ? -1 : 0);\n}\n"
+      },
+      {
+        "candidate_id": "manual_signum_boolean_subtract_rewrite",
+        "label": "unknown",
+        "mutation_type": "manual_realistic_faithful",
+        "function_source": "int signum(int x) {\n    return (x > 0) - (x < 0);\n}\n"
+      },
+      {
+        "candidate_id": "manual_signum_temp_flag_rewrite",
+        "label": "unknown",
+        "mutation_type": "manual_realistic_faithful",
+        "function_source": "int signum(int x) {\n    int result = 0;\n    if (x < 0) {\n        result = -1;\n    } else if (x > 0) {\n        result = 1;\n    }\n    return result;\n}\n"
+      },
+      {
+        "candidate_id": "manual_signum_zero_as_positive",
+        "label": "unknown",
+        "mutation_type": "manual_hard_negative",
+        "function_source": "int signum(int x) {\n    if (x < 0) {\n        return -1;\n    }\n    return 1;\n}\n"
+      },
+      {
+        "candidate_id": "manual_signum_negative_as_zero",
+        "label": "unknown",
+        "mutation_type": "manual_hard_negative",
+        "function_source": "int signum(int x) {\n    if (x < 0) {\n        return 0;\n    }\n    if (x > 0) {\n        return 1;\n    }\n    return 0;\n}\n"
+      },
+      {
+        "candidate_id": "manual_signum_reversed_signs",
+        "label": "unknown",
+        "mutation_type": "manual_hard_negative",
+        "function_source": "int signum(int x) {\n    if (x < 0) {\n        return 1;\n    }\n    if (x > 0) {\n        return -1;\n    }\n    return 0;\n}\n"
+      },
+      {
+        "candidate_id": "manual_signum_positive_threshold_one",
+        "label": "unknown",
+        "mutation_type": "manual_hard_negative",
+        "function_source": "int signum(int x) {\n    if (x < 0) {\n        return -1;\n    }\n    if (x > 1) {\n        return 1;\n    }\n    return 0;\n}\n"
+      }
+    ]
+  },
+  {
+    "case_id": "is_power_of_two",
+    "candidates": [
+      {
+        "candidate_id": "manual_power2_short_circuit_rewrite",
+        "label": "unknown",
+        "mutation_type": "manual_realistic_faithful",
+        "function_source": "int is_power_of_two(int x) {\n    return x > 0 && ((x & (x - 1)) == 0);\n}\n"
+      },
+      {
+        "candidate_id": "manual_power2_count_bits_rewrite",
+        "label": "unknown",
+        "mutation_type": "manual_realistic_faithful",
+        "function_source": "int is_power_of_two(int x) {\n    if (x <= 0) {\n        return 0;\n    }\n    int count = 0;\n    while (x != 0) {\n        if ((x & 1) != 0) {\n            count++;\n        }\n        x >>= 1;\n    }\n    return count == 1;\n}\n"
+      },
+      {
+        "candidate_id": "manual_power2_progressive_bit_rewrite",
+        "label": "unknown",
+        "mutation_type": "manual_realistic_faithful",
+        "function_source": "int is_power_of_two(int x) {\n    if (x <= 0) {\n        return 0;\n    }\n    int bit = 1;\n    while (bit < x) {\n        bit <<= 1;\n    }\n    return bit == x;\n}\n"
+      },
+      {
+        "candidate_id": "manual_power2_allows_zero",
+        "label": "unknown",
+        "mutation_type": "manual_hard_negative",
+        "function_source": "int is_power_of_two(int x) {\n    return (x & (x - 1)) == 0;\n}\n"
+      },
+      {
+        "candidate_id": "manual_power2_plus_one_mask",
+        "label": "unknown",
+        "mutation_type": "manual_hard_negative",
+        "function_source": "int is_power_of_two(int x) {\n    if (x <= 0) {\n        return 0;\n    }\n    return (x & (x + 1)) == 0;\n}\n"
+      },
+      {
+        "candidate_id": "manual_power2_inverted_bit_test",
+        "label": "unknown",
+        "mutation_type": "manual_hard_negative",
+        "function_source": "int is_power_of_two(int x) {\n    if (x <= 0) {\n        return 0;\n    }\n    return (x & (x - 1)) != 0;\n}\n"
+      },
+      {
+        "candidate_id": "manual_power2_even_only",
+        "label": "unknown",
+        "mutation_type": "manual_hard_negative",
+        "function_source": "int is_power_of_two(int x) {\n    if (x <= 0) {\n        return 0;\n    }\n    return (x & 1) == 0;\n}\n"
+      }
+    ]
+  },
+  {
+    "case_id": "gcd_positive",
+    "candidates": [
+      {
+        "candidate_id": "manual_gcd_recursive_rewrite",
+        "label": "unknown",
+        "mutation_type": "manual_realistic_faithful",
+        "function_source": "int gcd_positive(int a, int b) {\n    if (b == 0) {\n        return a;\n    }\n    return gcd_positive(b, a % b);\n}\n"
+      },
+      {
+        "candidate_id": "manual_gcd_subtraction_rewrite",
+        "label": "unknown",
+        "mutation_type": "manual_realistic_faithful",
+        "function_source": "int gcd_positive(int a, int b) {\n    while (a != b) {\n        if (a > b) {\n            a -= b;\n        } else {\n            b -= a;\n        }\n    }\n    return a;\n}\n"
+      },
+      {
+        "candidate_id": "manual_gcd_until_divides_rewrite",
+        "label": "unknown",
+        "mutation_type": "manual_realistic_faithful",
+        "function_source": "int gcd_positive(int a, int b) {\n    while ((a % b) != 0) {\n        int r = a % b;\n        a = b;\n        b = r;\n    }\n    return b;\n}\n"
+      },
+      {
+        "candidate_id": "manual_gcd_returns_final_zero",
+        "label": "unknown",
+        "mutation_type": "manual_hard_negative",
+        "function_source": "int gcd_positive(int a, int b) {\n    while (b != 0) {\n        int r = a % b;\n        a = b;\n        b = r;\n    }\n    return b;\n}\n"
+      },
+      {
+        "candidate_id": "manual_gcd_swapped_modulo",
+        "label": "unknown",
+        "mutation_type": "manual_hard_negative",
+        "function_source": "int gcd_positive(int a, int b) {\n    while (b != 0) {\n        int r = b % a;\n        a = b;\n        b = r;\n    }\n    return a;\n}\n"
+      },
+      {
+        "candidate_id": "manual_gcd_single_subtract",
+        "label": "unknown",
+        "mutation_type": "manual_hard_negative",
+        "function_source": "int gcd_positive(int a, int b) {\n    if (a > b) {\n        return a - b;\n    }\n    return b - a;\n}\n"
+      },
+      {
+        "candidate_id": "manual_gcd_initial_remainder",
+        "label": "unknown",
+        "mutation_type": "manual_hard_negative",
+        "function_source": "int gcd_positive(int a, int b) {\n    return a % b;\n}\n"
+      }
+    ]
+  }
+]

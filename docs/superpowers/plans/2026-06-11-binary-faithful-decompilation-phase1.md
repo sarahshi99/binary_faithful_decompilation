@@ -26,7 +26,8 @@ Status as of 2026-06-13 CST:
 - Phase 1E expanded slot-calibration uses 21 realistic candidates across `O0/O1/O2/O3`: single-opt slot AUCs are `0.9028/0.7361/0.6944/0.7500`; raw global-distance AUCs are `0.1111/0.5000/0.5000/0.5833`.
 - Phase 1E multi-opt conservative score, using the minimum slot concentration across `O0/O1/O2/O3`, reaches `pairwise_auc=0.8472`.
 - Phase 1F adds `max3` and `sum_to_n` source-known cases. On the new cases alone, multi-opt min slot concentration reaches `pairwise_auc=0.7917`; combined across 5 cases / 35 candidates, it reaches `pairwise_auc=0.8250`.
-- Do not start Task 8 real-project transfer yet. The next method step should broaden source-known cases further and evaluate whether multi-opt slot-local calibration remains above the continue gate.
+- Phase 1G adds `signum`, `is_power_of_two`, and `gcd_positive`. On these new cases alone, multi-opt min slot concentration drops to `pairwise_auc=0.6389`; combined across 8 cases / 56 candidates, it is borderline at `pairwise_auc=0.7552`.
+- Do not start Task 8 real-project transfer yet. The next method step should repair feature blind spots, especially operand/constant-sensitive signatures for return constants, compare immediates, condition direction, and sign-direction mistakes.
 
 Serial execution policy:
 

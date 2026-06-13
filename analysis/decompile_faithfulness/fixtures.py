@@ -122,6 +122,67 @@ def builtin_cases() -> list[FunctionCase]:
                 FunctionTest((7,), 28),
             ),
         ),
+        FunctionCase(
+            case_id="signum",
+            function_name="signum",
+            function_source="""int signum(int x) {
+    if (x < 0) {
+        return -1;
+    }
+    if (x > 0) {
+        return 1;
+    }
+    return 0;
+}
+""",
+            tests=(
+                FunctionTest((-5,), -1),
+                FunctionTest((-1,), -1),
+                FunctionTest((0,), 0),
+                FunctionTest((1,), 1),
+                FunctionTest((9,), 1),
+            ),
+        ),
+        FunctionCase(
+            case_id="is_power_of_two",
+            function_name="is_power_of_two",
+            function_source="""int is_power_of_two(int x) {
+    if (x <= 0) {
+        return 0;
+    }
+    return (x & (x - 1)) == 0;
+}
+""",
+            tests=(
+                FunctionTest((-4,), 0),
+                FunctionTest((0,), 0),
+                FunctionTest((1,), 1),
+                FunctionTest((2,), 1),
+                FunctionTest((3,), 0),
+                FunctionTest((16,), 1),
+                FunctionTest((18,), 0),
+            ),
+        ),
+        FunctionCase(
+            case_id="gcd_positive",
+            function_name="gcd_positive",
+            function_source="""int gcd_positive(int a, int b) {
+    while (b != 0) {
+        int r = a % b;
+        a = b;
+        b = r;
+    }
+    return a;
+}
+""",
+            tests=(
+                FunctionTest((12, 8), 4),
+                FunctionTest((9, 6), 3),
+                FunctionTest((17, 5), 1),
+                FunctionTest((21, 14), 7),
+                FunctionTest((25, 10), 5),
+            ),
+        ),
     ]
 
 

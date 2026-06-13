@@ -1,0 +1,69 @@
+{
+  "candidate_count": 21,
+  "candidate_manifest": "docs/paper_agent/decompile_faithfulness_realistic_negatives_phase1g_new_cases.json",
+  "case_count": 3,
+  "faithful_count": 9,
+  "multi_opt": {
+    "max_slot_concentration_auc": 0.7083333333333334,
+    "mean_slot_concentration_auc": 0.7222222222222222,
+    "min_slot_concentration_auc": 0.6388888888888888,
+    "range_slot_concentration_auc": 0.4305555555555556
+  },
+  "opt_levels": [
+    "O0",
+    "O1",
+    "O2",
+    "O3"
+  ],
+  "per_opt": {
+    "O0": {
+      "faithful_count": 9,
+      "mean_faithful_slot_concentration": 0.5296149606711409,
+      "mean_wrong_slot_concentration": 0.6512748689219278,
+      "opt_level": "O0",
+      "pairwise_slot_concentration_auc": 0.625,
+      "plausible_wrong_count": 12,
+      "record_count": 21,
+      "records_path": "analysis_outputs/decompile_faithfulness/phase1g_new_cases_multi_opt_slot_calibration/o0/records.jsonl",
+      "verdict": "weak-signal"
+    },
+    "O1": {
+      "faithful_count": 9,
+      "mean_faithful_slot_concentration": 0.35234235601315117,
+      "mean_wrong_slot_concentration": 0.6525345660503081,
+      "opt_level": "O1",
+      "pairwise_slot_concentration_auc": 0.7638888888888888,
+      "plausible_wrong_count": 12,
+      "record_count": 21,
+      "records_path": "analysis_outputs/decompile_faithfulness/phase1g_new_cases_multi_opt_slot_calibration/o1/records.jsonl",
+      "verdict": "continue-slot-calibration"
+    },
+    "O2": {
+      "faithful_count": 9,
+      "mean_faithful_slot_concentration": 0.39348771348263323,
+      "mean_wrong_slot_concentration": 0.569467261840386,
+      "opt_level": "O2",
+      "pairwise_slot_concentration_auc": 0.625,
+      "plausible_wrong_count": 12,
+      "record_count": 21,
+      "records_path": "analysis_outputs/decompile_faithfulness/phase1g_new_cases_multi_opt_slot_calibration/o2/records.jsonl",
+      "verdict": "weak-signal"
+    },
+    "O3": {
+      "faithful_count": 9,
+      "mean_faithful_slot_concentration": 0.3958454808989219,
+      "mean_wrong_slot_concentration": 0.569467261840386,
+      "opt_level": "O3",
+      "pairwise_slot_concentration_auc": 0.625,
+      "plausible_wrong_count": 12,
+      "record_count": 21,
+      "records_path": "analysis_outputs/decompile_faithfulness/phase1g_new_cases_multi_opt_slot_calibration/o3/records.jsonl",
+      "verdict": "weak-signal"
+    }
+  },
+  "plausible_wrong_count": 12,
+  "primary_pairwise_auc": 0.6388888888888888,
+  "primary_score": "min_slot_concentration",
+  "records_path": "analysis_outputs/decompile_faithfulness/phase1g_new_cases_multi_opt_slot_calibration/records.jsonl",
+  "verdict": "weak-multi-opt-signal"
+}

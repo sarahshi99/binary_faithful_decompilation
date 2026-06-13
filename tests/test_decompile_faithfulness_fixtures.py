@@ -36,6 +36,14 @@ class DecompileFaithfulnessFixturesTest(unittest.TestCase):
         self.assertEqual(fixtures.case_by_id("max3").function_name, "max3")
         self.assertEqual(fixtures.case_by_id("sum_to_n").function_name, "sum_to_n")
 
+    def test_phase1g_cases_are_available(self) -> None:
+        self.assertEqual(fixtures.case_by_id("signum").function_name, "signum")
+        self.assertEqual(
+            fixtures.case_by_id("is_power_of_two").function_name,
+            "is_power_of_two",
+        )
+        self.assertEqual(fixtures.case_by_id("gcd_positive").function_name, "gcd_positive")
+
 
 if __name__ == "__main__":
     unittest.main()
