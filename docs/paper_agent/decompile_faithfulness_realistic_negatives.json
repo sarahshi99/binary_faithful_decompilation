@@ -1,0 +1,53 @@
+[
+  {
+    "case_id": "absdiff",
+    "candidates": [
+      {
+        "candidate_id": "manual_absdiff_abs_rewrite",
+        "label": "unknown",
+        "mutation_type": "manual_realistic_faithful",
+        "function_source": "int absdiff(int a, int b) {\n    int diff = a - b;\n    if (diff < 0) {\n        diff = -diff;\n    }\n    return diff;\n}\n"
+      },
+      {
+        "candidate_id": "manual_absdiff_wrong_else_sum",
+        "label": "unknown",
+        "mutation_type": "manual_hard_negative",
+        "function_source": "int absdiff(int a, int b) {\n    if (a > b) {\n        return a - b;\n    }\n    return a + b;\n}\n"
+      }
+    ]
+  },
+  {
+    "case_id": "clamp8",
+    "candidates": [
+      {
+        "candidate_id": "manual_clamp8_temp_rewrite",
+        "label": "unknown",
+        "mutation_type": "manual_realistic_faithful",
+        "function_source": "int clamp8(int x) {\n    int y = x;\n    if (y < 0) {\n        y = 0;\n    } else if (y > 255) {\n        y = 255;\n    }\n    return y;\n}\n"
+      },
+      {
+        "candidate_id": "manual_clamp8_negative_passthrough",
+        "label": "unknown",
+        "mutation_type": "manual_hard_negative",
+        "function_source": "int clamp8(int x) {\n    if (x < 0) {\n        return x;\n    }\n    if (x > 255) {\n        return 255;\n    }\n    return x;\n}\n"
+      }
+    ]
+  },
+  {
+    "case_id": "count_bits8",
+    "candidates": [
+      {
+        "candidate_id": "manual_count_bits8_mask_rewrite",
+        "label": "unknown",
+        "mutation_type": "manual_realistic_faithful",
+        "function_source": "int count_bits8(int x) {\n    int total = 0;\n    int mask = 1;\n    for (int i = 0; i < 8; i++) {\n        if ((x & mask) != 0) {\n            total += 1;\n        }\n        mask <<= 1;\n    }\n    return total;\n}\n"
+      },
+      {
+        "candidate_id": "manual_count_bits8_misses_high_bit",
+        "label": "unknown",
+        "mutation_type": "manual_hard_negative",
+        "function_source": "int count_bits8(int x) {\n    int total = 0;\n    for (int i = 0; i < 7; i++) {\n        if ((x & (1 << i)) != 0) {\n            total++;\n        }\n    }\n    return total;\n}\n"
+      }
+    ]
+  }
+]

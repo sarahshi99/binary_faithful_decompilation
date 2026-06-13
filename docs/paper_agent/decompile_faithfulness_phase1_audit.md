@@ -46,4 +46,4 @@ This is a controlled mutation-style audit, not a full decompilation system. It o
 
 ## Next Route
 
-First close the uncommitted Phase 1A.1 follow-up with fresh verification, local diff review fallback, and a focused commit. Then proceed serially to Phase 1B realistic negatives input support. Phase 1C slot localization and real-project transfer should wait until realistic negatives confirm that the signal survives beyond controlled mutations.
+Phase 1B realistic negatives have now been run. With manual faithful rewrites and manual hard negatives included, the naive global feature-distance ranker falls to `pairwise_auc=0.5000`. Phase 1C controlled slot localization still reports `hit_at_1=1.0000`. The next step should not be real-project transfer yet; it should redesign the method around slot-local feature mismatch and calibration.

@@ -15,11 +15,13 @@
 Status as of 2026-06-13 CST:
 
 - Branch: `phase1a-audit`.
-- Completed and committed: Tasks 1-5, through commit `267c0f9` (`analysis: add binary feature ranking audit`).
+- Completed and committed: Tasks 1-7, through commit `81bfbc2` (`analysis: add binary feature slot localization audit`).
 - Initial Phase 1A result: `pairwise_auc=0.875`, `top1_faithful_rate=0.6667`, `verdict=inconclusive`, with a return-value operand-order blind spot.
-- Current uncommitted follow-up: Task 5.1 adds operand-sensitive `instruction_signature_l1`, regenerating Phase 1A to `pairwise_auc=1.0000`, `top1_faithful_rate=1.0000`, `verdict=continue`.
-- Before any new experiment, close Task 5.1: run fresh verification, do local diff review fallback, and commit only the Phase 1A.1 files.
-- Next experiment after Task 5.1 closes: Task 6, Phase 1B realistic negatives input format. Do not jump directly to Task 7 localization or Task 8 real-project transfer, because current evidence is still controlled mutation-style.
+- Phase 1A.1 result: operand-sensitive `instruction_signature_l1` regenerates Phase 1A to `pairwise_auc=1.0000`, `top1_faithful_rate=1.0000`, `verdict=continue`.
+- Phase 1B input support is implemented, and Phase 1B realistic-negative smoke has been run with manual faithful rewrites and manual hard negatives.
+- Phase 1B result: `pairwise_auc=0.5000`, `top1_faithful_rate=1.0000`, `verdict=kill-core-method` for the naive global feature-distance ranker.
+- Phase 1C controlled slot localization result: `hit_at_1=1.0000`, `hit_at_2=1.0000`, `hit_at_3=1.0000`.
+- Do not start Task 8 real-project transfer yet. The next method step should redesign scoring around slot-local feature mismatch and calibration rather than raw global source-candidate distance.
 
 Serial execution policy:
 

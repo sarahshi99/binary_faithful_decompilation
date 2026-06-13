@@ -1,0 +1,33 @@
+{
+  "by_mutation_type": {
+    "constant": {
+      "candidate_count": 1,
+      "mean_distance": 3.0
+    },
+    "manual_hard_negative": {
+      "candidate_count": 3,
+      "mean_distance": 13.0
+    },
+    "predicate": {
+      "candidate_count": 2,
+      "mean_distance": 4.0
+    },
+    "return_value": {
+      "candidate_count": 1,
+      "mean_distance": 4.0
+    }
+  },
+  "candidate_count": 13,
+  "case_count": 3,
+  "equivalent_or_weak_count": 4,
+  "excluded_compile_fail": 0,
+  "external_candidate_count": 6,
+  "faithful_count": 6,
+  "opt_level": "O0",
+  "pairwise_auc": 0.5,
+  "plausible_wrong_count": 7,
+  "records_path": "analysis_outputs/decompile_faithfulness/phase1b_realistic/records.jsonl",
+  "top1_faithful_count": 3,
+  "top1_faithful_rate": 1.0,
+  "verdict": "kill-core-method"
+}
