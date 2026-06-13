@@ -906,7 +906,7 @@ git commit -m "analysis: support realistic decompilation negatives"
 - Test: `tests/test_decompile_faithfulness_localization.py`
 - Create generated: `analysis_outputs/decompile_faithfulness/phase1c/localization_records.jsonl`
 
-- [ ] **Step 1: Write failing localization tests**
+- [x] **Step 1: Write failing localization tests**
 
 Create `tests/test_decompile_faithfulness_localization.py`:
 
@@ -951,7 +951,7 @@ if __name__ == "__main__":
     unittest.main()
 ```
 
-- [ ] **Step 2: Run the failing localization test**
+- [x] **Step 2: Run the failing localization test**
 
 Run:
 
@@ -961,7 +961,7 @@ Run:
 
 Expected: import failure for `analysis.decompile_faithfulness.localization`.
 
-- [ ] **Step 3: Implement localization helpers**
+- [x] **Step 3: Implement localization helpers**
 
 Create `analysis/decompile_faithfulness/localization.py` with:
 
@@ -979,7 +979,7 @@ Initial component-to-slot mapping:
 - `instruction_count_abs` and `opcode_l1` vote weakly for `control_structure`.
 - `ret_count_abs` votes for `return_value`.
 
-- [ ] **Step 4: Implement slot localization CLI**
+- [x] **Step 4: Implement slot localization CLI**
 
 Create `analysis/decompile_faithfulness/run_slot_localization_audit.py`.
 
@@ -1000,7 +1000,7 @@ continue_to_sketch_localization = hit_at_3 >= 0.70
 do_not_claim_localization = hit_at_3 < 0.50
 ```
 
-- [ ] **Step 5: Verify localization tests and run CLI**
+- [x] **Step 5: Verify localization tests and run CLI**
 
 Run:
 
