@@ -17,6 +17,7 @@
   "case_count": 3,
   "equivalent_or_weak_count": 4,
   "excluded_compile_fail": 0,
+  "external_candidate_count": 0,
   "faithful_count": 3,
   "opt_level": "O0",
   "pairwise_auc": 1.0,

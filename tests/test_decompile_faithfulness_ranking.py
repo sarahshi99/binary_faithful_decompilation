@@ -90,6 +90,25 @@ class DecompileFaithfulnessRankingTest(unittest.TestCase):
         ]
         self.assertAlmostEqual(ranking.pairwise_auc(rows), 0.75)
 
+    def test_load_external_candidate_manifest(self) -> None:
+        manifest = {
+            "case_id": "absdiff",
+            "candidates": [
+                {
+                    "candidate_id": "ghidra_like_wrong",
+                    "label": "unknown",
+                    "mutation_type": "external_decompiler",
+                    "function_source": "int absdiff(int a, int b) { return a - b; }",
+                }
+            ],
+        }
+        rows = ranking.external_candidates_from_manifest(manifest)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0].case_id, "absdiff")
+        self.assertEqual(rows[0].candidate_id, "ghidra_like_wrong")
+        self.assertEqual(rows[0].label, "unknown")
+        self.assertEqual(rows[0].mutation_type, "external_decompiler")
+
 
 if __name__ == "__main__":
     unittest.main()

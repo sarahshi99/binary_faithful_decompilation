@@ -787,7 +787,7 @@ Expected after fix: `pairwise_auc=1.0`, `top1_faithful_rate=1.0`, `verdict=conti
 - Test: `tests/test_decompile_faithfulness_ranking.py`
 - Create docs: `docs/paper_agent/decompile_faithfulness_candidate_format.md`
 
-- [ ] **Step 1: Extend ranking tests for external candidates**
+- [x] **Step 1: Extend ranking tests for external candidates**
 
 Append this test to `tests/test_decompile_faithfulness_ranking.py`:
 
@@ -812,7 +812,7 @@ Append this test to `tests/test_decompile_faithfulness_ranking.py`:
         self.assertEqual(rows[0].mutation_type, "external_decompiler")
 ```
 
-- [ ] **Step 2: Run the failing test**
+- [x] **Step 2: Run the failing test**
 
 Run:
 
@@ -822,7 +822,7 @@ Run:
 
 Expected: failure for missing `external_candidates_from_manifest`.
 
-- [ ] **Step 3: Implement external candidate loading**
+- [x] **Step 3: Implement external candidate loading**
 
 Add to `analysis/decompile_faithfulness/ranking.py`:
 
@@ -836,7 +836,7 @@ Validation rules:
 - Allowed labels: `unknown`, `faithful`, `plausible_wrong`.
 - External candidates with `label="unknown"` must be compiled and behavior-gated before being used for ranking.
 
-- [ ] **Step 4: Extend the CLI**
+- [x] **Step 4: Extend the CLI**
 
 Add CLI option:
 
@@ -864,7 +864,7 @@ The JSON format:
 
 When provided, the CLI must include these candidates in the same compile, behavior, feature, and ranking pipeline. Report them in separate `mutation_type` buckets so controlled mutations and realistic negatives are not merged.
 
-- [ ] **Step 5: Document candidate format**
+- [x] **Step 5: Document candidate format**
 
 Create `docs/paper_agent/decompile_faithfulness_candidate_format.md` with:
 
@@ -873,7 +873,7 @@ Create `docs/paper_agent/decompile_faithfulness_candidate_format.md` with:
 - Rule that `unknown` labels are assigned by compile/behavior gates.
 - Instructions for adding Ghidra/RetDec/angr or LLM outputs later without changing Phase 1A code.
 
-- [ ] **Step 6: Verify external candidate support**
+- [x] **Step 6: Verify external candidate support**
 
 Run:
 

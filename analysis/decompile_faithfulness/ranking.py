@@ -4,6 +4,8 @@ from collections import defaultdict
 from dataclasses import dataclass
 from typing import Iterable
 
+from analysis.decompile_faithfulness import fixtures
+
 
 @dataclass(frozen=True)
 class CandidateDistance:
@@ -14,8 +16,44 @@ class CandidateDistance:
     mutation_type: str
 
 
+@dataclass(frozen=True)
+class ExternalCandidate:
+    case_id: str
+    candidate_id: str
+    label: str
+    mutation_type: str
+    function_source: str
+
+
 def rank_candidates(rows: list[CandidateDistance]) -> list[CandidateDistance]:
     return sorted(rows, key=lambda row: (row.distance, row.candidate_id))
+
+
+def external_candidates_from_manifest(manifest: dict[str, object]) -> list[ExternalCandidate]:
+    case_id = _required_string(manifest, "case_id")
+    fixtures.case_by_id(case_id)
+
+    candidates = manifest.get("candidates")
+    if not isinstance(candidates, list):
+        raise ValueError("external candidate manifest must include a candidates list")
+
+    rows = []
+    for index, item in enumerate(candidates):
+        if not isinstance(item, dict):
+            raise ValueError(f"candidate {index} must be an object")
+        label = _required_string(item, "label")
+        if label not in {"unknown", "faithful", "plausible_wrong"}:
+            raise ValueError(f"candidate {index} has unsupported label: {label}")
+        rows.append(
+            ExternalCandidate(
+                case_id=case_id,
+                candidate_id=_required_string(item, "candidate_id"),
+                label=label,
+                mutation_type=_required_string(item, "mutation_type"),
+                function_source=_required_string(item, "function_source"),
+            )
+        )
+    return rows
 
 
 def pairwise_auc(rows: list[CandidateDistance]) -> float:
@@ -86,3 +124,10 @@ def _by_case(rows: list[CandidateDistance]) -> dict[str, list[CandidateDistance]
 def _mean(values: Iterable[float]) -> float:
     collected = list(values)
     return sum(collected) / len(collected) if collected else 0.0
+
+
+def _required_string(payload: dict[str, object], key: str) -> str:
+    value = payload.get(key)
+    if not isinstance(value, str) or not value.strip():
+        raise ValueError(f"missing non-empty string field: {key}")
+    return value

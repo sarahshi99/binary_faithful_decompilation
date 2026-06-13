@@ -16,6 +16,7 @@ def main() -> None:
         output_md=args.output_md,
         artifact_dir=args.artifact_dir,
         opt_level=args.opt_level,
+        external_candidates_json=args.external_candidates_json,
     )
     print(
         json.dumps(
@@ -49,6 +50,11 @@ def parse_args() -> argparse.Namespace:
         default=Path("analysis_outputs/decompile_faithfulness/phase1a"),
     )
     parser.add_argument("--opt-level", default="O0")
+    parser.add_argument(
+        "--external-candidates-json",
+        type=Path,
+        help="JSON file containing realistic LLM/decompiler/manual candidates.",
+    )
     return parser.parse_args()
 
 
@@ -57,6 +63,7 @@ def run_audit(
     output_md: Path,
     artifact_dir: Path,
     opt_level: str,
+    external_candidates_json: Path | None = None,
 ) -> dict[str, Any]:
     artifact_dir.mkdir(parents=True, exist_ok=True)
     candidate_dir = artifact_dir / "candidates"
@@ -67,6 +74,10 @@ def run_audit(
     records: list[dict[str, Any]] = []
     excluded_compile_fail = 0
     equivalent_or_weak_count = 0
+    external_candidates = _load_external_candidates(external_candidates_json)
+    external_by_case: dict[str, list[ranking.ExternalCandidate]] = {}
+    for external_candidate in external_candidates:
+        external_by_case.setdefault(external_candidate.case_id, []).append(external_candidate)
 
     for case in fixtures.builtin_cases():
         original_result = ccompile.compile_candidate(
@@ -150,12 +161,60 @@ def run_audit(
                 )
             )
 
+        for external_candidate in external_by_case.get(case.case_id, []):
+            result = ccompile.compile_candidate(
+                case=case,
+                candidate_id=external_candidate.candidate_id,
+                function_source=external_candidate.function_source,
+                output_dir=candidate_dir,
+                opt_level=opt_level,
+            )
+            if not result.compiled:
+                excluded_compile_fail += 1
+                records.append(
+                    {
+                        "case_id": case.case_id,
+                        "candidate_id": external_candidate.candidate_id,
+                        "label": "compile_fail",
+                        "mutation_type": external_candidate.mutation_type,
+                        "expected_slot": "external",
+                        "compiled": False,
+                        "behavior_passed": False,
+                        "exit_code": result.exit_code,
+                    }
+                )
+                continue
+
+            candidate_features = features.extract_binary_features(result.object_path)
+            distance = features.feature_distance(original_features, candidate_features)
+            label = _resolve_external_label(external_candidate.label, result.behavior_passed)
+            row = ranking.CandidateDistance(
+                case_id=case.case_id,
+                candidate_id=external_candidate.candidate_id,
+                label=label,
+                distance=distance.total,
+                mutation_type=external_candidate.mutation_type,
+            )
+            if label in {"faithful", "plausible_wrong"}:
+                distance_rows.append(row)
+            records.append(
+                _record(
+                    row,
+                    compiled=True,
+                    behavior_passed=result.behavior_passed,
+                    exit_code=result.exit_code,
+                    components=distance.components,
+                    expected_slot="external",
+                )
+            )
+
     summary = ranking.compute_ranking_summary(distance_rows)
     summary.update(
         {
             "opt_level": opt_level,
             "excluded_compile_fail": excluded_compile_fail,
             "equivalent_or_weak_count": equivalent_or_weak_count,
+            "external_candidate_count": len(external_candidates),
             "records_path": str(records_path),
         }
     )
@@ -192,6 +251,25 @@ def _write_jsonl(path: Path, records: list[dict[str, Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     lines = [json.dumps(record, sort_keys=True) for record in records]
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def _load_external_candidates(path: Path | None) -> list[ranking.ExternalCandidate]:
+    if path is None:
+        return []
+    payload = json.loads(path.read_text(encoding="utf-8"))
+    manifests = payload if isinstance(payload, list) else [payload]
+    candidates: list[ranking.ExternalCandidate] = []
+    for manifest in manifests:
+        if not isinstance(manifest, dict):
+            raise ValueError("external candidate JSON must contain objects")
+        candidates.extend(ranking.external_candidates_from_manifest(manifest))
+    return candidates
+
+
+def _resolve_external_label(label: str, behavior_passed: bool) -> str:
+    if label == "unknown":
+        return "faithful" if behavior_passed else "plausible_wrong"
+    return label
 
 
 if __name__ == "__main__":
