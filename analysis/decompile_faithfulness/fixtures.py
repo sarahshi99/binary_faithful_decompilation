@@ -78,6 +78,50 @@ def builtin_cases() -> list[FunctionCase]:
                 FunctionTest((170,), 4),
             ),
         ),
+        FunctionCase(
+            case_id="max3",
+            function_name="max3",
+            function_source="""int max3(int a, int b, int c) {
+    int best = a;
+    if (b > best) {
+        best = b;
+    }
+    if (c > best) {
+        best = c;
+    }
+    return best;
+}
+""",
+            tests=(
+                FunctionTest((1, 2, 3), 3),
+                FunctionTest((3, 2, 1), 3),
+                FunctionTest((-5, -2, -7), -2),
+                FunctionTest((4, 4, 1), 4),
+                FunctionTest((0, -1, 0), 0),
+            ),
+        ),
+        FunctionCase(
+            case_id="sum_to_n",
+            function_name="sum_to_n",
+            function_source="""int sum_to_n(int n) {
+    if (n <= 0) {
+        return 0;
+    }
+    int total = 0;
+    for (int i = 1; i <= n; i++) {
+        total += i;
+    }
+    return total;
+}
+""",
+            tests=(
+                FunctionTest((-3,), 0),
+                FunctionTest((0,), 0),
+                FunctionTest((1,), 1),
+                FunctionTest((4,), 10),
+                FunctionTest((7,), 28),
+            ),
+        ),
     ]
 
 

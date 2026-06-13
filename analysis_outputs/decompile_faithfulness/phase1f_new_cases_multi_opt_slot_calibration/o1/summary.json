@@ -1,0 +1,11 @@
+{
+  "faithful_count": 6,
+  "mean_faithful_slot_concentration": 0.5957070707070707,
+  "mean_wrong_slot_concentration": 0.7448456567249011,
+  "opt_level": "O1",
+  "pairwise_slot_concentration_auc": 0.5416666666666666,
+  "plausible_wrong_count": 8,
+  "record_count": 14,
+  "records_path": "analysis_outputs/decompile_faithfulness/phase1f_new_cases_multi_opt_slot_calibration/o1/records.jsonl",
+  "verdict": "inconclusive-or-redesign"
+}

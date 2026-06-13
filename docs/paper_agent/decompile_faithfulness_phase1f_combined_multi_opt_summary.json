@@ -1,0 +1,31 @@
+{
+  "case_count": 5,
+  "candidate_count": 35,
+  "faithful_count": 15,
+  "plausible_wrong_count": 20,
+  "single_opt": {
+    "O0": {
+      "slot_concentration_auc": 0.9083333333333333,
+      "global_distance_auc": 0.175
+    },
+    "O1": {
+      "slot_concentration_auc": 0.6583333333333333,
+      "global_distance_auc": 0.5916666666666667
+    },
+    "O2": {
+      "slot_concentration_auc": 0.6416666666666667,
+      "global_distance_auc": 0.5583333333333333
+    },
+    "O3": {
+      "slot_concentration_auc": 0.5666666666666667,
+      "global_distance_auc": 0.6416666666666667
+    }
+  },
+  "multi_opt": {
+    "min_slot_concentration_auc": 0.825,
+    "mean_slot_concentration_auc": 0.7666666666666667,
+    "max_slot_concentration_auc": 0.6916666666666667,
+    "range_slot_concentration_auc": 0.425
+  },
+  "verdict": "continue-with-multi-opt-calibration"
+}

@@ -1,0 +1,69 @@
+{
+  "candidate_count": 14,
+  "candidate_manifest": "docs/paper_agent/decompile_faithfulness_realistic_negatives_phase1f_new_cases.json",
+  "case_count": 2,
+  "faithful_count": 6,
+  "multi_opt": {
+    "max_slot_concentration_auc": 0.5833333333333334,
+    "mean_slot_concentration_auc": 0.7083333333333334,
+    "min_slot_concentration_auc": 0.7916666666666666,
+    "range_slot_concentration_auc": 0.4166666666666667
+  },
+  "opt_levels": [
+    "O0",
+    "O1",
+    "O2",
+    "O3"
+  ],
+  "per_opt": {
+    "O0": {
+      "faithful_count": 6,
+      "mean_faithful_slot_concentration": 0.44404171105643825,
+      "mean_wrong_slot_concentration": 0.79990003838526,
+      "opt_level": "O0",
+      "pairwise_slot_concentration_auc": 0.9166666666666666,
+      "plausible_wrong_count": 8,
+      "record_count": 14,
+      "records_path": "analysis_outputs/decompile_faithfulness/phase1f_new_cases_multi_opt_slot_calibration/o0/records.jsonl",
+      "verdict": "continue-slot-calibration"
+    },
+    "O1": {
+      "faithful_count": 6,
+      "mean_faithful_slot_concentration": 0.5957070707070707,
+      "mean_wrong_slot_concentration": 0.7448456567249011,
+      "opt_level": "O1",
+      "pairwise_slot_concentration_auc": 0.5416666666666666,
+      "plausible_wrong_count": 8,
+      "record_count": 14,
+      "records_path": "analysis_outputs/decompile_faithfulness/phase1f_new_cases_multi_opt_slot_calibration/o1/records.jsonl",
+      "verdict": "inconclusive-or-redesign"
+    },
+    "O2": {
+      "faithful_count": 6,
+      "mean_faithful_slot_concentration": 0.5813286435106674,
+      "mean_wrong_slot_concentration": 0.7055957197683211,
+      "opt_level": "O2",
+      "pairwise_slot_concentration_auc": 0.5625,
+      "plausible_wrong_count": 8,
+      "record_count": 14,
+      "records_path": "analysis_outputs/decompile_faithfulness/phase1f_new_cases_multi_opt_slot_calibration/o2/records.jsonl",
+      "verdict": "inconclusive-or-redesign"
+    },
+    "O3": {
+      "faithful_count": 6,
+      "mean_faithful_slot_concentration": 0.6034953759755872,
+      "mean_wrong_slot_concentration": 0.6710126554941477,
+      "opt_level": "O3",
+      "pairwise_slot_concentration_auc": 0.2916666666666667,
+      "plausible_wrong_count": 8,
+      "record_count": 14,
+      "records_path": "analysis_outputs/decompile_faithfulness/phase1f_new_cases_multi_opt_slot_calibration/o3/records.jsonl",
+      "verdict": "inconclusive-or-redesign"
+    }
+  },
+  "plausible_wrong_count": 8,
+  "primary_pairwise_auc": 0.7916666666666666,
+  "primary_score": "min_slot_concentration",
+  "records_path": "analysis_outputs/decompile_faithfulness/phase1f_new_cases_multi_opt_slot_calibration/records.jsonl",
+  "verdict": "continue-with-multi-opt-calibration"
+}

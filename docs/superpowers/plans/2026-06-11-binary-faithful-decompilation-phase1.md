@@ -25,7 +25,8 @@ Status as of 2026-06-13 CST:
 - Phase 1D O2 follow-up: `pairwise_slot_concentration_auc=0.6667`, mean faithful slot concentration `0.4352`, mean wrong slot concentration `0.7000`, `verdict=weak-signal`.
 - Phase 1E expanded slot-calibration uses 21 realistic candidates across `O0/O1/O2/O3`: single-opt slot AUCs are `0.9028/0.7361/0.6944/0.7500`; raw global-distance AUCs are `0.1111/0.5000/0.5000/0.5833`.
 - Phase 1E multi-opt conservative score, using the minimum slot concentration across `O0/O1/O2/O3`, reaches `pairwise_auc=0.8472`.
-- Do not start Task 8 real-project transfer yet. The next method step should implement multi-opt slot-local calibration as the primary suspicion score, then broaden source-known cases before real-project transfer.
+- Phase 1F adds `max3` and `sum_to_n` source-known cases. On the new cases alone, multi-opt min slot concentration reaches `pairwise_auc=0.7917`; combined across 5 cases / 35 candidates, it reaches `pairwise_auc=0.8250`.
+- Do not start Task 8 real-project transfer yet. The next method step should broaden source-known cases further and evaluate whether multi-opt slot-local calibration remains above the continue gate.
 
 Serial execution policy:
 
