@@ -1,0 +1,4 @@
+dataset,projects,project_names,source_functions,supported_signatures,candidate_attempts,generated_candidates,compile_ready_candidates,executable_candidates,oracle_adjudicable_candidates,final_paired_cases,faithful_class_candidates,wrong_candidates
+phase7c2_static_hard_public,1,CodeFuse-DeBench,56,56,524,524,503,494,503,50,236,267
+phase7e_llm_public_full_topup,1,CodeFuse-DeBench,56,56,224,195,143,143,143,24,107,36
+phase6r_ghidra_full,2,c_algorithms;thealgorithms_c,38,38,228,228,166,166,166,26,92,74

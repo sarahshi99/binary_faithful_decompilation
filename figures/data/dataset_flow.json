@@ -1,0 +1,68 @@
+{
+  "created_at_utc": "2026-07-02T15:04:56.707225+00:00",
+  "datasets": [
+    {
+      "candidate_attempts": 524,
+      "compile_ready_candidates": 503,
+      "dataset": "phase7c2_static_hard_public",
+      "executable_candidates": 494,
+      "faithful_class_candidates": 236,
+      "final_paired_cases": 50,
+      "generated_candidates": 524,
+      "oracle_adjudicable_candidates": 503,
+      "project_names": "CodeFuse-DeBench",
+      "projects": 1,
+      "source_functions": 56,
+      "supported_signatures": 56,
+      "wrong_candidates": 267
+    },
+    {
+      "candidate_attempts": 224,
+      "compile_ready_candidates": 143,
+      "dataset": "phase7e_llm_public_full_topup",
+      "executable_candidates": 143,
+      "faithful_class_candidates": 107,
+      "final_paired_cases": 24,
+      "generated_candidates": 195,
+      "oracle_adjudicable_candidates": 143,
+      "project_names": "CodeFuse-DeBench",
+      "projects": 1,
+      "source_functions": 56,
+      "supported_signatures": 56,
+      "wrong_candidates": 36
+    },
+    {
+      "candidate_attempts": 228,
+      "compile_ready_candidates": 166,
+      "dataset": "phase6r_ghidra_full",
+      "executable_candidates": 166,
+      "faithful_class_candidates": 92,
+      "final_paired_cases": 26,
+      "generated_candidates": 228,
+      "oracle_adjudicable_candidates": 166,
+      "project_names": "c_algorithms;thealgorithms_c",
+      "projects": 2,
+      "source_functions": 38,
+      "supported_signatures": 38,
+      "wrong_candidates": 74
+    }
+  ],
+  "flow_order": [
+    "projects",
+    "source_functions",
+    "supported_signatures",
+    "candidate_attempts",
+    "generated_candidates",
+    "compile_ready_candidates",
+    "executable_candidates",
+    "oracle_adjudicable_candidates",
+    "final_paired_cases",
+    "faithful_class_candidates",
+    "wrong_candidates"
+  ],
+  "notes": [
+    "candidate_attempts are deterministic mutation attempts for public_static_hard, raw generations for llm_public, and proxy candidates submitted to Ghidra for ghidra.",
+    "final_paired_cases count cases with at least one faithful and one wrong candidate in the candidate records."
+  ],
+  "schema_version": 1
+}

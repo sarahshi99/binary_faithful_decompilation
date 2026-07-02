@@ -1,0 +1,293 @@
+{
+  "admissibility_filtering": {
+    "domain_allows": [
+      "if all fixture values are >=0, reject args containing negative values",
+      "if all fixture values are >0, reject args containing <=0 values",
+      "for char-like parameter positions, require 0 <= value <= 127"
+    ],
+    "fixture_neighbors_and_source_literals": "exclude original fixtures and domain_allows(entry,args)"
+  },
+  "branch": "phase1a-audit",
+  "budgets_recorded": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "caching_behavior": {
+    "candidate_traces": "not cached; each candidate rerun compiles/runs its trace harness",
+    "phase10_cached_original_run": "legacy original trace cache keyed by (case_id,opt_level)",
+    "phase11_rerun_strategy": "original trace cache keyed by (case_id,opt_level,strategy_id)",
+    "phase6_phase_features": "source-labeling original trace cache keyed by (case_id,opt_level,bucket)"
+  },
+  "character_domain": {
+    "allowed_char_values": {
+      "max": 127,
+      "min": 0
+    },
+    "char_like_detection": "signature substring contains 'char'; parameter positions whose declarator contains 'char'",
+    "source_literal_regex": "'((?:\\\\.|[^\\\\'])*)'",
+    "stable_literal_deduplication": "first occurrence wins by parsed integer value",
+    "supported_escapes": {
+      "\\\"": 34,
+      "\\'": 39,
+      "\\0": 0,
+      "\\?": 63,
+      "\\OOO": "octal escape; up to three octal digits",
+      "\\\\": 92,
+      "\\a": 7,
+      "\\b": 8,
+      "\\f": 12,
+      "\\n": 10,
+      "\\r": 13,
+      "\\t": 9,
+      "\\v": 11,
+      "\\xHH": "hexadecimal escape; all hex digits after x are consumed"
+    }
+  },
+  "core_scope": "source-known, recompilable, function-level localized semantic drift auditing under a small execution budget",
+  "created_at_utc": "2026-07-02T15:01:48.559595+00:00",
+  "dataset_inputs": [
+    {
+      "candidate_manifest": "docs/paper_agent/decompile_faithfulness_phase7_static_hard_candidate_manifest.json",
+      "dataset": "phase7c2_static_hard_public",
+      "function_manifest": "docs/paper_agent/decompile_faithfulness_phase7_codefuse_function_manifest.json",
+      "records": "analysis_outputs/decompile_faithfulness/phase7_static_hard/records.jsonl"
+    },
+    {
+      "candidate_manifest": "docs/paper_agent/decompile_faithfulness_phase7_llm_public_candidate_manifest_combined_topup_full2.json",
+      "dataset": "phase7e_llm_public_full_topup",
+      "function_manifest": "docs/paper_agent/decompile_faithfulness_phase7_codefuse_function_manifest.json",
+      "records": "docs/paper_agent/decompile_faithfulness_phase7_llm_public_combined.json"
+    },
+    {
+      "candidate_manifest": "docs/paper_agent/decompile_faithfulness_phase6r_real_decompiler_manifest.json",
+      "dataset": "phase6r_ghidra_full",
+      "function_manifest": "docs/paper_agent/decompile_faithfulness_phase5_function_manifest.json",
+      "records": "analysis_outputs/decompile_faithfulness/phase6r_ghidra_full/records.jsonl"
+    }
+  ],
+  "default_budget": 8,
+  "early_stop_behavior": {
+    "differential_execution": "no early stop on first mismatch; all selected budget-prefix probes are executed in one harness",
+    "probe_generation": "phase5b_hard_trace_inputs stops once max_inputs generated; final build_ordered_inputs truncates after stable dedupe",
+    "scoring": "all selected prefix outputs contribute to trace_distance"
+  },
+  "final_method": "source_literal_char_interleave",
+  "generic_character_anchors": {
+    "final_method_source_literal_char_interleave": "no generic operator list is prepended",
+    "legacy_operator_char_class_values_not_final_default": [
+      44,
+      41,
+      42,
+      47,
+      37,
+      45,
+      43,
+      36,
+      40,
+      94,
+      38,
+      124
+    ],
+    "phase5b_hard_probe_char_anchors": [
+      43,
+      45,
+      65,
+      90,
+      97,
+      122
+    ]
+  },
+  "generic_fallback_construction": {
+    "cartesian_product_order": "itertools.product over values_by_position; fixture tuples removed; stops at max_inputs",
+    "per_position_values": [
+      "observed fixture values",
+      "observed +/- 1",
+      "positive-only adds {1,2} and drops <=0",
+      "nonnegative-only adds {0,1,2} and drops <0",
+      "otherwise adds {-1,0,1}",
+      "char-like signatures restrict to 0..127 and add {43,45,65,90,97,122}",
+      "sorted values truncated to first 10 per position"
+    ],
+    "source": "analysis/decompile_faithfulness/run_phase5b_hard_candidates.py::phase5b_hard_trace_inputs"
+  },
+  "head_commit": "06dda89912103b94fc065d6f073581a7811154b1",
+  "max_inputs_generated_for_phase18": 16,
+  "method_affecting_sources": [
+    {
+      "affects": [
+        "final method selection",
+        "report budget",
+        "phase12 rerun invocation"
+      ],
+      "functions": [
+        "run_phase18",
+        "phase18_verdict",
+        "_resolve"
+      ],
+      "path": "analysis/decompile_faithfulness/run_phase18_source_literal_char_policy.py"
+    },
+    {
+      "affects": [
+        "dataset rerun orchestration",
+        "budget list",
+        "strategy propagation"
+      ],
+      "functions": [
+        "run_phase12",
+        "rerun_dataset",
+        "metric_delta",
+        "phase12_verdict"
+      ],
+      "path": "analysis/decompile_faithfulness/run_phase12_unified_low_budget_eval.py"
+    },
+    {
+      "affects": [
+        "probe generation",
+        "probe ordering",
+        "source literal parsing",
+        "admissibility filtering",
+        "stable deduplication",
+        "candidate rerun orchestration"
+      ],
+      "functions": [
+        "rerun_strategy",
+        "build_ordered_inputs",
+        "fixture_neighbor_inputs",
+        "source_literal_char_inputs",
+        "source_char_literal_values",
+        "parse_c_char_literal_body",
+        "boundary_inputs",
+        "single_position_boundary_args",
+        "boundary_values_by_position",
+        "neighbor_values",
+        "domain_allows",
+        "char_like_positions",
+        "interleave_inputs",
+        "dedupe_inputs",
+        "summarize_with_misses",
+        "best_strategy_for_budget",
+        "strategy_sort_key"
+      ],
+      "path": "analysis/decompile_faithfulness/run_phase11_input_ordering.py"
+    },
+    {
+      "affects": [
+        "budget handling",
+        "candidate scoring",
+        "mismatch semantics",
+        "summary metrics"
+      ],
+      "functions": [
+        "load_records",
+        "budget_record",
+        "summarize_budget",
+        "paired_case_count",
+        "pairwise_auc",
+        "flatten_budget_records",
+        "cached_original_run"
+      ],
+      "path": "analysis/decompile_faithfulness/run_phase10_low_budget_rerun.py"
+    },
+    {
+      "affects": [
+        "generic fallback probes",
+        "source-labeling oracle witnesses"
+      ],
+      "functions": [
+        "phase5b_hard_trace_inputs",
+        "phase5b_features",
+        "record_from_features"
+      ],
+      "path": "analysis/decompile_faithfulness/run_phase5b_hard_candidates.py"
+    },
+    {
+      "affects": [
+        "differential execution wrapper",
+        "manifest-to-case reconstruction"
+      ],
+      "functions": [
+        "safe_run_trace",
+        "_case_from_manifest_entry"
+      ],
+      "path": "analysis/decompile_faithfulness/run_phase5_gpu_generated_full.py"
+    },
+    {
+      "affects": [
+        "differential execution",
+        "output normalization",
+        "mismatch features"
+      ],
+      "functions": [
+        "TraceInput",
+        "TraceRun",
+        "generate_trace_inputs",
+        "generate_domain_trace_inputs",
+        "generate_boundary_trace_inputs",
+        "render_trace_harness",
+        "parse_trace_stdout",
+        "run_trace",
+        "trace_distance",
+        "_bucket_for_args",
+        "_v3_boundary_args",
+        "_safe_name",
+        "_sign",
+        "_squash",
+        "_timeout_stream",
+        "_timeout_message"
+      ],
+      "path": "analysis/decompile_faithfulness/dynamic_trace.py"
+    },
+    {
+      "affects": [
+        "compiler invocation",
+        "timeout behavior",
+        "compile/run status"
+      ],
+      "functions": [
+        "run_command",
+        "compile_candidate",
+        "_safe_name"
+      ],
+      "path": "analysis/decompile_faithfulness/compile.py"
+    },
+    {
+      "affects": [
+        "compile/runtime failure scoring semantics"
+      ],
+      "functions": [
+        "_failure_components"
+      ],
+      "path": "analysis/decompile_faithfulness/run_phase3_combinatorial_cpu_audit.py"
+    }
+  ],
+  "neighbor_values": {
+    "char_positions_extra_anchors": [
+      64,
+      65,
+      66,
+      73,
+      74,
+      75,
+      90
+    ],
+    "integer_positions": [
+      "value - 1",
+      "value + 1",
+      "0 if value != 0",
+      "1 if value != 1"
+    ],
+    "ordering": "sorted(set(values)) after char-domain filtering"
+  },
+  "probe_ordering": {
+    "budget_truncation": "actual_budget = min(requested_budget, len(inputs)); scoring slices inputs and outputs to actual_budget",
+    "final_order_expression": "dedupe_inputs(interleave_inputs(fixture_neighbor_inputs(entry), source_literal_char_inputs(entry, case)) + phase5b_hard_trace_inputs(entry, max_inputs=10000))[:max_inputs]",
+    "interleaving": "zip_longest, left item then right item, continuing after either queue exhausts",
+    "stable_deduplication": "first trace_input.args occurrence wins; bucket from first occurrence is retained"
+  },
+  "proposed_paper_freeze_commit": "06dda89912103b94fc065d6f073581a7811154b1",
+  "repository": "https://github.com/sarahshi99/binary_faithful_decompilation",
+  "schema_version": 1
+}

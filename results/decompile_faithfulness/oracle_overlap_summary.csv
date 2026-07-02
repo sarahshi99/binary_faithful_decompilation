@@ -1,0 +1,14 @@
+group_type,group,wrong_labels,candidates_with_exact_overlap,candidates_without_exact_overlap,exact_overlap_candidate_rate,exact_overlap_witness_count
+dataset,phase6r_ghidra_full,74,68,6,0.918918918918919,329
+dataset,phase7c2_static_hard_public,267,250,17,0.9363295880149812,1244
+dataset,phase7e_llm_public_full_topup,36,36,0,1.0,153
+drift_family,fixture_overfit_stress,74,68,6,0.918918918918919,329
+drift_family,llm_generated_strict_bug,30,30,0,1.0,140
+drift_family,llm_generated_strict_rewrite,6,6,0,1.0,13
+drift_family,static_arithmetic_operator,104,96,8,0.9230769230769231,448
+drift_family,static_bitwise_operator,2,2,0,1.0,12
+drift_family,static_compound_assignment,12,12,0,1.0,36
+drift_family,static_constant,34,34,0,1.0,178
+drift_family,static_predicate_equality,20,18,2,0.9,90
+drift_family,static_predicate_strictness,19,16,3,0.8421052631578947,44
+drift_family,static_return_expression,76,72,4,0.9473684210526315,436
