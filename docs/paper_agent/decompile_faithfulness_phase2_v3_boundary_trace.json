@@ -1,0 +1,35 @@
+{
+  "candidate_count": 63,
+  "case_pairwise_auc": {
+    "absdiff": 1.0,
+    "clamp8": 1.0,
+    "count_bits8": 1.0,
+    "gcd_positive": 1.0,
+    "is_power_of_two": 1.0,
+    "max3": 1.0,
+    "signum": 1.0,
+    "sum_to_n": 1.0
+  },
+  "fixture_collapse": false,
+  "fixture_passing_trace_mismatch_count": 1,
+  "input_counts": {
+    "absdiff": 169,
+    "clamp8": 26,
+    "count_bits8": 21,
+    "gcd_positive": 251,
+    "is_power_of_two": 27,
+    "max3": 256,
+    "signum": 28,
+    "sum_to_n": 27
+  },
+  "label_counts": {
+    "faithful": 34,
+    "plausible_wrong": 29
+  },
+  "manifest_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_full_v1_plus_topup/manifest.json",
+  "pairwise_auc": 1.0,
+  "records_path": "analysis_outputs/decompile_faithfulness/phase2_v3_boundary_trace/records.jsonl",
+  "source_records_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_full_v1_plus_topup/records.jsonl",
+  "trace_zero_blind_spot_wrong_count": 0,
+  "verdict": "pass-v3-boundary-trace"
+}

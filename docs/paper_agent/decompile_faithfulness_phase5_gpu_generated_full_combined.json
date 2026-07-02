@@ -1,0 +1,200 @@
+{
+  "behavior_label_counts": {
+    "compile_fail": 147,
+    "faithful": 71,
+    "plausible_wrong": 42
+  },
+  "candidate_count": 260,
+  "candidate_manifest_verdict": "needs-full-candidate-generation",
+  "case_label_counts": {
+    "ca_int_compare_values": {
+      "compile_fail": 2,
+      "faithful": 1,
+      "plausible_wrong": 2
+    },
+    "ca_int_equal_values": {
+      "faithful": 6
+    },
+    "ca_int_hash_value": {
+      "compile_fail": 4,
+      "faithful": 3
+    },
+    "ca_string_hash_selector": {
+      "compile_fail": 5
+    },
+    "ca_string_nocase_hash_selector": {
+      "compile_fail": 3
+    },
+    "ta_affine_mod_inverse": {
+      "compile_fail": 6
+    },
+    "ta_armstrong_isArmstrong": {
+      "compile_fail": 4
+    },
+    "ta_armstrong_order": {
+      "compile_fail": 1,
+      "faithful": 6,
+      "plausible_wrong": 4
+    },
+    "ta_armstrong_power": {
+      "compile_fail": 7,
+      "faithful": 1,
+      "plausible_wrong": 1
+    },
+    "ta_binary_to_octal_three_digits": {
+      "compile_fail": 4,
+      "faithful": 1,
+      "plausible_wrong": 2
+    },
+    "ta_bucket_get_bucket_index": {
+      "compile_fail": 6
+    },
+    "ta_decimal_to_binary": {
+      "compile_fail": 1,
+      "faithful": 2,
+      "plausible_wrong": 1
+    },
+    "ta_decimal_to_octal": {
+      "compile_fail": 7,
+      "faithful": 1
+    },
+    "ta_euler_is_palindromic": {
+      "compile_fail": 3,
+      "faithful": 2,
+      "plausible_wrong": 3
+    },
+    "ta_gcd_GCD": {
+      "compile_fail": 5,
+      "faithful": 1,
+      "plausible_wrong": 4
+    },
+    "ta_infix_is_operand": {
+      "compile_fail": 2,
+      "faithful": 5,
+      "plausible_wrong": 2
+    },
+    "ta_infix_precedence_two": {
+      "compile_fail": 7,
+      "faithful": 1,
+      "plausible_wrong": 2
+    },
+    "ta_lcm_gcd": {
+      "compile_fail": 3,
+      "faithful": 1,
+      "plausible_wrong": 3
+    },
+    "ta_lcm_lcm": {
+      "compile_fail": 3,
+      "plausible_wrong": 1
+    },
+    "ta_leetcode_divide": {
+      "compile_fail": 5
+    },
+    "ta_leetcode_fib": {
+      "compile_fail": 3,
+      "faithful": 2,
+      "plausible_wrong": 3
+    },
+    "ta_leetcode_find_complement": {
+      "compile_fail": 3
+    },
+    "ta_leetcode_get_point_key": {
+      "compile_fail": 4,
+      "faithful": 4
+    },
+    "ta_leetcode_get_triplet_id": {
+      "compile_fail": 4,
+      "faithful": 6,
+      "plausible_wrong": 1
+    },
+    "ta_leetcode_hamming_distance": {
+      "compile_fail": 4
+    },
+    "ta_leetcode_intersection_size": {
+      "compile_fail": 4
+    },
+    "ta_leetcode_max": {
+      "compile_fail": 4,
+      "faithful": 4,
+      "plausible_wrong": 3
+    },
+    "ta_leetcode_maxval": {
+      "compile_fail": 5,
+      "faithful": 5,
+      "plausible_wrong": 1
+    },
+    "ta_leetcode_min": {
+      "compile_fail": 3,
+      "faithful": 7
+    },
+    "ta_leetcode_my_sqrt": {
+      "compile_fail": 4,
+      "plausible_wrong": 1
+    },
+    "ta_leetcode_range_bitwise_and": {
+      "compile_fail": 3,
+      "faithful": 5,
+      "plausible_wrong": 1
+    },
+    "ta_leetcode_reverse": {
+      "compile_fail": 5
+    },
+    "ta_leetcode_tribonacci": {
+      "compile_fail": 9,
+      "plausible_wrong": 2
+    },
+    "ta_leetcode_unique_paths": {
+      "compile_fail": 7
+    },
+    "ta_naval_valid_entry_line_column": {
+      "compile_fail": 2,
+      "faithful": 5,
+      "plausible_wrong": 3
+    },
+    "ta_shunting_get_associativity": {
+      "compile_fail": 5,
+      "plausible_wrong": 1
+    },
+    "ta_shunting_get_precedence": {
+      "faithful": 2,
+      "plausible_wrong": 1
+    }
+  },
+  "cleaning_status_counts": {
+    "parse_failed": 192,
+    "parsed_function": 260
+  },
+  "compile_pass_count": 113,
+  "created_at_utc": "2026-07-01T02:54:37.574309+00:00",
+  "fixture_collapse": true,
+  "fixture_passing_wrong_count": 0,
+  "generation_count": 452,
+  "missing_inputs": [],
+  "paired_case_count": 17,
+  "parsed_count": 260,
+  "project_label_counts": {
+    "c_algorithms": {
+      "compile_fail": 14,
+      "faithful": 10,
+      "plausible_wrong": 2
+    },
+    "thealgorithms_c": {
+      "compile_fail": 133,
+      "faithful": 61,
+      "plausible_wrong": 40
+    }
+  },
+  "run_dirs": [
+    "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0",
+    "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda3_s1",
+    "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full_recovered"
+  ],
+  "source_function_count": 38,
+  "source_manifest": "/home/shx/projects/binary_faithful_decompilation/docs/paper_agent/decompile_faithfulness_phase5_function_manifest.json",
+  "source_projects": [
+    "c_algorithms",
+    "thealgorithms_c"
+  ],
+  "trace_pairwise_auc": 1.0,
+  "verdict": "needs-more-phase5-gpu-generated-samples"
+}

@@ -1,0 +1,228 @@
+{
+  "version": 1,
+  "selection_policy": {
+    "goal": "Build a source-known small-function pool for Phase 3 subset selection.",
+    "minimum_subset_size": 5,
+    "maximum_subset_size": 10,
+    "negative_conclusion_policy": "Do not reject the method from one failed subset. Require repeated failures across diverse high-coverage subsets before treating Phase 3 as a method-level failure.",
+    "oracle": "compile_original_and_execute_generated_inputs"
+  },
+  "functions": [
+    {
+      "case_id": "bounded_abs100",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/bounded_abs100.c",
+      "function_name": "bounded_abs100",
+      "signature": "int bounded_abs100(int x)",
+      "tags": ["branch", "boundary", "sign_zero", "unary"],
+      "risk_families": ["sign_zero", "boundary"],
+      "domain": {"arity": 1, "values": [-150, -100, -7, -1, 0, 1, 8, 100, 140]},
+      "fixtures": [
+        {"args": [-150], "expected": 100},
+        {"args": [-7], "expected": 7},
+        {"args": [0], "expected": 0},
+        {"args": [8], "expected": 8},
+        {"args": [140], "expected": 100}
+      ],
+      "oracle": "compile_original_and_execute_generated_inputs"
+    },
+    {
+      "case_id": "sat_add8",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/sat_add8.c",
+      "function_name": "sat_add8",
+      "signature": "int sat_add8(int a, int b)",
+      "tags": ["arithmetic", "branch", "boundary", "multi_arg"],
+      "risk_families": ["overflow_like", "boundary"],
+      "domain": {"arity": 2, "values": [-20, -5, 0, 3, 5, 10, 20, 100, 128, 200, 250, 255]},
+      "fixtures": [
+        {"args": [-5, 3], "expected": 0},
+        {"args": [10, 20], "expected": 30},
+        {"args": [200, 100], "expected": 255},
+        {"args": [250, 5], "expected": 255},
+        {"args": [128, -20], "expected": 108}
+      ],
+      "oracle": "compile_original_and_execute_generated_inputs"
+    },
+    {
+      "case_id": "within_range_inclusive",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/within_range_inclusive.c",
+      "function_name": "within_range_inclusive",
+      "signature": "int within_range_inclusive(int x, int lo, int hi)",
+      "tags": ["branch", "comparison", "multi_arg", "boundary"],
+      "risk_families": ["predicate_boundary", "argument_order"],
+      "domain": {"arity": 3, "values": [-3, 0, 1, 3, 5, 8, 9, 10]},
+      "fixtures": [
+        {"args": [5, 1, 9], "expected": 1},
+        {"args": [1, 1, 9], "expected": 1},
+        {"args": [9, 1, 9], "expected": 1},
+        {"args": [0, 1, 9], "expected": 0},
+        {"args": [10, 1, 9], "expected": 0},
+        {"args": [5, 8, 3], "expected": 0}
+      ],
+      "oracle": "compile_original_and_execute_generated_inputs"
+    },
+    {
+      "case_id": "parity8",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/parity8.c",
+      "function_name": "parity8",
+      "signature": "int parity8(int x)",
+      "tags": ["bitwise", "loop", "boundary", "unary"],
+      "risk_families": ["bit_width", "loop_bound"],
+      "domain": {"arity": 1, "values": [-1, 0, 1, 3, 7, 128, 170, 255, 256]},
+      "fixtures": [
+        {"args": [0], "expected": 0},
+        {"args": [1], "expected": 1},
+        {"args": [3], "expected": 0},
+        {"args": [7], "expected": 1},
+        {"args": [255], "expected": 0},
+        {"args": [170], "expected": 0},
+        {"args": [128], "expected": 1}
+      ],
+      "oracle": "compile_original_and_execute_generated_inputs"
+    },
+    {
+      "case_id": "high_nibble",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/high_nibble.c",
+      "function_name": "high_nibble",
+      "signature": "int high_nibble(int x)",
+      "tags": ["bitwise", "boundary", "unary"],
+      "risk_families": ["bit_width", "signedness"],
+      "domain": {"arity": 1, "values": [-16, -1, 0, 15, 16, 31, 255, 256]},
+      "fixtures": [
+        {"args": [0], "expected": 0},
+        {"args": [15], "expected": 0},
+        {"args": [16], "expected": 1},
+        {"args": [255], "expected": 15},
+        {"args": [256], "expected": 0},
+        {"args": [-1], "expected": 15},
+        {"args": [-16], "expected": 15}
+      ],
+      "oracle": "compile_original_and_execute_generated_inputs"
+    },
+    {
+      "case_id": "gcd_nonnegative",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/gcd_nonnegative.c",
+      "function_name": "gcd_nonnegative",
+      "signature": "int gcd_nonnegative(int a, int b)",
+      "tags": ["loop", "modulo", "multi_arg", "sign_zero"],
+      "risk_families": ["termination", "sign_zero"],
+      "domain": {"arity": 2, "values": [-25, -14, -12, -10, 0, 5, 8, 17, 21]},
+      "fixtures": [
+        {"args": [0, 0], "expected": 0},
+        {"args": [0, 5], "expected": 5},
+        {"args": [-12, 8], "expected": 4},
+        {"args": [21, -14], "expected": 7},
+        {"args": [-25, -10], "expected": 5},
+        {"args": [17, 5], "expected": 1}
+      ],
+      "oracle": "compile_original_and_execute_generated_inputs"
+    },
+    {
+      "case_id": "mod3_sum_digits",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/mod3_sum_digits.c",
+      "function_name": "mod3_sum_digits",
+      "signature": "int mod3_sum_digits(int n)",
+      "tags": ["loop", "division", "modulo", "sign_zero", "unary"],
+      "risk_families": ["loop_termination", "sign_zero"],
+      "domain": {"arity": 1, "values": [-99, -10, -1, 0, 5, 12, 38, 100, 255]},
+      "fixtures": [
+        {"args": [0], "expected": 0},
+        {"args": [5], "expected": 2},
+        {"args": [12], "expected": 0},
+        {"args": [38], "expected": 2},
+        {"args": [-99], "expected": 0},
+        {"args": [100], "expected": 1}
+      ],
+      "oracle": "compile_original_and_execute_generated_inputs"
+    },
+    {
+      "case_id": "days_before_month",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/days_before_month.c",
+      "function_name": "days_before_month",
+      "signature": "int days_before_month(int month)",
+      "tags": ["branch", "loop", "boundary", "calendar_like", "unary"],
+      "risk_families": ["predicate_boundary", "table_logic"],
+      "domain": {"arity": 1, "values": [0, 1, 2, 3, 4, 6, 9, 12, 13]},
+      "fixtures": [
+        {"args": [1], "expected": 0},
+        {"args": [2], "expected": 31},
+        {"args": [3], "expected": 59},
+        {"args": [12], "expected": 334},
+        {"args": [13], "expected": 365},
+        {"args": [0], "expected": 0}
+      ],
+      "oracle": "compile_original_and_execute_generated_inputs"
+    },
+    {
+      "case_id": "triangle_wave10",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/triangle_wave10.c",
+      "function_name": "triangle_wave10",
+      "signature": "int triangle_wave10(int x)",
+      "tags": ["branch", "modulo", "sign_zero", "boundary", "unary"],
+      "risk_families": ["periodic_boundary", "sign_zero"],
+      "domain": {"arity": 1, "values": [-21, -3, 0, 5, 10, 11, 19, 20, 27]},
+      "fixtures": [
+        {"args": [0], "expected": 0},
+        {"args": [5], "expected": 5},
+        {"args": [10], "expected": 10},
+        {"args": [11], "expected": 9},
+        {"args": [19], "expected": 1},
+        {"args": [20], "expected": 0},
+        {"args": [-3], "expected": 3},
+        {"args": [27], "expected": 7}
+      ],
+      "oracle": "compile_original_and_execute_generated_inputs"
+    },
+    {
+      "case_id": "safe_div_round0",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/safe_div_round0.c",
+      "function_name": "safe_div_round0",
+      "signature": "int safe_div_round0(int a, int b)",
+      "tags": ["branch", "division", "multi_arg", "sign_zero"],
+      "risk_families": ["zero_guard", "signed_division"],
+      "domain": {"arity": 2, "values": [-7, -2, 0, 2, 5, 7]},
+      "fixtures": [
+        {"args": [7, 2], "expected": 3},
+        {"args": [-7, 2], "expected": -3},
+        {"args": [7, -2], "expected": -3},
+        {"args": [0, 5], "expected": 0},
+        {"args": [5, 0], "expected": 0}
+      ],
+      "oracle": "compile_original_and_execute_generated_inputs"
+    },
+    {
+      "case_id": "clamp_then_square",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/clamp_then_square.c",
+      "function_name": "clamp_then_square",
+      "signature": "int clamp_then_square(int x)",
+      "tags": ["arithmetic", "branch", "boundary", "unary"],
+      "risk_families": ["boundary", "nonlinear_arithmetic"],
+      "domain": {"arity": 1, "values": [-20, -10, -3, 0, 4, 10, 11]},
+      "fixtures": [
+        {"args": [-20], "expected": 100},
+        {"args": [-3], "expected": 9},
+        {"args": [0], "expected": 0},
+        {"args": [4], "expected": 16},
+        {"args": [11], "expected": 100}
+      ],
+      "oracle": "compile_original_and_execute_generated_inputs"
+    },
+    {
+      "case_id": "popcount_nibble_diff",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/popcount_nibble_diff.c",
+      "function_name": "popcount_nibble_diff",
+      "signature": "int popcount_nibble_diff(int a, int b)",
+      "tags": ["bitwise", "loop", "multi_arg", "sign_zero"],
+      "risk_families": ["bit_width", "argument_order"],
+      "domain": {"arity": 2, "values": [-1, 0, 1, 5, 7, 8, 10, 15, 16]},
+      "fixtures": [
+        {"args": [15, 0], "expected": 4},
+        {"args": [0, 15], "expected": -4},
+        {"args": [10, 5], "expected": 0},
+        {"args": [7, 8], "expected": 2},
+        {"args": [-1, 0], "expected": 4},
+        {"args": [16, 1], "expected": -1}
+      ],
+      "oracle": "compile_original_and_execute_generated_inputs"
+    }
+  ]
+}

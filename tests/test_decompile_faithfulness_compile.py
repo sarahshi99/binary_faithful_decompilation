@@ -56,6 +56,15 @@ class DecompileFaithfulnessCompileTest(unittest.TestCase):
         self.assertFalse(result.behavior_passed)
         self.assertIn("error", result.stderr.lower())
 
+    def test_run_command_records_timeout(self) -> None:
+        result = ccompile.run_command(
+            ["/bin/sh", "-c", "sleep 2"],
+            timeout_s=1,
+        )
+
+        self.assertEqual(result.returncode, 124)
+        self.assertIn("timed out", result.stderr)
+
 
 if __name__ == "__main__":
     unittest.main()

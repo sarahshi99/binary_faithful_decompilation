@@ -1,0 +1,677 @@
+{
+  "case_table": {
+    "absdiff": {
+      "candidates": 8,
+      "compile_pass": 7,
+      "faithful_trace_total": {
+        "count": 4,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "fixture_passing_trace_mismatch": 0,
+      "generations": 10,
+      "labels": {
+        "compile_fail": 1,
+        "faithful": 4,
+        "plausible_wrong": 3
+      },
+      "misordered_or_tied_pairs": 0,
+      "pair_count": 12,
+      "paired": true,
+      "pairwise_auc": 1.0,
+      "parsed": 8,
+      "separation_margin": 0.7402295999716542,
+      "wrong_trace_total": {
+        "count": 3,
+        "max": 1.0500978998303903,
+        "mean": 0.9101326238378703,
+        "median": 0.9400703717115666,
+        "min": 0.7402295999716542
+      }
+    },
+    "clamp8": {
+      "candidates": 7,
+      "compile_pass": 6,
+      "faithful_trace_total": {
+        "count": 2,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "fixture_passing_trace_mismatch": 0,
+      "generations": 10,
+      "labels": {
+        "compile_fail": 1,
+        "faithful": 2,
+        "plausible_wrong": 4
+      },
+      "misordered_or_tied_pairs": 0,
+      "pair_count": 8,
+      "paired": true,
+      "pairwise_auc": 1.0,
+      "parsed": 7,
+      "separation_margin": 0.07739316239316239,
+      "wrong_trace_total": {
+        "count": 4,
+        "max": 1.6099893162393162,
+        "mean": 0.8997200284989788,
+        "median": 0.9557488176817183,
+        "min": 0.07739316239316239
+      }
+    },
+    "count_bits8": {
+      "candidates": 8,
+      "compile_pass": 5,
+      "faithful_trace_total": {
+        "count": 3,
+        "max": 0.23872180451127817,
+        "mean": 0.07957393483709273,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "fixture_passing_trace_mismatch": 1,
+      "generations": 10,
+      "labels": {
+        "compile_fail": 3,
+        "faithful": 3,
+        "plausible_wrong": 2
+      },
+      "misordered_or_tied_pairs": 0,
+      "pair_count": 6,
+      "paired": true,
+      "pairwise_auc": 1.0,
+      "parsed": 8,
+      "separation_margin": 1.0960844274866268,
+      "wrong_trace_total": {
+        "count": 2,
+        "max": 2.0,
+        "mean": 1.6674031159989524,
+        "median": 1.6674031159989524,
+        "min": 1.334806231997905
+      }
+    },
+    "gcd_positive": {
+      "candidates": 8,
+      "compile_pass": 7,
+      "faithful_trace_total": {
+        "count": 3,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "fixture_passing_trace_mismatch": 0,
+      "generations": 10,
+      "labels": {
+        "compile_fail": 1,
+        "faithful": 3,
+        "plausible_wrong": 4
+      },
+      "misordered_or_tied_pairs": 0,
+      "pair_count": 12,
+      "paired": true,
+      "pairwise_auc": 1.0,
+      "parsed": 8,
+      "separation_margin": 1.2021252328899221,
+      "wrong_trace_total": {
+        "count": 4,
+        "max": 2.0,
+        "mean": 1.5827526492865713,
+        "median": 1.5644426821281816,
+        "min": 1.2021252328899221
+      }
+    },
+    "is_power_of_two": {
+      "candidates": 13,
+      "compile_pass": 11,
+      "faithful_trace_total": {
+        "count": 4,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "fixture_passing_trace_mismatch": 0,
+      "generations": 20,
+      "labels": {
+        "compile_fail": 2,
+        "faithful": 4,
+        "plausible_wrong": 7
+      },
+      "misordered_or_tied_pairs": 4,
+      "pair_count": 28,
+      "paired": true,
+      "pairwise_auc": 0.9285714285714286,
+      "parsed": 13,
+      "separation_margin": 0.0,
+      "wrong_trace_total": {
+        "count": 7,
+        "max": 1.5407971014492754,
+        "mean": 0.8321738805921715,
+        "median": 1.0770833333333334,
+        "min": 0.0
+      }
+    },
+    "max3": {
+      "candidates": 17,
+      "compile_pass": 12,
+      "faithful_trace_total": {
+        "count": 11,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "fixture_passing_trace_mismatch": 0,
+      "generations": 20,
+      "labels": {
+        "compile_fail": 5,
+        "faithful": 11,
+        "plausible_wrong": 1
+      },
+      "misordered_or_tied_pairs": 0,
+      "pair_count": 11,
+      "paired": true,
+      "pairwise_auc": 1.0,
+      "parsed": 17,
+      "separation_margin": 1.8434803216527196,
+      "wrong_trace_total": {
+        "count": 1,
+        "max": 1.8434803216527196,
+        "mean": 1.8434803216527196,
+        "median": 1.8434803216527196,
+        "min": 1.8434803216527196
+      }
+    },
+    "signum": {
+      "candidates": 10,
+      "compile_pass": 9,
+      "faithful_trace_total": {
+        "count": 4,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "fixture_passing_trace_mismatch": 0,
+      "generations": 10,
+      "labels": {
+        "compile_fail": 1,
+        "faithful": 4,
+        "plausible_wrong": 5
+      },
+      "misordered_or_tied_pairs": 4,
+      "pair_count": 20,
+      "paired": true,
+      "pairwise_auc": 0.9,
+      "parsed": 10,
+      "separation_margin": 0.0,
+      "wrong_trace_total": {
+        "count": 5,
+        "max": 1.6666666666666667,
+        "mean": 1.3137149758454107,
+        "median": 1.6666666666666667,
+        "min": 0.0
+      }
+    },
+    "sum_to_n": {
+      "candidates": 7,
+      "compile_pass": 6,
+      "faithful_trace_total": {
+        "count": 3,
+        "max": 0.0,
+        "mean": 0.0,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "fixture_passing_trace_mismatch": 0,
+      "generations": 10,
+      "labels": {
+        "compile_fail": 1,
+        "faithful": 3,
+        "plausible_wrong": 3
+      },
+      "misordered_or_tied_pairs": 0,
+      "pair_count": 9,
+      "paired": true,
+      "pairwise_auc": 1.0,
+      "parsed": 7,
+      "separation_margin": 1.2208249832999332,
+      "wrong_trace_total": {
+        "count": 3,
+        "max": 1.2249999997961603,
+        "mean": 1.223593845825369,
+        "median": 1.2249565543800138,
+        "min": 1.2208249832999332
+      }
+    }
+  },
+  "failure_analysis": {
+    "cleaning_reason_counts": {
+      "tried statuses: missing_expected_function": 1,
+      "tried statuses: missing_expected_function, missing_expected_function": 4,
+      "tried statuses: multiple_expected_functions, multiple_expected_functions": 1,
+      "tried statuses: multiple_functions, multiple_functions": 2,
+      "tried statuses: rejected_ellipsis": 1,
+      "tried statuses: rejected_library_call, rejected_library_call": 1,
+      "tried statuses: rejected_preprocessor, rejected_preprocessor": 1,
+      "tried statuses: unbalanced_braces": 5,
+      "tried statuses: unbalanced_braces, missing_expected_function, missing_expected_function, rejected_preprocessor": 1,
+      "tried statuses: unbalanced_braces, unbalanced_braces": 5
+    },
+    "cleaning_status_counts": {
+      "parse_failed": 22,
+      "parsed_function": 78
+    },
+    "compile_failure_categories": {
+      "syntax_or_compile_error": 11,
+      "undeclared_or_forbidden_call": 4
+    },
+    "runtime_timeout_count": 2
+  },
+  "full_gate": {
+    "checks": {
+      "all_8_cases_represented": true,
+      "all_cases_paired": true,
+      "at_least_5_paired_cases": true,
+      "min_5_compile_pass_per_case": true,
+      "trace_auc_at_least_0_9": true
+    },
+    "compile_pass_by_case": {
+      "absdiff": 7,
+      "clamp8": 6,
+      "count_bits8": 5,
+      "gcd_positive": 7,
+      "is_power_of_two": 11,
+      "max3": 12,
+      "signum": 9,
+      "sum_to_n": 6
+    },
+    "paired_cases": [
+      "absdiff",
+      "clamp8",
+      "count_bits8",
+      "gcd_positive",
+      "is_power_of_two",
+      "max3",
+      "signum",
+      "sum_to_n"
+    ],
+    "passed": true
+  },
+  "generation_metadata_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_full_v1_plus_topup/generation_metadata.jsonl",
+  "hard_examples": {
+    "fixture_passing_trace_mismatch": [
+      {
+        "candidate_id": "full_v1__phase2_gpu_count_bits8_strict_bug_01",
+        "case_id": "count_bits8",
+        "exit_code": 0,
+        "fixture_mismatch_rate": 0.0,
+        "function_source": "int count_bits8(int x) {\n    int total = 0;\n    for (int i = 0; i < 16; i++) {\n        if ((x & (1 << i)) != 0) {\n            total++;\n        }\n    }\n    return total;\n}\n",
+        "label": "faithful",
+        "prompt_id": "strict_bug",
+        "trace_mismatch_rate": 0.10526315789473684,
+        "trace_total": 0.23872180451127817
+      }
+    ],
+    "highest_scored_faithful": [
+      {
+        "candidate_id": "full_v1__phase2_gpu_count_bits8_strict_bug_01",
+        "case_id": "count_bits8",
+        "exit_code": 0,
+        "fixture_mismatch_rate": 0.0,
+        "function_source": "int count_bits8(int x) {\n    int total = 0;\n    for (int i = 0; i < 16; i++) {\n        if ((x & (1 << i)) != 0) {\n            total++;\n        }\n    }\n    return total;\n}\n",
+        "label": "faithful",
+        "prompt_id": "strict_bug",
+        "trace_mismatch_rate": 0.10526315789473684,
+        "trace_total": 0.23872180451127817
+      },
+      {
+        "candidate_id": "full_v1__phase2_gpu_absdiff_strict_rewrite_00",
+        "case_id": "absdiff",
+        "exit_code": 0,
+        "fixture_mismatch_rate": 0.0,
+        "function_source": "int absdiff(int a, int b) {\n    if (a > b){\n        return a - b;\n    }\n    return b - a;\n}\n",
+        "label": "faithful",
+        "prompt_id": "strict_rewrite",
+        "trace_mismatch_rate": 0.0,
+        "trace_total": 0.0
+      },
+      {
+        "candidate_id": "full_v1__phase2_gpu_absdiff_strict_rewrite_03",
+        "case_id": "absdiff",
+        "exit_code": 0,
+        "fixture_mismatch_rate": 0.0,
+        "function_source": "int absdiff(int a, int b) {\n    if (a > b) {\n        return a - b;\n    }\n    return b - a;\n}\n",
+        "label": "faithful",
+        "prompt_id": "strict_rewrite",
+        "trace_mismatch_rate": 0.0,
+        "trace_total": 0.0
+      },
+      {
+        "candidate_id": "full_v1__phase2_gpu_absdiff_strict_rewrite_04",
+        "case_id": "absdiff",
+        "exit_code": 0,
+        "fixture_mismatch_rate": 0.0,
+        "function_source": "int absdiff(int a, int b) {\n    if (a > b) {\n        return a - b;\n    }\n    return b - a;\n}\n",
+        "label": "faithful",
+        "prompt_id": "strict_rewrite",
+        "trace_mismatch_rate": 0.0,
+        "trace_total": 0.0
+      },
+      {
+        "candidate_id": "full_v1__phase2_gpu_absdiff_strict_bug_00",
+        "case_id": "absdiff",
+        "exit_code": 0,
+        "fixture_mismatch_rate": 0.0,
+        "function_source": "int absdiff(int a, int b) {\n    if (a > b) {\n        return a - b;\n    }\n    return b - a;\n}\n",
+        "label": "faithful",
+        "prompt_id": "strict_bug",
+        "trace_mismatch_rate": 0.0,
+        "trace_total": 0.0
+      },
+      {
+        "candidate_id": "full_v1__phase2_gpu_clamp8_strict_rewrite_02",
+        "case_id": "clamp8",
+        "exit_code": 0,
+        "fixture_mismatch_rate": 0.0,
+        "function_source": "int clamp8(int x) {\n    // Clamp the value between 0 and 255 as per the reference function\n    if (x < 0) {\n        return 0;\n    }\n    if (x > 255) {\n        return 255;\n    }\n    return x;\n}\n",
+        "label": "faithful",
+        "prompt_id": "strict_rewrite",
+        "trace_mismatch_rate": 0.0,
+        "trace_total": 0.0
+      },
+      {
+        "candidate_id": "full_v1__phase2_gpu_clamp8_strict_bug_02",
+        "case_id": "clamp8",
+        "exit_code": 0,
+        "fixture_mismatch_rate": 0.0,
+        "function_source": "int clamp8(int x) {\n    if (x <= 0) { // Bug\n        return 0;\n    }\n    if (x > 255) {\n        return 255;\n    }\n    return x;\n}\n",
+        "label": "faithful",
+        "prompt_id": "strict_bug",
+        "trace_mismatch_rate": 0.0,
+        "trace_total": 0.0
+      },
+      {
+        "candidate_id": "full_v1__phase2_gpu_count_bits8_strict_rewrite_01",
+        "case_id": "count_bits8",
+        "exit_code": 0,
+        "fixture_mismatch_rate": 0.0,
+        "function_source": "int count_bits8(int x) {\n    int total = 0;\n    for (int i = 0; i < 8; i++) { // Loop through 8 times to check 8 i bits\n        if ((x & (1 << i)) != 0) { // Check if the ith bit is set (1)\n            total++;\n        }\n    }\n    return total;\n}\n",
+        "label": "faithful",
+        "prompt_id": "strict_rewrite",
+        "trace_mismatch_rate": 0.0,
+        "trace_total": 0.0
+      }
+    ],
+    "lowest_scored_wrong": [
+      {
+        "candidate_id": "full_v1__phase2_gpu_signum_strict_bug_02",
+        "case_id": "signum",
+        "exit_code": 102,
+        "fixture_mismatch_rate": 0.2,
+        "function_source": "int signum(int x) { \n    if (x > 0) {\n        return 1;\n    } else {\n        return -1;\n    }\n    return 0;\n}\n",
+        "label": "plausible_wrong",
+        "prompt_id": "strict_bug",
+        "trace_mismatch_rate": 0.0,
+        "trace_total": 0.0
+      },
+      {
+        "candidate_id": "topup_v1__phase2_gpu_is_power_of_two_strict_bug_03",
+        "case_id": "is_power_of_two",
+        "exit_code": 101,
+        "fixture_mismatch_rate": 0.14285714285714285,
+        "function_source": "int is_power_of_two(int x) {\n    // Bug introduced\n    if (x == 1) {\n        return 1;\n    }\n    return (x & (x - 1)) == 0;\n}\n",
+        "label": "plausible_wrong",
+        "prompt_id": "strict_bug",
+        "trace_mismatch_rate": 0.0,
+        "trace_total": 0.0
+      },
+      {
+        "candidate_id": "full_v1__phase2_gpu_clamp8_strict_bug_01",
+        "case_id": "clamp8",
+        "exit_code": 104,
+        "fixture_mismatch_rate": 0.2,
+        "function_source": "int clamp8(int x) {\n    if (x < 0) {\n        return 0; // Returns 0 correctly\n    } else if (x > 255) {\n        // return 255; // Bug should not return 255 correctly\n    }\n    return x;\n}\n",
+        "label": "plausible_wrong",
+        "prompt_id": "strict_bug",
+        "trace_mismatch_rate": 0.04,
+        "trace_total": 0.07739316239316239
+      },
+      {
+        "candidate_id": "full_v1__phase2_gpu_is_power_of_two_strict_bug_01",
+        "case_id": "is_power_of_two",
+        "exit_code": 103,
+        "fixture_mismatch_rate": 0.2857142857142857,
+        "function_source": "int is_power_of_two(int x) {\n    if (x <= 0) {\n        return 0;\n    } else {\n        // Bug: Returning 1 for powers of two, which is incorrect\n        if (x == 1) \n            return 1; \n        else {\n            return 0;\n        }\n    }\n}\n",
+        "label": "plausible_wrong",
+        "prompt_id": "strict_bug",
+        "trace_mismatch_rate": 0.16,
+        "trace_total": 0.357816091954023
+      },
+      {
+        "candidate_id": "topup_v1__phase2_gpu_is_power_of_two_strict_bug_00",
+        "case_id": "is_power_of_two",
+        "exit_code": 103,
+        "fixture_mismatch_rate": 0.2857142857142857,
+        "function_source": "int is_power_of_two(int x) {\n    if (x <= 0) {\n        return 0;  // Bug: return 0 for 1 if ((x & (x - 1)) == 0; should else return 0;\n    } if (x == 1) {\n        return 1;  // Bug: return 1 for 0 return 1;\n    }\n    return 0;  // Bug: should have return 1 if ((x & (x - 1)) == 0); \n    // Correct behavior: if (x > 0) return 1 if ((x & (x - 1)) == 0) else 0; \n}\n",
+        "label": "plausible_wrong",
+        "prompt_id": "strict_bug",
+        "trace_mismatch_rate": 0.16,
+        "trace_total": 0.357816091954023
+      },
+      {
+        "candidate_id": "full_v1__phase2_gpu_clamp8_strict_bug_00",
+        "case_id": "clamp8",
+        "exit_code": 100,
+        "fixture_mismatch_rate": 0.4,
+        "function_source": "int clamp8(int x) {\n    if (x < 0) {\n        return 255; // Bug: Incorrect for negative values\n    }\n    return x > 255 ? 255 - 1 : x;\n}\n",
+        "label": "plausible_wrong",
+        "prompt_id": "strict_bug",
+        "trace_mismatch_rate": 0.24,
+        "trace_total": 0.6963071141856692
+      },
+      {
+        "candidate_id": "full_v1__phase2_gpu_absdiff_strict_bug_04",
+        "case_id": "absdiff",
+        "exit_code": 100,
+        "fixture_mismatch_rate": 0.25,
+        "function_source": "int absdiff(int a, int b) {\n    if (a > b) {\n        return a + b; // This should: subtle bug\n    }\n    return b - a;\n}\n",
+        "label": "plausible_wrong",
+        "prompt_id": "strict_bug",
+        "trace_mismatch_rate": 0.41420118343195267,
+        "trace_total": 0.7402295999716542
+      },
+      {
+        "candidate_id": "full_v1__phase2_gpu_absdiff_strict_bug_01",
+        "case_id": "absdiff",
+        "exit_code": 101,
+        "fixture_mismatch_rate": 0.5,
+        "function_source": "int absdiff(int a, int b) {\n    if (a > b) { int a = b; b = a; }\n    return a - b;\n}\n",
+        "label": "plausible_wrong",
+        "prompt_id": "strict_bug",
+        "trace_mismatch_rate": 0.46153846153846156,
+        "trace_total": 0.9400703717115666
+      }
+    ]
+  },
+  "overall": {
+    "candidate_count": 78,
+    "case_count": 8,
+    "compile_pass_count": 63,
+    "fixture_collapse": false,
+    "fixture_passing_trace_mismatch_count": 1,
+    "generation_count": 100,
+    "label_counts": {
+      "compile_fail": 15,
+      "faithful": 34,
+      "plausible_wrong": 29
+    },
+    "paired_case_count": 8,
+    "parsed_count": 78,
+    "trace_mismatch_by_label": {
+      "faithful": {
+        "count": 34,
+        "max": 0.10526315789473684,
+        "mean": 0.003095975232198142,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "plausible_wrong": {
+        "count": 29,
+        "max": 1.0,
+        "mean": 0.6568261905368784,
+        "median": 0.8,
+        "min": 0.0
+      }
+    },
+    "trace_pairwise_auc": 0.9622641509433962,
+    "trace_total_by_label": {
+      "faithful": {
+        "count": 34,
+        "max": 0.23872180451127817,
+        "mean": 0.0070212295444493575,
+        "median": 0.0,
+        "min": 0.0
+      },
+      "plausible_wrong": {
+        "count": 29,
+        "max": 2.0,
+        "mean": 1.169074093694993,
+        "median": 1.2208249832999332,
+        "min": 0.0
+      }
+    }
+  },
+  "paper_claim": {
+    "not_supported": "This does not establish a general decompilation faithfulness verifier or real-project transfer.",
+    "supported": "Dynamic Trace v2 remains highly discriminative on local-LLM generated source-known candidates for localized semantic bug auditing."
+  },
+  "prompt_case_matrix": {
+    "absdiff": {
+      "strict_bug": {
+        "compile_fail": 1,
+        "faithful": 1,
+        "plausible_wrong": 3
+      },
+      "strict_rewrite": {
+        "faithful": 3
+      }
+    },
+    "clamp8": {
+      "strict_bug": {
+        "faithful": 1,
+        "plausible_wrong": 4
+      },
+      "strict_rewrite": {
+        "compile_fail": 1,
+        "faithful": 1
+      }
+    },
+    "count_bits8": {
+      "strict_bug": {
+        "compile_fail": 2,
+        "faithful": 1,
+        "plausible_wrong": 2
+      },
+      "strict_rewrite": {
+        "compile_fail": 1,
+        "faithful": 2
+      }
+    },
+    "gcd_positive": {
+      "strict_bug": {
+        "compile_fail": 1,
+        "faithful": 1,
+        "plausible_wrong": 3
+      },
+      "strict_rewrite": {
+        "faithful": 2,
+        "plausible_wrong": 1
+      }
+    },
+    "is_power_of_two": {
+      "strict_bug": {
+        "compile_fail": 1,
+        "plausible_wrong": 6
+      },
+      "strict_rewrite": {
+        "compile_fail": 1,
+        "faithful": 4,
+        "plausible_wrong": 1
+      }
+    },
+    "max3": {
+      "strict_bug": {
+        "compile_fail": 3,
+        "faithful": 4,
+        "plausible_wrong": 1
+      },
+      "strict_rewrite": {
+        "compile_fail": 2,
+        "faithful": 7
+      }
+    },
+    "signum": {
+      "strict_bug": {
+        "plausible_wrong": 5
+      },
+      "strict_rewrite": {
+        "compile_fail": 1,
+        "faithful": 4
+      }
+    },
+    "sum_to_n": {
+      "strict_bug": {
+        "faithful": 1,
+        "plausible_wrong": 2
+      },
+      "strict_rewrite": {
+        "compile_fail": 1,
+        "faithful": 2,
+        "plausible_wrong": 1
+      }
+    }
+  },
+  "prompt_table": {
+    "strict_bug": {
+      "candidates": 43,
+      "compile_pass": 35,
+      "compile_rate_among_parsed": 0.813953488372093,
+      "faithful_rate_among_compiled": 0.2571428571428571,
+      "fixture_passing_trace_mismatch": 1,
+      "generations": 50,
+      "labels": {
+        "compile_fail": 8,
+        "faithful": 9,
+        "plausible_wrong": 26
+      },
+      "parsed": 43,
+      "parsed_rate": 0.86,
+      "trace_pairwise_auc": 1.0,
+      "wrong_rate_among_compiled": 0.7428571428571429
+    },
+    "strict_rewrite": {
+      "candidates": 35,
+      "compile_pass": 28,
+      "compile_rate_among_parsed": 0.8,
+      "faithful_rate_among_compiled": 0.8928571428571429,
+      "fixture_passing_trace_mismatch": 0,
+      "generations": 50,
+      "labels": {
+        "compile_fail": 7,
+        "faithful": 25,
+        "plausible_wrong": 3
+      },
+      "parsed": 35,
+      "parsed_rate": 0.7,
+      "trace_pairwise_auc": 1.0,
+      "wrong_rate_among_compiled": 0.10714285714285714
+    }
+  },
+  "records_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_full_v1_plus_topup/records.jsonl",
+  "verdict": "pass-phase2-result-analysis"
+}

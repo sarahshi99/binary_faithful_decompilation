@@ -1,0 +1,86 @@
+{
+  "behavior_label_counts": {
+    "compile_fail": 10,
+    "faithful": 27,
+    "plausible_wrong": 23
+  },
+  "candidate_count": 60,
+  "case_label_counts": {
+    "absdiff": {
+      "compile_fail": 1,
+      "faithful": 4,
+      "plausible_wrong": 3
+    },
+    "clamp8": {
+      "compile_fail": 1,
+      "faithful": 2,
+      "plausible_wrong": 4
+    },
+    "count_bits8": {
+      "compile_fail": 3,
+      "faithful": 3,
+      "plausible_wrong": 2
+    },
+    "gcd_positive": {
+      "compile_fail": 1,
+      "faithful": 3,
+      "plausible_wrong": 4
+    },
+    "is_power_of_two": {
+      "compile_fail": 1,
+      "faithful": 2,
+      "plausible_wrong": 1
+    },
+    "max3": {
+      "compile_fail": 1,
+      "faithful": 6,
+      "plausible_wrong": 1
+    },
+    "signum": {
+      "compile_fail": 1,
+      "faithful": 4,
+      "plausible_wrong": 5
+    },
+    "sum_to_n": {
+      "compile_fail": 1,
+      "faithful": 3,
+      "plausible_wrong": 3
+    }
+  },
+  "cleaning_status_counts": {
+    "parse_failed": 20,
+    "parsed_function": 60
+  },
+  "compile_pass_count": 50,
+  "compile_rate_among_parsed": 0.8333333333333334,
+  "created_at_utc": "2026-06-18T04:21:14.946844+00:00",
+  "fixture_collapse": false,
+  "generation_count": 80,
+  "generation_error_count": 0,
+  "generation_metadata_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_full_v1/generation_metadata.jsonl",
+  "gpu_smoke_gate_passed": true,
+  "label_diversity_gate_passed": true,
+  "manifest_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_full_v1/manifest.json",
+  "model_info": {
+    "cuda_visible_devices_policy": "not_set_by_script; model and tensors are explicitly moved to requested device",
+    "device": "cuda:2",
+    "max_new_tokens": 192,
+    "model_error": "",
+    "model_load_seconds": null,
+    "model_loaded": true,
+    "model_path": "/home/shx/.cache/huggingface/hub/models--Dream-org--Dream-Coder-v0-Instruct-7B/snapshots/5d9e88c723af9045f362748b5284bdf43d9c501e",
+    "seed": 20260618,
+    "steps": 32,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "torch_dtype": "auto"
+  },
+  "output_dir": "analysis_outputs/decompile_faithfulness/phase2_gpu_full_v1",
+  "paired_case_count": 8,
+  "paired_generation_gate_passed": true,
+  "parsed_count": 60,
+  "parsed_rate": 0.75,
+  "records_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_full_v1/records.jsonl",
+  "trace_metrics_interpretable": true,
+  "trace_pairwise_auc": 0.9733333333333334
+}

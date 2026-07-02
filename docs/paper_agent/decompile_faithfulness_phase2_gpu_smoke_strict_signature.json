@@ -1,0 +1,73 @@
+{
+  "behavior_label_counts": {
+    "compile_fail": 4,
+    "faithful": 1,
+    "plausible_wrong": 1
+  },
+  "candidate_count": 6,
+  "case_label_counts": {
+    "absdiff": {
+      "compile_fail": 1,
+      "faithful": 0,
+      "plausible_wrong": 0
+    },
+    "clamp8": {
+      "compile_fail": 1,
+      "faithful": 0,
+      "plausible_wrong": 0
+    },
+    "is_power_of_two": {
+      "compile_fail": 1,
+      "faithful": 0,
+      "plausible_wrong": 0
+    },
+    "max3": {
+      "compile_fail": 0,
+      "faithful": 0,
+      "plausible_wrong": 1
+    },
+    "signum": {
+      "compile_fail": 0,
+      "faithful": 1,
+      "plausible_wrong": 0
+    },
+    "sum_to_n": {
+      "compile_fail": 1,
+      "faithful": 0,
+      "plausible_wrong": 0
+    }
+  },
+  "cleaning_status_counts": {
+    "parse_failed": 2,
+    "parsed_function": 6
+  },
+  "compile_pass_count": 2,
+  "created_at_utc": "2026-06-18T03:29:20.972223+00:00",
+  "fixture_collapse": true,
+  "generation_count": 8,
+  "generation_error_count": 0,
+  "generation_metadata_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_smoke_strict_signature/generation_metadata.jsonl",
+  "gpu_smoke_gate_passed": true,
+  "label_diversity_gate_passed": true,
+  "manifest_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_smoke_strict_signature/manifest.json",
+  "model_info": {
+    "cuda_visible_devices_policy": "not_set_by_script; model and tensors are explicitly moved to requested device",
+    "device": "cuda:2",
+    "max_new_tokens": 160,
+    "model_error": "",
+    "model_load_seconds": 11.26,
+    "model_loaded": true,
+    "model_path": "/home/shx/.cache/huggingface/hub/models--Dream-org--Dream-Coder-v0-Instruct-7B/snapshots/5d9e88c723af9045f362748b5284bdf43d9c501e",
+    "seed": 20260618,
+    "steps": 32,
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "torch_dtype": "auto"
+  },
+  "output_dir": "analysis_outputs/decompile_faithfulness/phase2_gpu_smoke_strict_signature",
+  "paired_case_count": 0,
+  "parsed_count": 6,
+  "records_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_smoke_strict_signature/records.jsonl",
+  "trace_metrics_interpretable": false,
+  "trace_pairwise_auc": 0.0
+}

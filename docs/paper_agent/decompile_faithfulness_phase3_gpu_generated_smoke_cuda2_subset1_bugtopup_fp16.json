@@ -1,0 +1,49 @@
+{
+  "behavior_label_counts": {
+    "compile_fail": 6,
+    "faithful": 1,
+    "plausible_wrong": 3
+  },
+  "candidate_count": 10,
+  "case_ids": [
+    "sat_add8",
+    "within_range_inclusive",
+    "parity8",
+    "gcd_nonnegative",
+    "safe_div_round0"
+  ],
+  "cleaning_status_counts": {
+    "parse_failed": 5,
+    "parsed_function": 10
+  },
+  "compile_pass_count": 4,
+  "compile_rate_among_parsed": 0.4,
+  "created_at_utc": "2026-06-18T10:24:50.395351+00:00",
+  "fixture_collapse": true,
+  "generation_count": 15,
+  "generation_metadata_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3_gpu_generated_smoke_cuda2_subset1_bugtopup_fp16/generation_metadata.jsonl",
+  "model_info": {
+    "cuda_visible_devices_policy": "not_set_by_script; explicit --device placement only",
+    "device": "cuda:2",
+    "max_new_tokens": 180,
+    "model_error": "",
+    "model_load_seconds": 12.435,
+    "model_loaded": true,
+    "model_path": "/home/shx/.cache/huggingface/hub/models--Dream-org--Dream-Coder-v0-Instruct-7B/snapshots/5d9e88c723af9045f362748b5284bdf43d9c501e",
+    "seed": 20260622,
+    "steps": 24,
+    "temperature": 0.4,
+    "top_p": 0.95,
+    "torch_dtype": "float16"
+  },
+  "output_dir": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3_gpu_generated_smoke_cuda2_subset1_bugtopup_fp16",
+  "paired_case_count": 0,
+  "parsed_count": 10,
+  "parsed_rate": 0.6666666666666666,
+  "prompt_ids": [
+    "strict_bug"
+  ],
+  "records_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3_gpu_generated_smoke_cuda2_subset1_bugtopup_fp16/records.jsonl",
+  "trace_pairwise_auc": 0.0,
+  "verdict": "needs-more-phase3-gpu-generated-samples"
+}

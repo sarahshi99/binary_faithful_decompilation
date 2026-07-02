@@ -1,0 +1,27 @@
+{
+  "binary_compiler": "/usr/bin/x86_64-linux-gnu-gcc-9",
+  "binary_count": 76,
+  "ccfa_interpretation": "real-tool-importability-only; radare2 pdc output is pseudo-C and not yet compile-ready",
+  "compile_pass_count": 76,
+  "created_at_utc": "2026-07-01T07:54:28.583020+00:00",
+  "failure_counts": {
+    "pseudo_c_not_compile_ready": 1
+  },
+  "optimization_levels": [
+    "O0",
+    "O2"
+  ],
+  "output_dir": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase6r_radare2_gcc9_smoke",
+  "pdc_c_like_count": 75,
+  "pdc_compile_ready_count": 0,
+  "pdc_output_count": 76,
+  "pdf_output_count": 76,
+  "phase": "phase6r_radare2_importability_smoke",
+  "records_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase6r_radare2_gcc9_smoke/records.jsonl",
+  "symbol_found_count": 76,
+  "tool": "radare2",
+  "tool_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase6r_tools/apt_radare2/root/usr/bin/radare2",
+  "tool_version": "radare2 4.2.1 0 @ linux-x86-64 git.4.2.1\ncommit: unknown build:",
+  "toolchain_label": "gcc-9.4.0",
+  "verdict": "pass-phase6r-radare2-importability-smoke"
+}

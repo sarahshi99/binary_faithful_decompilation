@@ -1,0 +1,224 @@
+{
+  "baseline_auc": {
+    "fixture_only": 0.9218415417558886,
+    "static_structured_proxy": 0.683083511777302,
+    "v3_trace_total": 1.0
+  },
+  "benchmark": "CodeFuse-DeBench",
+  "best_non_oracle_baseline_auc": 0.9218415417558886,
+  "by_mutation_type": {
+    "phase7_static_hard_arithmetic_operator": {
+      "candidate_count": 122,
+      "compile_pass_count": 122,
+      "fixture_only_auc": 0.3333333333333333,
+      "fixture_passing_wrong_count": 6,
+      "label_counts": {
+        "faithful": 18,
+        "plausible_wrong": 104
+      },
+      "paired_case_count": 4,
+      "static_structured_auc": 0.5416666666666666,
+      "v3_trace_total_auc": 1.0
+    },
+    "phase7_static_hard_bitshift_direction": {
+      "candidate_count": 2,
+      "compile_pass_count": 2,
+      "fixture_only_auc": 0.0,
+      "fixture_passing_wrong_count": 0,
+      "label_counts": {
+        "faithful": 2
+      },
+      "paired_case_count": 0,
+      "static_structured_auc": 0.0,
+      "v3_trace_total_auc": 0.0
+    },
+    "phase7_static_hard_bitwise_operator": {
+      "candidate_count": 2,
+      "compile_pass_count": 2,
+      "fixture_only_auc": 0.0,
+      "fixture_passing_wrong_count": 0,
+      "label_counts": {
+        "plausible_wrong": 2
+      },
+      "paired_case_count": 0,
+      "static_structured_auc": 0.0,
+      "v3_trace_total_auc": 0.0
+    },
+    "phase7_static_hard_compound_assignment": {
+      "candidate_count": 14,
+      "compile_pass_count": 14,
+      "fixture_only_auc": 0.0,
+      "fixture_passing_wrong_count": 0,
+      "label_counts": {
+        "faithful": 2,
+        "plausible_wrong": 12
+      },
+      "paired_case_count": 0,
+      "static_structured_auc": 0.0,
+      "v3_trace_total_auc": 0.0
+    },
+    "phase7_static_hard_constant": {
+      "candidate_count": 60,
+      "compile_pass_count": 60,
+      "fixture_only_auc": 0.0,
+      "fixture_passing_wrong_count": 2,
+      "label_counts": {
+        "faithful": 26,
+        "plausible_wrong": 34
+      },
+      "paired_case_count": 0,
+      "static_structured_auc": 0.0,
+      "v3_trace_total_auc": 0.0
+    },
+    "phase7_static_hard_original_control": {
+      "candidate_count": 112,
+      "compile_pass_count": 112,
+      "fixture_only_auc": 0.0,
+      "fixture_passing_wrong_count": 0,
+      "label_counts": {
+        "faithful": 112
+      },
+      "paired_case_count": 0,
+      "static_structured_auc": 0.0,
+      "v3_trace_total_auc": 0.0
+    },
+    "phase7_static_hard_predicate_equality": {
+      "candidate_count": 24,
+      "compile_pass_count": 24,
+      "fixture_only_auc": 0.0,
+      "fixture_passing_wrong_count": 0,
+      "label_counts": {
+        "faithful": 4,
+        "plausible_wrong": 20
+      },
+      "paired_case_count": 0,
+      "static_structured_auc": 0.0,
+      "v3_trace_total_auc": 0.0
+    },
+    "phase7_static_hard_predicate_strictness": {
+      "candidate_count": 65,
+      "compile_pass_count": 65,
+      "fixture_only_auc": 0.8571428571428571,
+      "fixture_passing_wrong_count": 8,
+      "label_counts": {
+        "faithful": 46,
+        "plausible_wrong": 19
+      },
+      "paired_case_count": 5,
+      "static_structured_auc": 0.8928571428571429,
+      "v3_trace_total_auc": 1.0
+    },
+    "phase7_static_hard_return_expression": {
+      "candidate_count": 102,
+      "compile_pass_count": 102,
+      "fixture_only_auc": 0.0,
+      "fixture_passing_wrong_count": 2,
+      "label_counts": {
+        "faithful": 26,
+        "plausible_wrong": 76
+      },
+      "paired_case_count": 0,
+      "static_structured_auc": 0.0,
+      "v3_trace_total_auc": 0.0
+    }
+  },
+  "by_risk_family": {
+    "branch": {
+      "candidate_count": 207,
+      "compile_pass_count": 207,
+      "fixture_only_auc": 0.9170212765957447,
+      "fixture_passing_wrong_count": 12,
+      "label_counts": {
+        "faithful": 109,
+        "plausible_wrong": 98
+      },
+      "paired_case_count": 18,
+      "static_structured_auc": 0.6840425531914893,
+      "v3_trace_total_auc": 1.0
+    },
+    "loop": {
+      "candidate_count": 127,
+      "compile_pass_count": 127,
+      "fixture_only_auc": 0.9055944055944056,
+      "fixture_passing_wrong_count": 4,
+      "label_counts": {
+        "faithful": 52,
+        "plausible_wrong": 75
+      },
+      "paired_case_count": 11,
+      "static_structured_auc": 0.7447552447552448,
+      "v3_trace_total_auc": 1.0
+    },
+    "multi_arg": {
+      "candidate_count": 140,
+      "compile_pass_count": 140,
+      "fixture_only_auc": 0.9903846153846154,
+      "fixture_passing_wrong_count": 2,
+      "label_counts": {
+        "faithful": 56,
+        "plausible_wrong": 84
+      },
+      "paired_case_count": 18,
+      "static_structured_auc": 0.6923076923076923,
+      "v3_trace_total_auc": 1.0
+    },
+    "operator_boundary": {
+      "candidate_count": 389,
+      "compile_pass_count": 389,
+      "fixture_only_auc": 0.9066496163682864,
+      "fixture_passing_wrong_count": 18,
+      "label_counts": {
+        "faithful": 196,
+        "plausible_wrong": 193
+      },
+      "paired_case_count": 34,
+      "static_structured_auc": 0.6854219948849105,
+      "v3_trace_total_auc": 1.0
+    },
+    "public_benchmark": {
+      "candidate_count": 503,
+      "compile_pass_count": 503,
+      "fixture_only_auc": 0.9218415417558886,
+      "fixture_passing_wrong_count": 18,
+      "label_counts": {
+        "faithful": 236,
+        "plausible_wrong": 267
+      },
+      "paired_case_count": 50,
+      "static_structured_auc": 0.683083511777302,
+      "v3_trace_total_auc": 1.0
+    }
+  },
+  "candidate_count": 524,
+  "candidate_manifest_verdict": "pass-phase7-static-hard-candidate-scale",
+  "compile_pass_count": 503,
+  "compile_preflight_verdict": "pass-phase7-static-hard-compile-preflight",
+  "created_at_utc": "2026-07-01T17:08:30.773920+00:00",
+  "failure_taxonomy": {
+    "candidate_compile_failure": 21,
+    "fixture_passing_semantic_drift": 18,
+    "trace_domain_miss": 124
+  },
+  "fixture_collapse": false,
+  "fixture_passing_wrong_count": 18,
+  "gate": {
+    "compile_pass_scale_gate": true,
+    "fixture_collapse_gate": true,
+    "paired_function_gate": true,
+    "sota_delta_gate": true,
+    "source_function_scale_gate": true,
+    "v3_beats_fixture_gate": true,
+    "v3_beats_static_gate": true
+  },
+  "label_counts": {
+    "compile_fail": 21,
+    "faithful": 236,
+    "plausible_wrong": 267
+  },
+  "paired_case_count": 50,
+  "phase": "phase7_static_hard_result_analysis",
+  "records_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_static_hard/records.jsonl",
+  "sota_delta_vs_best_baseline": 0.07815845824411138,
+  "source_function_count": 56,
+  "verdict": "pass-phase7-static-hard-sota-delta"
+}

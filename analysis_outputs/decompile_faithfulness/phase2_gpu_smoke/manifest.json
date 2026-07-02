@@ -1,0 +1,26 @@
+[
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_gpu_signum_signature_spec_00",
+        "case_id": "signum",
+        "cleaning_status": "parsed_function",
+        "function_source": "int signum(int x) {\n    if (x < 0)  return 1; // Negative number\n    if (x > 0)  return  1; // Positive\n    return 0;             // Zero case, when x == 0\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_gpu_smoke_signature_spec",
+        "prompt_id": "signature_spec",
+        "raw_output_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_smoke/raw/phase2_gpu_signum_signature_spec_00.raw.txt",
+        "sampling": {
+          "max_new_tokens": 160,
+          "steps": 32,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "local_llm",
+        "source_name": "Dream-Coder-v0-Instruct-7B"
+      }
+    ],
+    "case_id": "signum"
+  }
+]

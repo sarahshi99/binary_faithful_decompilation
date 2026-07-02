@@ -1,0 +1,263 @@
+{
+  "bootstrap_iterations": 2000,
+  "created_at_utc": "2026-07-02T01:50:39.001481+00:00",
+  "datasets": {
+    "phase6r_ghidra_full": {
+      "auc_ci95": {
+        "fixture_only": [
+          0.5,
+          0.5
+        ],
+        "fuzzing_any_mismatch": [
+          1.0,
+          1.0
+        ],
+        "fuzzing_mismatch_rate": [
+          1.0,
+          1.0
+        ],
+        "static_structured_proxy": [
+          0.7380803571428572,
+          0.8913228754940711
+        ],
+        "v3_trace_total": [
+          1.0,
+          1.0
+        ]
+      },
+      "candidate_count": 228,
+      "combined_summary_path": "",
+      "compile_pass_count": 166,
+      "dataset_id": "phase6r_ghidra_full",
+      "delta": {
+        "v3_vs_legacy_best": {
+          "ci95": [
+            0.1086771245059289,
+            0.2619196428571427
+          ],
+          "point": 0.17934782608695654
+        },
+        "v3_vs_strong_best": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "point": 0.0
+        }
+      },
+      "eval_count": 166,
+      "label_counts": {
+        "compile_fail": 62,
+        "faithful": 92,
+        "plausible_wrong": 74
+      },
+      "legacy_baseline_best_name": "static_structured_proxy",
+      "paired_case_count": 26,
+      "point_auc": {
+        "fixture_only": 0.5,
+        "fuzzing_any_mismatch": 1.0,
+        "fuzzing_mismatch_rate": 1.0,
+        "static_structured_proxy": 0.8206521739130435,
+        "v3_trace_total": 1.0
+      },
+      "records_path": "analysis_outputs/decompile_faithfulness/phase6r_ghidra_full/records.jsonl",
+      "strong_baseline_best_name": "fuzzing_mismatch_rate",
+      "title": "Phase 6R Ghidra full"
+    },
+    "phase6r_ghidra_gcc9_full": {
+      "auc_ci95": {
+        "fixture_only": [
+          0.5,
+          0.5
+        ],
+        "fuzzing_any_mismatch": [
+          1.0,
+          1.0
+        ],
+        "fuzzing_mismatch_rate": [
+          1.0,
+          1.0
+        ],
+        "static_structured_proxy": [
+          0.7618978405315614,
+          0.913049023957409
+        ],
+        "v3_trace_total": [
+          1.0,
+          1.0
+        ]
+      },
+      "candidate_count": 228,
+      "combined_summary_path": "",
+      "compile_pass_count": 166,
+      "dataset_id": "phase6r_ghidra_gcc9_full",
+      "delta": {
+        "v3_vs_legacy_best": {
+          "ci95": [
+            0.086950976042591,
+            0.23810215946843852
+          ],
+          "point": 0.15760869565217395
+        },
+        "v3_vs_strong_best": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "point": 0.0
+        }
+      },
+      "eval_count": 166,
+      "label_counts": {
+        "compile_fail": 62,
+        "faithful": 92,
+        "plausible_wrong": 74
+      },
+      "legacy_baseline_best_name": "static_structured_proxy",
+      "paired_case_count": 26,
+      "point_auc": {
+        "fixture_only": 0.5,
+        "fuzzing_any_mismatch": 1.0,
+        "fuzzing_mismatch_rate": 1.0,
+        "static_structured_proxy": 0.842391304347826,
+        "v3_trace_total": 1.0
+      },
+      "records_path": "analysis_outputs/decompile_faithfulness/phase6r_ghidra_gcc9_full/records.jsonl",
+      "strong_baseline_best_name": "fuzzing_mismatch_rate",
+      "title": "Phase 6R Ghidra gcc9 full"
+    },
+    "phase7c2_static_hard_public": {
+      "auc_ci95": {
+        "fixture_only": [
+          0.8724022287636669,
+          0.9606337810714837
+        ],
+        "fuzzing_any_mismatch": [
+          1.0,
+          1.0
+        ],
+        "fuzzing_mismatch_rate": [
+          1.0,
+          1.0
+        ],
+        "static_structured_proxy": [
+          0.629650624461671,
+          0.7313371805701611
+        ],
+        "v3_trace_total": [
+          1.0,
+          1.0
+        ]
+      },
+      "candidate_count": 524,
+      "combined_summary_path": "",
+      "compile_pass_count": 503,
+      "dataset_id": "phase7c2_static_hard_public",
+      "delta": {
+        "v3_vs_legacy_best": {
+          "ci95": [
+            0.03936621892851633,
+            0.12759777123633304
+          ],
+          "point": 0.07815845824411138
+        },
+        "v3_vs_strong_best": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "point": 0.0
+        }
+      },
+      "eval_count": 503,
+      "label_counts": {
+        "compile_fail": 21,
+        "faithful": 236,
+        "plausible_wrong": 267
+      },
+      "legacy_baseline_best_name": "fixture_only",
+      "paired_case_count": 50,
+      "point_auc": {
+        "fixture_only": 0.9218415417558886,
+        "fuzzing_any_mismatch": 1.0,
+        "fuzzing_mismatch_rate": 1.0,
+        "static_structured_proxy": 0.683083511777302,
+        "v3_trace_total": 1.0
+      },
+      "records_path": "analysis_outputs/decompile_faithfulness/phase7_static_hard/records.jsonl",
+      "strong_baseline_best_name": "fuzzing_mismatch_rate",
+      "title": "Phase 7C2 static-hard public"
+    },
+    "phase7e_llm_public_full_topup": {
+      "auc_ci95": {
+        "fixture_only": [
+          0.9285714285714286,
+          1.0
+        ],
+        "fuzzing_any_mismatch": [
+          1.0,
+          1.0
+        ],
+        "fuzzing_mismatch_rate": [
+          1.0,
+          1.0
+        ],
+        "static_structured_proxy": [
+          0.6764705882352942,
+          0.8728813559322034
+        ],
+        "v3_trace_total": [
+          1.0,
+          1.0
+        ]
+      },
+      "candidate_count": 195,
+      "combined_summary_path": "docs/paper_agent/decompile_faithfulness_phase7_llm_public_combined.json",
+      "compile_pass_count": 143,
+      "dataset_id": "phase7e_llm_public_full_topup",
+      "delta": {
+        "v3_vs_legacy_best": {
+          "ci95": [
+            0.0,
+            0.0714285714285714
+          ],
+          "point": 0.025862068965517238
+        },
+        "v3_vs_strong_best": {
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "point": 0.0
+        }
+      },
+      "eval_count": 143,
+      "label_counts": {
+        "compile_fail": 52,
+        "faithful": 107,
+        "plausible_wrong": 36
+      },
+      "legacy_baseline_best_name": "fixture_only",
+      "paired_case_count": 24,
+      "point_auc": {
+        "fixture_only": 0.9741379310344828,
+        "fuzzing_any_mismatch": 1.0,
+        "fuzzing_mismatch_rate": 1.0,
+        "static_structured_proxy": 0.7758620689655172,
+        "v3_trace_total": 1.0
+      },
+      "records_path": "",
+      "strong_baseline_best_name": "fuzzing_mismatch_rate",
+      "title": "Phase 7E LLM public full+top-up"
+    }
+  },
+  "gate": {
+    "legacy_delta_ci_lower_gt_zero": true,
+    "phase7c2_present": true,
+    "strong_baseline_not_erased": false
+  },
+  "interpretation": "Dynamic Trace v3 keeps the legacy fixture/static margin, but generated-input fuzzing-style re-execution reaches the same AUC on the current records. The paper should claim dynamic re-execution evidence, not v3 component SOTA margin, unless a harder dataset shows v3-only gains.",
+  "phase": "phase8_sota_hardening",
+  "seed": 20260702,
+  "verdict": "strong-baseline-erases-v3-extra-margin"
+}

@@ -1,0 +1,911 @@
+{
+  "budgets": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "created_at_utc": "2026-07-02T04:36:59.136006+00:00",
+  "dataset_comparison": {
+    "phase6r_ghidra_full": {
+      "baseline": {
+        "actual_input_evals": 1157,
+        "avg_actual_inputs_per_candidate": 6.969879518072289,
+        "eval_count": 166,
+        "mismatch_auc": 0.9891304347826086,
+        "missed_wrong_count": 2,
+        "wrong_count": 74,
+        "wrong_detection_rate": 0.972972972972973
+      },
+      "baseline_strategy_id": "fixture_neighbor_first",
+      "delta": {
+        "avg_actual_inputs_delta": 0.0,
+        "mismatch_auc_delta": -0.032608695652173836,
+        "missed_wrong_count_delta": 2.0,
+        "wrong_detection_rate_delta": -0.027027027027027084
+      },
+      "new": {
+        "actual_input_evals": 1157,
+        "avg_actual_inputs_per_candidate": 6.969879518072289,
+        "eval_count": 166,
+        "mismatch_auc": 0.9565217391304348,
+        "missed_wrong_count": 4,
+        "wrong_count": 74,
+        "wrong_detection_rate": 0.9459459459459459
+      },
+      "new_strategy_id": "operator_char_class_first"
+    },
+    "phase7c2_static_hard_public": {
+      "baseline": {
+        "actual_input_evals": 3172,
+        "avg_actual_inputs_per_candidate": 6.635983263598327,
+        "eval_count": 469,
+        "mismatch_auc": 1.0,
+        "missed_wrong_count": 0,
+        "wrong_count": 258,
+        "wrong_detection_rate": 1.0
+      },
+      "baseline_strategy_id": "fixture_neighbor_first",
+      "delta": {
+        "avg_actual_inputs_delta": 0.0,
+        "mismatch_auc_delta": -0.011111111111111072,
+        "missed_wrong_count_delta": 10.0,
+        "wrong_detection_rate_delta": -0.03875968992248058
+      },
+      "new": {
+        "actual_input_evals": 3172,
+        "avg_actual_inputs_per_candidate": 6.635983263598327,
+        "eval_count": 469,
+        "mismatch_auc": 0.9888888888888889,
+        "missed_wrong_count": 10,
+        "wrong_count": 258,
+        "wrong_detection_rate": 0.9612403100775194
+      },
+      "new_strategy_id": "operator_char_class_first"
+    },
+    "phase7e_llm_public_full_topup": {
+      "baseline": {
+        "actual_input_evals": 910,
+        "avg_actual_inputs_per_candidate": 6.6911764705882355,
+        "eval_count": 136,
+        "mismatch_auc": 1.0,
+        "missed_wrong_count": 0,
+        "wrong_count": 36,
+        "wrong_detection_rate": 1.0
+      },
+      "baseline_strategy_id": "fixture_neighbor_first",
+      "delta": {
+        "avg_actual_inputs_delta": 0.0,
+        "mismatch_auc_delta": -0.008620689655172376,
+        "missed_wrong_count_delta": 1.0,
+        "wrong_detection_rate_delta": -0.02777777777777779
+      },
+      "new": {
+        "actual_input_evals": 910,
+        "avg_actual_inputs_per_candidate": 6.6911764705882355,
+        "eval_count": 136,
+        "mismatch_auc": 0.9913793103448276,
+        "missed_wrong_count": 1,
+        "wrong_count": 36,
+        "wrong_detection_rate": 0.9722222222222222
+      },
+      "new_strategy_id": "operator_char_class_first"
+    }
+  },
+  "focus_risk_rows": {
+    "char_boundary": {
+      "auc": 0.6,
+      "candidate_count": 19,
+      "case_count": 5,
+      "missed_wrong_count": 4,
+      "paired_case_count": 3,
+      "risk_family": "char_boundary",
+      "wrong_detection_rate": 0.5555555555555556
+    },
+    "multi_arg": {
+      "auc": 1.0,
+      "candidate_count": 24,
+      "case_count": 5,
+      "missed_wrong_count": 0,
+      "paired_case_count": 4,
+      "risk_family": "multi_arg",
+      "wrong_detection_rate": 1.0
+    }
+  },
+  "gate": {
+    "phase6r_ghidra_full_budget8_auc_gate": false,
+    "phase6r_ghidra_full_budget8_auc_no_regression": false,
+    "phase6r_ghidra_full_budget8_detection_gate": false,
+    "phase6r_ghidra_full_budget8_detection_no_regression": false,
+    "phase6r_ghidra_full_char_boundary_detection_gate": false,
+    "phase6r_ghidra_full_large_risk_family_auc_gate": false,
+    "phase6r_ghidra_full_large_risk_family_detection_gate": false,
+    "phase6r_ghidra_full_multi_arg_detection_gate": true,
+    "phase7c2_static_hard_public_budget8_auc_no_regression": false,
+    "phase7c2_static_hard_public_budget8_detection_no_regression": false,
+    "phase7e_llm_public_full_topup_budget8_auc_no_regression": false,
+    "phase7e_llm_public_full_topup_budget8_detection_no_regression": false
+  },
+  "phase": "phase17_operator_char_policy",
+  "phase12_output_dir": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase17_operator_char_policy/unified_low_budget",
+  "report_budget": 8,
+  "risk_breakdown": {
+    "phase6r_ghidra_full": [
+      {
+        "auc": 0.0,
+        "candidate_count": 10,
+        "case_count": 5,
+        "missed_wrong_count": 0,
+        "paired_case_count": 0,
+        "risk_family": "adapter",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 10,
+        "case_count": 2,
+        "missed_wrong_count": 0,
+        "paired_case_count": 2,
+        "risk_family": "arithmetic",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 0.0,
+        "candidate_count": 1,
+        "case_count": 1,
+        "missed_wrong_count": 0,
+        "paired_case_count": 0,
+        "risk_family": "binary_search",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 14,
+        "case_count": 3,
+        "missed_wrong_count": 0,
+        "paired_case_count": 2,
+        "risk_family": "bitwise",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 47,
+        "case_count": 10,
+        "missed_wrong_count": 0,
+        "paired_case_count": 7,
+        "risk_family": "boundary",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 0.8333333333333334,
+        "candidate_count": 41,
+        "case_count": 9,
+        "missed_wrong_count": 4,
+        "paired_case_count": 6,
+        "risk_family": "branch",
+        "wrong_detection_rate": 0.7647058823529411
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 6,
+        "case_count": 1,
+        "missed_wrong_count": 0,
+        "paired_case_count": 1,
+        "risk_family": "bucket_boundary",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 0.0,
+        "candidate_count": 2,
+        "case_count": 1,
+        "missed_wrong_count": 0,
+        "paired_case_count": 0,
+        "risk_family": "case_boundary",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 0.6,
+        "candidate_count": 19,
+        "case_count": 5,
+        "missed_wrong_count": 4,
+        "paired_case_count": 3,
+        "risk_family": "char_boundary",
+        "wrong_detection_rate": 0.5555555555555556
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 22,
+        "case_count": 5,
+        "missed_wrong_count": 0,
+        "paired_case_count": 3,
+        "risk_family": "comparison",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 16,
+        "case_count": 3,
+        "missed_wrong_count": 0,
+        "paired_case_count": 3,
+        "risk_family": "conversion",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 20,
+        "case_count": 5,
+        "missed_wrong_count": 0,
+        "paired_case_count": 4,
+        "risk_family": "digits",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 20,
+        "case_count": 4,
+        "missed_wrong_count": 0,
+        "paired_case_count": 4,
+        "risk_family": "division",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 8,
+        "case_count": 2,
+        "missed_wrong_count": 0,
+        "paired_case_count": 1,
+        "risk_family": "dynamic_programming",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 12,
+        "case_count": 2,
+        "missed_wrong_count": 0,
+        "paired_case_count": 2,
+        "risk_family": "geometry",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 6,
+        "case_count": 1,
+        "missed_wrong_count": 0,
+        "paired_case_count": 1,
+        "risk_family": "grid_boundary",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 0.0,
+        "candidate_count": 6,
+        "case_count": 3,
+        "missed_wrong_count": 0,
+        "paired_case_count": 0,
+        "risk_family": "hash",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 8,
+        "case_count": 2,
+        "missed_wrong_count": 0,
+        "paired_case_count": 1,
+        "risk_family": "helper_dependency",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 52,
+        "case_count": 11,
+        "missed_wrong_count": 0,
+        "paired_case_count": 9,
+        "risk_family": "loop",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 14,
+        "case_count": 3,
+        "missed_wrong_count": 0,
+        "paired_case_count": 2,
+        "risk_family": "modulo",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 24,
+        "case_count": 5,
+        "missed_wrong_count": 0,
+        "paired_case_count": 4,
+        "risk_family": "multi_arg",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 29,
+        "case_count": 6,
+        "missed_wrong_count": 0,
+        "paired_case_count": 5,
+        "risk_family": "nonnegative_domain",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 0.0,
+        "candidate_count": 2,
+        "case_count": 1,
+        "missed_wrong_count": 0,
+        "paired_case_count": 0,
+        "risk_family": "operator_associativity",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 5,
+        "case_count": 2,
+        "missed_wrong_count": 0,
+        "paired_case_count": 1,
+        "risk_family": "operator_precedence",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 4,
+        "case_count": 1,
+        "missed_wrong_count": 0,
+        "paired_case_count": 1,
+        "risk_family": "overflow_guard",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 28,
+        "case_count": 6,
+        "missed_wrong_count": 0,
+        "paired_case_count": 5,
+        "risk_family": "positive_domain",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 0.5,
+        "candidate_count": 12,
+        "case_count": 2,
+        "missed_wrong_count": 4,
+        "paired_case_count": 2,
+        "risk_family": "range_check",
+        "wrong_detection_rate": 0.0
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 24,
+        "case_count": 4,
+        "missed_wrong_count": 0,
+        "paired_case_count": 4,
+        "risk_family": "recursion",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 28,
+        "case_count": 7,
+        "missed_wrong_count": 0,
+        "paired_case_count": 4,
+        "risk_family": "sign_zero",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 8,
+        "case_count": 2,
+        "missed_wrong_count": 0,
+        "paired_case_count": 1,
+        "risk_family": "zero_boundary",
+        "wrong_detection_rate": 1.0
+      }
+    ],
+    "phase7c2_static_hard_public": [
+      {
+        "auc": 0.9782608695652174,
+        "candidate_count": 205,
+        "case_count": 19,
+        "missed_wrong_count": 10,
+        "paired_case_count": 18,
+        "risk_family": "branch",
+        "wrong_detection_rate": 0.8958333333333334
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 111,
+        "case_count": 11,
+        "missed_wrong_count": 0,
+        "paired_case_count": 11,
+        "risk_family": "loop",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 140,
+        "case_count": 19,
+        "missed_wrong_count": 0,
+        "paired_case_count": 18,
+        "risk_family": "multi_arg",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 0.9866310160427807,
+        "candidate_count": 361,
+        "case_count": 37,
+        "missed_wrong_count": 10,
+        "paired_case_count": 34,
+        "risk_family": "operator_boundary",
+        "wrong_detection_rate": 0.9456521739130435
+      },
+      {
+        "auc": 0.9888888888888889,
+        "candidate_count": 469,
+        "case_count": 53,
+        "missed_wrong_count": 10,
+        "paired_case_count": 50,
+        "risk_family": "public_benchmark",
+        "wrong_detection_rate": 0.9612403100775194
+      }
+    ],
+    "phase7e_llm_public_full_topup": [
+      {
+        "auc": 0.9666666666666667,
+        "candidate_count": 42,
+        "case_count": 19,
+        "missed_wrong_count": 1,
+        "paired_case_count": 8,
+        "risk_family": "branch",
+        "wrong_detection_rate": 0.9333333333333333
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 25,
+        "case_count": 11,
+        "missed_wrong_count": 0,
+        "paired_case_count": 4,
+        "risk_family": "loop",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 1.0,
+        "candidate_count": 44,
+        "case_count": 19,
+        "missed_wrong_count": 0,
+        "paired_case_count": 7,
+        "risk_family": "multi_arg",
+        "wrong_detection_rate": 1.0
+      },
+      {
+        "auc": 0.9868421052631579,
+        "candidate_count": 89,
+        "case_count": 36,
+        "missed_wrong_count": 1,
+        "paired_case_count": 16,
+        "risk_family": "operator_boundary",
+        "wrong_detection_rate": 0.9642857142857143
+      },
+      {
+        "auc": 0.9913793103448276,
+        "candidate_count": 136,
+        "case_count": 52,
+        "missed_wrong_count": 1,
+        "paired_case_count": 24,
+        "risk_family": "public_benchmark",
+        "wrong_detection_rate": 0.9722222222222222
+      }
+    ]
+  },
+  "risk_comparison": {
+    "phase6r_ghidra_full": [
+      {
+        "auc": 0.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 0,
+        "risk_family": "adapter",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 2,
+        "risk_family": "arithmetic",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 0.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 0,
+        "risk_family": "binary_search",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 2,
+        "risk_family": "bitwise",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 7,
+        "risk_family": "boundary",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 0.8333333333333334,
+        "auc_delta": -0.16666666666666663,
+        "missed_wrong_count": 4,
+        "missed_wrong_count_delta": 4,
+        "paired_case_count": 6,
+        "risk_family": "branch",
+        "wrong_detection_rate": 0.7647058823529411,
+        "wrong_detection_rate_delta": -0.23529411764705888
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 1,
+        "risk_family": "bucket_boundary",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 0.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 0,
+        "risk_family": "case_boundary",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 0.6,
+        "auc_delta": -0.30000000000000004,
+        "missed_wrong_count": 4,
+        "missed_wrong_count_delta": 2,
+        "paired_case_count": 3,
+        "risk_family": "char_boundary",
+        "wrong_detection_rate": 0.5555555555555556,
+        "wrong_detection_rate_delta": -0.2222222222222222
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 3,
+        "risk_family": "comparison",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 3,
+        "risk_family": "conversion",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 4,
+        "risk_family": "digits",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 4,
+        "risk_family": "division",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 1,
+        "risk_family": "dynamic_programming",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 2,
+        "risk_family": "geometry",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 1,
+        "risk_family": "grid_boundary",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 0.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 0,
+        "risk_family": "hash",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 1,
+        "risk_family": "helper_dependency",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 9,
+        "risk_family": "loop",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 2,
+        "risk_family": "modulo",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0714285714285714,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": -2,
+        "paired_case_count": 4,
+        "risk_family": "multi_arg",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.19999999999999996
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 5,
+        "risk_family": "nonnegative_domain",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 0.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 0,
+        "risk_family": "operator_associativity",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.5,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": -2,
+        "paired_case_count": 1,
+        "risk_family": "operator_precedence",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.6666666666666667
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 1,
+        "risk_family": "overflow_guard",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 5,
+        "risk_family": "positive_domain",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 0.5,
+        "auc_delta": -0.5,
+        "missed_wrong_count": 4,
+        "missed_wrong_count_delta": 4,
+        "paired_case_count": 2,
+        "risk_family": "range_check",
+        "wrong_detection_rate": 0.0,
+        "wrong_detection_rate_delta": -1.0
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 4,
+        "risk_family": "recursion",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 4,
+        "risk_family": "sign_zero",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 1,
+        "risk_family": "zero_boundary",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      }
+    ],
+    "phase7c2_static_hard_public": [
+      {
+        "auc": 0.9782608695652174,
+        "auc_delta": -0.021739130434782594,
+        "missed_wrong_count": 10,
+        "missed_wrong_count_delta": 10,
+        "paired_case_count": 18,
+        "risk_family": "branch",
+        "wrong_detection_rate": 0.8958333333333334,
+        "wrong_detection_rate_delta": -0.10416666666666663
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 11,
+        "risk_family": "loop",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 18,
+        "risk_family": "multi_arg",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 0.9866310160427807,
+        "auc_delta": -0.013368983957219305,
+        "missed_wrong_count": 10,
+        "missed_wrong_count_delta": 10,
+        "paired_case_count": 34,
+        "risk_family": "operator_boundary",
+        "wrong_detection_rate": 0.9456521739130435,
+        "wrong_detection_rate_delta": -0.05434782608695654
+      },
+      {
+        "auc": 0.9888888888888889,
+        "auc_delta": -0.011111111111111072,
+        "missed_wrong_count": 10,
+        "missed_wrong_count_delta": 10,
+        "paired_case_count": 50,
+        "risk_family": "public_benchmark",
+        "wrong_detection_rate": 0.9612403100775194,
+        "wrong_detection_rate_delta": -0.03875968992248058
+      }
+    ],
+    "phase7e_llm_public_full_topup": [
+      {
+        "auc": 0.9666666666666667,
+        "auc_delta": -0.033333333333333326,
+        "missed_wrong_count": 1,
+        "missed_wrong_count_delta": 1,
+        "paired_case_count": 8,
+        "risk_family": "branch",
+        "wrong_detection_rate": 0.9333333333333333,
+        "wrong_detection_rate_delta": -0.06666666666666665
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 4,
+        "risk_family": "loop",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 1.0,
+        "auc_delta": 0.0,
+        "missed_wrong_count": 0,
+        "missed_wrong_count_delta": 0,
+        "paired_case_count": 7,
+        "risk_family": "multi_arg",
+        "wrong_detection_rate": 1.0,
+        "wrong_detection_rate_delta": 0.0
+      },
+      {
+        "auc": 0.9868421052631579,
+        "auc_delta": -0.013157894736842146,
+        "missed_wrong_count": 1,
+        "missed_wrong_count_delta": 1,
+        "paired_case_count": 16,
+        "risk_family": "operator_boundary",
+        "wrong_detection_rate": 0.9642857142857143,
+        "wrong_detection_rate_delta": -0.0357142857142857
+      },
+      {
+        "auc": 0.9913793103448276,
+        "auc_delta": -0.008620689655172376,
+        "missed_wrong_count": 1,
+        "missed_wrong_count_delta": 1,
+        "paired_case_count": 24,
+        "risk_family": "public_benchmark",
+        "wrong_detection_rate": 0.9722222222222222,
+        "wrong_detection_rate_delta": -0.02777777777777779
+      }
+    ]
+  },
+  "strategy_id": "operator_char_class_first",
+  "verdict": "partial-phase17-operator-char-policy"
+}

@@ -1,0 +1,1790 @@
+{
+  "best_by_budget": {
+    "1": {
+      "actual_input_evals": 166,
+      "avg_actual_inputs_per_candidate": 1.0,
+      "candidate_count": 166,
+      "compile_pass_count": 166,
+      "complete_eval": true,
+      "eval_count": 166,
+      "fixture_auc": 0.5,
+      "mismatch_auc": 0.8478260869565217,
+      "missed_wrong": [
+        {
+          "candidate_id": "phase6_O0_ta_armstrong_power_fixture_ifchain_00",
+          "case_id": "ta_armstrong_power",
+          "optimization_level": "O0"
+        },
+        {
+          "candidate_id": "phase6_O2_ta_armstrong_power_fixture_ifchain_00",
+          "case_id": "ta_armstrong_power",
+          "optimization_level": "O2"
+        },
+        {
+          "candidate_id": "phase6_O0_ta_leetcode_divide_fixture_ifchain_00",
+          "case_id": "ta_leetcode_divide",
+          "optimization_level": "O0"
+        },
+        {
+          "candidate_id": "phase6_O2_ta_leetcode_divide_fixture_ifchain_00",
+          "case_id": "ta_leetcode_divide",
+          "optimization_level": "O2"
+        },
+        {
+          "candidate_id": "phase6_O0_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+          "case_id": "ta_leetcode_range_bitwise_and",
+          "optimization_level": "O0"
+        },
+        {
+          "candidate_id": "phase6_O2_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+          "case_id": "ta_leetcode_range_bitwise_and",
+          "optimization_level": "O2"
+        },
+        {
+          "candidate_id": "phase6_O0_ta_leetcode_find_complement_fixture_ifchain_00",
+          "case_id": "ta_leetcode_find_complement",
+          "optimization_level": "O0"
+        },
+        {
+          "candidate_id": "phase6_O2_ta_leetcode_find_complement_fixture_ifchain_00",
+          "case_id": "ta_leetcode_find_complement",
+          "optimization_level": "O2"
+        },
+        {
+          "candidate_id": "phase6_O0_ta_leetcode_get_triplet_id_fixture_ifchain_00",
+          "case_id": "ta_leetcode_get_triplet_id",
+          "optimization_level": "O0"
+        },
+        {
+          "candidate_id": "phase6_O2_ta_leetcode_get_triplet_id_fixture_ifchain_00",
+          "case_id": "ta_leetcode_get_triplet_id",
+          "optimization_level": "O2"
+        },
+        {
+          "candidate_id": "phase6_O0_ta_bucket_get_bucket_index_fixture_ifchain_00",
+          "case_id": "ta_bucket_get_bucket_index",
+          "optimization_level": "O0"
+        },
+        {
+          "candidate_id": "phase6_O2_ta_bucket_get_bucket_index_fixture_ifchain_00",
+          "case_id": "ta_bucket_get_bucket_index",
+          "optimization_level": "O2"
+        },
+        {
+          "candidate_id": "phase6_O0_ta_infix_is_operand_fixture_ifchain_00",
+          "case_id": "ta_infix_is_operand",
+          "optimization_level": "O0"
+        },
+        {
+          "candidate_id": "phase6_O2_ta_infix_is_operand_fixture_ifchain_00",
+          "case_id": "ta_infix_is_operand",
+          "optimization_level": "O2"
+        },
+        {
+          "candidate_id": "phase6_O0_ta_infix_precedence_two_fixture_ifchain_00",
+          "case_id": "ta_infix_precedence_two",
+          "optimization_level": "O0"
+        },
+        {
+          "candidate_id": "phase6_O2_ta_infix_precedence_two_fixture_ifchain_00",
+          "case_id": "ta_infix_precedence_two",
+          "optimization_level": "O2"
+        },
+        {
+          "candidate_id": "phase6_O0_ta_leetcode_min_fixture_ifchain_00",
+          "case_id": "ta_leetcode_min",
+          "optimization_level": "O0"
+        },
+        {
+          "candidate_id": "phase6_O2_ta_leetcode_min_fixture_ifchain_00",
+          "case_id": "ta_leetcode_min",
+          "optimization_level": "O2"
+        },
+        {
+          "candidate_id": "phase6_O0_ca_int_equal_values_fixture_ifchain_00",
+          "case_id": "ca_int_equal_values",
+          "optimization_level": "O0"
+        },
+        {
+          "candidate_id": "phase6_O2_ca_int_equal_values_fixture_ifchain_00",
+          "case_id": "ca_int_equal_values",
+          "optimization_level": "O2"
+        }
+      ],
+      "missed_wrong_count": 20,
+      "paired_case_count": 26,
+      "requested_budget": 1,
+      "static_auc": 0.8206521739130435,
+      "strategy_id": "fixture_neighbor_first",
+      "v3_auc": 0.8478260869565217,
+      "wrong_count": 74,
+      "wrong_detection_count": 54,
+      "wrong_detection_rate": 0.7297297297297297
+    },
+    "16": {
+      "actual_input_evals": 1969,
+      "avg_actual_inputs_per_candidate": 11.86144578313253,
+      "candidate_count": 166,
+      "compile_pass_count": 166,
+      "complete_eval": true,
+      "eval_count": 166,
+      "fixture_auc": 0.5,
+      "mismatch_auc": 1.0,
+      "missed_wrong": [],
+      "missed_wrong_count": 0,
+      "paired_case_count": 26,
+      "requested_budget": 16,
+      "static_auc": 0.8206521739130435,
+      "strategy_id": "fixture_neighbor_first",
+      "v3_auc": 1.0,
+      "wrong_count": 74,
+      "wrong_detection_count": 74,
+      "wrong_detection_rate": 1.0
+    },
+    "2": {
+      "actual_input_evals": 328,
+      "avg_actual_inputs_per_candidate": 1.9759036144578312,
+      "candidate_count": 166,
+      "compile_pass_count": 166,
+      "complete_eval": true,
+      "eval_count": 166,
+      "fixture_auc": 0.5,
+      "mismatch_auc": 0.9239130434782609,
+      "missed_wrong": [
+        {
+          "candidate_id": "phase6_O0_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+          "case_id": "ta_leetcode_range_bitwise_and",
+          "optimization_level": "O0"
+        },
+        {
+          "candidate_id": "phase6_O2_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+          "case_id": "ta_leetcode_range_bitwise_and",
+          "optimization_level": "O2"
+        },
+        {
+          "candidate_id": "phase6_O0_ta_leetcode_get_triplet_id_fixture_ifchain_00",
+          "case_id": "ta_leetcode_get_triplet_id",
+          "optimization_level": "O0"
+        },
+        {
+          "candidate_id": "phase6_O2_ta_leetcode_get_triplet_id_fixture_ifchain_00",
+          "case_id": "ta_leetcode_get_triplet_id",
+          "optimization_level": "O2"
+        },
+        {
+          "candidate_id": "phase6_O0_ta_bucket_get_bucket_index_fixture_ifchain_00",
+          "case_id": "ta_bucket_get_bucket_index",
+          "optimization_level": "O0"
+        },
+        {
+          "candidate_id": "phase6_O2_ta_bucket_get_bucket_index_fixture_ifchain_00",
+          "case_id": "ta_bucket_get_bucket_index",
+          "optimization_level": "O2"
+        },
+        {
+          "candidate_id": "phase6_O0_ta_infix_is_operand_fixture_ifchain_00",
+          "case_id": "ta_infix_is_operand",
+          "optimization_level": "O0"
+        },
+        {
+          "candidate_id": "phase6_O2_ta_infix_is_operand_fixture_ifchain_00",
+          "case_id": "ta_infix_is_operand",
+          "optimization_level": "O2"
+        },
+        {
+          "candidate_id": "phase6_O0_ta_infix_precedence_two_fixture_ifchain_00",
+          "case_id": "ta_infix_precedence_two",
+          "optimization_level": "O0"
+        },
+        {
+          "candidate_id": "phase6_O2_ta_infix_precedence_two_fixture_ifchain_00",
+          "case_id": "ta_infix_precedence_two",
+          "optimization_level": "O2"
+        },
+        {
+          "candidate_id": "phase6_O0_ca_int_equal_values_fixture_ifchain_00",
+          "case_id": "ca_int_equal_values",
+          "optimization_level": "O0"
+        },
+        {
+          "candidate_id": "phase6_O2_ca_int_equal_values_fixture_ifchain_00",
+          "case_id": "ca_int_equal_values",
+          "optimization_level": "O2"
+        }
+      ],
+      "missed_wrong_count": 12,
+      "paired_case_count": 26,
+      "requested_budget": 2,
+      "static_auc": 0.8206521739130435,
+      "strategy_id": "fixture_neighbor_first",
+      "v3_auc": 0.9239130434782609,
+      "wrong_count": 74,
+      "wrong_detection_count": 62,
+      "wrong_detection_rate": 0.8378378378378378
+    },
+    "4": {
+      "actual_input_evals": 652,
+      "avg_actual_inputs_per_candidate": 3.927710843373494,
+      "candidate_count": 166,
+      "compile_pass_count": 166,
+      "complete_eval": true,
+      "eval_count": 166,
+      "fixture_auc": 0.5,
+      "mismatch_auc": 0.9891304347826086,
+      "missed_wrong": [
+        {
+          "candidate_id": "phase6_O0_ta_infix_precedence_two_fixture_ifchain_00",
+          "case_id": "ta_infix_precedence_two",
+          "optimization_level": "O0"
+        },
+        {
+          "candidate_id": "phase6_O2_ta_infix_precedence_two_fixture_ifchain_00",
+          "case_id": "ta_infix_precedence_two",
+          "optimization_level": "O2"
+        },
+        {
+          "candidate_id": "phase6_O0_ca_int_equal_values_fixture_ifchain_00",
+          "case_id": "ca_int_equal_values",
+          "optimization_level": "O0"
+        },
+        {
+          "candidate_id": "phase6_O2_ca_int_equal_values_fixture_ifchain_00",
+          "case_id": "ca_int_equal_values",
+          "optimization_level": "O2"
+        }
+      ],
+      "missed_wrong_count": 4,
+      "paired_case_count": 26,
+      "requested_budget": 4,
+      "static_auc": 0.8206521739130435,
+      "strategy_id": "fixture_neighbor_first",
+      "v3_auc": 0.9891304347826086,
+      "wrong_count": 74,
+      "wrong_detection_count": 70,
+      "wrong_detection_rate": 0.9459459459459459
+    },
+    "8": {
+      "actual_input_evals": 1157,
+      "avg_actual_inputs_per_candidate": 6.969879518072289,
+      "candidate_count": 166,
+      "compile_pass_count": 166,
+      "complete_eval": true,
+      "eval_count": 166,
+      "fixture_auc": 0.5,
+      "mismatch_auc": 0.9891304347826086,
+      "missed_wrong": [
+        {
+          "candidate_id": "phase6_O0_ta_infix_precedence_two_fixture_ifchain_00",
+          "case_id": "ta_infix_precedence_two",
+          "optimization_level": "O0"
+        },
+        {
+          "candidate_id": "phase6_O2_ta_infix_precedence_two_fixture_ifchain_00",
+          "case_id": "ta_infix_precedence_two",
+          "optimization_level": "O2"
+        }
+      ],
+      "missed_wrong_count": 2,
+      "paired_case_count": 26,
+      "requested_budget": 8,
+      "static_auc": 0.8206521739130435,
+      "strategy_id": "fixture_neighbor_first",
+      "v3_auc": 0.9891304347826086,
+      "wrong_count": 74,
+      "wrong_detection_count": 72,
+      "wrong_detection_rate": 0.972972972972973
+    }
+  },
+  "budgets": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "created_at_utc": "2026-07-02T03:03:41.202833+00:00",
+  "dataset_id": "phase6r_ghidra_full",
+  "gate": {
+    "budget16_auc_gate": true,
+    "budget16_detection_gate": true,
+    "budget8_auc_gate": true,
+    "budget8_detection_gate": true
+  },
+  "max_budget": 16,
+  "phase": "phase11_input_ordering",
+  "strategy_results": {
+    "boundary_first": {
+      "budget_metrics": {
+        "1": {
+          "actual_input_evals": 166,
+          "avg_actual_inputs_per_candidate": 1.0,
+          "candidate_count": 166,
+          "compile_pass_count": 160,
+          "complete_eval": false,
+          "eval_count": 160,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 0.8863636363636364,
+          "missed_wrong": [
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_divide_fixture_ifchain_00",
+              "case_id": "ta_leetcode_divide",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_divide_fixture_ifchain_00",
+              "case_id": "ta_leetcode_divide",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+              "case_id": "ta_leetcode_range_bitwise_and",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+              "case_id": "ta_leetcode_range_bitwise_and",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_find_complement_fixture_ifchain_00",
+              "case_id": "ta_leetcode_find_complement",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_find_complement_fixture_ifchain_00",
+              "case_id": "ta_leetcode_find_complement",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_get_triplet_id_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_triplet_id",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_get_triplet_id_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_triplet_id",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_bucket_get_bucket_index_fixture_ifchain_00",
+              "case_id": "ta_bucket_get_bucket_index",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_bucket_get_bucket_index_fixture_ifchain_00",
+              "case_id": "ta_bucket_get_bucket_index",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_infix_is_operand_fixture_ifchain_00",
+              "case_id": "ta_infix_is_operand",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_infix_is_operand_fixture_ifchain_00",
+              "case_id": "ta_infix_is_operand",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_infix_precedence_two_fixture_ifchain_00",
+              "case_id": "ta_infix_precedence_two",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_infix_precedence_two_fixture_ifchain_00",
+              "case_id": "ta_infix_precedence_two",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O2"
+            }
+          ],
+          "missed_wrong_count": 16,
+          "paired_case_count": 25,
+          "requested_budget": 1,
+          "static_auc": 0.8352272727272727,
+          "v3_auc": 0.8863636363636364,
+          "wrong_count": 72,
+          "wrong_detection_count": 56,
+          "wrong_detection_rate": 0.7777777777777778
+        },
+        "16": {
+          "actual_input_evals": 2656,
+          "avg_actual_inputs_per_candidate": 16.0,
+          "candidate_count": 166,
+          "compile_pass_count": 160,
+          "complete_eval": false,
+          "eval_count": 160,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 1.0,
+          "missed_wrong": [
+            {
+              "candidate_id": "phase6_O0_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O2"
+            }
+          ],
+          "missed_wrong_count": 2,
+          "paired_case_count": 25,
+          "requested_budget": 16,
+          "static_auc": 0.8352272727272727,
+          "v3_auc": 1.0,
+          "wrong_count": 72,
+          "wrong_detection_count": 70,
+          "wrong_detection_rate": 0.9722222222222222
+        },
+        "2": {
+          "actual_input_evals": 332,
+          "avg_actual_inputs_per_candidate": 2.0,
+          "candidate_count": 166,
+          "compile_pass_count": 160,
+          "complete_eval": false,
+          "eval_count": 160,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 0.9204545454545454,
+          "missed_wrong": [
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+              "case_id": "ta_leetcode_range_bitwise_and",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+              "case_id": "ta_leetcode_range_bitwise_and",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_get_triplet_id_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_triplet_id",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_get_triplet_id_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_triplet_id",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_bucket_get_bucket_index_fixture_ifchain_00",
+              "case_id": "ta_bucket_get_bucket_index",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_bucket_get_bucket_index_fixture_ifchain_00",
+              "case_id": "ta_bucket_get_bucket_index",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_infix_is_operand_fixture_ifchain_00",
+              "case_id": "ta_infix_is_operand",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_infix_is_operand_fixture_ifchain_00",
+              "case_id": "ta_infix_is_operand",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_infix_precedence_two_fixture_ifchain_00",
+              "case_id": "ta_infix_precedence_two",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_infix_precedence_two_fixture_ifchain_00",
+              "case_id": "ta_infix_precedence_two",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O2"
+            }
+          ],
+          "missed_wrong_count": 12,
+          "paired_case_count": 25,
+          "requested_budget": 2,
+          "static_auc": 0.8352272727272727,
+          "v3_auc": 0.9204545454545454,
+          "wrong_count": 72,
+          "wrong_detection_count": 60,
+          "wrong_detection_rate": 0.8333333333333334
+        },
+        "4": {
+          "actual_input_evals": 664,
+          "avg_actual_inputs_per_candidate": 4.0,
+          "candidate_count": 166,
+          "compile_pass_count": 160,
+          "complete_eval": false,
+          "eval_count": 160,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 0.9772727272727273,
+          "missed_wrong": [
+            {
+              "candidate_id": "phase6_O0_ta_infix_is_operand_fixture_ifchain_00",
+              "case_id": "ta_infix_is_operand",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_infix_is_operand_fixture_ifchain_00",
+              "case_id": "ta_infix_is_operand",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O2"
+            }
+          ],
+          "missed_wrong_count": 4,
+          "paired_case_count": 25,
+          "requested_budget": 4,
+          "static_auc": 0.8352272727272727,
+          "v3_auc": 0.9772727272727273,
+          "wrong_count": 72,
+          "wrong_detection_count": 68,
+          "wrong_detection_rate": 0.9444444444444444
+        },
+        "8": {
+          "actual_input_evals": 1328,
+          "avg_actual_inputs_per_candidate": 8.0,
+          "candidate_count": 166,
+          "compile_pass_count": 160,
+          "complete_eval": false,
+          "eval_count": 160,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 1.0,
+          "missed_wrong": [
+            {
+              "candidate_id": "phase6_O0_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O2"
+            }
+          ],
+          "missed_wrong_count": 2,
+          "paired_case_count": 25,
+          "requested_budget": 8,
+          "static_auc": 0.8352272727272727,
+          "v3_auc": 1.0,
+          "wrong_count": 72,
+          "wrong_detection_count": 70,
+          "wrong_detection_rate": 0.9722222222222222
+        }
+      },
+      "input_counts_by_case": {
+        "ca_int_compare_values": 16,
+        "ca_int_equal_values": 16,
+        "ca_int_hash_value": 16,
+        "ca_string_hash_selector": 16,
+        "ca_string_nocase_hash_selector": 16,
+        "ta_affine_mod_inverse": 16,
+        "ta_armstrong_isArmstrong": 16,
+        "ta_armstrong_order": 16,
+        "ta_armstrong_power": 16,
+        "ta_binary_to_octal_three_digits": 16,
+        "ta_bucket_get_bucket_index": 16,
+        "ta_decimal_to_binary": 16,
+        "ta_decimal_to_octal": 16,
+        "ta_euler_is_palindromic": 16,
+        "ta_gcd_GCD": 16,
+        "ta_infix_is_operand": 16,
+        "ta_infix_precedence_two": 16,
+        "ta_lcm_gcd": 16,
+        "ta_lcm_lcm": 16,
+        "ta_leetcode_compute_area": 16,
+        "ta_leetcode_divide": 16,
+        "ta_leetcode_fib": 16,
+        "ta_leetcode_find_complement": 16,
+        "ta_leetcode_get_point_key": 16,
+        "ta_leetcode_get_triplet_id": 16,
+        "ta_leetcode_hamming_distance": 16,
+        "ta_leetcode_intersection_size": 16,
+        "ta_leetcode_max": 16,
+        "ta_leetcode_maxval": 16,
+        "ta_leetcode_min": 16,
+        "ta_leetcode_my_sqrt": 16,
+        "ta_leetcode_range_bitwise_and": 16,
+        "ta_leetcode_reverse": 16,
+        "ta_leetcode_tribonacci": 16,
+        "ta_leetcode_unique_paths": 16,
+        "ta_naval_valid_entry_line_column": 16,
+        "ta_shunting_get_associativity": 16,
+        "ta_shunting_get_precedence": 16
+      },
+      "rerun_candidate_count": 166,
+      "strategy_id": "boundary_first"
+    },
+    "fixture_neighbor_first": {
+      "budget_metrics": {
+        "1": {
+          "actual_input_evals": 166,
+          "avg_actual_inputs_per_candidate": 1.0,
+          "candidate_count": 166,
+          "compile_pass_count": 166,
+          "complete_eval": true,
+          "eval_count": 166,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 0.8478260869565217,
+          "missed_wrong": [
+            {
+              "candidate_id": "phase6_O0_ta_armstrong_power_fixture_ifchain_00",
+              "case_id": "ta_armstrong_power",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_armstrong_power_fixture_ifchain_00",
+              "case_id": "ta_armstrong_power",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_divide_fixture_ifchain_00",
+              "case_id": "ta_leetcode_divide",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_divide_fixture_ifchain_00",
+              "case_id": "ta_leetcode_divide",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+              "case_id": "ta_leetcode_range_bitwise_and",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+              "case_id": "ta_leetcode_range_bitwise_and",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_find_complement_fixture_ifchain_00",
+              "case_id": "ta_leetcode_find_complement",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_find_complement_fixture_ifchain_00",
+              "case_id": "ta_leetcode_find_complement",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_get_triplet_id_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_triplet_id",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_get_triplet_id_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_triplet_id",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_bucket_get_bucket_index_fixture_ifchain_00",
+              "case_id": "ta_bucket_get_bucket_index",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_bucket_get_bucket_index_fixture_ifchain_00",
+              "case_id": "ta_bucket_get_bucket_index",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_infix_is_operand_fixture_ifchain_00",
+              "case_id": "ta_infix_is_operand",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_infix_is_operand_fixture_ifchain_00",
+              "case_id": "ta_infix_is_operand",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_infix_precedence_two_fixture_ifchain_00",
+              "case_id": "ta_infix_precedence_two",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_infix_precedence_two_fixture_ifchain_00",
+              "case_id": "ta_infix_precedence_two",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_min_fixture_ifchain_00",
+              "case_id": "ta_leetcode_min",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_min_fixture_ifchain_00",
+              "case_id": "ta_leetcode_min",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O2"
+            }
+          ],
+          "missed_wrong_count": 20,
+          "paired_case_count": 26,
+          "requested_budget": 1,
+          "static_auc": 0.8206521739130435,
+          "v3_auc": 0.8478260869565217,
+          "wrong_count": 74,
+          "wrong_detection_count": 54,
+          "wrong_detection_rate": 0.7297297297297297
+        },
+        "16": {
+          "actual_input_evals": 1969,
+          "avg_actual_inputs_per_candidate": 11.86144578313253,
+          "candidate_count": 166,
+          "compile_pass_count": 166,
+          "complete_eval": true,
+          "eval_count": 166,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 1.0,
+          "missed_wrong": [],
+          "missed_wrong_count": 0,
+          "paired_case_count": 26,
+          "requested_budget": 16,
+          "static_auc": 0.8206521739130435,
+          "v3_auc": 1.0,
+          "wrong_count": 74,
+          "wrong_detection_count": 74,
+          "wrong_detection_rate": 1.0
+        },
+        "2": {
+          "actual_input_evals": 328,
+          "avg_actual_inputs_per_candidate": 1.9759036144578312,
+          "candidate_count": 166,
+          "compile_pass_count": 166,
+          "complete_eval": true,
+          "eval_count": 166,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 0.9239130434782609,
+          "missed_wrong": [
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+              "case_id": "ta_leetcode_range_bitwise_and",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+              "case_id": "ta_leetcode_range_bitwise_and",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_get_triplet_id_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_triplet_id",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_get_triplet_id_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_triplet_id",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_bucket_get_bucket_index_fixture_ifchain_00",
+              "case_id": "ta_bucket_get_bucket_index",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_bucket_get_bucket_index_fixture_ifchain_00",
+              "case_id": "ta_bucket_get_bucket_index",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_infix_is_operand_fixture_ifchain_00",
+              "case_id": "ta_infix_is_operand",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_infix_is_operand_fixture_ifchain_00",
+              "case_id": "ta_infix_is_operand",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_infix_precedence_two_fixture_ifchain_00",
+              "case_id": "ta_infix_precedence_two",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_infix_precedence_two_fixture_ifchain_00",
+              "case_id": "ta_infix_precedence_two",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O2"
+            }
+          ],
+          "missed_wrong_count": 12,
+          "paired_case_count": 26,
+          "requested_budget": 2,
+          "static_auc": 0.8206521739130435,
+          "v3_auc": 0.9239130434782609,
+          "wrong_count": 74,
+          "wrong_detection_count": 62,
+          "wrong_detection_rate": 0.8378378378378378
+        },
+        "4": {
+          "actual_input_evals": 652,
+          "avg_actual_inputs_per_candidate": 3.927710843373494,
+          "candidate_count": 166,
+          "compile_pass_count": 166,
+          "complete_eval": true,
+          "eval_count": 166,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 0.9891304347826086,
+          "missed_wrong": [
+            {
+              "candidate_id": "phase6_O0_ta_infix_precedence_two_fixture_ifchain_00",
+              "case_id": "ta_infix_precedence_two",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_infix_precedence_two_fixture_ifchain_00",
+              "case_id": "ta_infix_precedence_two",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O2"
+            }
+          ],
+          "missed_wrong_count": 4,
+          "paired_case_count": 26,
+          "requested_budget": 4,
+          "static_auc": 0.8206521739130435,
+          "v3_auc": 0.9891304347826086,
+          "wrong_count": 74,
+          "wrong_detection_count": 70,
+          "wrong_detection_rate": 0.9459459459459459
+        },
+        "8": {
+          "actual_input_evals": 1157,
+          "avg_actual_inputs_per_candidate": 6.969879518072289,
+          "candidate_count": 166,
+          "compile_pass_count": 166,
+          "complete_eval": true,
+          "eval_count": 166,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 0.9891304347826086,
+          "missed_wrong": [
+            {
+              "candidate_id": "phase6_O0_ta_infix_precedence_two_fixture_ifchain_00",
+              "case_id": "ta_infix_precedence_two",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_infix_precedence_two_fixture_ifchain_00",
+              "case_id": "ta_infix_precedence_two",
+              "optimization_level": "O2"
+            }
+          ],
+          "missed_wrong_count": 2,
+          "paired_case_count": 26,
+          "requested_budget": 8,
+          "static_auc": 0.8206521739130435,
+          "v3_auc": 0.9891304347826086,
+          "wrong_count": 74,
+          "wrong_detection_count": 72,
+          "wrong_detection_rate": 0.972972972972973
+        }
+      },
+      "input_counts_by_case": {
+        "ca_int_compare_values": 16,
+        "ca_int_equal_values": 16,
+        "ca_int_hash_value": 6,
+        "ca_string_hash_selector": 1,
+        "ca_string_nocase_hash_selector": 1,
+        "ta_affine_mod_inverse": 16,
+        "ta_armstrong_isArmstrong": 8,
+        "ta_armstrong_order": 8,
+        "ta_armstrong_power": 16,
+        "ta_binary_to_octal_three_digits": 5,
+        "ta_bucket_get_bucket_index": 6,
+        "ta_decimal_to_binary": 4,
+        "ta_decimal_to_octal": 6,
+        "ta_euler_is_palindromic": 4,
+        "ta_gcd_GCD": 16,
+        "ta_infix_is_operand": 15,
+        "ta_infix_precedence_two": 16,
+        "ta_lcm_gcd": 16,
+        "ta_lcm_lcm": 16,
+        "ta_leetcode_compute_area": 16,
+        "ta_leetcode_divide": 16,
+        "ta_leetcode_fib": 5,
+        "ta_leetcode_find_complement": 5,
+        "ta_leetcode_get_point_key": 16,
+        "ta_leetcode_get_triplet_id": 16,
+        "ta_leetcode_hamming_distance": 16,
+        "ta_leetcode_intersection_size": 16,
+        "ta_leetcode_max": 16,
+        "ta_leetcode_maxval": 16,
+        "ta_leetcode_min": 16,
+        "ta_leetcode_my_sqrt": 7,
+        "ta_leetcode_range_bitwise_and": 16,
+        "ta_leetcode_reverse": 8,
+        "ta_leetcode_tribonacci": 5,
+        "ta_leetcode_unique_paths": 16,
+        "ta_naval_valid_entry_line_column": 16,
+        "ta_shunting_get_associativity": 14,
+        "ta_shunting_get_precedence": 14
+      },
+      "rerun_candidate_count": 166,
+      "strategy_id": "fixture_neighbor_first"
+    },
+    "mixed_boundary_neighbor": {
+      "budget_metrics": {
+        "1": {
+          "actual_input_evals": 166,
+          "avg_actual_inputs_per_candidate": 1.0,
+          "candidate_count": 166,
+          "compile_pass_count": 160,
+          "complete_eval": false,
+          "eval_count": 160,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 0.8409090909090909,
+          "missed_wrong": [
+            {
+              "candidate_id": "phase6_O0_ta_armstrong_power_fixture_ifchain_00",
+              "case_id": "ta_armstrong_power",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_armstrong_power_fixture_ifchain_00",
+              "case_id": "ta_armstrong_power",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_divide_fixture_ifchain_00",
+              "case_id": "ta_leetcode_divide",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_divide_fixture_ifchain_00",
+              "case_id": "ta_leetcode_divide",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+              "case_id": "ta_leetcode_range_bitwise_and",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+              "case_id": "ta_leetcode_range_bitwise_and",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_find_complement_fixture_ifchain_00",
+              "case_id": "ta_leetcode_find_complement",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_find_complement_fixture_ifchain_00",
+              "case_id": "ta_leetcode_find_complement",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_get_triplet_id_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_triplet_id",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_get_triplet_id_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_triplet_id",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_bucket_get_bucket_index_fixture_ifchain_00",
+              "case_id": "ta_bucket_get_bucket_index",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_bucket_get_bucket_index_fixture_ifchain_00",
+              "case_id": "ta_bucket_get_bucket_index",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_infix_is_operand_fixture_ifchain_00",
+              "case_id": "ta_infix_is_operand",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_infix_is_operand_fixture_ifchain_00",
+              "case_id": "ta_infix_is_operand",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_infix_precedence_two_fixture_ifchain_00",
+              "case_id": "ta_infix_precedence_two",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_infix_precedence_two_fixture_ifchain_00",
+              "case_id": "ta_infix_precedence_two",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_min_fixture_ifchain_00",
+              "case_id": "ta_leetcode_min",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_min_fixture_ifchain_00",
+              "case_id": "ta_leetcode_min",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O2"
+            }
+          ],
+          "missed_wrong_count": 20,
+          "paired_case_count": 25,
+          "requested_budget": 1,
+          "static_auc": 0.8352272727272727,
+          "v3_auc": 0.8409090909090909,
+          "wrong_count": 72,
+          "wrong_detection_count": 52,
+          "wrong_detection_rate": 0.7222222222222222
+        },
+        "16": {
+          "actual_input_evals": 2656,
+          "avg_actual_inputs_per_candidate": 16.0,
+          "candidate_count": 166,
+          "compile_pass_count": 160,
+          "complete_eval": false,
+          "eval_count": 160,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 1.0,
+          "missed_wrong": [],
+          "missed_wrong_count": 0,
+          "paired_case_count": 25,
+          "requested_budget": 16,
+          "static_auc": 0.8352272727272727,
+          "v3_auc": 1.0,
+          "wrong_count": 72,
+          "wrong_detection_count": 72,
+          "wrong_detection_rate": 1.0
+        },
+        "2": {
+          "actual_input_evals": 332,
+          "avg_actual_inputs_per_candidate": 2.0,
+          "candidate_count": 166,
+          "compile_pass_count": 160,
+          "complete_eval": false,
+          "eval_count": 160,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 0.9204545454545454,
+          "missed_wrong": [
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+              "case_id": "ta_leetcode_range_bitwise_and",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+              "case_id": "ta_leetcode_range_bitwise_and",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_get_triplet_id_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_triplet_id",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_get_triplet_id_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_triplet_id",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_bucket_get_bucket_index_fixture_ifchain_00",
+              "case_id": "ta_bucket_get_bucket_index",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_bucket_get_bucket_index_fixture_ifchain_00",
+              "case_id": "ta_bucket_get_bucket_index",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_infix_is_operand_fixture_ifchain_00",
+              "case_id": "ta_infix_is_operand",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_infix_is_operand_fixture_ifchain_00",
+              "case_id": "ta_infix_is_operand",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_infix_precedence_two_fixture_ifchain_00",
+              "case_id": "ta_infix_precedence_two",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_infix_precedence_two_fixture_ifchain_00",
+              "case_id": "ta_infix_precedence_two",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O2"
+            }
+          ],
+          "missed_wrong_count": 12,
+          "paired_case_count": 25,
+          "requested_budget": 2,
+          "static_auc": 0.8352272727272727,
+          "v3_auc": 0.9204545454545454,
+          "wrong_count": 72,
+          "wrong_detection_count": 60,
+          "wrong_detection_rate": 0.8333333333333334
+        },
+        "4": {
+          "actual_input_evals": 664,
+          "avg_actual_inputs_per_candidate": 4.0,
+          "candidate_count": 166,
+          "compile_pass_count": 160,
+          "complete_eval": false,
+          "eval_count": 160,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 0.9886363636363636,
+          "missed_wrong": [
+            {
+              "candidate_id": "phase6_O0_ta_infix_precedence_two_fixture_ifchain_00",
+              "case_id": "ta_infix_precedence_two",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_infix_precedence_two_fixture_ifchain_00",
+              "case_id": "ta_infix_precedence_two",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O2"
+            }
+          ],
+          "missed_wrong_count": 4,
+          "paired_case_count": 25,
+          "requested_budget": 4,
+          "static_auc": 0.8352272727272727,
+          "v3_auc": 0.9886363636363636,
+          "wrong_count": 72,
+          "wrong_detection_count": 68,
+          "wrong_detection_rate": 0.9444444444444444
+        },
+        "8": {
+          "actual_input_evals": 1328,
+          "avg_actual_inputs_per_candidate": 8.0,
+          "candidate_count": 166,
+          "compile_pass_count": 160,
+          "complete_eval": false,
+          "eval_count": 160,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 1.0,
+          "missed_wrong": [
+            {
+              "candidate_id": "phase6_O0_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O2"
+            }
+          ],
+          "missed_wrong_count": 2,
+          "paired_case_count": 25,
+          "requested_budget": 8,
+          "static_auc": 0.8352272727272727,
+          "v3_auc": 1.0,
+          "wrong_count": 72,
+          "wrong_detection_count": 70,
+          "wrong_detection_rate": 0.9722222222222222
+        }
+      },
+      "input_counts_by_case": {
+        "ca_int_compare_values": 16,
+        "ca_int_equal_values": 16,
+        "ca_int_hash_value": 16,
+        "ca_string_hash_selector": 16,
+        "ca_string_nocase_hash_selector": 16,
+        "ta_affine_mod_inverse": 16,
+        "ta_armstrong_isArmstrong": 16,
+        "ta_armstrong_order": 16,
+        "ta_armstrong_power": 16,
+        "ta_binary_to_octal_three_digits": 16,
+        "ta_bucket_get_bucket_index": 16,
+        "ta_decimal_to_binary": 16,
+        "ta_decimal_to_octal": 16,
+        "ta_euler_is_palindromic": 16,
+        "ta_gcd_GCD": 16,
+        "ta_infix_is_operand": 16,
+        "ta_infix_precedence_two": 16,
+        "ta_lcm_gcd": 16,
+        "ta_lcm_lcm": 16,
+        "ta_leetcode_compute_area": 16,
+        "ta_leetcode_divide": 16,
+        "ta_leetcode_fib": 16,
+        "ta_leetcode_find_complement": 16,
+        "ta_leetcode_get_point_key": 16,
+        "ta_leetcode_get_triplet_id": 16,
+        "ta_leetcode_hamming_distance": 16,
+        "ta_leetcode_intersection_size": 16,
+        "ta_leetcode_max": 16,
+        "ta_leetcode_maxval": 16,
+        "ta_leetcode_min": 16,
+        "ta_leetcode_my_sqrt": 16,
+        "ta_leetcode_range_bitwise_and": 16,
+        "ta_leetcode_reverse": 16,
+        "ta_leetcode_tribonacci": 16,
+        "ta_leetcode_unique_paths": 16,
+        "ta_naval_valid_entry_line_column": 16,
+        "ta_shunting_get_associativity": 16,
+        "ta_shunting_get_precedence": 16
+      },
+      "rerun_candidate_count": 166,
+      "strategy_id": "mixed_boundary_neighbor"
+    },
+    "phase5b_original": {
+      "budget_metrics": {
+        "1": {
+          "actual_input_evals": 166,
+          "avg_actual_inputs_per_candidate": 1.0,
+          "candidate_count": 166,
+          "compile_pass_count": 166,
+          "complete_eval": true,
+          "eval_count": 166,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 0.8152173913043478,
+          "missed_wrong": [
+            {
+              "candidate_id": "phase6_O0_ta_affine_mod_inverse_fixture_ifchain_00",
+              "case_id": "ta_affine_mod_inverse",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_affine_mod_inverse_fixture_ifchain_00",
+              "case_id": "ta_affine_mod_inverse",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_divide_fixture_ifchain_00",
+              "case_id": "ta_leetcode_divide",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_divide_fixture_ifchain_00",
+              "case_id": "ta_leetcode_divide",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+              "case_id": "ta_leetcode_range_bitwise_and",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+              "case_id": "ta_leetcode_range_bitwise_and",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_find_complement_fixture_ifchain_00",
+              "case_id": "ta_leetcode_find_complement",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_find_complement_fixture_ifchain_00",
+              "case_id": "ta_leetcode_find_complement",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_hamming_distance_fixture_ifchain_00",
+              "case_id": "ta_leetcode_hamming_distance",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_hamming_distance_fixture_ifchain_00",
+              "case_id": "ta_leetcode_hamming_distance",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_get_point_key_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_point_key",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_get_point_key_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_point_key",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_get_triplet_id_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_triplet_id",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_get_triplet_id_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_triplet_id",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_compute_area_fixture_ifchain_00",
+              "case_id": "ta_leetcode_compute_area",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_compute_area_fixture_ifchain_00",
+              "case_id": "ta_leetcode_compute_area",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_bucket_get_bucket_index_fixture_ifchain_00",
+              "case_id": "ta_bucket_get_bucket_index",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_bucket_get_bucket_index_fixture_ifchain_00",
+              "case_id": "ta_bucket_get_bucket_index",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_naval_valid_entry_line_column_fixture_ifchain_00",
+              "case_id": "ta_naval_valid_entry_line_column",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_naval_valid_entry_line_column_fixture_ifchain_00",
+              "case_id": "ta_naval_valid_entry_line_column",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_infix_is_operand_fixture_ifchain_00",
+              "case_id": "ta_infix_is_operand",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_infix_is_operand_fixture_ifchain_00",
+              "case_id": "ta_infix_is_operand",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O2"
+            }
+          ],
+          "missed_wrong_count": 24,
+          "paired_case_count": 26,
+          "requested_budget": 1,
+          "static_auc": 0.8206521739130435,
+          "v3_auc": 0.8152173913043478,
+          "wrong_count": 74,
+          "wrong_detection_count": 50,
+          "wrong_detection_rate": 0.6756756756756757
+        },
+        "16": {
+          "actual_input_evals": 1897,
+          "avg_actual_inputs_per_candidate": 11.427710843373495,
+          "candidate_count": 166,
+          "compile_pass_count": 166,
+          "complete_eval": true,
+          "eval_count": 166,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 0.9782608695652174,
+          "missed_wrong": [
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_get_point_key_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_point_key",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_get_point_key_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_point_key",
+              "optimization_level": "O2"
+            }
+          ],
+          "missed_wrong_count": 2,
+          "paired_case_count": 26,
+          "requested_budget": 16,
+          "static_auc": 0.8206521739130435,
+          "v3_auc": 0.9782608695652174,
+          "wrong_count": 74,
+          "wrong_detection_count": 72,
+          "wrong_detection_rate": 0.972972972972973
+        },
+        "2": {
+          "actual_input_evals": 328,
+          "avg_actual_inputs_per_candidate": 1.9759036144578312,
+          "candidate_count": 166,
+          "compile_pass_count": 166,
+          "complete_eval": true,
+          "eval_count": 166,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 0.8586956521739131,
+          "missed_wrong": [
+            {
+              "candidate_id": "phase6_O0_ta_affine_mod_inverse_fixture_ifchain_00",
+              "case_id": "ta_affine_mod_inverse",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_affine_mod_inverse_fixture_ifchain_00",
+              "case_id": "ta_affine_mod_inverse",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_divide_fixture_ifchain_00",
+              "case_id": "ta_leetcode_divide",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_divide_fixture_ifchain_00",
+              "case_id": "ta_leetcode_divide",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+              "case_id": "ta_leetcode_range_bitwise_and",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+              "case_id": "ta_leetcode_range_bitwise_and",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_get_point_key_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_point_key",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_get_point_key_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_point_key",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_get_triplet_id_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_triplet_id",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_get_triplet_id_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_triplet_id",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_compute_area_fixture_ifchain_00",
+              "case_id": "ta_leetcode_compute_area",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_compute_area_fixture_ifchain_00",
+              "case_id": "ta_leetcode_compute_area",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_bucket_get_bucket_index_fixture_ifchain_00",
+              "case_id": "ta_bucket_get_bucket_index",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_bucket_get_bucket_index_fixture_ifchain_00",
+              "case_id": "ta_bucket_get_bucket_index",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_naval_valid_entry_line_column_fixture_ifchain_00",
+              "case_id": "ta_naval_valid_entry_line_column",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_naval_valid_entry_line_column_fixture_ifchain_00",
+              "case_id": "ta_naval_valid_entry_line_column",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_infix_is_operand_fixture_ifchain_00",
+              "case_id": "ta_infix_is_operand",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_infix_is_operand_fixture_ifchain_00",
+              "case_id": "ta_infix_is_operand",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ca_int_equal_values_fixture_ifchain_00",
+              "case_id": "ca_int_equal_values",
+              "optimization_level": "O2"
+            }
+          ],
+          "missed_wrong_count": 20,
+          "paired_case_count": 26,
+          "requested_budget": 2,
+          "static_auc": 0.8206521739130435,
+          "v3_auc": 0.8586956521739131,
+          "wrong_count": 74,
+          "wrong_detection_count": 54,
+          "wrong_detection_rate": 0.7297297297297297
+        },
+        "4": {
+          "actual_input_evals": 652,
+          "avg_actual_inputs_per_candidate": 3.927710843373494,
+          "candidate_count": 166,
+          "compile_pass_count": 166,
+          "complete_eval": true,
+          "eval_count": 166,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 0.9021739130434783,
+          "missed_wrong": [
+            {
+              "candidate_id": "phase6_O0_ta_affine_mod_inverse_fixture_ifchain_00",
+              "case_id": "ta_affine_mod_inverse",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_affine_mod_inverse_fixture_ifchain_00",
+              "case_id": "ta_affine_mod_inverse",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_divide_fixture_ifchain_00",
+              "case_id": "ta_leetcode_divide",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_divide_fixture_ifchain_00",
+              "case_id": "ta_leetcode_divide",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+              "case_id": "ta_leetcode_range_bitwise_and",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+              "case_id": "ta_leetcode_range_bitwise_and",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_get_point_key_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_point_key",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_get_point_key_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_point_key",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_compute_area_fixture_ifchain_00",
+              "case_id": "ta_leetcode_compute_area",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_compute_area_fixture_ifchain_00",
+              "case_id": "ta_leetcode_compute_area",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_naval_valid_entry_line_column_fixture_ifchain_00",
+              "case_id": "ta_naval_valid_entry_line_column",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_naval_valid_entry_line_column_fixture_ifchain_00",
+              "case_id": "ta_naval_valid_entry_line_column",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_infix_is_operand_fixture_ifchain_00",
+              "case_id": "ta_infix_is_operand",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_infix_is_operand_fixture_ifchain_00",
+              "case_id": "ta_infix_is_operand",
+              "optimization_level": "O2"
+            }
+          ],
+          "missed_wrong_count": 14,
+          "paired_case_count": 26,
+          "requested_budget": 4,
+          "static_auc": 0.8206521739130435,
+          "v3_auc": 0.9021739130434783,
+          "wrong_count": 74,
+          "wrong_detection_count": 60,
+          "wrong_detection_rate": 0.8108108108108109
+        },
+        "8": {
+          "actual_input_evals": 1145,
+          "avg_actual_inputs_per_candidate": 6.897590361445783,
+          "candidate_count": 166,
+          "compile_pass_count": 166,
+          "complete_eval": true,
+          "eval_count": 166,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 0.9565217391304348,
+          "missed_wrong": [
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+              "case_id": "ta_leetcode_range_bitwise_and",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_range_bitwise_and_fixture_ifchain_00",
+              "case_id": "ta_leetcode_range_bitwise_and",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_leetcode_get_point_key_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_point_key",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_leetcode_get_point_key_fixture_ifchain_00",
+              "case_id": "ta_leetcode_get_point_key",
+              "optimization_level": "O2"
+            },
+            {
+              "candidate_id": "phase6_O0_ta_naval_valid_entry_line_column_fixture_ifchain_00",
+              "case_id": "ta_naval_valid_entry_line_column",
+              "optimization_level": "O0"
+            },
+            {
+              "candidate_id": "phase6_O2_ta_naval_valid_entry_line_column_fixture_ifchain_00",
+              "case_id": "ta_naval_valid_entry_line_column",
+              "optimization_level": "O2"
+            }
+          ],
+          "missed_wrong_count": 6,
+          "paired_case_count": 26,
+          "requested_budget": 8,
+          "static_auc": 0.8206521739130435,
+          "v3_auc": 0.9565217391304348,
+          "wrong_count": 74,
+          "wrong_detection_count": 68,
+          "wrong_detection_rate": 0.918918918918919
+        }
+      },
+      "input_counts_by_case": {
+        "ca_int_compare_values": 16,
+        "ca_int_equal_values": 16,
+        "ca_int_hash_value": 6,
+        "ca_string_hash_selector": 1,
+        "ca_string_nocase_hash_selector": 1,
+        "ta_affine_mod_inverse": 16,
+        "ta_armstrong_isArmstrong": 7,
+        "ta_armstrong_order": 7,
+        "ta_armstrong_power": 16,
+        "ta_binary_to_octal_three_digits": 5,
+        "ta_bucket_get_bucket_index": 6,
+        "ta_decimal_to_binary": 4,
+        "ta_decimal_to_octal": 6,
+        "ta_euler_is_palindromic": 4,
+        "ta_gcd_GCD": 16,
+        "ta_infix_is_operand": 8,
+        "ta_infix_precedence_two": 16,
+        "ta_lcm_gcd": 16,
+        "ta_lcm_lcm": 16,
+        "ta_leetcode_compute_area": 16,
+        "ta_leetcode_divide": 16,
+        "ta_leetcode_fib": 5,
+        "ta_leetcode_find_complement": 5,
+        "ta_leetcode_get_point_key": 16,
+        "ta_leetcode_get_triplet_id": 16,
+        "ta_leetcode_hamming_distance": 16,
+        "ta_leetcode_intersection_size": 16,
+        "ta_leetcode_max": 16,
+        "ta_leetcode_maxval": 16,
+        "ta_leetcode_min": 16,
+        "ta_leetcode_my_sqrt": 6,
+        "ta_leetcode_range_bitwise_and": 16,
+        "ta_leetcode_reverse": 7,
+        "ta_leetcode_tribonacci": 5,
+        "ta_leetcode_unique_paths": 16,
+        "ta_naval_valid_entry_line_column": 16,
+        "ta_shunting_get_associativity": 8,
+        "ta_shunting_get_precedence": 7
+      },
+      "rerun_candidate_count": 166,
+      "strategy_id": "phase5b_original"
+    }
+  },
+  "verdict": "pass-ghidra-budget8-input-ordering"
+}

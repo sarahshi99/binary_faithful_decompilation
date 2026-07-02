@@ -1,0 +1,13 @@
+{
+  "candidate_count": 524,
+  "compile_pass_count": 503,
+  "created_at_utc": "2026-07-01T17:08:30.766775+00:00",
+  "failure_counts": {
+    "compile_fail": 21,
+    "fixture_runtime_fail": 12,
+    "hard_runtime_fail": 9
+  },
+  "paired_function_count": 50,
+  "phase": "phase7_static_hard_compile_preflight",
+  "verdict": "pass-phase7-static-hard-compile-preflight"
+}

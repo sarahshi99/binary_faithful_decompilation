@@ -11,5 +11,27 @@ build/
 tmp/
 *.o
 *.exe
+*.so
+*.jar
+*.class
+*.zip
+*.deb
 
 analysis_outputs/decompile_faithfulness/**/candidates/
+analysis_outputs/decompile_faithfulness/**/traces/
+analysis_outputs/decompile_faithfulness/**/raw/
+analysis_outputs/decompile_faithfulness/**/prompts/
+analysis_outputs/decompile_faithfulness/**/compile/
+analysis_outputs/decompile_faithfulness/**/static_compile/
+analysis_outputs/decompile_faithfulness/**/assembly/
+analysis_outputs/decompile_faithfulness/**/binaries/
+analysis_outputs/decompile_faithfulness/**/logs/
+analysis_outputs/decompile_faithfulness/**/projects/
+analysis_outputs/decompile_faithfulness/**/raw_obj/
+analysis_outputs/decompile_faithfulness/phase6r_tools/
+
+analysis_inputs/decompile_faithfulness/**/oracle_fixtures/
+analysis_inputs/decompile_faithfulness/phase5_external_sources/
+
+external/
+**/.git/

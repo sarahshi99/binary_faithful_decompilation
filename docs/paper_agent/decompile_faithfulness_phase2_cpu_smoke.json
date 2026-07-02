@@ -1,0 +1,29 @@
+{
+  "behavior_label_counts": {
+    "compile_fail": 0,
+    "faithful": 9,
+    "plausible_wrong": 8
+  },
+  "by_case_compile_count": {
+    "absdiff": 3,
+    "clamp8": 2,
+    "count_bits8": 2,
+    "gcd_positive": 2,
+    "is_power_of_two": 2,
+    "max3": 2,
+    "signum": 2,
+    "sum_to_n": 2
+  },
+  "candidate_count": 17,
+  "case_count": 8,
+  "compile_pass_count": 17,
+  "fixture_collapse": false,
+  "gpu_started": false,
+  "manifest_path": "analysis_outputs/decompile_faithfulness/phase2_cpu_smoke/manifest.json",
+  "metadata_path": "analysis_outputs/decompile_faithfulness/phase2_cpu_smoke/metadata.jsonl",
+  "non_oracle_probe_count": 1,
+  "output_dir": "analysis_outputs/decompile_faithfulness/phase2_cpu_smoke",
+  "records_path": "analysis_outputs/decompile_faithfulness/phase2_cpu_smoke/records.jsonl",
+  "smoke_gate_passed": true,
+  "trace_pairwise_auc": 0.9444444444444444
+}

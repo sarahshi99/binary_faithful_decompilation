@@ -1,0 +1,205 @@
+{
+  "baseline_auc": {
+    "fixture_only": 1.0,
+    "v3_trace_mismatch_rate": 1.0,
+    "v3_trace_total": 1.0
+  },
+  "behavior_label_counts": {
+    "compile_fail": 147,
+    "faithful": 109,
+    "plausible_wrong": 194
+  },
+  "best_non_oracle_baseline": "fixture_only",
+  "by_mutation_type": {
+    "deterministic_behavior_preserving_original": {
+      "candidate_count": 38,
+      "compile_pass_count": 38,
+      "fixture_collapse": true,
+      "fixture_only_auc": 0.0,
+      "fixture_passing_wrong_count": 0,
+      "label_counts": {
+        "faithful": 38
+      },
+      "paired_case_count": 0,
+      "v3_trace_total_auc": 0.0
+    },
+    "deterministic_manual_stress_constant_minus_one": {
+      "candidate_count": 38,
+      "compile_pass_count": 38,
+      "fixture_collapse": true,
+      "fixture_only_auc": 0.0,
+      "fixture_passing_wrong_count": 0,
+      "label_counts": {
+        "plausible_wrong": 38
+      },
+      "paired_case_count": 0,
+      "v3_trace_total_auc": 0.0
+    },
+    "deterministic_manual_stress_constant_plus_one": {
+      "candidate_count": 38,
+      "compile_pass_count": 38,
+      "fixture_collapse": true,
+      "fixture_only_auc": 0.0,
+      "fixture_passing_wrong_count": 0,
+      "label_counts": {
+        "plausible_wrong": 38
+      },
+      "paired_case_count": 0,
+      "v3_trace_total_auc": 0.0
+    },
+    "deterministic_manual_stress_fixture_constant": {
+      "candidate_count": 38,
+      "compile_pass_count": 38,
+      "fixture_collapse": true,
+      "fixture_only_auc": 0.0,
+      "fixture_passing_wrong_count": 0,
+      "label_counts": {
+        "plausible_wrong": 38
+      },
+      "paired_case_count": 0,
+      "v3_trace_total_auc": 0.0
+    },
+    "deterministic_manual_stress_return_zero": {
+      "candidate_count": 38,
+      "compile_pass_count": 38,
+      "fixture_collapse": true,
+      "fixture_only_auc": 0.0,
+      "fixture_passing_wrong_count": 0,
+      "label_counts": {
+        "plausible_wrong": 38
+      },
+      "paired_case_count": 0,
+      "v3_trace_total_auc": 0.0
+    },
+    "phase5_gpu_strict_bug": {
+      "candidate_count": 128,
+      "compile_pass_count": 53,
+      "fixture_collapse": true,
+      "fixture_only_auc": 1.0,
+      "fixture_passing_wrong_count": 0,
+      "label_counts": {
+        "compile_fail": 75,
+        "faithful": 26,
+        "plausible_wrong": 27
+      },
+      "paired_case_count": 10,
+      "v3_trace_total_auc": 1.0
+    },
+    "phase5_gpu_strict_rewrite": {
+      "candidate_count": 132,
+      "compile_pass_count": 60,
+      "fixture_collapse": true,
+      "fixture_only_auc": 1.0,
+      "fixture_passing_wrong_count": 0,
+      "label_counts": {
+        "compile_fail": 72,
+        "faithful": 45,
+        "plausible_wrong": 15
+      },
+      "paired_case_count": 10,
+      "v3_trace_total_auc": 1.0
+    }
+  },
+  "by_project": {
+    "c_algorithms": {
+      "candidate_count": 51,
+      "compile_pass_count": 37,
+      "fixture_collapse": true,
+      "fixture_only_auc": 1.0,
+      "fixture_passing_wrong_count": 0,
+      "label_counts": {
+        "compile_fail": 14,
+        "faithful": 15,
+        "plausible_wrong": 22
+      },
+      "paired_case_count": 5,
+      "v3_trace_total_auc": 1.0
+    },
+    "thealgorithms_c": {
+      "candidate_count": 399,
+      "compile_pass_count": 266,
+      "fixture_collapse": true,
+      "fixture_only_auc": 1.0,
+      "fixture_passing_wrong_count": 0,
+      "label_counts": {
+        "compile_fail": 133,
+        "faithful": 94,
+        "plausible_wrong": 172
+      },
+      "paired_case_count": 33,
+      "v3_trace_total_auc": 1.0
+    }
+  },
+  "by_source_kind": {
+    "deterministic_phase5": {
+      "candidate_count": 190,
+      "compile_pass_count": 190,
+      "fixture_collapse": true,
+      "fixture_only_auc": 1.0,
+      "fixture_passing_wrong_count": 0,
+      "label_counts": {
+        "faithful": 38,
+        "plausible_wrong": 152
+      },
+      "paired_case_count": 38,
+      "v3_trace_total_auc": 1.0
+    },
+    "local_llm": {
+      "candidate_count": 103,
+      "compile_pass_count": 56,
+      "fixture_collapse": true,
+      "fixture_only_auc": 1.0,
+      "fixture_passing_wrong_count": 0,
+      "label_counts": {
+        "compile_fail": 47,
+        "faithful": 36,
+        "plausible_wrong": 20
+      },
+      "paired_case_count": 10,
+      "v3_trace_total_auc": 1.0
+    },
+    "local_llm_recovered": {
+      "candidate_count": 157,
+      "compile_pass_count": 57,
+      "fixture_collapse": true,
+      "fixture_only_auc": 1.0,
+      "fixture_passing_wrong_count": 0,
+      "label_counts": {
+        "compile_fail": 100,
+        "faithful": 35,
+        "plausible_wrong": 22
+      },
+      "paired_case_count": 8,
+      "v3_trace_total_auc": 1.0
+    }
+  },
+  "candidate_count": 450,
+  "candidate_manifest_verdict": "pass-phase5-full-candidate-generation",
+  "compile_pass_count": 303,
+  "created_at_utc": "2026-07-01T02:54:37.659988+00:00",
+  "fixture_collapse": true,
+  "fixture_passing_wrong_count": 0,
+  "missing_record_paths": [],
+  "paired_case_count": 38,
+  "phase5_pass_gates": {
+    "auc_gate": true,
+    "fixture_collapse_gate": false,
+    "fixture_passing_wrong_gate": false,
+    "scale_gate": true,
+    "sota_delta_gate": false
+  },
+  "record_paths": [
+    "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_deterministic_candidates/records.jsonl",
+    "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0/records.jsonl",
+    "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda3_s1/records.jsonl",
+    "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full_recovered/records.jsonl"
+  ],
+  "sota_delta_vs_best_non_oracle_baseline": 0.0,
+  "source_function_count": 38,
+  "source_manifest": "/home/shx/projects/binary_faithful_decompilation/docs/paper_agent/decompile_faithfulness_phase5_function_manifest.json",
+  "source_projects": [
+    "c_algorithms",
+    "thealgorithms_c"
+  ],
+  "verdict": "scale-positive-sota-delta-not-established"
+}

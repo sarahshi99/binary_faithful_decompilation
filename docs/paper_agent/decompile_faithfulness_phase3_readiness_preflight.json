@@ -1,0 +1,85 @@
+{
+  "excluded_source_dirs": [
+    ".git",
+    "__pycache__",
+    "analysis_outputs",
+    "docs",
+    "tests"
+  ],
+  "fixture_ready_count": 0,
+  "method_gate_passed": true,
+  "min_selected_functions": 5,
+  "phase2_v3_fixture_collapse": false,
+  "phase2_v3_json": "/home/shx/projects/binary_faithful_decompilation/docs/paper_agent/decompile_faithfulness_phase2_v3_boundary_trace.json",
+  "phase2_v3_pairwise_auc": 1.0,
+  "phase2_v3_trace_zero_blind_spot_wrong_count": 0,
+  "phase2_v3_verdict": "pass-v3-boundary-trace",
+  "phase3_manifest": "/home/shx/projects/binary_faithful_decompilation/docs/paper_agent/decompile_faithfulness_phase3_source_manifest.json",
+  "phase3_manifest_exists": false,
+  "phase3_source_pool": "/home/shx/projects/binary_faithful_decompilation/docs/paper_agent/decompile_faithfulness_phase3_source_pool.json",
+  "phase3_source_pool_exists": true,
+  "phase3_source_pool_function_count": 12,
+  "phase3_source_selection": "/home/shx/projects/binary_faithful_decompilation/docs/paper_agent/decompile_faithfulness_phase3_source_selection.json",
+  "phase3_source_selection_eligible_count": 12,
+  "phase3_source_selection_exists": true,
+  "phase3_source_selection_subset_count": 3289,
+  "phase3_source_selection_verdict": "ready-for-combinatorial-phase3-cpu-audit",
+  "recommended_next_steps": [
+    "Run the combinatorial Phase 3 CPU audit using v3 boundary trace across the recommended subsets.",
+    "Treat one subset failure as local evidence; only repeated failures across diverse subsets should count against the method.",
+    "Only consider GPU candidate generation after CPU audit confirms compile/oracle coverage and no fixture collapse."
+  ],
+  "repository_source_candidate_count": 12,
+  "repository_source_candidates": [
+    {
+      "kind": "c_source",
+      "path": "analysis_inputs/decompile_faithfulness/phase3_sources/bounded_abs100.c"
+    },
+    {
+      "kind": "c_source",
+      "path": "analysis_inputs/decompile_faithfulness/phase3_sources/clamp_then_square.c"
+    },
+    {
+      "kind": "c_source",
+      "path": "analysis_inputs/decompile_faithfulness/phase3_sources/days_before_month.c"
+    },
+    {
+      "kind": "c_source",
+      "path": "analysis_inputs/decompile_faithfulness/phase3_sources/gcd_nonnegative.c"
+    },
+    {
+      "kind": "c_source",
+      "path": "analysis_inputs/decompile_faithfulness/phase3_sources/high_nibble.c"
+    },
+    {
+      "kind": "c_source",
+      "path": "analysis_inputs/decompile_faithfulness/phase3_sources/mod3_sum_digits.c"
+    },
+    {
+      "kind": "c_source",
+      "path": "analysis_inputs/decompile_faithfulness/phase3_sources/parity8.c"
+    },
+    {
+      "kind": "c_source",
+      "path": "analysis_inputs/decompile_faithfulness/phase3_sources/popcount_nibble_diff.c"
+    },
+    {
+      "kind": "c_source",
+      "path": "analysis_inputs/decompile_faithfulness/phase3_sources/safe_div_round0.c"
+    },
+    {
+      "kind": "c_source",
+      "path": "analysis_inputs/decompile_faithfulness/phase3_sources/sat_add8.c"
+    },
+    {
+      "kind": "c_source",
+      "path": "analysis_inputs/decompile_faithfulness/phase3_sources/triangle_wave10.c"
+    },
+    {
+      "kind": "c_source",
+      "path": "analysis_inputs/decompile_faithfulness/phase3_sources/within_range_inclusive.c"
+    }
+  ],
+  "selected_function_count": 0,
+  "verdict": "ready-for-combinatorial-phase3-cpu-audit"
+}

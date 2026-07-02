@@ -1,0 +1,69 @@
+{
+  "available_tool_count": 2,
+  "created_at_utc": "2026-07-01T17:12:13.020400+00:00",
+  "ghidra_first_decompiler_ready": true,
+  "phase": "phase7_second_compile_ready_decompiler_decision",
+  "radare2_importability_only": true,
+  "ready_tool_count": 0,
+  "recommended_next_action": "No second compile-ready decompiler is available locally. Keep Ghidra as the main real-decompiler evidence, keep radare2 as importability-only, and proceed to Phase 7E LLM-generated/LLM-judge public benchmark baselines on GPU 2/3 unless the user approves installing RetDec, rev.ng, Binary Ninja, or Hex-Rays.",
+  "repo_root": "/home/shx/projects/binary_faithful_decompilation",
+  "tools": [
+    {
+      "available": true,
+      "compile_ready_c_candidate": false,
+      "detected_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase6r_tools/ghidra_user/ghidra_12.1.2_PUBLIC/support/analyzeHeadless",
+      "evidence_kind": "first_compile_ready_decompiler",
+      "name": "Ghidra",
+      "reason": "Already used as Phase 6R main decompiler; not counted as the second decompiler."
+    },
+    {
+      "available": true,
+      "compile_ready_c_candidate": false,
+      "detected_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase6r_tools/apt_radare2/root/usr/bin/radare2",
+      "evidence_kind": "real_tool_importability_only",
+      "name": "radare2/r2 pdc",
+      "reason": "Project Phase 6R shows pdc pseudo-C/importability, but not compile-ready C function candidates."
+    },
+    {
+      "available": false,
+      "compile_ready_c_candidate": false,
+      "detected_path": "",
+      "evidence_kind": "candidate_second_decompiler",
+      "name": "RetDec",
+      "reason": "Could be a second compile-ready C decompiler if installed and its output normalizes/compiles."
+    },
+    {
+      "available": false,
+      "compile_ready_c_candidate": false,
+      "detected_path": "",
+      "evidence_kind": "candidate_second_decompiler",
+      "name": "rev.ng",
+      "reason": "Could provide decompiled C/IR if installed; not available in this environment."
+    },
+    {
+      "available": false,
+      "compile_ready_c_candidate": false,
+      "detected_path": "angr:not found; ailment:not found; claripy:not found; capstone:not found",
+      "evidence_kind": "candidate_evaluable_ir",
+      "name": "angr AIL",
+      "reason": "Even if available, this would likely be evaluable IR rather than compile-ready C; current modules are absent."
+    },
+    {
+      "available": false,
+      "compile_ready_c_candidate": false,
+      "detected_path": "binaryninja:not found",
+      "evidence_kind": "candidate_second_decompiler_or_mlil",
+      "name": "Binary Ninja",
+      "reason": "License/tool not detected; MLIL/HLIL may be useful, but compile-ready C is not assumed."
+    },
+    {
+      "available": false,
+      "compile_ready_c_candidate": false,
+      "detected_path": "",
+      "evidence_kind": "candidate_second_decompiler",
+      "name": "Hex-Rays / IDA",
+      "reason": "Could be strong second decompiler evidence if licensed and headless export is available."
+    }
+  ],
+  "verdict": "blocked-awaiting-second-decompiler-approval"
+}

@@ -1,0 +1,131 @@
+{
+  "project_claim": "source-known recompilable bounded-input localized semantic bug auditing",
+  "claim_boundary": {
+    "in_scope": [
+      "source-known C functions",
+      "recompilable original source as oracle",
+      "bounded generated inputs",
+      "localized semantic bug auditing",
+      "decompiler or LLM-generated C candidates"
+    ],
+    "out_of_scope": [
+      "general binary-only equivalence checking",
+      "whole-program decompilation verification",
+      "proof of semantic equivalence",
+      "claiming better decompiler generation quality than SOTA decompilers"
+    ]
+  },
+  "negative_evidence": [
+    {
+      "phase": "1B",
+      "result": "naive global binary feature distance failed",
+      "auc": 0.5,
+      "paper_role": "motivates why lightweight static/binary distance is insufficient"
+    },
+    {
+      "phase": "1I",
+      "result": "static component combination remained borderline",
+      "loco_auc": 0.6719,
+      "paper_role": "shows static feature repair did not solve the auditing problem"
+    },
+    {
+      "phase": "1J",
+      "result": "structural binding still insufficient",
+      "loco_auc": 0.6823,
+      "paper_role": "supports moving away from static motif as the primary method"
+    }
+  ],
+  "positive_evidence": [
+    {
+      "phase": "1K-v2",
+      "result": "domain-aware dynamic trace",
+      "loco_auc": 0.9531,
+      "fixture_collapse": false,
+      "paper_role": "first strong main-method gate on curated localized bugs"
+    },
+    {
+      "phase": "1L",
+      "result": "ablation and leakage audit",
+      "leakage_verdict": "no-label-or-output-leakage-found",
+      "paper_role": "supports that the gain is not label leakage or fixture-only collapse"
+    },
+    {
+      "phase": "2-v3",
+      "result": "boundary-preserving dynamic trace on generated candidates",
+      "pairwise_auc": 1.0,
+      "candidate_count": 63,
+      "fixture_collapse": false,
+      "paper_role": "shows signal on LLM-generated candidate distribution"
+    },
+    {
+      "phase": "3-source-selection",
+      "result": "source-known combinatorial source pool",
+      "eligible_functions": 12,
+      "enumerated_subsets": 3289,
+      "paper_role": "reduces one-shot small-function selection risk"
+    },
+    {
+      "phase": "3-cpu",
+      "result": "source-known combinatorial CPU audit",
+      "case_count": 12,
+      "candidate_count": 28,
+      "pairwise_auc": 1.0,
+      "fixture_collapse": false,
+      "paper_role": "shows method transfers to a new curated source-known function pool"
+    },
+    {
+      "phase": "3-gpu",
+      "result": "source-known generated-candidate smoke and top-up",
+      "candidate_count": 47,
+      "compile_pass_count": 28,
+      "paired_case_count": 5,
+      "pairwise_auc": 1.0,
+      "fixture_collapse": false,
+      "paper_role": "positive smoke on generated candidates, but not sufficient as CCF-A main evidence"
+    }
+  ],
+  "known_limits": [
+    "Current function pools are still small.",
+    "Phase 3 GPU generated evidence is smoke/top-up scale, not full-scale evidence.",
+    "Real-project source-known transfer has not been run.",
+    "Decompiler-output feasibility has not been run.",
+    "The current method is an audit signal, not a decompiler generation model.",
+    "A SOTA claim requires a baseline matrix against recent decompilation benchmarks, fixture-only/re-execution metrics, static similarity, symbolic or fuzzing-style checks where available, and LLM-judge baselines."
+  ],
+  "reviewer_risks": [
+    {
+      "risk": "small_pool_and_smoke_scale",
+      "severity": "high",
+      "answer": "Phase 1-3 support feasibility and method discovery only. CCF-A main evidence needs Phase 5/6 full-scale transfer with at least 30 real-project functions, 100 compile-pass candidates, and 20 paired functions."
+    },
+    {
+      "risk": "insufficient_sota_progress",
+      "severity": "high",
+      "answer": "The paper should not claim SOTA decompiler generation. It must claim a stronger auditing signal for localized semantic drift and prove this against baselines."
+    },
+    {
+      "risk": "overclaiming_binary_only",
+      "severity": "high",
+      "answer": "Every paper artifact must state that original source remains the oracle."
+    },
+    {
+      "risk": "fixture_oracle_collapse",
+      "severity": "medium",
+      "answer": "Primary score must not use fixture_mismatch_rate, and fixture_collapse must remain false."
+    }
+  ],
+  "baseline_families_required": [
+    "fixture-only or re-execution-only validation",
+    "lightweight static or binary similarity",
+    "domain-aware trace without boundary preservation",
+    "boundary-preserving dynamic trace",
+    "symbolic/concolic or fuzzing-inspired checks when dependencies are available",
+    "LLM judge or LLM self-repair baseline if used in candidate generation",
+    "real decompiler or decompiler-benchmark metrics when Phase 6 is active"
+  ],
+  "next_required_phases": [
+    "Phase 4",
+    "Phase 5",
+    "Phase 6"
+  ]
+}

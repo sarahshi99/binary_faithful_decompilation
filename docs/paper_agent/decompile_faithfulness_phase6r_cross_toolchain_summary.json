@@ -1,0 +1,77 @@
+{
+  "all_ghidra_main_gates_pass": true,
+  "created_at_utc": "2026-07-01T08:19:48.736709+00:00",
+  "external_sota_claim_blocker": "Needs explicit related-work baselines and at least one compile-ready second decompiler beyond Ghidra; current summary is cross-toolchain robustness, not external-paper SOTA.",
+  "external_sota_claim_ready": false,
+  "ghidra_run_count": 2,
+  "ghidra_runs": [
+    {
+      "behavior_preserving_fp_rate": 0.0,
+      "binary_compiler": "/usr/bin/gcc",
+      "candidate_count": 228,
+      "compile_pass_count": 166,
+      "fixture_only_auc": 0.5,
+      "ghidra_decompiled_count": 228,
+      "normalization_or_compile_fail_count": 62,
+      "paired_case_count": 26,
+      "path": "docs/paper_agent/decompile_faithfulness_phase6r_result_analysis.json",
+      "sota_delta_vs_best_baseline": 0.17934782608695654,
+      "source_function_count": 38,
+      "static_structured_auc": 0.8206521739130435,
+      "tool": "ghidra",
+      "toolchain_label": "default-gcc",
+      "v3_trace_total_auc": 1.0,
+      "verdict": "pass-phase6r-real-decompiler-output-main-evidence"
+    },
+    {
+      "behavior_preserving_fp_rate": 0.0,
+      "binary_compiler": "/usr/bin/x86_64-linux-gnu-gcc-9",
+      "candidate_count": 228,
+      "compile_pass_count": 166,
+      "fixture_only_auc": 0.5,
+      "ghidra_decompiled_count": 228,
+      "normalization_or_compile_fail_count": 62,
+      "paired_case_count": 26,
+      "path": "docs/paper_agent/decompile_faithfulness_phase6r_result_analysis_gcc9.json",
+      "sota_delta_vs_best_baseline": 0.15760869565217395,
+      "source_function_count": 38,
+      "static_structured_auc": 0.842391304347826,
+      "tool": "ghidra",
+      "toolchain_label": "gcc-9.4.0",
+      "v3_trace_total_auc": 1.0,
+      "verdict": "pass-phase6r-real-decompiler-output-main-evidence"
+    }
+  ],
+  "min_ghidra_sota_delta": 0.15760869565217395,
+  "phase": "phase6r_cross_toolchain_summary",
+  "radare2_run_count": 2,
+  "radare2_runs": [
+    {
+      "binary_compiler": "/usr/bin/gcc",
+      "binary_count": 76,
+      "ccfa_interpretation": "real-tool-importability-only; radare2 pdc output is pseudo-C and not yet compile-ready",
+      "compile_pass_count": 76,
+      "path": "docs/paper_agent/decompile_faithfulness_phase6r_radare2_smoke_gcc11.json",
+      "pdc_c_like_count": 75,
+      "pdc_compile_ready_count": 0,
+      "symbol_found_count": 76,
+      "tool": "radare2",
+      "toolchain_label": "gcc-11.4.0",
+      "verdict": "pass-phase6r-radare2-importability-smoke"
+    },
+    {
+      "binary_compiler": "/usr/bin/x86_64-linux-gnu-gcc-9",
+      "binary_count": 76,
+      "ccfa_interpretation": "real-tool-importability-only; radare2 pdc output is pseudo-C and not yet compile-ready",
+      "compile_pass_count": 76,
+      "path": "docs/paper_agent/decompile_faithfulness_phase6r_radare2_smoke_gcc9.json",
+      "pdc_c_like_count": 75,
+      "pdc_compile_ready_count": 0,
+      "symbol_found_count": 76,
+      "tool": "radare2",
+      "toolchain_label": "gcc-9.4.0",
+      "verdict": "pass-phase6r-radare2-importability-smoke"
+    }
+  ],
+  "verdict": "pass-phase6r-cross-toolchain-ghidra-plus-radare2-importability"
+}

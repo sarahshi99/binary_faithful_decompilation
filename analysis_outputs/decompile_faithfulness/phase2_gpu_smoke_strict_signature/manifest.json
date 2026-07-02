@@ -1,0 +1,146 @@
+[
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_gpu_absdiff_strict_signature_00",
+        "case_id": "absdiff",
+        "cleaning_status": "parsed_function",
+        "function_source": "int absdiff(int a, int b) {\n    return abs(a - b);\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_gpu_smoke_strict_signature",
+        "prompt_id": "strict_signature",
+        "raw_output_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_smoke_strict_signature/raw/phase2_gpu_absdiff_strict_signature_00.raw.txt",
+        "sampling": {
+          "max_new_tokens": 160,
+          "steps": 32,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "local_llm",
+        "source_name": "Dream-Coder-v0-Instruct-7B"
+      }
+    ],
+    "case_id": "absdiff"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_gpu_clamp8_strict_signature_00",
+        "case_id": "clamp8",
+        "cleaning_status": "parsed_function",
+        "function_source": "int clamp8(int x) {\n  // Clamp x into the range 0..255\n  if (255 < x) x return 255;\n  if (x < 0) x return 0;\n  if (x > 255) x return 0xFF;\n  }\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_gpu_smoke_strict_signature",
+        "prompt_id": "strict_signature",
+        "raw_output_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_smoke_strict_signature/raw/phase2_gpu_clamp8_strict_signature_00.raw.txt",
+        "sampling": {
+          "max_new_tokens": 160,
+          "steps": 32,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "local_llm",
+        "source_name": "Dream-Coder-v0-Instruct-7B"
+      }
+    ],
+    "case_id": "clamp8"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_gpu_max3_strict_signature_00",
+        "case_id": "max3",
+        "cleaning_status": "parsed_function",
+        "function_source": "int max3(int a, int b, int c) {\n    int max = (a > b ? a : b);\n    if (b > a) {\n        return b > c ? b : max;\n    }\n    if (c > b && c > max) {\n        return c;\n    }\n    return max;\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_gpu_smoke_strict_signature",
+        "prompt_id": "strict_signature",
+        "raw_output_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_smoke_strict_signature/raw/phase2_gpu_max3_strict_signature_00.raw.txt",
+        "sampling": {
+          "max_new_tokens": 160,
+          "steps": 32,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "local_llm",
+        "source_name": "Dream-Coder-v0-Instruct-7B"
+      }
+    ],
+    "case_id": "max3"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_gpu_sum_to_n_strict_signature_00",
+        "case_id": "sum_to_n",
+        "cleaning_status": "parsed_function",
+        "function_source": "int sum_to_n(int n) {\n    if (n  <= 0) {\n        return 0;\n    }\n    int sum = 0;\n    for(int i = 1;  1 i  <=  n  1  sum  +=  1 i  +=  1;  }\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_gpu_smoke_strict_signature",
+        "prompt_id": "strict_signature",
+        "raw_output_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_smoke_strict_signature/raw/phase2_gpu_sum_to_n_strict_signature_00.raw.txt",
+        "sampling": {
+          "max_new_tokens": 160,
+          "steps": 32,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "local_llm",
+        "source_name": "Dream-Coder-v0-Instruct-7B"
+      }
+    ],
+    "case_id": "sum_to_n"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_gpu_signum_strict_signature_00",
+        "case_id": "signum",
+        "cleaning_status": "parsed_function",
+        "function_source": "int signum(int x) {\n    // Check for the sign\n    if (x > 0) {\n        return 1;\n    } else if(x < 0) {\n        return -1;\n    } else {\n        return 0;\n    }\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_gpu_smoke_strict_signature",
+        "prompt_id": "strict_signature",
+        "raw_output_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_smoke_strict_signature/raw/phase2_gpu_signum_strict_signature_00.raw.txt",
+        "sampling": {
+          "max_new_tokens": 160,
+          "steps": 32,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "local_llm",
+        "source_name": "Dream-Coder-v0-Instruct-7B"
+      }
+    ],
+    "case_id": "signum"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_gpu_is_power_of_two_strict_signature_00",
+        "case_id": "is_power_of_two",
+        "cleaning_status": "parsed_function",
+        "function_source": "int is_power_of_two(int x) {\n    ...\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_gpu_smoke_strict_signature",
+        "prompt_id": "strict_signature",
+        "raw_output_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_smoke_strict_signature/raw/phase2_gpu_is_power_of_two_strict_signature_00.raw.txt",
+        "sampling": {
+          "max_new_tokens": 160,
+          "steps": 32,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "local_llm",
+        "source_name": "Dream-Coder-v0-Instruct-7B"
+      }
+    ],
+    "case_id": "is_power_of_two"
+  }
+]

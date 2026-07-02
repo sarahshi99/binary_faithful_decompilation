@@ -1,0 +1,170 @@
+{
+  "candidate_count": 28,
+  "candidate_pool": "/home/shx/projects/binary_faithful_decompilation/docs/paper_agent/decompile_faithfulness_phase3_candidate_pool.json",
+  "case_count": 12,
+  "case_pairwise_auc": {
+    "bounded_abs100": 1.0,
+    "clamp_then_square": 1.0,
+    "days_before_month": 1.0,
+    "gcd_nonnegative": 1.0,
+    "high_nibble": 1.0,
+    "mod3_sum_digits": 1.0,
+    "parity8": 1.0,
+    "popcount_nibble_diff": 1.0,
+    "safe_div_round0": 1.0,
+    "sat_add8": 1.0,
+    "triangle_wave10": 1.0,
+    "within_range_inclusive": 1.0
+  },
+  "fixture_collapse": false,
+  "fixture_passing_wrong_count": 4,
+  "fixture_passing_wrong_examples": [
+    {
+      "candidate_id": "sat_add8_upper_bound_256_hidden",
+      "case_id": "sat_add8",
+      "trace_mismatch_rate": 0.011494252873563218,
+      "trace_total": 0.018467393369430984
+    },
+    {
+      "candidate_id": "parity8_counts_16_bits_hidden",
+      "case_id": "parity8",
+      "trace_mismatch_rate": 0.10526315789473684,
+      "trace_total": 0.2531328320802005
+    },
+    {
+      "candidate_id": "mod3_sum_digits_ignores_negative_hidden",
+      "case_id": "mod3_sum_digits",
+      "trace_mismatch_rate": 0.17857142857142858,
+      "trace_total": 0.38591269841269843
+    },
+    {
+      "candidate_id": "safe_div_round0_b_one_hidden",
+      "case_id": "safe_div_round0",
+      "trace_mismatch_rate": 0.07647058823529412,
+      "trace_total": 0.1276548768993566
+    }
+  ],
+  "label_counts": {
+    "faithful": 12,
+    "plausible_wrong": 16
+  },
+  "pairwise_auc": 1.0,
+  "recommended_subset_metrics": [
+    {
+      "case_ids": [
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "gcd_nonnegative",
+        "safe_div_round0"
+      ],
+      "fixture_collapse": false,
+      "fixture_passing_wrong_count": 3,
+      "label_counts": {
+        "faithful": 5,
+        "plausible_wrong": 8
+      },
+      "pair_count": 8,
+      "pairwise_auc": 1.0,
+      "rank": 1,
+      "size": 5
+    },
+    {
+      "case_ids": [
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "high_nibble",
+        "gcd_nonnegative",
+        "days_before_month",
+        "safe_div_round0"
+      ],
+      "fixture_collapse": false,
+      "fixture_passing_wrong_count": 3,
+      "label_counts": {
+        "faithful": 7,
+        "plausible_wrong": 10
+      },
+      "pair_count": 10,
+      "pairwise_auc": 1.0,
+      "rank": 2,
+      "size": 7
+    },
+    {
+      "case_ids": [
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "high_nibble",
+        "gcd_nonnegative",
+        "mod3_sum_digits",
+        "days_before_month",
+        "triangle_wave10",
+        "safe_div_round0",
+        "clamp_then_square"
+      ],
+      "fixture_collapse": false,
+      "fixture_passing_wrong_count": 4,
+      "label_counts": {
+        "faithful": 10,
+        "plausible_wrong": 14
+      },
+      "pair_count": 14,
+      "pairwise_auc": 1.0,
+      "rank": 3,
+      "size": 10
+    },
+    {
+      "case_ids": [
+        "bounded_abs100",
+        "sat_add8",
+        "parity8",
+        "high_nibble",
+        "gcd_nonnegative",
+        "mod3_sum_digits",
+        "days_before_month",
+        "triangle_wave10",
+        "safe_div_round0",
+        "popcount_nibble_diff"
+      ],
+      "fixture_collapse": false,
+      "fixture_passing_wrong_count": 4,
+      "label_counts": {
+        "faithful": 10,
+        "plausible_wrong": 14
+      },
+      "pair_count": 14,
+      "pairwise_auc": 1.0,
+      "rank": 4,
+      "size": 10
+    },
+    {
+      "case_ids": [
+        "bounded_abs100",
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "high_nibble",
+        "gcd_nonnegative",
+        "days_before_month",
+        "safe_div_round0",
+        "clamp_then_square",
+        "popcount_nibble_diff"
+      ],
+      "fixture_collapse": false,
+      "fixture_passing_wrong_count": 3,
+      "label_counts": {
+        "faithful": 10,
+        "plausible_wrong": 13
+      },
+      "pair_count": 13,
+      "pairwise_auc": 1.0,
+      "rank": 5,
+      "size": 10
+    }
+  ],
+  "records_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3_combinatorial_cpu_audit/records.jsonl",
+  "source_pool": "/home/shx/projects/binary_faithful_decompilation/docs/paper_agent/decompile_faithfulness_phase3_source_pool.json",
+  "source_selection": "/home/shx/projects/binary_faithful_decompilation/docs/paper_agent/decompile_faithfulness_phase3_source_selection.json",
+  "verdict": "pass-combinatorial-phase3-cpu-audit"
+}

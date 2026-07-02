@@ -1,0 +1,69 @@
+{
+  "cpu_smoke": {
+    "behavior_label_counts": {
+      "compile_fail": 0,
+      "faithful": 9,
+      "plausible_wrong": 8
+    },
+    "candidate_count": 17,
+    "compile_pass_count": 17,
+    "fixture_collapse": false,
+    "non_oracle_probe_count": 1,
+    "smoke_gate_passed": true,
+    "trace_pairwise_auc": 0.9444444444444444
+  },
+  "gpu_gate": {
+    "gpu_2_free": false,
+    "gpu_3_free": false,
+    "gpu_started": false,
+    "reason": "GPU 2 and GPU 3 have active compute processes; user required no other tasks on GPU2/3 before launching.",
+    "snapshot": [
+      {
+        "gpu_index": 2,
+        "memory_used_mib": 39071,
+        "processes": [
+          {
+            "pid": 3749459,
+            "process_name": "/home/amax/ad-orion/carla/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping",
+            "used_memory_mib": 6465
+          },
+          {
+            "pid": 3749188,
+            "process_name": "python",
+            "used_memory_mib": 32546
+          }
+        ],
+        "utilization_gpu_percent": 99
+      },
+      {
+        "gpu_index": 3,
+        "memory_used_mib": 39177,
+        "processes": [
+          {
+            "pid": 3691672,
+            "process_name": "/home/amax/ad-orion/carla/CarlaUE4/Binaries/Linux/CarlaUE4-Linux-Shipping",
+            "used_memory_mib": 6562
+          },
+          {
+            "pid": 3691440,
+            "process_name": "python",
+            "used_memory_mib": 32554
+          }
+        ],
+        "utilization_gpu_percent": 44
+      }
+    ]
+  },
+  "local_model_probe": {
+    "dream_coder_base_cache_dir_exists": true,
+    "dream_coder_base_config_found": false,
+    "dream_coder_instruct_cache_dir_exists": true,
+    "dream_coder_instruct_config_found": false,
+    "python_packages": {
+      "accelerate": true,
+      "torch": true,
+      "transformers": true
+    }
+  },
+  "next_action": "Wait until GPU2/3 are free, then re-run the GPU gate and local model loadability probe before starting any GPU smoke."
+}

@@ -1,0 +1,86 @@
+{
+  "behavior_label_counts": {
+    "compile_fail": 15,
+    "faithful": 34,
+    "plausible_wrong": 29
+  },
+  "candidate_count": 78,
+  "case_label_counts": {
+    "absdiff": {
+      "compile_fail": 1,
+      "faithful": 4,
+      "plausible_wrong": 3
+    },
+    "clamp8": {
+      "compile_fail": 1,
+      "faithful": 2,
+      "plausible_wrong": 4
+    },
+    "count_bits8": {
+      "compile_fail": 3,
+      "faithful": 3,
+      "plausible_wrong": 2
+    },
+    "gcd_positive": {
+      "compile_fail": 1,
+      "faithful": 3,
+      "plausible_wrong": 4
+    },
+    "is_power_of_two": {
+      "compile_fail": 2,
+      "faithful": 4,
+      "plausible_wrong": 7
+    },
+    "max3": {
+      "compile_fail": 5,
+      "faithful": 11,
+      "plausible_wrong": 1
+    },
+    "signum": {
+      "compile_fail": 1,
+      "faithful": 4,
+      "plausible_wrong": 5
+    },
+    "sum_to_n": {
+      "compile_fail": 1,
+      "faithful": 3,
+      "plausible_wrong": 3
+    }
+  },
+  "cleaning_status_counts": {
+    "parse_failed": 22,
+    "parsed_function": 78
+  },
+  "compile_pass_count": 63,
+  "compile_rate_among_parsed": 0.8076923076923077,
+  "created_at_utc": "2026-06-18T04:30:06.398816+00:00",
+  "fixture_collapse": false,
+  "generation_count": 100,
+  "generation_error_count": 0,
+  "generation_metadata_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_full_v1_plus_topup/generation_metadata.jsonl",
+  "gpu_smoke_gate_passed": true,
+  "label_diversity_gate_passed": true,
+  "manifest_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_full_v1_plus_topup/manifest.json",
+  "model_info": {
+    "cuda_visible_devices_policy": "not_set_by_script; model and tensors explicitly moved to requested device",
+    "device": "combined",
+    "max_new_tokens": 192,
+    "model_error": "",
+    "model_load_seconds": null,
+    "model_loaded": true,
+    "model_path": "Dream-Coder-v0-Instruct-7B local snapshots",
+    "seed": 20260618,
+    "steps": 32,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "torch_dtype": "auto"
+  },
+  "output_dir": "analysis_outputs/decompile_faithfulness/phase2_gpu_full_v1_plus_topup",
+  "paired_case_count": 8,
+  "paired_generation_gate_passed": true,
+  "parsed_count": 78,
+  "parsed_rate": 0.78,
+  "records_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_full_v1_plus_topup/records.jsonl",
+  "trace_metrics_interpretable": true,
+  "trace_pairwise_auc": 0.9622641509433962
+}

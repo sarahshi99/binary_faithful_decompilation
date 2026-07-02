@@ -1,0 +1,125 @@
+{
+  "artifact_roots": [
+    "analysis_outputs/decompile_faithfulness/phase1h_bigram_repair_phase1e",
+    "analysis_outputs/decompile_faithfulness/phase1h_bigram_repair_phase1f",
+    "analysis_outputs/decompile_faithfulness/phase1h_bigram_repair_phase1g"
+  ],
+  "baselines": {
+    "phase1g_multi_opt_min_slot_auc": 0.7552,
+    "phase1i_best_in_sample_auc": 0.7604,
+    "phase1i_leave_one_case_out_auc": 0.6719
+  },
+  "best_in_sample": {
+    "formula": "min_slot",
+    "pairwise_auc": 0.7552083333333334
+  },
+  "candidate_count": 56,
+  "case_count": 8,
+  "faithful_count": 24,
+  "formula_scores": [
+    {
+      "formula": "min_slot",
+      "pairwise_auc": 0.7552083333333334
+    },
+    {
+      "formula": "mean_slot",
+      "pairwise_auc": 0.75
+    },
+    {
+      "formula": "min_slot_plus_branch_return_0.10",
+      "pairwise_auc": 0.75
+    },
+    {
+      "formula": "mean_slot_plus_structured_0.10",
+      "pairwise_auc": 0.7395833333333334
+    },
+    {
+      "formula": "min_slot_plus_cfg_edge_0.10",
+      "pairwise_auc": 0.71875
+    },
+    {
+      "formula": "mean_slot_plus_structured_0.25",
+      "pairwise_auc": 0.7083333333333334
+    },
+    {
+      "formula": "structured_only",
+      "pairwise_auc": 0.15625
+    },
+    {
+      "formula": "structured_binding_total",
+      "pairwise_auc": 0.15625
+    }
+  ],
+  "hard_case_auc": {
+    "gcd_positive": 0.5833333333333334,
+    "max3": 0.6666666666666666,
+    "signum": 0.5,
+    "sum_to_n": 0.5833333333333334
+  },
+  "leave_one_case_out": {
+    "case_pairwise_auc": {
+      "absdiff": 0.75,
+      "clamp8": 0.6666666666666666,
+      "count_bits8": 0.875,
+      "gcd_positive": 0.5833333333333334,
+      "is_power_of_two": 0.8333333333333334,
+      "max3": 0.6666666666666666,
+      "signum": 0.5,
+      "sum_to_n": 0.5833333333333334
+    },
+    "folds": [
+      {
+        "heldout_case": "absdiff",
+        "heldout_pairwise_auc": 0.75,
+        "selected_formula": "mean_slot",
+        "train_pairwise_auc": 0.75
+      },
+      {
+        "heldout_case": "clamp8",
+        "heldout_pairwise_auc": 0.6666666666666666,
+        "selected_formula": "mean_slot",
+        "train_pairwise_auc": 0.7619047619047619
+      },
+      {
+        "heldout_case": "count_bits8",
+        "heldout_pairwise_auc": 0.875,
+        "selected_formula": "min_slot",
+        "train_pairwise_auc": 0.7380952380952381
+      },
+      {
+        "heldout_case": "gcd_positive",
+        "heldout_pairwise_auc": 0.5833333333333334,
+        "selected_formula": "min_slot",
+        "train_pairwise_auc": 0.7797619047619048
+      },
+      {
+        "heldout_case": "is_power_of_two",
+        "heldout_pairwise_auc": 0.8333333333333334,
+        "selected_formula": "min_slot",
+        "train_pairwise_auc": 0.7440476190476191
+      },
+      {
+        "heldout_case": "max3",
+        "heldout_pairwise_auc": 0.6666666666666666,
+        "selected_formula": "mean_slot",
+        "train_pairwise_auc": 0.7619047619047619
+      },
+      {
+        "heldout_case": "signum",
+        "heldout_pairwise_auc": 0.5,
+        "selected_formula": "min_slot",
+        "train_pairwise_auc": 0.7916666666666666
+      },
+      {
+        "heldout_case": "sum_to_n",
+        "heldout_pairwise_auc": 0.5833333333333334,
+        "selected_formula": "min_slot",
+        "train_pairwise_auc": 0.7797619047619048
+      }
+    ],
+    "pairwise_auc": 0.6822916666666666
+  },
+  "plausible_wrong_count": 32,
+  "records_path": "analysis_outputs/decompile_faithfulness/phase1j_structural_binding/records.jsonl",
+  "verdict": "do-not-transfer-yet"
+}

@@ -1,0 +1,49 @@
+{
+  "baseline_auc": {
+    "fixture_only": 0.0,
+    "static_structured_proxy": 0.0,
+    "v3_trace_total": 0.0
+  },
+  "behavior_label_counts": {},
+  "best_non_oracle_baseline_auc": 0.0,
+  "candidate_count": 0,
+  "candidate_manifest_verdict": "needs-more-phase7-llm-public-samples",
+  "case_ids": [
+    "codefuse_1_single_if"
+  ],
+  "cleaning_status_counts": {
+    "parse_failed": 1
+  },
+  "compile_pass_count": 0,
+  "compile_rate_among_parsed": 0.0,
+  "created_at_utc": "2026-07-01T17:47:03.714791+00:00",
+  "fixture_collapse": false,
+  "fixture_passing_wrong_count": 0,
+  "generation_count": 1,
+  "generation_metadata_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_preflight2_cuda2/generation_metadata.jsonl",
+  "model_info": {
+    "cuda_visible_devices_policy": "not_set_by_script; explicit --device placement only",
+    "device": "cuda:2",
+    "max_new_tokens": 260,
+    "model_error": "",
+    "model_load_seconds": 7.676,
+    "model_loaded": true,
+    "model_path": "/home/shx/.cache/huggingface/hub/models--Dream-org--Dream-Coder-v0-Instruct-7B/snapshots/5d9e88c723af9045f362748b5284bdf43d9c501e",
+    "seed": 20260701,
+    "steps": 24,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "torch_dtype": "float16"
+  },
+  "output_dir": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_preflight2_cuda2",
+  "paired_case_count": 0,
+  "parsed_count": 0,
+  "parsed_rate": 0.0,
+  "phase": "phase7_llm_public_generation",
+  "prompt_ids": [
+    "strict_bug"
+  ],
+  "records_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_preflight2_cuda2/records.jsonl",
+  "sota_delta_vs_best_baseline": 0.0,
+  "verdict": "needs-generation-cleaning"
+}

@@ -1,0 +1,376 @@
+{
+  "baseline_auc": {
+    "fixture_only": 0.9741379310344828,
+    "static_structured_proxy": 0.7758620689655172,
+    "v3_trace_total": 1.0
+  },
+  "behavior_label_counts": {
+    "compile_fail": 52,
+    "faithful": 107,
+    "plausible_wrong": 36
+  },
+  "best_non_oracle_baseline_auc": 0.9741379310344828,
+  "by_prompt_id": {
+    "strict_bug": {
+      "candidate_count": 100,
+      "compile_pass_count": 69,
+      "fixture_only_auc": 1.0,
+      "fixture_passing_wrong_count": 1,
+      "label_counts": {
+        "compile_fail": 31,
+        "faithful": 39,
+        "plausible_wrong": 30
+      },
+      "paired_case_count": 12,
+      "static_structured_auc": 0.75,
+      "v3_trace_total_auc": 1.0
+    },
+    "strict_rewrite": {
+      "candidate_count": 95,
+      "compile_pass_count": 74,
+      "fixture_only_auc": 0.8,
+      "fixture_passing_wrong_count": 2,
+      "label_counts": {
+        "compile_fail": 21,
+        "faithful": 68,
+        "plausible_wrong": 6
+      },
+      "paired_case_count": 5,
+      "static_structured_auc": 0.9,
+      "v3_trace_total_auc": 1.0
+    }
+  },
+  "by_risk_family": {
+    "branch": {
+      "candidate_count": 65,
+      "compile_pass_count": 42,
+      "fixture_only_auc": 0.9,
+      "fixture_passing_wrong_count": 3,
+      "label_counts": {
+        "compile_fail": 23,
+        "faithful": 27,
+        "plausible_wrong": 15
+      },
+      "paired_case_count": 8,
+      "static_structured_auc": 0.7,
+      "v3_trace_total_auc": 1.0
+    },
+    "loop": {
+      "candidate_count": 41,
+      "compile_pass_count": 28,
+      "fixture_only_auc": 1.0,
+      "fixture_passing_wrong_count": 0,
+      "label_counts": {
+        "compile_fail": 13,
+        "faithful": 22,
+        "plausible_wrong": 6
+      },
+      "paired_case_count": 4,
+      "static_structured_auc": 0.7142857142857143,
+      "v3_trace_total_auc": 1.0
+    },
+    "multi_arg": {
+      "candidate_count": 61,
+      "compile_pass_count": 44,
+      "fixture_only_auc": 1.0,
+      "fixture_passing_wrong_count": 0,
+      "label_counts": {
+        "compile_fail": 17,
+        "faithful": 37,
+        "plausible_wrong": 7
+      },
+      "paired_case_count": 7,
+      "static_structured_auc": 0.9117647058823529,
+      "v3_trace_total_auc": 1.0
+    },
+    "operator_boundary": {
+      "candidate_count": 136,
+      "compile_pass_count": 92,
+      "fixture_only_auc": 0.9605263157894737,
+      "fixture_passing_wrong_count": 3,
+      "label_counts": {
+        "compile_fail": 44,
+        "faithful": 64,
+        "plausible_wrong": 28
+      },
+      "paired_case_count": 16,
+      "static_structured_auc": 0.7631578947368421,
+      "v3_trace_total_auc": 1.0
+    },
+    "public_benchmark": {
+      "candidate_count": 195,
+      "compile_pass_count": 143,
+      "fixture_only_auc": 0.9741379310344828,
+      "fixture_passing_wrong_count": 3,
+      "label_counts": {
+        "compile_fail": 52,
+        "faithful": 107,
+        "plausible_wrong": 36
+      },
+      "paired_case_count": 24,
+      "static_structured_auc": 0.7758620689655172,
+      "v3_trace_total_auc": 1.0
+    }
+  },
+  "candidate_count": 195,
+  "candidate_manifest_verdict": "pass-phase7-llm-public-candidate-generation",
+  "case_label_counts": {
+    "codefuse_1_conditional_return": {
+      "compile_fail": 1,
+      "faithful": 2,
+      "plausible_wrong": 1
+    },
+    "codefuse_1_goto_backward": {
+      "compile_fail": 1,
+      "faithful": 1,
+      "plausible_wrong": 1
+    },
+    "codefuse_1_goto_forward": {
+      "compile_fail": 2,
+      "faithful": 1,
+      "plausible_wrong": 1
+    },
+    "codefuse_1_if_elseif_chain": {
+      "faithful": 1,
+      "plausible_wrong": 2
+    },
+    "codefuse_1_if_elseif_long": {
+      "compile_fail": 3,
+      "faithful": 1
+    },
+    "codefuse_1_loop_break": {
+      "compile_fail": 2,
+      "plausible_wrong": 1
+    },
+    "codefuse_1_loop_complex_cond": {
+      "faithful": 2,
+      "plausible_wrong": 1
+    },
+    "codefuse_1_loop_continue": {
+      "faithful": 1,
+      "plausible_wrong": 1
+    },
+    "codefuse_1_loop_dowhile": {
+      "compile_fail": 1,
+      "faithful": 2
+    },
+    "codefuse_1_loop_for_fixed": {
+      "compile_fail": 1,
+      "faithful": 1,
+      "plausible_wrong": 2
+    },
+    "codefuse_1_loop_modify_var": {
+      "compile_fail": 1,
+      "faithful": 3
+    },
+    "codefuse_1_loop_multi_exit": {
+      "compile_fail": 3,
+      "faithful": 1
+    },
+    "codefuse_1_loop_nested": {
+      "compile_fail": 1,
+      "faithful": 1
+    },
+    "codefuse_1_loop_while": {
+      "faithful": 4
+    },
+    "codefuse_1_multi_return": {
+      "compile_fail": 2,
+      "faithful": 2
+    },
+    "codefuse_1_nested_if_2": {
+      "faithful": 3,
+      "plausible_wrong": 1
+    },
+    "codefuse_1_nested_if_deep": {
+      "compile_fail": 1,
+      "faithful": 1
+    },
+    "codefuse_1_obfuscated_cf": {
+      "faithful": 3,
+      "plausible_wrong": 1
+    },
+    "codefuse_1_opaque_predicate": {
+      "compile_fail": 1,
+      "plausible_wrong": 3
+    },
+    "codefuse_1_sequential_ops": {
+      "compile_fail": 3,
+      "faithful": 1
+    },
+    "codefuse_1_single_if": {
+      "faithful": 4
+    },
+    "codefuse_1_state_machine": {
+      "compile_fail": 1,
+      "faithful": 1
+    },
+    "codefuse_1_switch_default": {
+      "faithful": 2,
+      "plausible_wrong": 2
+    },
+    "codefuse_1_switch_fallthrough": {
+      "compile_fail": 2,
+      "faithful": 2
+    },
+    "codefuse_1_switch_large": {
+      "compile_fail": 1,
+      "plausible_wrong": 1
+    },
+    "codefuse_1_switch_small": {
+      "compile_fail": 3
+    },
+    "codefuse_1_ternary_op": {
+      "faithful": 3,
+      "plausible_wrong": 1
+    },
+    "codefuse_2_process_bool": {
+      "faithful": 2,
+      "plausible_wrong": 2
+    },
+    "codefuse_2_process_char": {
+      "compile_fail": 1,
+      "faithful": 1,
+      "plausible_wrong": 2
+    },
+    "codefuse_2_process_int": {
+      "faithful": 2,
+      "plausible_wrong": 2
+    },
+    "codefuse_2_process_short": {
+      "faithful": 2
+    },
+    "codefuse_3_large_stack_frame": {
+      "compile_fail": 1,
+      "faithful": 3
+    },
+    "codefuse_3_local_array": {
+      "compile_fail": 2,
+      "faithful": 2
+    },
+    "codefuse_3_local_vars": {
+      "faithful": 3,
+      "plausible_wrong": 1
+    },
+    "codefuse_3_vla_stack": {
+      "compile_fail": 1,
+      "faithful": 2,
+      "plausible_wrong": 1
+    },
+    "codefuse_4_amd64_sysv_func": {
+      "compile_fail": 1,
+      "faithful": 1
+    },
+    "codefuse_4_arm_aapcs_func": {
+      "compile_fail": 1,
+      "faithful": 3
+    },
+    "codefuse_4_cdecl_func": {
+      "faithful": 3,
+      "plausible_wrong": 1
+    },
+    "codefuse_4_fastcall_func": {
+      "compile_fail": 1,
+      "faithful": 2
+    },
+    "codefuse_4_func_a": {
+      "faithful": 3,
+      "plausible_wrong": 1
+    },
+    "codefuse_4_func_b": {
+      "compile_fail": 1,
+      "faithful": 3
+    },
+    "codefuse_4_func_many_args": {
+      "compile_fail": 1,
+      "faithful": 3
+    },
+    "codefuse_4_func_no_args": {
+      "faithful": 4
+    },
+    "codefuse_4_mips_func": {
+      "faithful": 3,
+      "plausible_wrong": 1
+    },
+    "codefuse_4_ms_x64_func": {
+      "compile_fail": 1,
+      "faithful": 2
+    },
+    "codefuse_4_param_by_value_int": {
+      "faithful": 4
+    },
+    "codefuse_4_param_order_dep": {
+      "compile_fail": 1,
+      "faithful": 2,
+      "plausible_wrong": 1
+    },
+    "codefuse_4_ret_basic_type": {
+      "faithful": 3,
+      "plausible_wrong": 1
+    },
+    "codefuse_4_ret_complex_expr": {
+      "compile_fail": 1,
+      "faithful": 2,
+      "plausible_wrong": 1
+    },
+    "codefuse_4_ret_multi_branch": {
+      "faithful": 3
+    },
+    "codefuse_4_stdcall_func": {
+      "faithful": 1,
+      "plausible_wrong": 1
+    },
+    "codefuse_4_vectorcall_func": {
+      "compile_fail": 1,
+      "faithful": 2
+    },
+    "codefuse_5_23_my_func": {
+      "faithful": 2,
+      "plausible_wrong": 1
+    },
+    "codefuse_5_23_param_multi_branch_compile": {
+      "compile_fail": 1,
+      "plausible_wrong": 1
+    },
+    "codefuse_7_param_implementation_defined": {
+      "compile_fail": 4
+    },
+    "codefuse_7_param_integer_overflow": {
+      "compile_fail": 3,
+      "faithful": 1
+    }
+  },
+  "cleaning_status_counts": {
+    "parse_failed": 29,
+    "parsed_function": 195
+  },
+  "compile_pass_count": 143,
+  "created_at_utc": "2026-07-01T18:11:54.396301+00:00",
+  "fixture_collapse": false,
+  "fixture_passing_wrong_count": 3,
+  "gate": {
+    "compile_pass_scale_gate": true,
+    "fixture_collapse_gate": true,
+    "missing_inputs_gate": true,
+    "paired_case_gate": true,
+    "parsed_rate_gate": true,
+    "sota_delta_gate": false,
+    "v3_beats_fixture_gate": true,
+    "v3_beats_static_gate": true
+  },
+  "generation_count": 224,
+  "missing_inputs": [],
+  "paired_case_count": 24,
+  "parsed_count": 195,
+  "phase": "phase7_llm_public_combined",
+  "run_dirs": [
+    "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0",
+    "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda3_s1",
+    "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_topup_full2_cuda2_s0",
+    "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_topup_full2_cuda3_s1"
+  ],
+  "sota_delta_vs_best_baseline": 0.025862068965517238,
+  "source_function_count": 56,
+  "source_manifest": "/home/shx/projects/binary_faithful_decompilation/docs/paper_agent/decompile_faithfulness_phase7_codefuse_function_manifest.json",
+  "verdict": "method-negative-phase7-llm-public"
+}

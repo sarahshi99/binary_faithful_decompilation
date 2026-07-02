@@ -1,0 +1,130 @@
+{
+  "candidate_count": 56,
+  "case_count": 8,
+  "delta_v2_minus_static": 0.15104166666666663,
+  "delta_v2_minus_v1": 0.0625,
+  "leakage_audit": {
+    "domain_filtered_cases": [
+      "count_bits8",
+      "gcd_positive"
+    ],
+    "domain_inference_source": "fixture_argument_values_only",
+    "fixture_only_reported_as_comparator": true,
+    "per_case_label_tuned_formula_selection": false,
+    "uses_candidate_ids_for_domain_inference": false,
+    "uses_candidate_outputs_for_domain_inference": false,
+    "uses_labels_for_domain_inference": false,
+    "v2_scores_identical_to_fixture_only": false,
+    "verdict": "no-label-or-output-leakage-found"
+  },
+  "v1_records_path": "analysis_outputs/decompile_faithfulness/phase1k_dynamic_trace/records.jsonl",
+  "v2_records_path": "analysis_outputs/decompile_faithfulness/phase1k_dynamic_trace_v2/records.jsonl",
+  "variants": [
+    {
+      "case_pairwise_auc": {
+        "absdiff": 1.0,
+        "clamp8": 1.0,
+        "count_bits8": 1.0,
+        "gcd_positive": 0.5,
+        "is_power_of_two": 0.875,
+        "max3": 1.0,
+        "signum": 0.75,
+        "sum_to_n": 1.0
+      },
+      "hard_case_auc": {
+        "gcd_positive": 0.5,
+        "max3": 1.0,
+        "signum": 0.75,
+        "sum_to_n": 1.0
+      },
+      "name": "mixed_domain_v1_trace_mismatch",
+      "pairwise_auc": 0.890625,
+      "score_feature": "trace_mismatch_rate"
+    },
+    {
+      "case_pairwise_auc": {
+        "absdiff": 1.0,
+        "clamp8": 1.0,
+        "count_bits8": 1.0,
+        "gcd_positive": 1.0,
+        "is_power_of_two": 0.875,
+        "max3": 1.0,
+        "signum": 0.75,
+        "sum_to_n": 1.0
+      },
+      "hard_case_auc": {
+        "gcd_positive": 1.0,
+        "max3": 1.0,
+        "signum": 0.75,
+        "sum_to_n": 1.0
+      },
+      "name": "domain_aware_v2_trace_mismatch",
+      "pairwise_auc": 0.953125,
+      "score_feature": "trace_mismatch_rate"
+    },
+    {
+      "case_pairwise_auc": {
+        "absdiff": 1.0,
+        "clamp8": 1.0,
+        "count_bits8": 1.0,
+        "gcd_positive": 1.0,
+        "is_power_of_two": 0.875,
+        "max3": 1.0,
+        "signum": 0.75,
+        "sum_to_n": 1.0
+      },
+      "hard_case_auc": {
+        "gcd_positive": 1.0,
+        "max3": 1.0,
+        "signum": 0.75,
+        "sum_to_n": 1.0
+      },
+      "name": "domain_aware_v2_trace_total",
+      "pairwise_auc": 0.953125,
+      "score_feature": "trace_total"
+    },
+    {
+      "case_pairwise_auc": {
+        "absdiff": 1.0,
+        "clamp8": 1.0,
+        "count_bits8": 1.0,
+        "gcd_positive": 1.0,
+        "is_power_of_two": 1.0,
+        "max3": 1.0,
+        "signum": 1.0,
+        "sum_to_n": 1.0
+      },
+      "hard_case_auc": {
+        "gcd_positive": 1.0,
+        "max3": 1.0,
+        "signum": 1.0,
+        "sum_to_n": 1.0
+      },
+      "name": "fixture_only_oracle",
+      "pairwise_auc": 1.0,
+      "score_feature": "fixture_mismatch_rate"
+    },
+    {
+      "case_pairwise_auc": {
+        "absdiff": 0.75,
+        "clamp8": 1.0,
+        "count_bits8": 0.9583333333333334,
+        "gcd_positive": 0.6666666666666666,
+        "is_power_of_two": 0.75,
+        "max3": 1.0,
+        "signum": 0.4583333333333333,
+        "sum_to_n": 0.8333333333333334
+      },
+      "hard_case_auc": {
+        "gcd_positive": 0.6666666666666666,
+        "max3": 1.0,
+        "signum": 0.4583333333333333,
+        "sum_to_n": 0.8333333333333334
+      },
+      "name": "static_only_min_slot",
+      "pairwise_auc": 0.8020833333333334,
+      "score_feature": "min_slot"
+    }
+  ],
+  "verdict": "pass-phase1l-ablation"
+}

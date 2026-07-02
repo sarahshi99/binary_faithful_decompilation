@@ -1,0 +1,109 @@
+{
+  "artifact_roots": [
+    "analysis_outputs/decompile_faithfulness/phase1h_bigram_repair_phase1e",
+    "analysis_outputs/decompile_faithfulness/phase1h_bigram_repair_phase1f",
+    "analysis_outputs/decompile_faithfulness/phase1h_bigram_repair_phase1g"
+  ],
+  "best_in_sample": {
+    "formula": "trace_mismatch_rate",
+    "pairwise_auc": 0.953125
+  },
+  "candidate_count": 56,
+  "case_count": 8,
+  "faithful_count": 24,
+  "fixture_collapse": false,
+  "formula_scores": [
+    {
+      "formula": "trace_mismatch_rate",
+      "pairwise_auc": 0.953125
+    },
+    {
+      "formula": "trace_total",
+      "pairwise_auc": 0.953125
+    },
+    {
+      "formula": "trace_total_plus_min_slot_0.10",
+      "pairwise_auc": 0.9375
+    },
+    {
+      "formula": "trace_total_plus_min_slot_0.25",
+      "pairwise_auc": 0.9375
+    },
+    {
+      "formula": "min_slot",
+      "pairwise_auc": 0.8020833333333334
+    }
+  ],
+  "hard_case_auc": {
+    "gcd_positive": 1.0,
+    "max3": 1.0,
+    "signum": 0.75,
+    "sum_to_n": 1.0
+  },
+  "leave_one_case_out": {
+    "case_pairwise_auc": {
+      "absdiff": 1.0,
+      "clamp8": 1.0,
+      "count_bits8": 1.0,
+      "gcd_positive": 1.0,
+      "is_power_of_two": 0.875,
+      "max3": 1.0,
+      "signum": 0.75,
+      "sum_to_n": 1.0
+    },
+    "folds": [
+      {
+        "heldout_case": "absdiff",
+        "heldout_pairwise_auc": 1.0,
+        "selected_formula": "trace_mismatch_rate",
+        "train_pairwise_auc": 0.9464285714285714
+      },
+      {
+        "heldout_case": "clamp8",
+        "heldout_pairwise_auc": 1.0,
+        "selected_formula": "trace_mismatch_rate",
+        "train_pairwise_auc": 0.9464285714285714
+      },
+      {
+        "heldout_case": "count_bits8",
+        "heldout_pairwise_auc": 1.0,
+        "selected_formula": "trace_mismatch_rate",
+        "train_pairwise_auc": 0.9464285714285714
+      },
+      {
+        "heldout_case": "gcd_positive",
+        "heldout_pairwise_auc": 1.0,
+        "selected_formula": "trace_mismatch_rate",
+        "train_pairwise_auc": 0.9464285714285714
+      },
+      {
+        "heldout_case": "is_power_of_two",
+        "heldout_pairwise_auc": 0.875,
+        "selected_formula": "trace_mismatch_rate",
+        "train_pairwise_auc": 0.9642857142857143
+      },
+      {
+        "heldout_case": "max3",
+        "heldout_pairwise_auc": 1.0,
+        "selected_formula": "trace_mismatch_rate",
+        "train_pairwise_auc": 0.9464285714285714
+      },
+      {
+        "heldout_case": "signum",
+        "heldout_pairwise_auc": 0.75,
+        "selected_formula": "trace_mismatch_rate",
+        "train_pairwise_auc": 0.9821428571428571
+      },
+      {
+        "heldout_case": "sum_to_n",
+        "heldout_pairwise_auc": 1.0,
+        "selected_formula": "trace_mismatch_rate",
+        "train_pairwise_auc": 0.9464285714285714
+      }
+    ],
+    "pairwise_auc": 0.953125
+  },
+  "plausible_wrong_count": 32,
+  "records_path": "analysis_outputs/decompile_faithfulness/phase1k_dynamic_trace_v2/records.jsonl",
+  "verdict": "pass-dynamic-trace-v2-localized-bug"
+}

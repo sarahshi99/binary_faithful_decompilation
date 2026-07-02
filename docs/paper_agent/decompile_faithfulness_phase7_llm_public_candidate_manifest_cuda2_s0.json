@@ -1,0 +1,895 @@
+{
+  "benchmark": "CodeFuse-DeBench",
+  "candidate_count": 51,
+  "candidate_layers": [
+    "llm_strict_rewrite",
+    "llm_strict_bug"
+  ],
+  "candidates": [
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_1_conditional_return_strict_rewrite_00",
+          "case_id": "codefuse_1_conditional_return",
+          "cleaning_status": "parsed_function",
+          "function_source": "int conditional_return(int x) {\n    // Use conditional expressions to determine the return value\n    return (x > 0) ? x * 2 : ((x < 0) ? x * -1 : 0);\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_1_conditional_return_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_1_conditional_return_strict_bug_00",
+          "case_id": "codefuse_1_conditional_return",
+          "cleaning_status": "parsed_function",
+          "function_source": "int conditional_return(int x) {\n    // Intentional bug in conditional expressions\n    // Subtle bug: incorrect negative multiplication\n    return (x > 0) ? (x * 2) : ((x < 0) ? (x * -1) : 0);\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_1_conditional_return_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_1_conditional_return"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_1_goto_forward_strict_bug_00",
+          "case_id": "codefuse_1_goto_forward",
+          "cleaning_status": "parsed_function",
+          "function_source": "int goto_forward(int x) {\n    int result;\n\n    if (x > 0) {\n        result = x * x;\n        goto common_exit; // Subtle semantic bug\n    } else {\n        result = x;\n    }\n    \n    common_exit:\n    result = result * 2;\n    \n    return -result;\n}\n",
+          "generation_index": 0,
+          "label": "plausible_wrong",
+          "mutation_type": "phase7_llm_public_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_1_goto_forward_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_1_goto_forward"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_1_if_elseif_long_strict_rewrite_00",
+          "case_id": "codefuse_1_if_elseif_long",
+          "cleaning_status": "parsed_function",
+          "function_source": "int if_elseif_long(int x) {\n    // 6 branch chain, may trigger jump table generation\n    if (x == 0) return 100;\n    if (x == 1) return 200;\n    if (x == 2) return 300;\n    if (x == 3) return 400;\n    if (x == 4)  return 500;\n    return -1;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_1_if_elseif_long_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_1_if_elseif_long"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_1_loop_complex_cond_strict_rewrite_00",
+          "case_id": "codefuse_1_loop_complex_cond",
+          "cleaning_status": "parsed_function",
+          "function_source": "int loop_complex_cond(int x) {\n    int a = 0, b = x, c = 0;\n    // While loop with the condition a < b\n    while (a < b && c < 10 && b > 0) {\n        a += 2;\n        b--;\n        c++;\n    }\n    return a + b + c;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_1_loop_complex_cond_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_1_loop_complex_cond_strict_bug_00",
+          "case_id": "codefuse_1_loop_complex_cond",
+          "cleaning_status": "parsed_function",
+          "function_source": "int loop_complex_cond(int x) {\n    int a = 0, b = x;\n    // Bug introduced in the loop condition\n    int c = 0;\n  // while (a < b \n  // && c < 10 \n  //  && b >  0) {\n  //  a++;\n  //  b--;\n  //  c++;\n //  }\n  //  c--; \n    return a + b + c;\n}\n",
+          "generation_index": 0,
+          "label": "plausible_wrong",
+          "mutation_type": "phase7_llm_public_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_1_loop_complex_cond_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_1_loop_complex_cond"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_1_loop_dowhile_strict_rewrite_00",
+          "case_id": "codefuse_1_loop_dowhile",
+          "cleaning_status": "parsed_function",
+          "function_source": "int loop_dowhile(int x) {\n    int count = 0;\n    while (x != 0)\n    {\n        x /= 10;\n        count++;\n    }\n    return count;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_1_loop_dowhile_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_1_loop_dowhile"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_1_loop_modify_var_strict_rewrite_00",
+          "case_id": "codefuse_1_loop_modify_var",
+          "cleaning_status": "parsed_function",
+          "function_source": "int loop_modify_var(int n) {\n    int sum = 0;\n    for (int i = 0; i < n; ++i) {\n        sum += i;\n        if (i > 5) {\n            i += 2;  // Manually skip iterations\n        }\n    }\n    return sum;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_1_loop_modify_var_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_1_loop_modify_var_strict_bug_00",
+          "case_id": "codefuse_1_loop_modify_var",
+          "cleaning_status": "parsed_function",
+          "function_source": "int loop_modify_var(int n) {\n    int sum = 0;\n    for (int i = 0; i < n; i++) {\n        // Modify the loop variable within the body\n        sum += i;\n        if (i > 5) {\n            i += 2;  // Subtle bug: should be  += 2;\n        }\n    } \n    return sum;  // Return the sum\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_1_loop_modify_var_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_1_loop_modify_var"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_1_loop_nested_strict_rewrite_00",
+          "case_id": "codefuse_1_loop_nested",
+          "cleaning_status": "parsed_function",
+          "function_source": "int loop_nested(int m, int n) {\n    int total = 0;\n       for (int i = 0; i < m; i++) { // i represents the rows\n        for (int j = 0; j < n; j++) {\n            total++;\n        }\n    }\n    return total;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_1_loop_nested_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_1_loop_nested"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_1_multi_return_strict_bug_00",
+          "case_id": "codefuse_1_multi_return",
+          "cleaning_status": "parsed_function",
+          "function_source": "int multi_return(int x) {\n    if (x < 0) return -1;  // First exit: Negative rejection\n    \n    int temp = x * 2;\n    \n    if (temp > 99) {  // Second exit: overflow rejection\n        return -2;\n    }\n    \n    if (x % 2 == 0) return temp;  // Third exit: Even numbers directly\n    \n    return x + 1;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_1_multi_return_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_1_multi_return"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_1_opaque_predicate_strict_rewrite_00",
+          "case_id": "codefuse_1_opaque_predicate",
+          "cleaning_status": "parsed_function",
+          "function_source": "int opaque_predicate(int x) {\n    int cond = ((x * 0x12345678) & 0xFFFFFFFF) % 2;\n    if (cond == 0) {\n        return x * 2 + x % 2;\n    } else {\n        return x;\n    }\n}\n",
+          "generation_index": 0,
+          "label": "plausible_wrong",
+          "mutation_type": "phase7_llm_public_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_1_opaque_predicate_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_1_opaque_predicate_strict_bug_00",
+          "case_id": "codefuse_1_opaque_predicate",
+          "cleaning_status": "parsed_function",
+          "function_source": "int opaque_predicate(int x) {\n    x = ((x) < 0) * ((x));\n    int cond = (((x) < 0) * ((-x) *  12345678) & 0xFFFFFFFF) % 2;\n    if (cond == 0) \n        return x * 2;\n    else {\n        return x * 3;\n    }\n}\n",
+          "generation_index": 0,
+          "label": "plausible_wrong",
+          "mutation_type": "phase7_llm_public_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_1_opaque_predicate_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_1_opaque_predicate"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_1_single_if_strict_rewrite_00",
+          "case_id": "codefuse_1_single_if",
+          "cleaning_status": "parsed_function",
+          "function_source": "int single_if(int x) {\n    if (x > 0) {\n        x = 2 * x;\n    }\n    return x;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_1_single_if_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_1_single_if_strict_bug_00",
+          "case_id": "codefuse_1_single_if",
+          "cleaning_status": "parsed_function",
+          "function_source": "int single_if(int x) {\n    // Single branch, no else path\n    if (x > 0) {\n        x = x * 2;  // Double the positive number\n    }\n    return x;  // Bug: Direct return without checking for negative numbers\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_1_single_if_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_1_single_if"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_1_switch_default_strict_rewrite_00",
+          "case_id": "codefuse_1_switch_default",
+          "cleaning_status": "parsed_function",
+          "function_source": "int switch_default(int op) {\n    switch (op) {\n        case 1:  return 100;\n        case 2:  return 200;\n        case 3:  return 300;\n        default: return 0;  // All cases not covered\n    }\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_1_switch_default_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_1_switch_default_strict_bug_00",
+          "case_id": "codefuse_1_switch_default",
+          "cleaning_status": "parsed_function",
+          "function_source": "int switch_default(int op) {\n    switch (op) { \n        case 1: return 100;\n        case 2: return 200;\n        case 3: return 300;\n        // The default case is supposed to return 0, not values\n        default: return 1;  // Semantic bug: should return 0 instead\n    }\n}\n",
+          "generation_index": 0,
+          "label": "plausible_wrong",
+          "mutation_type": "phase7_llm_public_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_1_switch_default_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_1_switch_default"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_1_switch_large_strict_bug_00",
+          "case_id": "codefuse_1_switch_large",
+          "cleaning_status": "parsed_function",
+          "function_source": "int switch_large(int op) {\n    switch (op * op) {\n        case 0: return 00;\n        case 1: return 10;\n        case 2: return 20;\n        case 3: return 30;\n        case 4: return 40;\n        case 5: return 500;\n        case 6: return 60;\n        case 7: return 70;\n        case 8: return 80;\n        case 9: return 90;  // subtle semantic bug\n        default: return -1;\n    }\n}\n",
+          "generation_index": 0,
+          "label": "plausible_wrong",
+          "mutation_type": "phase7_llm_public_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_1_switch_large_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_1_switch_large"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_1_ternary_op_strict_rewrite_00",
+          "case_id": "codefuse_1_ternary_op",
+          "cleaning_status": "parsed_function",
+          "function_source": "int ternary_op(int a, int b) {\n    return (a > b) ? a : b;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_1_ternary_op_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_1_ternary_op_strict_bug_00",
+          "case_id": "codefuse_1_ternary_op",
+          "cleaning_status": "parsed_function",
+          "function_source": "int ternary_op(int a, int b) {\n    return (a > b) ? a : b;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_1_ternary_op_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_1_ternary_op"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_2_process_char_strict_rewrite_00",
+          "case_id": "codefuse_2_process_char",
+          "cleaning_status": "parsed_function",
+          "function_source": "char process_char(char c) {\n    if (c >= 'a' && c <= 'z') {\n        return c - 32;  // Convert lowercase back to uppercase\n    }\n    return c;\n}\n",
+          "generation_index": 0,
+          "label": "plausible_wrong",
+          "mutation_type": "phase7_llm_public_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_2_process_char_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_2_process_char"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_2_process_short_strict_rewrite_00",
+          "case_id": "codefuse_2_process_short",
+          "cleaning_status": "parsed_function",
+          "function_source": "short process_short(short a, short b) {\n    return a + b;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_2_process_short_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_2_process_short"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_3_local_array_strict_rewrite_00",
+          "case_id": "codefuse_3_local_array",
+          "cleaning_status": "parsed_function",
+          "function_source": "int local_array(int n) {\n    int arr[10]; //  Fixed size stack array\n    for (int i = 0; i < 10; i++) {\n        arr[i] = i * n;\n    }\n    return arr[5];  // Return 6th element\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_3_local_array_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_3_local_array"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_3_vla_stack_strict_rewrite_00",
+          "case_id": "codefuse_3_vla_stack",
+          "cleaning_status": "parsed_function",
+          "function_source": "int vla_stack(int n) {\n    // Check if the input size is within bounds\n    if (n <= 0 || n > 1000){\n        return -1;  // Security check failure\n    }\n\n    int vla[n];  // Variable length array on stack\n\n    // Populate each element of the array\n    for (int i = 0; i < n;  i++){\n        vla[i] = i * 2;\n    }\n\n    return vla[n / 2];  // Return the middle the middle element\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_3_vla_stack_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_3_vla_stack_strict_bug_00",
+          "case_id": "codefuse_3_vla_stack",
+          "cleaning_status": "parsed_function",
+          "function_source": "int vla_stack(int n) {\n    if (n <= 0 || n > 1000) return -1;  // security check\n    int vla[n - 1];  // Variable length array on stack\n    for (int i = 0; i < n - 1; i++) {\n        vla[i] = i * 2;\n    }\n    return vla[n/2];  // Subtle semantic bug: returns the middle element\n}\n",
+          "generation_index": 0,
+          "label": "plausible_wrong",
+          "mutation_type": "phase7_llm_public_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_3_vla_stack_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_3_vla_stack"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_4_arm_aapcs_func_strict_rewrite_00",
+          "case_id": "codefuse_4_arm_aapcs_func",
+          "cleaning_status": "parsed_function",
+          "function_source": "int arm_aapcs_func(int a, int b, int c, int d, int e) {\n    // Calculate and return the sum of the five integer arguments\n    return a + b + c + d + e;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_4_arm_aapcs_func_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_4_arm_aapcs_func_strict_bug_00",
+          "case_id": "codefuse_4_arm_aapcs_func",
+          "cleaning_status": "parsed_function",
+          "function_source": "int arm_aapcs_func(int a, int b, int c, int d, int e) {\n    // The subtle semantic bug here is to to the use of the increment operator in the return statement, which will increment the wrong value of the expression, but instead the entire return value.\n    return a + b + +c + d + e;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_4_arm_aapcs_func_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_4_arm_aapcs_func"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_4_fastcall_func_strict_rewrite_00",
+          "case_id": "codefuse_4_fastcall_func",
+          "cleaning_status": "parsed_function",
+          "function_source": "int fastcall_func(int a, int b, int c) { return a + b + c; }\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_4_fastcall_func_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_4_fastcall_func_strict_bug_00",
+          "case_id": "codefuse_4_fastcall_func",
+          "cleaning_status": "parsed_function",
+          "function_source": "int fastcall_func(int a, int b, int c) {\n    return a + b + c;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_4_fastcall_func_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_4_fastcall_func"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_4_func_b_strict_rewrite_00",
+          "case_id": "codefuse_4_func_b",
+          "cleaning_status": "parsed_function",
+          "function_source": "int func_b(int x) {return x * 2;}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_4_func_b_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_4_func_b"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_4_func_no_args_strict_rewrite_00",
+          "case_id": "codefuse_4_func_no_args",
+          "cleaning_status": "parsed_function",
+          "function_source": "int func_no_args(void) {\n    int result=42;\n    return result;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_4_func_no_args_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_4_func_no_args_strict_bug_00",
+          "case_id": "codefuse_4_func_no_args",
+          "cleaning_status": "parsed_function",
+          "function_source": "int func_no_args(void) {\n  return 43;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_4_func_no_args_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_4_func_no_args"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_4_ms_x64_func_strict_rewrite_00",
+          "case_id": "codefuse_4_ms_x64_func",
+          "cleaning_status": "parsed_function",
+          "function_source": "int ms_x64_func(int a, int b, int c, int d, int e) {\n    return a + b + c + d + e;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_4_ms_x64_func_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_4_ms_x64_func"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_4_param_order_dep_strict_bug_00",
+          "case_id": "codefuse_4_param_order_dep",
+          "cleaning_status": "parsed_function",
+          "function_source": "int param_order_dep(int a, int b) {\n    return - a + b;\n}\n",
+          "generation_index": 0,
+          "label": "plausible_wrong",
+          "mutation_type": "phase7_llm_public_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_4_param_order_dep_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_4_param_order_dep"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_4_ret_complex_expr_strict_rewrite_00",
+          "case_id": "codefuse_4_ret_complex_expr",
+          "cleaning_status": "parsed_function",
+          "function_source": "int ret_complex_expr(int x, int y, int z)\n{\n    if (x > y)\n    {\n        return z;\n    } else\n    {\n        return (z > 0) ? z + 10 : z;\n    }\n}\n",
+          "generation_index": 0,
+          "label": "plausible_wrong",
+          "mutation_type": "phase7_llm_public_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_4_ret_complex_expr_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_4_ret_complex_expr_strict_bug_00",
+          "case_id": "codefuse_4_ret_complex_expr",
+          "cleaning_status": "parsed_function",
+          "function_source": "int ret_complex_expr(int x, int y, int z) {\n    // Conditional expression with a subtle operator boundary bug\n    return x > y ? (z * 2) : (z + 10);\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_4_ret_complex_expr_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_4_ret_complex_expr"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_4_stdcall_func_strict_rewrite_00",
+          "case_id": "codefuse_4_stdcall_func",
+          "cleaning_status": "parsed_function",
+          "function_source": "int stdcall_func(int a, int b) {\n    return a * b;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_4_stdcall_func_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_4_stdcall_func_strict_bug_00",
+          "case_id": "codefuse_4_stdcall_func",
+          "cleaning_status": "parsed_function",
+          "function_source": "int stdcall_func(int a, int b) {\n    return a + b;\n}\n",
+          "generation_index": 0,
+          "label": "plausible_wrong",
+          "mutation_type": "phase7_llm_public_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_4_stdcall_func_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_4_stdcall_func"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_5_23_my_func_strict_bug_00",
+          "case_id": "codefuse_5_23_my_func",
+          "cleaning_status": "parsed_function",
+          "function_source": "int my_func(int x) {\n    x *= 10;\n    return x * 1; // Bug: returns negative of the correct result\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase7_llm_public_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/raw/phase7_llm_public_cuda2_s0_codefuse_5_23_my_func_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_5_23_my_func"
+    }
+  ],
+  "compile_pass_count": 39,
+  "compile_pass_target_min": 100,
+  "created_at_utc": "2026-07-01T17:56:04.227368+00:00",
+  "generation_metadata_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/generation_metadata.jsonl",
+  "gpu_decision": "started",
+  "output_dir": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0",
+  "paired_function_count": 5,
+  "paired_function_target_min": 20,
+  "phase": "phase7_llm_public_candidate_generation",
+  "records_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_cuda2_s0/records.jsonl",
+  "shard_count": 2,
+  "shard_index": 0,
+  "source_manifest_function_count": 56,
+  "verdict": "needs-more-phase7-llm-public-samples"
+}

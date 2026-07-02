@@ -1,0 +1,23 @@
+{
+  "benchmark": "CodeFuse-DeBench",
+  "candidate_count": 0,
+  "candidate_layers": [
+    "llm_strict_rewrite",
+    "llm_strict_bug"
+  ],
+  "candidates": [],
+  "compile_pass_count": 0,
+  "compile_pass_target_min": 100,
+  "created_at_utc": "2026-07-01T18:03:13.012072+00:00",
+  "generation_metadata_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_topup_full_cuda2_s0/generation_metadata.jsonl",
+  "gpu_decision": "started",
+  "output_dir": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_topup_full_cuda2_s0",
+  "paired_function_count": 0,
+  "paired_function_target_min": 20,
+  "phase": "phase7_llm_public_candidate_generation",
+  "records_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_topup_full_cuda2_s0/records.jsonl",
+  "shard_count": 2,
+  "shard_index": 0,
+  "source_manifest_function_count": 56,
+  "verdict": "needs-more-phase7-llm-public-samples"
+}

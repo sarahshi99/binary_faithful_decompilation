@@ -1,0 +1,205 @@
+{
+  "bootstrap_iterations": 2000,
+  "budget": 8,
+  "created_at_utc": "2026-07-02T03:57:57.217766+00:00",
+  "datasets": {
+    "phase6r_ghidra_full": {
+      "bootstrap": {
+        "auc_ci95": [
+          0.9615384615384616,
+          1.0
+        ],
+        "auc_mean": 0.9887123161317639,
+        "wrong_detection_rate_ci95": [
+          0.9166666666666666,
+          1.0
+        ],
+        "wrong_detection_rate_mean": 0.9724660304517145
+      },
+      "cost_proxy": {
+        "actual_input_evals": 1157,
+        "avg_actual_inputs_per_candidate": 6.969879518072289,
+        "note": "Input-evaluation cost proxy only; wall-clock compile/run runtime is not reconstructed from prior traces."
+      },
+      "miss_taxonomy": {
+        "by_candidate_family": {
+          "fixture_ifchain": 2
+        },
+        "by_case": {
+          "ta_infix_precedence_two": 2
+        },
+        "missed_wrong_count": 2,
+        "misses": [
+          {
+            "candidate_family": "fixture_ifchain",
+            "candidate_id": "phase6_O0_ta_infix_precedence_two_fixture_ifchain_00",
+            "case_id": "ta_infix_precedence_two",
+            "optimization_level": "O0"
+          },
+          {
+            "candidate_family": "fixture_ifchain",
+            "candidate_id": "phase6_O2_ta_infix_precedence_two_fixture_ifchain_00",
+            "case_id": "ta_infix_precedence_two",
+            "optimization_level": "O2"
+          }
+        ]
+      },
+      "observed": {
+        "actual_input_evals": 1157,
+        "auc": 0.9891304347826086,
+        "avg_actual_inputs_per_candidate": 6.969879518072289,
+        "candidate_count": 166,
+        "eval_count": 166,
+        "paired_case_count": 26,
+        "wrong_detection_rate": 0.972972972972973
+      },
+      "phase12_budget8": {
+        "actual_input_evals": 1157,
+        "avg_actual_inputs_per_candidate": 6.969879518072289,
+        "candidate_count": 166,
+        "compile_pass_count": 166,
+        "complete_eval": true,
+        "eval_count": 166,
+        "fixture_auc": 0.5,
+        "mismatch_auc": 0.9891304347826086,
+        "missed_wrong": [
+          {
+            "candidate_id": "phase6_O0_ta_infix_precedence_two_fixture_ifchain_00",
+            "case_id": "ta_infix_precedence_two",
+            "optimization_level": "O0"
+          },
+          {
+            "candidate_id": "phase6_O2_ta_infix_precedence_two_fixture_ifchain_00",
+            "case_id": "ta_infix_precedence_two",
+            "optimization_level": "O2"
+          }
+        ],
+        "missed_wrong_count": 2,
+        "paired_case_count": 26,
+        "requested_budget": 8,
+        "static_auc": 0.8206521739130435,
+        "v3_auc": 0.9891304347826086,
+        "wrong_count": 74,
+        "wrong_detection_count": 72,
+        "wrong_detection_rate": 0.972972972972973
+      }
+    },
+    "phase7c2_static_hard_public": {
+      "bootstrap": {
+        "auc_ci95": [
+          1.0,
+          1.0
+        ],
+        "auc_mean": 1.0,
+        "wrong_detection_rate_ci95": [
+          1.0,
+          1.0
+        ],
+        "wrong_detection_rate_mean": 1.0
+      },
+      "cost_proxy": {
+        "actual_input_evals": 3172,
+        "avg_actual_inputs_per_candidate": 6.635983263598327,
+        "note": "Input-evaluation cost proxy only; wall-clock compile/run runtime is not reconstructed from prior traces."
+      },
+      "miss_taxonomy": {
+        "by_candidate_family": {},
+        "by_case": {},
+        "missed_wrong_count": 0,
+        "misses": []
+      },
+      "observed": {
+        "actual_input_evals": 3172,
+        "auc": 1.0,
+        "avg_actual_inputs_per_candidate": 6.635983263598327,
+        "candidate_count": 478,
+        "eval_count": 469,
+        "paired_case_count": 50,
+        "wrong_detection_rate": 1.0
+      },
+      "phase12_budget8": {
+        "actual_input_evals": 3172,
+        "avg_actual_inputs_per_candidate": 6.635983263598327,
+        "candidate_count": 478,
+        "compile_pass_count": 469,
+        "complete_eval": false,
+        "eval_count": 469,
+        "fixture_auc": 0.9211111111111111,
+        "mismatch_auc": 1.0,
+        "missed_wrong": [],
+        "missed_wrong_count": 0,
+        "paired_case_count": 50,
+        "requested_budget": 8,
+        "static_auc": 0.6805555555555556,
+        "v3_auc": 1.0,
+        "wrong_count": 258,
+        "wrong_detection_count": 258,
+        "wrong_detection_rate": 1.0
+      }
+    },
+    "phase7e_llm_public_full_topup": {
+      "bootstrap": {
+        "auc_ci95": [
+          1.0,
+          1.0
+        ],
+        "auc_mean": 1.0,
+        "wrong_detection_rate_ci95": [
+          1.0,
+          1.0
+        ],
+        "wrong_detection_rate_mean": 1.0
+      },
+      "cost_proxy": {
+        "actual_input_evals": 910,
+        "avg_actual_inputs_per_candidate": 6.6911764705882355,
+        "note": "Input-evaluation cost proxy only; wall-clock compile/run runtime is not reconstructed from prior traces."
+      },
+      "miss_taxonomy": {
+        "by_candidate_family": {},
+        "by_case": {},
+        "missed_wrong_count": 0,
+        "misses": []
+      },
+      "observed": {
+        "actual_input_evals": 910,
+        "auc": 1.0,
+        "avg_actual_inputs_per_candidate": 6.6911764705882355,
+        "candidate_count": 136,
+        "eval_count": 136,
+        "paired_case_count": 24,
+        "wrong_detection_rate": 1.0
+      },
+      "phase12_budget8": {
+        "actual_input_evals": 910,
+        "avg_actual_inputs_per_candidate": 6.6911764705882355,
+        "candidate_count": 136,
+        "compile_pass_count": 136,
+        "complete_eval": true,
+        "eval_count": 136,
+        "fixture_auc": 0.9741379310344828,
+        "mismatch_auc": 1.0,
+        "missed_wrong": [],
+        "missed_wrong_count": 0,
+        "paired_case_count": 24,
+        "requested_budget": 8,
+        "static_auc": 0.7758620689655172,
+        "v3_auc": 1.0,
+        "wrong_count": 36,
+        "wrong_detection_count": 36,
+        "wrong_detection_rate": 1.0
+      }
+    }
+  },
+  "gate": {
+    "phase6r_ghidra_full_auc_ci_lower_gate": true,
+    "phase6r_ghidra_full_detection_ci_lower_gate": true,
+    "phase7c2_static_hard_public_auc_ci_lower_gate": true,
+    "phase7c2_static_hard_public_detection_ci_lower_gate": true,
+    "phase7e_llm_public_full_topup_auc_ci_lower_gate": true,
+    "phase7e_llm_public_full_topup_detection_ci_lower_gate": true
+  },
+  "phase": "phase14_paper_readiness",
+  "seed": 20260702,
+  "verdict": "pass-phase14-paper-readiness-hardening"
+}

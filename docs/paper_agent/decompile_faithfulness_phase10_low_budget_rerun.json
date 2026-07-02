@@ -1,0 +1,431 @@
+{
+  "budgets": [
+    1,
+    2,
+    4,
+    8,
+    16
+  ],
+  "created_at_utc": "2026-07-02T02:16:55.885190+00:00",
+  "datasets": {
+    "phase6r_ghidra_full": {
+      "budget_metrics": {
+        "1": {
+          "actual_input_evals": 166,
+          "avg_actual_inputs_per_candidate": 1.0,
+          "candidate_count": 166,
+          "compile_pass_count": 166,
+          "eval_count": 166,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 0.8152173913043478,
+          "paired_case_count": 26,
+          "requested_budget": 1,
+          "static_auc": 0.8206521739130435,
+          "v3_auc": 0.8152173913043478,
+          "wrong_count": 74,
+          "wrong_detection_count": 50,
+          "wrong_detection_rate": 0.6756756756756757
+        },
+        "16": {
+          "actual_input_evals": 1897,
+          "avg_actual_inputs_per_candidate": 11.427710843373495,
+          "candidate_count": 166,
+          "compile_pass_count": 166,
+          "eval_count": 166,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 0.9782608695652174,
+          "paired_case_count": 26,
+          "requested_budget": 16,
+          "static_auc": 0.8206521739130435,
+          "v3_auc": 0.9782608695652174,
+          "wrong_count": 74,
+          "wrong_detection_count": 72,
+          "wrong_detection_rate": 0.972972972972973
+        },
+        "2": {
+          "actual_input_evals": 328,
+          "avg_actual_inputs_per_candidate": 1.9759036144578312,
+          "candidate_count": 166,
+          "compile_pass_count": 166,
+          "eval_count": 166,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 0.8586956521739131,
+          "paired_case_count": 26,
+          "requested_budget": 2,
+          "static_auc": 0.8206521739130435,
+          "v3_auc": 0.8586956521739131,
+          "wrong_count": 74,
+          "wrong_detection_count": 54,
+          "wrong_detection_rate": 0.7297297297297297
+        },
+        "4": {
+          "actual_input_evals": 652,
+          "avg_actual_inputs_per_candidate": 3.927710843373494,
+          "candidate_count": 166,
+          "compile_pass_count": 166,
+          "eval_count": 166,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 0.9021739130434783,
+          "paired_case_count": 26,
+          "requested_budget": 4,
+          "static_auc": 0.8206521739130435,
+          "v3_auc": 0.9021739130434783,
+          "wrong_count": 74,
+          "wrong_detection_count": 60,
+          "wrong_detection_rate": 0.8108108108108109
+        },
+        "8": {
+          "actual_input_evals": 1145,
+          "avg_actual_inputs_per_candidate": 6.897590361445783,
+          "candidate_count": 166,
+          "compile_pass_count": 166,
+          "eval_count": 166,
+          "fixture_auc": 0.5,
+          "mismatch_auc": 0.9565217391304348,
+          "paired_case_count": 26,
+          "requested_budget": 8,
+          "static_auc": 0.8206521739130435,
+          "v3_auc": 0.9565217391304348,
+          "wrong_count": 74,
+          "wrong_detection_count": 68,
+          "wrong_detection_rate": 0.918918918918919
+        }
+      },
+      "dataset_id": "phase6r_ghidra_full",
+      "eval_candidate_count": 166,
+      "rerun_candidate_count": 166,
+      "skipped": [],
+      "skipped_count": 0,
+      "source_candidate_count": 228,
+      "title": "Phase 6R Ghidra full"
+    },
+    "phase7c2_static_hard_public": {
+      "budget_metrics": {
+        "1": {
+          "actual_input_evals": 478,
+          "avg_actual_inputs_per_candidate": 1.0,
+          "candidate_count": 478,
+          "compile_pass_count": 469,
+          "eval_count": 469,
+          "fixture_auc": 0.9211111111111111,
+          "mismatch_auc": 0.8455555555555555,
+          "paired_case_count": 50,
+          "requested_budget": 1,
+          "static_auc": 0.6805555555555556,
+          "v3_auc": 0.8455555555555555,
+          "wrong_count": 258,
+          "wrong_detection_count": 194,
+          "wrong_detection_rate": 0.751937984496124
+        },
+        "16": {
+          "actual_input_evals": 4280,
+          "avg_actual_inputs_per_candidate": 8.95397489539749,
+          "candidate_count": 478,
+          "compile_pass_count": 469,
+          "eval_count": 469,
+          "fixture_auc": 0.9211111111111111,
+          "mismatch_auc": 0.9955555555555555,
+          "paired_case_count": 50,
+          "requested_budget": 16,
+          "static_auc": 0.6805555555555556,
+          "v3_auc": 0.9955555555555555,
+          "wrong_count": 258,
+          "wrong_detection_count": 254,
+          "wrong_detection_rate": 0.9844961240310077
+        },
+        "2": {
+          "actual_input_evals": 956,
+          "avg_actual_inputs_per_candidate": 2.0,
+          "candidate_count": 478,
+          "compile_pass_count": 469,
+          "eval_count": 469,
+          "fixture_auc": 0.9211111111111111,
+          "mismatch_auc": 0.8566666666666667,
+          "paired_case_count": 50,
+          "requested_budget": 2,
+          "static_auc": 0.6805555555555556,
+          "v3_auc": 0.8566666666666667,
+          "wrong_count": 258,
+          "wrong_detection_count": 196,
+          "wrong_detection_rate": 0.7596899224806202
+        },
+        "4": {
+          "actual_input_evals": 1912,
+          "avg_actual_inputs_per_candidate": 4.0,
+          "candidate_count": 478,
+          "compile_pass_count": 469,
+          "eval_count": 469,
+          "fixture_auc": 0.9211111111111111,
+          "mismatch_auc": 0.9555555555555556,
+          "paired_case_count": 50,
+          "requested_budget": 4,
+          "static_auc": 0.6805555555555556,
+          "v3_auc": 0.9555555555555556,
+          "wrong_count": 258,
+          "wrong_detection_count": 234,
+          "wrong_detection_rate": 0.9069767441860465
+        },
+        "8": {
+          "actual_input_evals": 3160,
+          "avg_actual_inputs_per_candidate": 6.610878661087866,
+          "candidate_count": 478,
+          "compile_pass_count": 469,
+          "eval_count": 469,
+          "fixture_auc": 0.9211111111111111,
+          "mismatch_auc": 0.9955555555555555,
+          "paired_case_count": 50,
+          "requested_budget": 8,
+          "static_auc": 0.6805555555555556,
+          "v3_auc": 0.9955555555555555,
+          "wrong_count": 258,
+          "wrong_detection_count": 254,
+          "wrong_detection_rate": 0.9844961240310077
+        }
+      },
+      "dataset_id": "phase7c2_static_hard_public",
+      "eval_candidate_count": 503,
+      "rerun_candidate_count": 478,
+      "skipped": [
+        {
+          "candidate_id": "phase7c2_O0_codefuse_3_large_stack_frame_original_control",
+          "case_id": "codefuse_3_large_stack_frame",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7c2_O0_codefuse_3_large_stack_frame_predicate_strictness_01_00",
+          "case_id": "codefuse_3_large_stack_frame",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7c2_O0_codefuse_3_large_stack_frame_return_expr_plus_one_02",
+          "case_id": "codefuse_3_large_stack_frame",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7c2_O0_codefuse_3_large_stack_frame_constant_plus_one_03",
+          "case_id": "codefuse_3_large_stack_frame",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7c2_O2_codefuse_3_large_stack_frame_original_control",
+          "case_id": "codefuse_3_large_stack_frame",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7c2_O2_codefuse_3_large_stack_frame_return_expr_plus_one_02",
+          "case_id": "codefuse_3_large_stack_frame",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7c2_O2_codefuse_3_large_stack_frame_constant_plus_one_03",
+          "case_id": "codefuse_3_large_stack_frame",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7c2_O0_codefuse_4_func_no_args_original_control",
+          "case_id": "codefuse_4_func_no_args",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7c2_O0_codefuse_4_func_no_args_return_expr_plus_one_00",
+          "case_id": "codefuse_4_func_no_args",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7c2_O0_codefuse_4_func_no_args_constant_plus_one_01",
+          "case_id": "codefuse_4_func_no_args",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7c2_O2_codefuse_4_func_no_args_original_control",
+          "case_id": "codefuse_4_func_no_args",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7c2_O2_codefuse_4_func_no_args_return_expr_plus_one_00",
+          "case_id": "codefuse_4_func_no_args",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7c2_O2_codefuse_4_func_no_args_constant_plus_one_01",
+          "case_id": "codefuse_4_func_no_args",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7c2_O0_codefuse_7_param_implementation_defined_original_control",
+          "case_id": "codefuse_7_param_implementation_defined",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7c2_O0_codefuse_7_param_implementation_defined_predicate_strictness_01_00",
+          "case_id": "codefuse_7_param_implementation_defined",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7c2_O0_codefuse_7_param_implementation_defined_compound_assignment_06_01",
+          "case_id": "codefuse_7_param_implementation_defined",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7c2_O0_codefuse_7_param_implementation_defined_arithmetic_operator_09_02",
+          "case_id": "codefuse_7_param_implementation_defined",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7c2_O0_codefuse_7_param_implementation_defined_bitshift_direction_15_03",
+          "case_id": "codefuse_7_param_implementation_defined",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7c2_O0_codefuse_7_param_implementation_defined_return_expr_plus_one_04",
+          "case_id": "codefuse_7_param_implementation_defined",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7c2_O2_codefuse_7_param_implementation_defined_original_control",
+          "case_id": "codefuse_7_param_implementation_defined",
+          "reason": "no_inputs"
+        }
+      ],
+      "skipped_count": 25,
+      "source_candidate_count": 524,
+      "title": "Phase 7C2 static-hard public"
+    },
+    "phase7e_llm_public_full_topup": {
+      "budget_metrics": {
+        "1": {
+          "actual_input_evals": 136,
+          "avg_actual_inputs_per_candidate": 1.0,
+          "candidate_count": 136,
+          "compile_pass_count": 136,
+          "eval_count": 136,
+          "fixture_auc": 0.9741379310344828,
+          "mismatch_auc": 0.8362068965517241,
+          "paired_case_count": 24,
+          "requested_budget": 1,
+          "static_auc": 0.7758620689655172,
+          "v3_auc": 0.8362068965517241,
+          "wrong_count": 36,
+          "wrong_detection_count": 19,
+          "wrong_detection_rate": 0.5277777777777778
+        },
+        "16": {
+          "actual_input_evals": 1259,
+          "avg_actual_inputs_per_candidate": 9.257352941176471,
+          "candidate_count": 136,
+          "compile_pass_count": 136,
+          "eval_count": 136,
+          "fixture_auc": 0.9741379310344828,
+          "mismatch_auc": 0.9827586206896551,
+          "paired_case_count": 24,
+          "requested_budget": 16,
+          "static_auc": 0.7758620689655172,
+          "v3_auc": 0.9827586206896551,
+          "wrong_count": 36,
+          "wrong_detection_count": 35,
+          "wrong_detection_rate": 0.9722222222222222
+        },
+        "2": {
+          "actual_input_evals": 272,
+          "avg_actual_inputs_per_candidate": 2.0,
+          "candidate_count": 136,
+          "compile_pass_count": 136,
+          "eval_count": 136,
+          "fixture_auc": 0.9741379310344828,
+          "mismatch_auc": 0.8620689655172413,
+          "paired_case_count": 24,
+          "requested_budget": 2,
+          "static_auc": 0.7758620689655172,
+          "v3_auc": 0.8620689655172413,
+          "wrong_count": 36,
+          "wrong_detection_count": 21,
+          "wrong_detection_rate": 0.5833333333333334
+        },
+        "4": {
+          "actual_input_evals": 544,
+          "avg_actual_inputs_per_candidate": 4.0,
+          "candidate_count": 136,
+          "compile_pass_count": 136,
+          "eval_count": 136,
+          "fixture_auc": 0.9741379310344828,
+          "mismatch_auc": 0.9568965517241379,
+          "paired_case_count": 24,
+          "requested_budget": 4,
+          "static_auc": 0.7758620689655172,
+          "v3_auc": 0.9568965517241379,
+          "wrong_count": 36,
+          "wrong_detection_count": 33,
+          "wrong_detection_rate": 0.9166666666666666
+        },
+        "8": {
+          "actual_input_evals": 907,
+          "avg_actual_inputs_per_candidate": 6.669117647058823,
+          "candidate_count": 136,
+          "compile_pass_count": 136,
+          "eval_count": 136,
+          "fixture_auc": 0.9741379310344828,
+          "mismatch_auc": 0.9827586206896551,
+          "paired_case_count": 24,
+          "requested_budget": 8,
+          "static_auc": 0.7758620689655172,
+          "v3_auc": 0.9827586206896551,
+          "wrong_count": 36,
+          "wrong_detection_count": 35,
+          "wrong_detection_rate": 0.9722222222222222
+        }
+      },
+      "dataset_id": "phase7e_llm_public_full_topup",
+      "eval_candidate_count": 143,
+      "rerun_candidate_count": 136,
+      "skipped": [
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_4_func_no_args_strict_rewrite_00",
+          "case_id": "codefuse_4_func_no_args",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7_llm_public_cuda2_s0_codefuse_4_func_no_args_strict_bug_00",
+          "case_id": "codefuse_4_func_no_args",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7_llm_public_cuda3_s1_codefuse_3_large_stack_frame_strict_rewrite_00",
+          "case_id": "codefuse_3_large_stack_frame",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7_llm_public_topup_full2_s0_codefuse_4_func_no_args_strict_rewrite_00",
+          "case_id": "codefuse_4_func_no_args",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7_llm_public_topup_full2_s0_codefuse_4_func_no_args_strict_bug_00",
+          "case_id": "codefuse_4_func_no_args",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7_llm_public_topup_full2_s1_codefuse_3_large_stack_frame_strict_rewrite_00",
+          "case_id": "codefuse_3_large_stack_frame",
+          "reason": "no_inputs"
+        },
+        {
+          "candidate_id": "phase7_llm_public_topup_full2_s1_codefuse_3_large_stack_frame_strict_bug_00",
+          "case_id": "codefuse_3_large_stack_frame",
+          "reason": "no_inputs"
+        }
+      ],
+      "skipped_count": 7,
+      "source_candidate_count": 195,
+      "title": "Phase 7E LLM public full+top-up"
+    }
+  },
+  "gate": {
+    "phase6r_budget8_auc_gate": false,
+    "phase6r_budget8_detection_gate": false,
+    "phase7c2_budget8_auc_gate": true,
+    "phase7c2_budget8_detection_gate": true
+  },
+  "max_budget": 16,
+  "phase": "phase10_low_budget_rerun",
+  "verdict": "low-budget-proxy-overestimated"
+}

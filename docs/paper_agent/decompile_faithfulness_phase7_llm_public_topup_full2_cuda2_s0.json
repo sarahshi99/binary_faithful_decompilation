@@ -1,0 +1,82 @@
+{
+  "baseline_auc": {
+    "fixture_only": 1.0,
+    "static_structured_proxy": 0.875,
+    "v3_trace_total": 1.0
+  },
+  "behavior_label_counts": {
+    "compile_fail": 16,
+    "faithful": 24,
+    "plausible_wrong": 6
+  },
+  "best_non_oracle_baseline_auc": 1.0,
+  "candidate_count": 46,
+  "candidate_manifest_verdict": "needs-more-phase7-llm-public-samples",
+  "case_ids": [
+    "codefuse_1_conditional_return",
+    "codefuse_1_goto_forward",
+    "codefuse_1_if_elseif_long",
+    "codefuse_1_loop_complex_cond",
+    "codefuse_1_loop_dowhile",
+    "codefuse_1_loop_modify_var",
+    "codefuse_1_loop_nested",
+    "codefuse_1_multi_return",
+    "codefuse_1_nested_if_deep",
+    "codefuse_1_opaque_predicate",
+    "codefuse_1_single_if",
+    "codefuse_1_switch_default",
+    "codefuse_1_switch_large",
+    "codefuse_1_ternary_op",
+    "codefuse_2_process_char",
+    "codefuse_2_process_short",
+    "codefuse_3_local_array",
+    "codefuse_3_vla_stack",
+    "codefuse_4_arm_aapcs_func",
+    "codefuse_4_fastcall_func",
+    "codefuse_4_func_b",
+    "codefuse_4_func_no_args",
+    "codefuse_4_ms_x64_func",
+    "codefuse_4_param_order_dep",
+    "codefuse_4_ret_complex_expr",
+    "codefuse_4_stdcall_func",
+    "codefuse_5_23_my_func",
+    "codefuse_7_param_implementation_defined"
+  ],
+  "cleaning_status_counts": {
+    "parse_failed": 10,
+    "parsed_function": 46
+  },
+  "compile_pass_count": 30,
+  "compile_rate_among_parsed": 0.6521739130434783,
+  "created_at_utc": "2026-07-01T18:11:05.284061+00:00",
+  "fixture_collapse": false,
+  "fixture_passing_wrong_count": 0,
+  "generation_count": 56,
+  "generation_metadata_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_topup_full2_cuda2_s0/generation_metadata.jsonl",
+  "model_info": {
+    "cuda_visible_devices_policy": "not_set_by_script; explicit --device placement only",
+    "device": "cuda:2",
+    "max_new_tokens": 500,
+    "model_error": "",
+    "model_load_seconds": 12.32,
+    "model_loaded": true,
+    "model_path": "/home/shx/.cache/huggingface/hub/models--Dream-org--Dream-Coder-v0-Instruct-7B/snapshots/5d9e88c723af9045f362748b5284bdf43d9c501e",
+    "seed": 20260705,
+    "steps": 32,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "torch_dtype": "float16"
+  },
+  "output_dir": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_topup_full2_cuda2_s0",
+  "paired_case_count": 4,
+  "parsed_count": 46,
+  "parsed_rate": 0.8214285714285714,
+  "phase": "phase7_llm_public_generation",
+  "prompt_ids": [
+    "strict_rewrite",
+    "strict_bug"
+  ],
+  "records_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_topup_full2_cuda2_s0/records.jsonl",
+  "sota_delta_vs_best_baseline": 0.0,
+  "verdict": "needs-more-phase7-llm-public-samples"
+}

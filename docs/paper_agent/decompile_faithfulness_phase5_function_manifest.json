@@ -1,0 +1,2912 @@
+{
+  "created_at_utc": "2026-07-01T02:18:24.668110+00:00",
+  "extraction_errors": [],
+  "function_count": 38,
+  "functions": [
+    {
+      "case_id": "ta_gcd_GCD",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            12,
+            8
+          ],
+          [
+            17,
+            5
+          ],
+          [
+            25,
+            10
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            12,
+            8
+          ],
+          "expected": 4
+        },
+        {
+          "args": [
+            17,
+            5
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            25,
+            10
+          ],
+          "expected": 5
+        }
+      ],
+      "function_name": "GCD",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/math/gcd.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "loop",
+        "modulo",
+        "positive_domain"
+      ],
+      "signature": "int GCD(int x, int y)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_gcd_GCD.c",
+      "tags": [
+        "loop",
+        "modulo",
+        "positive_domain"
+      ]
+    },
+    {
+      "case_id": "ta_lcm_gcd",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            12,
+            8
+          ],
+          [
+            17,
+            5
+          ],
+          [
+            25,
+            10
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            12,
+            8
+          ],
+          "expected": 4
+        },
+        {
+          "args": [
+            17,
+            5
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            25,
+            10
+          ],
+          "expected": 5
+        }
+      ],
+      "function_name": "gcd",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/math/lcm.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "loop",
+        "modulo",
+        "positive_domain"
+      ],
+      "signature": "int gcd(int a, int b)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_lcm_gcd.c",
+      "tags": [
+        "loop",
+        "modulo",
+        "positive_domain"
+      ]
+    },
+    {
+      "case_id": "ta_lcm_lcm",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            15,
+            20
+          ],
+          [
+            12,
+            18
+          ],
+          [
+            7,
+            5
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            15,
+            20
+          ],
+          "expected": 60
+        },
+        {
+          "args": [
+            12,
+            18
+          ],
+          "expected": 36
+        },
+        {
+          "args": [
+            7,
+            5
+          ],
+          "expected": 35
+        }
+      ],
+      "function_name": "lcm",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/math/lcm.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "arithmetic",
+        "division",
+        "positive_domain"
+      ],
+      "signature": "int lcm(int a, int b)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_lcm_lcm.c",
+      "tags": [
+        "arithmetic",
+        "division",
+        "positive_domain"
+      ]
+    },
+    {
+      "case_id": "ta_armstrong_power",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            2,
+            3
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            2,
+            3
+          ],
+          "expected": 8
+        },
+        {
+          "args": [
+            5,
+            0
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            3,
+            4
+          ],
+          "expected": 81
+        }
+      ],
+      "function_name": "power",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/math/armstrong_number.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "recursion",
+        "boundary",
+        "nonnegative_domain"
+      ],
+      "signature": "int power(int x, unsigned int y)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_armstrong_power.c",
+      "tags": [
+        "recursion",
+        "boundary",
+        "nonnegative_domain"
+      ]
+    },
+    {
+      "case_id": "ta_armstrong_order",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            7
+          ],
+          [
+            153
+          ],
+          [
+            1000
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            7
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            153
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            1000
+          ],
+          "expected": 4
+        }
+      ],
+      "function_name": "order",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/math/armstrong_number.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "loop",
+        "digits",
+        "nonnegative_domain"
+      ],
+      "signature": "int order(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_armstrong_order.c",
+      "tags": [
+        "loop",
+        "digits",
+        "nonnegative_domain"
+      ]
+    },
+    {
+      "case_id": "ta_armstrong_isArmstrong",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            153
+          ],
+          [
+            370
+          ],
+          [
+            1253
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            153
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            370
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            1253
+          ],
+          "expected": 0
+        }
+      ],
+      "function_name": "isArmstrong",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/math/armstrong_number.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "digits",
+        "helper_dependency",
+        "boundary"
+      ],
+      "signature": "int isArmstrong(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_armstrong_isArmstrong.c",
+      "tags": [
+        "digits",
+        "helper_dependency",
+        "boundary"
+      ]
+    },
+    {
+      "case_id": "ta_decimal_to_binary",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            7
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 101
+        },
+        {
+          "args": [
+            7
+          ],
+          "expected": 111
+        }
+      ],
+      "function_name": "decimal_to_binary",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/conversions/decimal_to_binary_recursion.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "conversion",
+        "recursion",
+        "nonnegative_domain"
+      ],
+      "signature": "int decimal_to_binary(unsigned int number)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_decimal_to_binary.c",
+      "tags": [
+        "conversion",
+        "recursion",
+        "nonnegative_domain"
+      ]
+    },
+    {
+      "case_id": "ta_decimal_to_octal",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            7
+          ],
+          [
+            8
+          ],
+          [
+            64
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            7
+          ],
+          "expected": 7
+        },
+        {
+          "args": [
+            8
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            64
+          ],
+          "expected": 100
+        }
+      ],
+      "function_name": "decimal_to_octal",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/conversions/decimal_to_octal_recursion.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "conversion",
+        "recursion",
+        "boundary"
+      ],
+      "signature": "int decimal_to_octal(int decimal)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_decimal_to_octal.c",
+      "tags": [
+        "conversion",
+        "recursion",
+        "boundary"
+      ]
+    },
+    {
+      "case_id": "ta_binary_to_octal_three_digits",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            101
+          ],
+          [
+            111
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            101
+          ],
+          "expected": 101
+        },
+        {
+          "args": [
+            111
+          ],
+          "expected": 111
+        }
+      ],
+      "function_name": "three_digits",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/conversions/binary_to_octal.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "conversion",
+        "digits",
+        "loop"
+      ],
+      "signature": "int three_digits(int n)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_binary_to_octal_three_digits.c",
+      "tags": [
+        "conversion",
+        "digits",
+        "loop"
+      ]
+    },
+    {
+      "case_id": "ta_affine_mod_inverse",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            1,
+            95
+          ],
+          [
+            7,
+            95
+          ],
+          [
+            11,
+            95
+          ],
+          [
+            0,
+            95
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            95
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            7,
+            95
+          ],
+          "expected": -27
+        },
+        {
+          "args": [
+            11,
+            95
+          ],
+          "expected": 26
+        },
+        {
+          "args": [
+            0,
+            95
+          ],
+          "expected": 0
+        }
+      ],
+      "function_name": "modular_multiplicative_inverse",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/cipher/affine.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "modulo",
+        "loop",
+        "zero_boundary"
+      ],
+      "signature": "int modular_multiplicative_inverse(unsigned int a, unsigned int m)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_affine_mod_inverse.c",
+      "tags": [
+        "modulo",
+        "loop",
+        "zero_boundary"
+      ]
+    },
+    {
+      "case_id": "ta_euler_is_palindromic",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            121
+          ],
+          [
+            123
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            121
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            123
+          ],
+          "expected": 0
+        }
+      ],
+      "function_name": "is_palindromic",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/project_euler/problem_4/sol.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "digits",
+        "loop",
+        "boundary"
+      ],
+      "signature": "int is_palindromic(unsigned int n)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_euler_is_palindromic.c",
+      "tags": [
+        "digits",
+        "loop",
+        "boundary"
+      ]
+    },
+    {
+      "case_id": "ta_leetcode_tribonacci",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            4
+          ],
+          [
+            8
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            4
+          ],
+          "expected": 4
+        },
+        {
+          "args": [
+            8
+          ],
+          "expected": 44
+        }
+      ],
+      "function_name": "tribonacci",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/leetcode/src/1137.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "dynamic_programming",
+        "loop",
+        "boundary"
+      ],
+      "signature": "int tribonacci(int n)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_leetcode_tribonacci.c",
+      "tags": [
+        "dynamic_programming",
+        "loop",
+        "boundary"
+      ]
+    },
+    {
+      "case_id": "ta_leetcode_fib",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            8
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 5
+        },
+        {
+          "args": [
+            8
+          ],
+          "expected": 21
+        }
+      ],
+      "function_name": "fib",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/leetcode/src/509.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "recursion",
+        "boundary",
+        "nonnegative_domain"
+      ],
+      "signature": "int fib(int N)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_leetcode_fib.c",
+      "tags": [
+        "recursion",
+        "boundary",
+        "nonnegative_domain"
+      ]
+    },
+    {
+      "case_id": "ta_leetcode_divide",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            10,
+            2
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            12,
+            5
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            10,
+            2
+          ],
+          "expected": 5
+        },
+        {
+          "args": [
+            7,
+            3
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            1,
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            12,
+            5
+          ],
+          "expected": 2
+        }
+      ],
+      "function_name": "divide",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/leetcode/src/29.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "division",
+        "loop",
+        "positive_domain"
+      ],
+      "signature": "int divide(int dividend, int divisor)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_leetcode_divide.c",
+      "tags": [
+        "division",
+        "loop",
+        "positive_domain"
+      ]
+    },
+    {
+      "case_id": "ta_leetcode_reverse",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            123
+          ],
+          [
+            -123
+          ],
+          [
+            120
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            123
+          ],
+          "expected": 321
+        },
+        {
+          "args": [
+            -123
+          ],
+          "expected": -321
+        },
+        {
+          "args": [
+            120
+          ],
+          "expected": 21
+        }
+      ],
+      "function_name": "reverse",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/leetcode/src/7.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "digits",
+        "sign_zero",
+        "overflow_guard"
+      ],
+      "signature": "int reverse(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_leetcode_reverse.c",
+      "tags": [
+        "digits",
+        "sign_zero",
+        "overflow_guard"
+      ]
+    },
+    {
+      "case_id": "ta_leetcode_range_bitwise_and",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            5,
+            7
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            8,
+            15
+          ],
+          [
+            12,
+            12
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            5,
+            7
+          ],
+          "expected": 4
+        },
+        {
+          "args": [
+            0,
+            1
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            8,
+            15
+          ],
+          "expected": 8
+        },
+        {
+          "args": [
+            12,
+            12
+          ],
+          "expected": 12
+        }
+      ],
+      "function_name": "rangeBitwiseAnd",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/leetcode/src/201.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "bitwise",
+        "loop",
+        "boundary"
+      ],
+      "signature": "int rangeBitwiseAnd(int m, int n)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_leetcode_range_bitwise_and.c",
+      "tags": [
+        "bitwise",
+        "loop",
+        "boundary"
+      ]
+    },
+    {
+      "case_id": "ta_leetcode_find_complement",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            5
+          ],
+          [
+            10
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            1
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            2
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            10
+          ],
+          "expected": 5
+        }
+      ],
+      "function_name": "findComplement",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/leetcode/src/476.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "bitwise",
+        "loop",
+        "positive_domain"
+      ],
+      "signature": "int findComplement(int num)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_leetcode_find_complement.c",
+      "tags": [
+        "bitwise",
+        "loop",
+        "positive_domain"
+      ]
+    },
+    {
+      "case_id": "ta_leetcode_hamming_distance",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            0,
+            255
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            4
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            3,
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            7,
+            7
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            0,
+            255
+          ],
+          "expected": 8
+        }
+      ],
+      "function_name": "hammingDistance",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/leetcode/src/461.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "bitwise",
+        "loop",
+        "zero_boundary"
+      ],
+      "signature": "int hammingDistance(int x, int y)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_leetcode_hamming_distance.c",
+      "tags": [
+        "bitwise",
+        "loop",
+        "zero_boundary"
+      ]
+    },
+    {
+      "case_id": "ta_leetcode_unique_paths",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            2,
+            3
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            3,
+            7
+          ],
+          "expected": 28
+        },
+        {
+          "args": [
+            4,
+            4
+          ],
+          "expected": 20
+        }
+      ],
+      "function_name": "uniquePaths",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/leetcode/src/62.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "dynamic_programming",
+        "multi_arg",
+        "positive_domain"
+      ],
+      "signature": "int uniquePaths(int m, int n)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_leetcode_unique_paths.c",
+      "tags": [
+        "dynamic_programming",
+        "multi_arg",
+        "positive_domain"
+      ]
+    },
+    {
+      "case_id": "ta_leetcode_max",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -3,
+            -1
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            2
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            2,
+            1
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            -3,
+            -1
+          ],
+          "expected": -1
+        },
+        {
+          "args": [
+            4,
+            4
+          ],
+          "expected": 4
+        }
+      ],
+      "function_name": "max",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/leetcode/src/110.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "branch",
+        "comparison",
+        "sign_zero"
+      ],
+      "signature": "int max(int a, int b)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_leetcode_max.c",
+      "tags": [
+        "branch",
+        "comparison",
+        "sign_zero"
+      ]
+    },
+    {
+      "case_id": "ta_leetcode_get_point_key",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 4,
+        "fixture_args": [
+          [
+            0,
+            0,
+            3,
+            4
+          ],
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            2,
+            1,
+            5,
+            5
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            0,
+            0,
+            3,
+            4
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "expected": 14
+        },
+        {
+          "args": [
+            2,
+            1,
+            5,
+            5
+          ],
+          "expected": 51
+        }
+      ],
+      "function_name": "getPointKey",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/leetcode/src/79.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "arithmetic",
+        "multi_arg",
+        "boundary"
+      ],
+      "signature": "int getPointKey(int i, int j, int boardSize, int boardColSize)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_leetcode_get_point_key.c",
+      "tags": [
+        "arithmetic",
+        "multi_arg",
+        "boundary"
+      ]
+    },
+    {
+      "case_id": "ta_leetcode_get_triplet_id",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            0,
+            0
+          ],
+          [
+            2,
+            8
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            8,
+            8
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            0,
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            2,
+            8
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            3,
+            3
+          ],
+          "expected": 4
+        },
+        {
+          "args": [
+            8,
+            8
+          ],
+          "expected": 8
+        }
+      ],
+      "function_name": "getTripletId",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/leetcode/src/37.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "division",
+        "grid_boundary",
+        "multi_arg"
+      ],
+      "signature": "int getTripletId(int i, int j)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_leetcode_get_triplet_id.c",
+      "tags": [
+        "division",
+        "grid_boundary",
+        "multi_arg"
+      ]
+    },
+    {
+      "case_id": "ta_leetcode_intersection_size",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 4,
+        "fixture_args": [
+          [
+            0,
+            2,
+            1,
+            3
+          ],
+          [
+            0,
+            1,
+            2,
+            3
+          ],
+          [
+            -2,
+            2,
+            -1,
+            1
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            0,
+            2,
+            1,
+            3
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            -2,
+            2,
+            -1,
+            1
+          ],
+          "expected": 2
+        }
+      ],
+      "function_name": "intersectionSize",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/leetcode/src/223.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "geometry",
+        "branch",
+        "boundary"
+      ],
+      "signature": "int intersectionSize(int p11, int p12, int p21, int p22)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_leetcode_intersection_size.c",
+      "tags": [
+        "geometry",
+        "branch",
+        "boundary"
+      ]
+    },
+    {
+      "case_id": "ta_leetcode_compute_area",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 8,
+        "fixture_args": [
+          [
+            -3,
+            0,
+            3,
+            4,
+            0,
+            -1,
+            9,
+            2
+          ],
+          [
+            0,
+            0,
+            1,
+            1,
+            2,
+            2,
+            3,
+            3
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            -3,
+            0,
+            3,
+            4,
+            0,
+            -1,
+            9,
+            2
+          ],
+          "expected": 45
+        },
+        {
+          "args": [
+            0,
+            0,
+            1,
+            1,
+            2,
+            2,
+            3,
+            3
+          ],
+          "expected": 2
+        }
+      ],
+      "function_name": "computeArea",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/leetcode/src/223.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "geometry",
+        "helper_dependency",
+        "multi_arg"
+      ],
+      "signature": "int computeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, int by2)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_leetcode_compute_area.c",
+      "tags": [
+        "geometry",
+        "helper_dependency",
+        "multi_arg"
+      ]
+    },
+    {
+      "case_id": "ta_leetcode_my_sqrt",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            4
+          ],
+          [
+            8
+          ],
+          [
+            16
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            4
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            8
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            16
+          ],
+          "expected": 4
+        }
+      ],
+      "function_name": "mySqrt",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/leetcode/src/69.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "binary_search",
+        "boundary",
+        "nonnegative_domain"
+      ],
+      "signature": "int mySqrt(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_leetcode_my_sqrt.c",
+      "tags": [
+        "binary_search",
+        "boundary",
+        "nonnegative_domain"
+      ]
+    },
+    {
+      "case_id": "ta_bucket_get_bucket_index",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            9
+          ],
+          [
+            10
+          ],
+          [
+            49
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            9
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            10
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            49
+          ],
+          "expected": 4
+        }
+      ],
+      "function_name": "getBucketIndex",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/sorting/bucket_sort.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "division",
+        "bucket_boundary",
+        "nonnegative_domain"
+      ],
+      "signature": "int getBucketIndex(int value)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_bucket_get_bucket_index.c",
+      "tags": [
+        "division",
+        "bucket_boundary",
+        "nonnegative_domain"
+      ]
+    },
+    {
+      "case_id": "ta_naval_valid_entry_line_column",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            1,
+            65
+          ],
+          [
+            10,
+            74
+          ],
+          [
+            0,
+            65
+          ],
+          [
+            5,
+            90
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            65
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            10,
+            74
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            0,
+            65
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            5,
+            90
+          ],
+          "expected": 0
+        }
+      ],
+      "function_name": "validEntryLineColumn",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/games/naval_battle.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "range_check",
+        "char_boundary",
+        "branch"
+      ],
+      "signature": "int validEntryLineColumn(int line, char column)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_naval_valid_entry_line_column.c",
+      "tags": [
+        "range_check",
+        "char_boundary",
+        "branch"
+      ]
+    },
+    {
+      "case_id": "ta_shunting_get_precedence",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            43
+          ],
+          [
+            45
+          ],
+          [
+            42
+          ],
+          [
+            94
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            43
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            45
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            42
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            94
+          ],
+          "expected": 3
+        }
+      ],
+      "function_name": "getPrecedence",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/misc/shunting_yard.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "char_boundary",
+        "branch",
+        "operator_precedence"
+      ],
+      "signature": "int getPrecedence(char operator)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_shunting_get_precedence.c",
+      "tags": [
+        "char_boundary",
+        "branch",
+        "operator_precedence"
+      ]
+    },
+    {
+      "case_id": "ta_shunting_get_associativity",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            43
+          ],
+          [
+            42
+          ],
+          [
+            94
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            43
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            42
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            94
+          ],
+          "expected": 0
+        }
+      ],
+      "function_name": "getAssociativity",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/misc/shunting_yard.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "char_boundary",
+        "branch",
+        "operator_associativity"
+      ],
+      "signature": "int getAssociativity(char operator)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_shunting_get_associativity.c",
+      "tags": [
+        "char_boundary",
+        "branch",
+        "operator_associativity"
+      ]
+    },
+    {
+      "case_id": "ta_infix_is_operand",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            65
+          ],
+          [
+            122
+          ],
+          [
+            48
+          ],
+          [
+            43
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            65
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            122
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            48
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            43
+          ],
+          "expected": 0
+        }
+      ],
+      "function_name": "isOprnd",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/conversions/infix_to_postfix.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "char_boundary",
+        "range_check",
+        "branch"
+      ],
+      "signature": "int isOprnd(char ch)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_infix_is_operand.c",
+      "tags": [
+        "char_boundary",
+        "range_check",
+        "branch"
+      ]
+    },
+    {
+      "case_id": "ta_infix_precedence_two",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            42,
+            43
+          ],
+          [
+            43,
+            42
+          ],
+          [
+            36,
+            43
+          ],
+          [
+            43,
+            36
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            42,
+            43
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            43,
+            42
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            36,
+            43
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            43,
+            36
+          ],
+          "expected": 0
+        }
+      ],
+      "function_name": "getPrecedence",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/conversions/infix_to_postfix.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "char_boundary",
+        "operator_precedence",
+        "multi_arg"
+      ],
+      "signature": "int getPrecedence (char op1, char op2)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_infix_precedence_two.c",
+      "tags": [
+        "char_boundary",
+        "operator_precedence",
+        "multi_arg"
+      ]
+    },
+    {
+      "case_id": "ta_leetcode_min",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -3,
+            -1
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            2
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            2,
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            -3,
+            -1
+          ],
+          "expected": -3
+        },
+        {
+          "args": [
+            4,
+            4
+          ],
+          "expected": 4
+        }
+      ],
+      "function_name": "min",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/leetcode/src/11.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "branch",
+        "comparison",
+        "sign_zero"
+      ],
+      "signature": "int min(int a, int b)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_leetcode_min.c",
+      "tags": [
+        "branch",
+        "comparison",
+        "sign_zero"
+      ]
+    },
+    {
+      "case_id": "ta_leetcode_maxval",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -3,
+            -1
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "note": "bounded_integer_inputs",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "direct_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            2
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            2,
+            1
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            -3,
+            -1
+          ],
+          "expected": -1
+        },
+        {
+          "args": [
+            4,
+            4
+          ],
+          "expected": 4
+        }
+      ],
+      "function_name": "maxval",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/thealgorithms_c/leetcode/src/104.c",
+      "project": "thealgorithms_c",
+      "risk_families": [
+        "branch",
+        "comparison",
+        "sign_zero"
+      ],
+      "signature": "int maxval(int a, int b)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ta_leetcode_maxval.c",
+      "tags": [
+        "branch",
+        "comparison",
+        "sign_zero"
+      ]
+    },
+    {
+      "case_id": "ca_int_hash_value",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            -7
+          ],
+          [
+            255
+          ]
+        ],
+        "note": "bounded_integer_adapter_over_original_pointer_api",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "scalar_adapter",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            -7
+          ],
+          "expected": -7
+        },
+        {
+          "args": [
+            255
+          ],
+          "expected": 255
+        }
+      ],
+      "function_name": "ca_int_hash_value",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/c_algorithms/src/hash-int.c",
+      "project": "c_algorithms",
+      "risk_families": [
+        "adapter",
+        "hash",
+        "sign_zero"
+      ],
+      "signature": "int ca_int_hash_value(int value)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ca_int_hash_value.c",
+      "tags": [
+        "adapter",
+        "hash",
+        "sign_zero"
+      ]
+    },
+    {
+      "case_id": "ca_int_equal_values",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            -7,
+            -7
+          ],
+          [
+            255,
+            -255
+          ]
+        ],
+        "note": "bounded_integer_adapter_over_original_pointer_api",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "scalar_adapter",
+      "fixtures": [
+        {
+          "args": [
+            0,
+            0
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            1,
+            2
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            -7,
+            -7
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            255,
+            -255
+          ],
+          "expected": 0
+        }
+      ],
+      "function_name": "ca_int_equal_values",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/c_algorithms/src/compare-int.c",
+      "project": "c_algorithms",
+      "risk_families": [
+        "adapter",
+        "comparison",
+        "sign_zero"
+      ],
+      "signature": "int ca_int_equal_values(int left, int right)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ca_int_equal_values.c",
+      "tags": [
+        "adapter",
+        "comparison",
+        "sign_zero"
+      ]
+    },
+    {
+      "case_id": "ca_int_compare_values",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            -7,
+            -3
+          ]
+        ],
+        "note": "bounded_integer_adapter_over_original_pointer_api",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "scalar_adapter",
+      "fixtures": [
+        {
+          "args": [
+            0,
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1,
+            2
+          ],
+          "expected": -1
+        },
+        {
+          "args": [
+            2,
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            -7,
+            -3
+          ],
+          "expected": -1
+        }
+      ],
+      "function_name": "ca_int_compare_values",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/c_algorithms/src/compare-int.c",
+      "project": "c_algorithms",
+      "risk_families": [
+        "adapter",
+        "comparison",
+        "sign_zero"
+      ],
+      "signature": "int ca_int_compare_values(int left, int right)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ca_int_compare_values.c",
+      "tags": [
+        "adapter",
+        "comparison",
+        "sign_zero"
+      ]
+    },
+    {
+      "case_id": "ca_string_hash_selector",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "note": "bounded_integer_adapter_over_original_pointer_api",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "scalar_adapter",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 253193259
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 215243787
+        },
+        {
+          "args": [
+            2
+          ],
+          "expected": 2090109345
+        },
+        {
+          "args": [
+            3
+          ],
+          "expected": 5381
+        }
+      ],
+      "function_name": "ca_string_hash_selector",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/c_algorithms/src/hash-string.c",
+      "project": "c_algorithms",
+      "risk_families": [
+        "adapter",
+        "hash",
+        "branch"
+      ],
+      "signature": "int ca_string_hash_selector(int selector)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ca_string_hash_selector.c",
+      "tags": [
+        "adapter",
+        "hash",
+        "branch"
+      ]
+    },
+    {
+      "case_id": "ca_string_nocase_hash_selector",
+      "counts_for_phase5_real_project_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "note": "bounded_integer_adapter_over_original_pointer_api",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "scalar_adapter",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 253193259
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 253193259
+        },
+        {
+          "args": [
+            2
+          ],
+          "expected": 2090109345
+        },
+        {
+          "args": [
+            3
+          ],
+          "expected": 5381
+        }
+      ],
+      "function_name": "ca_string_nocase_hash_selector",
+      "original_source_path": "analysis_inputs/decompile_faithfulness/phase5_external_sources/c_algorithms/src/hash-string.c",
+      "project": "c_algorithms",
+      "risk_families": [
+        "adapter",
+        "hash",
+        "case_boundary"
+      ],
+      "signature": "int ca_string_nocase_hash_selector(int selector)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase5_sources/ca_string_nocase_hash_selector.c",
+      "tags": [
+        "adapter",
+        "hash",
+        "case_boundary"
+      ]
+    }
+  ],
+  "minimum_required": {
+    "eligible_functions": 30,
+    "source_projects": 2
+  },
+  "phase": "phase5_real_project_source_known_transfer",
+  "phase5_real_project_eligible_function_count": 38,
+  "source_projects": [
+    "c_algorithms",
+    "thealgorithms_c"
+  ],
+  "verdict": "pass-phase5-source-gate"
+}

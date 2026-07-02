@@ -1,0 +1,48 @@
+{
+  "benchmark": "CodeFuse-DeBench",
+  "candidate_count": 1,
+  "candidate_layers": [
+    "llm_strict_rewrite",
+    "llm_strict_bug"
+  ],
+  "candidates": [
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase7_llm_preflight_bug500_cuda2_s0_codefuse_1_single_if_strict_bug_00",
+          "case_id": "codefuse_1_single_if",
+          "cleaning_status": "parsed_function",
+          "function_source": "int single_if(int x) {\n    // Introduce a bug by modifying the multiplication operation\n    if (x > 0) {\n        x = x + 1; // Bug: x * 2\n    }\n    return x;\n}\n",
+          "generation_index": 0,
+          "label": "plausible_wrong",
+          "mutation_type": "phase7_llm_public_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_preflight_bug500_cuda2/raw/phase7_llm_preflight_bug500_cuda2_s0_codefuse_1_single_if_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 500,
+            "steps": 32,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "phase7_public_local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "codefuse_1_single_if"
+    }
+  ],
+  "compile_pass_count": 1,
+  "compile_pass_target_min": 100,
+  "created_at_utc": "2026-07-01T17:48:45.160189+00:00",
+  "generation_metadata_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_preflight_bug500_cuda2/generation_metadata.jsonl",
+  "gpu_decision": "started",
+  "output_dir": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_preflight_bug500_cuda2",
+  "paired_function_count": 0,
+  "paired_function_target_min": 20,
+  "phase": "phase7_llm_public_candidate_generation",
+  "records_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase7_llm_public_preflight_bug500_cuda2/records.jsonl",
+  "shard_count": 1,
+  "shard_index": 0,
+  "source_manifest_function_count": 56,
+  "verdict": "needs-more-phase7-llm-public-samples"
+}

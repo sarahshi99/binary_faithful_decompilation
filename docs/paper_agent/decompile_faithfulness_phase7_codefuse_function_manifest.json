@@ -1,0 +1,4180 @@
+{
+  "benchmark": "CodeFuse-DeBench",
+  "codefuse_root": "/home/shx/projects/binary_faithful_decompilation/external/CodeFuse-DeBench-shallow",
+  "created_at_utc": "2026-07-01T16:42:17.203516+00:00",
+  "function_count": 56,
+  "functions": [
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_sequential_ops",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 3,
+        "fixture_args": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            5,
+            3,
+            1
+          ],
+          [
+            8,
+            4,
+            2
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            2,
+            3
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            5,
+            3,
+            1
+          ],
+          "expected": 15
+        },
+        {
+          "args": [
+            8,
+            4,
+            2
+          ],
+          "expected": 22
+        }
+      ],
+      "function_name": "sequential_ops",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "operator_boundary",
+        "multi_arg"
+      ],
+      "signature": "int sequential_ops(int a, int b, int c)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_sequential_ops.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_single_if",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": -3
+        }
+      ],
+      "function_name": "single_if",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "branch",
+        "operator_boundary"
+      ],
+      "signature": "int single_if(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_single_if.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_nested_if_2",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            1,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            8,
+            4
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            2
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            5,
+            3
+          ],
+          "expected": 8
+        },
+        {
+          "args": [
+            8,
+            4
+          ],
+          "expected": 12
+        }
+      ],
+      "function_name": "nested_if_2",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "branch",
+        "operator_boundary",
+        "multi_arg"
+      ],
+      "signature": "int nested_if_2(int a, int b)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_nested_if_2.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_nested_if_deep",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 5,
+        "fixture_args": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "expected": 5
+        },
+        {
+          "args": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "expected": 5
+        },
+        {
+          "args": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "expected": 5
+        }
+      ],
+      "function_name": "nested_if_deep",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "branch",
+        "operator_boundary",
+        "multi_arg"
+      ],
+      "signature": "int nested_if_deep(int a, int b, int c, int d, int e)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_nested_if_deep.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_if_elseif_chain",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 20
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": -1
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": -1
+        }
+      ],
+      "function_name": "if_elseif_chain",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "branch",
+        "operator_boundary"
+      ],
+      "signature": "int if_elseif_chain(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_if_elseif_chain.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_if_elseif_long",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 100
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 200
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": -1
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": -1
+        }
+      ],
+      "function_name": "if_elseif_long",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "branch",
+        "operator_boundary"
+      ],
+      "signature": "int if_elseif_long(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_if_elseif_long.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_switch_small",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 15
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 5
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": -1
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": -1
+        }
+      ],
+      "function_name": "switch_small",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "operator_boundary"
+      ],
+      "signature": "int switch_small(int op)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_switch_small.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_switch_large",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 50
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": -1
+        }
+      ],
+      "function_name": "switch_large",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "operator_boundary"
+      ],
+      "signature": "int switch_large(int op)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_switch_large.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_switch_default",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 100
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": 0
+        }
+      ],
+      "function_name": "switch_default",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "operator_boundary"
+      ],
+      "signature": "int switch_default(int op)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_switch_default.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_switch_fallthrough",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": -1
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": -1
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": -1
+        }
+      ],
+      "function_name": "switch_fallthrough",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "operator_boundary"
+      ],
+      "signature": "int switch_fallthrough(int op)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_switch_fallthrough.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_loop_for_fixed",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": 0
+        }
+      ],
+      "function_name": "loop_for_fixed",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "loop",
+        "operator_boundary"
+      ],
+      "signature": "int loop_for_fixed(int n)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_loop_for_fixed.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_loop_while",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": 1
+        }
+      ],
+      "function_name": "loop_while",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "loop",
+        "operator_boundary"
+      ],
+      "signature": "int loop_while(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_loop_while.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_loop_dowhile",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": 1
+        }
+      ],
+      "function_name": "loop_dowhile",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "loop",
+        "operator_boundary"
+      ],
+      "signature": "int loop_dowhile(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_loop_dowhile.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_loop_nested",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            1,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            8,
+            4
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            2
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            5,
+            3
+          ],
+          "expected": 15
+        },
+        {
+          "args": [
+            8,
+            4
+          ],
+          "expected": 32
+        }
+      ],
+      "function_name": "loop_nested",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "loop",
+        "operator_boundary",
+        "multi_arg"
+      ],
+      "signature": "int loop_nested(int m, int n)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_loop_nested.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_loop_break",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": -1
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": -1
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": -1
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": -1
+        }
+      ],
+      "function_name": "loop_break",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "branch",
+        "loop",
+        "operator_boundary"
+      ],
+      "signature": "int loop_break(int target)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_loop_break.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_loop_continue",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 9
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": 0
+        }
+      ],
+      "function_name": "loop_continue",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "branch",
+        "loop",
+        "operator_boundary"
+      ],
+      "signature": "int loop_continue(int n)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_loop_continue.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_goto_forward",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 50
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": -6
+        }
+      ],
+      "function_name": "goto_forward",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "branch",
+        "operator_boundary"
+      ],
+      "signature": "int goto_forward(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_goto_forward.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_goto_backward",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 120
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": 1
+        }
+      ],
+      "function_name": "goto_backward",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "branch",
+        "operator_boundary"
+      ],
+      "signature": "int goto_backward(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_goto_backward.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_ternary_op",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            1,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            8,
+            4
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            2
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            5,
+            3
+          ],
+          "expected": 5
+        },
+        {
+          "args": [
+            8,
+            4
+          ],
+          "expected": 8
+        }
+      ],
+      "function_name": "ternary_op",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "operator_boundary",
+        "multi_arg"
+      ],
+      "signature": "int ternary_op(int a, int b)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_ternary_op.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_loop_multi_exit",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": -1
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": -1
+        }
+      ],
+      "function_name": "loop_multi_exit",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "branch",
+        "loop",
+        "operator_boundary"
+      ],
+      "signature": "int loop_multi_exit(int target)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_loop_multi_exit.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_multi_return",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 6
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": -1
+        }
+      ],
+      "function_name": "multi_return",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "branch",
+        "operator_boundary"
+      ],
+      "signature": "int multi_return(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_multi_return.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_conditional_return",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": 3
+        }
+      ],
+      "function_name": "conditional_return",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "operator_boundary"
+      ],
+      "signature": "int conditional_return(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_conditional_return.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_loop_complex_cond",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 9
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": -3
+        }
+      ],
+      "function_name": "loop_complex_cond",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "loop",
+        "operator_boundary"
+      ],
+      "signature": "int loop_complex_cond(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_loop_complex_cond.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_loop_modify_var",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": 0
+        }
+      ],
+      "function_name": "loop_modify_var",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "branch",
+        "loop",
+        "operator_boundary"
+      ],
+      "signature": "int loop_modify_var(int n)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_loop_modify_var.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_state_machine",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            1,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            8,
+            4
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            2
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            5,
+            3
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            8,
+            4
+          ],
+          "expected": 3
+        }
+      ],
+      "function_name": "state_machine",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "branch",
+        "operator_boundary",
+        "multi_arg"
+      ],
+      "signature": "int state_machine(int event, int state)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_state_machine.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_obfuscated_cf",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": -6
+        }
+      ],
+      "function_name": "obfuscated_cf",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "branch",
+        "operator_boundary"
+      ],
+      "signature": "int obfuscated_cf(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_obfuscated_cf.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_1_opaque_predicate",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": -6
+        }
+      ],
+      "function_name": "opaque_predicate",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/1.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "branch",
+        "operator_boundary"
+      ],
+      "signature": "int opaque_predicate(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_1_opaque_predicate.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_2_process_char",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 5
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": -3
+        }
+      ],
+      "function_name": "process_char",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/2.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "branch",
+        "operator_boundary"
+      ],
+      "signature": "char process_char(char c)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_2_process_char.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_2_process_short",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            1,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            8,
+            4
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            2
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            5,
+            3
+          ],
+          "expected": 8
+        },
+        {
+          "args": [
+            8,
+            4
+          ],
+          "expected": 12
+        }
+      ],
+      "function_name": "process_short",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/2.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "operator_boundary",
+        "multi_arg"
+      ],
+      "signature": "short process_short(short a, short b)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_2_process_short.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_2_process_int",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 1
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 11
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": -5
+        }
+      ],
+      "function_name": "process_int",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/2.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "operator_boundary"
+      ],
+      "signature": "int process_int(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_2_process_int.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_2_process_bool",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": 0
+        }
+      ],
+      "function_name": "process_bool",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/2.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "operator_boundary"
+      ],
+      "signature": "_Bool process_bool(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_2_process_bool.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_3_local_vars",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 12
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 20
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": 4
+        }
+      ],
+      "function_name": "local_vars",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/3.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark"
+      ],
+      "signature": "int local_vars(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_3_local_vars.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_3_local_array",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 5
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 25
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": -15
+        }
+      ],
+      "function_name": "local_array",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/3.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "loop",
+        "operator_boundary"
+      ],
+      "signature": "int local_array(int n)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_3_local_array.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_3_large_stack_frame",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 0,
+        "fixture_args": [
+          []
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [],
+          "expected": 0
+        }
+      ],
+      "function_name": "large_stack_frame",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/3.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "loop",
+        "operator_boundary"
+      ],
+      "signature": "int large_stack_frame()",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_3_large_stack_frame.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_3_vla_stack",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": -1
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 4
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": -1
+        }
+      ],
+      "function_name": "vla_stack",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/3.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "branch",
+        "loop",
+        "operator_boundary"
+      ],
+      "signature": "int vla_stack(int n)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_3_vla_stack.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_4_cdecl_func",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            1,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            8,
+            4
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            2
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            5,
+            3
+          ],
+          "expected": 8
+        },
+        {
+          "args": [
+            8,
+            4
+          ],
+          "expected": 12
+        }
+      ],
+      "function_name": "cdecl_func",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/4.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "multi_arg"
+      ],
+      "signature": "int cdecl_func(int a, int b)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_4_cdecl_func.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_4_stdcall_func",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            1,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            8,
+            4
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            2
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            5,
+            3
+          ],
+          "expected": 15
+        },
+        {
+          "args": [
+            8,
+            4
+          ],
+          "expected": 32
+        }
+      ],
+      "function_name": "stdcall_func",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/4.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "multi_arg"
+      ],
+      "signature": "int stdcall_func(int a, int b)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_4_stdcall_func.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_4_fastcall_func",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 3,
+        "fixture_args": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            5,
+            3,
+            1
+          ],
+          [
+            8,
+            4,
+            2
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            2,
+            3
+          ],
+          "expected": 6
+        },
+        {
+          "args": [
+            5,
+            3,
+            1
+          ],
+          "expected": 9
+        },
+        {
+          "args": [
+            8,
+            4,
+            2
+          ],
+          "expected": 14
+        }
+      ],
+      "function_name": "fastcall_func",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/4.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "multi_arg"
+      ],
+      "signature": "int fastcall_func(int a, int b, int c)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_4_fastcall_func.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_4_arm_aapcs_func",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 5,
+        "fixture_args": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "expected": 15
+        },
+        {
+          "args": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "expected": 15
+        },
+        {
+          "args": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "expected": 15
+        }
+      ],
+      "function_name": "arm_aapcs_func",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/4.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "multi_arg"
+      ],
+      "signature": "int arm_aapcs_func(int a, int b, int c, int d, int e)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_4_arm_aapcs_func.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_4_mips_func",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 4,
+        "fixture_args": [
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "expected": 10
+        }
+      ],
+      "function_name": "mips_func",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/4.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "multi_arg"
+      ],
+      "signature": "int mips_func(int a, int b, int c, int d)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_4_mips_func.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_4_amd64_sysv_func",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 6,
+        "fixture_args": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "expected": 21
+        },
+        {
+          "args": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "expected": 21
+        },
+        {
+          "args": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "expected": 21
+        }
+      ],
+      "function_name": "amd64_sysv_func",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/4.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "multi_arg"
+      ],
+      "signature": "int amd64_sysv_func(int a, int b, int c, int d, int e, int f)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_4_amd64_sysv_func.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_4_ms_x64_func",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 5,
+        "fixture_args": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "expected": 15
+        },
+        {
+          "args": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "expected": 15
+        },
+        {
+          "args": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "expected": 15
+        }
+      ],
+      "function_name": "ms_x64_func",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/4.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "multi_arg"
+      ],
+      "signature": "int ms_x64_func(int a, int b, int c, int d, int e)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_4_ms_x64_func.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_4_vectorcall_func",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 4,
+        "fixture_args": [
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            1,
+            2,
+            3,
+            4
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "expected": 10
+        }
+      ],
+      "function_name": "vectorcall_func",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/4.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "multi_arg"
+      ],
+      "signature": "int vectorcall_func(int a, int b, int c, int d)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_4_vectorcall_func.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_4_func_no_args",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 0,
+        "fixture_args": [
+          []
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [],
+          "expected": 42
+        }
+      ],
+      "function_name": "func_no_args",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/4.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark"
+      ],
+      "signature": "int func_no_args(void)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_4_func_no_args.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_4_func_many_args",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 8,
+        "fixture_args": [
+          [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "expected": 36
+        },
+        {
+          "args": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "expected": 36
+        },
+        {
+          "args": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "expected": 36
+        }
+      ],
+      "function_name": "func_many_args",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/4.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "multi_arg"
+      ],
+      "signature": "int func_many_args(int a, int b, int c, int d, int e, int f, int g, int h)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_4_func_many_args.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_4_param_by_value_int",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": -6
+        }
+      ],
+      "function_name": "param_by_value_int",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/4.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "operator_boundary"
+      ],
+      "signature": "int param_by_value_int(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_4_param_by_value_int.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_4_param_order_dep",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            1,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            8,
+            4
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            2
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            5,
+            3
+          ],
+          "expected": 8
+        },
+        {
+          "args": [
+            8,
+            4
+          ],
+          "expected": 12
+        }
+      ],
+      "function_name": "param_order_dep",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/4.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "multi_arg"
+      ],
+      "signature": "int param_order_dep(int a, int b)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_4_param_order_dep.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_4_ret_basic_type",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": -6
+        }
+      ],
+      "function_name": "ret_basic_type",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/4.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark"
+      ],
+      "signature": "int ret_basic_type(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_4_ret_basic_type.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_4_func_a",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 11
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 15
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": 7
+        }
+      ],
+      "function_name": "func_a",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/4.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark"
+      ],
+      "signature": "int func_a(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_4_func_a.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_4_func_b",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": -6
+        }
+      ],
+      "function_name": "func_b",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/4.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark"
+      ],
+      "signature": "int func_b(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_4_func_b.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_4_ret_complex_expr",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 3,
+        "fixture_args": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            5,
+            3,
+            1
+          ],
+          [
+            8,
+            4,
+            2
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            2,
+            3
+          ],
+          "expected": 13
+        },
+        {
+          "args": [
+            5,
+            3,
+            1
+          ],
+          "expected": 2
+        },
+        {
+          "args": [
+            8,
+            4,
+            2
+          ],
+          "expected": 4
+        }
+      ],
+      "function_name": "ret_complex_expr",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/4.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "operator_boundary",
+        "multi_arg"
+      ],
+      "signature": "int ret_complex_expr(int x, int y, int z)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_4_ret_complex_expr.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_4_ret_multi_branch",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 20
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": -1
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": -1
+        }
+      ],
+      "function_name": "ret_multi_branch",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/4.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark"
+      ],
+      "signature": "int ret_multi_branch(int op)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_4_ret_multi_branch.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_5_23_param_multi_branch_compile",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 57072
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 57077
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 57097
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": 57057
+        }
+      ],
+      "function_name": "param_multi_branch_compile",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/5-23.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "branch",
+        "operator_boundary"
+      ],
+      "signature": "int param_multi_branch_compile(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_5_23_param_multi_branch_compile.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_5_23_my_func",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 1,
+        "fixture_args": [
+          [
+            0
+          ],
+          [
+            1
+          ],
+          [
+            5
+          ],
+          [
+            -3
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            0
+          ],
+          "expected": 0
+        },
+        {
+          "args": [
+            1
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 50
+        },
+        {
+          "args": [
+            -3
+          ],
+          "expected": -30
+        }
+      ],
+      "function_name": "my_func",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/5-23.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark"
+      ],
+      "signature": "int my_func(int x)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_5_23_my_func.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_7_param_integer_overflow",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 2,
+        "fixture_args": [
+          [
+            1,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            8,
+            4
+          ]
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [
+            1,
+            2
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            5,
+            3
+          ],
+          "expected": 8
+        },
+        {
+          "args": [
+            8,
+            4
+          ],
+          "expected": 12
+        }
+      ],
+      "function_name": "param_integer_overflow",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/7.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "branch",
+        "operator_boundary",
+        "multi_arg"
+      ],
+      "signature": "int param_integer_overflow(int a, int b)",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_7_param_integer_overflow.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    },
+    {
+      "benchmark": "CodeFuse-DeBench",
+      "case_id": "codefuse_7_param_implementation_defined",
+      "counts_for_phase7_public_benchmark_gate": true,
+      "domain": {
+        "arity": 0,
+        "fixture_args": [
+          []
+        ],
+        "note": "auto_generated_scalar_integer_fixtures",
+        "trace_generation": "bounded_cross_product_from_fixture_values"
+      },
+      "eligibility": {
+        "bounded_domain": true,
+        "deterministic": true,
+        "integer_only": true,
+        "no_external_state": true,
+        "no_heap": true,
+        "no_io": true
+      },
+      "extraction_kind": "codefuse_src_scalar_integer_function",
+      "fixtures": [
+        {
+          "args": [],
+          "expected": 47
+        }
+      ],
+      "function_name": "param_implementation_defined",
+      "original_source_path": "external/CodeFuse-DeBench-shallow/src/7.c",
+      "project": "CodeFuse-DeBench",
+      "risk_families": [
+        "public_benchmark",
+        "operator_boundary"
+      ],
+      "signature": "int param_implementation_defined()",
+      "source_path": "analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/codefuse_7_param_implementation_defined.c",
+      "tags": [
+        "codefuse_debench",
+        "public_benchmark",
+        "source_known"
+      ]
+    }
+  ],
+  "import_errors": [
+    {
+      "function_name": "process_long",
+      "reason": "RuntimeError('/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_2_process_long__oracle_fixture__trace__O0.trace.c: In function \u2018main\u2019:\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_2_process_long__oracle_fixture__trace__O0.trace.c:8:14: error: format \u2018%d\u2019 expects argument of type \u2018int\u2019, but argument 2 has type \u2018long int\u2019 [-Werror=format=]\\n    8 |     printf(\"%d\\\\n\", process_long(0));\\n      |             ~^     ~~~~~~~~~~~~~~~\\n      |              |     |\\n      |              int   long int\\n      |             %ld\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_2_process_long__oracle_fixture__trace__O0.trace.c:9:14: error: format \u2018%d\u2019 expects argument of type \u2018int\u2019, but argument 2 has type \u2018long int\u2019 [-Werror=format=]\\n    9 |     printf(\"%d\\\\n\", process_long(1));\\n      |             ~^     ~~~~~~~~~~~~~~~\\n      |              |     |\\n      |              int   long int\\n      |             %ld\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_2_process_long__oracle_fixture__trace__O0.trace.c:10:14: error: format \u2018%d\u2019 expects argument of type \u2018int\u2019, but argument 2 has type \u2018long int\u2019 [-Werror=format=]\\n   10 |     printf(\"%d\\\\n\", process_long(5));\\n      |             ~^     ~~~~~~~~~~~~~~~\\n      |              |     |\\n      |              int   long int\\n      |             %ld\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_2_process_long__oracle_fixture__trace__O0.trace.c:11:14: error: format \u2018%d\u2019 expects argument of type \u2018int\u2019, but argument 2 has type \u2018long int\u2019 [-Werror=format=]\\n   11 |     printf(\"%d\\\\n\", process_long(-3));\\n      |             ~^     ~~~~~~~~~~~~~~~~\\n      |              |     |\\n      |              int   long int\\n      |             %ld\\ncc1: all warnings being treated as errors\\n')",
+      "source_file": "2.c"
+    },
+    {
+      "function_name": "process_ll",
+      "reason": "RuntimeError('/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_2_process_ll__oracle_fixture__trace__O0.trace.c: In function \u2018main\u2019:\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_2_process_ll__oracle_fixture__trace__O0.trace.c:8:14: error: format \u2018%d\u2019 expects argument of type \u2018int\u2019, but argument 2 has type \u2018long long int\u2019 [-Werror=format=]\\n    8 |     printf(\"%d\\\\n\", process_ll(0));\\n      |             ~^     ~~~~~~~~~~~~~\\n      |              |     |\\n      |              int   long long int\\n      |             %lld\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_2_process_ll__oracle_fixture__trace__O0.trace.c:9:14: error: format \u2018%d\u2019 expects argument of type \u2018int\u2019, but argument 2 has type \u2018long long int\u2019 [-Werror=format=]\\n    9 |     printf(\"%d\\\\n\", process_ll(1));\\n      |             ~^     ~~~~~~~~~~~~~\\n      |              |     |\\n      |              int   long long int\\n      |             %lld\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_2_process_ll__oracle_fixture__trace__O0.trace.c:10:14: error: format \u2018%d\u2019 expects argument of type \u2018int\u2019, but argument 2 has type \u2018long long int\u2019 [-Werror=format=]\\n   10 |     printf(\"%d\\\\n\", process_ll(5));\\n      |             ~^     ~~~~~~~~~~~~~\\n      |              |     |\\n      |              int   long long int\\n      |             %lld\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_2_process_ll__oracle_fixture__trace__O0.trace.c:11:14: error: format \u2018%d\u2019 expects argument of type \u2018int\u2019, but argument 2 has type \u2018long long int\u2019 [-Werror=format=]\\n   11 |     printf(\"%d\\\\n\", process_ll(-3));\\n      |             ~^     ~~~~~~~~~~~~~~\\n      |              |     |\\n      |              int   long long int\\n      |             %lld\\ncc1: all warnings being treated as errors\\n')",
+      "source_file": "2.c"
+    },
+    {
+      "function_name": "local_struct",
+      "reason": "RuntimeError('/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_3_local_struct__oracle_fixture__trace__O0.trace.c: In function \u2018local_struct\u2019:\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_3_local_struct__oracle_fixture__trace__O0.trace.c:4:5: error: unknown type name \u2018Point\u2019; did you mean \u2018int\u2019?\\n    4 |     Point p = {x, x * 2};  // Structure on the stack\\n      |     ^~~~~\\n      |     int\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_3_local_struct__oracle_fixture__trace__O0.trace.c:4:19: error: excess elements in scalar initializer [-Werror]\\n    4 |     Point p = {x, x * 2};  // Structure on the stack\\n      |                   ^\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_3_local_struct__oracle_fixture__trace__O0.trace.c:4:19: note: (near initialization for \u2018p\u2019)\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_3_local_struct__oracle_fixture__trace__O0.trace.c:5:13: error: request for member \u2018x\u2019 in something not a structure or union\\n    5 |     return p.x + p.y;\\n      |             ^\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_3_local_struct__oracle_fixture__trace__O0.trace.c:5:19: error: request for member \u2018y\u2019 in something not a structure or union\\n    5 |     return p.x + p.y;\\n      |                   ^\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_3_local_struct__oracle_fixture__trace__O0.trace.c:4:11: error: variable \u2018p\u2019 set but not used [-Werror=unused-but-set-variable]\\n    4 |     Point p = {x, x * 2};  // Structure on the stack\\n      |           ^\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_3_local_struct__oracle_fixture__trace__O0.trace.c:6:1: error: control reaches end of non-void function [-Werror=return-type]\\n    6 | }\\n      | ^\\ncc1: all warnings being treated as errors\\n')",
+      "source_file": "3.c"
+    },
+    {
+      "function_name": "read_const_data",
+      "reason": "RuntimeError(\"/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_3_read_const_data__oracle_fixture__trace__O0.trace.c: In function \u2018read_const_data\u2019:\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_3_read_const_data__oracle_fixture__trace__O0.trace.c:4:12: error: \u2018const_global\u2019 undeclared (first use in this function)\\n    4 |     return const_global + const_string[4];  // 'o'\\n      |            ^~~~~~~~~~~~\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_3_read_const_data__oracle_fixture__trace__O0.trace.c:4:12: note: each undeclared identifier is reported only once for each function it appears in\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_3_read_const_data__oracle_fixture__trace__O0.trace.c:4:27: error: \u2018const_string\u2019 undeclared (first use in this function)\\n    4 |     return const_global + const_string[4];  // 'o'\\n      |                           ^~~~~~~~~~~~\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_3_read_const_data__oracle_fixture__trace__O0.trace.c:5:1: error: control reaches end of non-void function [-Werror=return-type]\\n    5 | }\\n      | ^\\ncc1: all warnings being treated as errors\\n\")",
+      "source_file": "3.c"
+    },
+    {
+      "function_name": "access_bss_var",
+      "reason": "RuntimeError('/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_3_access_bss_var__oracle_fixture__trace__O0.trace.c: In function \u2018access_bss_var\u2019:\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_3_access_bss_var__oracle_fixture__trace__O0.trace.c:4:12: error: \u2018bss_var\u2019 undeclared (first use in this function)\\n    4 |     return bss_var;  // Expected to return 0\\n      |            ^~~~~~~\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_3_access_bss_var__oracle_fixture__trace__O0.trace.c:4:12: note: each undeclared identifier is reported only once for each function it appears in\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_3_access_bss_var__oracle_fixture__trace__O0.trace.c:5:1: error: control reaches end of non-void function [-Werror=return-type]\\n    5 | }\\n      | ^\\ncc1: all warnings being treated as errors\\n')",
+      "source_file": "3.c"
+    },
+    {
+      "function_name": "access_bss_buffer",
+      "reason": "RuntimeError('/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_3_access_bss_buffer__oracle_fixture__trace__O0.trace.c: In function \u2018access_bss_buffer\u2019:\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_3_access_bss_buffer__oracle_fixture__trace__O0.trace.c:4:12: error: \u2018bss_buffer\u2019 undeclared (first use in this function)\\n    4 |     return bss_buffer[0];  // Expected to return 0\\n      |            ^~~~~~~~~~\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_3_access_bss_buffer__oracle_fixture__trace__O0.trace.c:4:12: note: each undeclared identifier is reported only once for each function it appears in\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_3_access_bss_buffer__oracle_fixture__trace__O0.trace.c:5:1: error: control reaches end of non-void function [-Werror=return-type]\\n    5 | }\\n      | ^\\ncc1: all warnings being treated as errors\\n')",
+      "source_file": "3.c"
+    },
+    {
+      "function_name": "param_macro_constants",
+      "reason": "RuntimeError('/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_5_23_param_macro_constants__oracle_fixture__trace__O0.trace.c: In function \u2018param_macro_constants\u2019:\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_5_23_param_macro_constants__oracle_fixture__trace__O0.trace.c:5:16: error: \u2018MAX_SIZE\u2019 undeclared (first use in this function)\\n    5 |     if (size > MAX_SIZE) {\\n      |                ^~~~~~~~\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_5_23_param_macro_constants__oracle_fixture__trace__O0.trace.c:5:16: note: each undeclared identifier is reported only once for each function it appears in\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_5_23_param_macro_constants__oracle_fixture__trace__O0.trace.c:6:16: error: \u2018BUFFER_COUNT\u2019 undeclared (first use in this function)\\n    6 |         return BUFFER_COUNT * 4;  // 16*4=64\\n      |                ^~~~~~~~~~~~\\n/home/shx/projects/binary_faithful_decompilation/analysis_inputs/decompile_faithfulness/phase7_codefuse_sources/oracle_fixtures/codefuse_5_23_param_macro_constants__oracle_fixture__trace__O0.trace.c:9:1: error: control reaches end of non-void function [-Werror=return-type]\\n    9 | }\\n      | ^\\ncc1: all warnings being treated as errors\\n')",
+      "source_file": "5-23.c"
+    }
+  ],
+  "import_mode": "partial_git_tree_src_scalar_integer_functions",
+  "minimum_required": {
+    "imported_functions": 50,
+    "oracle_ready": 30
+  },
+  "phase": "phase7_codefuse_public_benchmark_import",
+  "source_file_count": 8,
+  "verdict": "pending-preflight"
+}

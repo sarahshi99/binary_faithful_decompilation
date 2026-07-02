@@ -1,0 +1,82 @@
+{
+  "ccfa_gap": [
+    "Add direct public-benchmark rows or clearly justify the CodeFuse/public subset as the paper benchmark.",
+    "Add cost/runtime table, not only input-count table.",
+    "Add confidence intervals for Phase12 unified budget-8 deltas.",
+    "Add failure-case taxonomy for the remaining Ghidra budget-8 misses.",
+    "Add second compile-ready decompiler or explicitly state Ghidra-centered scope.",
+    "Write related-work comparison as validation/auditing, not generation leaderboard."
+  ],
+  "claims": {
+    "supported": [
+      "Budget-8 targeted dynamic re-execution passes current public static-hard, LLM-public, and Ghidra gates.",
+      "Fixture-neighbor input ordering improves low-budget detection with negligible average-input overhead.",
+      "The method is stronger than fixture-only and static structured legacy baselines in the current source-known setting.",
+      "The clean paper scope is source-known localized semantic drift auditing, not decompiler generation quality."
+    ],
+    "unsupported": [
+      "Universal external benchmark SOTA over decompilation-generation papers.",
+      "Cross-decompiler robustness beyond the current Ghidra-centered compile-ready evidence.",
+      "Replacing full semantic equivalence checking in unbounded programs.",
+      "Dynamic Trace v3 scoring components beat a strong generated-input mismatch baseline on current data."
+    ]
+  },
+  "created_at_utc": "2026-07-02T03:34:22.950794+00:00",
+  "inputs": {
+    "phase10_verdict": "low-budget-proxy-overestimated",
+    "phase12_verdict": "pass-unified-budget8-low-budget-eval",
+    "phase8_verdict": "strong-baseline-erases-v3-extra-margin"
+  },
+  "main_table_rows": [
+    {
+      "candidate_count": 166,
+      "dataset_id": "phase6r_ghidra_full",
+      "fixture_auc": 0.5,
+      "legacy_delta_vs_best": 0.48913043478260865,
+      "paired_case_count": 26,
+      "phase10_original_order_auc": 0.9565217391304348,
+      "phase12_avg_actual_inputs": 6.969879518072289,
+      "phase12_missed_wrong_count": 2,
+      "phase12_unified_budget8_auc": 0.9891304347826086,
+      "phase12_wrong_detection_rate": 0.972972972972973,
+      "static_auc": 0.8206521739130435,
+      "strong_baseline_delta_from_phase8": 0.0
+    },
+    {
+      "candidate_count": 478,
+      "dataset_id": "phase7c2_static_hard_public",
+      "fixture_auc": 0.9211111111111111,
+      "legacy_delta_vs_best": 0.3194444444444444,
+      "paired_case_count": 50,
+      "phase10_original_order_auc": 0.9955555555555555,
+      "phase12_avg_actual_inputs": 6.635983263598327,
+      "phase12_missed_wrong_count": 0,
+      "phase12_unified_budget8_auc": 1.0,
+      "phase12_wrong_detection_rate": 1.0,
+      "static_auc": 0.6805555555555556,
+      "strong_baseline_delta_from_phase8": 0.0
+    },
+    {
+      "candidate_count": 136,
+      "dataset_id": "phase7e_llm_public_full_topup",
+      "fixture_auc": 0.9741379310344828,
+      "legacy_delta_vs_best": 0.22413793103448276,
+      "paired_case_count": 24,
+      "phase10_original_order_auc": 0.9827586206896551,
+      "phase12_avg_actual_inputs": 6.6911764705882355,
+      "phase12_missed_wrong_count": 0,
+      "phase12_unified_budget8_auc": 1.0,
+      "phase12_wrong_detection_rate": 1.0,
+      "static_auc": 0.7758620689655172,
+      "strong_baseline_delta_from_phase8": 0.0
+    }
+  ],
+  "method": {
+    "core_signal": "generated-input output mismatch under targeted fixture-neighborhood ordering",
+    "default_budget": 8,
+    "name": "fixture-neighbor-first low-budget dynamic re-execution",
+    "scope": "source-known localized semantic drift auditing"
+  },
+  "phase": "phase13_paper_evidence_synthesis",
+  "verdict": "paper-evidence-ready-for-method-table"
+}

@@ -1,0 +1,14 @@
+{
+  "candidate_count": 228,
+  "compile_pass_count": 166,
+  "created_at_utc": "2026-07-01T07:34:20.248681+00:00",
+  "failure_counts": {
+    "decompiler_or_normalization_fail": 62,
+    "fixture_runtime_fail": 0,
+    "hard_runtime_fail": 0
+  },
+  "paired_function_count": 26,
+  "phase": "phase6r_compile_preflight",
+  "runtime_timeout_count": 0,
+  "verdict": "pass-phase6r-compile-preflight"
+}

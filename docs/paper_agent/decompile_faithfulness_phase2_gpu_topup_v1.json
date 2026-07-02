@@ -1,0 +1,56 @@
+{
+  "behavior_label_counts": {
+    "compile_fail": 5,
+    "faithful": 7,
+    "plausible_wrong": 6
+  },
+  "candidate_count": 18,
+  "case_label_counts": {
+    "is_power_of_two": {
+      "compile_fail": 1,
+      "faithful": 2,
+      "plausible_wrong": 6
+    },
+    "max3": {
+      "compile_fail": 4,
+      "faithful": 5,
+      "plausible_wrong": 0
+    }
+  },
+  "cleaning_status_counts": {
+    "parse_failed": 2,
+    "parsed_function": 18
+  },
+  "compile_pass_count": 13,
+  "compile_rate_among_parsed": 0.7222222222222222,
+  "created_at_utc": "2026-06-18T04:28:31.637450+00:00",
+  "fixture_collapse": false,
+  "generation_count": 20,
+  "generation_error_count": 0,
+  "generation_metadata_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_topup_v1/generation_metadata.jsonl",
+  "gpu_smoke_gate_passed": true,
+  "label_diversity_gate_passed": true,
+  "manifest_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_topup_v1/manifest.json",
+  "model_info": {
+    "cuda_visible_devices_policy": "not_set_by_script; model and tensors are explicitly moved to requested device",
+    "device": "cuda:3",
+    "max_new_tokens": 192,
+    "model_error": "",
+    "model_load_seconds": 15.396,
+    "model_loaded": true,
+    "model_path": "/home/shx/.cache/huggingface/hub/models--Dream-org--Dream-Coder-v0-Instruct-7B/snapshots/5d9e88c723af9045f362748b5284bdf43d9c501e",
+    "seed": 20260618,
+    "steps": 32,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "torch_dtype": "auto"
+  },
+  "output_dir": "analysis_outputs/decompile_faithfulness/phase2_gpu_topup_v1",
+  "paired_case_count": 1,
+  "paired_generation_gate_passed": false,
+  "parsed_count": 18,
+  "parsed_rate": 0.9,
+  "records_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_topup_v1/records.jsonl",
+  "trace_metrics_interpretable": true,
+  "trace_pairwise_auc": 0.9166666666666666
+}

@@ -1,0 +1,276 @@
+{
+  "baseline": {
+    "case_pairwise_auc": {
+      "absdiff": 1.0,
+      "clamp8": 1.0,
+      "count_bits8": 1.0,
+      "gcd_positive": 1.0,
+      "is_power_of_two": 0.9285714285714286,
+      "max3": 1.0,
+      "signum": 0.9,
+      "sum_to_n": 1.0
+    },
+    "description": "Current Dynamic Trace v2 score.",
+    "formula": "trace_total_v2",
+    "misordered_or_tied_pairs": 8,
+    "pair_count": 106,
+    "pairwise_auc": 0.9622641509433962,
+    "remaining_trace_zero_blind_spot_wrong_count": 2,
+    "risk": "method_candidate",
+    "weak_cases": {
+      "is_power_of_two": 0.9285714285714286,
+      "signum": 0.9
+    },
+    "zero_scored_wrong_count": 2
+  },
+  "best_fixture_diagnostic": {
+    "case_pairwise_auc": {
+      "absdiff": 1.0,
+      "clamp8": 1.0,
+      "count_bits8": 1.0,
+      "gcd_positive": 1.0,
+      "is_power_of_two": 1.0,
+      "max3": 1.0,
+      "signum": 1.0,
+      "sum_to_n": 1.0
+    },
+    "description": "Diagnostic upper-bound probe that adds fixture mismatch lightly.",
+    "formula": "trace_total_plus_fixture_0.25",
+    "misordered_or_tied_pairs": 0,
+    "pair_count": 106,
+    "pairwise_auc": 1.0,
+    "remaining_trace_zero_blind_spot_wrong_count": 0,
+    "risk": "diagnostic_fixture_aware",
+    "weak_cases": {},
+    "zero_scored_wrong_count": 0
+  },
+  "best_non_fixture": {
+    "case_pairwise_auc": {
+      "absdiff": 1.0,
+      "clamp8": 1.0,
+      "count_bits8": 1.0,
+      "gcd_positive": 1.0,
+      "is_power_of_two": 0.9285714285714286,
+      "max3": 1.0,
+      "signum": 0.9,
+      "sum_to_n": 1.0
+    },
+    "description": "Current Dynamic Trace v2 score.",
+    "formula": "trace_total_v2",
+    "misordered_or_tied_pairs": 8,
+    "pair_count": 106,
+    "pairwise_auc": 0.9622641509433962,
+    "remaining_trace_zero_blind_spot_wrong_count": 2,
+    "risk": "method_candidate",
+    "weak_cases": {
+      "is_power_of_two": 0.9285714285714286,
+      "signum": 0.9
+    },
+    "zero_scored_wrong_count": 2
+  },
+  "blind_spot_candidates": [
+    {
+      "candidate_id": "full_v1__phase2_gpu_signum_strict_bug_02",
+      "case_id": "signum",
+      "fixture_mismatch_rate": 0.2,
+      "formula_scores": {
+        "max_trace_fixture": 0.2,
+        "trace_total_plus_boundary_0.25": 0.0,
+        "trace_total_plus_boundary_1.00": 0.0,
+        "trace_total_plus_fixture_0.25": 0.05,
+        "trace_total_plus_fixture_1.00": 0.2,
+        "trace_total_plus_zero_1.00": 0.0,
+        "trace_total_v2": 0.0
+      },
+      "prompt_id": "strict_bug",
+      "trace_boundary_mismatch_rate": 0.0,
+      "trace_total": 0.0,
+      "trace_zero_mismatch_rate": 0.0
+    },
+    {
+      "candidate_id": "topup_v1__phase2_gpu_is_power_of_two_strict_bug_03",
+      "case_id": "is_power_of_two",
+      "fixture_mismatch_rate": 0.14285714285714285,
+      "formula_scores": {
+        "max_trace_fixture": 0.14285714285714285,
+        "trace_total_plus_boundary_0.25": 0.0,
+        "trace_total_plus_boundary_1.00": 0.0,
+        "trace_total_plus_fixture_0.25": 0.03571428571428571,
+        "trace_total_plus_fixture_1.00": 0.14285714285714285,
+        "trace_total_plus_zero_1.00": 0.0,
+        "trace_total_v2": 0.0
+      },
+      "prompt_id": "strict_bug",
+      "trace_boundary_mismatch_rate": 0.0,
+      "trace_total": 0.0,
+      "trace_zero_mismatch_rate": 0.0
+    }
+  ],
+  "formula_table": [
+    {
+      "case_pairwise_auc": {
+        "absdiff": 1.0,
+        "clamp8": 1.0,
+        "count_bits8": 1.0,
+        "gcd_positive": 1.0,
+        "is_power_of_two": 0.9285714285714286,
+        "max3": 1.0,
+        "signum": 0.9,
+        "sum_to_n": 1.0
+      },
+      "description": "Current Dynamic Trace v2 score.",
+      "formula": "trace_total_v2",
+      "misordered_or_tied_pairs": 8,
+      "pair_count": 106,
+      "pairwise_auc": 0.9622641509433962,
+      "remaining_trace_zero_blind_spot_wrong_count": 2,
+      "risk": "method_candidate",
+      "weak_cases": {
+        "is_power_of_two": 0.9285714285714286,
+        "signum": 0.9
+      },
+      "zero_scored_wrong_count": 2
+    },
+    {
+      "case_pairwise_auc": {
+        "absdiff": 1.0,
+        "clamp8": 1.0,
+        "count_bits8": 1.0,
+        "gcd_positive": 1.0,
+        "is_power_of_two": 0.9285714285714286,
+        "max3": 1.0,
+        "signum": 0.9,
+        "sum_to_n": 1.0
+      },
+      "description": "Adds existing generated boundary mismatch to v2 score.",
+      "formula": "trace_total_plus_boundary_0.25",
+      "misordered_or_tied_pairs": 8,
+      "pair_count": 106,
+      "pairwise_auc": 0.9622641509433962,
+      "remaining_trace_zero_blind_spot_wrong_count": 2,
+      "risk": "method_candidate",
+      "weak_cases": {
+        "is_power_of_two": 0.9285714285714286,
+        "signum": 0.9
+      },
+      "zero_scored_wrong_count": 2
+    },
+    {
+      "case_pairwise_auc": {
+        "absdiff": 1.0,
+        "clamp8": 1.0,
+        "count_bits8": 1.0,
+        "gcd_positive": 1.0,
+        "is_power_of_two": 0.9285714285714286,
+        "max3": 1.0,
+        "signum": 0.9,
+        "sum_to_n": 1.0
+      },
+      "description": "Strongly weights existing generated boundary mismatch.",
+      "formula": "trace_total_plus_boundary_1.00",
+      "misordered_or_tied_pairs": 8,
+      "pair_count": 106,
+      "pairwise_auc": 0.9622641509433962,
+      "remaining_trace_zero_blind_spot_wrong_count": 2,
+      "risk": "method_candidate",
+      "weak_cases": {
+        "is_power_of_two": 0.9285714285714286,
+        "signum": 0.9
+      },
+      "zero_scored_wrong_count": 2
+    },
+    {
+      "case_pairwise_auc": {
+        "absdiff": 1.0,
+        "clamp8": 1.0,
+        "count_bits8": 1.0,
+        "gcd_positive": 1.0,
+        "is_power_of_two": 0.9285714285714286,
+        "max3": 1.0,
+        "signum": 0.9,
+        "sum_to_n": 1.0
+      },
+      "description": "Strongly weights zero-output mismatch already present in trace features.",
+      "formula": "trace_total_plus_zero_1.00",
+      "misordered_or_tied_pairs": 8,
+      "pair_count": 106,
+      "pairwise_auc": 0.9622641509433962,
+      "remaining_trace_zero_blind_spot_wrong_count": 2,
+      "risk": "method_candidate",
+      "weak_cases": {
+        "is_power_of_two": 0.9285714285714286,
+        "signum": 0.9
+      },
+      "zero_scored_wrong_count": 2
+    },
+    {
+      "case_pairwise_auc": {
+        "absdiff": 1.0,
+        "clamp8": 1.0,
+        "count_bits8": 1.0,
+        "gcd_positive": 1.0,
+        "is_power_of_two": 1.0,
+        "max3": 1.0,
+        "signum": 1.0,
+        "sum_to_n": 1.0
+      },
+      "description": "Diagnostic upper-bound probe that adds fixture mismatch lightly.",
+      "formula": "trace_total_plus_fixture_0.25",
+      "misordered_or_tied_pairs": 0,
+      "pair_count": 106,
+      "pairwise_auc": 1.0,
+      "remaining_trace_zero_blind_spot_wrong_count": 0,
+      "risk": "diagnostic_fixture_aware",
+      "weak_cases": {},
+      "zero_scored_wrong_count": 0
+    },
+    {
+      "case_pairwise_auc": {
+        "absdiff": 1.0,
+        "clamp8": 1.0,
+        "count_bits8": 1.0,
+        "gcd_positive": 1.0,
+        "is_power_of_two": 1.0,
+        "max3": 1.0,
+        "signum": 1.0,
+        "sum_to_n": 1.0
+      },
+      "description": "Diagnostic upper-bound probe that adds fixture mismatch strongly.",
+      "formula": "trace_total_plus_fixture_1.00",
+      "misordered_or_tied_pairs": 0,
+      "pair_count": 106,
+      "pairwise_auc": 1.0,
+      "remaining_trace_zero_blind_spot_wrong_count": 0,
+      "risk": "diagnostic_fixture_aware",
+      "weak_cases": {},
+      "zero_scored_wrong_count": 0
+    },
+    {
+      "case_pairwise_auc": {
+        "absdiff": 1.0,
+        "clamp8": 1.0,
+        "count_bits8": 1.0,
+        "gcd_positive": 1.0,
+        "is_power_of_two": 1.0,
+        "max3": 1.0,
+        "signum": 1.0,
+        "sum_to_n": 1.0
+      },
+      "description": "Diagnostic upper-bound probe using max(trace_total, fixture_mismatch).",
+      "formula": "max_trace_fixture",
+      "misordered_or_tied_pairs": 0,
+      "pair_count": 106,
+      "pairwise_auc": 1.0,
+      "remaining_trace_zero_blind_spot_wrong_count": 0,
+      "risk": "diagnostic_fixture_aware",
+      "weak_cases": {},
+      "zero_scored_wrong_count": 0
+    }
+  ],
+  "interpretation": {
+    "fixture_aware_warning": "fixture-aware formulas are diagnostic upper bounds because fixture_mismatch is adjacent to the behavior gate used for labels; they should not be claimed as the final method.",
+    "method_candidate_rule": "A publishable v3 method should improve boundary blind spots without directly using fixture_mismatch as a score input."
+  },
+  "records_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_full_v1_plus_topup/records.jsonl",
+  "verdict": "needs-boundary-input-regeneration"
+}

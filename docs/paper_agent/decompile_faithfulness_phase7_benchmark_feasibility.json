@@ -1,0 +1,97 @@
+{
+  "available_count": 1,
+  "benchmark_count": 5,
+  "benchmarks": [
+    {
+      "aliases": [
+        "decompile-eval",
+        "humaneval-decompile",
+        "human-eval-decompile",
+        "humaneval"
+      ],
+      "available": false,
+      "benchmark_name": "Decompile-Eval / HumanEval-style",
+      "compile_harness_needed": true,
+      "expected_input_format": "small source-known programming tasks with tests or executable oracles",
+      "format_identified": false,
+      "license_or_repro_note": "Requires dataset/repo availability; keep prompt/test split provenance.",
+      "local_paths": [],
+      "recommended_next_action": "request approval to download or point Codex to a local benchmark checkout",
+      "repo_root": "/home/shx/projects/binary_faithful_decompilation",
+      "source_known_possible": true
+    },
+    {
+      "aliases": [
+        "exebench",
+        "exe-bench"
+      ],
+      "available": false,
+      "benchmark_name": "ExeBench-style",
+      "compile_harness_needed": true,
+      "expected_input_format": "source/binary function pairs or executable tasks",
+      "format_identified": false,
+      "license_or_repro_note": "Requires source/binary extraction and local execution harness.",
+      "local_paths": [],
+      "recommended_next_action": "request approval to download or point Codex to a local benchmark checkout",
+      "repo_root": "/home/shx/projects/binary_faithful_decompilation",
+      "source_known_possible": true
+    },
+    {
+      "aliases": [
+        "decompilebench",
+        "decompile-bench-acl"
+      ],
+      "available": false,
+      "benchmark_name": "DecompileBench",
+      "compile_harness_needed": true,
+      "expected_input_format": "real-world binary/source function pairs with semantic validation metadata",
+      "format_identified": false,
+      "license_or_repro_note": "ACL Findings benchmark; verify data license and split usage.",
+      "local_paths": [],
+      "recommended_next_action": "request approval to download or point Codex to a local benchmark checkout",
+      "repo_root": "/home/shx/projects/binary_faithful_decompilation",
+      "source_known_possible": true
+    },
+    {
+      "aliases": [
+        "codefuse-debench",
+        "debench"
+      ],
+      "available": true,
+      "benchmark_name": "CodeFuse-DeBench",
+      "compile_harness_needed": true,
+      "expected_input_format": "benchmark framework with readability/recompilation/functionality stages",
+      "format_identified": true,
+      "license_or_repro_note": "GitHub benchmark; verify license and whether generated artifacts are redistributable.",
+      "local_paths": [
+        "/home/shx/projects/binary_faithful_decompilation/external/CodeFuse-DeBench-shallow"
+      ],
+      "recommended_next_action": "import local benchmark with a dedicated adapter",
+      "repo_root": "/home/shx/projects/binary_faithful_decompilation",
+      "source_known_possible": true
+    },
+    {
+      "aliases": [
+        "decompile-bench",
+        "decompile_bench"
+      ],
+      "available": false,
+      "benchmark_name": "Decompile-Bench",
+      "compile_harness_needed": true,
+      "expected_input_format": "large binary-source function pair benchmark",
+      "format_identified": false,
+      "license_or_repro_note": "Large benchmark; likely requires explicit download/storage plan.",
+      "local_paths": [],
+      "recommended_next_action": "request approval to download or point Codex to a local benchmark checkout",
+      "repo_root": "/home/shx/projects/binary_faithful_decompilation",
+      "source_known_possible": true
+    }
+  ],
+  "created_at_utc": "2026-07-01T16:42:16.175985+00:00",
+  "dependency_install_used": false,
+  "format_identified_count": 1,
+  "network_used": false,
+  "phase": "phase7_benchmark_feasibility",
+  "repo_root": "/home/shx/projects/binary_faithful_decompilation",
+  "verdict": "ready-public-benchmark-import"
+}

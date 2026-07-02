@@ -1,0 +1,176 @@
+{
+  "candidate_count": 47,
+  "case_metrics": {
+    "days_before_month": {
+      "candidate_count": 2,
+      "compile_pass_count": 1,
+      "fixture_collapse": true,
+      "label_counts": {
+        "compile_fail": 1,
+        "plausible_wrong": 1
+      },
+      "pair_count": 0,
+      "pairwise_auc": 0.0
+    },
+    "gcd_nonnegative": {
+      "candidate_count": 6,
+      "compile_pass_count": 2,
+      "fixture_collapse": true,
+      "label_counts": {
+        "compile_fail": 4,
+        "plausible_wrong": 2
+      },
+      "pair_count": 0,
+      "pairwise_auc": 0.0
+    },
+    "high_nibble": {
+      "candidate_count": 5,
+      "compile_pass_count": 5,
+      "fixture_collapse": true,
+      "label_counts": {
+        "faithful": 3,
+        "plausible_wrong": 2
+      },
+      "pair_count": 6,
+      "pairwise_auc": 1.0
+    },
+    "parity8": {
+      "candidate_count": 10,
+      "compile_pass_count": 5,
+      "fixture_collapse": true,
+      "label_counts": {
+        "compile_fail": 5,
+        "faithful": 4,
+        "plausible_wrong": 1
+      },
+      "pair_count": 4,
+      "pairwise_auc": 1.0
+    },
+    "safe_div_round0": {
+      "candidate_count": 9,
+      "compile_pass_count": 6,
+      "fixture_collapse": false,
+      "label_counts": {
+        "compile_fail": 3,
+        "faithful": 5,
+        "plausible_wrong": 1
+      },
+      "pair_count": 5,
+      "pairwise_auc": 1.0
+    },
+    "sat_add8": {
+      "candidate_count": 8,
+      "compile_pass_count": 6,
+      "fixture_collapse": true,
+      "label_counts": {
+        "compile_fail": 2,
+        "faithful": 3,
+        "plausible_wrong": 3
+      },
+      "pair_count": 9,
+      "pairwise_auc": 1.0
+    },
+    "within_range_inclusive": {
+      "candidate_count": 7,
+      "compile_pass_count": 3,
+      "fixture_collapse": true,
+      "label_counts": {
+        "compile_fail": 4,
+        "faithful": 1,
+        "plausible_wrong": 2
+      },
+      "pair_count": 2,
+      "pairwise_auc": 1.0
+    }
+  },
+  "compile_pass_count": 28,
+  "fixture_collapse": false,
+  "fixture_passing_trace_mismatch_count": 1,
+  "fixture_passing_trace_mismatch_examples": [
+    {
+      "candidate_id": "cuda3_bugtopup__phase3_gpu_safe_div_round0_strict_bug_02",
+      "case_id": "safe_div_round0",
+      "fixture_mismatch_rate": 0.0,
+      "run_id": "cuda3_bugtopup",
+      "trace_mismatch_rate": 0.07058823529411765,
+      "trace_total": 0.2979727484214024
+    }
+  ],
+  "label_counts": {
+    "compile_fail": 19,
+    "faithful": 16,
+    "plausible_wrong": 12
+  },
+  "pair_count": 26,
+  "paired_case_count": 5,
+  "pairwise_auc": 1.0,
+  "run_metrics": {
+    "cuda2_base": {
+      "candidate_count": 10,
+      "compile_pass_count": 7,
+      "fixture_collapse": true,
+      "label_counts": {
+        "compile_fail": 3,
+        "faithful": 6,
+        "plausible_wrong": 1
+      },
+      "pair_count": 0,
+      "pairwise_auc": 0.0
+    },
+    "cuda2_bugtopup": {
+      "candidate_count": 10,
+      "compile_pass_count": 4,
+      "fixture_collapse": true,
+      "label_counts": {
+        "compile_fail": 6,
+        "faithful": 1,
+        "plausible_wrong": 3
+      },
+      "pair_count": 0,
+      "pairwise_auc": 0.0
+    },
+    "cuda3_base": {
+      "candidate_count": 12,
+      "compile_pass_count": 7,
+      "fixture_collapse": true,
+      "label_counts": {
+        "compile_fail": 5,
+        "faithful": 4,
+        "plausible_wrong": 3
+      },
+      "pair_count": 1,
+      "pairwise_auc": 1.0
+    },
+    "cuda3_bugtopup": {
+      "candidate_count": 15,
+      "compile_pass_count": 10,
+      "fixture_collapse": false,
+      "label_counts": {
+        "compile_fail": 5,
+        "faithful": 5,
+        "plausible_wrong": 5
+      },
+      "pair_count": 6,
+      "pairwise_auc": 1.0
+    }
+  },
+  "runs": [
+    {
+      "records_path": "analysis_outputs/decompile_faithfulness/phase3_gpu_generated_smoke_cuda2_subset1_fp16/records.jsonl",
+      "run_id": "cuda2_base"
+    },
+    {
+      "records_path": "analysis_outputs/decompile_faithfulness/phase3_gpu_generated_smoke_cuda2_subset1_bugtopup_fp16/records.jsonl",
+      "run_id": "cuda2_bugtopup"
+    },
+    {
+      "records_path": "analysis_outputs/decompile_faithfulness/phase3_gpu_generated_smoke_cuda3_subset2_fp16/records.jsonl",
+      "run_id": "cuda3_base"
+    },
+    {
+      "records_path": "analysis_outputs/decompile_faithfulness/phase3_gpu_generated_smoke_cuda3_subset2_bugtopup_fp16/records.jsonl",
+      "run_id": "cuda3_bugtopup"
+    }
+  ],
+  "verdict": "pass-phase3-gpu-generated-combined-analysis"
+}

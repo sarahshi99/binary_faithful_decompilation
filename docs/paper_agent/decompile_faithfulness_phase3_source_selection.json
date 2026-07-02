@@ -1,0 +1,1536 @@
+{
+  "candidate_count": 12,
+  "eligible_count": 12,
+  "max_size": 10,
+  "min_size": 5,
+  "negative_conclusion_policy": "Do not reject the method from one failed subset. Require repeated failures across diverse high-coverage subsets before treating Phase 3 as a method-level failure.",
+  "output_dir": "analysis_outputs/decompile_faithfulness/phase3_source_selection",
+  "pool_json": "docs/paper_agent/decompile_faithfulness_phase3_source_pool.json",
+  "recommended_subsets": [
+    {
+      "case_ids": [
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "gcd_nonnegative",
+        "safe_div_round0"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_bound",
+        "overflow_like",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "termination",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 10,
+      "score": 1048,
+      "size": 5,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "comparison",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    },
+    {
+      "case_ids": [
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "high_nibble",
+        "gcd_nonnegative",
+        "days_before_month",
+        "safe_div_round0"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_bound",
+        "overflow_like",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "signedness",
+        "table_logic",
+        "termination",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 12,
+      "score": 1102,
+      "size": 7,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "calendar_like",
+        "comparison",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    },
+    {
+      "case_ids": [
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "high_nibble",
+        "gcd_nonnegative",
+        "mod3_sum_digits",
+        "days_before_month",
+        "triangle_wave10",
+        "safe_div_round0",
+        "clamp_then_square"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_bound",
+        "loop_termination",
+        "nonlinear_arithmetic",
+        "overflow_like",
+        "periodic_boundary",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "signedness",
+        "table_logic",
+        "termination",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 15,
+      "score": 1159,
+      "size": 10,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "calendar_like",
+        "comparison",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    },
+    {
+      "case_ids": [
+        "bounded_abs100",
+        "sat_add8",
+        "parity8",
+        "high_nibble",
+        "gcd_nonnegative",
+        "mod3_sum_digits",
+        "days_before_month",
+        "triangle_wave10",
+        "safe_div_round0",
+        "popcount_nibble_diff"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_bound",
+        "loop_termination",
+        "overflow_like",
+        "periodic_boundary",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "signedness",
+        "table_logic",
+        "termination",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 14,
+      "score": 1135,
+      "size": 10,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "calendar_like",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    },
+    {
+      "case_ids": [
+        "bounded_abs100",
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "high_nibble",
+        "gcd_nonnegative",
+        "days_before_month",
+        "safe_div_round0",
+        "clamp_then_square",
+        "popcount_nibble_diff"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_bound",
+        "nonlinear_arithmetic",
+        "overflow_like",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "signedness",
+        "table_logic",
+        "termination",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 13,
+      "score": 1119,
+      "size": 10,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "calendar_like",
+        "comparison",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    }
+  ],
+  "subset_count": 3289,
+  "top_by_size": {
+    "10": {
+      "case_ids": [
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "high_nibble",
+        "gcd_nonnegative",
+        "mod3_sum_digits",
+        "days_before_month",
+        "triangle_wave10",
+        "safe_div_round0",
+        "clamp_then_square"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_bound",
+        "loop_termination",
+        "nonlinear_arithmetic",
+        "overflow_like",
+        "periodic_boundary",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "signedness",
+        "table_logic",
+        "termination",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 15,
+      "score": 1159,
+      "size": 10,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "calendar_like",
+        "comparison",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    },
+    "5": {
+      "case_ids": [
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "gcd_nonnegative",
+        "safe_div_round0"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_bound",
+        "overflow_like",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "termination",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 10,
+      "score": 1048,
+      "size": 5,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "comparison",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    },
+    "6": {
+      "case_ids": [
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "gcd_nonnegative",
+        "days_before_month",
+        "safe_div_round0"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_bound",
+        "overflow_like",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "table_logic",
+        "termination",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 11,
+      "score": 1077,
+      "size": 6,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "calendar_like",
+        "comparison",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    },
+    "7": {
+      "case_ids": [
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "high_nibble",
+        "gcd_nonnegative",
+        "days_before_month",
+        "safe_div_round0"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_bound",
+        "overflow_like",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "signedness",
+        "table_logic",
+        "termination",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 12,
+      "score": 1102,
+      "size": 7,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "calendar_like",
+        "comparison",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    },
+    "8": {
+      "case_ids": [
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "high_nibble",
+        "gcd_nonnegative",
+        "mod3_sum_digits",
+        "days_before_month",
+        "safe_div_round0"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_bound",
+        "loop_termination",
+        "overflow_like",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "signedness",
+        "table_logic",
+        "termination",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 13,
+      "score": 1121,
+      "size": 8,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "calendar_like",
+        "comparison",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    },
+    "9": {
+      "case_ids": [
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "high_nibble",
+        "gcd_nonnegative",
+        "mod3_sum_digits",
+        "days_before_month",
+        "triangle_wave10",
+        "safe_div_round0"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_bound",
+        "loop_termination",
+        "overflow_like",
+        "periodic_boundary",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "signedness",
+        "table_logic",
+        "termination",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 14,
+      "score": 1140,
+      "size": 9,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "calendar_like",
+        "comparison",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    }
+  },
+  "top_subsets": [
+    {
+      "case_ids": [
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "high_nibble",
+        "gcd_nonnegative",
+        "mod3_sum_digits",
+        "days_before_month",
+        "triangle_wave10",
+        "safe_div_round0",
+        "clamp_then_square"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_bound",
+        "loop_termination",
+        "nonlinear_arithmetic",
+        "overflow_like",
+        "periodic_boundary",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "signedness",
+        "table_logic",
+        "termination",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 15,
+      "score": 1159,
+      "size": 10,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "calendar_like",
+        "comparison",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    },
+    {
+      "case_ids": [
+        "sat_add8",
+        "parity8",
+        "high_nibble",
+        "gcd_nonnegative",
+        "mod3_sum_digits",
+        "days_before_month",
+        "triangle_wave10",
+        "safe_div_round0",
+        "clamp_then_square",
+        "popcount_nibble_diff"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_bound",
+        "loop_termination",
+        "nonlinear_arithmetic",
+        "overflow_like",
+        "periodic_boundary",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "signedness",
+        "table_logic",
+        "termination",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 15,
+      "score": 1155,
+      "size": 10,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "calendar_like",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    },
+    {
+      "case_ids": [
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "high_nibble",
+        "gcd_nonnegative",
+        "mod3_sum_digits",
+        "days_before_month",
+        "triangle_wave10",
+        "safe_div_round0"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_bound",
+        "loop_termination",
+        "overflow_like",
+        "periodic_boundary",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "signedness",
+        "table_logic",
+        "termination",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 14,
+      "score": 1140,
+      "size": 9,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "calendar_like",
+        "comparison",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    },
+    {
+      "case_ids": [
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "high_nibble",
+        "gcd_nonnegative",
+        "mod3_sum_digits",
+        "days_before_month",
+        "safe_div_round0",
+        "clamp_then_square"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_bound",
+        "loop_termination",
+        "nonlinear_arithmetic",
+        "overflow_like",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "signedness",
+        "table_logic",
+        "termination",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 14,
+      "score": 1140,
+      "size": 9,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "calendar_like",
+        "comparison",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    },
+    {
+      "case_ids": [
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "high_nibble",
+        "gcd_nonnegative",
+        "days_before_month",
+        "triangle_wave10",
+        "safe_div_round0",
+        "clamp_then_square"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_bound",
+        "nonlinear_arithmetic",
+        "overflow_like",
+        "periodic_boundary",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "signedness",
+        "table_logic",
+        "termination",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 14,
+      "score": 1140,
+      "size": 9,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "calendar_like",
+        "comparison",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    },
+    {
+      "case_ids": [
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "high_nibble",
+        "mod3_sum_digits",
+        "days_before_month",
+        "triangle_wave10",
+        "safe_div_round0",
+        "clamp_then_square"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_bound",
+        "loop_termination",
+        "nonlinear_arithmetic",
+        "overflow_like",
+        "periodic_boundary",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "signedness",
+        "table_logic",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 14,
+      "score": 1140,
+      "size": 9,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "calendar_like",
+        "comparison",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    },
+    {
+      "case_ids": [
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "gcd_nonnegative",
+        "mod3_sum_digits",
+        "days_before_month",
+        "triangle_wave10",
+        "safe_div_round0",
+        "clamp_then_square"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_bound",
+        "loop_termination",
+        "nonlinear_arithmetic",
+        "overflow_like",
+        "periodic_boundary",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "table_logic",
+        "termination",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 14,
+      "score": 1140,
+      "size": 9,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "calendar_like",
+        "comparison",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    },
+    {
+      "case_ids": [
+        "sat_add8",
+        "within_range_inclusive",
+        "high_nibble",
+        "gcd_nonnegative",
+        "mod3_sum_digits",
+        "days_before_month",
+        "triangle_wave10",
+        "safe_div_round0",
+        "clamp_then_square"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_termination",
+        "nonlinear_arithmetic",
+        "overflow_like",
+        "periodic_boundary",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "signedness",
+        "table_logic",
+        "termination",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 14,
+      "score": 1140,
+      "size": 9,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "calendar_like",
+        "comparison",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    },
+    {
+      "case_ids": [
+        "within_range_inclusive",
+        "parity8",
+        "high_nibble",
+        "gcd_nonnegative",
+        "mod3_sum_digits",
+        "days_before_month",
+        "triangle_wave10",
+        "safe_div_round0",
+        "clamp_then_square"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_bound",
+        "loop_termination",
+        "nonlinear_arithmetic",
+        "periodic_boundary",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "signedness",
+        "table_logic",
+        "termination",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 14,
+      "score": 1140,
+      "size": 9,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "calendar_like",
+        "comparison",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    },
+    {
+      "case_ids": [
+        "bounded_abs100",
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "high_nibble",
+        "gcd_nonnegative",
+        "mod3_sum_digits",
+        "days_before_month",
+        "triangle_wave10",
+        "safe_div_round0"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_bound",
+        "loop_termination",
+        "overflow_like",
+        "periodic_boundary",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "signedness",
+        "table_logic",
+        "termination",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 14,
+      "score": 1139,
+      "size": 10,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "calendar_like",
+        "comparison",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    },
+    {
+      "case_ids": [
+        "bounded_abs100",
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "high_nibble",
+        "gcd_nonnegative",
+        "mod3_sum_digits",
+        "days_before_month",
+        "safe_div_round0",
+        "clamp_then_square"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_bound",
+        "loop_termination",
+        "nonlinear_arithmetic",
+        "overflow_like",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "signedness",
+        "table_logic",
+        "termination",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 14,
+      "score": 1139,
+      "size": 10,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "calendar_like",
+        "comparison",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    },
+    {
+      "case_ids": [
+        "bounded_abs100",
+        "sat_add8",
+        "within_range_inclusive",
+        "parity8",
+        "high_nibble",
+        "gcd_nonnegative",
+        "days_before_month",
+        "triangle_wave10",
+        "safe_div_round0",
+        "clamp_then_square"
+      ],
+      "critical_tag_coverage": 8,
+      "critical_tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "division",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ],
+      "risk_families": [
+        "argument_order",
+        "bit_width",
+        "boundary",
+        "loop_bound",
+        "nonlinear_arithmetic",
+        "overflow_like",
+        "periodic_boundary",
+        "predicate_boundary",
+        "sign_zero",
+        "signed_division",
+        "signedness",
+        "table_logic",
+        "termination",
+        "zero_guard"
+      ],
+      "risk_family_coverage": 14,
+      "score": 1139,
+      "size": 10,
+      "tags": [
+        "arithmetic",
+        "bitwise",
+        "boundary",
+        "branch",
+        "calendar_like",
+        "comparison",
+        "division",
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero",
+        "unary"
+      ]
+    }
+  ],
+  "validation": [
+    {
+      "case_id": "bounded_abs100",
+      "compiled": true,
+      "exit_code": 0,
+      "fixture_passed": true,
+      "risk_families": [
+        "sign_zero",
+        "boundary"
+      ],
+      "source_exists": true,
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/bounded_abs100.c",
+      "stderr": "",
+      "tags": [
+        "branch",
+        "boundary",
+        "sign_zero",
+        "unary"
+      ]
+    },
+    {
+      "case_id": "sat_add8",
+      "compiled": true,
+      "exit_code": 0,
+      "fixture_passed": true,
+      "risk_families": [
+        "overflow_like",
+        "boundary"
+      ],
+      "source_exists": true,
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/sat_add8.c",
+      "stderr": "",
+      "tags": [
+        "arithmetic",
+        "branch",
+        "boundary",
+        "multi_arg"
+      ]
+    },
+    {
+      "case_id": "within_range_inclusive",
+      "compiled": true,
+      "exit_code": 0,
+      "fixture_passed": true,
+      "risk_families": [
+        "predicate_boundary",
+        "argument_order"
+      ],
+      "source_exists": true,
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/within_range_inclusive.c",
+      "stderr": "",
+      "tags": [
+        "branch",
+        "comparison",
+        "multi_arg",
+        "boundary"
+      ]
+    },
+    {
+      "case_id": "parity8",
+      "compiled": true,
+      "exit_code": 0,
+      "fixture_passed": true,
+      "risk_families": [
+        "bit_width",
+        "loop_bound"
+      ],
+      "source_exists": true,
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/parity8.c",
+      "stderr": "",
+      "tags": [
+        "bitwise",
+        "loop",
+        "boundary",
+        "unary"
+      ]
+    },
+    {
+      "case_id": "high_nibble",
+      "compiled": true,
+      "exit_code": 0,
+      "fixture_passed": true,
+      "risk_families": [
+        "bit_width",
+        "signedness"
+      ],
+      "source_exists": true,
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/high_nibble.c",
+      "stderr": "",
+      "tags": [
+        "bitwise",
+        "boundary",
+        "unary"
+      ]
+    },
+    {
+      "case_id": "gcd_nonnegative",
+      "compiled": true,
+      "exit_code": 0,
+      "fixture_passed": true,
+      "risk_families": [
+        "termination",
+        "sign_zero"
+      ],
+      "source_exists": true,
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/gcd_nonnegative.c",
+      "stderr": "",
+      "tags": [
+        "loop",
+        "modulo",
+        "multi_arg",
+        "sign_zero"
+      ]
+    },
+    {
+      "case_id": "mod3_sum_digits",
+      "compiled": true,
+      "exit_code": 0,
+      "fixture_passed": true,
+      "risk_families": [
+        "loop_termination",
+        "sign_zero"
+      ],
+      "source_exists": true,
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/mod3_sum_digits.c",
+      "stderr": "",
+      "tags": [
+        "loop",
+        "division",
+        "modulo",
+        "sign_zero",
+        "unary"
+      ]
+    },
+    {
+      "case_id": "days_before_month",
+      "compiled": true,
+      "exit_code": 0,
+      "fixture_passed": true,
+      "risk_families": [
+        "predicate_boundary",
+        "table_logic"
+      ],
+      "source_exists": true,
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/days_before_month.c",
+      "stderr": "",
+      "tags": [
+        "branch",
+        "loop",
+        "boundary",
+        "calendar_like",
+        "unary"
+      ]
+    },
+    {
+      "case_id": "triangle_wave10",
+      "compiled": true,
+      "exit_code": 0,
+      "fixture_passed": true,
+      "risk_families": [
+        "periodic_boundary",
+        "sign_zero"
+      ],
+      "source_exists": true,
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/triangle_wave10.c",
+      "stderr": "",
+      "tags": [
+        "branch",
+        "modulo",
+        "sign_zero",
+        "boundary",
+        "unary"
+      ]
+    },
+    {
+      "case_id": "safe_div_round0",
+      "compiled": true,
+      "exit_code": 0,
+      "fixture_passed": true,
+      "risk_families": [
+        "zero_guard",
+        "signed_division"
+      ],
+      "source_exists": true,
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/safe_div_round0.c",
+      "stderr": "",
+      "tags": [
+        "branch",
+        "division",
+        "multi_arg",
+        "sign_zero"
+      ]
+    },
+    {
+      "case_id": "clamp_then_square",
+      "compiled": true,
+      "exit_code": 0,
+      "fixture_passed": true,
+      "risk_families": [
+        "boundary",
+        "nonlinear_arithmetic"
+      ],
+      "source_exists": true,
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/clamp_then_square.c",
+      "stderr": "",
+      "tags": [
+        "arithmetic",
+        "branch",
+        "boundary",
+        "unary"
+      ]
+    },
+    {
+      "case_id": "popcount_nibble_diff",
+      "compiled": true,
+      "exit_code": 0,
+      "fixture_passed": true,
+      "risk_families": [
+        "bit_width",
+        "argument_order"
+      ],
+      "source_exists": true,
+      "source_path": "analysis_inputs/decompile_faithfulness/phase3_sources/popcount_nibble_diff.c",
+      "stderr": "",
+      "tags": [
+        "bitwise",
+        "loop",
+        "multi_arg",
+        "sign_zero"
+      ]
+    }
+  ],
+  "verdict": "ready-for-combinatorial-phase3-cpu-audit"
+}

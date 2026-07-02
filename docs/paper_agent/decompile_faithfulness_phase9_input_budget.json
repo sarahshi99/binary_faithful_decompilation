@@ -1,0 +1,995 @@
+{
+  "budgets": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "created_at_utc": "2026-07-02T02:01:47.849732+00:00",
+  "datasets": {
+    "phase6r_ghidra_full": {
+      "budget_curve": {
+        "1": {
+          "auc": 1.0,
+          "budget": 1.0,
+          "wrong_detection_mean": 0.7793057333127386,
+          "wrong_detection_min": 0.05208333333333337,
+          "wrong_detection_p10": 0.30716011597938153,
+          "wrong_detection_p50": 0.9078947368421053
+        },
+        "128": {
+          "auc": 1.0,
+          "budget": 128.0,
+          "wrong_detection_mean": 1.0,
+          "wrong_detection_min": 1.0,
+          "wrong_detection_p10": 1.0,
+          "wrong_detection_p50": 1.0
+        },
+        "16": {
+          "auc": 1.0,
+          "budget": 16.0,
+          "wrong_detection_mean": 0.9892567842862023,
+          "wrong_detection_min": 0.6067012821660551,
+          "wrong_detection_p10": 0.9999887129992806,
+          "wrong_detection_p50": 1.0
+        },
+        "2": {
+          "auc": 1.0,
+          "budget": 2.0,
+          "wrong_detection_mean": 0.8773039196091125,
+          "wrong_detection_min": 0.10197368421052644,
+          "wrong_detection_p10": 0.5420029527559056,
+          "wrong_detection_p50": 0.992822966507177
+        },
+        "32": {
+          "auc": 1.0,
+          "budget": 32.0,
+          "wrong_detection_mean": 0.9966285978165981,
+          "wrong_detection_min": 0.8752616972588734,
+          "wrong_detection_p10": 0.9999999999966179,
+          "wrong_detection_p50": 1.0
+        },
+        "4": {
+          "auc": 1.0,
+          "budget": 4.0,
+          "wrong_detection_mean": 0.9476961806747397,
+          "wrong_detection_min": 0.19545388866813573,
+          "wrong_detection_p10": 0.8868832997362133,
+          "wrong_detection_p50": 1.0
+        },
+        "64": {
+          "auc": 1.0,
+          "budget": 64.0,
+          "wrong_detection_mean": 0.9999109582341482,
+          "wrong_detection_min": 0.9967054546634857,
+          "wrong_detection_p10": 1.0,
+          "wrong_detection_p50": 1.0
+        },
+        "8": {
+          "auc": 1.0,
+          "budget": 8.0,
+          "wrong_detection_mean": 0.9800366041154939,
+          "wrong_detection_min": 0.3590780874779532,
+          "wrong_detection_p10": 0.9951844683064335,
+          "wrong_detection_p50": 1.0
+        }
+      },
+      "candidate_count": 228,
+      "component_auc": {
+        "fixture_only": 0.5,
+        "fuzzing_any_mismatch": 1.0,
+        "fuzzing_mismatch_rate": 1.0,
+        "static_structured_proxy": 0.8206521739130435,
+        "trace_abs_error_mean": 1.0,
+        "trace_boundary_mismatch_rate": 0.8586956521739131,
+        "trace_sign_mismatch_rate": 1.0,
+        "trace_zero_mismatch_rate": 1.0,
+        "v3_trace_total": 1.0
+      },
+      "dataset_id": "phase6r_ghidra_full",
+      "eval_count": 166,
+      "family_metrics": {
+        "mutation:phase6_behavior_preserving_noop_guard": {
+          "candidate_count": 46,
+          "component_auc": {
+            "fixture_only": 0.0,
+            "fuzzing_any_mismatch": 0.0,
+            "fuzzing_mismatch_rate": 0.0,
+            "static_structured_proxy": 0.0,
+            "trace_abs_error_mean": 0.0,
+            "trace_boundary_mismatch_rate": 0.0,
+            "trace_sign_mismatch_rate": 0.0,
+            "trace_zero_mismatch_rate": 0.0,
+            "v3_trace_total": 0.0
+          },
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "group_id": "mutation:phase6_behavior_preserving_noop_guard",
+          "label_counts": {
+            "faithful": 46
+          },
+          "paired_case_count": 0
+        },
+        "mutation:phase6_fixture_ifchain_semantic_drift": {
+          "candidate_count": 74,
+          "component_auc": {
+            "fixture_only": 0.0,
+            "fuzzing_any_mismatch": 0.0,
+            "fuzzing_mismatch_rate": 0.0,
+            "static_structured_proxy": 0.0,
+            "trace_abs_error_mean": 0.0,
+            "trace_boundary_mismatch_rate": 0.0,
+            "trace_sign_mismatch_rate": 0.0,
+            "trace_zero_mismatch_rate": 0.0,
+            "v3_trace_total": 0.0
+          },
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "group_id": "mutation:phase6_fixture_ifchain_semantic_drift",
+          "label_counts": {
+            "plausible_wrong": 74
+          },
+          "paired_case_count": 0
+        },
+        "mutation:phase6_original_control": {
+          "candidate_count": 46,
+          "component_auc": {
+            "fixture_only": 0.0,
+            "fuzzing_any_mismatch": 0.0,
+            "fuzzing_mismatch_rate": 0.0,
+            "static_structured_proxy": 0.0,
+            "trace_abs_error_mean": 0.0,
+            "trace_boundary_mismatch_rate": 0.0,
+            "trace_sign_mismatch_rate": 0.0,
+            "trace_zero_mismatch_rate": 0.0,
+            "v3_trace_total": 0.0
+          },
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "group_id": "mutation:phase6_original_control",
+          "label_counts": {
+            "faithful": 46
+          },
+          "paired_case_count": 0
+        }
+      },
+      "label_counts": {
+        "compile_fail": 62,
+        "faithful": 92,
+        "plausible_wrong": 74
+      },
+      "paired_case_count": 26,
+      "title": "Phase 6R Ghidra full",
+      "top_v3_family_deltas": [
+        {
+          "candidate_count": 46,
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "fuzzing_mismatch_rate_auc": 0.0,
+          "group_id": "mutation:phase6_behavior_preserving_noop_guard",
+          "paired_case_count": 0,
+          "v3_trace_total_auc": 0.0
+        },
+        {
+          "candidate_count": 74,
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "fuzzing_mismatch_rate_auc": 0.0,
+          "group_id": "mutation:phase6_fixture_ifchain_semantic_drift",
+          "paired_case_count": 0,
+          "v3_trace_total_auc": 0.0
+        },
+        {
+          "candidate_count": 46,
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "fuzzing_mismatch_rate_auc": 0.0,
+          "group_id": "mutation:phase6_original_control",
+          "paired_case_count": 0,
+          "v3_trace_total_auc": 0.0
+        }
+      ],
+      "wrong_count": 74
+    },
+    "phase6r_ghidra_gcc9_full": {
+      "budget_curve": {
+        "1": {
+          "auc": 1.0,
+          "budget": 1.0,
+          "wrong_detection_mean": 0.7793057333127386,
+          "wrong_detection_min": 0.05208333333333337,
+          "wrong_detection_p10": 0.30716011597938153,
+          "wrong_detection_p50": 0.9078947368421053
+        },
+        "128": {
+          "auc": 1.0,
+          "budget": 128.0,
+          "wrong_detection_mean": 1.0,
+          "wrong_detection_min": 1.0,
+          "wrong_detection_p10": 1.0,
+          "wrong_detection_p50": 1.0
+        },
+        "16": {
+          "auc": 1.0,
+          "budget": 16.0,
+          "wrong_detection_mean": 0.9892567842862023,
+          "wrong_detection_min": 0.6067012821660551,
+          "wrong_detection_p10": 0.9999887129992806,
+          "wrong_detection_p50": 1.0
+        },
+        "2": {
+          "auc": 1.0,
+          "budget": 2.0,
+          "wrong_detection_mean": 0.8773039196091125,
+          "wrong_detection_min": 0.10197368421052644,
+          "wrong_detection_p10": 0.5420029527559056,
+          "wrong_detection_p50": 0.992822966507177
+        },
+        "32": {
+          "auc": 1.0,
+          "budget": 32.0,
+          "wrong_detection_mean": 0.9966285978165981,
+          "wrong_detection_min": 0.8752616972588734,
+          "wrong_detection_p10": 0.9999999999966179,
+          "wrong_detection_p50": 1.0
+        },
+        "4": {
+          "auc": 1.0,
+          "budget": 4.0,
+          "wrong_detection_mean": 0.9476961806747397,
+          "wrong_detection_min": 0.19545388866813573,
+          "wrong_detection_p10": 0.8868832997362133,
+          "wrong_detection_p50": 1.0
+        },
+        "64": {
+          "auc": 1.0,
+          "budget": 64.0,
+          "wrong_detection_mean": 0.9999109582341482,
+          "wrong_detection_min": 0.9967054546634857,
+          "wrong_detection_p10": 1.0,
+          "wrong_detection_p50": 1.0
+        },
+        "8": {
+          "auc": 1.0,
+          "budget": 8.0,
+          "wrong_detection_mean": 0.9800366041154939,
+          "wrong_detection_min": 0.3590780874779532,
+          "wrong_detection_p10": 0.9951844683064335,
+          "wrong_detection_p50": 1.0
+        }
+      },
+      "candidate_count": 228,
+      "component_auc": {
+        "fixture_only": 0.5,
+        "fuzzing_any_mismatch": 1.0,
+        "fuzzing_mismatch_rate": 1.0,
+        "static_structured_proxy": 0.842391304347826,
+        "trace_abs_error_mean": 1.0,
+        "trace_boundary_mismatch_rate": 0.8586956521739131,
+        "trace_sign_mismatch_rate": 1.0,
+        "trace_zero_mismatch_rate": 1.0,
+        "v3_trace_total": 1.0
+      },
+      "dataset_id": "phase6r_ghidra_gcc9_full",
+      "eval_count": 166,
+      "family_metrics": {
+        "mutation:phase6_behavior_preserving_noop_guard": {
+          "candidate_count": 46,
+          "component_auc": {
+            "fixture_only": 0.0,
+            "fuzzing_any_mismatch": 0.0,
+            "fuzzing_mismatch_rate": 0.0,
+            "static_structured_proxy": 0.0,
+            "trace_abs_error_mean": 0.0,
+            "trace_boundary_mismatch_rate": 0.0,
+            "trace_sign_mismatch_rate": 0.0,
+            "trace_zero_mismatch_rate": 0.0,
+            "v3_trace_total": 0.0
+          },
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "group_id": "mutation:phase6_behavior_preserving_noop_guard",
+          "label_counts": {
+            "faithful": 46
+          },
+          "paired_case_count": 0
+        },
+        "mutation:phase6_fixture_ifchain_semantic_drift": {
+          "candidate_count": 74,
+          "component_auc": {
+            "fixture_only": 0.0,
+            "fuzzing_any_mismatch": 0.0,
+            "fuzzing_mismatch_rate": 0.0,
+            "static_structured_proxy": 0.0,
+            "trace_abs_error_mean": 0.0,
+            "trace_boundary_mismatch_rate": 0.0,
+            "trace_sign_mismatch_rate": 0.0,
+            "trace_zero_mismatch_rate": 0.0,
+            "v3_trace_total": 0.0
+          },
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "group_id": "mutation:phase6_fixture_ifchain_semantic_drift",
+          "label_counts": {
+            "plausible_wrong": 74
+          },
+          "paired_case_count": 0
+        },
+        "mutation:phase6_original_control": {
+          "candidate_count": 46,
+          "component_auc": {
+            "fixture_only": 0.0,
+            "fuzzing_any_mismatch": 0.0,
+            "fuzzing_mismatch_rate": 0.0,
+            "static_structured_proxy": 0.0,
+            "trace_abs_error_mean": 0.0,
+            "trace_boundary_mismatch_rate": 0.0,
+            "trace_sign_mismatch_rate": 0.0,
+            "trace_zero_mismatch_rate": 0.0,
+            "v3_trace_total": 0.0
+          },
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "group_id": "mutation:phase6_original_control",
+          "label_counts": {
+            "faithful": 46
+          },
+          "paired_case_count": 0
+        }
+      },
+      "label_counts": {
+        "compile_fail": 62,
+        "faithful": 92,
+        "plausible_wrong": 74
+      },
+      "paired_case_count": 26,
+      "title": "Phase 6R Ghidra gcc9 full",
+      "top_v3_family_deltas": [
+        {
+          "candidate_count": 46,
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "fuzzing_mismatch_rate_auc": 0.0,
+          "group_id": "mutation:phase6_behavior_preserving_noop_guard",
+          "paired_case_count": 0,
+          "v3_trace_total_auc": 0.0
+        },
+        {
+          "candidate_count": 74,
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "fuzzing_mismatch_rate_auc": 0.0,
+          "group_id": "mutation:phase6_fixture_ifchain_semantic_drift",
+          "paired_case_count": 0,
+          "v3_trace_total_auc": 0.0
+        },
+        {
+          "candidate_count": 46,
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "fuzzing_mismatch_rate_auc": 0.0,
+          "group_id": "mutation:phase6_original_control",
+          "paired_case_count": 0,
+          "v3_trace_total_auc": 0.0
+        }
+      ],
+      "wrong_count": 74
+    },
+    "phase7c2_static_hard_public": {
+      "budget_curve": {
+        "1": {
+          "auc": 1.0,
+          "budget": 1.0,
+          "wrong_detection_mean": 0.8025640005977088,
+          "wrong_detection_min": 0.10810810810810811,
+          "wrong_detection_p10": 0.33333333333333337,
+          "wrong_detection_p50": 1.0
+        },
+        "128": {
+          "auc": 1.0,
+          "budget": 128.0,
+          "wrong_detection_mean": 1.0,
+          "wrong_detection_min": 1.0,
+          "wrong_detection_p10": 1.0,
+          "wrong_detection_p50": 1.0
+        },
+        "16": {
+          "auc": 1.0,
+          "budget": 16.0,
+          "wrong_detection_mean": 0.9984701137335997,
+          "wrong_detection_min": 0.8980501599016529,
+          "wrong_detection_p10": 1.0,
+          "wrong_detection_p50": 1.0
+        },
+        "2": {
+          "auc": 1.0,
+          "budget": 2.0,
+          "wrong_detection_mean": 0.8925307694323662,
+          "wrong_detection_min": 0.2072072072072073,
+          "wrong_detection_p10": 0.6000000000000001,
+          "wrong_detection_p50": 1.0
+        },
+        "32": {
+          "auc": 1.0,
+          "budget": 32.0,
+          "wrong_detection_mean": 0.999946287999263,
+          "wrong_detection_min": 0.992905178385424,
+          "wrong_detection_p10": 1.0,
+          "wrong_detection_p50": 1.0
+        },
+        "4": {
+          "auc": 1.0,
+          "budget": 4.0,
+          "wrong_detection_mean": 0.9664061719748368,
+          "wrong_detection_min": 0.38042243924596875,
+          "wrong_detection_p10": 0.9333333333333333,
+          "wrong_detection_p50": 1.0
+        },
+        "64": {
+          "auc": 1.0,
+          "budget": 64.0,
+          "wrong_detection_mean": 0.9999999607964499,
+          "wrong_detection_min": 0.999994766326065,
+          "wrong_detection_p10": 1.0,
+          "wrong_detection_p50": 1.0
+        },
+        "8": {
+          "auc": 1.0,
+          "budget": 8.0,
+          "wrong_detection_mean": 0.9934705248302718,
+          "wrong_detection_min": 0.640381558028617,
+          "wrong_detection_p10": 1.0,
+          "wrong_detection_p50": 1.0
+        }
+      },
+      "candidate_count": 524,
+      "component_auc": {
+        "fixture_only": 0.9218415417558886,
+        "fuzzing_any_mismatch": 1.0,
+        "fuzzing_mismatch_rate": 1.0,
+        "static_structured_proxy": 0.683083511777302,
+        "trace_abs_error_mean": 1.0,
+        "trace_boundary_mismatch_rate": 0.8618843683083511,
+        "trace_sign_mismatch_rate": 0.7259100642398287,
+        "trace_zero_mismatch_rate": 0.6145610278372591,
+        "v3_trace_total": 1.0
+      },
+      "dataset_id": "phase7c2_static_hard_public",
+      "eval_count": 503,
+      "family_metrics": {
+        "mutation:phase7_static_hard_arithmetic_operator": {
+          "candidate_count": 122,
+          "component_auc": {
+            "fixture_only": 0.3333333333333333,
+            "fuzzing_any_mismatch": 1.0,
+            "fuzzing_mismatch_rate": 1.0,
+            "static_structured_proxy": 0.5416666666666666,
+            "trace_abs_error_mean": 1.0,
+            "trace_boundary_mismatch_rate": 0.6666666666666666,
+            "trace_sign_mismatch_rate": 0.6666666666666666,
+            "trace_zero_mismatch_rate": 0.5,
+            "v3_trace_total": 1.0
+          },
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "group_id": "mutation:phase7_static_hard_arithmetic_operator",
+          "label_counts": {
+            "faithful": 18,
+            "plausible_wrong": 104
+          },
+          "paired_case_count": 4
+        },
+        "mutation:phase7_static_hard_bitshift_direction": {
+          "candidate_count": 2,
+          "component_auc": {
+            "fixture_only": 0.0,
+            "fuzzing_any_mismatch": 0.0,
+            "fuzzing_mismatch_rate": 0.0,
+            "static_structured_proxy": 0.0,
+            "trace_abs_error_mean": 0.0,
+            "trace_boundary_mismatch_rate": 0.0,
+            "trace_sign_mismatch_rate": 0.0,
+            "trace_zero_mismatch_rate": 0.0,
+            "v3_trace_total": 0.0
+          },
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "group_id": "mutation:phase7_static_hard_bitshift_direction",
+          "label_counts": {
+            "faithful": 2
+          },
+          "paired_case_count": 0
+        },
+        "mutation:phase7_static_hard_bitwise_operator": {
+          "candidate_count": 2,
+          "component_auc": {
+            "fixture_only": 0.0,
+            "fuzzing_any_mismatch": 0.0,
+            "fuzzing_mismatch_rate": 0.0,
+            "static_structured_proxy": 0.0,
+            "trace_abs_error_mean": 0.0,
+            "trace_boundary_mismatch_rate": 0.0,
+            "trace_sign_mismatch_rate": 0.0,
+            "trace_zero_mismatch_rate": 0.0,
+            "v3_trace_total": 0.0
+          },
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "group_id": "mutation:phase7_static_hard_bitwise_operator",
+          "label_counts": {
+            "plausible_wrong": 2
+          },
+          "paired_case_count": 0
+        },
+        "mutation:phase7_static_hard_compound_assignment": {
+          "candidate_count": 14,
+          "component_auc": {
+            "fixture_only": 0.0,
+            "fuzzing_any_mismatch": 0.0,
+            "fuzzing_mismatch_rate": 0.0,
+            "static_structured_proxy": 0.0,
+            "trace_abs_error_mean": 0.0,
+            "trace_boundary_mismatch_rate": 0.0,
+            "trace_sign_mismatch_rate": 0.0,
+            "trace_zero_mismatch_rate": 0.0,
+            "v3_trace_total": 0.0
+          },
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "group_id": "mutation:phase7_static_hard_compound_assignment",
+          "label_counts": {
+            "faithful": 2,
+            "plausible_wrong": 12
+          },
+          "paired_case_count": 0
+        },
+        "mutation:phase7_static_hard_constant": {
+          "candidate_count": 60,
+          "component_auc": {
+            "fixture_only": 0.0,
+            "fuzzing_any_mismatch": 0.0,
+            "fuzzing_mismatch_rate": 0.0,
+            "static_structured_proxy": 0.0,
+            "trace_abs_error_mean": 0.0,
+            "trace_boundary_mismatch_rate": 0.0,
+            "trace_sign_mismatch_rate": 0.0,
+            "trace_zero_mismatch_rate": 0.0,
+            "v3_trace_total": 0.0
+          },
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "group_id": "mutation:phase7_static_hard_constant",
+          "label_counts": {
+            "faithful": 26,
+            "plausible_wrong": 34
+          },
+          "paired_case_count": 0
+        },
+        "mutation:phase7_static_hard_original_control": {
+          "candidate_count": 112,
+          "component_auc": {
+            "fixture_only": 0.0,
+            "fuzzing_any_mismatch": 0.0,
+            "fuzzing_mismatch_rate": 0.0,
+            "static_structured_proxy": 0.0,
+            "trace_abs_error_mean": 0.0,
+            "trace_boundary_mismatch_rate": 0.0,
+            "trace_sign_mismatch_rate": 0.0,
+            "trace_zero_mismatch_rate": 0.0,
+            "v3_trace_total": 0.0
+          },
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "group_id": "mutation:phase7_static_hard_original_control",
+          "label_counts": {
+            "faithful": 112
+          },
+          "paired_case_count": 0
+        },
+        "mutation:phase7_static_hard_predicate_equality": {
+          "candidate_count": 24,
+          "component_auc": {
+            "fixture_only": 0.0,
+            "fuzzing_any_mismatch": 0.0,
+            "fuzzing_mismatch_rate": 0.0,
+            "static_structured_proxy": 0.0,
+            "trace_abs_error_mean": 0.0,
+            "trace_boundary_mismatch_rate": 0.0,
+            "trace_sign_mismatch_rate": 0.0,
+            "trace_zero_mismatch_rate": 0.0,
+            "v3_trace_total": 0.0
+          },
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "group_id": "mutation:phase7_static_hard_predicate_equality",
+          "label_counts": {
+            "faithful": 4,
+            "plausible_wrong": 20
+          },
+          "paired_case_count": 0
+        },
+        "mutation:phase7_static_hard_predicate_strictness": {
+          "candidate_count": 65,
+          "component_auc": {
+            "fixture_only": 0.8571428571428571,
+            "fuzzing_any_mismatch": 1.0,
+            "fuzzing_mismatch_rate": 1.0,
+            "static_structured_proxy": 0.8928571428571429,
+            "trace_abs_error_mean": 1.0,
+            "trace_boundary_mismatch_rate": 0.5714285714285714,
+            "trace_sign_mismatch_rate": 0.5714285714285714,
+            "trace_zero_mismatch_rate": 0.5714285714285714,
+            "v3_trace_total": 1.0
+          },
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "group_id": "mutation:phase7_static_hard_predicate_strictness",
+          "label_counts": {
+            "faithful": 46,
+            "plausible_wrong": 19
+          },
+          "paired_case_count": 5
+        },
+        "mutation:phase7_static_hard_return_expression": {
+          "candidate_count": 102,
+          "component_auc": {
+            "fixture_only": 0.0,
+            "fuzzing_any_mismatch": 0.0,
+            "fuzzing_mismatch_rate": 0.0,
+            "static_structured_proxy": 0.0,
+            "trace_abs_error_mean": 0.0,
+            "trace_boundary_mismatch_rate": 0.0,
+            "trace_sign_mismatch_rate": 0.0,
+            "trace_zero_mismatch_rate": 0.0,
+            "v3_trace_total": 0.0
+          },
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "group_id": "mutation:phase7_static_hard_return_expression",
+          "label_counts": {
+            "faithful": 26,
+            "plausible_wrong": 76
+          },
+          "paired_case_count": 0
+        },
+        "risk:branch": {
+          "candidate_count": 207,
+          "component_auc": {
+            "fixture_only": 0.9170212765957447,
+            "fuzzing_any_mismatch": 1.0,
+            "fuzzing_mismatch_rate": 1.0,
+            "static_structured_proxy": 0.6840425531914893,
+            "trace_abs_error_mean": 1.0,
+            "trace_boundary_mismatch_rate": 0.823404255319149,
+            "trace_sign_mismatch_rate": 0.7446808510638298,
+            "trace_zero_mismatch_rate": 0.5957446808510638,
+            "v3_trace_total": 1.0
+          },
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "group_id": "risk:branch",
+          "label_counts": {
+            "faithful": 109,
+            "plausible_wrong": 98
+          },
+          "paired_case_count": 18
+        },
+        "risk:loop": {
+          "candidate_count": 127,
+          "component_auc": {
+            "fixture_only": 0.9055944055944056,
+            "fuzzing_any_mismatch": 1.0,
+            "fuzzing_mismatch_rate": 1.0,
+            "static_structured_proxy": 0.7447552447552448,
+            "trace_abs_error_mean": 1.0,
+            "trace_boundary_mismatch_rate": 0.8286713286713286,
+            "trace_sign_mismatch_rate": 0.7972027972027972,
+            "trace_zero_mismatch_rate": 0.6503496503496503,
+            "v3_trace_total": 1.0
+          },
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "group_id": "risk:loop",
+          "label_counts": {
+            "faithful": 52,
+            "plausible_wrong": 75
+          },
+          "paired_case_count": 11
+        },
+        "risk:multi_arg": {
+          "candidate_count": 140,
+          "component_auc": {
+            "fixture_only": 0.9903846153846154,
+            "fuzzing_any_mismatch": 1.0,
+            "fuzzing_mismatch_rate": 1.0,
+            "static_structured_proxy": 0.6923076923076923,
+            "trace_abs_error_mean": 1.0,
+            "trace_boundary_mismatch_rate": 1.0,
+            "trace_sign_mismatch_rate": 0.7115384615384616,
+            "trace_zero_mismatch_rate": 0.6538461538461539,
+            "v3_trace_total": 1.0
+          },
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "group_id": "risk:multi_arg",
+          "label_counts": {
+            "faithful": 56,
+            "plausible_wrong": 84
+          },
+          "paired_case_count": 18
+        },
+        "risk:operator_boundary": {
+          "candidate_count": 389,
+          "component_auc": {
+            "fixture_only": 0.9066496163682864,
+            "fuzzing_any_mismatch": 1.0,
+            "fuzzing_mismatch_rate": 1.0,
+            "static_structured_proxy": 0.6854219948849105,
+            "trace_abs_error_mean": 1.0,
+            "trace_boundary_mismatch_rate": 0.8350383631713555,
+            "trace_sign_mismatch_rate": 0.7365728900255755,
+            "trace_zero_mismatch_rate": 0.618925831202046,
+            "v3_trace_total": 1.0
+          },
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "group_id": "risk:operator_boundary",
+          "label_counts": {
+            "faithful": 196,
+            "plausible_wrong": 193
+          },
+          "paired_case_count": 34
+        },
+        "risk:public_benchmark": {
+          "candidate_count": 503,
+          "component_auc": {
+            "fixture_only": 0.9218415417558886,
+            "fuzzing_any_mismatch": 1.0,
+            "fuzzing_mismatch_rate": 1.0,
+            "static_structured_proxy": 0.683083511777302,
+            "trace_abs_error_mean": 1.0,
+            "trace_boundary_mismatch_rate": 0.8618843683083511,
+            "trace_sign_mismatch_rate": 0.7259100642398287,
+            "trace_zero_mismatch_rate": 0.6145610278372591,
+            "v3_trace_total": 1.0
+          },
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "group_id": "risk:public_benchmark",
+          "label_counts": {
+            "faithful": 236,
+            "plausible_wrong": 267
+          },
+          "paired_case_count": 50
+        }
+      },
+      "label_counts": {
+        "compile_fail": 21,
+        "faithful": 236,
+        "plausible_wrong": 267
+      },
+      "paired_case_count": 50,
+      "title": "Phase 7C2 static-hard public",
+      "top_v3_family_deltas": [
+        {
+          "candidate_count": 503,
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "fuzzing_mismatch_rate_auc": 1.0,
+          "group_id": "risk:public_benchmark",
+          "paired_case_count": 50,
+          "v3_trace_total_auc": 1.0
+        },
+        {
+          "candidate_count": 389,
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "fuzzing_mismatch_rate_auc": 1.0,
+          "group_id": "risk:operator_boundary",
+          "paired_case_count": 34,
+          "v3_trace_total_auc": 1.0
+        },
+        {
+          "candidate_count": 207,
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "fuzzing_mismatch_rate_auc": 1.0,
+          "group_id": "risk:branch",
+          "paired_case_count": 18,
+          "v3_trace_total_auc": 1.0
+        },
+        {
+          "candidate_count": 140,
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "fuzzing_mismatch_rate_auc": 1.0,
+          "group_id": "risk:multi_arg",
+          "paired_case_count": 18,
+          "v3_trace_total_auc": 1.0
+        },
+        {
+          "candidate_count": 127,
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "fuzzing_mismatch_rate_auc": 1.0,
+          "group_id": "risk:loop",
+          "paired_case_count": 11,
+          "v3_trace_total_auc": 1.0
+        },
+        {
+          "candidate_count": 65,
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "fuzzing_mismatch_rate_auc": 1.0,
+          "group_id": "mutation:phase7_static_hard_predicate_strictness",
+          "paired_case_count": 5,
+          "v3_trace_total_auc": 1.0
+        },
+        {
+          "candidate_count": 122,
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "fuzzing_mismatch_rate_auc": 1.0,
+          "group_id": "mutation:phase7_static_hard_arithmetic_operator",
+          "paired_case_count": 4,
+          "v3_trace_total_auc": 1.0
+        },
+        {
+          "candidate_count": 2,
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "fuzzing_mismatch_rate_auc": 0.0,
+          "group_id": "mutation:phase7_static_hard_bitshift_direction",
+          "paired_case_count": 0,
+          "v3_trace_total_auc": 0.0
+        },
+        {
+          "candidate_count": 2,
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "fuzzing_mismatch_rate_auc": 0.0,
+          "group_id": "mutation:phase7_static_hard_bitwise_operator",
+          "paired_case_count": 0,
+          "v3_trace_total_auc": 0.0
+        },
+        {
+          "candidate_count": 14,
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "fuzzing_mismatch_rate_auc": 0.0,
+          "group_id": "mutation:phase7_static_hard_compound_assignment",
+          "paired_case_count": 0,
+          "v3_trace_total_auc": 0.0
+        }
+      ],
+      "wrong_count": 267
+    },
+    "phase7e_llm_public_full_topup": {
+      "budget_curve": {
+        "1": {
+          "auc": 1.0,
+          "budget": 1.0,
+          "wrong_detection_mean": 0.6884275458494209,
+          "wrong_detection_min": 0.16666666666666663,
+          "wrong_detection_p10": 0.16666666666666663,
+          "wrong_detection_p50": 0.8333333333333334
+        },
+        "128": {
+          "auc": 1.0,
+          "budget": 128.0,
+          "wrong_detection_mean": 1.0,
+          "wrong_detection_min": 1.0,
+          "wrong_detection_p10": 1.0,
+          "wrong_detection_p50": 1.0
+        },
+        "16": {
+          "auc": 1.0,
+          "budget": 16.0,
+          "wrong_detection_mean": 0.9999999995526557,
+          "wrong_detection_min": 0.999999983895608,
+          "wrong_detection_p10": 1.0,
+          "wrong_detection_p50": 1.0
+        },
+        "2": {
+          "auc": 1.0,
+          "budget": 2.0,
+          "wrong_detection_mean": 0.814309355580271,
+          "wrong_detection_min": 0.33333333333333326,
+          "wrong_detection_p10": 0.33333333333333326,
+          "wrong_detection_p50": 1.0
+        },
+        "32": {
+          "auc": 1.0,
+          "budget": 32.0,
+          "wrong_detection_mean": 1.0,
+          "wrong_detection_min": 1.0,
+          "wrong_detection_p10": 1.0,
+          "wrong_detection_p50": 1.0
+        },
+        "4": {
+          "auc": 1.0,
+          "budget": 4.0,
+          "wrong_detection_mean": 0.930752076495042,
+          "wrong_detection_min": 0.6666666666666667,
+          "wrong_detection_p10": 0.6666666666666667,
+          "wrong_detection_p50": 1.0
+        },
+        "64": {
+          "auc": 1.0,
+          "budget": 64.0,
+          "wrong_detection_mean": 1.0,
+          "wrong_detection_min": 1.0,
+          "wrong_detection_p10": 1.0,
+          "wrong_detection_p50": 1.0
+        },
+        "8": {
+          "auc": 1.0,
+          "budget": 8.0,
+          "wrong_detection_mean": 0.9999938903866465,
+          "wrong_detection_min": 0.9997800539192733,
+          "wrong_detection_p10": 1.0,
+          "wrong_detection_p50": 1.0
+        }
+      },
+      "candidate_count": 195,
+      "component_auc": {
+        "fixture_only": 0.9741379310344828,
+        "fuzzing_any_mismatch": 1.0,
+        "fuzzing_mismatch_rate": 1.0,
+        "static_structured_proxy": 0.7758620689655172,
+        "trace_abs_error_mean": 1.0,
+        "trace_boundary_mismatch_rate": 0.8706896551724138,
+        "trace_sign_mismatch_rate": 0.8275862068965517,
+        "trace_zero_mismatch_rate": 0.7241379310344828,
+        "v3_trace_total": 1.0
+      },
+      "dataset_id": "phase7e_llm_public_full_topup",
+      "eval_count": 143,
+      "family_metrics": {
+        "mutation:phase7_llm_public_strict_bug": {
+          "candidate_count": 69,
+          "component_auc": {
+            "fixture_only": 1.0,
+            "fuzzing_any_mismatch": 1.0,
+            "fuzzing_mismatch_rate": 1.0,
+            "static_structured_proxy": 0.75,
+            "trace_abs_error_mean": 1.0,
+            "trace_boundary_mismatch_rate": 0.9583333333333334,
+            "trace_sign_mismatch_rate": 0.875,
+            "trace_zero_mismatch_rate": 0.7916666666666666,
+            "v3_trace_total": 1.0
+          },
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "group_id": "mutation:phase7_llm_public_strict_bug",
+          "label_counts": {
+            "faithful": 39,
+            "plausible_wrong": 30
+          },
+          "paired_case_count": 12
+        },
+        "mutation:phase7_llm_public_strict_rewrite": {
+          "candidate_count": 74,
+          "component_auc": {
+            "fixture_only": 0.8,
+            "fuzzing_any_mismatch": 1.0,
+            "fuzzing_mismatch_rate": 1.0,
+            "static_structured_proxy": 0.9,
+            "trace_abs_error_mean": 1.0,
+            "trace_boundary_mismatch_rate": 0.7,
+            "trace_sign_mismatch_rate": 0.8,
+            "trace_zero_mismatch_rate": 0.6,
+            "v3_trace_total": 1.0
+          },
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "group_id": "mutation:phase7_llm_public_strict_rewrite",
+          "label_counts": {
+            "faithful": 68,
+            "plausible_wrong": 6
+          },
+          "paired_case_count": 5
+        }
+      },
+      "label_counts": {
+        "compile_fail": 52,
+        "faithful": 107,
+        "plausible_wrong": 36
+      },
+      "paired_case_count": 24,
+      "title": "Phase 7E LLM public full+top-up",
+      "top_v3_family_deltas": [
+        {
+          "candidate_count": 69,
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "fuzzing_mismatch_rate_auc": 1.0,
+          "group_id": "mutation:phase7_llm_public_strict_bug",
+          "paired_case_count": 12,
+          "v3_trace_total_auc": 1.0
+        },
+        {
+          "candidate_count": 74,
+          "delta_v3_vs_fuzzing_mismatch": 0.0,
+          "fuzzing_mismatch_rate_auc": 1.0,
+          "group_id": "mutation:phase7_llm_public_strict_rewrite",
+          "paired_case_count": 5,
+          "v3_trace_total_auc": 1.0
+        }
+      ],
+      "wrong_count": 36
+    }
+  },
+  "gate": {
+    "budget8_low_cost_gate": true,
+    "v3_hard_family_delta_gate": false
+  },
+  "interpretation": "Current records support a low-budget generated-input dynamic execution claim: simple mismatch saturates ranking, and a small input budget catches most wrong candidates.",
+  "phase": "phase9_input_budget",
+  "verdict": "low-budget-dynamic-execution-claim"
+}

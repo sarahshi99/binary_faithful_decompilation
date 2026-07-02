@@ -1,0 +1,66 @@
+{
+  "behavior_label_counts": {
+    "compile_fail": 24,
+    "faithful": 23,
+    "plausible_wrong": 14
+  },
+  "candidate_count": 61,
+  "candidate_manifest_verdict": "needs-full-candidate-generation",
+  "case_ids": [
+    "ca_int_equal_values",
+    "ca_string_hash_selector",
+    "ta_affine_mod_inverse",
+    "ta_armstrong_order",
+    "ta_binary_to_octal_three_digits",
+    "ta_decimal_to_binary",
+    "ta_euler_is_palindromic",
+    "ta_infix_is_operand",
+    "ta_lcm_gcd",
+    "ta_leetcode_compute_area",
+    "ta_leetcode_fib",
+    "ta_leetcode_get_point_key",
+    "ta_leetcode_hamming_distance",
+    "ta_leetcode_max",
+    "ta_leetcode_min",
+    "ta_leetcode_range_bitwise_and",
+    "ta_leetcode_tribonacci",
+    "ta_naval_valid_entry_line_column",
+    "ta_shunting_get_precedence"
+  ],
+  "cleaning_status_counts": {
+    "parse_failed": 53,
+    "parsed_function": 61
+  },
+  "compile_pass_count": 37,
+  "compile_rate_among_parsed": 0.6065573770491803,
+  "created_at_utc": "2026-07-01T02:35:48.013991+00:00",
+  "fixture_collapse": true,
+  "fixture_passing_wrong_count": 0,
+  "generation_count": 114,
+  "generation_metadata_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda3_s1/generation_metadata.jsonl",
+  "model_info": {
+    "cuda_visible_devices_policy": "not_set_by_script; explicit --device placement only",
+    "device": "cuda:3",
+    "max_new_tokens": 220,
+    "model_error": "",
+    "model_load_seconds": 12.241,
+    "model_loaded": true,
+    "model_path": "/home/shx/.cache/huggingface/hub/models--Dream-org--Dream-Coder-v0-Instruct-7B/snapshots/5d9e88c723af9045f362748b5284bdf43d9c501e",
+    "seed": 20260701,
+    "steps": 24,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "torch_dtype": "float16"
+  },
+  "output_dir": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda3_s1",
+  "paired_case_count": 7,
+  "parsed_count": 61,
+  "parsed_rate": 0.5350877192982456,
+  "prompt_ids": [
+    "strict_rewrite",
+    "strict_bug"
+  ],
+  "records_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda3_s1/records.jsonl",
+  "trace_pairwise_auc": 1.0,
+  "verdict": "needs-more-phase5-gpu-generated-samples"
+}

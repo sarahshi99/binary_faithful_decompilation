@@ -1,0 +1,433 @@
+{
+  "candidate_count": 42,
+  "candidate_layers": [
+    "llm_strict_rewrite",
+    "llm_strict_bug"
+  ],
+  "candidates": [
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_s0_ca_int_compare_values_strict_rewrite_01",
+          "case_id": "ca_int_compare_values",
+          "cleaning_status": "parsed_function",
+          "function_source": "int ca_int_compare_values(int left, int right) {\n    // Return the comparison of the two integers\n    // 'left' is compared with 'right' to determine the result\n    if (left < right) return -1; // Direct comparison\n    else if (left > right) return 1;\n    else return 0;\n}\n",
+          "generation_index": 1,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0/raw/phase5_gpu_s0_ca_int_compare_values_strict_rewrite_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ca_int_compare_values"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_s0_ca_int_hash_value_strict_rewrite_02",
+          "case_id": "ca_int_hash_value",
+          "cleaning_status": "parsed_function",
+          "function_source": "int ca_int_hash_value(int value) {\n    return value;\n}\n",
+          "generation_index": 2,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0/raw/phase5_gpu_s0_ca_int_hash_value_strict_rewrite_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_s0_ca_int_hash_value_strict_bug_01",
+          "case_id": "ca_int_hash_value",
+          "cleaning_status": "parsed_function",
+          "function_source": "int ca_int_hash_value(int value) {\n    return (unsigned int) value; // Subtle bug: ignore the sign of the input\n}\n",
+          "generation_index": 1,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0/raw/phase5_gpu_s0_ca_int_hash_value_strict_bug_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ca_int_hash_value"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_s0_ta_armstrong_power_strict_bug_02",
+          "case_id": "ta_armstrong_power",
+          "cleaning_status": "parsed_function",
+          "function_source": "int power(int x, unsigned int y) {\n    // If y == 0, return 0 (this is bug, should return 1)\n    if (y == 0)\n        return 0;\n    else if (y % 2 == 0)\n        return power(x, y / 2) * power(x, y / 2);\n    // else\n    return x * power(x, y / 2) * power(x, y / 2);\n}\n",
+          "generation_index": 2,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0/raw/phase5_gpu_s0_ta_armstrong_power_strict_bug_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_armstrong_power"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_s0_ta_decimal_to_octal_strict_bug_02",
+          "case_id": "ta_decimal_to_octal",
+          "cleaning_status": "parsed_function",
+          "function_source": "int decimal_to_octal(int decimal) {\n    if (decimal < 8) {\n        return decimal;\n    } else if (decimal == 0) { \n        return 0;\n    } \n    else { \n        return ((decimal_to_octal(decimal / 8) * 10) + (decimal % 8));\n    }\n}\n",
+          "generation_index": 2,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0/raw/phase5_gpu_s0_ta_decimal_to_octal_strict_bug_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_decimal_to_octal"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_s0_ta_gcd_GCD_strict_rewrite_02",
+          "case_id": "ta_gcd_GCD",
+          "cleaning_status": "parsed_function",
+          "function_source": "int GCD(int x, int y) {\n    if (y == 0) \n        return x; // If y is 0\n    int remainder;\n\n    while (y != 0) {\n        remainder = x % y; // Compute the remainder\n        x = y;         // Update x\n        y = remainder;    // Update y\n    }\n    \n    return x; // Return GCD\n}\n",
+          "generation_index": 2,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0/raw/phase5_gpu_s0_ta_gcd_GCD_strict_rewrite_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_s0_ta_gcd_GCD_strict_bug_00",
+          "case_id": "ta_gcd_GCD",
+          "cleaning_status": "parsed_function",
+          "function_source": "int GCD(int x, int y)\n{\n    if (y == 0)\n    {\n        return 1; // Bug: Should return x\n    }\n    if (x != 0)\n    {\n        return GCD(y, x % y);\n    }\n    return x;\n}\n",
+          "generation_index": 0,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0/raw/phase5_gpu_s0_ta_gcd_GCD_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_s0_ta_gcd_GCD_strict_bug_01",
+          "case_id": "ta_gcd_GCD",
+          "cleaning_status": "parsed_function",
+          "function_source": "int GCD(int x, int y) {\n    if (y == 0)\n        return x;\n    return y; // introduce the bug\n    return GCD(y, x % y);\n}\n",
+          "generation_index": 1,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0/raw/phase5_gpu_s0_ta_gcd_GCD_strict_bug_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_gcd_GCD"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_s0_ta_infix_precedence_two_strict_rewrite_00",
+          "case_id": "ta_infix_precedence_two",
+          "cleaning_status": "parsed_function",
+          "function_source": "int getPrecedence (char op1, char op2) {\n    if (op1-1 == op2-1) {\n        return 1 - 1 + 1;\n    }\n    else if(op1-1 == op2-1){\n        return 0;\n    }\n    else if (op1-1 == op2-1 || \n             op1-1 == op2-1 ||\n             op1-1 == op2-1) {\n        return 0;\n    }\n    else if(op1-4 == op2-4 || op1-4 == op2-4) {\n        return 0;\n    }\n    else {\n        return 1;\n    }\n}\n",
+          "generation_index": 0,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0/raw/phase5_gpu_s0_ta_infix_precedence_two_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_s0_ta_infix_precedence_two_strict_bug_02",
+          "case_id": "ta_infix_precedence_two",
+          "cleaning_status": "parsed_function",
+          "function_source": "int getPrecedence (char op1, char op2)\n{\n    // Bug 1\n    if (op2 == '$') \n    {\n        return 0;\n    } else if (op1 == '$') \n    {\n        return 1; // Bug 1\n    } if (op2 == '*' || op2 == '/' || op2 == '-')\n    {\n        return 0; // Bug 1\n    } if (op1 == '*' || op1 == '/' || op1 == '%')\n    {\n        return 1; // Bug 1\n    }\n    if (op2 == '+' || op2 == '-') \n    {\n        return 0; // Bug 1\n    }\n    return 1;\n}\n",
+          "generation_index": 2,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0/raw/phase5_gpu_s0_ta_infix_precedence_two_strict_bug_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_infix_precedence_two"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_s0_ta_leetcode_get_triplet_id_strict_rewrite_00",
+          "case_id": "ta_leetcode_get_triplet_id",
+          "cleaning_status": "parsed_function",
+          "function_source": "int getTripletId(int i, int j) {\n    return i - (i % 3) + (j % 3);\n}\n",
+          "generation_index": 0,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0/raw/phase5_gpu_s0_ta_leetcode_get_triplet_id_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_s0_ta_leetcode_get_triplet_id_strict_rewrite_01",
+          "case_id": "ta_leetcode_get_triplet_id",
+          "cleaning_status": "parsed_function",
+          "function_source": "int getTripletId(int i, int j) {\n    return (i / 3) * 3 + (j / 3);\n}\n",
+          "generation_index": 1,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0/raw/phase5_gpu_s0_ta_leetcode_get_triplet_id_strict_rewrite_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_s0_ta_leetcode_get_triplet_id_strict_rewrite_02",
+          "case_id": "ta_leetcode_get_triplet_id",
+          "cleaning_status": "parsed_function",
+          "function_source": "int getTripletId(int i, int j){\n    return (i / 3) * 3 + j / 3; // \n}\n",
+          "generation_index": 2,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0/raw/phase5_gpu_s0_ta_leetcode_get_triplet_id_strict_rewrite_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_s0_ta_leetcode_get_triplet_id_strict_bug_01",
+          "case_id": "ta_leetcode_get_triplet_id",
+          "cleaning_status": "parsed_function",
+          "function_source": "int getTripletId(int i, int j) {\n    return (i / 3) * 3 + j / 3;\n}\n",
+          "generation_index": 1,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0/raw/phase5_gpu_s0_ta_leetcode_get_triplet_id_strict_bug_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_s0_ta_leetcode_get_triplet_id_strict_bug_02",
+          "case_id": "ta_leetcode_get_triplet_id",
+          "cleaning_status": "parsed_function",
+          "function_source": "int getTripletId(int i, int j) {\n    return (i / 3) * 3 + (j / 3);\n}\n",
+          "generation_index": 2,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0/raw/phase5_gpu_s0_ta_leetcode_get_triplet_id_strict_bug_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_leetcode_get_triplet_id"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_s0_ta_leetcode_maxval_strict_rewrite_00",
+          "case_id": "ta_leetcode_maxval",
+          "cleaning_status": "parsed_function",
+          "function_source": "int maxval(int a, int b) {\n    if (a > b) {\n        return a;\n    } \n    return b;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0/raw/phase5_gpu_s0_ta_leetcode_maxval_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_s0_ta_leetcode_maxval_strict_rewrite_01",
+          "case_id": "ta_leetcode_maxval",
+          "cleaning_status": "parsed_function",
+          "function_source": "int maxval(int a, int b) {\n    if (a > b)\n        return a;\n    else return b;\n}\n",
+          "generation_index": 1,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0/raw/phase5_gpu_s0_ta_leetcode_maxval_strict_rewrite_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_s0_ta_leetcode_maxval_strict_bug_01",
+          "case_id": "ta_leetcode_maxval",
+          "cleaning_status": "parsed_function",
+          "function_source": "int maxval(int a, int b) {\n    if (a > b)\n        return a;\n    else {\n        return b;\n    }\n}\n",
+          "generation_index": 1,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0/raw/phase5_gpu_s0_ta_leetcode_maxval_strict_bug_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_leetcode_maxval"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_s0_ta_leetcode_my_sqrt_strict_bug_02",
+          "case_id": "ta_leetcode_my_sqrt",
+          "cleaning_status": "parsed_function",
+          "function_source": "int mySqrt(int x) {\n    // The subtle bug here is in the use of `long long int mid=(start+end)/2` which truncates the value of mid. \n    // This causes it to to return 2, but in the reference, mid should actually be (start + end) / 2 to handle a long long int correctly.\n    //\n    int start=0;\n    int end = x;\n    while(start <= end){\n        long long int mid = (++start + ++end)/2;\n        long long int val = mid*mid;\n        if (val == x) {\n            return mid;\n        }\n        if (val < x) {\n            start = ++mid;\n        } else {\n            end = mid;\n        }\n    }\n    return 0;\n}\n",
+          "generation_index": 2,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0/raw/phase5_gpu_s0_ta_leetcode_my_sqrt_strict_bug_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_leetcode_my_sqrt"
+    }
+  ],
+  "compile_pass_count": 19,
+  "compile_pass_target_min": 100,
+  "compile_pass_target_range": [
+    100,
+    200
+  ],
+  "created_at_utc": "2026-07-01T02:31:17.916112+00:00",
+  "generation_metadata_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0/generation_metadata.jsonl",
+  "gpu_decision": "started",
+  "output_dir": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0",
+  "paired_function_count": 3,
+  "paired_function_target_min": 20,
+  "phase": "phase5_candidate_generation_or_import",
+  "records_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_s0/records.jsonl",
+  "shard_count": 2,
+  "shard_index": 0,
+  "source_manifest_function_count": 38,
+  "verdict": "needs-full-candidate-generation"
+}

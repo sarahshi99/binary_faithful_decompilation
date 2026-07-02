@@ -30,15 +30,30 @@ def run_command(
     cwd: Path | None = None,
     timeout_s: int = 10,
 ) -> subprocess.CompletedProcess[str]:
-    return subprocess.run(
-        argv,
-        cwd=cwd,
-        timeout=timeout_s,
-        text=True,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE,
-        check=False,
-    )
+    try:
+        return subprocess.run(
+            argv,
+            cwd=cwd,
+            timeout=timeout_s,
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            check=False,
+        )
+    except subprocess.TimeoutExpired as exc:
+        stdout = exc.stdout if isinstance(exc.stdout, str) else ""
+        stderr = exc.stderr if isinstance(exc.stderr, str) else ""
+        timeout_message = f"command timed out after {timeout_s} seconds"
+        if stderr:
+            stderr = f"{stderr}\n{timeout_message}"
+        else:
+            stderr = timeout_message
+        return subprocess.CompletedProcess(
+            argv,
+            returncode=124,
+            stdout=stdout,
+            stderr=stderr,
+        )
 
 
 def compile_candidate(

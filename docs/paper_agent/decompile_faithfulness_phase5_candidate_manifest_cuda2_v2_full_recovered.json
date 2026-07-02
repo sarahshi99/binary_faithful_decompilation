@@ -1,0 +1,1230 @@
+{
+  "candidate_count": 157,
+  "candidate_layers": [
+    "llm_strict_rewrite",
+    "llm_strict_bug"
+  ],
+  "candidates": [
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ca_int_compare_values_strict_bug_01",
+          "case_id": "ca_int_compare_values",
+          "cleaning_status": "parsed_function",
+          "function_source": "int ca_int_compare_values(int left, int right) {\n  // Bug: Inverting the comparison return values\n  if (left < right) {\n    return left;\n  } else if (left > right) {\n    return -right;\n  } else {\n    return right;\n  }\n}\n",
+          "generation_index": 1,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ca_int_compare_values_strict_bug_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ca_int_compare_values_strict_rewrite_01",
+          "case_id": "ca_int_compare_values",
+          "cleaning_status": "parsed_function",
+          "function_source": "int ca_int_compare_values(int left, int right) {\n    // Directly return the difference between the two integers\n    return left - right;  // This is equivalent to a direct comparison\n    if (left < right) return -1; // Explicit comparison logic\n    if (left > right) return 1;\n    return 0;\n}\n",
+          "generation_index": 1,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ca_int_compare_values_strict_rewrite_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ca_int_compare_values"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ca_int_equal_values_strict_bug_00",
+          "case_id": "ca_int_equal_values",
+          "cleaning_status": "parsed_function",
+          "function_source": "int ca_int_equal_values(int left, int right) {\n    // Bug: Do not use int_equal. Directly compare the two integers.\n    return left == right;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ca_int_equal_values_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ca_int_equal_values_strict_bug_01",
+          "case_id": "ca_int_equal_values",
+          "cleaning_status": "parsed_function",
+          "function_source": "int ca_int_equal_values(int left, int right) {\n    return left == right; // If the sign of the numbers is different, it should return 0\n}\n",
+          "generation_index": 1,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ca_int_equal_values_strict_bug_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ca_int_equal_values_strict_rewrite_01",
+          "case_id": "ca_int_equal_values",
+          "cleaning_status": "parsed_function",
+          "function_source": "int ca_int_equal_values(int left, int right) {\n\treturn left == right;\n}\n",
+          "generation_index": 1,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ca_int_equal_values_strict_rewrite_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ca_int_equal_values_strict_rewrite_02",
+          "case_id": "ca_int_equal_values",
+          "cleaning_status": "parsed_function",
+          "function_source": "int ca_int_equal_values(int left, int right) {\n    return left == right;\n}\n",
+          "generation_index": 2,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ca_int_equal_values_strict_rewrite_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ca_int_equal_values"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ca_int_hash_value_strict_rewrite_02",
+          "case_id": "ca_int_hash_value",
+          "cleaning_status": "parsed_function",
+          "function_source": "int ca_int_hash_value(int value){\n\treturn value;\n}\n",
+          "generation_index": 2,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ca_int_hash_value_strict_rewrite_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ca_int_hash_value"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_armstrong_order_strict_bug_00",
+          "case_id": "ta_armstrong_order",
+          "cleaning_status": "parsed_function",
+          "function_source": "int order(int x)\n{\n    int n = 0;\n    while (x)\n    {\n        // n++; // This line will cause the function to incorrectly return the value of n - 1\n        x = x / 10;\n    }\n    return n;\n}\n",
+          "generation_index": 0,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_armstrong_order_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_armstrong_order_strict_bug_01",
+          "case_id": "ta_armstrong_order",
+          "cleaning_status": "parsed_function",
+          "function_source": "int order(int x)\n{\n    x = x;\n    int n = 0;\n    while (x)\n    {\n        // Increment the number of digits counter\n        n++;\n        x = x        ; // Remove the last digit\n    }\n    return n; // Return the number of digits\n}\n",
+          "generation_index": 1,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_armstrong_order_strict_bug_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_armstrong_order_strict_rewrite_01",
+          "case_id": "ta_armstrong_order",
+          "cleaning_status": "parsed_function",
+          "function_source": "int order(int  x)\n{\n    int n = 0;\n    while(x)\n    {\n        n++;\n        x = x / 10;\n    }\n\treturn n;\n}\n",
+          "generation_index": 1,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_armstrong_order_strict_rewrite_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_armstrong_order_strict_rewrite_02",
+          "case_id": "ta_armstrong_order",
+          "cleaning_status": "parsed_function",
+          "function_source": "int order ( int    x )\n{\n    int    n =    0;\n    while    ( x )\n    {\n        n++; \n        x--;\n    }\n    return    n;\n}\n",
+          "generation_index": 2,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_armstrong_order_strict_rewrite_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_armstrong_order"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_armstrong_power_strict_bug_02",
+          "case_id": "ta_armstrong_power",
+          "cleaning_status": "parsed_function",
+          "function_source": "int power(int x, unsigned int y) {\n    if (y == 0)\n        return 1;\n    if (y % 2 == 0)\n        return power(x, y / 2) * (power(x, y / 2)); \n    return (x * power(x, y / 2)) * power(x, y / 2);\n}\n",
+          "generation_index": 2,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_armstrong_power_strict_bug_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_armstrong_power"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_binary_to_octal_three_digits_strict_rewrite_02",
+          "case_id": "ta_binary_to_octal_three_digits",
+          "cleaning_status": "parsed_function",
+          "function_source": "int three_digits(int n)\n{\n    int r, d = 0, p = 0; // Initialize the function with three variables: r, d, 0\n    p = 1; // Set the power variable p to the first 10 power\n\n    for (int i = 0; i < 3; i++)\n    {\n        r = (n >= 0) % 10; // Ensure n is >= 0\n        d += r * p;\n        p *= 10;\n        n /= 10;\n    }\n    return d;\n}\n",
+          "generation_index": 2,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_binary_to_octal_three_digits_strict_rewrite_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_binary_to_octal_three_digits"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_decimal_to_binary_strict_bug_02",
+          "case_id": "ta_decimal_to_binary",
+          "cleaning_status": "parsed_function",
+          "function_source": "int decimal_to_binary(unsigned int number) {\n    // In the reference source, there is a semantic bug in the addition and the multiplication\n    unsigned int result = decimal_to_binary(number / 2);\n    // For example: \n    // The correct behavior should be:\n    //  5 => 1 + 1 * 2 => 2 + 1 * 2 => 2 + 10 * 1 => 2 + 10 = 2 + 10 = 2\n    // But the buggy function will return:\n    //  (2 + 10 * 1) => ( 2 + 10 * 1 % 2) => ( 2 + 10 * 1 % 2) => 2 + 10 * 1 = 102\n    return result;\n}\n",
+          "generation_index": 2,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_decimal_to_binary_strict_bug_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_decimal_to_binary_strict_rewrite_01",
+          "case_id": "ta_decimal_to_binary",
+          "cleaning_status": "parsed_function",
+          "function_source": "int decimal_to_binary(unsigned int number) {\n    return number == 0 ? 0 : number % 2 + 10 * decimal_to_binary(number / 2);\n}\n",
+          "generation_index": 1,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_decimal_to_binary_strict_rewrite_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_decimal_to_binary"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_euler_is_palindromic_strict_bug_00",
+          "case_id": "ta_euler_is_palindromic",
+          "cleaning_status": "parsed_function",
+          "function_source": "int is_palindromic(unsigned int n) {\n    unsigned int reversed = 0, t = n;\n    int count = 0;\n\n    while (t > 0) {\n        if (count > 0) break;\n        count += 1;\n        {\n            reversed = 10 * reversed + (t % 10);\n            t /= 10;\n        }\n        return reversed;\n    }\n    return reversed == n;\n}\n",
+          "generation_index": 0,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_euler_is_palindromic_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_euler_is_palindromic_strict_rewrite_01",
+          "case_id": "ta_euler_is_palindromic",
+          "cleaning_status": "parsed_function",
+          "function_source": "int is_palindromic(unsigned int n) {\n    unsigned int reversed = 0, t = n;\n\n    while (t > 0) {\n        reversed = reversed * 10 + (t % 10);\n        t /= 10; // /= divides by 10\n    }\n    return reversed == n;\n}\n",
+          "generation_index": 1,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_euler_is_palindromic_strict_rewrite_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_euler_is_palindromic"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_gcd_GCD_strict_bug_01",
+          "case_id": "ta_gcd_GCD",
+          "cleaning_status": "parsed_function",
+          "function_source": "int GCD(int x, int y) {\n    return y - x % y;\n}\n",
+          "generation_index": 1,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_gcd_GCD_strict_bug_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_gcd_GCD_strict_rewrite_02",
+          "case_id": "ta_gcd_GCD",
+          "cleaning_status": "parsed_function",
+          "function_source": "int GCD(int x, int y) {\n    if (y < 0) {\n        x = x ^ y; y = y ^ x;\n    }\n    if (x < 0) x = -x;\n    while (x % y != 0) {\n        x = y; y = x % y;\n    }\n    return y;\n}\n",
+          "generation_index": 2,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_gcd_GCD_strict_rewrite_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_gcd_GCD"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_infix_is_operand_strict_bug_00",
+          "case_id": "ta_infix_is_operand",
+          "cleaning_status": "parsed_function",
+          "function_source": "int isOprnd(char ch)\n{\n    if ((ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122) || // \n        (ch >= 48 && ch <= 57)) \n    {\n        return 1;  // return for true result\n    }\n    else\n    {\n        return 0;  // return for false result\n    }\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_infix_is_operand_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_infix_is_operand_strict_bug_02",
+          "case_id": "ta_infix_is_operand",
+          "cleaning_status": "parsed_function",
+          "function_source": "int isOprnd(char ch)\n{\n    if ((ch >= 65 && ch <= 90) || (ch >= 97 && ch <= 122) || (ch >= 48 && ch <= 57))\n    {\n        return 1;  // true result\n    }\n    else   // Subtle bug: missing space, ' ' instead of ' else '\n{\n        return 0;  // false result\n    }\n}\n",
+          "generation_index": 2,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_infix_is_operand_strict_bug_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_infix_is_operand_strict_rewrite_00",
+          "case_id": "ta_infix_is_operand",
+          "cleaning_status": "parsed_function",
+          "function_source": "int isOprnd(char ch)\n{\n    if ((ch >= 65 && ch <= 90) ||\n        (ch >= 97 && ch <= 122) ||  // check if ch is an operand\n        (ch >= 48 && ch <= 57))     // using ASCII values\n    {\n        return 1; // return for true result\n    }\n    // else\n    else    {\n        return 0;  // return for false result\n    }\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_infix_is_operand_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_infix_is_operand_strict_rewrite_01",
+          "case_id": "ta_infix_is_operand",
+          "cleaning_status": "parsed_function",
+          "function_source": "int isOprnd(char ch) {\n  if ((ch >= 65 && ch <= 90) ||\n      (ch >= 97 && ch <=122) ||\n      (ch >= 48 && ch <=  57)) {\n    return 1;\n  } \n  else {\n    return 0;\n  }\n}\n",
+          "generation_index": 1,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_infix_is_operand_strict_rewrite_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_infix_is_operand_strict_rewrite_02",
+          "case_id": "ta_infix_is_operand",
+          "cleaning_status": "parsed_function",
+          "function_source": "int isOprnd(char ch) {\n    if ((ch >= 65 && ch <= 90) || \n        (ch >= 97 && ch <= 122)  || \n        (ch >= 48 && ch <= 57))\n    {\n        return 1;  // return for true result\n    }\n    return 0;  // return for false result\n}\n",
+          "generation_index": 2,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_infix_is_operand_strict_rewrite_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_infix_is_operand"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_infix_precedence_two_strict_bug_02",
+          "case_id": "ta_infix_precedence_two",
+          "cleaning_status": "parsed_function",
+          "function_source": "int getPrecedence (char op1, char op2) {\n    if (op2 == '$') {\n        return 0;\n    }\n    else if (op1 == '$') {\n        return 1;\n    }\n    else if (op2 == '*' || op2 == '/' || op2 == '%') {\n        return 1; // Bug\n    }\n    else if (op2 == '+' || op2 == '-') {\n        return 0; \n    }\n    else {\n        return 1;\n    }\n}\n",
+          "generation_index": 2,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_infix_precedence_two_strict_bug_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_infix_precedence_two"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_lcm_gcd_strict_bug_00",
+          "case_id": "ta_lcm_gcd",
+          "cleaning_status": "parsed_function",
+          "function_source": "int gcd(int a, int b)\n{\n    if (a == 0)\n    {\n        return b;\n    }\n    return gcd(b % a, a);\n    return a;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_lcm_gcd_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_lcm_gcd_strict_bug_01",
+          "case_id": "ta_lcm_gcd",
+          "cleaning_status": "parsed_function",
+          "function_source": "int gcd(int a, int b) {\n    if (a == 0)\n        return 0;\n    while (b != 0) {\n        int temp = b;\n        b = a;\n        a = temp;\n    }\n    return a;\n}\n",
+          "generation_index": 1,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_lcm_gcd_strict_bug_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_lcm_gcd"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_lcm_lcm_strict_rewrite_02",
+          "case_id": "ta_lcm_lcm",
+          "cleaning_status": "parsed_function",
+          "function_source": "int lcm(int a, int b) {\n    // We need to calculate the least common multiple using the properties\n    // of the greatest common divisor (GCD) and LCM\n    // We use the formula: lcm(a, b) = (a * b) / gcd(a, b)\n    \n    // Calculate GCD using a while loop approach\n    while (b != 0) {\n        a = b;\n        b = a % b;\n    }\n    return b;\n}\n",
+          "generation_index": 2,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_lcm_lcm_strict_rewrite_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_lcm_lcm"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_leetcode_fib_strict_bug_01",
+          "case_id": "ta_leetcode_fib",
+          "cleaning_status": "parsed_function",
+          "function_source": "int fib(int N) {\n    int a=0, b=1;\n    if (N == 0)\n        return 0;\n    if (N == 1) // Bug here\n    return 1;\n    \n    if (N > 1) {\n        return a + b;\n    }\n    return a + fib(N - 1);\n    return a;\n}\n",
+          "generation_index": 1,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_leetcode_fib_strict_bug_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_leetcode_fib_strict_bug_02",
+          "case_id": "ta_leetcode_fib",
+          "cleaning_status": "parsed_function",
+          "function_source": "int fib(int N) {\n    if (N == 0)\n        return 1; // Bug: should return 0\n    if (N == 1)\n        return 1; // No change\n    return fib(N - 1) + fib(N - 2);\n}\n",
+          "generation_index": 2,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_leetcode_fib_strict_bug_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_leetcode_fib_strict_rewrite_00",
+          "case_id": "ta_leetcode_fib",
+          "cleaning_status": "parsed_function",
+          "function_source": "int fib(int N) {\n    if (N  ==  0) return 0;\n    if (N  ==  1) return 1  ;\n    \n    int a = 0, b = 1, c;\n    \n    for (int i = 2; i <= N; ++i) {\n        c = a + b;\n        a = c;\n        a = b;\n        b = c;        \n    }\n    return b;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_leetcode_fib_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_leetcode_fib"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_leetcode_get_point_key_strict_bug_02",
+          "case_id": "ta_leetcode_get_point_key",
+          "cleaning_status": "parsed_function",
+          "function_source": "int getPointKey(int i, int j, int boardSize, int boardColSize){\n    return boardSize * boardColSize * i + j;\n}\n",
+          "generation_index": 2,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_leetcode_get_point_key_strict_bug_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_leetcode_get_point_key_strict_rewrite_00",
+          "case_id": "ta_leetcode_get_point_key",
+          "cleaning_status": "parsed_function",
+          "function_source": "int getPointKey(int i, int j, int boardSize, int colSize){\n    return boardSize * colSize * i + j;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_leetcode_get_point_key_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_leetcode_get_point_key_strict_rewrite_02",
+          "case_id": "ta_leetcode_get_point_key",
+          "cleaning_status": "parsed_function",
+          "function_source": "int getPointKey(int i, int j, int boardSize, int boardColSize){\n    return boardSize * boardColSize * i + j;\n}\n",
+          "generation_index": 2,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_leetcode_get_point_key_strict_rewrite_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_leetcode_get_point_key"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_leetcode_get_triplet_id_strict_bug_02",
+          "case_id": "ta_leetcode_get_triplet_id",
+          "cleaning_status": "parsed_function",
+          "function_source": "int getTripletId(int i, int j) {\n    return (i / 3) * 3 + (j / 3);\n}\n",
+          "generation_index": 2,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_leetcode_get_triplet_id_strict_bug_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_leetcode_get_triplet_id_strict_rewrite_01",
+          "case_id": "ta_leetcode_get_triplet_id",
+          "cleaning_status": "parsed_function",
+          "function_source": "int getTripletId(int i, int j) {\n    return (i / 3) * 3 + (j / 3);\n}\n",
+          "generation_index": 1,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_leetcode_get_triplet_id_strict_rewrite_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_leetcode_get_triplet_id"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_leetcode_max_strict_rewrite_00",
+          "case_id": "ta_leetcode_max",
+          "cleaning_status": "parsed_function",
+          "function_source": "int max(int a, int b) { return a > b; }\n",
+          "generation_index": 0,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_leetcode_max_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_leetcode_max"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_leetcode_maxval_strict_bug_02",
+          "case_id": "ta_leetcode_maxval",
+          "cleaning_status": "parsed_function",
+          "function_source": "int maxval(int a, int b)\n{\n    if (a > b)\n        return a;\n    else\n        // Bug: should be return b, but incorrectly returns a\n        return a;\n}\n",
+          "generation_index": 2,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_leetcode_maxval_strict_bug_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_leetcode_maxval_strict_rewrite_01",
+          "case_id": "ta_leetcode_maxval",
+          "cleaning_status": "parsed_function",
+          "function_source": "int maxval(int a, int b) {\n    if (a > b) {\n        return a; // Return the larger value\n    } else {\n        return b; // Return the larger value\n    }\n}\n",
+          "generation_index": 1,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_leetcode_maxval_strict_rewrite_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_leetcode_maxval_strict_rewrite_02",
+          "case_id": "ta_leetcode_maxval",
+          "cleaning_status": "parsed_function",
+          "function_source": "int maxval(int _, int b) {\n    if (_ > b)\n        return _;\n    else\n        return b;\n}\n",
+          "generation_index": 2,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_leetcode_maxval_strict_rewrite_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_leetcode_maxval"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_leetcode_min_strict_bug_00",
+          "case_id": "ta_leetcode_min",
+          "cleaning_status": "parsed_function",
+          "function_source": "int min(int a, int b) {\n    return ((a < b) ? a : b);\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_leetcode_min_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_leetcode_min_strict_bug_02",
+          "case_id": "ta_leetcode_min",
+          "cleaning_status": "parsed_function",
+          "function_source": "int min(int a, int b) {\n\treturn ((a < b) ? a : b); // Incorrectly returns the maximum value\n}\n",
+          "generation_index": 2,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_leetcode_min_strict_bug_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_leetcode_min_strict_rewrite_00",
+          "case_id": "ta_leetcode_min",
+          "cleaning_status": "parsed_function",
+          "function_source": "int min(int a, int b){\n    if (a < b) {\n        return a;\n    }\n    return b;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_leetcode_min_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_leetcode_min_strict_rewrite_01",
+          "case_id": "ta_leetcode_min",
+          "cleaning_status": "parsed_function",
+          "function_source": "int min (int a, int b) {\n    if (a < b) { \n        return a;\n    }\n    return b;\n}\n",
+          "generation_index": 1,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_leetcode_min_strict_rewrite_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_leetcode_min"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_leetcode_range_bitwise_and_strict_bug_00",
+          "case_id": "ta_leetcode_range_bitwise_and",
+          "cleaning_status": "parsed_function",
+          "function_source": "int rangeBitwiseAnd(int m, int n)\n{\n    // Continuously shifts to the right the bits of n, until m becomes equal to n\n    while (m < n)\n    {\n        n &= n - 1;  // Bug: modifying n instead of m\n    }\n    // Return n, which is the result of the operation\n    return n;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_leetcode_range_bitwise_and_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_leetcode_range_bitwise_and_strict_bug_01",
+          "case_id": "ta_leetcode_range_bitwise_and",
+          "cleaning_status": "parsed_function",
+          "function_source": "int rangeBitwiseAnd(int m, int n) {\n    while (m < n) {\n        n &= n - 1;\n    }\n    // Bug: n instead of m\n    return n;\n}\n",
+          "generation_index": 1,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_leetcode_range_bitwise_and_strict_bug_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_leetcode_range_bitwise_and_strict_rewrite_01",
+          "case_id": "ta_leetcode_range_bitwise_and",
+          "cleaning_status": "parsed_function",
+          "function_source": "int rangeBitwiseAnd(int m, int n) {\n    while (m < n) {\n        // Reduce the range to find the AND of the range [m, n]\n        n &= n - 1;\n    }\n    return n;\n}\n",
+          "generation_index": 1,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_leetcode_range_bitwise_and_strict_rewrite_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_leetcode_range_bitwise_and_strict_rewrite_02",
+          "case_id": "ta_leetcode_range_bitwise_and",
+          "cleaning_status": "parsed_function",
+          "function_source": "int rangeBitwiseAnd(int m, int n) {\n    while (m < n)\n        n &= n - 1;\n    return n;\n}\n",
+          "generation_index": 2,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_leetcode_range_bitwise_and_strict_rewrite_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_leetcode_range_bitwise_and"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_leetcode_tribonacci_strict_bug_00",
+          "case_id": "ta_leetcode_tribonacci",
+          "cleaning_status": "parsed_function",
+          "function_source": "int tribonacci(int n) {\n    int t0 = 0;\n    int t1 = 1;\n    int t2 = 1;\n    \n    if (n == 0) \n        return t0;\n\n    if (n == 1)\n        return t1;\n\n    if (n == 2)\n        return t2;\n\n    // Bug: Incorrect for loop condition\n    for (int i = 0; i <= n - 2; i++) {\n        int nextT = t0 + t1 + t2;\n        t0 = t1;\n        t1 = t2;\n        t2 = nextT;\n    }\n\n    return t2;\n}\n",
+          "generation_index": 0,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_leetcode_tribonacci_strict_bug_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_leetcode_tribonacci_strict_rewrite_00",
+          "case_id": "ta_leetcode_tribonacci",
+          "cleaning_status": "parsed_function",
+          "function_source": "int tribonacci(int n) {\n    long int t0 = 0; \n    long int t1 = 1;\n    static int t2 = 1;\n\n    if (n == 0) {\n        return t0;\n    }\n\n    if (n == 1) {\n        return t1;\n    }\n    \n    if (n == 2) {\n        return t2;\n    }\n\n    for (int i = 3; i < n; i++) {\n        int nextT = t0 + t1 + t2;\n        t0 = t1;\n        t1 = t2;\n        t2 = nextT;\n    }\n    \n    return t2;\n}\n",
+          "generation_index": 0,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_leetcode_tribonacci_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_leetcode_tribonacci"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_naval_valid_entry_line_column_strict_bug_01",
+          "case_id": "ta_naval_valid_entry_line_column",
+          "cleaning_status": "parsed_function",
+          "function_source": "int validEntryLineColumn(int line, char column) {\n    // Bug: if line is < 1 or > 10, return 0\n    //\n    // Bug: column should be from 1 to 10 instead of 65 to 74\n    if ((line >= 0 && line <= 9) && (column >=5 && column <=74)) {\n        return 1;\n    }\n\n    return 0;\n}\n",
+          "generation_index": 1,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_naval_valid_entry_line_column_strict_bug_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_naval_valid_entry_line_column_strict_bug_02",
+          "case_id": "ta_naval_valid_entry_line_column",
+          "cleaning_status": "parsed_function",
+          "function_source": "int validEntryLineColumn(int line, char column) // Bug: column >= 0 condition (incorrect here)\n{\n    if ((line >= 1 && line <= 10) && (column >= 0 && column <= 74))\n    {\n        return 1;\n    }\n\n    return 0;\n}\n",
+          "generation_index": 2,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_naval_valid_entry_line_column_strict_bug_02.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_naval_valid_entry_line_column_strict_rewrite_00",
+          "case_id": "ta_naval_valid_entry_line_column",
+          "cleaning_status": "parsed_function",
+          "function_source": "int validEntryLineColumn(int line, char column)\n{\n    if ((line >= 1 && line <= 10) && (column >= 65 && column <= 74)) \n    {\n        return 1;\n    } \n    return 0;\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_naval_valid_entry_line_column_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_naval_valid_entry_line_column_strict_rewrite_01",
+          "case_id": "ta_naval_valid_entry_line_column",
+          "cleaning_status": "parsed_function",
+          "function_source": "int validEntryLineColumn(int line, char column) {\n    // Check the validity of the line and character column\n    if ((line >= 1 && line <= 10) &&\n        (column >= 65 && column <= 74)) {\n        return 1;\n    }\n\n    return 0;\n}\n",
+          "generation_index": 1,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_naval_valid_entry_line_column_strict_rewrite_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_naval_valid_entry_line_column"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_shunting_get_associativity_strict_bug_01",
+          "case_id": "ta_shunting_get_associativity",
+          "cleaning_status": "parsed_function",
+          "function_source": "int getAssociativity(char operator) {\n    switch (operator) {\n        // Correct case\n        case '^': {\n            return 0;\n        }\n        // Incorrect branch handling for addition and subtraction\n        case '+': \n        case '-': {\n            return 0;\n        }\n        // Case for other operators\n        case '*':\n        case '/': {\n            return 1;\n        }\n        // Invalid operator case\n        default: {\n            fprintf(stderr,\"Error: Invalid operator\\n\");\n            return -1;\n        }\n    }\n}\n",
+          "generation_index": 1,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_recovered_strict_bug",
+          "prompt_id": "strict_bug",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_shunting_get_associativity_strict_bug_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_shunting_get_associativity"
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_shunting_get_precedence_strict_rewrite_00",
+          "case_id": "ta_shunting_get_precedence",
+          "cleaning_status": "parsed_function",
+          "function_source": "int getPrecedence(char operator) {\n    switch (operator) {\n        case '+': \n        case '-':\n            {\n            return 1;\n            }\n        case '*': \n        case '/': \n            {\n            return 2;\n            }\n        case '^':\n            {\n            return 3;\n            }\n        default:\n            {\n            fprintf(stderr, \"Error: Invalid operator\\n\");\n            return -1;\n            }\n    }\n}\n",
+          "generation_index": 0,
+          "label": "faithful",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_shunting_get_precedence_strict_rewrite_00.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        },
+        {
+          "candidate_id": "phase5_gpu_v2_s0_ta_shunting_get_precedence_strict_rewrite_01",
+          "case_id": "ta_shunting_get_precedence",
+          "cleaning_status": "parsed_function",
+          "function_source": "int getPrecedence(char operator) {\n    switch (operator) {\n        case '+':\n        case '-':\n        {\n            return 1;\n        }\n        case '/':\n        {\n            return 2;\n        } case '^':\n        {\n            return 3;\n        }\n        default: {\n            printf(\"Error: Invalid operator\\n\");\n            return -1;\n        }\n    }\n}\n",
+          "generation_index": 1,
+          "label": "plausible_wrong",
+          "mutation_type": "phase5_gpu_recovered_strict_rewrite",
+          "prompt_id": "strict_rewrite",
+          "raw_output_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full/raw/phase5_gpu_v2_s0_ta_shunting_get_precedence_strict_rewrite_01.raw.txt",
+          "sampling": {
+            "max_new_tokens": 220,
+            "steps": 24,
+            "temperature": 0.2,
+            "top_p": 0.95
+          },
+          "source_kind": "local_llm_recovered",
+          "source_name": "Dream-Coder-v0-Instruct-7B"
+        }
+      ],
+      "case_id": "ta_shunting_get_precedence"
+    }
+  ],
+  "compile_pass_count": 57,
+  "compile_pass_target_min": 100,
+  "compile_pass_target_range": [
+    100,
+    200
+  ],
+  "created_at_utc": "2026-07-01T02:54:20.024127+00:00",
+  "generation_metadata_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full_recovered/generation_metadata.jsonl",
+  "gpu_decision": "started",
+  "output_dir": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full_recovered",
+  "paired_function_count": 8,
+  "paired_function_target_min": 20,
+  "phase": "phase5_candidate_generation_or_import",
+  "records_path": "analysis_outputs/decompile_faithfulness/phase5_gpu_generated_full_cuda2_v2_full_recovered/records.jsonl",
+  "shard_count": 1,
+  "shard_index": 0,
+  "source_manifest_function_count": 38,
+  "verdict": "needs-full-candidate-generation"
+}

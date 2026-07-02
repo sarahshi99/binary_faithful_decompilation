@@ -1,0 +1,127 @@
+{
+  "version": 1,
+  "label_policy": "manual_semantic_label_under_source_known_oracle",
+  "notes": "Original source is added automatically as a faithful candidate by the CPU audit. Listed candidates are manual Phase 3 stress candidates; some intentionally pass fixtures but fail wider v3 boundary traces.",
+  "candidates": {
+    "bounded_abs100": [
+      {
+        "candidate_id": "bounded_abs100_no_upper_clamp",
+        "label": "plausible_wrong",
+        "mutation_type": "manual_boundary_bug",
+        "function_source": "int bounded_abs100(int x) {\n    if (x < -100) {\n        return 100;\n    }\n    if (x < 0) {\n        return -x;\n    }\n    return x;\n}\n"
+      }
+    ],
+    "sat_add8": [
+      {
+        "candidate_id": "sat_add8_upper_bound_256_hidden",
+        "label": "plausible_wrong",
+        "mutation_type": "manual_fixture_passing_boundary_bug",
+        "function_source": "int sat_add8(int a, int b) {\n    int total = a + b;\n    if (total < 0) {\n        return 0;\n    }\n    if (total > 256) {\n        return 255;\n    }\n    return total;\n}\n"
+      },
+      {
+        "candidate_id": "sat_add8_no_upper_saturation",
+        "label": "plausible_wrong",
+        "mutation_type": "manual_boundary_bug",
+        "function_source": "int sat_add8(int a, int b) {\n    int total = a + b;\n    if (total < 0) {\n        return 0;\n    }\n    return total;\n}\n"
+      }
+    ],
+    "within_range_inclusive": [
+      {
+        "candidate_id": "within_range_exclusive_bounds",
+        "label": "plausible_wrong",
+        "mutation_type": "manual_predicate_boundary_bug",
+        "function_source": "int within_range_inclusive(int x, int lo, int hi) {\n    if (x > lo && x < hi) {\n        return 1;\n    }\n    return 0;\n}\n"
+      }
+    ],
+    "parity8": [
+      {
+        "candidate_id": "parity8_counts_16_bits_hidden",
+        "label": "plausible_wrong",
+        "mutation_type": "manual_fixture_passing_bit_width_bug",
+        "function_source": "int parity8(int x) {\n    unsigned int value = (unsigned int)x;\n    int parity = 0;\n    for (int i = 0; i < 16; i++) {\n        parity ^= (int)((value >> i) & 1u);\n    }\n    return parity;\n}\n"
+      },
+      {
+        "candidate_id": "parity8_inverted",
+        "label": "plausible_wrong",
+        "mutation_type": "manual_return_bug",
+        "function_source": "int parity8(int x) {\n    unsigned int value = (unsigned int)x & 255u;\n    int parity = 0;\n    for (int i = 0; i < 8; i++) {\n        parity ^= (int)((value >> i) & 1u);\n    }\n    return 1 - parity;\n}\n"
+      }
+    ],
+    "high_nibble": [
+      {
+        "candidate_id": "high_nibble_low_nibble",
+        "label": "plausible_wrong",
+        "mutation_type": "manual_bit_shift_bug",
+        "function_source": "int high_nibble(int x) {\n    return (int)((unsigned int)x & 15u);\n}\n"
+      }
+    ],
+    "gcd_nonnegative": [
+      {
+        "candidate_id": "gcd_nonnegative_no_abs",
+        "label": "plausible_wrong",
+        "mutation_type": "manual_sign_bug",
+        "function_source": "int gcd_nonnegative(int a, int b) {\n    while (b != 0) {\n        int r = a % b;\n        a = b;\n        b = r;\n    }\n    return a;\n}\n"
+      }
+    ],
+    "mod3_sum_digits": [
+      {
+        "candidate_id": "mod3_sum_digits_ignores_negative_hidden",
+        "label": "plausible_wrong",
+        "mutation_type": "manual_fixture_passing_sign_bug",
+        "function_source": "int mod3_sum_digits(int n) {\n    int total = 0;\n    while (n > 0) {\n        total += n % 10;\n        n /= 10;\n    }\n    return total % 3;\n}\n"
+      },
+      {
+        "candidate_id": "mod3_sum_digits_mod10",
+        "label": "plausible_wrong",
+        "mutation_type": "manual_modulo_bug",
+        "function_source": "int mod3_sum_digits(int n) {\n    if (n < 0) {\n        n = -n;\n    }\n    int total = 0;\n    do {\n        total += n % 10;\n        n /= 10;\n    } while (n != 0);\n    return total % 10;\n}\n"
+      }
+    ],
+    "days_before_month": [
+      {
+        "candidate_id": "days_before_month_leap_february",
+        "label": "plausible_wrong",
+        "mutation_type": "manual_table_logic_bug",
+        "function_source": "int days_before_month(int month) {\n    if (month <= 1) {\n        return 0;\n    }\n    if (month > 12) {\n        return 365;\n    }\n    int total = 0;\n    for (int m = 1; m < month; m++) {\n        if (m == 2) {\n            total += 29;\n        } else if (m == 4 || m == 6 || m == 9 || m == 11) {\n            total += 30;\n        } else {\n            total += 31;\n        }\n    }\n    return total;\n}\n"
+      }
+    ],
+    "triangle_wave10": [
+      {
+        "candidate_id": "triangle_wave10_no_abs",
+        "label": "plausible_wrong",
+        "mutation_type": "manual_sign_bug",
+        "function_source": "int triangle_wave10(int x) {\n    int r = x % 20;\n    if (r > 10) {\n        return 20 - r;\n    }\n    return r;\n}\n"
+      }
+    ],
+    "safe_div_round0": [
+      {
+        "candidate_id": "safe_div_round0_b_one_hidden",
+        "label": "plausible_wrong",
+        "mutation_type": "manual_fixture_passing_division_bug",
+        "function_source": "int safe_div_round0(int a, int b) {\n    if (b == 0) {\n        return 0;\n    }\n    if (b == 1) {\n        return a + 1;\n    }\n    return a / b;\n}\n"
+      },
+      {
+        "candidate_id": "safe_div_round0_zero_returns_one",
+        "label": "plausible_wrong",
+        "mutation_type": "manual_zero_guard_bug",
+        "function_source": "int safe_div_round0(int a, int b) {\n    if (b == 0) {\n        return 1;\n    }\n    return a / b;\n}\n"
+      }
+    ],
+    "clamp_then_square": [
+      {
+        "candidate_id": "clamp_then_square_no_upper_clamp",
+        "label": "plausible_wrong",
+        "mutation_type": "manual_boundary_bug",
+        "function_source": "int clamp_then_square(int x) {\n    if (x < -10) {\n        x = -10;\n    }\n    return x * x;\n}\n"
+      }
+    ],
+    "popcount_nibble_diff": [
+      {
+        "candidate_id": "popcount_nibble_diff_swapped",
+        "label": "plausible_wrong",
+        "mutation_type": "manual_argument_order_bug",
+        "function_source": "int popcount_nibble_diff(int a, int b) {\n    unsigned int left = (unsigned int)a & 15u;\n    unsigned int right = (unsigned int)b & 15u;\n    int left_count = 0;\n    int right_count = 0;\n    for (int i = 0; i < 4; i++) {\n        left_count += (int)((left >> i) & 1u);\n        right_count += (int)((right >> i) & 1u);\n    }\n    return right_count - left_count;\n}\n"
+      }
+    ]
+  }
+}

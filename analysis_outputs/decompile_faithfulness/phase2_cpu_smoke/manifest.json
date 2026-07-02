@@ -1,0 +1,348 @@
+[
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_smoke_absdiff_identity",
+        "case_id": "absdiff",
+        "cleaning_status": "parsed_function",
+        "function_source": "int absdiff(int a, int b) {\n    if (a > b) {\n        return a - b;\n    }\n    return b - a;\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_cpu_smoke_identity",
+        "prompt_id": "phase2_cpu_smoke_identity",
+        "raw_output_path": "",
+        "sampling": {
+          "max_new_tokens": 0,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "phase2_cpu_smoke",
+        "source_name": "deterministic_smoke_manifest"
+      },
+      {
+        "candidate_id": "phase2_smoke_absdiff_return_zero",
+        "case_id": "absdiff",
+        "cleaning_status": "parsed_function",
+        "function_source": "int absdiff(int a, int b) {\n    return 0 + 0 * (a + b);\n}\n",
+        "generation_index": 1,
+        "label": "unknown",
+        "mutation_type": "phase2_cpu_smoke_return_zero",
+        "prompt_id": "phase2_cpu_smoke_return_zero",
+        "raw_output_path": "",
+        "sampling": {
+          "max_new_tokens": 0,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "phase2_cpu_smoke",
+        "source_name": "deterministic_smoke_manifest"
+      },
+      {
+        "candidate_id": "phase2_smoke_absdiff_fixture_overfit",
+        "case_id": "absdiff",
+        "cleaning_status": "parsed_function",
+        "function_source": "int absdiff(int a, int b) {\n    if (a == 7 && b == 3) {\n        return 4;\n    }\n    if (a == 3 && b == 7) {\n        return 4;\n    }\n    if (a == 5 && b == 5) {\n        return 0;\n    }\n    if (a == -2 && b == 4) {\n        return 6;\n    }\n    return 0 + 0 * (a + b);\n}\n",
+        "generation_index": 2,
+        "label": "unknown",
+        "mutation_type": "phase2_cpu_smoke_fixture_overfit",
+        "prompt_id": "phase2_cpu_smoke_fixture_overfit",
+        "raw_output_path": "",
+        "sampling": {
+          "max_new_tokens": 0,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "phase2_cpu_smoke",
+        "source_name": "deterministic_smoke_manifest"
+      }
+    ],
+    "case_id": "absdiff"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_smoke_clamp8_identity",
+        "case_id": "clamp8",
+        "cleaning_status": "parsed_function",
+        "function_source": "int clamp8(int x) {\n    if (x < 0) {\n        return 0;\n    }\n    if (x > 255) {\n        return 255;\n    }\n    return x;\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_cpu_smoke_identity",
+        "prompt_id": "phase2_cpu_smoke_identity",
+        "raw_output_path": "",
+        "sampling": {
+          "max_new_tokens": 0,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "phase2_cpu_smoke",
+        "source_name": "deterministic_smoke_manifest"
+      },
+      {
+        "candidate_id": "phase2_smoke_clamp8_return_zero",
+        "case_id": "clamp8",
+        "cleaning_status": "parsed_function",
+        "function_source": "int clamp8(int x) {\n    return 0 + 0 * (x);\n}\n",
+        "generation_index": 1,
+        "label": "unknown",
+        "mutation_type": "phase2_cpu_smoke_return_zero",
+        "prompt_id": "phase2_cpu_smoke_return_zero",
+        "raw_output_path": "",
+        "sampling": {
+          "max_new_tokens": 0,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "phase2_cpu_smoke",
+        "source_name": "deterministic_smoke_manifest"
+      }
+    ],
+    "case_id": "clamp8"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_smoke_count_bits8_identity",
+        "case_id": "count_bits8",
+        "cleaning_status": "parsed_function",
+        "function_source": "int count_bits8(int x) {\n    int total = 0;\n    for (int i = 0; i < 8; i++) {\n        if ((x & (1 << i)) != 0) {\n            total++;\n        }\n    }\n    return total;\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_cpu_smoke_identity",
+        "prompt_id": "phase2_cpu_smoke_identity",
+        "raw_output_path": "",
+        "sampling": {
+          "max_new_tokens": 0,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "phase2_cpu_smoke",
+        "source_name": "deterministic_smoke_manifest"
+      },
+      {
+        "candidate_id": "phase2_smoke_count_bits8_return_zero",
+        "case_id": "count_bits8",
+        "cleaning_status": "parsed_function",
+        "function_source": "int count_bits8(int x) {\n    return 0 + 0 * (x);\n}\n",
+        "generation_index": 1,
+        "label": "unknown",
+        "mutation_type": "phase2_cpu_smoke_return_zero",
+        "prompt_id": "phase2_cpu_smoke_return_zero",
+        "raw_output_path": "",
+        "sampling": {
+          "max_new_tokens": 0,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "phase2_cpu_smoke",
+        "source_name": "deterministic_smoke_manifest"
+      }
+    ],
+    "case_id": "count_bits8"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_smoke_max3_identity",
+        "case_id": "max3",
+        "cleaning_status": "parsed_function",
+        "function_source": "int max3(int a, int b, int c) {\n    int best = a;\n    if (b > best) {\n        best = b;\n    }\n    if (c > best) {\n        best = c;\n    }\n    return best;\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_cpu_smoke_identity",
+        "prompt_id": "phase2_cpu_smoke_identity",
+        "raw_output_path": "",
+        "sampling": {
+          "max_new_tokens": 0,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "phase2_cpu_smoke",
+        "source_name": "deterministic_smoke_manifest"
+      },
+      {
+        "candidate_id": "phase2_smoke_max3_return_zero",
+        "case_id": "max3",
+        "cleaning_status": "parsed_function",
+        "function_source": "int max3(int a, int b, int c) {\n    return 0 + 0 * (a + b + c);\n}\n",
+        "generation_index": 1,
+        "label": "unknown",
+        "mutation_type": "phase2_cpu_smoke_return_zero",
+        "prompt_id": "phase2_cpu_smoke_return_zero",
+        "raw_output_path": "",
+        "sampling": {
+          "max_new_tokens": 0,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "phase2_cpu_smoke",
+        "source_name": "deterministic_smoke_manifest"
+      }
+    ],
+    "case_id": "max3"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_smoke_sum_to_n_identity",
+        "case_id": "sum_to_n",
+        "cleaning_status": "parsed_function",
+        "function_source": "int sum_to_n(int n) {\n    if (n <= 0) {\n        return 0;\n    }\n    int total = 0;\n    for (int i = 1; i <= n; i++) {\n        total += i;\n    }\n    return total;\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_cpu_smoke_identity",
+        "prompt_id": "phase2_cpu_smoke_identity",
+        "raw_output_path": "",
+        "sampling": {
+          "max_new_tokens": 0,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "phase2_cpu_smoke",
+        "source_name": "deterministic_smoke_manifest"
+      },
+      {
+        "candidate_id": "phase2_smoke_sum_to_n_return_zero",
+        "case_id": "sum_to_n",
+        "cleaning_status": "parsed_function",
+        "function_source": "int sum_to_n(int n) {\n    return 0 + 0 * (n);\n}\n",
+        "generation_index": 1,
+        "label": "unknown",
+        "mutation_type": "phase2_cpu_smoke_return_zero",
+        "prompt_id": "phase2_cpu_smoke_return_zero",
+        "raw_output_path": "",
+        "sampling": {
+          "max_new_tokens": 0,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "phase2_cpu_smoke",
+        "source_name": "deterministic_smoke_manifest"
+      }
+    ],
+    "case_id": "sum_to_n"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_smoke_signum_identity",
+        "case_id": "signum",
+        "cleaning_status": "parsed_function",
+        "function_source": "int signum(int x) {\n    if (x < 0) {\n        return -1;\n    }\n    if (x > 0) {\n        return 1;\n    }\n    return 0;\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_cpu_smoke_identity",
+        "prompt_id": "phase2_cpu_smoke_identity",
+        "raw_output_path": "",
+        "sampling": {
+          "max_new_tokens": 0,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "phase2_cpu_smoke",
+        "source_name": "deterministic_smoke_manifest"
+      },
+      {
+        "candidate_id": "phase2_smoke_signum_return_zero",
+        "case_id": "signum",
+        "cleaning_status": "parsed_function",
+        "function_source": "int signum(int x) {\n    return 0 + 0 * (x);\n}\n",
+        "generation_index": 1,
+        "label": "unknown",
+        "mutation_type": "phase2_cpu_smoke_return_zero",
+        "prompt_id": "phase2_cpu_smoke_return_zero",
+        "raw_output_path": "",
+        "sampling": {
+          "max_new_tokens": 0,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "phase2_cpu_smoke",
+        "source_name": "deterministic_smoke_manifest"
+      }
+    ],
+    "case_id": "signum"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_smoke_is_power_of_two_identity",
+        "case_id": "is_power_of_two",
+        "cleaning_status": "parsed_function",
+        "function_source": "int is_power_of_two(int x) {\n    if (x <= 0) {\n        return 0;\n    }\n    return (x & (x - 1)) == 0;\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_cpu_smoke_identity",
+        "prompt_id": "phase2_cpu_smoke_identity",
+        "raw_output_path": "",
+        "sampling": {
+          "max_new_tokens": 0,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "phase2_cpu_smoke",
+        "source_name": "deterministic_smoke_manifest"
+      },
+      {
+        "candidate_id": "phase2_smoke_is_power_of_two_return_zero",
+        "case_id": "is_power_of_two",
+        "cleaning_status": "parsed_function",
+        "function_source": "int is_power_of_two(int x) {\n    return 0 + 0 * (x);\n}\n",
+        "generation_index": 1,
+        "label": "unknown",
+        "mutation_type": "phase2_cpu_smoke_return_zero",
+        "prompt_id": "phase2_cpu_smoke_return_zero",
+        "raw_output_path": "",
+        "sampling": {
+          "max_new_tokens": 0,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "phase2_cpu_smoke",
+        "source_name": "deterministic_smoke_manifest"
+      }
+    ],
+    "case_id": "is_power_of_two"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_smoke_gcd_positive_identity",
+        "case_id": "gcd_positive",
+        "cleaning_status": "parsed_function",
+        "function_source": "int gcd_positive(int a, int b) {\n    while (b != 0) {\n        int r = a % b;\n        a = b;\n        b = r;\n    }\n    return a;\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_cpu_smoke_identity",
+        "prompt_id": "phase2_cpu_smoke_identity",
+        "raw_output_path": "",
+        "sampling": {
+          "max_new_tokens": 0,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "phase2_cpu_smoke",
+        "source_name": "deterministic_smoke_manifest"
+      },
+      {
+        "candidate_id": "phase2_smoke_gcd_positive_return_zero",
+        "case_id": "gcd_positive",
+        "cleaning_status": "parsed_function",
+        "function_source": "int gcd_positive(int a, int b) {\n    return 0 + 0 * (a + b);\n}\n",
+        "generation_index": 1,
+        "label": "unknown",
+        "mutation_type": "phase2_cpu_smoke_return_zero",
+        "prompt_id": "phase2_cpu_smoke_return_zero",
+        "raw_output_path": "",
+        "sampling": {
+          "max_new_tokens": 0,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "phase2_cpu_smoke",
+        "source_name": "deterministic_smoke_manifest"
+      }
+    ],
+    "case_id": "gcd_positive"
+  }
+]

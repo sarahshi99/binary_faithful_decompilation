@@ -1,0 +1,19 @@
+{
+  "candidate_hard_cases": [
+    "signum",
+    "max3",
+    "gcd_positive",
+    "sum_to_n"
+  ],
+  "decision": "no_dependency_install_in_phase1k",
+  "dependencies": {
+    "angr": false,
+    "capstone": false,
+    "claripy": false,
+    "unicorn": false,
+    "z3": false
+  },
+  "generated_at": "2026-06-17",
+  "python_executable": "/home/shx/miniconda3/envs/dllm_env/bin/python",
+  "verdict": "needs-dependency-plan"
+}

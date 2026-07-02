@@ -1,0 +1,327 @@
+[
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_gpu_absdiff_strict_rewrite_00",
+        "case_id": "absdiff",
+        "cleaning_status": "parsed_function",
+        "function_source": "int absdiff(int a,int b){\n    if (a > b) {\n        return a - b;\n    }\n    return b - a;\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_gpu_smoke_strict_rewrite",
+        "prompt_id": "strict_rewrite",
+        "raw_output_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_paired_pilot/raw/phase2_gpu_absdiff_strict_rewrite_00.raw.txt",
+        "sampling": {
+          "max_new_tokens": 192,
+          "steps": 32,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "local_llm",
+        "source_name": "Dream-Coder-v0-Instruct-7B"
+      },
+      {
+        "candidate_id": "phase2_gpu_absdiff_strict_bug_00",
+        "case_id": "absdiff",
+        "cleaning_status": "parsed_function",
+        "function_source": "int absdiff(int a, int b) {\n    if (a > b) {\n        return b - a; // Here, the return statement should incorrectly return b - a to introduce the bug, as it should have returned a - b.\n    }\n    return b - a;\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_gpu_smoke_strict_bug",
+        "prompt_id": "strict_bug",
+        "raw_output_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_paired_pilot/raw/phase2_gpu_absdiff_strict_bug_00.raw.txt",
+        "sampling": {
+          "max_new_tokens": 192,
+          "steps": 32,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "local_llm",
+        "source_name": "Dream-Coder-v0-Instruct-7B"
+      }
+    ],
+    "case_id": "absdiff"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_gpu_clamp8_strict_rewrite_00",
+        "case_id": "clamp8",
+        "cleaning_status": "parsed_function",
+        "function_source": "int clamp8(int x) { \n    if (x < 0) {\n        return 0;\n    } if (x > 255) {\n        return 255;\n    }\n    return x;\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_gpu_smoke_strict_rewrite",
+        "prompt_id": "strict_rewrite",
+        "raw_output_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_paired_pilot/raw/phase2_gpu_clamp8_strict_rewrite_00.raw.txt",
+        "sampling": {
+          "max_new_tokens": 192,
+          "steps": 32,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "local_llm",
+        "source_name": "Dream-Coder-v0-Instruct-7B"
+      },
+      {
+        "candidate_id": "phase2_gpu_clamp8_strict_bug_00",
+        "case_id": "clamp8",
+        "cleaning_status": "parsed_function",
+        "function_source": "int clamp8(int x) {\n    if (x < 0) {\n        return 0; \n    } else if (x > 255) {\n        return x; \n    }\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_gpu_smoke_strict_bug",
+        "prompt_id": "strict_bug",
+        "raw_output_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_paired_pilot/raw/phase2_gpu_clamp8_strict_bug_00.raw.txt",
+        "sampling": {
+          "max_new_tokens": 192,
+          "steps": 32,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "local_llm",
+        "source_name": "Dream-Coder-v0-Instruct-7B"
+      }
+    ],
+    "case_id": "clamp8"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_gpu_count_bits8_strict_bug_00",
+        "case_id": "count_bits8",
+        "cleaning_status": "parsed_function",
+        "function_source": "int count_bits8(int x) {\n    int total = 0;\n    for(int i = 0; i < 8; i++) {\n        if ((x & (1 << i)) != 0) {\n            continue;\n            total++;\n        }\n    }\n    return total;\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_gpu_smoke_strict_bug",
+        "prompt_id": "strict_bug",
+        "raw_output_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_paired_pilot/raw/phase2_gpu_count_bits8_strict_bug_00.raw.txt",
+        "sampling": {
+          "max_new_tokens": 192,
+          "steps": 32,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "local_llm",
+        "source_name": "Dream-Coder-v0-Instruct-7B"
+      }
+    ],
+    "case_id": "count_bits8"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_gpu_max3_strict_rewrite_00",
+        "case_id": "max3",
+        "cleaning_status": "parsed_function",
+        "function_source": "int max3(int a, int b, int c) {\n    // Initialize the best with a\n    int best = a;\n    \n    if (b > best) {\n        best = b;\n    }\n    \n    if (c > best) {\n        best = c;\n    }\n\n    return best;\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_gpu_smoke_strict_rewrite",
+        "prompt_id": "strict_rewrite",
+        "raw_output_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_paired_pilot/raw/phase2_gpu_max3_strict_rewrite_00.raw.txt",
+        "sampling": {
+          "max_new_tokens": 192,
+          "steps": 32,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "local_llm",
+        "source_name": "Dream-Coder-v0-Instruct-7B"
+      },
+      {
+        "candidate_id": "phase2_gpu_max3_strict_bug_00",
+        "case_id": "max3",
+        "cleaning_status": "parsed_function",
+        "function_source": "int max3(int a, int b, int c) {\n    int best = a;\n    if (b > best) {\n        best = b;\n    }\n    if (c > best) {\n        best = c;\n    }\n    return best;\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_gpu_smoke_strict_bug",
+        "prompt_id": "strict_bug",
+        "raw_output_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_paired_pilot/raw/phase2_gpu_max3_strict_bug_00.raw.txt",
+        "sampling": {
+          "max_new_tokens": 192,
+          "steps": 32,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "local_llm",
+        "source_name": "Dream-Coder-v0-Instruct-7B"
+      }
+    ],
+    "case_id": "max3"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_gpu_sum_to_n_strict_rewrite_00",
+        "case_id": "sum_to_n",
+        "cleaning_status": "parsed_function",
+        "function_source": "int sum_to_n(int n) {\n    if (n <= 0) {\n        return 0;\n    }\n    int total = 0;\n    return n * (n + 1) / 2;\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_gpu_smoke_strict_rewrite",
+        "prompt_id": "strict_rewrite",
+        "raw_output_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_paired_pilot/raw/phase2_gpu_sum_to_n_strict_rewrite_00.raw.txt",
+        "sampling": {
+          "max_new_tokens": 192,
+          "steps": 32,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "local_llm",
+        "source_name": "Dream-Coder-v0-Instruct-7B"
+      },
+      {
+        "candidate_id": "phase2_gpu_sum_to_n_strict_bug_00",
+        "case_id": "sum_to_n",
+        "cleaning_status": "parsed_function",
+        "function_source": "int sum_to_n(int n) {\n    if (n <= 0) {\n        return 0;\n    }\n// Bug the loop condition from i <= n\nint total  = 0;\ni  for (int  i = 1; i <    n  ;  i++  ) {\n        total  += i i;\n    }\n    return total;\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_gpu_smoke_strict_bug",
+        "prompt_id": "strict_bug",
+        "raw_output_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_paired_pilot/raw/phase2_gpu_sum_to_n_strict_bug_00.raw.txt",
+        "sampling": {
+          "max_new_tokens": 192,
+          "steps": 32,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "local_llm",
+        "source_name": "Dream-Coder-v0-Instruct-7B"
+      }
+    ],
+    "case_id": "sum_to_n"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_gpu_signum_strict_rewrite_00",
+        "case_id": "signum",
+        "cleaning_status": "parsed_function",
+        "function_source": "int signum(int x) {\n    if (x < 0) {\n        return -1;\n    }\n    if (x > 0) {\n        return 1;\n    }\n    return 0;\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_gpu_smoke_strict_rewrite",
+        "prompt_id": "strict_rewrite",
+        "raw_output_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_paired_pilot/raw/phase2_gpu_signum_strict_rewrite_00.raw.txt",
+        "sampling": {
+          "max_new_tokens": 192,
+          "steps": 32,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "local_llm",
+        "source_name": "Dream-Coder-v0-Instruct-7B"
+      },
+      {
+        "candidate_id": "phase2_gpu_signum_strict_bug_00",
+        "case_id": "signum",
+        "cleaning_status": "parsed_function",
+        "function_source": "int signum(int x) {\n    if (x == 0) {\n        return 1;\n    }\n    if (x < 0) {\n        return -1;\n    }\n    return 0;\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_gpu_smoke_strict_bug",
+        "prompt_id": "strict_bug",
+        "raw_output_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_paired_pilot/raw/phase2_gpu_signum_strict_bug_00.raw.txt",
+        "sampling": {
+          "max_new_tokens": 192,
+          "steps": 32,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "local_llm",
+        "source_name": "Dream-Coder-v0-Instruct-7B"
+      }
+    ],
+    "case_id": "signum"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_gpu_is_power_of_two_strict_rewrite_00",
+        "case_id": "is_power_of_two",
+        "cleaning_status": "parsed_function",
+        "function_source": "int is_power_of_two(int x) {\n    if (x <= 0) {\n        return 0;\n    }\n 0 0  0  0  0  0 0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0\n  0  0  0  0  0  0 0  0  0 0  0  0 0 0  0  0 0 0  0  0    0 is not power of two\n    return (x & (x - 1)) == 0;\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_gpu_smoke_strict_rewrite",
+        "prompt_id": "strict_rewrite",
+        "raw_output_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_paired_pilot/raw/phase2_gpu_is_power_of_two_strict_rewrite_00.raw.txt",
+        "sampling": {
+          "max_new_tokens": 192,
+          "steps": 32,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "local_llm",
+        "source_name": "Dream-Coder-v0-Instruct-7B"
+      },
+      {
+        "candidate_id": "phase2_gpu_is_power_of_two_strict_bug_00",
+        "case_id": "is_power_of_two",
+        "cleaning_status": "parsed_function",
+        "function_source": "int is_power_of_two(int x) {\n    if (x <= 0) {\n        return 0; \n    }\n    return (x == 1);  // Subtle bug in the logic\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_gpu_smoke_strict_bug",
+        "prompt_id": "strict_bug",
+        "raw_output_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_paired_pilot/raw/phase2_gpu_is_power_of_two_strict_bug_00.raw.txt",
+        "sampling": {
+          "max_new_tokens": 192,
+          "steps": 32,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "local_llm",
+        "source_name": "Dream-Coder-v0-Instruct-7B"
+      }
+    ],
+    "case_id": "is_power_of_two"
+  },
+  {
+    "candidates": [
+      {
+        "candidate_id": "phase2_gpu_gcd_positive_strict_rewrite_00",
+        "case_id": "gcd_positive",
+        "cleaning_status": "parsed_function",
+        "function_source": "int gcd_positive(int a, int b) {\n    while (a && b) {\n        int r = a % b;\n        a = b;\n        b = r;\n    }\n    return a;\n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_gpu_smoke_strict_rewrite",
+        "prompt_id": "strict_rewrite",
+        "raw_output_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_paired_pilot/raw/phase2_gpu_gcd_positive_strict_rewrite_00.raw.txt",
+        "sampling": {
+          "max_new_tokens": 192,
+          "steps": 32,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "local_llm",
+        "source_name": "Dream-Coder-v0-Instruct-7B"
+      },
+      {
+        "candidate_id": "phase2_gpu_gcd_positive_strict_bug_00",
+        "case_id": "gcd_positive",
+        "cleaning_status": "parsed_function",
+        "function_source": "int gcd_positive(int a, int b) {\n    while (b != 0) {\n        int r = a; \n        a = b; \n        int r = a % b; \n        int a = b; \n        a = b; \n        int b = b + r; \n        int b = r; \n        a = b; \n    }\n    return a; \n}\n",
+        "generation_index": 0,
+        "label": "unknown",
+        "mutation_type": "phase2_gpu_smoke_strict_bug",
+        "prompt_id": "strict_bug",
+        "raw_output_path": "analysis_outputs/decompile_faithfulness/phase2_gpu_paired_pilot/raw/phase2_gpu_gcd_positive_strict_bug_00.raw.txt",
+        "sampling": {
+          "max_new_tokens": 192,
+          "steps": 32,
+          "temperature": 0.0,
+          "top_p": 1.0
+        },
+        "source_kind": "local_llm",
+        "source_name": "Dream-Coder-v0-Instruct-7B"
+      }
+    ],
+    "case_id": "gcd_positive"
+  }
+]
