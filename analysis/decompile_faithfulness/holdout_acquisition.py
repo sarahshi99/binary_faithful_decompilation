@@ -1153,7 +1153,7 @@ Excluded prior sources: CodeFuse-DeBench, c_algorithms, thealgorithms_c, and any
 
 Sampling seed: `{ACQUISITION_SEED}`. Fixture seed: `{FIXTURE_SEED}`. Mutation seed: `{MUTATION_SEED}`.
 
-If fewer than 48 eligible functions across at least 8 projects are available, stop before candidate generation and push the census for review. Otherwise sample 48-64 functions from at least 8 projects, cap each project at 8 functions, and generate exactly four source-agnostic fixtures per function from function ID, signature, declared domain, and fixture seed only.
+If fewer than 48 eligible functions across at least 8 projects are available, or if the cap-constrained sampling capacity is below 48, stop before candidate generation and push the census for review. Otherwise sample 48-64 functions from at least 8 projects, cap each project at 8 functions, and generate exactly four source-agnostic fixtures per function from function ID, signature, declared domain, and fixture seed only.
 
 ## Candidate Strata
 

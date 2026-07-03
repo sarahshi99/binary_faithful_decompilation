@@ -1,6 +1,6 @@
 # Frozen Holdout Preregistration v3
 
-Generated: 2026-07-03T03:43:41.970610+00:00
+Generated: 2026-07-03T03:48:33.879478+00:00
 
 Final method remains frozen at `06dda89912103b94fc065d6f073581a7811154b1`. This phase acquires and seals a project-disjoint exact-oracle holdout. The frozen final auditor and its ordered probes must not be invoked before seal review.
 
@@ -33,7 +33,7 @@ Excluded prior sources: CodeFuse-DeBench, c_algorithms, thealgorithms_c, and any
 
 Sampling seed: `2026070301`. Fixture seed: `2026070302`. Mutation seed: `2026070303`.
 
-If fewer than 48 eligible functions across at least 8 projects are available, stop before candidate generation and push the census for review. Otherwise sample 48-64 functions from at least 8 projects, cap each project at 8 functions, and generate exactly four source-agnostic fixtures per function from function ID, signature, declared domain, and fixture seed only.
+If fewer than 48 eligible functions across at least 8 projects are available, or if the cap-constrained sampling capacity is below 48, stop before candidate generation and push the census for review. Otherwise sample 48-64 functions from at least 8 projects, cap each project at 8 functions, and generate exactly four source-agnostic fixtures per function from function ID, signature, declared domain, and fixture seed only.
 
 ## Candidate Strata
 

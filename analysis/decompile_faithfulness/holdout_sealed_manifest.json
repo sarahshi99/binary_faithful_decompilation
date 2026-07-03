@@ -1,7 +1,7 @@
 {
   "acquisition_errors": [],
   "artifact_hashes": {
-    "docs/paper_agent/frozen_holdout_preregistration_v3.md": "d04403b7ba6962f61d091080a80a96e32d26f9f662f27d41e22bd0a1fdf8773a",
+    "docs/paper_agent/frozen_holdout_preregistration_v3.md": "37feec7eb11fa4ce4e6cda1bdcfcc2ddd021d5f43c716ef91e903bde7b288a4e",
     "docs/paper_agent/holdout_mutation_grammar.md": "a69996108391a179bfbca442e1a0cd961b96ff4a48b03d2c16d7cc5d13c657f8",
     "paper/tables/holdout_acquisition.tex": "9c7dd00f53432d2431f78a7f97b4d98cdd9cb83656d377044e622c5dfd6e0e86",
     "results/decompile_faithfulness/holdout_candidate_manifest.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
@@ -9,16 +9,16 @@
     "results/decompile_faithfulness/holdout_eligibility_census.csv": "4d6d7447c9a436a02da4b182e6d3efd386973f48dbb4dc0ea82d0061b075b9ea",
     "results/decompile_faithfulness/holdout_exact_labels.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "results/decompile_faithfulness/holdout_exclusions.jsonl": "a46d758a891315cc0b315e0c6d132408091919ce3dc861ade48d495dde8fb820",
-    "results/decompile_faithfulness/holdout_execution_log.jsonl": "fc0ea54d0ae3b4a86ad3d3155191aa1d10bada352f015850064fbd5856ba952b",
+    "results/decompile_faithfulness/holdout_execution_log.jsonl": "fe90bdf37914b0aaf83856d91138ad6e30a81a8a3100fc503c0ed4fa7a2f0fe2",
     "results/decompile_faithfulness/holdout_fixtures.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "results/decompile_faithfulness/holdout_label_summary.csv": "580c86a79d11b18f744291217b496ea23d1a51f2068f161e318f875b38c6ae87",
-    "results/decompile_faithfulness/holdout_project_manifest.json": "e99f82505c080e7a482e399dad80d1ca068d72f576eb306de6a7256eeac3f2ff",
+    "results/decompile_faithfulness/holdout_project_manifest.json": "5261e6539d7251927b6a6bdc25938a6ce1016bb53a02f22fcd513dd99d76d702",
     "results/decompile_faithfulness/holdout_sampling_frame.csv": "390721708e126960367e0ce480beea1fbfb2f776c247ad6151afefcff4171039",
     "results/decompile_faithfulness/holdout_selected_functions.csv": "4fd2f91f0660431460ddd7b0edcd5e191b5e1a92817220a2b355f386ac25914f"
   },
   "controlled_candidate_count": 0,
-  "created_at_utc": "2026-07-03T03:45:06.828586+00:00",
-  "current_acquisition_commit_context": "a784d1c8195ae88a8b3233f8eef5cfd2c27d7b14",
+  "created_at_utc": "2026-07-03T03:49:58.732867+00:00",
+  "current_acquisition_commit_context": "6f61bddb9a473c91d7a6b8ca0496b1103f72b6b5",
   "eligibility_counts_by_project": [
     {
       "final_eligible_functions": 0,
@@ -218,7 +218,7 @@
   },
   "exclusion_count": 7371,
   "execution_log_path": "/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_execution_log.jsonl",
-  "execution_log_sha256": "fc0ea54d0ae3b4a86ad3d3155191aa1d10bada352f015850064fbd5856ba952b",
+  "execution_log_sha256": "fe90bdf37914b0aaf83856d91138ad6e30a81a8a3100fc503c0ed4fa7a2f0fe2",
   "final_auditor_invoked": false,
   "fixture_count": 0,
   "fixture_seed": 2026070302,

@@ -3,7 +3,7 @@
 ## Git
 
 - Branch: `phase1c-holdout-acquisition-seal`
-- HEAD at generation: `a784d1c8195ae88a8b3233f8eef5cfd2c27d7b14`
+- HEAD at generation: `6f61bddb9a473c91d7a6b8ca0496b1103f72b6b5`
 - Method freeze commit: `06dda89912103b94fc065d6f073581a7811154b1`
 - Phase 1b correction commit: `a784d1c8195ae88a8b3233f8eef5cfd2c27d7b14`
 
@@ -507,7 +507,7 @@ Any status beginning with `stopped_before_candidate_generation_` means fixture g
 ## Seal
 
 - Status: `stopped_before_candidate_generation_insufficient_capped_sampling_capacity`
-- Seal manifest hash: `71a5d0ce24bba1f283829dad710f85419f99f7ba2ecfb41a7e173369e6962dd3`
+- Seal manifest hash: `74b2168a7b9f4e924c521d37df16b48ee776b9562b9c2d1c674147be2e2127ba`
 - Final auditor invoked: `False`
 - Prohibited final-method functions absent from execution log: `{"build_ordered_inputs": true, "fixture_neighbor_inputs": true, "interleave_inputs": true, "run_phase18_source_literal_char_policy": true, "source_literal_char_inputs": true}`
 
