@@ -885,6 +885,7 @@ def run_ghidra(
     env = os.environ.copy()
     env["JAVA_HOME"] = str(repo_root / JAVA_HOME)
     project_dir = raw_dir / "project"
+    project_dir.mkdir(parents=True, exist_ok=True)
     command = [
         str(repo_root / GHIDRA_HEADLESS),
         str(project_dir),
