@@ -1,6 +1,6 @@
 {
   "branch": "phase1b-evidence-corrections",
-  "created_at_utc": "2026-07-03T02:37:47.693698+00:00",
+  "created_at_utc": "2026-07-03T02:38:54.991874+00:00",
   "default_budget": 8,
   "evidence_audit_commit": "c974129c231ff1274e5af714fdc9f01dec927019",
   "excluded_from_method_freeze": [
@@ -12,7 +12,7 @@
     "paper/tables/"
   ],
   "final_method": "source_literal_char_interleave",
-  "generated_at_commit": "c974129c231ff1274e5af714fdc9f01dec927019",
+  "generated_at_commit": "d4b50b05396eaa68a9dea6cd2c406e201c35c1f2",
   "method_affecting_sources": [
     {
       "affects": [

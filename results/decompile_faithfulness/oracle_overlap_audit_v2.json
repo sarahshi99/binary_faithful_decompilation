@@ -21688,7 +21688,7 @@
       "unresolved_reconstruction": false
     }
   ],
-  "created_at_utc": "2026-07-03T02:37:47.759093+00:00",
+  "created_at_utc": "2026-07-03T02:38:55.049993+00:00",
   "development_coupling_audit": {
     "directly_motivated_final_method": [
       "Phase17 showed front-loaded generic operator chars fixed one Ghidra miss but regressed broader coverage.",

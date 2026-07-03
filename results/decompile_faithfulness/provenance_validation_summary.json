@@ -1,6 +1,6 @@
 {
   "candidate_count": 947,
-  "created_at_utc": "2026-07-03T02:37:47.746032+00:00",
+  "created_at_utc": "2026-07-03T02:38:55.036894+00:00",
   "ghidra_correction": {
     "phase6_behavior_preserving_noop_guard": "behavior_preserving_control / behavior_preserving_noop",
     "phase6_fixture_ifchain_semantic_drift": "controlled_stress_candidate / fixture_overfit_construction; Ghidra is base context only",
