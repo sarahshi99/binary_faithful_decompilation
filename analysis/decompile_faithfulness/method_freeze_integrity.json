@@ -1,0 +1,217 @@
+{
+  "branch": "phase1b-evidence-corrections",
+  "created_at_utc": "2026-07-03T02:37:47.693698+00:00",
+  "default_budget": 8,
+  "evidence_audit_commit": "c974129c231ff1274e5af714fdc9f01dec927019",
+  "excluded_from_method_freeze": [
+    "analysis/decompile_faithfulness/submission_evidence_audit.py",
+    "analysis/decompile_faithfulness/submission_evidence_corrections.py",
+    "analysis/decompile_faithfulness/tests/",
+    "results/decompile_faithfulness/",
+    "docs/paper_agent/",
+    "paper/tables/"
+  ],
+  "final_method": "source_literal_char_interleave",
+  "generated_at_commit": "c974129c231ff1274e5af714fdc9f01dec927019",
+  "method_affecting_sources": [
+    {
+      "affects": [
+        "final method selection",
+        "report budget",
+        "phase12 rerun invocation"
+      ],
+      "current_sha256": "c3b678b134e914d24db947f2effc75ba23e4726253d451a530c7c60592690390",
+      "functions": [
+        "run_phase18",
+        "phase18_verdict",
+        "_resolve"
+      ],
+      "method_behavior_affecting_contents_unchanged": true,
+      "method_freeze_sha256": "c3b678b134e914d24db947f2effc75ba23e4726253d451a530c7c60592690390",
+      "path": "analysis/decompile_faithfulness/run_phase18_source_literal_char_policy.py",
+      "verification_basis": "whole-file SHA-256 equality for method-affecting source file",
+      "whole_file_unchanged": true
+    },
+    {
+      "affects": [
+        "dataset rerun orchestration",
+        "budget list",
+        "strategy propagation"
+      ],
+      "current_sha256": "2d83747766b1850e7b1e3124edb824c56f660d2a635c1472cc9b4b4a95026851",
+      "functions": [
+        "run_phase12",
+        "rerun_dataset",
+        "metric_delta",
+        "phase12_verdict"
+      ],
+      "method_behavior_affecting_contents_unchanged": true,
+      "method_freeze_sha256": "2d83747766b1850e7b1e3124edb824c56f660d2a635c1472cc9b4b4a95026851",
+      "path": "analysis/decompile_faithfulness/run_phase12_unified_low_budget_eval.py",
+      "verification_basis": "whole-file SHA-256 equality for method-affecting source file",
+      "whole_file_unchanged": true
+    },
+    {
+      "affects": [
+        "probe generation",
+        "probe ordering",
+        "source literal parsing",
+        "admissibility filtering",
+        "stable deduplication",
+        "candidate rerun orchestration"
+      ],
+      "current_sha256": "c4a233b7efa52152f4fe1e621aefc5cfad31da13e6157df600487b45a660d37b",
+      "functions": [
+        "rerun_strategy",
+        "build_ordered_inputs",
+        "fixture_neighbor_inputs",
+        "source_literal_char_inputs",
+        "source_char_literal_values",
+        "parse_c_char_literal_body",
+        "boundary_inputs",
+        "single_position_boundary_args",
+        "boundary_values_by_position",
+        "neighbor_values",
+        "domain_allows",
+        "char_like_positions",
+        "interleave_inputs",
+        "dedupe_inputs",
+        "summarize_with_misses",
+        "best_strategy_for_budget",
+        "strategy_sort_key"
+      ],
+      "method_behavior_affecting_contents_unchanged": true,
+      "method_freeze_sha256": "c4a233b7efa52152f4fe1e621aefc5cfad31da13e6157df600487b45a660d37b",
+      "path": "analysis/decompile_faithfulness/run_phase11_input_ordering.py",
+      "verification_basis": "whole-file SHA-256 equality for method-affecting source file",
+      "whole_file_unchanged": true
+    },
+    {
+      "affects": [
+        "budget handling",
+        "candidate scoring",
+        "mismatch semantics",
+        "summary metrics"
+      ],
+      "current_sha256": "caaaec7d86f20a36367cb88a41df48f0068a9c754475910e0f030332484eff9b",
+      "functions": [
+        "load_records",
+        "budget_record",
+        "summarize_budget",
+        "paired_case_count",
+        "pairwise_auc",
+        "flatten_budget_records",
+        "cached_original_run"
+      ],
+      "method_behavior_affecting_contents_unchanged": true,
+      "method_freeze_sha256": "caaaec7d86f20a36367cb88a41df48f0068a9c754475910e0f030332484eff9b",
+      "path": "analysis/decompile_faithfulness/run_phase10_low_budget_rerun.py",
+      "verification_basis": "whole-file SHA-256 equality for method-affecting source file",
+      "whole_file_unchanged": true
+    },
+    {
+      "affects": [
+        "generic fallback probes",
+        "source-labeling oracle witnesses"
+      ],
+      "current_sha256": "9bfe7f76312a5ce0041b645ac17482d7a97e2a6c239eb1273be2ebb634fb58af",
+      "functions": [
+        "phase5b_hard_trace_inputs",
+        "phase5b_features",
+        "record_from_features"
+      ],
+      "method_behavior_affecting_contents_unchanged": true,
+      "method_freeze_sha256": "9bfe7f76312a5ce0041b645ac17482d7a97e2a6c239eb1273be2ebb634fb58af",
+      "path": "analysis/decompile_faithfulness/run_phase5b_hard_candidates.py",
+      "verification_basis": "whole-file SHA-256 equality for method-affecting source file",
+      "whole_file_unchanged": true
+    },
+    {
+      "affects": [
+        "differential execution wrapper",
+        "manifest-to-case reconstruction"
+      ],
+      "current_sha256": "60eda5ecab15fb292ce74157644619708d4b23b0efed5d29ba76786b2d1f2f31",
+      "functions": [
+        "safe_run_trace",
+        "_case_from_manifest_entry"
+      ],
+      "method_behavior_affecting_contents_unchanged": true,
+      "method_freeze_sha256": "60eda5ecab15fb292ce74157644619708d4b23b0efed5d29ba76786b2d1f2f31",
+      "path": "analysis/decompile_faithfulness/run_phase5_gpu_generated_full.py",
+      "verification_basis": "whole-file SHA-256 equality for method-affecting source file",
+      "whole_file_unchanged": true
+    },
+    {
+      "affects": [
+        "differential execution",
+        "output normalization",
+        "mismatch features"
+      ],
+      "current_sha256": "7d5d834b0bba8f65e1ca4d8de4723bce69321788841f307446ccb8613927f658",
+      "functions": [
+        "TraceInput",
+        "TraceRun",
+        "generate_trace_inputs",
+        "generate_domain_trace_inputs",
+        "generate_boundary_trace_inputs",
+        "render_trace_harness",
+        "parse_trace_stdout",
+        "run_trace",
+        "trace_distance",
+        "_bucket_for_args",
+        "_v3_boundary_args",
+        "_safe_name",
+        "_sign",
+        "_squash",
+        "_timeout_stream",
+        "_timeout_message"
+      ],
+      "method_behavior_affecting_contents_unchanged": true,
+      "method_freeze_sha256": "7d5d834b0bba8f65e1ca4d8de4723bce69321788841f307446ccb8613927f658",
+      "path": "analysis/decompile_faithfulness/dynamic_trace.py",
+      "verification_basis": "whole-file SHA-256 equality for method-affecting source file",
+      "whole_file_unchanged": true
+    },
+    {
+      "affects": [
+        "compiler invocation",
+        "timeout behavior",
+        "compile/run status"
+      ],
+      "current_sha256": "c6be936670eb73da32ad01eea1096c6802e3ef40bbca4059cfccf4390fdc68f3",
+      "functions": [
+        "run_command",
+        "compile_candidate",
+        "_safe_name"
+      ],
+      "method_behavior_affecting_contents_unchanged": true,
+      "method_freeze_sha256": "c6be936670eb73da32ad01eea1096c6802e3ef40bbca4059cfccf4390fdc68f3",
+      "path": "analysis/decompile_faithfulness/compile.py",
+      "verification_basis": "whole-file SHA-256 equality for method-affecting source file",
+      "whole_file_unchanged": true
+    },
+    {
+      "affects": [
+        "compile/runtime failure scoring semantics"
+      ],
+      "current_sha256": "d4fd90eb9b1688681406a0bb7aa6f068244764308e5a89231f9bfa107574eefb",
+      "functions": [
+        "_failure_components"
+      ],
+      "method_behavior_affecting_contents_unchanged": true,
+      "method_freeze_sha256": "d4fd90eb9b1688681406a0bb7aa6f068244764308e5a89231f9bfa107574eefb",
+      "path": "analysis/decompile_faithfulness/run_phase3_combinatorial_cpu_audit.py",
+      "verification_basis": "whole-file SHA-256 equality for method-affecting source file",
+      "whole_file_unchanged": true
+    }
+  ],
+  "method_freeze_commit": "06dda89912103b94fc065d6f073581a7811154b1",
+  "repository": "https://github.com/sarahshi99/binary_faithful_decompilation",
+  "schema_version": 1,
+  "summary": {
+    "all_method_files_current_match_freeze": true,
+    "method_file_count": 9,
+    "unchanged_method_file_count": 9
+  }
+}
