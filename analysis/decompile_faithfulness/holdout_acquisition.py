@@ -685,6 +685,15 @@ def apply_label_outcomes(candidates: list[dict[str, Any]], labels: list[dict[str
         if label["label"] == "non_evaluable":
             candidate["compile_status"] = "non_evaluable"
             candidate["execution_status"] = label["reason"]
+            if label["reason"] == "compile_failure":
+                candidate["candidate_status"] = "non_evaluable_compile_failure"
+            elif label["reason"].startswith("runtime_failure") or label["reason"] in {
+                "harness_output_count_mismatch",
+                "non_integer_output",
+                "trusted_source_execution_failed",
+                "missing_candidate_source",
+            }:
+                candidate["candidate_status"] = "non_evaluable_harness_failure"
         else:
             candidate["compile_status"] = "compile_ready"
             candidate["execution_status"] = "exact_domain_execution_complete"
