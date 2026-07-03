@@ -31,6 +31,7 @@ analysis_outputs/decompile_faithfulness/**/raw_obj/
 analysis_outputs/decompile_faithfulness/phase6r_tools/
 analysis_outputs/decompile_faithfulness/holdout_phase1c/
 analysis_outputs/decompile_faithfulness/holdout_phase1d/
+analysis_outputs/decompile_faithfulness/holdout_phase1e/
 
 analysis_inputs/decompile_faithfulness/**/oracle_fixtures/
 analysis_inputs/decompile_faithfulness/phase5_external_sources/

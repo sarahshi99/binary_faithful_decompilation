@@ -1475,7 +1475,13 @@ def write_handoff(
     ]
     source_literal_rows = [
         row for row in stratified
-        if row["group_type"] == "source_literal_availability" and row["policy"] == FINAL_POLICY
+        if row["group_type"] == "source_literal_availability"
+        and row["policy"] in {
+            FINAL_POLICY,
+            "fixture_neighbor_only",
+            "source_literal_only",
+            "generic_type_boundaries",
+        }
     ]
     natural_rows = [row for row in first_witness_rows if row["candidate_stratum"] == "natural_ghidra" and row["budget"] == 8 and row["policy"] == FINAL_POLICY]
     lines = [
@@ -1508,8 +1514,8 @@ def write_handoff(
     for row in family_counts:
         lines.append(f"- {row['group']}: attempts `{row.get('attempts')}`, compile-ready `{row.get('compile_ready')}`, semantic wrong `{row.get('semantic_wrong')}`, fixture-passing wrong `{row.get('fixture_passing_semantic_wrong')}`, final Detection@8 `{fmt_rate(row['detection_rate'])}`")
     lines.extend(["", "## Source-Literal Strata", ""])
-    for row in source_literal_rows:
-        lines.append(f"- {row['group']}: `{row['detected']}/{row['denominator']}` = `{fmt_rate(row['detection_rate'])}`")
+    for row in sorted(source_literal_rows, key=lambda item: (item["group"], item["policy"])):
+        lines.append(f"- {row['group']} / {row['policy']}: `{row['detected']}/{row['denominator']}` = `{fmt_rate(row['detection_rate'])}`")
     lines.extend([
         "",
         "## Natural Ghidra Execution",
