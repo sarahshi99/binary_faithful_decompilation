@@ -1,0 +1,19 @@
+{
+  "candidate_id": "sbase::libutil_crypt.c::hexdec::0001::4049dfdaa8fe::ghidra::clang_O2",
+  "compiler_command": [
+    "/usr/lib/llvm-11/bin/clang",
+    "-std=c11",
+    "-O2",
+    "-g",
+    "-fno-inline",
+    "-fno-builtin",
+    "-c",
+    "/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sbase_libutil_crypt.c_hexdec_0001_4049dfdaa8fe_ghidra_clang_O2/wrapper/wrapper.c",
+    "-o",
+    "/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sbase_libutil_crypt.c_hexdec_0001_4049dfdaa8fe_ghidra_clang_O2/binary/function.bin"
+  ],
+  "compiler_returncode": 0,
+  "function_id": "sbase::libutil_crypt.c::hexdec::0001::4049dfdaa8fe",
+  "normalization": "minimal Ghidra C preamble plus raw function text extraction; no source-guided behavior repair",
+  "wrapper_transformation": "prepended noinline/used attribute before extracted function body"
+}

@@ -1,0 +1,20 @@
+{
+  "candidate_id": "TinyCC::riscv64-gen.c::is_freg::0004::4c61127d0c8b::ghidra::gcc_O0",
+  "compiler_command": [
+    "/usr/bin/gcc",
+    "-std=c11",
+    "-O0",
+    "-g",
+    "-fno-inline",
+    "-fno-pie",
+    "-fcf-protection=none",
+    "-c",
+    "/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/TinyCC_riscv64-gen.c_is_freg_0004_4c61127d0c8b_ghidra_gcc_O0/wrapper/wrapper.c",
+    "-o",
+    "/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/TinyCC_riscv64-gen.c_is_freg_0004_4c61127d0c8b_ghidra_gcc_O0/binary/function.bin"
+  ],
+  "compiler_returncode": 0,
+  "function_id": "TinyCC::riscv64-gen.c::is_freg::0004::4c61127d0c8b",
+  "normalization": "minimal Ghidra C preamble plus raw function text extraction; no source-guided behavior repair",
+  "wrapper_transformation": "prepended noinline/used attribute before extracted function body"
+}

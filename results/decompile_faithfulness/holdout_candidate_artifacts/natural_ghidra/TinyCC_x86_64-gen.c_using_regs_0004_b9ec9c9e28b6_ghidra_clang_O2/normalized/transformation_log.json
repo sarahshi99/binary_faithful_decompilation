@@ -1,0 +1,19 @@
+{
+  "candidate_id": "TinyCC::x86_64-gen.c::using_regs::0004::b9ec9c9e28b6::ghidra::clang_O2",
+  "compiler_command": [
+    "/usr/lib/llvm-11/bin/clang",
+    "-std=c11",
+    "-O2",
+    "-g",
+    "-fno-inline",
+    "-fno-builtin",
+    "-c",
+    "/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/TinyCC_x86_64-gen.c_using_regs_0004_b9ec9c9e28b6_ghidra_clang_O2/wrapper/wrapper.c",
+    "-o",
+    "/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/TinyCC_x86_64-gen.c_using_regs_0004_b9ec9c9e28b6_ghidra_clang_O2/binary/function.bin"
+  ],
+  "compiler_returncode": 0,
+  "function_id": "TinyCC::x86_64-gen.c::using_regs::0004::b9ec9c9e28b6",
+  "normalization": "minimal Ghidra C preamble plus raw function text extraction; no source-guided behavior repair",
+  "wrapper_transformation": "prepended noinline/used attribute before extracted function body"
+}

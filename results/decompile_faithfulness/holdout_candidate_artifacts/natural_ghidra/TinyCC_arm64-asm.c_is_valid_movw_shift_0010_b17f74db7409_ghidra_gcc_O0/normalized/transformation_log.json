@@ -1,0 +1,20 @@
+{
+  "candidate_id": "TinyCC::arm64-asm.c::is_valid_movw_shift::0010::b17f74db7409::ghidra::gcc_O0",
+  "compiler_command": [
+    "/usr/bin/gcc",
+    "-std=c11",
+    "-O0",
+    "-g",
+    "-fno-inline",
+    "-fno-pie",
+    "-fcf-protection=none",
+    "-c",
+    "/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/TinyCC_arm64-asm.c_is_valid_movw_shift_0010_b17f74db7409_ghidra_gcc_O0/wrapper/wrapper.c",
+    "-o",
+    "/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/TinyCC_arm64-asm.c_is_valid_movw_shift_0010_b17f74db7409_ghidra_gcc_O0/binary/function.bin"
+  ],
+  "compiler_returncode": 0,
+  "function_id": "TinyCC::arm64-asm.c::is_valid_movw_shift::0010::b17f74db7409",
+  "normalization": "minimal Ghidra C preamble plus raw function text extraction; no source-guided behavior repair",
+  "wrapper_transformation": "prepended noinline/used attribute before extracted function body"
+}

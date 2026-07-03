@@ -1,0 +1,19 @@
+{
+  "candidate_id": "chibicc::tokenize.c::from_hex::0005::45632cc30325::ghidra::clang_O2",
+  "compiler_command": [
+    "/usr/lib/llvm-11/bin/clang",
+    "-std=c11",
+    "-O2",
+    "-g",
+    "-fno-inline",
+    "-fno-builtin",
+    "-c",
+    "/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/chibicc_tokenize.c_from_hex_0005_45632cc30325_ghidra_clang_O2/wrapper/wrapper.c",
+    "-o",
+    "/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/chibicc_tokenize.c_from_hex_0005_45632cc30325_ghidra_clang_O2/binary/function.bin"
+  ],
+  "compiler_returncode": 0,
+  "function_id": "chibicc::tokenize.c::from_hex::0005::45632cc30325",
+  "normalization": "minimal Ghidra C preamble plus raw function text extraction; no source-guided behavior repair",
+  "wrapper_transformation": "prepended noinline/used attribute before extracted function body"
+}

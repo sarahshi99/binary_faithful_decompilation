@@ -1,0 +1,19 @@
+{
+  "candidate_id": "mbedtls::library_x509_create.c::hex_to_int::0001::7aeb57347f91::ghidra::clang_O2",
+  "compiler_command": [
+    "/usr/lib/llvm-11/bin/clang",
+    "-std=c11",
+    "-O2",
+    "-g",
+    "-fno-inline",
+    "-fno-builtin",
+    "-c",
+    "/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/mbedtls_library_x509_create.c_hex_to_int_0001_7aeb57347f91_ghidra_clang_O2/wrapper/wrapper.c",
+    "-o",
+    "/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/mbedtls_library_x509_create.c_hex_to_int_0001_7aeb57347f91_ghidra_clang_O2/binary/function.bin"
+  ],
+  "compiler_returncode": 0,
+  "function_id": "mbedtls::library_x509_create.c::hex_to_int::0001::7aeb57347f91",
+  "normalization": "minimal Ghidra C preamble plus raw function text extraction; no source-guided behavior repair",
+  "wrapper_transformation": "prepended noinline/used attribute before extracted function body"
+}

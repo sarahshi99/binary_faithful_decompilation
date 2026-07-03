@@ -1,0 +1,1 @@
+static int pwr2to11(int p){ return (p*78913) >> 18; }

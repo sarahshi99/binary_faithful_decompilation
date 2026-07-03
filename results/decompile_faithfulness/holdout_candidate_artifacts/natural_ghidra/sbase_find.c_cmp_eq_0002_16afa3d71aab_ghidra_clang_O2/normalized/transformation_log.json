@@ -1,0 +1,19 @@
+{
+  "candidate_id": "sbase::find.c::cmp_eq::0002::16afa3d71aab::ghidra::clang_O2",
+  "compiler_command": [
+    "/usr/lib/llvm-11/bin/clang",
+    "-std=c11",
+    "-O2",
+    "-g",
+    "-fno-inline",
+    "-fno-builtin",
+    "-c",
+    "/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sbase_find.c_cmp_eq_0002_16afa3d71aab_ghidra_clang_O2/wrapper/wrapper.c",
+    "-o",
+    "/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sbase_find.c_cmp_eq_0002_16afa3d71aab_ghidra_clang_O2/binary/function.bin"
+  ],
+  "compiler_returncode": 0,
+  "function_id": "sbase::find.c::cmp_eq::0002::16afa3d71aab",
+  "normalization": "minimal Ghidra C preamble plus raw function text extraction; no source-guided behavior repair",
+  "wrapper_transformation": "prepended noinline/used attribute before extracted function body"
+}

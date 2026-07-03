@@ -1,0 +1,17 @@
+{
+  "controlled_candidate_attempts": 84,
+  "controlled_compile_ready": 78,
+  "controlled_no_mismatch": 18,
+  "controlled_semantic_wrong": 60,
+  "created_at_utc": "2026-07-03T06:10:18.337336+00:00",
+  "eligible_functions": 86,
+  "natural_candidate_attempts": 84,
+  "natural_compile_ready": 16,
+  "natural_no_mismatch": 16,
+  "natural_semantic_wrong": 0,
+  "non_evaluable": 74,
+  "phase": "phase1d_holdout_generation_and_seal",
+  "projects_with_eligible_functions": 10,
+  "schema_version": 1,
+  "selected_functions": 42
+}

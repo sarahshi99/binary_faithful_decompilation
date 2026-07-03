@@ -1,0 +1,20 @@
+{
+  "candidate_id": "sbase::find.c::cmp_eq::0002::16afa3d71aab::ghidra::gcc_O0",
+  "compiler_command": [
+    "/usr/bin/gcc",
+    "-std=c11",
+    "-O0",
+    "-g",
+    "-fno-inline",
+    "-fno-pie",
+    "-fcf-protection=none",
+    "-c",
+    "/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sbase_find.c_cmp_eq_0002_16afa3d71aab_ghidra_gcc_O0/wrapper/wrapper.c",
+    "-o",
+    "/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sbase_find.c_cmp_eq_0002_16afa3d71aab_ghidra_gcc_O0/binary/function.bin"
+  ],
+  "compiler_returncode": 0,
+  "function_id": "sbase::find.c::cmp_eq::0002::16afa3d71aab",
+  "normalization": "minimal Ghidra C preamble plus raw function text extraction; no source-guided behavior repair",
+  "wrapper_transformation": "prepended noinline/used attribute before extracted function body"
+}

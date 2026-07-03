@@ -1,0 +1,20 @@
+{
+  "candidate_id": "sqlite::src_util.c::pwr2to10::0010::f25b8f10dea3::ghidra::gcc_O0",
+  "compiler_command": [
+    "/usr/bin/gcc",
+    "-std=c11",
+    "-O0",
+    "-g",
+    "-fno-inline",
+    "-fno-pie",
+    "-fcf-protection=none",
+    "-c",
+    "/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sqlite_src_util.c_pwr2to10_0010_f25b8f10dea3_ghidra_gcc_O0/wrapper/wrapper.c",
+    "-o",
+    "/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sqlite_src_util.c_pwr2to10_0010_f25b8f10dea3_ghidra_gcc_O0/binary/function.bin"
+  ],
+  "compiler_returncode": 0,
+  "function_id": "sqlite::src_util.c::pwr2to10::0010::f25b8f10dea3",
+  "normalization": "minimal Ghidra C preamble plus raw function text extraction; no source-guided behavior repair",
+  "wrapper_transformation": "prepended noinline/used attribute before extracted function body"
+}

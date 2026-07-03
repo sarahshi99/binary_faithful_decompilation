@@ -1,0 +1,168 @@
+{"args": [22], "fixture_seed": 2026070302, "function_id": "musl::src_ctype_iscntrl.c::iscntrl::0001::ca58b22988c2", "project": "musl", "rank": 1, "source_agnostic": true, "source_output": 1}
+{"args": [-6], "fixture_seed": 2026070302, "function_id": "musl::src_ctype_iscntrl.c::iscntrl::0001::ca58b22988c2", "project": "musl", "rank": 2, "source_agnostic": true, "source_output": 0}
+{"args": [-3], "fixture_seed": 2026070302, "function_id": "musl::src_ctype_iscntrl.c::iscntrl::0001::ca58b22988c2", "project": "musl", "rank": 3, "source_agnostic": true, "source_output": 0}
+{"args": [23], "fixture_seed": 2026070302, "function_id": "musl::src_ctype_iscntrl.c::iscntrl::0001::ca58b22988c2", "project": "musl", "rank": 4, "source_agnostic": true, "source_output": 1}
+{"args": [-9], "fixture_seed": 2026070302, "function_id": "mbedtls::library_x509.c::nibble_to_hex_digit::0015::b855ad07642b", "project": "mbedtls", "rank": 1, "source_agnostic": true, "source_output": 39}
+{"args": [21], "fixture_seed": 2026070302, "function_id": "mbedtls::library_x509.c::nibble_to_hex_digit::0015::b855ad07642b", "project": "mbedtls", "rank": 2, "source_agnostic": true, "source_output": 76}
+{"args": [14], "fixture_seed": 2026070302, "function_id": "mbedtls::library_x509.c::nibble_to_hex_digit::0015::b855ad07642b", "project": "mbedtls", "rank": 3, "source_agnostic": true, "source_output": 69}
+{"args": [-15], "fixture_seed": 2026070302, "function_id": "mbedtls::library_x509.c::nibble_to_hex_digit::0015::b855ad07642b", "project": "mbedtls", "rank": 4, "source_agnostic": true, "source_output": 33}
+{"args": [-16], "fixture_seed": 2026070302, "function_id": "sqlite::src_test_malloc.c::hexToInt::0006::50e837e0cf07", "project": "sqlite", "rank": 1, "source_agnostic": true, "source_output": -1}
+{"args": [12], "fixture_seed": 2026070302, "function_id": "sqlite::src_test_malloc.c::hexToInt::0006::50e837e0cf07", "project": "sqlite", "rank": 2, "source_agnostic": true, "source_output": -1}
+{"args": [-24], "fixture_seed": 2026070302, "function_id": "sqlite::src_test_malloc.c::hexToInt::0006::50e837e0cf07", "project": "sqlite", "rank": 3, "source_agnostic": true, "source_output": -1}
+{"args": [-28], "fixture_seed": 2026070302, "function_id": "sqlite::src_test_malloc.c::hexToInt::0006::50e837e0cf07", "project": "sqlite", "rank": 4, "source_agnostic": true, "source_output": -1}
+{"args": [58], "fixture_seed": 2026070302, "function_id": "libb64::src_cdecode.c::base64_decode_value::0001::7b72285f2481", "project": "libb64", "rank": 1, "source_agnostic": true, "source_output": -1}
+{"args": [122], "fixture_seed": 2026070302, "function_id": "libb64::src_cdecode.c::base64_decode_value::0001::7b72285f2481", "project": "libb64", "rank": 2, "source_agnostic": true, "source_output": 51}
+{"args": [67], "fixture_seed": 2026070302, "function_id": "libb64::src_cdecode.c::base64_decode_value::0001::7b72285f2481", "project": "libb64", "rank": 3, "source_agnostic": true, "source_output": 2}
+{"args": [113], "fixture_seed": 2026070302, "function_id": "libb64::src_cdecode.c::base64_decode_value::0001::7b72285f2481", "project": "libb64", "rank": 4, "source_agnostic": true, "source_output": 42}
+{"args": [46], "fixture_seed": 2026070302, "function_id": "libtomcrypt::src_pk_asn1_der_generalizedtime_der_decode_generalizedtime.c::s_char_to_int::0001::7560b8026c5c", "project": "libtomcrypt", "rank": 1, "source_agnostic": true, "source_output": 100}
+{"args": [64], "fixture_seed": 2026070302, "function_id": "libtomcrypt::src_pk_asn1_der_generalizedtime_der_decode_generalizedtime.c::s_char_to_int::0001::7560b8026c5c", "project": "libtomcrypt", "rank": 2, "source_agnostic": true, "source_output": 100}
+{"args": [97], "fixture_seed": 2026070302, "function_id": "libtomcrypt::src_pk_asn1_der_generalizedtime_der_decode_generalizedtime.c::s_char_to_int::0001::7560b8026c5c", "project": "libtomcrypt", "rank": 3, "source_agnostic": true, "source_output": 100}
+{"args": [119], "fixture_seed": 2026070302, "function_id": "libtomcrypt::src_pk_asn1_der_generalizedtime_der_decode_generalizedtime.c::s_char_to_int::0001::7560b8026c5c", "project": "libtomcrypt", "rank": 4, "source_agnostic": true, "source_output": 100}
+{"args": [-5], "fixture_seed": 2026070302, "function_id": "BearSSL::tools_names.c::is_ign::0004::a92f16112529", "project": "BearSSL", "rank": 1, "source_agnostic": true, "source_output": 1}
+{"args": [-17], "fixture_seed": 2026070302, "function_id": "BearSSL::tools_names.c::is_ign::0004::a92f16112529", "project": "BearSSL", "rank": 2, "source_agnostic": true, "source_output": 1}
+{"args": [-11], "fixture_seed": 2026070302, "function_id": "BearSSL::tools_names.c::is_ign::0004::a92f16112529", "project": "BearSSL", "rank": 3, "source_agnostic": true, "source_output": 1}
+{"args": [9], "fixture_seed": 2026070302, "function_id": "BearSSL::tools_names.c::is_ign::0004::a92f16112529", "project": "BearSSL", "rank": 4, "source_agnostic": true, "source_output": 1}
+{"args": [22], "fixture_seed": 2026070302, "function_id": "xxHash::cli_xxhsum.c::charToHex::0005::cd1daff90d32", "project": "xxHash", "rank": 1, "source_agnostic": true, "source_output": -1}
+{"args": [108], "fixture_seed": 2026070302, "function_id": "xxHash::cli_xxhsum.c::charToHex::0005::cd1daff90d32", "project": "xxHash", "rank": 2, "source_agnostic": true, "source_output": -1}
+{"args": [126], "fixture_seed": 2026070302, "function_id": "xxHash::cli_xxhsum.c::charToHex::0005::cd1daff90d32", "project": "xxHash", "rank": 3, "source_agnostic": true, "source_output": -1}
+{"args": [112], "fixture_seed": 2026070302, "function_id": "xxHash::cli_xxhsum.c::charToHex::0005::cd1daff90d32", "project": "xxHash", "rank": 4, "source_agnostic": true, "source_output": -1}
+{"args": [3], "fixture_seed": 2026070302, "function_id": "TinyCC::conftest.c::isspc::0002::8253a2dcd0bb", "project": "TinyCC", "rank": 1, "source_agnostic": true, "source_output": 1}
+{"args": [29], "fixture_seed": 2026070302, "function_id": "TinyCC::conftest.c::isspc::0002::8253a2dcd0bb", "project": "TinyCC", "rank": 2, "source_agnostic": true, "source_output": 1}
+{"args": [13], "fixture_seed": 2026070302, "function_id": "TinyCC::conftest.c::isspc::0002::8253a2dcd0bb", "project": "TinyCC", "rank": 3, "source_agnostic": true, "source_output": 1}
+{"args": [-8], "fixture_seed": 2026070302, "function_id": "TinyCC::conftest.c::isspc::0002::8253a2dcd0bb", "project": "TinyCC", "rank": 4, "source_agnostic": true, "source_output": 0}
+{"args": [105], "fixture_seed": 2026070302, "function_id": "chibicc::tokenize.c::from_hex::0005::45632cc30325", "project": "chibicc", "rank": 1, "source_agnostic": true, "source_output": 50}
+{"args": [32], "fixture_seed": 2026070302, "function_id": "chibicc::tokenize.c::from_hex::0005::45632cc30325", "project": "chibicc", "rank": 2, "source_agnostic": true, "source_output": -23}
+{"args": [124], "fixture_seed": 2026070302, "function_id": "chibicc::tokenize.c::from_hex::0005::45632cc30325", "project": "chibicc", "rank": 3, "source_agnostic": true, "source_output": 69}
+{"args": [116], "fixture_seed": 2026070302, "function_id": "chibicc::tokenize.c::from_hex::0005::45632cc30325", "project": "chibicc", "rank": 4, "source_agnostic": true, "source_output": 61}
+{"args": [28], "fixture_seed": 2026070302, "function_id": "sbase::make_parser.c::internal::0007::6720595969ae", "project": "sbase", "rank": 1, "source_agnostic": true, "source_output": 0}
+{"args": [-18], "fixture_seed": 2026070302, "function_id": "sbase::make_parser.c::internal::0007::6720595969ae", "project": "sbase", "rank": 2, "source_agnostic": true, "source_output": 0}
+{"args": [20], "fixture_seed": 2026070302, "function_id": "sbase::make_parser.c::internal::0007::6720595969ae", "project": "sbase", "rank": 3, "source_agnostic": true, "source_output": 0}
+{"args": [21], "fixture_seed": 2026070302, "function_id": "sbase::make_parser.c::internal::0007::6720595969ae", "project": "sbase", "rank": 4, "source_agnostic": true, "source_output": 0}
+{"args": [18], "fixture_seed": 2026070302, "function_id": "musl::src_ctype_isalpha.c::isalpha::0001::279b5a02fc43", "project": "musl", "rank": 1, "source_agnostic": true, "source_output": 0}
+{"args": [-26], "fixture_seed": 2026070302, "function_id": "musl::src_ctype_isalpha.c::isalpha::0001::279b5a02fc43", "project": "musl", "rank": 2, "source_agnostic": true, "source_output": 0}
+{"args": [5], "fixture_seed": 2026070302, "function_id": "musl::src_ctype_isalpha.c::isalpha::0001::279b5a02fc43", "project": "musl", "rank": 3, "source_agnostic": true, "source_output": 0}
+{"args": [-8], "fixture_seed": 2026070302, "function_id": "musl::src_ctype_isalpha.c::isalpha::0001::279b5a02fc43", "project": "musl", "rank": 4, "source_agnostic": true, "source_output": 0}
+{"args": [81], "fixture_seed": 2026070302, "function_id": "mbedtls::library_x509_create.c::hex_to_int::0001::7aeb57347f91", "project": "mbedtls", "rank": 1, "source_agnostic": true, "source_output": -1}
+{"args": [69], "fixture_seed": 2026070302, "function_id": "mbedtls::library_x509_create.c::hex_to_int::0001::7aeb57347f91", "project": "mbedtls", "rank": 2, "source_agnostic": true, "source_output": 14}
+{"args": [34], "fixture_seed": 2026070302, "function_id": "mbedtls::library_x509_create.c::hex_to_int::0001::7aeb57347f91", "project": "mbedtls", "rank": 3, "source_agnostic": true, "source_output": -1}
+{"args": [76], "fixture_seed": 2026070302, "function_id": "mbedtls::library_x509_create.c::hex_to_int::0001::7aeb57347f91", "project": "mbedtls", "rank": 4, "source_agnostic": true, "source_output": -1}
+{"args": [108], "fixture_seed": 2026070302, "function_id": "sqlite::ext_misc_rot13.c::rot13::0001::29f43d50149a", "project": "sqlite", "rank": 1, "source_agnostic": true, "source_output": 121}
+{"args": [40], "fixture_seed": 2026070302, "function_id": "sqlite::ext_misc_rot13.c::rot13::0001::29f43d50149a", "project": "sqlite", "rank": 2, "source_agnostic": true, "source_output": 40}
+{"args": [92], "fixture_seed": 2026070302, "function_id": "sqlite::ext_misc_rot13.c::rot13::0001::29f43d50149a", "project": "sqlite", "rank": 3, "source_agnostic": true, "source_output": 92}
+{"args": [104], "fixture_seed": 2026070302, "function_id": "sqlite::ext_misc_rot13.c::rot13::0001::29f43d50149a", "project": "sqlite", "rank": 4, "source_agnostic": true, "source_output": 117}
+{"args": [15], "fixture_seed": 2026070302, "function_id": "libb64::src_cencode.c::base64_encode_value::0001::6dca5895e15c", "project": "libb64", "rank": 1, "source_agnostic": true, "source_output": 80}
+{"args": [41], "fixture_seed": 2026070302, "function_id": "libb64::src_cencode.c::base64_encode_value::0001::6dca5895e15c", "project": "libb64", "rank": 2, "source_agnostic": true, "source_output": 112}
+{"args": [38], "fixture_seed": 2026070302, "function_id": "libb64::src_cencode.c::base64_encode_value::0001::6dca5895e15c", "project": "libb64", "rank": 3, "source_agnostic": true, "source_output": 109}
+{"args": [63], "fixture_seed": 2026070302, "function_id": "libb64::src_cencode.c::base64_encode_value::0001::6dca5895e15c", "project": "libb64", "rank": 4, "source_agnostic": true, "source_output": 47}
+{"args": [41], "fixture_seed": 2026070302, "function_id": "libtomcrypt::src_pk_asn1_der_utctime_der_decode_utctime.c::s_char_to_int::0001::f87ee5162c3b", "project": "libtomcrypt", "rank": 1, "source_agnostic": true, "source_output": 100}
+{"args": [90], "fixture_seed": 2026070302, "function_id": "libtomcrypt::src_pk_asn1_der_utctime_der_decode_utctime.c::s_char_to_int::0001::f87ee5162c3b", "project": "libtomcrypt", "rank": 2, "source_agnostic": true, "source_output": 100}
+{"args": [89], "fixture_seed": 2026070302, "function_id": "libtomcrypt::src_pk_asn1_der_utctime_der_decode_utctime.c::s_char_to_int::0001::f87ee5162c3b", "project": "libtomcrypt", "rank": 3, "source_agnostic": true, "source_output": 100}
+{"args": [99], "fixture_seed": 2026070302, "function_id": "libtomcrypt::src_pk_asn1_der_utctime_der_decode_utctime.c::s_char_to_int::0001::f87ee5162c3b", "project": "libtomcrypt", "rank": 4, "source_agnostic": true, "source_output": 100}
+{"args": [1], "fixture_seed": 2026070302, "function_id": "BearSSL::tools_names.c::hexval::0008::993a0d3d1ea6", "project": "BearSSL", "rank": 1, "source_agnostic": true, "source_output": -1}
+{"args": [-17], "fixture_seed": 2026070302, "function_id": "BearSSL::tools_names.c::hexval::0008::993a0d3d1ea6", "project": "BearSSL", "rank": 2, "source_agnostic": true, "source_output": -1}
+{"args": [-30], "fixture_seed": 2026070302, "function_id": "BearSSL::tools_names.c::hexval::0008::993a0d3d1ea6", "project": "BearSSL", "rank": 3, "source_agnostic": true, "source_output": -1}
+{"args": [-31], "fixture_seed": 2026070302, "function_id": "BearSSL::tools_names.c::hexval::0008::993a0d3d1ea6", "project": "BearSSL", "rank": 4, "source_agnostic": true, "source_output": -1}
+{"args": [-14], "fixture_seed": 2026070302, "function_id": "TinyCC::x86_64-gen.c::using_regs::0004::b9ec9c9e28b6", "project": "TinyCC", "rank": 1, "source_agnostic": true, "source_output": 0}
+{"args": [4], "fixture_seed": 2026070302, "function_id": "TinyCC::x86_64-gen.c::using_regs::0004::b9ec9c9e28b6", "project": "TinyCC", "rank": 2, "source_agnostic": true, "source_output": 1}
+{"args": [3], "fixture_seed": 2026070302, "function_id": "TinyCC::x86_64-gen.c::using_regs::0004::b9ec9c9e28b6", "project": "TinyCC", "rank": 3, "source_agnostic": true, "source_output": 0}
+{"args": [0], "fixture_seed": 2026070302, "function_id": "TinyCC::x86_64-gen.c::using_regs::0004::b9ec9c9e28b6", "project": "TinyCC", "rank": 4, "source_agnostic": true, "source_output": 1}
+{"args": [11], "fixture_seed": 2026070302, "function_id": "sbase::make_main.c::hasargs::0002::caccdf48eb91", "project": "sbase", "rank": 1, "source_agnostic": true, "source_output": 0}
+{"args": [25], "fixture_seed": 2026070302, "function_id": "sbase::make_main.c::hasargs::0002::caccdf48eb91", "project": "sbase", "rank": 2, "source_agnostic": true, "source_output": 0}
+{"args": [-30], "fixture_seed": 2026070302, "function_id": "sbase::make_main.c::hasargs::0002::caccdf48eb91", "project": "sbase", "rank": 3, "source_agnostic": true, "source_output": 0}
+{"args": [-26], "fixture_seed": 2026070302, "function_id": "sbase::make_main.c::hasargs::0002::caccdf48eb91", "project": "sbase", "rank": 4, "source_agnostic": true, "source_output": 0}
+{"args": [52], "fixture_seed": 2026070302, "function_id": "musl::src_network_inet_pton.c::hexval::0001::a0a6dbc2a411", "project": "musl", "rank": 1, "source_agnostic": true, "source_output": 4}
+{"args": [32], "fixture_seed": 2026070302, "function_id": "musl::src_network_inet_pton.c::hexval::0001::a0a6dbc2a411", "project": "musl", "rank": 2, "source_agnostic": true, "source_output": -1}
+{"args": [31], "fixture_seed": 2026070302, "function_id": "musl::src_network_inet_pton.c::hexval::0001::a0a6dbc2a411", "project": "musl", "rank": 3, "source_agnostic": true, "source_output": -1}
+{"args": [53], "fixture_seed": 2026070302, "function_id": "musl::src_network_inet_pton.c::hexval::0001::a0a6dbc2a411", "project": "musl", "rank": 4, "source_agnostic": true, "source_output": 5}
+{"args": [-2], "fixture_seed": 2026070302, "function_id": "sqlite::src_mem5.c::memsys5Log::0003::f8403d46bdea", "project": "sqlite", "rank": 1, "source_agnostic": true, "source_output": 0}
+{"args": [-3], "fixture_seed": 2026070302, "function_id": "sqlite::src_mem5.c::memsys5Log::0003::f8403d46bdea", "project": "sqlite", "rank": 2, "source_agnostic": true, "source_output": 0}
+{"args": [17], "fixture_seed": 2026070302, "function_id": "sqlite::src_mem5.c::memsys5Log::0003::f8403d46bdea", "project": "sqlite", "rank": 3, "source_agnostic": true, "source_output": 5}
+{"args": [29], "fixture_seed": 2026070302, "function_id": "sqlite::src_mem5.c::memsys5Log::0003::f8403d46bdea", "project": "sqlite", "rank": 4, "source_agnostic": true, "source_output": 5}
+{"args": [26], "fixture_seed": 2026070302, "function_id": "TinyCC::riscv64-gen.c::is_freg::0004::4c61127d0c8b", "project": "TinyCC", "rank": 1, "source_agnostic": true, "source_output": 0}
+{"args": [-21], "fixture_seed": 2026070302, "function_id": "TinyCC::riscv64-gen.c::is_freg::0004::4c61127d0c8b", "project": "TinyCC", "rank": 2, "source_agnostic": true, "source_output": 0}
+{"args": [12], "fixture_seed": 2026070302, "function_id": "TinyCC::riscv64-gen.c::is_freg::0004::4c61127d0c8b", "project": "TinyCC", "rank": 3, "source_agnostic": true, "source_output": 1}
+{"args": [-26], "fixture_seed": 2026070302, "function_id": "TinyCC::riscv64-gen.c::is_freg::0004::4c61127d0c8b", "project": "TinyCC", "rank": 4, "source_agnostic": true, "source_output": 0}
+{"args": [-13], "fixture_seed": 2026070302, "function_id": "sbase::cron.c::isleap::0001::0fde71268ef6", "project": "sbase", "rank": 1, "source_agnostic": true, "source_output": 0}
+{"args": [-28], "fixture_seed": 2026070302, "function_id": "sbase::cron.c::isleap::0001::0fde71268ef6", "project": "sbase", "rank": 2, "source_agnostic": true, "source_output": 1}
+{"args": [5], "fixture_seed": 2026070302, "function_id": "sbase::cron.c::isleap::0001::0fde71268ef6", "project": "sbase", "rank": 3, "source_agnostic": true, "source_output": 0}
+{"args": [-19], "fixture_seed": 2026070302, "function_id": "sbase::cron.c::isleap::0001::0fde71268ef6", "project": "sbase", "rank": 4, "source_agnostic": true, "source_output": 0}
+{"args": [-30], "fixture_seed": 2026070302, "function_id": "musl::src_ctype_isspace.c::isspace::0001::93f674d2bcdd", "project": "musl", "rank": 1, "source_agnostic": true, "source_output": 0}
+{"args": [-11], "fixture_seed": 2026070302, "function_id": "musl::src_ctype_isspace.c::isspace::0001::93f674d2bcdd", "project": "musl", "rank": 2, "source_agnostic": true, "source_output": 0}
+{"args": [8], "fixture_seed": 2026070302, "function_id": "musl::src_ctype_isspace.c::isspace::0001::93f674d2bcdd", "project": "musl", "rank": 3, "source_agnostic": true, "source_output": 0}
+{"args": [25], "fixture_seed": 2026070302, "function_id": "musl::src_ctype_isspace.c::isspace::0001::93f674d2bcdd", "project": "musl", "rank": 4, "source_agnostic": true, "source_output": 0}
+{"args": [1], "fixture_seed": 2026070302, "function_id": "sqlite::src_os_win.c::winMemRoundup::0005::7e0ed1b07591", "project": "sqlite", "rank": 1, "source_agnostic": true, "source_output": 1}
+{"args": [-13], "fixture_seed": 2026070302, "function_id": "sqlite::src_os_win.c::winMemRoundup::0005::7e0ed1b07591", "project": "sqlite", "rank": 2, "source_agnostic": true, "source_output": -13}
+{"args": [-22], "fixture_seed": 2026070302, "function_id": "sqlite::src_os_win.c::winMemRoundup::0005::7e0ed1b07591", "project": "sqlite", "rank": 3, "source_agnostic": true, "source_output": -22}
+{"args": [21], "fixture_seed": 2026070302, "function_id": "sqlite::src_os_win.c::winMemRoundup::0005::7e0ed1b07591", "project": "sqlite", "rank": 4, "source_agnostic": true, "source_output": 21}
+{"args": [24], "fixture_seed": 2026070302, "function_id": "TinyCC::tccdbg.c::dwarf_uleb128_size::0003::d476151071dd", "project": "TinyCC", "rank": 1, "source_agnostic": true, "source_output": 1}
+{"args": [31], "fixture_seed": 2026070302, "function_id": "TinyCC::tccdbg.c::dwarf_uleb128_size::0003::d476151071dd", "project": "TinyCC", "rank": 2, "source_agnostic": true, "source_output": 1}
+{"args": [21], "fixture_seed": 2026070302, "function_id": "TinyCC::tccdbg.c::dwarf_uleb128_size::0003::d476151071dd", "project": "TinyCC", "rank": 3, "source_agnostic": true, "source_output": 1}
+{"args": [40], "fixture_seed": 2026070302, "function_id": "TinyCC::tccdbg.c::dwarf_uleb128_size::0003::d476151071dd", "project": "TinyCC", "rank": 4, "source_agnostic": true, "source_output": 1}
+{"args": [25, -32], "fixture_seed": 2026070302, "function_id": "sbase::find.c::cmp_gt::0001::7383663fc3bf", "project": "sbase", "rank": 1, "source_agnostic": true, "source_output": 1}
+{"args": [7, 19], "fixture_seed": 2026070302, "function_id": "sbase::find.c::cmp_gt::0001::7383663fc3bf", "project": "sbase", "rank": 2, "source_agnostic": true, "source_output": 0}
+{"args": [31, -9], "fixture_seed": 2026070302, "function_id": "sbase::find.c::cmp_gt::0001::7383663fc3bf", "project": "sbase", "rank": 3, "source_agnostic": true, "source_output": 1}
+{"args": [-11, 3], "fixture_seed": 2026070302, "function_id": "sbase::find.c::cmp_gt::0001::7383663fc3bf", "project": "sbase", "rank": 4, "source_agnostic": true, "source_output": 0}
+{"args": [-31], "fixture_seed": 2026070302, "function_id": "musl::src_stdlib_abs.c::abs::0001::7d806d7b2171", "project": "musl", "rank": 1, "source_agnostic": true, "source_output": 31}
+{"args": [13], "fixture_seed": 2026070302, "function_id": "musl::src_stdlib_abs.c::abs::0001::7d806d7b2171", "project": "musl", "rank": 2, "source_agnostic": true, "source_output": 13}
+{"args": [24], "fixture_seed": 2026070302, "function_id": "musl::src_stdlib_abs.c::abs::0001::7d806d7b2171", "project": "musl", "rank": 3, "source_agnostic": true, "source_output": 24}
+{"args": [-18], "fixture_seed": 2026070302, "function_id": "musl::src_stdlib_abs.c::abs::0001::7d806d7b2171", "project": "musl", "rank": 4, "source_agnostic": true, "source_output": 18}
+{"args": [110], "fixture_seed": 2026070302, "function_id": "sqlite::src_test_func.c::testHexChar::0001::9046f0b5e72e", "project": "sqlite", "rank": 1, "source_agnostic": true, "source_output": 0}
+{"args": [46], "fixture_seed": 2026070302, "function_id": "sqlite::src_test_func.c::testHexChar::0001::9046f0b5e72e", "project": "sqlite", "rank": 2, "source_agnostic": true, "source_output": 0}
+{"args": [94], "fixture_seed": 2026070302, "function_id": "sqlite::src_test_func.c::testHexChar::0001::9046f0b5e72e", "project": "sqlite", "rank": 3, "source_agnostic": true, "source_output": 0}
+{"args": [39], "fixture_seed": 2026070302, "function_id": "sqlite::src_test_func.c::testHexChar::0001::9046f0b5e72e", "project": "sqlite", "rank": 4, "source_agnostic": true, "source_output": 0}
+{"args": [54], "fixture_seed": 2026070302, "function_id": "TinyCC::tcctools.c::le2belong::0001::9d35b2a4c6a7", "project": "TinyCC", "rank": 1, "source_agnostic": true, "source_output": 905969664}
+{"args": [62], "fixture_seed": 2026070302, "function_id": "TinyCC::tcctools.c::le2belong::0001::9d35b2a4c6a7", "project": "TinyCC", "rank": 2, "source_agnostic": true, "source_output": 1040187392}
+{"args": [22], "fixture_seed": 2026070302, "function_id": "TinyCC::tcctools.c::le2belong::0001::9d35b2a4c6a7", "project": "TinyCC", "rank": 3, "source_agnostic": true, "source_output": 369098752}
+{"args": [37], "fixture_seed": 2026070302, "function_id": "TinyCC::tcctools.c::le2belong::0001::9d35b2a4c6a7", "project": "TinyCC", "rank": 4, "source_agnostic": true, "source_output": 620756992}
+{"args": [24, -15], "fixture_seed": 2026070302, "function_id": "sbase::find.c::cmp_lt::0003::3ff7fb5ec166", "project": "sbase", "rank": 1, "source_agnostic": true, "source_output": 0}
+{"args": [-16, 11], "fixture_seed": 2026070302, "function_id": "sbase::find.c::cmp_lt::0003::3ff7fb5ec166", "project": "sbase", "rank": 2, "source_agnostic": true, "source_output": 1}
+{"args": [-16, -16], "fixture_seed": 2026070302, "function_id": "sbase::find.c::cmp_lt::0003::3ff7fb5ec166", "project": "sbase", "rank": 3, "source_agnostic": true, "source_output": 0}
+{"args": [24, -9], "fixture_seed": 2026070302, "function_id": "sbase::find.c::cmp_lt::0003::3ff7fb5ec166", "project": "sbase", "rank": 4, "source_agnostic": true, "source_output": 0}
+{"args": [38], "fixture_seed": 2026070302, "function_id": "musl::src_regex_regcomp.c::hexval::0004::5a81c0c932f7", "project": "musl", "rank": 1, "source_agnostic": true, "source_output": -1}
+{"args": [25], "fixture_seed": 2026070302, "function_id": "musl::src_regex_regcomp.c::hexval::0004::5a81c0c932f7", "project": "musl", "rank": 2, "source_agnostic": true, "source_output": -1}
+{"args": [59], "fixture_seed": 2026070302, "function_id": "musl::src_regex_regcomp.c::hexval::0004::5a81c0c932f7", "project": "musl", "rank": 3, "source_agnostic": true, "source_output": -1}
+{"args": [62], "fixture_seed": 2026070302, "function_id": "musl::src_regex_regcomp.c::hexval::0004::5a81c0c932f7", "project": "musl", "rank": 4, "source_agnostic": true, "source_output": -1}
+{"args": [-16], "fixture_seed": 2026070302, "function_id": "sqlite::ext_fts3_fts3_tokenizer1.c::fts3_isalnum::0002::9b0f8eebf62b", "project": "sqlite", "rank": 1, "source_agnostic": true, "source_output": 0}
+{"args": [-26], "fixture_seed": 2026070302, "function_id": "sqlite::ext_fts3_fts3_tokenizer1.c::fts3_isalnum::0002::9b0f8eebf62b", "project": "sqlite", "rank": 2, "source_agnostic": true, "source_output": 0}
+{"args": [8], "fixture_seed": 2026070302, "function_id": "sqlite::ext_fts3_fts3_tokenizer1.c::fts3_isalnum::0002::9b0f8eebf62b", "project": "sqlite", "rank": 3, "source_agnostic": true, "source_output": 0}
+{"args": [-8], "fixture_seed": 2026070302, "function_id": "sqlite::ext_fts3_fts3_tokenizer1.c::fts3_isalnum::0002::9b0f8eebf62b", "project": "sqlite", "rank": 4, "source_agnostic": true, "source_output": 0}
+{"args": [23], "fixture_seed": 2026070302, "function_id": "TinyCC::conftest.c::isid::0001::8f9cf31cf5da", "project": "TinyCC", "rank": 1, "source_agnostic": true, "source_output": 0}
+{"args": [0], "fixture_seed": 2026070302, "function_id": "TinyCC::conftest.c::isid::0001::8f9cf31cf5da", "project": "TinyCC", "rank": 2, "source_agnostic": true, "source_output": 0}
+{"args": [-23], "fixture_seed": 2026070302, "function_id": "TinyCC::conftest.c::isid::0001::8f9cf31cf5da", "project": "TinyCC", "rank": 3, "source_agnostic": true, "source_output": 0}
+{"args": [26], "fixture_seed": 2026070302, "function_id": "TinyCC::conftest.c::isid::0001::8f9cf31cf5da", "project": "TinyCC", "rank": 4, "source_agnostic": true, "source_output": 0}
+{"args": [-12], "fixture_seed": 2026070302, "function_id": "sbase::dc.c::isqrt::0015::836b73bf0246", "project": "sbase", "rank": 1, "source_agnostic": true, "source_output": 0}
+{"args": [-9], "fixture_seed": 2026070302, "function_id": "sbase::dc.c::isqrt::0015::836b73bf0246", "project": "sbase", "rank": 2, "source_agnostic": true, "source_output": 0}
+{"args": [10], "fixture_seed": 2026070302, "function_id": "sbase::dc.c::isqrt::0015::836b73bf0246", "project": "sbase", "rank": 3, "source_agnostic": true, "source_output": 3}
+{"args": [-4], "fixture_seed": 2026070302, "function_id": "sbase::dc.c::isqrt::0015::836b73bf0246", "project": "sbase", "rank": 4, "source_agnostic": true, "source_output": 0}
+{"args": [19], "fixture_seed": 2026070302, "function_id": "musl::src_stdlib_llabs.c::llabs::0001::b58997ecb0f1", "project": "musl", "rank": 1, "source_agnostic": true, "source_output": 19}
+{"args": [14], "fixture_seed": 2026070302, "function_id": "musl::src_stdlib_llabs.c::llabs::0001::b58997ecb0f1", "project": "musl", "rank": 2, "source_agnostic": true, "source_output": 14}
+{"args": [-27], "fixture_seed": 2026070302, "function_id": "musl::src_stdlib_llabs.c::llabs::0001::b58997ecb0f1", "project": "musl", "rank": 3, "source_agnostic": true, "source_output": 27}
+{"args": [22], "fixture_seed": 2026070302, "function_id": "musl::src_stdlib_llabs.c::llabs::0001::b58997ecb0f1", "project": "musl", "rank": 4, "source_agnostic": true, "source_output": 22}
+{"args": [-26], "fixture_seed": 2026070302, "function_id": "sqlite::ext_misc_regexp.c::re_maxnfa::0011::403cd1ada2c2", "project": "sqlite", "rank": 1, "source_agnostic": true, "source_output": 62}
+{"args": [29], "fixture_seed": 2026070302, "function_id": "sqlite::ext_misc_regexp.c::re_maxnfa::0011::403cd1ada2c2", "project": "sqlite", "rank": 2, "source_agnostic": true, "source_output": 89}
+{"args": [30], "fixture_seed": 2026070302, "function_id": "sqlite::ext_misc_regexp.c::re_maxnfa::0011::403cd1ada2c2", "project": "sqlite", "rank": 3, "source_agnostic": true, "source_output": 90}
+{"args": [24], "fixture_seed": 2026070302, "function_id": "sqlite::ext_misc_regexp.c::re_maxnfa::0011::403cd1ada2c2", "project": "sqlite", "rank": 4, "source_agnostic": true, "source_output": 87}
+{"args": [27, 20], "fixture_seed": 2026070302, "function_id": "TinyCC::arm64-asm.c::is_valid_movw_shift::0010::b17f74db7409", "project": "TinyCC", "rank": 1, "source_agnostic": true, "source_output": 0}
+{"args": [-13, 5], "fixture_seed": 2026070302, "function_id": "TinyCC::arm64-asm.c::is_valid_movw_shift::0010::b17f74db7409", "project": "TinyCC", "rank": 2, "source_agnostic": true, "source_output": 0}
+{"args": [21, 20], "fixture_seed": 2026070302, "function_id": "TinyCC::arm64-asm.c::is_valid_movw_shift::0010::b17f74db7409", "project": "TinyCC", "rank": 3, "source_agnostic": true, "source_output": 0}
+{"args": [-15, 7], "fixture_seed": 2026070302, "function_id": "TinyCC::arm64-asm.c::is_valid_movw_shift::0010::b17f74db7409", "project": "TinyCC", "rank": 4, "source_agnostic": true, "source_output": 0}
+{"args": [-8, 18], "fixture_seed": 2026070302, "function_id": "sbase::find.c::cmp_eq::0002::16afa3d71aab", "project": "sbase", "rank": 1, "source_agnostic": true, "source_output": 0}
+{"args": [-7, 5], "fixture_seed": 2026070302, "function_id": "sbase::find.c::cmp_eq::0002::16afa3d71aab", "project": "sbase", "rank": 2, "source_agnostic": true, "source_output": 0}
+{"args": [-16, 25], "fixture_seed": 2026070302, "function_id": "sbase::find.c::cmp_eq::0002::16afa3d71aab", "project": "sbase", "rank": 3, "source_agnostic": true, "source_output": 0}
+{"args": [7, 5], "fixture_seed": 2026070302, "function_id": "sbase::find.c::cmp_eq::0002::16afa3d71aab", "project": "sbase", "rank": 4, "source_agnostic": true, "source_output": 0}
+{"args": [-30], "fixture_seed": 2026070302, "function_id": "musl::src_ctype_isgraph.c::isgraph::0001::42b3df97c421", "project": "musl", "rank": 1, "source_agnostic": true, "source_output": 0}
+{"args": [-15], "fixture_seed": 2026070302, "function_id": "musl::src_ctype_isgraph.c::isgraph::0001::42b3df97c421", "project": "musl", "rank": 2, "source_agnostic": true, "source_output": 0}
+{"args": [1], "fixture_seed": 2026070302, "function_id": "musl::src_ctype_isgraph.c::isgraph::0001::42b3df97c421", "project": "musl", "rank": 3, "source_agnostic": true, "source_output": 0}
+{"args": [16], "fixture_seed": 2026070302, "function_id": "musl::src_ctype_isgraph.c::isgraph::0001::42b3df97c421", "project": "musl", "rank": 4, "source_agnostic": true, "source_output": 0}
+{"args": [25], "fixture_seed": 2026070302, "function_id": "sqlite::src_util.c::pwr2to10::0010::f25b8f10dea3", "project": "sqlite", "rank": 1, "source_agnostic": true, "source_output": 7}
+{"args": [31], "fixture_seed": 2026070302, "function_id": "sqlite::src_util.c::pwr2to10::0010::f25b8f10dea3", "project": "sqlite", "rank": 2, "source_agnostic": true, "source_output": 9}
+{"args": [2], "fixture_seed": 2026070302, "function_id": "sqlite::src_util.c::pwr2to10::0010::f25b8f10dea3", "project": "sqlite", "rank": 3, "source_agnostic": true, "source_output": 0}
+{"args": [11], "fixture_seed": 2026070302, "function_id": "sqlite::src_util.c::pwr2to10::0010::f25b8f10dea3", "project": "sqlite", "rank": 4, "source_agnostic": true, "source_output": 3}
+{"args": [11], "fixture_seed": 2026070302, "function_id": "TinyCC::arm64-gen.c::arm64_pe_param_off::0009::790dfaa50add", "project": "TinyCC", "rank": 1, "source_agnostic": true, "source_output": 200}
+{"args": [43], "fixture_seed": 2026070302, "function_id": "TinyCC::arm64-gen.c::arm64_pe_param_off::0009::790dfaa50add", "project": "TinyCC", "rank": 2, "source_agnostic": true, "source_output": 234}
+{"args": [32], "fixture_seed": 2026070302, "function_id": "TinyCC::arm64-gen.c::arm64_pe_param_off::0009::790dfaa50add", "project": "TinyCC", "rank": 3, "source_agnostic": true, "source_output": 224}
+{"args": [5], "fixture_seed": 2026070302, "function_id": "TinyCC::arm64-gen.c::arm64_pe_param_off::0009::790dfaa50add", "project": "TinyCC", "rank": 4, "source_agnostic": true, "source_output": 176}
+{"args": [23], "fixture_seed": 2026070302, "function_id": "sbase::libutil_crypt.c::hexdec::0001::4049dfdaa8fe", "project": "sbase", "rank": 1, "source_agnostic": true, "source_output": -1}
+{"args": [-26], "fixture_seed": 2026070302, "function_id": "sbase::libutil_crypt.c::hexdec::0001::4049dfdaa8fe", "project": "sbase", "rank": 2, "source_agnostic": true, "source_output": -1}
+{"args": [4], "fixture_seed": 2026070302, "function_id": "sbase::libutil_crypt.c::hexdec::0001::4049dfdaa8fe", "project": "sbase", "rank": 3, "source_agnostic": true, "source_output": -1}
+{"args": [16], "fixture_seed": 2026070302, "function_id": "sbase::libutil_crypt.c::hexdec::0001::4049dfdaa8fe", "project": "sbase", "rank": 4, "source_agnostic": true, "source_output": -1}
