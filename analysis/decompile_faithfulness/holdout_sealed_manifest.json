@@ -1,0 +1,518 @@
+{
+  "acquisition_errors": [],
+  "artifact_hashes": {
+    "docs/paper_agent/frozen_holdout_preregistration_v3.md": "d04403b7ba6962f61d091080a80a96e32d26f9f662f27d41e22bd0a1fdf8773a",
+    "docs/paper_agent/holdout_mutation_grammar.md": "a69996108391a179bfbca442e1a0cd961b96ff4a48b03d2c16d7cc5d13c657f8",
+    "paper/tables/holdout_acquisition.tex": "9c7dd00f53432d2431f78a7f97b4d98cdd9cb83656d377044e622c5dfd6e0e86",
+    "results/decompile_faithfulness/holdout_candidate_manifest.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/decompile_faithfulness/holdout_controlled_candidates.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/decompile_faithfulness/holdout_eligibility_census.csv": "4d6d7447c9a436a02da4b182e6d3efd386973f48dbb4dc0ea82d0061b075b9ea",
+    "results/decompile_faithfulness/holdout_exact_labels.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/decompile_faithfulness/holdout_exclusions.jsonl": "a46d758a891315cc0b315e0c6d132408091919ce3dc861ade48d495dde8fb820",
+    "results/decompile_faithfulness/holdout_execution_log.jsonl": "fc0ea54d0ae3b4a86ad3d3155191aa1d10bada352f015850064fbd5856ba952b",
+    "results/decompile_faithfulness/holdout_fixtures.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "results/decompile_faithfulness/holdout_label_summary.csv": "580c86a79d11b18f744291217b496ea23d1a51f2068f161e318f875b38c6ae87",
+    "results/decompile_faithfulness/holdout_project_manifest.json": "e99f82505c080e7a482e399dad80d1ca068d72f576eb306de6a7256eeac3f2ff",
+    "results/decompile_faithfulness/holdout_sampling_frame.csv": "390721708e126960367e0ce480beea1fbfb2f776c247ad6151afefcff4171039",
+    "results/decompile_faithfulness/holdout_selected_functions.csv": "4fd2f91f0660431460ddd7b0edcd5e191b5e1a92817220a2b355f386ac25914f"
+  },
+  "controlled_candidate_count": 0,
+  "created_at_utc": "2026-07-03T03:45:06.828586+00:00",
+  "current_acquisition_commit_context": "a784d1c8195ae88a8b3233f8eef5cfd2c27d7b14",
+  "eligibility_counts_by_project": [
+    {
+      "final_eligible_functions": 0,
+      "functions_parsed": 108,
+      "functions_passing_dependency_filters": 3,
+      "functions_passing_exhaustive_source_domain_sanitizer_validation": 0,
+      "functions_passing_signature_filters": 7,
+      "pinned_commit": "ae40a87a920099a7d9d00979570e0c8d917a1fd7",
+      "pool": "primary",
+      "project": "libtommath",
+      "source_files_scanned": 174
+    },
+    {
+      "final_eligible_functions": 0,
+      "functions_parsed": 28,
+      "functions_passing_dependency_filters": 0,
+      "functions_passing_exhaustive_source_domain_sanitizer_validation": 0,
+      "functions_passing_signature_filters": 0,
+      "pinned_commit": "fb16e5cf358798aabb049655975cde8427101056",
+      "pool": "primary",
+      "project": "cJSON",
+      "source_files_scanned": 6
+    },
+    {
+      "final_eligible_functions": 0,
+      "functions_parsed": 0,
+      "functions_passing_dependency_filters": 0,
+      "functions_passing_exhaustive_source_domain_sanitizer_validation": 0,
+      "functions_passing_signature_filters": 0,
+      "pinned_commit": "a49bed0b4abb7dff16c73906dcdc8a9718d582d2",
+      "pool": "primary",
+      "project": "uthash",
+      "source_files_scanned": 0
+    },
+    {
+      "final_eligible_functions": 18,
+      "functions_parsed": 1071,
+      "functions_passing_dependency_filters": 28,
+      "functions_passing_exhaustive_source_domain_sanitizer_validation": 18,
+      "functions_passing_signature_filters": 107,
+      "pinned_commit": "5122f9f3c99fee366167c5de98b31546312921ab",
+      "pool": "primary",
+      "project": "musl",
+      "source_files_scanned": 1608
+    },
+    {
+      "final_eligible_functions": 0,
+      "functions_parsed": 79,
+      "functions_passing_dependency_filters": 0,
+      "functions_passing_exhaustive_source_domain_sanitizer_validation": 0,
+      "functions_passing_signature_filters": 0,
+      "pinned_commit": "e3dc0a85b7032e98380dec011bc8f2c2ee0d8fca",
+      "pool": "primary",
+      "project": "zlib",
+      "source_files_scanned": 31
+    },
+    {
+      "final_eligible_functions": 2,
+      "functions_parsed": 595,
+      "functions_passing_dependency_filters": 3,
+      "functions_passing_exhaustive_source_domain_sanitizer_validation": 2,
+      "functions_passing_signature_filters": 4,
+      "pinned_commit": "47e9e610201b1b4f0d5297826d5c001f53b58764",
+      "pool": "primary",
+      "project": "mbedtls",
+      "source_files_scanned": 50
+    },
+    {
+      "final_eligible_functions": 40,
+      "functions_parsed": 3377,
+      "functions_passing_dependency_filters": 49,
+      "functions_passing_exhaustive_source_domain_sanitizer_validation": 40,
+      "functions_passing_signature_filters": 80,
+      "pinned_commit": "a20de6d683b8151b2034f9e15dbae3f147efa430",
+      "pool": "primary",
+      "project": "sqlite",
+      "source_files_scanned": 269
+    },
+    {
+      "final_eligible_functions": 2,
+      "functions_parsed": 2,
+      "functions_passing_dependency_filters": 2,
+      "functions_passing_exhaustive_source_domain_sanitizer_validation": 2,
+      "functions_passing_signature_filters": 2,
+      "pinned_commit": "d86057c7382913ffc4ce82a9e71cec639267d130",
+      "pool": "primary",
+      "project": "libb64",
+      "source_files_scanned": 2
+    },
+    {
+      "final_eligible_functions": 0,
+      "functions_parsed": 7,
+      "functions_passing_dependency_filters": 0,
+      "functions_passing_exhaustive_source_domain_sanitizer_validation": 0,
+      "functions_passing_signature_filters": 0,
+      "pinned_commit": "577ae2dee1f0d9c2d11c7f10375c1715f3d6940c",
+      "pool": "primary",
+      "project": "inih",
+      "source_files_scanned": 2
+    },
+    {
+      "final_eligible_functions": 0,
+      "functions_parsed": 8,
+      "functions_passing_dependency_filters": 0,
+      "functions_passing_exhaustive_source_domain_sanitizer_validation": 0,
+      "functions_passing_signature_filters": 0,
+      "pinned_commit": "23856752fbd139da0b8ca6e471a13d5bcc99a08d",
+      "pool": "primary",
+      "project": "tiny-AES-c",
+      "source_files_scanned": 2
+    },
+    {
+      "final_eligible_functions": 2,
+      "functions_parsed": 1280,
+      "functions_passing_dependency_filters": 2,
+      "functions_passing_exhaustive_source_domain_sanitizer_validation": 2,
+      "functions_passing_signature_filters": 21,
+      "pinned_commit": "a68fa19bc2b532f66a6f18ca457daec53054a312",
+      "pool": "fallback",
+      "project": "libtomcrypt",
+      "source_files_scanned": 566
+    },
+    {
+      "final_eligible_functions": 2,
+      "functions_parsed": 102,
+      "functions_passing_dependency_filters": 5,
+      "functions_passing_exhaustive_source_domain_sanitizer_validation": 2,
+      "functions_passing_signature_filters": 6,
+      "pinned_commit": "7bea48e5e850ab4cafbe68d3765cdaba13a86d6f",
+      "pool": "fallback",
+      "project": "BearSSL",
+      "source_files_scanned": 314
+    },
+    {
+      "final_eligible_functions": 0,
+      "functions_parsed": 55,
+      "functions_passing_dependency_filters": 0,
+      "functions_passing_exhaustive_source_domain_sanitizer_validation": 0,
+      "functions_passing_signature_filters": 0,
+      "pinned_commit": "b122c8be1d78b19f6d0a6efc5bb79bfcbb30dd51",
+      "pool": "fallback",
+      "project": "libdeflate",
+      "source_files_scanned": 25
+    },
+    {
+      "final_eligible_functions": 1,
+      "functions_parsed": 32,
+      "functions_passing_dependency_filters": 1,
+      "functions_passing_exhaustive_source_domain_sanitizer_validation": 1,
+      "functions_passing_signature_filters": 1,
+      "pinned_commit": "e573d4d2aaeaba0f3e5a0a9a54144a1f2b4b56e7",
+      "pool": "fallback",
+      "project": "xxHash",
+      "source_files_scanned": 8
+    },
+    {
+      "final_eligible_functions": 10,
+      "functions_parsed": 333,
+      "functions_passing_dependency_filters": 40,
+      "functions_passing_exhaustive_source_domain_sanitizer_validation": 10,
+      "functions_passing_signature_filters": 92,
+      "pinned_commit": "a338258d309c888bde96b2d1f206299231a54ddf",
+      "pool": "fallback",
+      "project": "TinyCC",
+      "source_files_scanned": 52
+    },
+    {
+      "final_eligible_functions": 1,
+      "functions_parsed": 44,
+      "functions_passing_dependency_filters": 2,
+      "functions_passing_exhaustive_source_domain_sanitizer_validation": 1,
+      "functions_passing_signature_filters": 3,
+      "pinned_commit": "90d1f7f199cc55b13c7fdb5839d1409806633fdb",
+      "pool": "fallback",
+      "project": "chibicc",
+      "source_files_scanned": 9
+    },
+    {
+      "final_eligible_functions": 8,
+      "functions_parsed": 336,
+      "functions_passing_dependency_filters": 13,
+      "functions_passing_exhaustive_source_domain_sanitizer_validation": 8,
+      "functions_passing_signature_filters": 20,
+      "pinned_commit": "c546c3a5724c81cee9a11d816a38ccdf17472129",
+      "pool": "fallback",
+      "project": "sbase",
+      "source_files_scanned": 160
+    }
+  ],
+  "exact_domain_definitions": {
+    "bool": "{0, 1}",
+    "char_signed_model": "[0, 127]",
+    "signed_short_int_long_like": "[-32, 31]",
+    "two_argument_rule": "complete Cartesian product",
+    "unsigned_char": "[0, 127]",
+    "unsigned_short_int_long_like": "[0, 63]"
+  },
+  "exclusion_count": 7371,
+  "execution_log_path": "/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_execution_log.jsonl",
+  "execution_log_sha256": "fc0ea54d0ae3b4a86ad3d3155191aa1d10bada352f015850064fbd5856ba952b",
+  "final_auditor_invoked": false,
+  "fixture_count": 0,
+  "fixture_seed": 2026070302,
+  "label_count": 0,
+  "method_freeze_commit": "06dda89912103b94fc065d6f073581a7811154b1",
+  "mutation_seed": 2026070303,
+  "natural_candidate_count": 0,
+  "phase1b_correction_commit": "a784d1c8195ae88a8b3233f8eef5cfd2c27d7b14",
+  "prohibited_final_method_functions_confirmed_absent_from_execution_log": {
+    "build_ordered_inputs": true,
+    "fixture_neighbor_inputs": true,
+    "interleave_inputs": true,
+    "run_phase18_source_literal_char_policy": true,
+    "source_literal_char_inputs": true
+  },
+  "project_repositories": [
+    {
+      "acquired": true,
+      "acquisition_date": "2026-07-03",
+      "canonical_repository": "https://github.com/libtom/libtommath.git",
+      "license_metadata": [
+        {
+          "path": "LICENSE",
+          "sha256": "2fa64b163659f41965c9815882a8296d3d03ff546b76153e11445f9bdecf955a"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/holdout_projects/libtommath",
+      "order": 1,
+      "pinned_commit": "ae40a87a920099a7d9d00979570e0c8d917a1fd7",
+      "pool": "primary",
+      "project": "libtommath"
+    },
+    {
+      "acquired": true,
+      "acquisition_date": "2026-07-03",
+      "canonical_repository": "https://github.com/DaveGamble/cJSON.git",
+      "license_metadata": [
+        {
+          "path": "LICENSE",
+          "sha256": "a36dda207c36db5818729c54e7ad4e8b0c6fba847491ba64f372c1a2037b6d5c"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/holdout_projects/cJSON",
+      "order": 2,
+      "pinned_commit": "fb16e5cf358798aabb049655975cde8427101056",
+      "pool": "primary",
+      "project": "cJSON"
+    },
+    {
+      "acquired": true,
+      "acquisition_date": "2026-07-03",
+      "canonical_repository": "https://github.com/troydhanson/uthash.git",
+      "license_metadata": [
+        {
+          "path": "LICENSE",
+          "sha256": "40f48f89e1d0095bf1c5fb4d00affd74959c3ff77463b672cf7fac547d1d6465"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/holdout_projects/uthash",
+      "order": 3,
+      "pinned_commit": "a49bed0b4abb7dff16c73906dcdc8a9718d582d2",
+      "pool": "primary",
+      "project": "uthash"
+    },
+    {
+      "acquired": true,
+      "acquisition_date": "2026-07-03",
+      "canonical_repository": "https://git.musl-libc.org/git/musl",
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/holdout_projects/musl",
+      "order": 4,
+      "pinned_commit": "5122f9f3c99fee366167c5de98b31546312921ab",
+      "pool": "primary",
+      "project": "musl"
+    },
+    {
+      "acquired": true,
+      "acquisition_date": "2026-07-03",
+      "canonical_repository": "https://github.com/madler/zlib.git",
+      "license_metadata": [
+        {
+          "path": "LICENSE",
+          "sha256": "e32ff4e00d9d94930537635291da39e7e612703334bf6fde8c7f1686fe8a45a2"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/holdout_projects/zlib",
+      "order": 5,
+      "pinned_commit": "e3dc0a85b7032e98380dec011bc8f2c2ee0d8fca",
+      "pool": "primary",
+      "project": "zlib"
+    },
+    {
+      "acquired": true,
+      "acquisition_date": "2026-07-03",
+      "canonical_repository": "https://github.com/Mbed-TLS/mbedtls.git",
+      "license_metadata": [
+        {
+          "path": "LICENSE",
+          "sha256": "9b405ef4c89342f5eae1dd828882f931747f71001cfba7d114801039b52ad09b"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/holdout_projects/mbedtls",
+      "order": 6,
+      "pinned_commit": "47e9e610201b1b4f0d5297826d5c001f53b58764",
+      "pool": "primary",
+      "project": "mbedtls"
+    },
+    {
+      "acquired": true,
+      "acquisition_date": "2026-07-03",
+      "canonical_repository": "https://github.com/sqlite/sqlite.git",
+      "license_metadata": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "ee6af51062b30d532991face5164136ae6f84e265ecf8abe89dc69dac45ca1e7"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/holdout_projects/sqlite",
+      "order": 7,
+      "pinned_commit": "a20de6d683b8151b2034f9e15dbae3f147efa430",
+      "pool": "primary",
+      "project": "sqlite"
+    },
+    {
+      "acquired": true,
+      "acquisition_date": "2026-07-03",
+      "canonical_repository": "https://github.com/libb64/libb64.git",
+      "license_metadata": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "f93dbf71dd10e33b67b51f1663d076fe3399c33b39d5a28018b6132fea2b1191"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/holdout_projects/libb64",
+      "order": 8,
+      "pinned_commit": "d86057c7382913ffc4ce82a9e71cec639267d130",
+      "pool": "primary",
+      "project": "libb64"
+    },
+    {
+      "acquired": true,
+      "acquisition_date": "2026-07-03",
+      "canonical_repository": "https://github.com/benhoyt/inih.git",
+      "license_metadata": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "9ae3b39e83e9158e44b67733baa3bb2d84e80efdcfb14a5820210a42c7abdf7f"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/holdout_projects/inih",
+      "order": 9,
+      "pinned_commit": "577ae2dee1f0d9c2d11c7f10375c1715f3d6940c",
+      "pool": "primary",
+      "project": "inih"
+    },
+    {
+      "acquired": true,
+      "acquisition_date": "2026-07-03",
+      "canonical_repository": "https://github.com/kokke/tiny-AES-c.git",
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/holdout_projects/tiny-AES-c",
+      "order": 10,
+      "pinned_commit": "23856752fbd139da0b8ca6e471a13d5bcc99a08d",
+      "pool": "primary",
+      "project": "tiny-AES-c"
+    },
+    {
+      "acquired": true,
+      "acquisition_date": "2026-07-03",
+      "canonical_repository": "https://github.com/libtom/libtomcrypt.git",
+      "license_metadata": [
+        {
+          "path": "LICENSE",
+          "sha256": "2fa64b163659f41965c9815882a8296d3d03ff546b76153e11445f9bdecf955a"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/holdout_projects/libtomcrypt",
+      "order": 11,
+      "pinned_commit": "a68fa19bc2b532f66a6f18ca457daec53054a312",
+      "pool": "fallback",
+      "project": "libtomcrypt"
+    },
+    {
+      "acquired": true,
+      "acquisition_date": "2026-07-03",
+      "canonical_repository": "https://www.bearssl.org/git/BearSSL",
+      "license_metadata": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "771bf18c8633ea69ec9b07d2e604c4b99b7bef41b0f5ce6385d24df4448f61ca"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/holdout_projects/BearSSL",
+      "order": 12,
+      "pinned_commit": "7bea48e5e850ab4cafbe68d3765cdaba13a86d6f",
+      "pool": "fallback",
+      "project": "BearSSL"
+    },
+    {
+      "acquired": true,
+      "acquisition_date": "2026-07-03",
+      "canonical_repository": "https://github.com/ebiggers/libdeflate.git",
+      "license_metadata": [
+        {
+          "path": "COPYING",
+          "sha256": "4ad69099cb4374836fd27583d9991e2838cd86b6e4666ab26b2d32582c91e73a"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/holdout_projects/libdeflate",
+      "order": 13,
+      "pinned_commit": "b122c8be1d78b19f6d0a6efc5bb79bfcbb30dd51",
+      "pool": "fallback",
+      "project": "libdeflate"
+    },
+    {
+      "acquired": true,
+      "acquisition_date": "2026-07-03",
+      "canonical_repository": "https://github.com/Cyan4973/xxHash.git",
+      "license_metadata": [
+        {
+          "path": "LICENSE",
+          "sha256": "6ffedbc0f7878612d2b23589f1ff2ab15633e1df7963a5d9fc750ec5500c7e7a"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/holdout_projects/xxHash",
+      "order": 14,
+      "pinned_commit": "e573d4d2aaeaba0f3e5a0a9a54144a1f2b4b56e7",
+      "pool": "fallback",
+      "project": "xxHash"
+    },
+    {
+      "acquired": true,
+      "acquisition_date": "2026-07-03",
+      "canonical_repository": "https://repo.or.cz/tinycc.git",
+      "license_metadata": [
+        {
+          "path": "COPYING",
+          "sha256": "512d2d21b6b3384ba64781abb0208a1b87740bc31e2df48e2b206ddb7e4d5779"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/holdout_projects/TinyCC",
+      "order": 15,
+      "pinned_commit": "a338258d309c888bde96b2d1f206299231a54ddf",
+      "pool": "fallback",
+      "project": "TinyCC"
+    },
+    {
+      "acquired": true,
+      "acquisition_date": "2026-07-03",
+      "canonical_repository": "https://github.com/rui314/chibicc.git",
+      "license_metadata": [
+        {
+          "path": "LICENSE",
+          "sha256": "65b0d1ecab8aad646a7ab9df3f459edaf1bc1214acd01d03258c5a3107505ad4"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/holdout_projects/chibicc",
+      "order": 16,
+      "pinned_commit": "90d1f7f199cc55b13c7fdb5839d1409806633fdb",
+      "pool": "fallback",
+      "project": "chibicc"
+    },
+    {
+      "acquired": true,
+      "acquisition_date": "2026-07-03",
+      "canonical_repository": "https://git.suckless.org/sbase",
+      "license_metadata": [
+        {
+          "path": "LICENSE",
+          "sha256": "eb0b719b3327af6c4b480cd21f7944e944a5ddf571c04572eb8d025f52e056c6"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/holdout_projects/sbase",
+      "order": 17,
+      "pinned_commit": "c546c3a5724c81cee9a11d816a38ccdf17472129",
+      "pool": "fallback",
+      "project": "sbase"
+    }
+  ],
+  "sampling_capacity_under_project_cap": 42,
+  "sampling_seed": 2026070301,
+  "schema_version": 1,
+  "selected_functions": [],
+  "status": "stopped_before_candidate_generation_insufficient_capped_sampling_capacity"
+}
