@@ -1,0 +1,198 @@
+{
+  "fixture_neighbor_only": {
+    "absolute_detection_at_8_difference": 0.21621621621621623,
+    "function_level_bootstrap_interval": {
+      "p2_5": 0.05192307692307691,
+      "p97_5": 0.36585365853658536
+    },
+    "loss_count": 0,
+    "project_level_sensitivity": [
+      {
+        "delta": 0.22857142857142854,
+        "left_out_project": "BearSSL",
+        "remaining_denominator": 35
+      },
+      {
+        "delta": 0.2666666666666667,
+        "left_out_project": "TinyCC",
+        "remaining_denominator": 30
+      },
+      {
+        "delta": 0.17142857142857137,
+        "left_out_project": "chibicc",
+        "remaining_denominator": 35
+      },
+      {
+        "delta": 0.22857142857142854,
+        "left_out_project": "libb64",
+        "remaining_denominator": 35
+      },
+      {
+        "delta": 0.19999999999999996,
+        "left_out_project": "libtomcrypt",
+        "remaining_denominator": 35
+      },
+      {
+        "delta": 0.17647058823529405,
+        "left_out_project": "mbedtls",
+        "remaining_denominator": 34
+      },
+      {
+        "delta": 0.25,
+        "left_out_project": "musl",
+        "remaining_denominator": 32
+      },
+      {
+        "delta": 0.25,
+        "left_out_project": "sbase",
+        "remaining_denominator": 32
+      },
+      {
+        "delta": 0.20000000000000007,
+        "left_out_project": "sqlite",
+        "remaining_denominator": 30
+      },
+      {
+        "delta": 0.19999999999999996,
+        "left_out_project": "xxHash",
+        "remaining_denominator": 35
+      }
+    ],
+    "tie_count": 29,
+    "win_count": 8
+  },
+  "generic_type_boundaries": {
+    "absolute_detection_at_8_difference": 0.027027027027026973,
+    "function_level_bootstrap_interval": {
+      "p2_5": -0.05714285714285716,
+      "p97_5": 0.11764705882352944
+    },
+    "loss_count": 1,
+    "project_level_sensitivity": [
+      {
+        "delta": 0.02857142857142858,
+        "left_out_project": "BearSSL",
+        "remaining_denominator": 35
+      },
+      {
+        "delta": 0.0,
+        "left_out_project": "TinyCC",
+        "remaining_denominator": 30
+      },
+      {
+        "delta": 0.02857142857142858,
+        "left_out_project": "chibicc",
+        "remaining_denominator": 35
+      },
+      {
+        "delta": 0.02857142857142858,
+        "left_out_project": "libb64",
+        "remaining_denominator": 35
+      },
+      {
+        "delta": 0.02857142857142858,
+        "left_out_project": "libtomcrypt",
+        "remaining_denominator": 35
+      },
+      {
+        "delta": 0.02941176470588236,
+        "left_out_project": "mbedtls",
+        "remaining_denominator": 34
+      },
+      {
+        "delta": 0.0,
+        "left_out_project": "musl",
+        "remaining_denominator": 32
+      },
+      {
+        "delta": 0.0625,
+        "left_out_project": "sbase",
+        "remaining_denominator": 32
+      },
+      {
+        "delta": 0.033333333333333326,
+        "left_out_project": "sqlite",
+        "remaining_denominator": 30
+      },
+      {
+        "delta": 0.02857142857142858,
+        "left_out_project": "xxHash",
+        "remaining_denominator": 35
+      }
+    ],
+    "tie_count": 34,
+    "win_count": 2
+  },
+  "randomized_union_order": {
+    "absolute_detection_at_8_difference": 0.1468468468468468,
+    "final_detection_at_8": 0.8918918918918919,
+    "other_detection_at_8_mean": 0.7450450450450451
+  },
+  "source_literal_only": {
+    "absolute_detection_at_8_difference": 0.5945945945945945,
+    "function_level_bootstrap_interval": {
+      "p2_5": 0.4429878048780488,
+      "p97_5": 0.7975641025641025
+    },
+    "loss_count": 0,
+    "project_level_sensitivity": [
+      {
+        "delta": 0.5714285714285714,
+        "left_out_project": "BearSSL",
+        "remaining_denominator": 35
+      },
+      {
+        "delta": 0.5,
+        "left_out_project": "TinyCC",
+        "remaining_denominator": 30
+      },
+      {
+        "delta": 0.6285714285714286,
+        "left_out_project": "chibicc",
+        "remaining_denominator": 35
+      },
+      {
+        "delta": 0.6,
+        "left_out_project": "libb64",
+        "remaining_denominator": 35
+      },
+      {
+        "delta": 0.6285714285714286,
+        "left_out_project": "libtomcrypt",
+        "remaining_denominator": 35
+      },
+      {
+        "delta": 0.6176470588235294,
+        "left_out_project": "mbedtls",
+        "remaining_denominator": 34
+      },
+      {
+        "delta": 0.59375,
+        "left_out_project": "musl",
+        "remaining_denominator": 32
+      },
+      {
+        "delta": 0.59375,
+        "left_out_project": "sbase",
+        "remaining_denominator": 32
+      },
+      {
+        "delta": 0.5666666666666667,
+        "left_out_project": "sqlite",
+        "remaining_denominator": 30
+      },
+      {
+        "delta": 0.6285714285714286,
+        "left_out_project": "xxHash",
+        "remaining_denominator": 35
+      }
+    ],
+    "tie_count": 15,
+    "win_count": 22
+  },
+  "uniform_random_domain": {
+    "absolute_detection_at_8_difference": 0.2585585585585586,
+    "final_detection_at_8": 0.8918918918918919,
+    "other_detection_at_8_mean": 0.6333333333333333
+  }
+}

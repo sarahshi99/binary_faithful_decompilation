@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{llllll}
+\toprule
+Family & Attempts & Compile-ready & Wrong & Fixture-pass wrong & Detection@8 \\
+\midrule
+argument\_substitution\_or\_swap & 1 & 1 & 1 & 0 & 0.000 \\
+branch\_condition\_negation & 2 & 2 & 2 & 0 & 0.000 \\
+comparison\_operator\_replacement & 15 & 15 & 11 & 5 & 0.800 \\
+fixture\_overfit\_construction & 26 & 26 & 22 & 22 & 0.909 \\
+integer\_or\_character\_constant\_plus\_1 & 8 & 8 & 3 & 3 & 1.000 \\
+return\_value\_perturbation & 26 & 26 & 21 & 7 & 0.857 \\
+\bottomrule
+\end{tabular}
+\caption{Realized Controlled-Mutation Families}
+\end{table}

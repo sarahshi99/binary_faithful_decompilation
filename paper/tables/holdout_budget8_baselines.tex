@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lllll}
+\toprule
+Policy & Class & Denom. & Detected & Detection \\
+\midrule
+source\_literal\_char\_interleave & deterministic & 37 & 33 & 0.892 \\
+fixture\_neighbor\_only & deterministic & 37 & 25 & 0.676 \\
+source\_literal\_only & deterministic & 37 & 11 & 0.297 \\
+neighbor\_first\_concatenation & deterministic & 37 & 25 & 0.676 \\
+literal\_first\_concatenation & deterministic & 37 & 33 & 0.892 \\
+operator\_char\_first & deterministic & 37 & 25 & 0.676 \\
+generic\_fallback\_only & deterministic & 37 & 22 & 0.595 \\
+generic\_type\_boundaries & deterministic & 37 & 32 & 0.865 \\
+uniform\_random\_domain & stochastic & 37 & 23.433333333333334 & 0.633 \\
+randomized\_union\_order & stochastic & 37 & 27.566666666666666 & 0.745 \\
+\bottomrule
+\end{tabular}
+\caption{Budget-8 Held-out Baselines}
+\end{table}

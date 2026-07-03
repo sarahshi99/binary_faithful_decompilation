@@ -1,0 +1,223 @@
+{
+  "created_at_utc": "2026-07-03T09:15:47.583970+00:00",
+  "current_result_producing_commit": "32e4a8651eefb9d6d2aca5f63effb802cbe1e1b5",
+  "environment": {
+    "cwd": "/home/shx/projects/binary_faithful_decompilation",
+    "gcc": "gcc (Ubuntu 11.4.0-2ubuntu1~20.04) 11.4.0",
+    "platform": "Linux-5.15.0-67-generic-x86_64-with-glibc2.31",
+    "python": "3.9.23"
+  },
+  "expected_holdout_seal": "cfd597adb878520214c48f62cd8c7755e9f352d690fa8545f09dd4f23e9fad42",
+  "holdout_manifest_sha256": "cfd597adb878520214c48f62cd8c7755e9f352d690fa8545f09dd4f23e9fad42",
+  "holdout_manifest_sha256_matches_expected": true,
+  "method_freeze_commit": "06dda89912103b94fc065d6f073581a7811154b1",
+  "method_hash_checks": {
+    "all_ok": true,
+    "checked_count": 9,
+    "sources": [
+      {
+        "current_sha256": "c3b678b134e914d24db947f2effc75ba23e4726253d451a530c7c60592690390",
+        "method_freeze_sha256": "c3b678b134e914d24db947f2effc75ba23e4726253d451a530c7c60592690390",
+        "ok": true,
+        "path": "analysis/decompile_faithfulness/run_phase18_source_literal_char_policy.py"
+      },
+      {
+        "current_sha256": "2d83747766b1850e7b1e3124edb824c56f660d2a635c1472cc9b4b4a95026851",
+        "method_freeze_sha256": "2d83747766b1850e7b1e3124edb824c56f660d2a635c1472cc9b4b4a95026851",
+        "ok": true,
+        "path": "analysis/decompile_faithfulness/run_phase12_unified_low_budget_eval.py"
+      },
+      {
+        "current_sha256": "c4a233b7efa52152f4fe1e621aefc5cfad31da13e6157df600487b45a660d37b",
+        "method_freeze_sha256": "c4a233b7efa52152f4fe1e621aefc5cfad31da13e6157df600487b45a660d37b",
+        "ok": true,
+        "path": "analysis/decompile_faithfulness/run_phase11_input_ordering.py"
+      },
+      {
+        "current_sha256": "caaaec7d86f20a36367cb88a41df48f0068a9c754475910e0f030332484eff9b",
+        "method_freeze_sha256": "caaaec7d86f20a36367cb88a41df48f0068a9c754475910e0f030332484eff9b",
+        "ok": true,
+        "path": "analysis/decompile_faithfulness/run_phase10_low_budget_rerun.py"
+      },
+      {
+        "current_sha256": "9bfe7f76312a5ce0041b645ac17482d7a97e2a6c239eb1273be2ebb634fb58af",
+        "method_freeze_sha256": "9bfe7f76312a5ce0041b645ac17482d7a97e2a6c239eb1273be2ebb634fb58af",
+        "ok": true,
+        "path": "analysis/decompile_faithfulness/run_phase5b_hard_candidates.py"
+      },
+      {
+        "current_sha256": "60eda5ecab15fb292ce74157644619708d4b23b0efed5d29ba76786b2d1f2f31",
+        "method_freeze_sha256": "60eda5ecab15fb292ce74157644619708d4b23b0efed5d29ba76786b2d1f2f31",
+        "ok": true,
+        "path": "analysis/decompile_faithfulness/run_phase5_gpu_generated_full.py"
+      },
+      {
+        "current_sha256": "7d5d834b0bba8f65e1ca4d8de4723bce69321788841f307446ccb8613927f658",
+        "method_freeze_sha256": "7d5d834b0bba8f65e1ca4d8de4723bce69321788841f307446ccb8613927f658",
+        "ok": true,
+        "path": "analysis/decompile_faithfulness/dynamic_trace.py"
+      },
+      {
+        "current_sha256": "c6be936670eb73da32ad01eea1096c6802e3ef40bbca4059cfccf4390fdc68f3",
+        "method_freeze_sha256": "c6be936670eb73da32ad01eea1096c6802e3ef40bbca4059cfccf4390fdc68f3",
+        "ok": true,
+        "path": "analysis/decompile_faithfulness/compile.py"
+      },
+      {
+        "current_sha256": "d4fd90eb9b1688681406a0bb7aa6f068244764308e5a89231f9bfa107574eefb",
+        "method_freeze_sha256": "d4fd90eb9b1688681406a0bb7aa6f068244764308e5a89231f9bfa107574eefb",
+        "ok": true,
+        "path": "analysis/decompile_faithfulness/run_phase3_combinatorial_cpu_audit.py"
+      }
+    ]
+  },
+  "ok": true,
+  "sealed_artifact_checks": {
+    "all_ok": true,
+    "checked_count": 20,
+    "checks": [
+      {
+        "current_sha256": "1b5263aa5296baff727a9ca14c1a614c8a113c5c998fd13be0cf5bea5f15db5d",
+        "expected_sha256": "1b5263aa5296baff727a9ca14c1a614c8a113c5c998fd13be0cf5bea5f15db5d",
+        "ok": true,
+        "path": "docs/paper_agent/frozen_holdout_preregistration_v4.md",
+        "type": "file"
+      },
+      {
+        "current_sha256": "95d9549421788932a107342f116180fd646850a8745a0209aa0e05c0380d96b3",
+        "expected_sha256": "95d9549421788932a107342f116180fd646850a8745a0209aa0e05c0380d96b3",
+        "ok": true,
+        "path": "docs/paper_agent/holdout_feasibility_amendment.md",
+        "type": "file"
+      },
+      {
+        "current_sha256": "a69996108391a179bfbca442e1a0cd961b96ff4a48b03d2c16d7cc5d13c657f8",
+        "expected_sha256": "a69996108391a179bfbca442e1a0cd961b96ff4a48b03d2c16d7cc5d13c657f8",
+        "ok": true,
+        "path": "docs/paper_agent/holdout_mutation_grammar.md",
+        "type": "file"
+      },
+      {
+        "current_sha256": "3925756b0d85d22383cc13e811c7590f107b21546378b80cd1677798af4099fd",
+        "expected_sha256": "3925756b0d85d22383cc13e811c7590f107b21546378b80cd1677798af4099fd",
+        "ok": true,
+        "path": "figures/data/holdout_dataset_flow.json",
+        "type": "file"
+      },
+      {
+        "current_sha256": "3e7410956f9951eb247127c67dbea6203b6140eb0c08842ccb106b3f05823f80",
+        "expected_sha256": "3e7410956f9951eb247127c67dbea6203b6140eb0c08842ccb106b3f05823f80",
+        "ok": true,
+        "path": "paper/tables/holdout_acquisition.tex",
+        "type": "file"
+      },
+      {
+        "current_file_count": 924,
+        "current_tree_sha256": "2f654188feab3f7092a52b38056e9aabea915a1edc7a47a9cad2070bad93a661",
+        "expected_file_count": 924,
+        "expected_tree_sha256": "2f654188feab3f7092a52b38056e9aabea915a1edc7a47a9cad2070bad93a661",
+        "ok": true,
+        "path": "results/decompile_faithfulness/holdout_candidate_artifacts",
+        "type": "directory"
+      },
+      {
+        "current_sha256": "cb157a44e176483ed5022f56f6b6a7d207aef8d4cb9cb6a7a93a1b8f42da9449",
+        "expected_sha256": "cb157a44e176483ed5022f56f6b6a7d207aef8d4cb9cb6a7a93a1b8f42da9449",
+        "ok": true,
+        "path": "results/decompile_faithfulness/holdout_candidate_manifest.jsonl",
+        "type": "file"
+      },
+      {
+        "current_sha256": "e1d9f8f60555398c185f49bbb3d01a98b74b79b6f9590930627fa44dc98e42b2",
+        "expected_sha256": "e1d9f8f60555398c185f49bbb3d01a98b74b79b6f9590930627fa44dc98e42b2",
+        "ok": true,
+        "path": "results/decompile_faithfulness/holdout_controlled_candidates.jsonl",
+        "type": "file"
+      },
+      {
+        "current_sha256": "4d6d7447c9a436a02da4b182e6d3efd386973f48dbb4dc0ea82d0061b075b9ea",
+        "expected_sha256": "4d6d7447c9a436a02da4b182e6d3efd386973f48dbb4dc0ea82d0061b075b9ea",
+        "ok": true,
+        "path": "results/decompile_faithfulness/holdout_eligibility_census.csv",
+        "type": "file"
+      },
+      {
+        "current_sha256": "086bca428dba7f2fdbdee901486ce136291ffd5b9d37b27dc4c8ff4f28bcb698",
+        "expected_sha256": "086bca428dba7f2fdbdee901486ce136291ffd5b9d37b27dc4c8ff4f28bcb698",
+        "ok": true,
+        "path": "results/decompile_faithfulness/holdout_exact_labels.jsonl",
+        "type": "file"
+      },
+      {
+        "current_sha256": "a46d758a891315cc0b315e0c6d132408091919ce3dc861ade48d495dde8fb820",
+        "expected_sha256": "a46d758a891315cc0b315e0c6d132408091919ce3dc861ade48d495dde8fb820",
+        "ok": true,
+        "path": "results/decompile_faithfulness/holdout_exclusions.jsonl",
+        "type": "file"
+      },
+      {
+        "current_sha256": "452488223d9ef5b729bd011586f9b4fa2b6beb89c4128d36c94d19b35a5c8438",
+        "expected_sha256": "452488223d9ef5b729bd011586f9b4fa2b6beb89c4128d36c94d19b35a5c8438",
+        "ok": true,
+        "path": "results/decompile_faithfulness/holdout_execution_log.jsonl",
+        "type": "file"
+      },
+      {
+        "current_sha256": "042e271f626e58362abb813644ad88aae7b6d7dc2ff236d419b9026c6373cc3e",
+        "expected_sha256": "042e271f626e58362abb813644ad88aae7b6d7dc2ff236d419b9026c6373cc3e",
+        "ok": true,
+        "path": "results/decompile_faithfulness/holdout_fixtures.jsonl",
+        "type": "file"
+      },
+      {
+        "current_sha256": "2243a5a71e2dd86099cd38d5f0404588c0700c46cb3498554f1367e063936438",
+        "expected_sha256": "2243a5a71e2dd86099cd38d5f0404588c0700c46cb3498554f1367e063936438",
+        "ok": true,
+        "path": "results/decompile_faithfulness/holdout_label_summary.csv",
+        "type": "file"
+      },
+      {
+        "current_sha256": "6eaac07ce69e16aba77354c7bafaafca8bd2e7a8a8c485b91321d60815252c00",
+        "expected_sha256": "6eaac07ce69e16aba77354c7bafaafca8bd2e7a8a8c485b91321d60815252c00",
+        "ok": true,
+        "path": "results/decompile_faithfulness/holdout_pre_auditor_descriptive_analysis.json",
+        "type": "file"
+      },
+      {
+        "current_sha256": "0b40d94bcd80a887b1e4d1285ed578dd78729ae18a344a514f5d22a678d282a0",
+        "expected_sha256": "0b40d94bcd80a887b1e4d1285ed578dd78729ae18a344a514f5d22a678d282a0",
+        "ok": true,
+        "path": "results/decompile_faithfulness/holdout_project_manifest.json",
+        "type": "file"
+      },
+      {
+        "current_sha256": "6b5541b9aad89aca6fbdc2bfef2e8c39e196ba57b0cc71b26b44b1f6a2f33b85",
+        "expected_sha256": "6b5541b9aad89aca6fbdc2bfef2e8c39e196ba57b0cc71b26b44b1f6a2f33b85",
+        "ok": true,
+        "path": "results/decompile_faithfulness/holdout_project_manifest_v2.json",
+        "type": "file"
+      },
+      {
+        "current_sha256": "926d592373b5e39c7300e650e6f07176c609b07cfa34f42de3e07029f9bb5787",
+        "expected_sha256": "926d592373b5e39c7300e650e6f07176c609b07cfa34f42de3e07029f9bb5787",
+        "ok": true,
+        "path": "results/decompile_faithfulness/holdout_sampling_frame.csv",
+        "type": "file"
+      },
+      {
+        "current_sha256": "407730a723675d816374d23a46f7c2e5d00b43d0c39e3d383725274aa293bf97",
+        "expected_sha256": "407730a723675d816374d23a46f7c2e5d00b43d0c39e3d383725274aa293bf97",
+        "ok": true,
+        "path": "results/decompile_faithfulness/holdout_sampling_frame_v2.csv",
+        "type": "file"
+      },
+      {
+        "current_sha256": "44dd4cb5eb48e789ad5f2115a78a93882e0d430a9b846815f52e831a63a57600",
+        "expected_sha256": "44dd4cb5eb48e789ad5f2115a78a93882e0d430a9b846815f52e831a63a57600",
+        "ok": true,
+        "path": "results/decompile_faithfulness/holdout_selected_functions.csv",
+        "type": "file"
+      }
+    ]
+  }
+}
