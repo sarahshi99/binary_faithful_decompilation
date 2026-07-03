@@ -311,7 +311,7 @@ def load_functions(repo_root: Path) -> dict[str, HoldoutFunction]:
         if path_text and row.get("function_id") not in source_by_function:
             source_by_function[str(row["function_id"])] = Path(path_text).read_text(encoding="utf-8")
     descriptive = json.loads((repo_root / "results/decompile_faithfulness/holdout_pre_auditor_descriptive_analysis.json").read_text(encoding="utf-8"))
-    literal_counts = descriptive.get("source_literal_prevalence", {}).get("per_function", {})
+    literal_counts = descriptive.get("source_character_literal_prevalence", {}).get("per_function", {})
     functions: dict[str, HoldoutFunction] = {}
     for row in selected:
         domain_specs = tuple(json.loads(row["declared_exact_domain"]))
