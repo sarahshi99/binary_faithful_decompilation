@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import ast
 import json
+import random
 import tempfile
 import unittest
 from pathlib import Path
@@ -61,20 +62,73 @@ class HoldoutAcquisitionTest(unittest.TestCase):
     def test_deterministic_function_sampling_and_project_cap(self) -> None:
         candidates = [
             _function(project=f"p{project}", function_id=f"p{project}::f{index:02d}")
-            for project in range(8)
-            for index in range(10)
+            for project, count in enumerate([18, 2, 40, 2, 2, 2, 1, 10, 1, 8])
+            for index in range(count)
         ]
         old_pool = holdout.PROJECT_POOL
         try:
-            holdout.PROJECT_POOL = [(f"p{project}", "", "primary") for project in range(8)]
+            holdout.PROJECT_POOL = [(f"p{project}", "", "primary") for project in range(10)]
             first = holdout.deterministic_sample(candidates)
             second = holdout.deterministic_sample(candidates)
         finally:
             holdout.PROJECT_POOL = old_pool
         self.assertEqual([item.function_id for item in first], [item.function_id for item in second])
         counts = holdout.count_by(item.project for item in first)
-        self.assertEqual(len(first), 48)
+        self.assertEqual(len(first), 42)
+        self.assertEqual(set(counts), {f"p{project}" for project in range(10)})
         self.assertTrue(all(count <= holdout.PROJECT_CAP for count in counts.values()))
+        self.assertEqual(
+            counts,
+            {
+                "p0": 8,
+                "p1": 2,
+                "p2": 8,
+                "p3": 2,
+                "p4": 2,
+                "p5": 2,
+                "p6": 1,
+                "p7": 8,
+                "p8": 1,
+                "p9": 8,
+            },
+        )
+
+    def test_v4_sampling_is_input_order_independent(self) -> None:
+        candidates = [
+            _function(project=f"p{project}", function_id=f"p{project}::f{index:02d}")
+            for project, count in enumerate([18, 2, 40, 2, 2, 2, 1, 10, 1, 8])
+            for index in range(count)
+        ]
+        shuffled = list(candidates)
+        random.Random(1234).shuffle(shuffled)
+        old_pool = holdout.PROJECT_POOL
+        try:
+            holdout.PROJECT_POOL = [(f"p{project}", "", "primary") for project in range(10)]
+            first = holdout.deterministic_sample(candidates)
+            second = holdout.deterministic_sample(shuffled)
+        finally:
+            holdout.PROJECT_POOL = old_pool
+        self.assertEqual([item.function_id for item in first], [item.function_id for item in second])
+
+    def test_sampler_does_not_depend_on_source_or_labels(self) -> None:
+        left = [_function(project="p0", function_id=f"p0::f{index:02d}", source=f"int f(int x) {{ return x + {index}; }}") for index in range(10)]
+        right = [
+            _function(
+                project="p0",
+                function_id=f"p0::f{index:02d}",
+                source=f"int f(int x) {{ if (x == 'A') return {index}; return x; }}",
+            )
+            for index in range(10)
+        ]
+        old_pool = holdout.PROJECT_POOL
+        try:
+            holdout.PROJECT_POOL = [("p0", "", "primary")]
+            self.assertEqual(
+                [item.function_id for item in holdout.deterministic_sample(left)],
+                [item.function_id for item in holdout.deterministic_sample(right)],
+            )
+        finally:
+            holdout.PROJECT_POOL = old_pool
 
     def test_candidate_stratum_separation(self) -> None:
         fn = _function()
@@ -102,6 +156,7 @@ class HoldoutAcquisitionTest(unittest.TestCase):
         )
         self.assertEqual(row["label"], "non_evaluable")
         self.assertEqual(row["total_mismatching_input_count"], 0)
+        self.assertEqual(row["complete_mismatch_set_sha256"], holdout.sha256_text("[]"))
 
     def test_exact_label_reproducibility(self) -> None:
         fn = _function(source="int f(int x) { return x; }", domain=((0,), (1,), (2,)))
@@ -130,6 +185,11 @@ class HoldoutAcquisitionTest(unittest.TestCase):
             holdout.write_json(path, {"b": 2, "a": 1})
             second = holdout.sha256_path(path)
         self.assertEqual(first, second)
+
+    def test_method_freeze_hash_integrity_available(self) -> None:
+        status = holdout.method_freeze_hash_status(Path.cwd())
+        self.assertTrue(status["available"])
+        self.assertTrue(status["all_method_files_current_match_freeze"])
 
     def test_guard_against_final_method_probe_imports_or_calls(self) -> None:
         tree = ast.parse(Path(holdout.__file__).read_text(encoding="utf-8"))
@@ -172,6 +232,7 @@ def _function(
         params=(holdout.Param("int", "x"),),
         source=source,
         source_sha256=holdout.sha256_text(source),
+        source_file_sha256=holdout.sha256_text(source),
         domain=domain,
         domain_size=len(domain),
         function_id=function_id,
