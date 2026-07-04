@@ -1942,6 +1942,7 @@ def write_handoff(
         f"- libFuzzer evaluation-count Detection@8 mean: `{fmt_rate(lib_b8['mean_detection']) if lib_b8 else 'missing'}`.",
         f"- libFuzzer no-mismatch false-alarm rows at B=8: `{lib_b8['no_mismatch_false_alarms'] if lib_b8 else 'missing'}`.",
         f"- libFuzzer wall-clock matrix: `{next((row['baseline_status'] for row in libfuzzer_summary_rows if row['mode'] == 'wall_clock'), 'missing')}` due to CPU-budget gate.",
+        "- GPU usage: none; no GPU experiments were started.",
         "",
         "## Exhaustive Reference",
         "",
