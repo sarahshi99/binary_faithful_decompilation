@@ -45,6 +45,7 @@
 - libFuzzer evaluation-count Detection@8 mean: `0.411`.
 - libFuzzer no-mismatch false-alarm rows at B=8: `0`.
 - libFuzzer wall-clock matrix: `not_run_blocked` due to CPU-budget gate.
+- GPU usage: none; no GPU experiments were started.
 
 ## Exhaustive Reference
 
