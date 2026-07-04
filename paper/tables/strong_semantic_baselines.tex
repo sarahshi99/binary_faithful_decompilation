@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{llllll}
+\toprule
+Baseline & Budget/time & Supported & Detection & False alarms & Status \\
+\midrule
+libFuzzer & 8 & 37 & 0.411 & 0 & completed \\
+libFuzzer & 128 & 37 & 0.816 & 0 & completed \\
+libFuzzer & 1024 & 37 & 0.973 & 0 & completed \\
+KLEE & 0.1 & 0 & 0.000 & 0 & not\_run\_blocked \\
+KLEE & 1.0 & 0 & 0.000 & 0 & not\_run\_blocked \\
+KLEE & 5.0 & 0 & 0.000 & 0 & not\_run\_blocked \\
+\bottomrule
+\end{tabular}
+\caption{External Semantic Baselines}
+\end{table}

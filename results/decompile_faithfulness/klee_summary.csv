@@ -1,0 +1,13 @@
+wall_clock_limit_s,population,all_candidate_denominator,supported_candidates,setup_success,setup_failure,solver_runtime_timeout,witness_found,confirmed_valid_witness,detection_on_all_candidate_denominator,detection_on_supported_denominator,no_mismatch_false_alarm,baseline_status,blocker,klee_version,clang_version
+0.1,primary_fixture_passing_wrong,37,0,0,37,0,0,0,0.0,,0,not_run_blocked,klee_not_found_in_path,unavailable,Ubuntu clang version 11.0.0-2~ubuntu20.04.1
+0.1,low_density_fixture_passing_wrong,16,0,0,16,0,0,0,0.0,,0,not_run_blocked,klee_not_found_in_path,unavailable,Ubuntu clang version 11.0.0-2~ubuntu20.04.1
+0.1,non_fixture_overfit_fixture_passing_wrong,15,0,0,15,0,0,0,0.0,,0,not_run_blocked,klee_not_found_in_path,unavailable,Ubuntu clang version 11.0.0-2~ubuntu20.04.1
+0.1,no_mismatch_comparison,34,0,0,34,0,0,0,0.0,,0,not_run_blocked,klee_not_found_in_path,unavailable,Ubuntu clang version 11.0.0-2~ubuntu20.04.1
+1.0,primary_fixture_passing_wrong,37,0,0,37,0,0,0,0.0,,0,not_run_blocked,klee_not_found_in_path,unavailable,Ubuntu clang version 11.0.0-2~ubuntu20.04.1
+1.0,low_density_fixture_passing_wrong,16,0,0,16,0,0,0,0.0,,0,not_run_blocked,klee_not_found_in_path,unavailable,Ubuntu clang version 11.0.0-2~ubuntu20.04.1
+1.0,non_fixture_overfit_fixture_passing_wrong,15,0,0,15,0,0,0,0.0,,0,not_run_blocked,klee_not_found_in_path,unavailable,Ubuntu clang version 11.0.0-2~ubuntu20.04.1
+1.0,no_mismatch_comparison,34,0,0,34,0,0,0,0.0,,0,not_run_blocked,klee_not_found_in_path,unavailable,Ubuntu clang version 11.0.0-2~ubuntu20.04.1
+5.0,primary_fixture_passing_wrong,37,0,0,37,0,0,0,0.0,,0,not_run_blocked,klee_not_found_in_path,unavailable,Ubuntu clang version 11.0.0-2~ubuntu20.04.1
+5.0,low_density_fixture_passing_wrong,16,0,0,16,0,0,0,0.0,,0,not_run_blocked,klee_not_found_in_path,unavailable,Ubuntu clang version 11.0.0-2~ubuntu20.04.1
+5.0,non_fixture_overfit_fixture_passing_wrong,15,0,0,15,0,0,0,0.0,,0,not_run_blocked,klee_not_found_in_path,unavailable,Ubuntu clang version 11.0.0-2~ubuntu20.04.1
+5.0,no_mismatch_comparison,34,0,0,34,0,0,0,0.0,,0,not_run_blocked,klee_not_found_in_path,unavailable,Ubuntu clang version 11.0.0-2~ubuntu20.04.1
