@@ -4,7 +4,7 @@
 
 - Branch: `phase1f-strong-baselines-and-mechanism`
 - Preregistration commit: `b905690dcd1ce27a4015eae64f9c15be4bb641a1`
-- Result commit: `b905690dcd1ce27a4015eae64f9c15be4bb641a1` (pre-commit working tree context at generation)
+- Result commit: `66b60c7a1ec0981c1ff5b307e0ee85efcf7d9589`
 - Verified holdout seal: `cfd597adb878520214c48f62cd8c7755e9f352d690fa8545f09dd4f23e9fad42`
 - Method freeze commit: `06dda89912103b94fc065d6f073581a7811154b1`
 
