@@ -167,7 +167,7 @@ def generate_candidates(repo_root: Path) -> dict[str, Any]:
         "parse_ready": sum(1 for row in manifest_rows if row["parse_status"] == "parsed_function"),
         "compile_ready": sum(1 for row in manifest_rows if row["compile_status"] == "compile_ready"),
         "candidate_seal_sha256": seal_hash,
-        "api_call_count": sum(int(row.get("api_call_performed", 0)) for row in manifest_rows),
+        "api_call_count": sum(int(row.get("api_response_obtained", 0)) for row in manifest_rows),
     }
 
 
@@ -192,13 +192,13 @@ def process_request(
     response_text_path = response_dir / "response_text.c"
     request_metadata_path = response_dir / "request_metadata.json"
 
-    api_call_performed = False
+    api_call_performed_this_run = False
     if raw_response_path.exists():
         raw_payload = json.loads(raw_response_path.read_text(encoding="utf-8"))
         response_text = extract_response_text(raw_payload)
         request_metadata = json.loads(request_metadata_path.read_text(encoding="utf-8")) if request_metadata_path.exists() else {}
     else:
-        api_call_performed = True
+        api_call_performed_this_run = True
         raw_payload, request_metadata = call_model_api(request.payload, api_key)
         returned_model = str(raw_payload.get("model", ""))
         if returned_model and returned_model != REQUESTED_MODEL:
@@ -256,7 +256,8 @@ def process_request(
         "api_request_id": str(raw_payload.get("id", "")),
         "api_finish_reason": response_finish_reason(raw_payload),
         "api_usage": raw_payload.get("usage", {}),
-        "api_call_performed": api_call_performed,
+        "api_response_obtained": True,
+        "api_call_performed_this_run": api_call_performed_this_run,
         "target_architecture": request.architecture,
         "object_path": str(request.object_path),
         "object_sha256": sha256_path(request.object_path),
@@ -1589,7 +1590,7 @@ def build_candidate_seal(repo_root: Path, manifest_rows: list[dict[str, Any]], p
         "attempts": len(manifest_rows),
         "parse_ready": sum(1 for row in manifest_rows if row["parse_status"] == "parsed_function"),
         "compile_ready": sum(1 for row in manifest_rows if row["compile_status"] == "compile_ready"),
-        "api_call_count": sum(int(row.get("api_call_performed", 0)) for row in manifest_rows),
+        "api_call_count": sum(int(row.get("api_response_obtained", 0)) for row in manifest_rows),
         "final_auditor_invoked": False,
         "execution_feedback_repair_used": False,
         "prompt_forbidden_inputs_absent": all(prompt_leak_guard(json.loads(Path(row["prompt_payload_path"]).read_text(encoding="utf-8")))["ok"] for row in manifest_rows),
@@ -2091,7 +2092,7 @@ def write_handoff(
         "## Provider",
         "",
         f"- Provider/model: `{PROVIDER_NAME}` / `{REQUESTED_MODEL}`",
-        f"- API call count: `{sum(int(row.get('api_call_performed', 0)) for row in manifest_rows)}`",
+        f"- API call count: `{sum(int(row.get('api_response_obtained', 0)) for row in manifest_rows)}`",
         "- API cost: `unknown unless provider usage metadata includes billing`",
         "- Local GPU usage: `none`",
         "",
