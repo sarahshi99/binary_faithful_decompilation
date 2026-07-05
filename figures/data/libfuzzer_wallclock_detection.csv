@@ -1,0 +1,10 @@
+baseline,timing_view,wall_clock_budget_s,population,mean_detection,median_detection,p2_5_detection,p97_5_detection,frozen_final_detection_at_b8
+libFuzzer,end_to_end,0.1,primary_fixture_passing_wrong,1.0,1.0,1.0,1.0,0.8918918918918919
+libFuzzer,end_to_end,0.1,low_density_fixture_passing_wrong,1.0,1.0,1.0,1.0,0.8918918918918919
+libFuzzer,end_to_end,0.1,non_fixture_overfit_fixture_passing_wrong,1.0,1.0,1.0,1.0,0.8918918918918919
+libFuzzer,end_to_end,1.0,primary_fixture_passing_wrong,1.0,1.0,1.0,1.0,0.8918918918918919
+libFuzzer,end_to_end,1.0,low_density_fixture_passing_wrong,1.0,1.0,1.0,1.0,0.8918918918918919
+libFuzzer,end_to_end,1.0,non_fixture_overfit_fixture_passing_wrong,1.0,1.0,1.0,1.0,0.8918918918918919
+libFuzzer,end_to_end,5.0,primary_fixture_passing_wrong,1.0,1.0,1.0,1.0,0.8918918918918919
+libFuzzer,end_to_end,5.0,low_density_fixture_passing_wrong,1.0,1.0,1.0,1.0,0.8918918918918919
+libFuzzer,end_to_end,5.0,non_fixture_overfit_fixture_passing_wrong,1.0,1.0,1.0,1.0,0.8918918918918919

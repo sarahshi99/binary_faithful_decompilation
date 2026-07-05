@@ -1,0 +1,10 @@
+baseline,wall_clock_budget_s,population,median_end_to_end_time_to_witness_s,median_in_process_time_to_witness_s,median_completed_evaluations,median_unique_domain_coverage
+libFuzzer,0.1,primary_fixture_passing_wrong,0.10742383648175746,0.00047900000000000004,10.0,7.0
+libFuzzer,0.1,low_density_fixture_passing_wrong,0.10780781897483394,0.001425,75.5,23.0
+libFuzzer,0.1,non_fixture_overfit_fixture_passing_wrong,0.10778004996245727,0.0014045,74.0,22.0
+libFuzzer,1.0,primary_fixture_passing_wrong,0.19216276746010408,0.00048249999999999996,10.0,7.0
+libFuzzer,1.0,low_density_fixture_passing_wrong,0.19267301401123405,0.0014545,75.5,23.0
+libFuzzer,1.0,non_fixture_overfit_fixture_passing_wrong,0.19335500051965937,0.0014315,74.0,22.0
+libFuzzer,5.0,primary_fixture_passing_wrong,0.254513775522355,0.00048,10.0,7.0
+libFuzzer,5.0,low_density_fixture_passing_wrong,0.26116798201110214,0.0014724999999999999,75.5,23.0
+libFuzzer,5.0,non_fixture_overfit_fixture_passing_wrong,0.260636689432431,0.0014125000000000001,74.0,22.0

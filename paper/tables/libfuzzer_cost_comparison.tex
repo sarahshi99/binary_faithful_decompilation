@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{lllllll}
+\toprule
+Method & Resource & Detected & Detection & Complete/e2e time & Early/in-process time & Notes \\
+\midrule
+Frozen final B=8 & 8 concrete evaluations & 33/37 & 0.892 & 0.18743639159947634 & 0.022025296930223703 & deterministic concrete probes \\
+libFuzzer & 0.1 s end-to-end &  & 1.000 & 0.10742383648175746 & 0.00047900000000000004 & median evals 10.0 \\
+libFuzzer & 1.0 s end-to-end &  & 1.000 & 0.19216276746010408 & 0.00048249999999999996 & median evals 10.0 \\
+libFuzzer & 5.0 s end-to-end &  & 1.000 & 0.254513775522355 & 0.00048 & median evals 10.0 \\
+Natural Ghidra no-mismatch & 5 s &  &  &  &  & false alarms 0 \\
+\bottomrule
+\end{tabular}
+\caption{Frozen policy and libFuzzer cost views}
+\end{table}

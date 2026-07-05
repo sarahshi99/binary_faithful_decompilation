@@ -1,0 +1,128 @@
+{
+  "branch": "phase1g-libfuzzer-wallclock",
+  "clang_path": "/usr/lib/llvm-11/bin/clang",
+  "clang_version": "Ubuntu clang version 11.0.0-2~ubuntu20.04.1",
+  "command": "/home/shx/projects/binary_faithful_decompilation/analysis/decompile_faithfulness/libfuzzer_wallclock.py --repo-root . --max-workers 4",
+  "compiler_flags": "-std=c11 -O1 -g -fsanitize=fuzzer,address,undefined -fno-sanitize-recover=all",
+  "completed_supported_runs": 6120,
+  "cpu_affinity_policy": "none_explicit",
+  "cpu_model": "AMD EPYC 9334 32-Core Processor",
+  "created_at_utc": "2026-07-05T05:11:44.000870+00:00",
+  "declared_candidate_count": 71,
+  "exact_mismatch_witnesses_provided": false,
+  "fixed_random_seeds": [
+    101,
+    202,
+    303,
+    404,
+    505,
+    606,
+    707,
+    808,
+    909,
+    1001,
+    1102,
+    1203,
+    1304,
+    1405,
+    1506,
+    1607,
+    1708,
+    1809,
+    1910,
+    2011,
+    2112,
+    2213,
+    2314,
+    2415,
+    2516,
+    2617,
+    2718,
+    2819,
+    2920,
+    3021
+  ],
+  "gpu_usage": "none; CUDA_VISIBLE_DEVICES cleared for libFuzzer subprocesses",
+  "head": "4c433ba7d953deeeb67c5b822a4b30d1db3c4ed7",
+  "logical_cpu_count": 64,
+  "machine": "x86_64",
+  "max_workers": 4,
+  "method_freeze_commit": "06dda89912103b94fc065d6f073581a7811154b1",
+  "phase1e_result": "f302bb51eb9371c0dad51bce92be53f58fc1a341",
+  "phase1f_harness_reuse": {
+    "functions": [
+      "build_libfuzzer_harness",
+      "validate_libfuzzer_harness_semantics",
+      "parse_fuzzer_log",
+      "bytes_to_domain_tuple",
+      "encode_domain_tuple"
+    ],
+    "module": "analysis.decompile_faithfulness.strong_baselines_and_mechanism",
+    "module_sha256": "f03a043a1604a8a5237865c982d9cafbd0412c68e5eff0fb2b1ea6c3e03feff8"
+  },
+  "phase1f_result_artifact_commit": "66b60c7a1ec0981c1ff5b307e0ee85efcf7d9589",
+  "platform": "Linux-5.15.0-67-generic-x86_64-with-glibc2.31",
+  "population_counts": {
+    "low_density_fixture_passing_wrong": 16,
+    "natural_ghidra_no_mismatch": 16,
+    "no_mismatch_comparison": 34,
+    "non_fixture_overfit_fixture_passing_wrong": 15,
+    "primary_fixture_passing_wrong": 37
+  },
+  "seed_corpus": "four_sealed_fixtures_only",
+  "source_literal_dictionary_used": false,
+  "supported_candidate_count": 68,
+  "termination_tolerance_s": 0.75,
+  "unsupported_candidates": [
+    {
+      "candidate_id": "musl::src_stdlib_abs.c::abs::0001::7d806d7b2171::controlled::return_value_perturbation_01",
+      "reason": "validation_harness_semantics_mismatch",
+      "validation": {
+        "expected_first_mismatch_args": null,
+        "expected_mismatch_count": 0,
+        "observed_first_mismatch_args": [
+          -32
+        ],
+        "observed_mismatch_count": 64,
+        "ok": false,
+        "reason": "validation_harness_semantics_mismatch"
+      }
+    },
+    {
+      "candidate_id": "musl::src_stdlib_llabs.c::llabs::0001::b58997ecb0f1::controlled::integer_or_character_constant_plus_1_00",
+      "reason": "validation_harness_semantics_mismatch",
+      "validation": {
+        "expected_first_mismatch_args": null,
+        "expected_mismatch_count": 0,
+        "observed_first_mismatch_args": [
+          1
+        ],
+        "observed_mismatch_count": 1,
+        "ok": false,
+        "reason": "validation_harness_semantics_mismatch"
+      }
+    },
+    {
+      "candidate_id": "musl::src_stdlib_llabs.c::llabs::0001::b58997ecb0f1::controlled::return_value_perturbation_01",
+      "reason": "validation_harness_semantics_mismatch",
+      "validation": {
+        "expected_first_mismatch_args": null,
+        "expected_mismatch_count": 0,
+        "observed_first_mismatch_args": [
+          -32
+        ],
+        "observed_mismatch_count": 64,
+        "ok": false,
+        "reason": "validation_harness_semantics_mismatch"
+      }
+    }
+  ],
+  "unsupported_rows": 270,
+  "verified_holdout_seal": "cfd597adb878520214c48f62cd8c7755e9f352d690fa8545f09dd4f23e9fad42",
+  "wall_clock_budgets_s": [
+    0.1,
+    1.0,
+    5.0
+  ],
+  "work_dir": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase1g_wallclock/run_4c433ba_20260705T040516Z"
+}
