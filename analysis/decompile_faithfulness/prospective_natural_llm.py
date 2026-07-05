@@ -51,6 +51,7 @@ FUZZER_WALLCLOCK_BUDGETS = [0.1]
 GENERATION_PARAMETERS = {
     "temperature": 0,
     "top_p": 1,
+    "top_p_payload_status": "omitted_after_provider_rejected_explicit_default_before_any_candidate_response",
     "max_output_tokens": 2048,
     "stream": False,
 }
@@ -402,7 +403,6 @@ def response_api_payload(prompt_text: str) -> dict[str, Any]:
     # deterministic sampling controls; if it rejects them, the run stops rather
     # than silently changing generation parameters.
     payload["temperature"] = GENERATION_PARAMETERS["temperature"]
-    payload["top_p"] = GENERATION_PARAMETERS["top_p"]
     return payload
 
 
@@ -1550,6 +1550,7 @@ def build_candidate_seal(repo_root: Path, manifest_rows: list[dict[str, Any]], p
     paths: dict[str, dict[str, Any]] = {}
     for rel in [
         PREREG_PATH,
+        Path("docs/paper_agent/prospective_natural_llm_api_compatibility_note.md"),
         Path("results/decompile_faithfulness/natural_llm_candidate_manifest.jsonl"),
     ]:
         path = repo_root / rel
