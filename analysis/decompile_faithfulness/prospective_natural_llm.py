@@ -909,7 +909,7 @@ def evaluate_natural_population(repo_root: Path, *, max_workers: int = 4) -> dic
     write_jsonl(out_dir / "natural_llm_libfuzzer_runs.jsonl", lib_run_rows)
     write_csv(out_dir / "natural_llm_libfuzzer_summary.csv", lib_summary)
     write_csv(fig_data_dir / "natural_llm_fuzzer_comparison.csv", lib_summary)
-    density_rows = natural_density_results(policy_summary, labels, natural_population)
+    density_rows = natural_density_results(first_rows, labels, natural_population)
     write_csv(fig_data_dir / "natural_llm_density_results.csv", density_rows)
     mechanisms = natural_candidate_mechanisms(first_rows, traces, lib_run_rows, manifest_rows, labels, replay, functions, natural_population)
     write_jsonl(out_dir / "natural_llm_candidate_mechanisms.jsonl", mechanisms)
@@ -1415,7 +1415,7 @@ def function_macro_detection(rows: list[dict[str, Any]], ids: list[str], populat
 
 
 def natural_density_results(
-    policy_summary: list[dict[str, Any]],
+    first_rows: list[dict[str, Any]],
     labels: dict[str, dict[str, Any]],
     population: dict[str, Any],
 ) -> list[dict[str, Any]]:
@@ -1424,20 +1424,16 @@ def natural_density_results(
     for cid in primary:
         buckets[density_bucket(labels[cid])].append(cid)
     rows = []
-    final_rows = [row for row in policy_summary if row["policy"] == he.FINAL_POLICY and int(row["budget"]) == 8 and row["scope"] == "primary_fixture_passing_wrong"]
     for bucket, ids in sorted(buckets.items()):
-        final_detected = set()
-        if final_rows:
-            # Recompute directly from first-witness rows if available in the next
-            # plotting phase; this table keeps the bucket denominator stable.
-            final_detected = set()
+        final_detected = detected_ids(first_rows, he.FINAL_POLICY, 8, None, ids)
         rows.append({
             "density_bucket": bucket,
             "candidate_count": len(ids),
             "policy": he.FINAL_POLICY,
             "budget": 8,
-            "detection_rate": "",
-            "note": "bucket denominators for natural LLM primary population",
+            "detected": len(final_detected),
+            "detection_rate": safe_div(len(final_detected), len(ids)),
+            "note": "bucket-specific final Detection@8 for natural LLM primary population",
         })
     return rows
 
@@ -2083,9 +2079,12 @@ def write_handoff(
         "",
         f"- Branch: `{git_output(repo_root, ['branch', '--show-current'])}`",
         f"- Preregistration commit: `{git_output(repo_root, ['rev-parse', 'c9e6659'])}`",
+        "- Candidate-seal commit: `a97ab31731573d60f938fd44281cac12fb820bf1`",
         f"- Candidate-seal hash: `{candidate_seal_hash}`",
+        "- Evaluation-population seal commit: `bf20104cd01245f82a30b986c688542d0b0c87df`",
         f"- Evaluation-population seal hash: `{population_hash}`",
-        f"- Final result commit/HEAD at handoff generation: `{git_output(repo_root, ['rev-parse', 'HEAD'])}`",
+        "- Result artifact commit: recorded in the final handoff after artifact commit creation.",
+        f"- Handoff generation HEAD context: `{git_output(repo_root, ['rev-parse', 'HEAD'])}`",
         f"- Sealed holdout hash: `{SEALED_HOLDOUT_HASH}`",
         f"- Frozen method commit: `{METHOD_FREEZE_COMMIT}`",
         "",
@@ -2137,7 +2136,10 @@ def write_handoff(
         "",
         "## Tests",
         "",
-        "- Recorded by final commit after Phase 1h tests run.",
+        "- `CUDA_VISIBLE_DEVICES= python -m py_compile analysis/decompile_faithfulness/prospective_natural_llm.py`",
+        "- `CUDA_VISIBLE_DEVICES= python -m unittest analysis.decompile_faithfulness.tests.test_prospective_natural_llm`",
+        "- `CUDA_VISIBLE_DEVICES= python -m unittest discover analysis/decompile_faithfulness/tests`",
+        "- `CUDA_VISIBLE_DEVICES= python - <<'PY' ... prospective_natural_llm.preflight_checks(...) ... PY`",
     ])
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
     return path

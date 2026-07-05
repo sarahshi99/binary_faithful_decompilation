@@ -1,0 +1,13 @@
+mode,budget_or_time_limit,population,candidate_denominator,supported_candidates,total_runs,mean_detection,median_detection,stddev_detection,p2_5_detection,p97_5_detection,best_seed_detection,worst_seed_detection,median_completed_evaluations,median_time_to_first_witness_s,no_mismatch_false_alarms,crashes,timeouts,infrastructure_failures,source_literal_dictionary_used,exact_mismatch_witnesses_provided,baseline_status
+evaluation_count,8,primary_fixture_passing_wrong,2,2,60,0.0,0.0,0.0,0.0,0.0,0.0,0.0,8.0,,0,0,0,0,False,False,completed
+evaluation_count,8,low_density_fixture_passing_wrong,2,2,60,0.0,0.0,0.0,0.0,0.0,0.0,0.0,8.0,,0,0,0,0,False,False,completed
+evaluation_count,8,no_mismatch_comparison,166,166,4980,0.0,0.0,0.0,0.0,0.0,0.0,0.0,8.0,,0,0,0,0,False,False,completed
+evaluation_count,32,primary_fixture_passing_wrong,2,2,60,0.03333333333333333,0.0,0.17950549357115014,0.0,0.2749999999999986,1.0,0.0,32.0,0.000513,0,0,0,0,False,False,completed
+evaluation_count,32,low_density_fixture_passing_wrong,2,2,60,0.03333333333333333,0.0,0.17950549357115014,0.0,0.2749999999999986,1.0,0.0,32.0,0.000513,0,0,0,0,False,False,completed
+evaluation_count,32,no_mismatch_comparison,166,166,4980,0.0,0.0,0.0,0.0,0.0,0.0,0.0,32.0,,0,0,0,0,False,False,completed
+evaluation_count,128,primary_fixture_passing_wrong,2,2,60,0.36666666666666664,0.0,0.4818944098266986,0.0,1.0,1.0,0.0,128.0,0.000935,0,0,0,0,False,False,completed
+evaluation_count,128,low_density_fixture_passing_wrong,2,2,60,0.36666666666666664,0.0,0.4818944098266986,0.0,1.0,1.0,0.0,128.0,0.000935,0,0,0,0,False,False,completed
+evaluation_count,128,no_mismatch_comparison,166,166,4980,0.0,0.0,0.0,0.0,0.0,0.0,0.0,128.0,,0,0,0,0,False,False,completed
+wall_clock,0.1,primary_fixture_passing_wrong,2,2,60,0.7166666666666667,0.75,0.3077697552103231,0.0,1.0,1.0,0.0,116.0,0.001971,0,0,17,0,False,False,completed
+wall_clock,0.1,low_density_fixture_passing_wrong,2,2,60,0.7166666666666667,0.75,0.3077697552103231,0.0,1.0,1.0,0.0,116.0,0.001971,0,0,17,0,False,False,completed
+wall_clock,0.1,no_mismatch_comparison,166,166,4980,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1226.0,,0,0,4980,0,False,False,completed

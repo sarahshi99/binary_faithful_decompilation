@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Natural LLM libFuzzer baselines}
+\begin{tabular}{lllll}
+\toprule
+Mode & Budget & Population & Mean det. & False alarms \\
+\midrule
+evaluation\_count & 8 & primary\_fixture\_passing\_wrong & 0.000 & 0 \\
+evaluation\_count & 8 & low\_density\_fixture\_passing\_wrong & 0.000 & 0 \\
+evaluation\_count & 8 & no\_mismatch\_comparison & 0.000 & 0 \\
+evaluation\_count & 32 & primary\_fixture\_passing\_wrong & 0.033 & 0 \\
+evaluation\_count & 32 & low\_density\_fixture\_passing\_wrong & 0.033 & 0 \\
+evaluation\_count & 32 & no\_mismatch\_comparison & 0.000 & 0 \\
+evaluation\_count & 128 & primary\_fixture\_passing\_wrong & 0.367 & 0 \\
+evaluation\_count & 128 & low\_density\_fixture\_passing\_wrong & 0.367 & 0 \\
+evaluation\_count & 128 & no\_mismatch\_comparison & 0.000 & 0 \\
+wall\_clock & 0.1 & primary\_fixture\_passing\_wrong & 0.717 & 0 \\
+wall\_clock & 0.1 & low\_density\_fixture\_passing\_wrong & 0.717 & 0 \\
+wall\_clock & 0.1 & no\_mismatch\_comparison & 0.000 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}

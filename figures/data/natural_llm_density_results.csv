@@ -1,0 +1,2 @@
+density_bucket,candidate_count,policy,budget,detected,detection_rate,note
+rho<=0.01,2,source_literal_char_interleave,8,0,0.0,bucket-specific final Detection@8 for natural LLM primary population
