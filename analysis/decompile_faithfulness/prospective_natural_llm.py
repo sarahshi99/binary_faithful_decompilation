@@ -34,6 +34,7 @@ SEALED_HOLDOUT_HASH = "cfd597adb878520214c48f62cd8c7755e9f352d690fa8545f09dd4f23
 PHASE1E_RESULT = "f302bb51eb9371c0dad51bce92be53f58fc1a341"
 PHASE1F_RESULT = "b626b38dd9f1398945a7c604b3213f589b936b8a"
 PHASE1G_RESULT = "f9fdca2a001a9c07d2fecd507692a2d383105b91"
+PHASE1H_PREREGISTRATION_COMMIT = "c9e66590b6fda02158ffc4c1da8ca4df342e30e2"
 REQUESTED_MODEL = "gpt-5.5"
 PROVIDER_NAME = "mycodex"
 API_BASE_URL = "https://wokeme.dpdns.org/v1"
@@ -1574,7 +1575,7 @@ def build_candidate_seal(repo_root: Path, manifest_rows: list[dict[str, Any]], p
         "created_at_utc": now_utc(),
         "branch": git_output(repo_root, ["branch", "--show-current"]),
         "head": git_output(repo_root, ["rev-parse", "HEAD"]),
-        "preregistration_commit": git_output(repo_root, ["rev-parse", "HEAD"]),
+        "preregistration_commit": PHASE1H_PREREGISTRATION_COMMIT,
         "method_freeze_commit": METHOD_FREEZE_COMMIT,
         "sealed_holdout_hash": SEALED_HOLDOUT_HASH,
         "provider": {
