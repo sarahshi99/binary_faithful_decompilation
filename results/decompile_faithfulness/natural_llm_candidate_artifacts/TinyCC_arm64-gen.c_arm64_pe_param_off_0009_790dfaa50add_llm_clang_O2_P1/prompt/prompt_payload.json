@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: TinyCC::arm64-gen.c::arm64_pe_param_off::0009::790dfaa50add\nProject: TinyCC\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: unsigned long arm64_pe_param_off(unsigned long a)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/TinyCC_arm64-gen.c_arm64_pe_param_off_0009_790dfaa50add_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <arm64_pe_param_off>:\n   0:\t48 89 f8             \tmov    %rdi,%rax\n   3:\t48 83 ff 0f          \tcmp    $0xf,%rdi\n   7:\t77 0d                \tja     16 <arm64_pe_param_off+0x16>\n   9:\t48 83 e0 fe          \tand    $0xfffffffffffffffe,%rax\n   d:\t48 8d 04 85 a0 00 00 \tlea    0xa0(,%rax,4),%rax\n  14:\t00 \n  15:\tc3                   \tretq   \n  16:\t48 83 f8 1f          \tcmp    $0x1f,%rax\n  1a:\t77 11                \tja     2d <arm64_pe_param_off+0x2d>\n  1c:\t48 8d 04 c5 80 ff ff \tlea    -0x80(,%rax,8),%rax\n  23:\tff \n  24:\t48 83 e0 f0          \tand    $0xfffffffffffffff0,%rax\n  28:\t48 83 c0 10          \tadd    $0x10,%rax\n  2c:\tc3                   \tretq   \n  2d:\t48 05 c0 00 00 00    \tadd    $0xc0,%rax\n  33:\t48 83 e0 fe          \tand    $0xfffffffffffffffe,%rax\n  37:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nulong arm64_pe_param_off(ulong a)\n\n{\n  if (a < 0x10) {\n    return (a & 0xfffffffffffffffe) * 4 + 0xa0;\n  }\n  if (a < 0x20) {\n    return (a * 8 - 0x80 & 0xfffffffffffffff0) + 0x10;\n  }\n  return a + 0xc0 & 0xfffffffffffffffe;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "TinyCC::arm64-gen.c::arm64_pe_param_off::0009::790dfaa50add::llm::clang_O2::P1",
+    "function_id": "TinyCC::arm64-gen.c::arm64_pe_param_off::0009::790dfaa50add",
+    "function_name": "arm64_pe_param_off",
+    "project": "TinyCC",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

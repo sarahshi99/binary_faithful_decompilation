@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: sbase::make_main.c::hasargs::0002::caccdf48eb91\nProject: sbase\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: int hasargs(int c)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sbase_make_main.c_hasargs_0002_caccdf48eb91_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <hasargs>:\n   0:\t83 c7 9a             \tadd    $0xffffff9a,%edi\n   3:\t31 c0                \txor    %eax,%eax\n   5:\tf7 c7 fb ff ff ff    \ttest   $0xfffffffb,%edi\n   b:\t0f 94 c0             \tsete   %al\n   e:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint hasargs(int c)\n\n{\n  return (int)((c - 0x66U & 0xfffffffb) == 0);\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "sbase::make_main.c::hasargs::0002::caccdf48eb91::llm::clang_O2::P1",
+    "function_id": "sbase::make_main.c::hasargs::0002::caccdf48eb91",
+    "function_name": "hasargs",
+    "project": "sbase",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

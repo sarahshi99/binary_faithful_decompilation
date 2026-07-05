@@ -1,0 +1,8 @@
+{
+  "compile_probe_uses_fixtures_or_labels": false,
+  "compile_probe_uses_trusted_source": false,
+  "harness_source_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase1h_natural_llm/generation/compile_probe/musl_src_stdlib_llabs.c_llabs_0001_b58997ecb0f1_musl_src_stdlib_llabs.c_llabs_0001_b58997ecb0f1_llm_gcc_O0_P1_3398b658975a.c",
+  "ok": true,
+  "reason": "ok",
+  "stderr_tail": ""
+}

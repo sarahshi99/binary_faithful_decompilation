@@ -1,0 +1,40 @@
+{
+  "created_at": 1783259031,
+  "id": "resp_05d4f34a1e424064016a4a5f976edc8191a36aee2c2561de9b",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSl-hEAj2TRthPPZXD6YybxpulpRWqvXhpRSXnFSjZC0OJFwtauINBknPSXpangdRn7miqhaFmcVIQsr3x0RQUakTjzEN37B0hj4BpokShMGAK3cV72iScL5RXp4EOAtURnrRuSGBq38yyopy-U_oCRkFPfg1Do4IJnN4F_0wMjHQ0q3p6b5McnhreIuWDtdw98uqzLglqY2ByTNkM_NhJGYXUL0_PUgPQjezLWR5CUo1pQsOA-9aWaXxOdjZLtC1Jddlei5CHqITPEjZpmvUFsbhXw407n-JxQELYbDBVYap1tLpiRDaacaa5OPnT6-jhMLtRZ5RRk_w94a88lO0RrLAJKFFQVzF3sa_01j8eSvv0K8u4oSOhlJiR_hKX6EEFCCaDvnx8kOG75vBZ1x0LGoQjUGeAsLqfWgdKp8ZWxa7iU5HBDoT3vifPa9q9KFSMRVF7lCCWCVwPl4img6FVplwl_HpiKULNNvtNMvwM1wdrF2zCnzWpuBhQflTyFLhV6bEIsTrTFjSohQEOI96EPrgmIoZcdaAJ3RY7iUZN22V1N4jPRvR_XrbbzM58qu3WS4AsJd4SJWG9zB1AAwi9UfQeyktIBBWRuPIh1YbyAxvH0yVVliIRKLF4Ffrodi7YBJ5iDIe_k5MDJCn4I7qXGgjg20kjY7wVlKhbKVnEfi378YzDS89oEcs1vQc32DwjzcMS-QWRFJBWjgvK-TpMdKTKgfHMduO83zjYNNqzYsixo-BCK7RydiavvspHh_1nQZdCkkbU03maUIDtR6KkZpE-VF0JT8s2zvbNfgN-8r64PVA0TazJaxa9xKp__Tuu2T2sCylAjh5RvI-pOr0tQrfLxvxFeayCjbilK6bJTq8W24uhAMCOHFWm5h0ELvvnt0_uI5PsvGXc-fLqt228QCyNvfZ7XWmMK8tjrG645ADf4JihFS6CzFLA3_6043UcShMXmlU76Etr4At1qVE80FRm9VOzjpSIJSRsT531iDxbNlquqE9YJXKzwJ_zTqq0y5fbegt0O3fY8GpKs66pVM65vWbpY4ZyPOQXhSDiKRUi6qADL5GVh_y3vYTcplI8OxdFQ4PInl4kxbcWx9v3leMmuXzUQM5xmX77W7PFkdjY7a1NE4LCydfVW1FhBSTGKNgBgAhND4_pSkjr6JGSm_OHiHN238fzRLO1Y8FpUAt6prk17Hw-C8sXIFxuwdZ2SjvmCRRZM1c5WaLyVVC1CnQ6jzNxcsSg4pAkafVNRZJyJaKvaZejjQXwlK4VQoKkra0iJ7bLVQoiVEk9IhyNZz8sxw2r9X9ygm9m1BmKnWvkPDT2A_RbhdPD7WHL6kViN5OwI6ItEabIiHaf9DF9Lc4xyiGm_zBmJlyv4PyUz0JznCBTPhj54YWCrwbhbJR_1CXAJeyAZVE3tp4Gln5pBFpocF9r1Me_ln0Q-nPYNV7bFnCYCtBV4yiHP5q6-EmitgFT5wTo13MlF8Wexz_sifJWSFw0wh89O3wQTVQUhjwS6fxXxn9Ni5ff2YJDils3tKRQXgylIqmzvdLAJWGpaRLnrzFIdnGLJGWC5aSdqMfxY5tBv7JqyTTbzBnIO6i7mRfJUFu1rV0YZk_I527yM6ilUazWfiL8YV_vttOenWDUJijGlks0e9JV8hwj5lwgfiN-U-KiKi09ixcIxBLHIbnJgzrr7FNDbG798nAbaXv8sv76nKrIw2PxjPrt_ZP9Hm-Rnwp2qmdCXFh0OmupUnYfoC6GRG9SpJpTKcki8jTN20prS_quElT0xflVMpJPuYM_CCVKE-vZbjF0r8qR7HNzScKNAPi1cdiHTIiKl_GgAtSa9eeAZQ8cjqgzEbdLgNP",
+      "id": "item_s0qadCmHcRVN4XKx",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int isspace(int c)\n{\n    return ((unsigned)c - 9U < 5U) || c == 32;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_05d4f34a1e424064016a4a5fa1152c8191b6958756c819d836",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 436,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 256,
+    "output_tokens_details": {
+      "reasoning_tokens": 222
+    },
+    "total_tokens": 692
+  }
+}

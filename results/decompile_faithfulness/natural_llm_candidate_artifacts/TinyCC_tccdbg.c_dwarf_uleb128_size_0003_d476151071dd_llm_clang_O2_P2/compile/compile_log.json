@@ -1,0 +1,8 @@
+{
+  "compile_probe_uses_fixtures_or_labels": false,
+  "compile_probe_uses_trusted_source": false,
+  "harness_source_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase1h_natural_llm/generation/compile_probe/TinyCC_tccdbg.c_dwarf_uleb128_size_0003_d476151071dd_TinyCC_tccdbg.c_dwarf_uleb128_size_0003_d476151071dd_llm_clang_O2_P2_db407f11d7ed.c",
+  "ok": true,
+  "reason": "ok",
+  "stderr_tail": ""
+}

@@ -1,0 +1,8 @@
+{
+  "compile_probe_uses_fixtures_or_labels": false,
+  "compile_probe_uses_trusted_source": false,
+  "harness_source_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase1h_natural_llm/generation/compile_probe/sqlite_ext_fts3_fts3_tokenizer1.c_fts3_isalnum_0002_9b0f8eebf62b_sqlite_ext_fts3_fts3_tokenizer1.c_fts3_isalnum_0002_9b0f8eebf62b_llm_gcc_O0_P2_3398b658975a.c",
+  "ok": true,
+  "reason": "ok",
+  "stderr_tail": ""
+}

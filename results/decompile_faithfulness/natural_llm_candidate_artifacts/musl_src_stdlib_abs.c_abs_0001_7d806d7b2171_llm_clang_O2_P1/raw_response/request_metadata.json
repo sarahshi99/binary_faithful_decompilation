@@ -1,0 +1,27 @@
+{
+  "api_key_env": "OPENAI_API_KEY",
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 8.542519649956375,
+      "status": 200
+    }
+  ],
+  "endpoint": "https://wokeme.dpdns.org/v1/responses",
+  "generation_parameters": {
+    "max_output_tokens": 2048,
+    "stream": false,
+    "temperature": 0,
+    "top_p": 1,
+    "top_p_payload_status": "omitted_after_provider_rejected_explicit_default_before_any_candidate_response"
+  },
+  "request_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "musl::src_stdlib_abs.c::abs::0001::7d806d7b2171::llm::clang_O2::P1",
+    "function_id": "musl::src_stdlib_abs.c::abs::0001::7d806d7b2171",
+    "function_name": "abs",
+    "project": "musl",
+    "prompt_family": "P1"
+  }
+}

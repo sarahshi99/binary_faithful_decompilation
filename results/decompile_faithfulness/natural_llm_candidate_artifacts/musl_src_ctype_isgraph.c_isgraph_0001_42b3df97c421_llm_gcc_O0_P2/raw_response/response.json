@@ -1,0 +1,40 @@
+{
+  "created_at": 1783259016,
+  "id": "resp_026bcdf1232bd077016a4a5f8876e0819186ccb5ad1f690803",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSl-OxU4yfeocvx5_uoYuz-vp0J3AtdLnGVikD8N6JKnGwELLQX2wlEXjxkVnFN16KqgIXqgE6QhNJHlPl6gIdeiTKXLRgWS-KSPpgzjYyxpl4tE2Be5eL7KLU_yhiFvEoQFMQN9qPgKYfSvj06vEGLg0abbdX1C-1rnyM6dutTpAXEYrPvsemu13IJxKapZj93Fd1sNl4wYiNnV8kx81Z4CPH1mGZ7nyL276DEdbb75l1RTNs84z7qQ7amMdZKGa8LiQGEVtu8cYNKYpnRLIVbjQW5ok3GluZ8xO1jbEyplV272sjiRlE-rpUN4CK3qzANIfbyGNzkr5vMZGlHCfITTMqEE4ouf8gnEikP2GXAvWa_Y-TT_iXpFEGzhRZ2MKlP6Ps4Y791X0mWxML8dsOqevdxowJAd4aBFpCZ03gosUcJKjSiP9RLW3lkrfU_brPcXD0KgWUEW8g11YkZnbC3jYCMMNV-DroLnrcdPjLiRwAWL7NVk8NFDNcxiy8hbY0ITWz3ICGvmFBvAxANhWEjKM_qaMuHbnGQG2X3FF3WN1qC7kjdwrvcR7FDZCB4dHaUbYvmBOXpX6TosZ8JggcT0x0zCo6kdh43_qCdzM39dViTw_7zaYVUz4Kii7DBWifDrLvbE-uUlPSjRpupphnjIx5lDm3H8FspBZcU-cdN-PCPg_RuWrT5ch9I_IYoXVfPVXUdwgFTDFFDVvxgWmvUc5MrZ8KHjnMinGOJMGaKmav-FzzaopZcRvAv2QWNc_AbpGBAMXhV6brjJCDRa2BPdrLo1R8G9-EKnhqTHyhq4myH9VT4nq7BxculgmZIdDuB2s-9VcjLp-9uTqNsPSMPB5CMF1yeDk3Bcqwp0N3kTrCSGLkHQdiCu-CcTGlHn4B-SpP86CfVpI6jI5NaViUGzHxWR7gVIs-7mIEV89XauWsY6pfVNxaKpFqO0u9xXEEt85d0K5_6FWf3yPbyFi8Lpvvh_Uai3Z5ewXo08PrBv29neTVACqKe_TSUYcfxq_ImrqOX3F4oBrT5EAHzi3I2qZ2mPH-9ClgKvOgFpM6jqAfKOpDegiNAQqq9LNYxeCT73bRjy_RK613vB-r3rZPJukFBxgEZUT_ZXLyMfcPEWAcrSKcjyzrI8ra-DuaBSJke8mgUw-OkLg871kcRbXeLC42Wo3aaWsLbqeWHwbXW-83UVeNmfVM8wEd-1LxZV3gpLd_eHANgEW5wReZB50YspgnEtyp4zf1pgdadAS5MeOrHXFMmWp5rWs70byX1TopSHbN6I4MotbhN1EQhtR7pgX7tRUo_o-SCycXiSXY63QkAzjxyiM-v1gTMFfDCXGlXK1yAuXinV3A2tB6Wl4CHU5Sbn1Hpd_CdLOD3FPGEW5XR0=",
+      "id": "item_i6kx8V4C4jX4C2Yb",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int isgraph(int c)\n{\n    return (unsigned)c - 0x21U < 0x5eU;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_026bcdf1232bd077016a4a5f8e614c81919c23ecd6df983ff1",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 478,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 147,
+    "output_tokens_details": {
+      "reasoning_tokens": 114
+    },
+    "total_tokens": 625
+  }
+}

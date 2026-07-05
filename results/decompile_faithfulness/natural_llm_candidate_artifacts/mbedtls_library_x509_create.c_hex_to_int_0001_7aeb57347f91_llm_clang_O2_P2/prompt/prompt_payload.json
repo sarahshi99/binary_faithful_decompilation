@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: mbedtls::library_x509_create.c::hex_to_int::0001::7aeb57347f91\nProject: mbedtls\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: int hex_to_int(char c)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/mbedtls_library_x509_create.c_hex_to_int_0001_7aeb57347f91_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <hex_to_int>:\n   0:\t8d 4f d0             \tlea    -0x30(%rdi),%ecx\n   3:\tb8 d0 ff ff ff       \tmov    $0xffffffd0,%eax\n   8:\t80 f9 0a             \tcmp    $0xa,%cl\n   b:\t72 0d                \tjb     1a <hex_to_int+0x1a>\n   d:\t8d 4f 9f             \tlea    -0x61(%rdi),%ecx\n  10:\tb8 a9 ff ff ff       \tmov    $0xffffffa9,%eax\n  15:\t80 f9 06             \tcmp    $0x6,%cl\n  18:\t73 03                \tjae    1d <hex_to_int+0x1d>\n  1a:\t01 f8                \tadd    %edi,%eax\n  1c:\tc3                   \tretq   \n  1d:\t8d 47 bf             \tlea    -0x41(%rdi),%eax\n  20:\t83 c7 c9             \tadd    $0xffffffc9,%edi\n  23:\t3c 06                \tcmp    $0x6,%al\n  25:\tb8 ff ff ff ff       \tmov    $0xffffffff,%eax\n  2a:\t0f 42 c7             \tcmovb  %edi,%eax\n  2d:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint hex_to_int(char c)\n\n{\n  int iVar1;\n  int iVar2;\n  undefined7 in_register_00000039;\n  \n  iVar1 = -0x30;\n  iVar2 = (int)CONCAT71(in_register_00000039,c);\n  if ((9 < (byte)(c - 0x30U)) && (iVar1 = -0x57, 5 < (byte)(c + 0x9fU))) {\n    iVar1 = -1;\n    if ((byte)(c + 0xbfU) < 6) {\n      iVar1 = iVar2 + -0x37;\n    }\n    return iVar1;\n  }\n  return iVar1 + iVar2;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "mbedtls::library_x509_create.c::hex_to_int::0001::7aeb57347f91::llm::clang_O2::P2",
+    "function_id": "mbedtls::library_x509_create.c::hex_to_int::0001::7aeb57347f91",
+    "function_name": "hex_to_int",
+    "project": "mbedtls",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

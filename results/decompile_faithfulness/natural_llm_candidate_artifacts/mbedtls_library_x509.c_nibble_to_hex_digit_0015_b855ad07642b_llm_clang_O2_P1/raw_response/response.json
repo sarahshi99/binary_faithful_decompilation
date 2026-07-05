@@ -1,0 +1,40 @@
+{
+  "created_at": 1783258822,
+  "id": "resp_02dd5fcadb418e6c016a4a5ec6581081918beac674b26dba2f",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSl7NKefBofEFmdCH4avol7RW1wRdSQ3iNoPa_VYd3nkrNPwZkxl5TAjgESNLJThdtVNxFiygQWX_AwCmV-5klx8hIKRmHsRugnhxVQbzMhyqhVP9FBPH8F92NgK3bsecAagYGdgk-wrL4POVaRIWnKM69Bt56Co68hQfcQm1MImzczdQJH2oP4CTthF_kmUeUm1ptS9zni6utUdUr3w3bE-_bpb4qLWfhUsOyxYDLPkJFtN1l1iHqgFqOREGHeXmG1M5mKvmJihcEtqCF4gKHSWK4pmTh4YTr0hPQWNpAc16wyUGGrt8Nl0yGr89ztV5G1mPOh6AXPeWEjAEFaav2wlGpnBx53xrPlS4esQqhXvSajIQH-N9_O56dXAYNEqCD3LmZwh8aAAb5XamzjTT_Wo7TpmUnz1sEMf13pR3ggZePv_eQ5d_9DbnfnwHvc0SGLaXBR5B87WEaQRZDZRbmqhTxmjOSDaIE3HRPH390zBiYQKBAcfxEyNp2SqkF7E4A5hxKYlU9xTj6EhUzv6iWjmCNF-1mLD6l5Fjufwlz7ffHj1PVAPzJgF8N6yh0FC-ZOdWFREX094y3knlQEkoPOMknz-IIjTWL22A9nmGXzvDCZawZHqhjC0iTcYx95AdGW0g9bMYL_zcs37cbrYA4ECXt5zbnLFiB-HoiimtPLePH65sN28DaX7QqJn8d71b8Q8k3AGgo1ylX8o9oQNmF45CsbVkiWGZcVorMVEZsNuv_e2t7hMMzx1z2PkKD7dIgeFWY8hXF5aCecCw2Vh3-W8Vt94ww8m1KNx14SuiD4M_v8_lpxuN7G2Ttw6Ipkg-amQVncn9qV2bj4SJZLPSW3FUdduN_W-umdoYM853HqgrF5i6NZSiJt1NmhvG3D6QfGoA-Zj1xyjjAay1YSz4EkKP3SxWwnKF6rjdXCkZuT2pk40obTC3W3uPqD1w7CvE2rDotsqw0F7IRA4hoRXcmhNKz4ylGutU1iDzL0szaslgyA_ca4GRsNZHc46PmUN59J1WXG00Qf_dvLiNS582GUqo_yQNd5sPfux5cFgaimsjsouZ1RVNPM6ZNuUDM0Sb44w4CWMj3AHiboQLuUya6qqpvOgldnjLRjykTdwZ2d7AL-jZTitaWMAbLTItAQMfuwt4BppuZgMHDKJF2q8Xzxb602NoSDXDJArllMHzlqLnvTOcWGnIuiBThpbd_DB8TFgJSKQoCnbYMsNw2Joa9GfDyU3TYkg1KdjtmwosX5fLApuXFMoQHg4v_XC_56jgPnOBev1zRvQiw3PSgQd-7WT8HOks6Q6KhAe1NcIcTUq4Me8fyZkuCfZYnUseZMDmiJuIvgYFfHWgmrJnsNs08j2Ty5P7agkomG6gtTpHE2mcXOMc7Sqj7kCQ8RVc9ixq4IrsCD2e13J94O53Nhj49C37UdRffXOdN314fBMDr322o6Vhw-5CfdKw2-Vp6FBKsJ8AW6OW7i1HSALffJ4IJ5AuZ_L56xOrvYFG61sqZBw3Xl5WGozGssfUnC2BAIG1QnTX1qFL7Suhyuw6bBbI7pehoFNi6PA5BH1HkUImlQWznT_mambc-lzPBN501y36GIB7OjTpNiiUzaFgMaek0shXHsPucY-zechnIsuKVvjxo0GgSMJCEm7dv8MsH2GxX55FmEI1I8B0Nej1lP6TyoOn6209Pi8TMvyxOsaUqKCwj3V_DfsrmQlBDS0W0aiWW_yE",
+      "id": "item_pfGcYC6q9K9VaW5s",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "char nibble_to_hex_digit(int i)\n{\n    char c = '7';\n    if (i < 10) {\n        c = '0';\n    }\n    return c + (char)i;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_02dd5fcadb418e6c016a4a5ecd83fc8191b9dd067c138e6ab0",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 435,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 208,
+    "output_tokens_details": {
+      "reasoning_tokens": 159
+    },
+    "total_tokens": 643
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: sqlite::src_test_malloc.c::hexToInt::0006::50e837e0cf07\nProject: sqlite\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: int hexToInt(int h)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sqlite_src_test_malloc.c_hexToInt_0006_50e837e0cf07_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <hexToInt>:\n   0:\t8d 47 d0             \tlea    -0x30(%rdi),%eax\n   3:\t83 f8 09             \tcmp    $0x9,%eax\n   6:\t77 01                \tja     9 <hexToInt+0x9>\n   8:\tc3                   \tretq   \n   9:\t8d 47 9f             \tlea    -0x61(%rdi),%eax\n   c:\t83 c7 a9             \tadd    $0xffffffa9,%edi\n   f:\t83 f8 06             \tcmp    $0x6,%eax\n  12:\tb8 ff ff ff ff       \tmov    $0xffffffff,%eax\n  17:\t0f 42 c7             \tcmovb  %edi,%eax\n  1a:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint hexToInt(int h)\n\n{\n  int iVar1;\n  \n  if (h - 0x30U < 10) {\n    return h - 0x30U;\n  }\n  iVar1 = -1;\n  if (h - 0x61U < 6) {\n    iVar1 = h + -0x57;\n  }\n  return iVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "sqlite::src_test_malloc.c::hexToInt::0006::50e837e0cf07::llm::clang_O2::P1",
+    "function_id": "sqlite::src_test_malloc.c::hexToInt::0006::50e837e0cf07",
+    "function_name": "hexToInt",
+    "project": "sqlite",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

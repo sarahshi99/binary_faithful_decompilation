@@ -1,0 +1,27 @@
+{
+  "api_key_env": "OPENAI_API_KEY",
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 2.2425170260248706,
+      "status": 200
+    }
+  ],
+  "endpoint": "https://wokeme.dpdns.org/v1/responses",
+  "generation_parameters": {
+    "max_output_tokens": 2048,
+    "stream": false,
+    "temperature": 0,
+    "top_p": 1,
+    "top_p_payload_status": "omitted_after_provider_rejected_explicit_default_before_any_candidate_response"
+  },
+  "request_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "sbase::find.c::cmp_lt::0003::3ff7fb5ec166::llm::clang_O2::P2",
+    "function_id": "sbase::find.c::cmp_lt::0003::3ff7fb5ec166",
+    "function_name": "cmp_lt",
+    "project": "sbase",
+    "prompt_family": "P2"
+  }
+}

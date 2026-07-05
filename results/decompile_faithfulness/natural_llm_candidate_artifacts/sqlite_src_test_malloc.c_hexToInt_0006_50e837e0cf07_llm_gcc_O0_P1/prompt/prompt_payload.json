@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: sqlite::src_test_malloc.c::hexToInt::0006::50e837e0cf07\nProject: sqlite\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: int hexToInt(int h)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sqlite_src_test_malloc.c_hexToInt_0006_50e837e0cf07_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <hexToInt>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t89 7d fc             \tmov    %edi,-0x4(%rbp)\n   7:\t83 7d fc 2f          \tcmpl   $0x2f,-0x4(%rbp)\n   b:\t7e 0e                \tjle    1b <hexToInt+0x1b>\n   d:\t83 7d fc 39          \tcmpl   $0x39,-0x4(%rbp)\n  11:\t7f 08                \tjg     1b <hexToInt+0x1b>\n  13:\t8b 45 fc             \tmov    -0x4(%rbp),%eax\n  16:\t83 e8 30             \tsub    $0x30,%eax\n  19:\teb 19                \tjmp    34 <hexToInt+0x34>\n  1b:\t83 7d fc 60          \tcmpl   $0x60,-0x4(%rbp)\n  1f:\t7e 0e                \tjle    2f <hexToInt+0x2f>\n  21:\t83 7d fc 66          \tcmpl   $0x66,-0x4(%rbp)\n  25:\t7f 08                \tjg     2f <hexToInt+0x2f>\n  27:\t8b 45 fc             \tmov    -0x4(%rbp),%eax\n  2a:\t83 e8 57             \tsub    $0x57,%eax\n  2d:\teb 05                \tjmp    34 <hexToInt+0x34>\n  2f:\tb8 ff ff ff ff       \tmov    $0xffffffff,%eax\n  34:\t5d                   \tpop    %rbp\n  35:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint hexToInt(int h)\n\n{\n  int iVar1;\n  int h_local;\n  \n  if ((h < 0x30) || (0x39 < h)) {\n    if ((h < 0x61) || (0x66 < h)) {\n      iVar1 = -1;\n    }\n    else {\n      iVar1 = h + -0x57;\n    }\n  }\n  else {\n    iVar1 = h + -0x30;\n  }\n  return iVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "sqlite::src_test_malloc.c::hexToInt::0006::50e837e0cf07::llm::gcc_O0::P1",
+    "function_id": "sqlite::src_test_malloc.c::hexToInt::0006::50e837e0cf07",
+    "function_name": "hexToInt",
+    "project": "sqlite",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

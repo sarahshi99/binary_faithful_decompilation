@@ -1,0 +1,8 @@
+{
+  "compile_probe_uses_fixtures_or_labels": false,
+  "compile_probe_uses_trusted_source": false,
+  "harness_source_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase1h_natural_llm/generation/compile_probe/libtomcrypt_src_pk_asn1_der_utctime_der_decode_utctime.c_s_char_to_int_0001_f87ee5162c3b_libtomcrypt_src_pk_asn1_der_utctime_der_decode_utctime.c_s_char_to_int_0001_f87ee5162c3b_llm_clang_O2.c",
+  "ok": true,
+  "reason": "ok",
+  "stderr_tail": ""
+}

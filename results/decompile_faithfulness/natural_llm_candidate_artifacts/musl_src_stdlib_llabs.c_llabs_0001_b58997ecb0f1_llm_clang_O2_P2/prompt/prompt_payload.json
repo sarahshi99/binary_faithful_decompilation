@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: musl::src_stdlib_llabs.c::llabs::0001::b58997ecb0f1\nProject: musl\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: long long llabs(long long a)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/musl_src_stdlib_llabs.c_llabs_0001_b58997ecb0f1_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <llabs>:\n   0:\t48 89 f8             \tmov    %rdi,%rax\n   3:\t48 f7 d8             \tneg    %rax\n   6:\t48 0f 4c c7          \tcmovl  %rdi,%rax\n   a:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nlonglong llabs(longlong a)\n\n{\n  long lVar1;\n  \n  lVar1 = -a;\n  if (0 < a) {\n    lVar1 = a;\n  }\n  return lVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "musl::src_stdlib_llabs.c::llabs::0001::b58997ecb0f1::llm::clang_O2::P2",
+    "function_id": "musl::src_stdlib_llabs.c::llabs::0001::b58997ecb0f1",
+    "function_name": "llabs",
+    "project": "musl",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

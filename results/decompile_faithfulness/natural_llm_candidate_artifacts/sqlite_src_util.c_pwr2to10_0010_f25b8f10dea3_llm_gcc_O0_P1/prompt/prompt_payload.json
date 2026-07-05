@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: sqlite::src_util.c::pwr2to10::0010::f25b8f10dea3\nProject: sqlite\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: int pwr2to10(int p)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sqlite_src_util.c_pwr2to10_0010_f25b8f10dea3_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <pwr2to10>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t89 7d fc             \tmov    %edi,-0x4(%rbp)\n   7:\t8b 45 fc             \tmov    -0x4(%rbp),%eax\n   a:\t69 c0 41 34 01 00    \timul   $0x13441,%eax,%eax\n  10:\tc1 f8 12             \tsar    $0x12,%eax\n  13:\t5d                   \tpop    %rbp\n  14:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint pwr2to10(int p)\n\n{\n  int p_local;\n  \n  return p * 0x13441 >> 0x12;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "sqlite::src_util.c::pwr2to10::0010::f25b8f10dea3::llm::gcc_O0::P1",
+    "function_id": "sqlite::src_util.c::pwr2to10::0010::f25b8f10dea3",
+    "function_name": "pwr2to10",
+    "project": "sqlite",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

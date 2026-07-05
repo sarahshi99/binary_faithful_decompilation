@@ -1,0 +1,27 @@
+{
+  "api_key_env": "OPENAI_API_KEY",
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 17.760700236074626,
+      "status": 200
+    }
+  ],
+  "endpoint": "https://wokeme.dpdns.org/v1/responses",
+  "generation_parameters": {
+    "max_output_tokens": 2048,
+    "stream": false,
+    "temperature": 0,
+    "top_p": 1,
+    "top_p_payload_status": "omitted_after_provider_rejected_explicit_default_before_any_candidate_response"
+  },
+  "request_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "musl::src_stdlib_llabs.c::llabs::0001::b58997ecb0f1::llm::gcc_O0::P1",
+    "function_id": "musl::src_stdlib_llabs.c::llabs::0001::b58997ecb0f1",
+    "function_name": "llabs",
+    "project": "musl",
+    "prompt_family": "P1"
+  }
+}

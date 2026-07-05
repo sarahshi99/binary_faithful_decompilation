@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: libb64::src_cencode.c::base64_encode_value::0001::6dca5895e15c\nProject: libb64\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: char base64_encode_value(signed char value_in)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/libb64_src_cencode.c_base64_encode_value_0001_6dca5895e15c_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <base64_encode_value>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t89 f8                \tmov    %edi,%eax\n   6:\t88 45 fc             \tmov    %al,-0x4(%rbp)\n   9:\t80 7d fc 3f          \tcmpb   $0x3f,-0x4(%rbp)\n   d:\t7e 07                \tjle    16 <base64_encode_value+0x16>\n   f:\tb8 3d 00 00 00       \tmov    $0x3d,%eax\n  14:\teb 12                \tjmp    28 <base64_encode_value+0x28>\n  16:\t48 8b 15 00 00 00 00 \tmov    0x0(%rip),%rdx        # 1d <base64_encode_value+0x1d>\n  1d:\t48 0f be 45 fc       \tmovsbq -0x4(%rbp),%rax\n  22:\t48 01 d0             \tadd    %rdx,%rax\n  25:\t0f b6 00             \tmovzbl (%rax),%eax\n  28:\t5d                   \tpop    %rbp\n  29:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nchar base64_encode_value(char value_in)\n\n{\n  char cVar1;\n  char value_in_local;\n  \n  if (value_in < '@') {\n    cVar1 = base64_encode_value::encoding[value_in];\n  }\n  else {\n    cVar1 = '=';\n  }\n  return cVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "libb64::src_cencode.c::base64_encode_value::0001::6dca5895e15c::llm::gcc_O0::P1",
+    "function_id": "libb64::src_cencode.c::base64_encode_value::0001::6dca5895e15c",
+    "function_name": "base64_encode_value",
+    "project": "libb64",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

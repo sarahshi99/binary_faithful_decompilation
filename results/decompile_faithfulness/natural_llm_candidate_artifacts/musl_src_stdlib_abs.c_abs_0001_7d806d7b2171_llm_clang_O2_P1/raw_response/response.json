@@ -1,0 +1,40 @@
+{
+  "created_at": 1783259144,
+  "id": "resp_01b9f7d0839fce31016a4a600895b0819193f81ee8bb88f765",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSmAQuupXVVoc3jGVpMmisoBXJp4Xwej_52rsonqQAVbCSCzQ9qlpFT4tqRtHTU0lqvuAo0UTjhkdGMECLAATNjf-9TXCYfiRvHi9LfY1d_59WkqIQz_N7GuFNb5VYR6uX2K2QQ-LmTMZKiUa52ZZari2M_nNVyN8KzEcz_XKz_gFc9ovcfYrCKqljuQ6nBMI5OZoLroW6ZmEwkqsPhhfBFmZoTkNpBqfh7vGK5gh7iw1O8tYa_csfPkKHCCXSlD8aqMP_DZugxZCSdtkZ3S_QL6LeyekxIyiun8AsRSCyc7Rf1yQz38vQQgDE5inf-QiCgj5T0-oONkEcuZWpuWwWzT9zWnPO6Iz0QsYhSd9SQ2n0g_1wLm-aNftUFD8X3NsYHWJXqzWxqqi7eoJNaKZUrFr1TkOu7IkMX1rca2XAYNP9NLLDFzZ6IeN211vvQJK8NrEP817zHvoxSonzw7MxqjxA_G5MuGlOYaD6N8H3j3aZlgjpmUP6B836yPW32X7ELA3raxYFg0SNVsVtEKZ3yAgo63_oZK6lVc_N4HygKrhmXSwfxIOBsZQhNu9dhdf5DJaVsAJlbOr53TlXZ3qv_kgRSewGZOOxXbDqkQVaw4eYv0RFhVHUS5AcPPkWiEK-f-Sp3scSSKQl7-xbQVRkd-G7UXZPuuaxxhBo_VLWPOb-Jv7QC_hEmIvOOuRCxN9ZCE0WhuEjSsWZSfKtlW5rBu9pkoSz9y7-woT3OGRdUA5mvTW5FJbcKYMVT7pUOJaggrlbMbnO-4nq6nm966vyqcq_yCT9650KXenHsuwefD7W0_IDJZTHS-y14pbAhHyOcXn866eGyp1YlnD_-hP4xSx-CHG14Dg8evbAqMJKfroWsncMutv1eOqgoTGH09IJMuHt9VNbLq4aXZlDTpVwiAdJk3obAz8JPNv7gRZ9XMgEDLwy8DniaCJJ_tpz-0B7zkolCkifOFMi1MfjOmDrntwkAO2FpUxb9ivc_c22IkWn3sm-xDXz_KcT27loDzpTzxBQa-jRfuiStdXjYkyN6CSy_GnPx-H7B5CQexqJN-KcGfJg-3-EbHsTKg1thyZ_gm-FJD57a0TZ1cT29Bgg3st250XjDiY5tsmaUU5TgytF5v-PUEjxUqyfk2NTNwsdN-quJylgqxjbjXAF-9Oq5ZibXtkLkBvwWJCq8-BkmFthvLzOs7Vjp-lpTyvrbWOLL2JurMBQ_0fjpOE7tmCuBoSLQ1UMD_Lu-BCy8MLGwbfNB3eZEpPyTlzPVuHXdC2WyTuVhjADN1hKA-w39pEtyPveAsYVgrTWF7tUTw38cBMJQNZfI43Ozi9hpGzVjyHbKBc84-VkOgP-92aFjS9mPatejcdZxiLr_Gw38ERF1pEa6t-lBzIVOoqJcUC-WzkeLd09q6mXtnj86dPJkMm_vHunokXab6XbCgy0KDLuS6vFUCsras5SvsBaQhI1_LwGUeQF7J57U_hxgqklV7BYDYNKLq6rWGx1dOwj-DNZQnv71jV5CdAQzhrtEEH30h7CUFJ42TgEEkKNZrWjK6PoxGL2OVHaWvdZxZPEPGLPpC7eJ71oxdjgk3zXziRkvuScDDytSFhabyO5e_7sT1sWYqh1w==",
+      "id": "item_WjlMOo6iLQmz1DYv",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int abs(int a)\n{\n    return a > 0 ? a : -a;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_01b9f7d0839fce31016a4a60105f0c8191b7837c79583a3298",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 359,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 179,
+    "output_tokens_details": {
+      "reasoning_tokens": 154
+    },
+    "total_tokens": 538
+  }
+}

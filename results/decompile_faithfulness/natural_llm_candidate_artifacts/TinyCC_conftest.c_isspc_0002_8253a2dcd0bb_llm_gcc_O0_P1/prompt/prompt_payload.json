@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: TinyCC::conftest.c::isspc::0002::8253a2dcd0bb\nProject: TinyCC\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: int isspc(int c)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/TinyCC_conftest.c_isspc_0002_8253a2dcd0bb_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <isspc>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t89 7d fc             \tmov    %edi,-0x4(%rbp)\n   7:\t8b 45 fc             \tmov    -0x4(%rbp),%eax\n   a:\t3c 20                \tcmp    $0x20,%al\n   c:\t77 0d                \tja     1b <isspc+0x1b>\n   e:\t83 7d fc 00          \tcmpl   $0x0,-0x4(%rbp)\n  12:\t74 07                \tje     1b <isspc+0x1b>\n  14:\tb8 01 00 00 00       \tmov    $0x1,%eax\n  19:\teb 05                \tjmp    20 <isspc+0x20>\n  1b:\tb8 00 00 00 00       \tmov    $0x0,%eax\n  20:\t5d                   \tpop    %rbp\n  21:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint isspc(int c)\n\n{\n  int iVar1;\n  int c_local;\n  \n  if (((byte)c < 0x21) && (c != 0)) {\n    iVar1 = 1;\n  }\n  else {\n    iVar1 = 0;\n  }\n  return iVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "TinyCC::conftest.c::isspc::0002::8253a2dcd0bb::llm::gcc_O0::P1",
+    "function_id": "TinyCC::conftest.c::isspc::0002::8253a2dcd0bb",
+    "function_name": "isspc",
+    "project": "TinyCC",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

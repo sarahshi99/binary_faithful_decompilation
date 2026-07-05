@@ -1,0 +1,40 @@
+{
+  "created_at": 1783257983,
+  "id": "resp_093b2d4906b085b9016a4a5b7f54b481919ac8e0734653ade6",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSluFNaRrH5EYR3eO3Hnz7jjGAQyn7ToOuupQyzYns3un8V0zkxcLAGJt4Na6Uvm7xR7Y4xeJJx2s1nmZvaxZm6hg74FFZ6xEayRSj9AQbdeyWX6NeF-s6mtcplNAWdlhCq9qhUKluCwYR6hERPmYBxQEUCGZx6ZcyCjmX0_4ITi6i-bTS4wJYd4hU9dTOAsiNYxeQe0YGWvlr9hXbbb-DqSUIrscbpzbPOyCO9XBEkk6ZU7gy7oZplJLdhbI92-rf5rkV658UQogAiOPafWONhGtjRXOfigSJfW9LBNTyzF5DzXI1blC2uD299Y9dAsgxg0_pEArGwfITOVJD1x7jBnziW-3hF_BKeCr3Op8CjvRdDRkbQvNoFMSshByk-QeGj3nKheBMx4oncyLu-rF56deWZT7VZf5UunDecL8KBKaXzEUDkBgY9a8m5WprDTOvqgSK8DQR_HbVLAuExma_ugTelUW3KgYjpEBqKS1JYoKSsg9Gd7aeYQETk7uCJF-z1BHp8dP20-ihpldfxg4rpcza-2x5svCQK9XMMJnWo3H5Lp7BSC9DOHmA8ryoo4y_fUSxNWlPoXubxAJzaJQtE11Qx4CGz6bs2PKbaCpwnpXPJa2VcGWa0fesTqudsPHhUiW8e8k1BtcNndB8oN-nbglSU3YjB6CrvVb7tSWHPpCOIwIWj4x2nUC5rDKYE2H1-vxr-_4nuweah_yjE71x8JVI80Lkob2zJY-VgOmFGxWltfxkj3z-1YUTVta_zWChwYpEJ50-0TQZFBDmVDApnwIlw7_PRJ4w4gFmTmx4QHKxiHbjPvka7TWe5forAj7WagQ6Y9fqV6N_tK5oGvv-M_a710jg3aoUqeCCHwVZBJdGwFmL07__xgncjzkT-VXvJDZRF2NIP0BnMTQAfTS52iv7ciPwJtncrVjlXQOPBVa1JKLdwGFevG2cCatQTxHPO9eggm78H4C485sM9XnAxQqqXHEXwiFs6c4cZkAKzI88IPpAm48MC3Md13SMqgMR6SppVgP4VWD4Y3_DStUbXS8PkJGhvGODyz8qbhaqAERoRVNnEzN9rEoLos1uKGfF2M_IiBgtD3WyIuuTyGbqqH4wTSnNyg0DXZtoUxokRhwUxG6uTd8nAdbcS2_kxUyM6N9FPnLJqlRwCAi_HIFHJ6fqfvWVvr8BmKZuP_rWIE8dqD6NXOhL9mwo-jXuHASl8DaDIMSwCPTTrfV9EhbR9fsBV4pUWb7OMNkOociDtd_0p1qovc2LtHwslIqLDB-7oA8mr3sMCPNddctOJ0XDbCF236KbQb_z-vMkWMDV9BQr9vlQv2T1xjVZb8s1SxxUUsbDTK41HvC-iQ9OYMLp4O4klZ5hAEBo9Ao7sMt9UrECnbEJ7X4SLMtF8EcdQvHZRm52NJ5RmRQ_RTX4lE98YI0v2_m5pX1XyfmDkH1ykoUgqf7TvrNlRdomQZlxkovvblZenoIybJzAomLmfa0ovwITmT9NF5eHkZNek3j1VGipQa8Z6Gy7eDl7f0vvVzlKVhu4SE-OkuWQFb0qw7QgwPtlQ==",
+      "id": "item_Nthbe7phswxkn1an",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int is_valid_movw_shift(int shift, int is_64bit)\n{\n    return shift <= (((is_64bit != 0) << 5) | 0x10) && (shift & 0x8000000fU) == 0;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_093b2d4906b085b9016a4a5b853cb88191ab1ae508430293eb",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 559,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 196,
+    "output_tokens_details": {
+      "reasoning_tokens": 133
+    },
+    "total_tokens": 755
+  }
+}

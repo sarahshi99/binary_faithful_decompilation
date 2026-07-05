@@ -1,0 +1,40 @@
+{
+  "created_at": 1783260401,
+  "id": "resp_08f8411c3ed1627f016a4a64f140788190a9689c9644640171",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSmT31pcpJBpBo30PQ5Z-S6p5HQAxffEiD0-3Nl6zJJdsW03R9V1Qmg77yGQJ2wnXLNywh9DjHROyqoJ1cFooigMNJLz_ILVwk0XtIbfosOpLk6FZygfG3WJ7UyV5pHfha9z2Orqas5lr7JPAjZRZDv7_za4grJS_tBEJwiiKjmMBe8t0DMskPfQJ1FrFanzNINBIEMoi2ryi53-ekJ1QfEwJHTePpKjVBw6DYTdsgs9xqm_JxY8cZYPcu0J_WpTudeKkvxqwT21lcwobxl-tI-OunrVA7csXTeRzRRrMwFLVQjSQf-r-zt5O5mCIGsuWR5jW-bUSs0baOKsC7rWX23eNGNrdRpMyMi5QLr-957OH6DX_Yyv3jbwuRpK78ovY81WKy7Ifxc9-RCg6ZpW8P-kIRI26iHdBCSbiMwjkxCeEeNv__1wYnFxMUPaDuBiTDdjXjpTsgko6-Bs0UGykh8cQ7P8oNZwnognW7T9FlAZBOoegJEsuIa0sxo2XWYiwmDvzSZnChGp9tKxW1ED9v0cIovyXa1KVaLciKl_KTrEqq0egnwKBxPl0KH60RIgs06i18yfF8TiqoKuEfcmiOmm8VI0LN3NwS8Gk7pzh20GFO9gcZaYzA_fSlalrx6OP-xvSjiKjrhWWvJx4XlLteaSf8MASbA5x0e_GyfFTEuEUNs2Kjz0_ALjzEhEb6gL0h69DeRW2Hpkg9LDAWsHc9QDDO4hFUo-iUV4_E73TtVbPPmQobQtHW_zgx66uEAGjkCDAlyhQ_kUN9FFr_MhRPOuJsN1E6AfoioHDS1bGBmnsZ25v4pTHp9apbNAJjWj20bhFH2-RZSkc22m-XEmEnFmcHMlYys-eJiRFR7cIv7n4etMNlTgJnQfbjwz1_XXT_yFcDPI4Cg6_4GZs7fXKuQ4qnO40XTxGfmJgPADJPVS9tzukv07r1I4ophUv10c1Bqem_wangELeaOKlcVA-Fwb_Cxu8mCE8ee7CLrrBtTjveErCKKzJJ8UKVFNYpvhgZ5USdS4g8YA1-oKusWXvsSem_3rRxJDYz4qN1jWeF22XlDHabjQl4qBp-qUfHa_az78bxf7-YnictYwzSIbOc_Rbs1pfk1xEXJ1CiKKkHhyFS_6eknHEZYDaqjCf8EbKRfw5rlwea0r2gwd28l8iEDpms1Ao8x_KXJcokBbDIKoeSkulQOCdLAucVQHfAsXTBH47W9-aspA6z2HXcWZTur9ZGMReCbPufPWQTw4x-js57iYzZZYveItG_SKvuNDYhW-57DIUSGpEGk9L0iOMXnafqQMqPNsGRLFzo1upP0ipmngKZ8XoJ8XXvke81gHpSyCiW_C_y2Sn5pLFHyosJwk0uEzFczNvlaz7uFevR0dOg9meKxyAiQRCn8vDQip8TzeL2J4BlkEReDbMR1Lcr2Oj3ZuEIMV3VuD9lnPIQ_ObOaQEIBpLSn6e4mUB4ybkTf_OaIXpZCFkwYth-F5y4rYOtDecfHdl1PLf-bBlMliQo7yu-RnJytsUJWLiiwDlNXgVfxlUIX5OMUug7xZDD58v4lKFRXJMEkgfgFvCIJjEoKzjHo27pJZvZxcCeWMhJTo0ZHpTguyDRsB1IXu_8c8HcinIDzksEaqKGENP18HkyX0=",
+      "id": "item_J40AMhgjBLmxFrBM",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int pwr2to10(int p)\n{\n  return p * 0x13441 >> 0x12;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_08f8411c3ed1627f016a4a64f740088190bd1dcdc5fae2a77d",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 444,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 174,
+    "output_tokens_details": {
+      "reasoning_tokens": 142
+    },
+    "total_tokens": 618
+  }
+}

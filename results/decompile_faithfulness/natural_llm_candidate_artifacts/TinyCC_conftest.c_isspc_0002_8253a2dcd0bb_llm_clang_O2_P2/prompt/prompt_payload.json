@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: TinyCC::conftest.c::isspc::0002::8253a2dcd0bb\nProject: TinyCC\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: int isspc(int c)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/TinyCC_conftest.c_isspc_0002_8253a2dcd0bb_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <isspc>:\n   0:\t40 0f b6 c7          \tmovzbl %dil,%eax\n   4:\t83 f8 21             \tcmp    $0x21,%eax\n   7:\t0f 92 c0             \tsetb   %al\n   a:\t85 ff                \ttest   %edi,%edi\n   c:\t0f 95 c1             \tsetne  %cl\n   f:\t20 c1                \tand    %al,%cl\n  11:\t0f b6 c1             \tmovzbl %cl,%eax\n  14:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint isspc(int c)\n\n{\n  return (int)(c != 0 && (c & 0xffU) < 0x21);\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "TinyCC::conftest.c::isspc::0002::8253a2dcd0bb::llm::clang_O2::P2",
+    "function_id": "TinyCC::conftest.c::isspc::0002::8253a2dcd0bb",
+    "function_name": "isspc",
+    "project": "TinyCC",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

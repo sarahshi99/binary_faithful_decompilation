@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: sqlite::ext_fts3_fts3_tokenizer1.c::fts3_isalnum::0002::9b0f8eebf62b\nProject: sqlite\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: int fts3_isalnum(int x)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sqlite_ext_fts3_fts3_tokenizer1.c_fts3_isalnum_0002_9b0f8eebf62b_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <fts3_isalnum>:\n   0:\t8d 47 d0             \tlea    -0x30(%rdi),%eax\n   3:\t83 f8 0a             \tcmp    $0xa,%eax\n   6:\t0f 92 c0             \tsetb   %al\n   9:\t83 e7 df             \tand    $0xffffffdf,%edi\n   c:\t83 c7 bf             \tadd    $0xffffffbf,%edi\n   f:\t83 ff 1a             \tcmp    $0x1a,%edi\n  12:\t0f 92 c1             \tsetb   %cl\n  15:\t08 c1                \tor     %al,%cl\n  17:\t0f b6 c1             \tmovzbl %cl,%eax\n  1a:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint fts3_isalnum(int x)\n\n{\n  return (int)((x & 0xffffffdfU) - 0x41 < 0x1a || x - 0x30U < 10);\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "sqlite::ext_fts3_fts3_tokenizer1.c::fts3_isalnum::0002::9b0f8eebf62b::llm::clang_O2::P2",
+    "function_id": "sqlite::ext_fts3_fts3_tokenizer1.c::fts3_isalnum::0002::9b0f8eebf62b",
+    "function_name": "fts3_isalnum",
+    "project": "sqlite",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

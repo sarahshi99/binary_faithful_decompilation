@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: TinyCC::arm64-gen.c::arm64_pe_param_off::0009::790dfaa50add\nProject: TinyCC\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: unsigned long arm64_pe_param_off(unsigned long a)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/TinyCC_arm64-gen.c_arm64_pe_param_off_0009_790dfaa50add_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <arm64_pe_param_off>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t48 89 7d f8          \tmov    %rdi,-0x8(%rbp)\n   8:\t48 83 7d f8 0f       \tcmpq   $0xf,-0x8(%rbp)\n   d:\t77 11                \tja     20 <arm64_pe_param_off+0x20>\n   f:\t48 8b 45 f8          \tmov    -0x8(%rbp),%rax\n  13:\t48 d1 e8             \tshr    %rax\n  16:\t48 83 c0 14          \tadd    $0x14,%rax\n  1a:\t48 c1 e0 03          \tshl    $0x3,%rax\n  1e:\teb 2e                \tjmp    4e <arm64_pe_param_off+0x4e>\n  20:\t48 83 7d f8 1f       \tcmpq   $0x1f,-0x8(%rbp)\n  25:\t77 15                \tja     3c <arm64_pe_param_off+0x3c>\n  27:\t48 8b 45 f8          \tmov    -0x8(%rbp),%rax\n  2b:\t48 83 e8 10          \tsub    $0x10,%rax\n  2f:\t48 d1 e8             \tshr    %rax\n  32:\t48 83 c0 01          \tadd    $0x1,%rax\n  36:\t48 c1 e0 04          \tshl    $0x4,%rax\n  3a:\teb 12                \tjmp    4e <arm64_pe_param_off+0x4e>\n  3c:\t48 8b 45 f8          \tmov    -0x8(%rbp),%rax\n  40:\t48 83 e8 20          \tsub    $0x20,%rax\n  44:\t48 83 e0 fe          \tand    $0xfffffffffffffffe,%rax\n  48:\t48 05 e0 00 00 00    \tadd    $0xe0,%rax\n  4e:\t5d                   \tpop    %rbp\n  4f:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nulong arm64_pe_param_off(ulong a)\n\n{\n  ulong uVar1;\n  ulong a_local;\n  \n  if (a < 0x10) {\n    uVar1 = ((a >> 1) + 0x14) * 8;\n  }\n  else if (a < 0x20) {\n    uVar1 = ((a - 0x10 >> 1) + 1) * 0x10;\n  }\n  else {\n    uVar1 = (a - 0x20 & 0xfffffffffffffffe) + 0xe0;\n  }\n  return uVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "TinyCC::arm64-gen.c::arm64_pe_param_off::0009::790dfaa50add::llm::gcc_O0::P2",
+    "function_id": "TinyCC::arm64-gen.c::arm64_pe_param_off::0009::790dfaa50add",
+    "function_name": "arm64_pe_param_off",
+    "project": "TinyCC",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

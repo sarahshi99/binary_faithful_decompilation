@@ -1,0 +1,40 @@
+{
+  "created_at": 1783259357,
+  "id": "resp_0d98c39f71690b17016a4a60ddadec8199a5d79c18919a5d4c",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSmDikEX8hZrXBgnW2j4_BWnxMSudIYjkc5uejSh8hdbIadR93yW16ccg2CCzJ7J_e7CPv3RT9Lpbs4Jzt32jRiJd_np73tjK1Qu2YhGDe_Z0tn80zByN_sXzVrlRXg2ClhbmK_t35d6mJsUBM5EF2eDc2jQq-Bacqvrrwy5oFfSEUoPCcSW-VVVbxA2lcjkTyEgv6V21exf8U-jLYqaYDolEg-EpLU3m_rsHDP46bffr1uNycg2DzsV2w7oHqvYsXJo3kuD07jxUxNWC3iRb7B-xTkhTqt7nr1NAZUQSIlWSHTMEwURZm7ihsne-mJgpJ41X94eQ28NM0zQQ72T3G_r5c_tiBLUWyI_6vJnHy8iDziVazPZeOMZTq_x3vaLIVNdvqadc03GXImz3MRnfNDlDSsMIbr8gTC-z80mPDX68yqR8meQ7yNSI4oTVuIyf6TurmCNPKK6i71L9Y2DlEMvzBeGTkg1cjaSuvoCL125lDacaP1lP7wR2jkmmNnXAS-WVMZo3dVCwKfZmjS6I1bX53f8sVNE5AeCHhz0m75YTFwpyLboqTi1V2Kx5JPvpkPs-WxDzv_EYz12mFlCSnNO4WI8cgIpHOMHLX_Dkqt3J3Nv7GagTMHuY9cAbwn3pUifiPg5bioq5h1po54pOKlUJkcla9zgwrc0Z3Hf2IMNvxNi7xWs7gCxt3ywAJ1QXQIdW2aBNPRGLDR-orAxEXEdfxiMLNsBYmmmdYjM13BF4dC5WlE8R82FaEpRGCZo7ASVR3hYFeRXocDEJZ1vh0IwhyCsWfU0e_m1OS_cerR5ghxUTb0P4CXUzV0oz-9-tin4jQAo6cPLIoRr6d1ovqwTRMTNzoGjb5Nu74lxweXPkOJMcKtTwONfh6ZV1eA82G5wEqopvnC86BrgucU4Lrt-QpBdwEwpi-PfHAqar2_xT5rZx-3TDy4ikNOOTfTjADy20UCqGkT3kXdL3nn6YFVWr_O7tuWiI3acEhIgflL2Eqpso_1toLe2m9iQlSUEDT4iG4VPTIKrKakJmQvpOd8tAtpD9Tnfk8jAqhqW245HOa9legkhbmRPAsQxPSsyVsRLiyzS8odNrCvPBriTxGB7u9NQVkDOvZzKUTxZQJcsH0RGYvwOFOikpJsPs5d8OyvADQMgfhNYIUD-W4esn8x9jLEMmr45_7BSAyV0evbNkHx5gPeH8U_qNfKTCeAWRm2UwrXcRZAiZbrT7htzq5djfuS314ZbCuGLgY9pWoj0vJwxcDa22NnXKnGppBd--a0P7jHwVrkqSfuurXGjQ0uYi2OKZY3mFxY-XutPKv5o1G_5MQZgXVHp6lxeEjIbpSK7spY9roVId4QjWnxy_0aHC0fPvVn2aLzB5PLtO1OEQfk8bJf7DbeUswIgnBpwbZZXvpJKvoiMDtLwK__9saFrfmN0AGUf_UeVBUKqcuiMd0lk5vLjFqctqUxdjwng4p9XupEmUFro4jrBtACxyGcwZ7g==",
+      "id": "item_5BoMMsWJyGHAoPLr",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int isleap(int year)\n{\n    if (year % 400 == 0)\n        return 1;\n    if (year % 100 == 0)\n        return 0;\n    return (year & 3) == 0;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_0d98c39f71690b17016a4a60e24ecc81998e46ff181040576d",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1200,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 159,
+    "output_tokens_details": {
+      "reasoning_tokens": 101
+    },
+    "total_tokens": 1359
+  }
+}

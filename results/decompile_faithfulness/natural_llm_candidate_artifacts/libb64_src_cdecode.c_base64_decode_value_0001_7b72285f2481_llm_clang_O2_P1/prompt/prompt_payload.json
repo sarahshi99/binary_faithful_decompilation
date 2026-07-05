@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: libb64::src_cdecode.c::base64_decode_value::0001::7b72285f2481\nProject: libb64\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: int base64_decode_value(signed char value_in)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/libb64_src_cdecode.c_base64_decode_value_0001_7b72285f2481_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <base64_decode_value>:\n   0:\t40 80 c7 d5          \tadd    $0xd5,%dil\n   4:\tb8 ff ff ff ff       \tmov    $0xffffffff,%eax\n   9:\t40 80 ff 4f          \tcmp    $0x4f,%dil\n   d:\t77 0b                \tja     1a <base64_decode_value+0x1a>\n   f:\t40 0f b6 c7          \tmovzbl %dil,%eax\n  13:\t0f be 80 00 00 00 00 \tmovsbl 0x0(%rax),%eax\n  1a:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint base64_decode_value(char value_in)\n\n{\n  int iVar1;\n  \n  iVar1 = -1;\n  if ((byte)(value_in - 0x2bU) < 0x50) {\n    iVar1 = (int)base64_decode_value::decoding[(byte)(value_in - 0x2bU)];\n  }\n  return iVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "libb64::src_cdecode.c::base64_decode_value::0001::7b72285f2481::llm::clang_O2::P1",
+    "function_id": "libb64::src_cdecode.c::base64_decode_value::0001::7b72285f2481",
+    "function_name": "base64_decode_value",
+    "project": "libb64",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

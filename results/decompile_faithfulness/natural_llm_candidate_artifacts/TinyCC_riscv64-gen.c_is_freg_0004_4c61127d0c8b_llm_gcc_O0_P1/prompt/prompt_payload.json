@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: TinyCC::riscv64-gen.c::is_freg::0004::4c61127d0c8b\nProject: TinyCC\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: int is_freg(int r)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/TinyCC_riscv64-gen.c_is_freg_0004_4c61127d0c8b_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <is_freg>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t89 7d fc             \tmov    %edi,-0x4(%rbp)\n   7:\t83 7d fc 07          \tcmpl   $0x7,-0x4(%rbp)\n   b:\t7e 0d                \tjle    1a <is_freg+0x1a>\n   d:\t83 7d fc 0f          \tcmpl   $0xf,-0x4(%rbp)\n  11:\t7f 07                \tjg     1a <is_freg+0x1a>\n  13:\tb8 01 00 00 00       \tmov    $0x1,%eax\n  18:\teb 05                \tjmp    1f <is_freg+0x1f>\n  1a:\tb8 00 00 00 00       \tmov    $0x0,%eax\n  1f:\t5d                   \tpop    %rbp\n  20:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint is_freg(int r)\n\n{\n  int iVar1;\n  int r_local;\n  \n  if ((r < 8) || (0xf < r)) {\n    iVar1 = 0;\n  }\n  else {\n    iVar1 = 1;\n  }\n  return iVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "TinyCC::riscv64-gen.c::is_freg::0004::4c61127d0c8b::llm::gcc_O0::P1",
+    "function_id": "TinyCC::riscv64-gen.c::is_freg::0004::4c61127d0c8b",
+    "function_name": "is_freg",
+    "project": "TinyCC",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

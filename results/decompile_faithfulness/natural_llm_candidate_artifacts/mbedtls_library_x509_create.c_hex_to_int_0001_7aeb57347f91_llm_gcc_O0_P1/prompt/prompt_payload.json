@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: mbedtls::library_x509_create.c::hex_to_int::0001::7aeb57347f91\nProject: mbedtls\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: int hex_to_int(char c)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/mbedtls_library_x509_create.c_hex_to_int_0001_7aeb57347f91_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <hex_to_int>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t89 f8                \tmov    %edi,%eax\n   6:\t88 45 fc             \tmov    %al,-0x4(%rbp)\n   9:\t80 7d fc 2f          \tcmpb   $0x2f,-0x4(%rbp)\n   d:\t7e 0f                \tjle    1e <hex_to_int+0x1e>\n   f:\t80 7d fc 39          \tcmpb   $0x39,-0x4(%rbp)\n  13:\t7f 09                \tjg     1e <hex_to_int+0x1e>\n  15:\t0f be 45 fc          \tmovsbl -0x4(%rbp),%eax\n  19:\t83 e8 30             \tsub    $0x30,%eax\n  1c:\teb 31                \tjmp    4f <hex_to_int+0x4f>\n  1e:\t80 7d fc 60          \tcmpb   $0x60,-0x4(%rbp)\n  22:\t7e 0f                \tjle    33 <hex_to_int+0x33>\n  24:\t80 7d fc 66          \tcmpb   $0x66,-0x4(%rbp)\n  28:\t7f 09                \tjg     33 <hex_to_int+0x33>\n  2a:\t0f be 45 fc          \tmovsbl -0x4(%rbp),%eax\n  2e:\t83 e8 57             \tsub    $0x57,%eax\n  31:\teb 1c                \tjmp    4f <hex_to_int+0x4f>\n  33:\t80 7d fc 40          \tcmpb   $0x40,-0x4(%rbp)\n  37:\t7e 0f                \tjle    48 <hex_to_int+0x48>\n  39:\t80 7d fc 46          \tcmpb   $0x46,-0x4(%rbp)\n  3d:\t7f 09                \tjg     48 <hex_to_int+0x48>\n  3f:\t0f be 45 fc          \tmovsbl -0x4(%rbp),%eax\n  43:\t83 e8 37             \tsub    $0x37,%eax\n  46:\teb 07                \tjmp    4f <hex_to_int+0x4f>\n  48:\tb8 ff ff ff ff       \tmov    $0xffffffff,%eax\n  4d:\teb 00                \tjmp    4f <hex_to_int+0x4f>\n  4f:\t5d                   \tpop    %rbp\n  50:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint hex_to_int(char c)\n\n{\n  int iVar1;\n  char c_local;\n  \n  if ((c < '0') || ('9' < c)) {\n    if ((c < 'a') || ('f' < c)) {\n      if ((c < 'A') || ('F' < c)) {\n        iVar1 = -1;\n      }\n      else {\n        iVar1 = c + -0x37;\n      }\n    }\n    else {\n      iVar1 = c + -0x57;\n    }\n  }\n  else {\n    iVar1 = c + -0x30;\n  }\n  return iVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "mbedtls::library_x509_create.c::hex_to_int::0001::7aeb57347f91::llm::gcc_O0::P1",
+    "function_id": "mbedtls::library_x509_create.c::hex_to_int::0001::7aeb57347f91",
+    "function_name": "hex_to_int",
+    "project": "mbedtls",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

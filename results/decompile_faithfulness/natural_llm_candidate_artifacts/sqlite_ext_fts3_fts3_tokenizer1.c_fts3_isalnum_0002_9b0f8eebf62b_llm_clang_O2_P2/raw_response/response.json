@@ -1,0 +1,40 @@
+{
+  "created_at": 1783259747,
+  "id": "resp_05b522cb448f070e016a4a6262fc0c8191947d6e8ff9f3703d",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSmJqO_eHmeG8pQ62QKdIazDzVFcN7Yl5GVXYggb_Lry0-K52JloomAKQd7yz5GpeWk8H9fWoCc0IVKK1E3oLCDpm4OjOtr6FUux_d_O58v6cC-emoQvWjgj5Zpiw0J8UJlfRo8fUv8vQgTlRrZvtdVzfG__IEgEZR1Lvyv_kSchKIS6Yc9g_Yw7D5PcizOus2CQuAgdIe_zqRXNWHhEsJYcPs7DgfKW2VpvK4g7Ozg-w9tQ9ozNQf6SiQ3W5uzefzZNUVU3gi4aAAh5eS5eU1Fmo45MV94dr5Fab6PcXEAym_FVal4cNn46CPzBhATn5jcZadEz6ACWBz31DOIz4M2tSEyRJkbxMdXQL6lOBfYsrwsuyJNSy22vFo82Q_XJLYznhQMb4C2f_868c22vhTFqRcVaEH_UFaWIALNmK83nrUziU5dYFIX7pvSpdaEnfqfxn6mOBsMCuhkb23lK-eWBK6-CkyYuircYEQL5D1lra2_siusUv_gHR44i9VsQtPxU-1ikQisLZGkJFAkLAD6LEBOB2r1vWA1fxVGETSPvXNFm0FBA0u8JN7CioajMjkcnHQyojG8khrPY_qflIin-QYBehsSgISFeExeDFrVECbhTTjVr48Ig6eTE08NT8avz-QdPjLi12slP0elShR5zcDS968zBOCNnej4tthmQpvEeaQAgUEvoEwhAXlHUeLRsK-oJDfFtUXIH7TW9_qGfEkej2wcO_xT_tC_t0n0ZhVpaUniDryCts4CBc56K28m7Y9QZ-Kcm1oZqG3MhXjN_jy210yc65Y3HZQQhTAyS740z95Ra8LTG_jUTL1zc7OMBBoi_-4js3fyHOOQ4oj8gK3J5yq0W-7Uz0VtLiM7fgSqoPWyEC4S4PYLWnGirKosNOEX5j_IYlvr4_I_Np2wRDDmTAgxVx9UmlzY9Z-EiwWw49FAkUOgL59s2bp82lk47XPjYhD0Bojdt3AGrrWdBoMqZi2yHsFlQOU0sIMQN5Kq7nhdqIj_HbCjMsuxI2T6nz__cLRtqfVvcf4wJsf7C_ZP5cX0NtR07jnxfM37CFaEl9xyJoTfrzvv_U7Rw7AYtakNFDlIGYyRs5MXxHynYEv3XXWTfPhhULAptPk2a8Osnz0_q3SyRnBPobE3H0MVSqpjp1eviGIbzEZrh8mgOS9-OQmOwNLB8GFhoaY88DjJvzMRRXjs0LFt39TGD---W5pRzI-ekiTsh_VBZGPbfJtwOIlC11RaGLKCY2Bq0-QaxDDciSomTKYRuJQCZEHfkM6S9pPqwh2yHTq2fhzwP4EGRRka0ll2J3KJhWRiwliwyM1W6wZIUqP9RBUGlNNqZkz6JVodKqOlR8xbyI4-MWKejGqS_eA9gV8G-WLbEq7ioXB1GHZ7fSARL9K16lLfxRwb0YXuy1SWSg3I4h-Su97rFzMzH7xj1mDt_ffCJSvA5XVcuDCjRZ8t2nYoFPWKKNilgn3Ho-An_OIGLme5Vsj-oD7gzHVqbUIMWgK1QZJqaryU8aVFRVEM743kgoU3tpUuDn1CztTJ3SsjgNaQUw2uOpUkSNU-sRtt3a1Qx8RpnYr6z82uq20e4OGSU88p-VJXfG_qa7_Jtxx3IkV339bkFkmU56E1CclUJatqTgcSGchf-BTxI0J8iMLG4bpWdwSAbIcbk8lHGJvtyVmVqqU4GipYtbjXm0crOGSuvc0m4=",
+      "id": "item_VhRkTBDlmjAgCnEI",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int fts3_isalnum(int x) {\n    unsigned int ux = (unsigned int)x;\n    return ((ux - 0x30u) < 10u) || (((ux & 0xffffffdfu) - 0x41u) < 26u);\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_05b522cb448f070e016a4a626ae3a48191927e5aa1dc0885db",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 526,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 252,
+    "output_tokens_details": {
+      "reasoning_tokens": 186
+    },
+    "total_tokens": 778
+  }
+}

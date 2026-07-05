@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: TinyCC::arm64-asm.c::is_valid_movw_shift::0010::b17f74db7409\nProject: TinyCC\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: int is_valid_movw_shift(int shift, int is_64bit)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/TinyCC_arm64-asm.c_is_valid_movw_shift_0010_b17f74db7409_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <is_valid_movw_shift>:\n   0:\tf7 c7 0f 00 00 80    \ttest   $0x8000000f,%edi\n   6:\t0f 94 c0             \tsete   %al\n   9:\t31 c9                \txor    %ecx,%ecx\n   b:\t85 f6                \ttest   %esi,%esi\n   d:\t0f 95 c1             \tsetne  %cl\n  10:\tc1 e1 05             \tshl    $0x5,%ecx\n  13:\t83 c9 10             \tor     $0x10,%ecx\n  16:\t39 f9                \tcmp    %edi,%ecx\n  18:\t0f 9d c1             \tsetge  %cl\n  1b:\t20 c1                \tand    %al,%cl\n  1d:\t0f b6 c1             \tmovzbl %cl,%eax\n  20:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint is_valid_movw_shift(int shift,int is_64bit)\n\n{\n  return (int)(shift <= (int)((uint)(is_64bit != 0) << 5 | 0x10) && (shift & 0x8000000fU) == 0);\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "TinyCC::arm64-asm.c::is_valid_movw_shift::0010::b17f74db7409::llm::clang_O2::P1",
+    "function_id": "TinyCC::arm64-asm.c::is_valid_movw_shift::0010::b17f74db7409",
+    "function_name": "is_valid_movw_shift",
+    "project": "TinyCC",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

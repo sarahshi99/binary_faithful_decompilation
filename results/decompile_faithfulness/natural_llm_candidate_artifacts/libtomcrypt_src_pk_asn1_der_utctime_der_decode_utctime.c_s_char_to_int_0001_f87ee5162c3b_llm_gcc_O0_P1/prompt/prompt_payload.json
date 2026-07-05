@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: libtomcrypt::src_pk_asn1_der_utctime_der_decode_utctime.c::s_char_to_int::0001::f87ee5162c3b\nProject: libtomcrypt\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: int s_char_to_int(unsigned char x)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/libtomcrypt_src_pk_asn1_der_utctime_der_decode_utctime.c_s_char_to_int_0001_f87ee5162c3b_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <s_char_to_int>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t89 f8                \tmov    %edi,%eax\n   6:\t88 45 fc             \tmov    %al,-0x4(%rbp)\n   9:\t0f b6 45 fc          \tmovzbl -0x4(%rbp),%eax\n   d:\t83 e8 30             \tsub    $0x30,%eax\n  10:\t83 f8 09             \tcmp    $0x9,%eax\n  13:\t77 52                \tja     67 <s_char_to_int+0x67>\n  15:\t89 c0                \tmov    %eax,%eax\n  17:\t48 8b 04 c5 00 00 00 \tmov    0x0(,%rax,8),%rax\n  1e:\t00 \n  1f:\tff e0                \tjmpq   *%rax\n  21:\tb8 00 00 00 00       \tmov    $0x0,%eax\n  26:\teb 44                \tjmp    6c <s_char_to_int+0x6c>\n  28:\tb8 01 00 00 00       \tmov    $0x1,%eax\n  2d:\teb 3d                \tjmp    6c <s_char_to_int+0x6c>\n  2f:\tb8 02 00 00 00       \tmov    $0x2,%eax\n  34:\teb 36                \tjmp    6c <s_char_to_int+0x6c>\n  36:\tb8 03 00 00 00       \tmov    $0x3,%eax\n  3b:\teb 2f                \tjmp    6c <s_char_to_int+0x6c>\n  3d:\tb8 04 00 00 00       \tmov    $0x4,%eax\n  42:\teb 28                \tjmp    6c <s_char_to_int+0x6c>\n  44:\tb8 05 00 00 00       \tmov    $0x5,%eax\n  49:\teb 21                \tjmp    6c <s_char_to_int+0x6c>\n  4b:\tb8 06 00 00 00       \tmov    $0x6,%eax\n  50:\teb 1a                \tjmp    6c <s_char_to_int+0x6c>\n  52:\tb8 07 00 00 00       \tmov    $0x7,%eax\n  57:\teb 13                \tjmp    6c <s_char_to_int+0x6c>\n  59:\tb8 08 00 00 00       \tmov    $0x8,%eax\n  5e:\teb 0c                \tjmp    6c <s_char_to_int+0x6c>\n  60:\tb8 09 00 00 00       \tmov    $0x9,%eax\n  65:\teb 05                \tjmp    6c <s_char_to_int+0x6c>\n  67:\tb8 64 00 00 00       \tmov    $0x64,%eax\n  6c:\t5d                   \tpop    %rbp\n  6d:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint s_char_to_int(uchar x)\n\n{\n  int iVar1;\n  uchar x_local;\n  \n  switch(x) {\n  case '0':\n    iVar1 = 0;\n    break;\n  case '1':\n    iVar1 = 1;\n    break;\n  case '2':\n    iVar1 = 2;\n    break;\n  case '3':\n    iVar1 = 3;\n    break;\n  case '4':\n    iVar1 = 4;\n    break;\n  case '5':\n    iVar1 = 5;\n    break;\n  case '6':\n    iVar1 = 6;\n    break;\n  case '7':\n    iVar1 = 7;\n    break;\n  case '8':\n    iVar1 = 8;\n    break;\n  case '9':\n    iVar1 = 9;\n    break;\n  default:\n    iVar1 = 100;\n  }\n  return iVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "libtomcrypt::src_pk_asn1_der_utctime_der_decode_utctime.c::s_char_to_int::0001::f87ee5162c3b::llm::gcc_O0::P1",
+    "function_id": "libtomcrypt::src_pk_asn1_der_utctime_der_decode_utctime.c::s_char_to_int::0001::f87ee5162c3b",
+    "function_name": "s_char_to_int",
+    "project": "libtomcrypt",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

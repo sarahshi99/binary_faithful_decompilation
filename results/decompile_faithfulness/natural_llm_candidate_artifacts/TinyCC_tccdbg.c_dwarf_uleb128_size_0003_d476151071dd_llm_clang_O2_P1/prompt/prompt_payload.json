@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: TinyCC::tccdbg.c::dwarf_uleb128_size::0003::d476151071dd\nProject: TinyCC\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: int dwarf_uleb128_size(unsigned long long value)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/TinyCC_tccdbg.c_dwarf_uleb128_size_0003_d476151071dd_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <dwarf_uleb128_size>:\n   0:\t31 c0                \txor    %eax,%eax\n   2:\t66 2e 0f 1f 84 00 00 \tnopw   %cs:0x0(%rax,%rax,1)\n   9:\t00 00 00 \n   c:\t0f 1f 40 00          \tnopl   0x0(%rax)\n  10:\t48 c1 ef 07          \tshr    $0x7,%rdi\n  14:\t83 c0 01             \tadd    $0x1,%eax\n  17:\t48 85 ff             \ttest   %rdi,%rdi\n  1a:\t75 f4                \tjne    10 <dwarf_uleb128_size+0x10>\n  1c:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint dwarf_uleb128_size(ulonglong value)\n\n{\n  int iVar1;\n  \n                    /* Unresolved local var: int size@[???] */\n  iVar1 = 0;\n  do {\n    value = value >> 7;\n    iVar1 = iVar1 + 1;\n  } while (value != 0);\n  return iVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "TinyCC::tccdbg.c::dwarf_uleb128_size::0003::d476151071dd::llm::clang_O2::P1",
+    "function_id": "TinyCC::tccdbg.c::dwarf_uleb128_size::0003::d476151071dd",
+    "function_name": "dwarf_uleb128_size",
+    "project": "TinyCC",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

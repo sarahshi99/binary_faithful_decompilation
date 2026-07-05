@@ -1,0 +1,8 @@
+{
+  "compile_probe_uses_fixtures_or_labels": false,
+  "compile_probe_uses_trusted_source": false,
+  "harness_source_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase1h_natural_llm/generation/compile_probe/TinyCC_arm64-asm.c_is_valid_movw_shift_0010_b17f74db7409_TinyCC_arm64-asm.c_is_valid_movw_shift_0010_b17f74db7409_llm_clang_O2_P1_08dd7393b748.c",
+  "ok": true,
+  "reason": "ok",
+  "stderr_tail": ""
+}

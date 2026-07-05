@@ -1,0 +1,33 @@
+{
+  "created_at": 1783259671,
+  "id": "resp_0307e7e6a5510a51016a4a6217486881919158fcd441d018b0",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int hasargs(int c)\n{\n    return c == 'f' || c == 'j';\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_0307e7e6a5510a51016a4a6217f2048191840d70fa53571ea3",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 578,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 25,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 603
+  }
+}

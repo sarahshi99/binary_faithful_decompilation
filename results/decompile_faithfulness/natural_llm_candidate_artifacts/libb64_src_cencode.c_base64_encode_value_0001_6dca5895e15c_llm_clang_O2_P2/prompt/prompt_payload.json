@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: libb64::src_cencode.c::base64_encode_value::0001::6dca5895e15c\nProject: libb64\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: char base64_encode_value(signed char value_in)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/libb64_src_cencode.c_base64_encode_value_0001_6dca5895e15c_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <base64_encode_value>:\n   0:\tb0 3d                \tmov    $0x3d,%al\n   2:\t40 80 ff 3f          \tcmp    $0x3f,%dil\n   6:\t7f 0a                \tjg     12 <base64_encode_value+0x12>\n   8:\t48 0f be c7          \tmovsbq %dil,%rax\n   c:\t8a 80 00 00 00 00    \tmov    0x0(%rax),%al\n  12:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nchar base64_encode_value(char value_in)\n\n{\n  char cVar1;\n  \n                    /* Unresolved local var: char * encoding@[???] */\n  cVar1 = '=';\n  if (value_in < '@') {\n    cVar1 = \"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/\"[value_in];\n  }\n  return cVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "libb64::src_cencode.c::base64_encode_value::0001::6dca5895e15c::llm::clang_O2::P2",
+    "function_id": "libb64::src_cencode.c::base64_encode_value::0001::6dca5895e15c",
+    "function_name": "base64_encode_value",
+    "project": "libb64",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

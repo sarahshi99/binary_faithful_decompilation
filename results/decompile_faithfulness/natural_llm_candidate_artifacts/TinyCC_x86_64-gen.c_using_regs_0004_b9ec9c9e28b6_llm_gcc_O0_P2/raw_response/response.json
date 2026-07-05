@@ -1,0 +1,40 @@
+{
+  "created_at": 1783258250,
+  "id": "resp_04a095587c2ad1a2016a4a5c8a902881919f1038b4da7bed27",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSlyQ7m-gj3oKnzxkoUzkYtH1GNidCpbgfcg4n393teFDEy7a_lDzNWANyzFVBSy2jM4DbHTV-2cRGgYDwH6Y63Id9N1j5CRjzYVtbZ9shNbZuQoHBglw0fiIyQH0xCQgum0dBxDJEyJfsbvtR3u1O1FTye9QIVZmeaUR-cMTt6QzImzm0_NahRbVS4LWeUA9kHFlSITxk95YGzylSdxaFjPOhMg2rP4qLgwyULGbZ1pn6EN_GuyHpYBNqBYHBtOcuQifXPyNsgxI2yhpQ0NpWfA5NmsWBtqcIJb6IeezcTt7eRoWXLnbhJv5qnDeQvCmWj8Ir4-qmemmMRboIXMUi5g_nfbHq1Q0Q-2Vkret9nj57qA8JrGlcFcPH-gQfeL-BmaQoKmkCr_XhqK8uaZXywYU5rOd77esOcCWSdN0u-lN5heGnHYwcBj2R69-5jdyNI6q3UoZDJ0G1FUTYV50VVsk3NTZH_GNrfqaZ7s9Hzkcv3VIpl6qQfMTEd27Zqd_W3Lf3mLS_JMpB3M0CNfUuFpXfYcH9hL4otqLtdh_UIaQHJFBQ7VED-mkl5ZIbY52tFnajDSbLJOykI14SKEQTM9S8gWLsmQ2TDSQF62TggY71F2Q3p8up1fEfQH6bCVfW8ZrHSm8Z_M879xOW7cVKpTSsOXqcjBqHPG2ueYVTSVHPIPQff6p6FffxkoBaO1kQ5Tplo1YLQ9NxjvxlneKIWjrzF-snJwh2dmRxFH6_287MOIYeebRKkEHIqgZe0YsrsloUHWsaJd8yj0L9cUPUqSsR7SDgxa3Ak5lMHAGXt092OcPfYzCQUbIguTLtP_RFgw4eBm5JiYD6B_D-exHrHK4J7xCR8EtIvhu9Obyg_6HuLNLlfswfoyl0xeydp8xZ7Vc8z0NqmjkLAadNan8xMd6X79Azwqn_cWDUEOjlj4vVKle9kzP0GKmHhyIZxSl8q5XZmAA9chieYuk0icBvYXZojKsH6Xez2nFHKe2Dvke_VKicM4mPuWMMuvi063B5e6yoYpXtur9RqXpdTxybu2ssnAuFQ0K3m5FQt7MoQYrvWR7zuDPuPwZZqMzwNSnlRryzOJ6aqhlev_p8SKPpLAQAIDwLDqW8OD--h5IeCheAA-HspTbuK-QQKbTBzizuBMjadM6o2V5oDJu3COoTpxSfnZWYadt1yi7BN-Mc1NtFryqmXoMwbeVfXt5PEcYokFtV-mT4e_92eg1_trKfWwkB3WJIjbyFuodfu_vuSHl1xjMZmhKZN_FrS4gYF4G4RBGtnK-o_vwXOSVxKzwJPqTbjNmd-_Lfu0nIdCz-rNOVpvvDOVrkD_3_kyRDWYs2BqsASPBhPKTQWEH7jIZHmTfXjeoa3YR3oT0sMPCyJJTzn4gO5IWIwYS-YfLtRD-NJFpnvzsbAGK5pLY96Q12ks8ozrce75VDGzOZmEQv1G8AIm_adfdFEO7pQI1EUjUJlJcd7bIrYFG3Td1nTRxtqUj0_1Vs0vpQX40f7HomFCY11gwLAjDfTygzB9pvG9xr87K",
+      "id": "item_QQd0PUhR1ez78Fxo",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int using_regs(int size) {\n    if (size <= 8 && ((((unsigned int)size - 1U) & (unsigned int)size) == 0U)) {\n        return 1;\n    }\n    return 0;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_04a095587c2ad1a2016a4a5c9086648191a7ff6ec99ddc8878",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 645,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 187,
+    "output_tokens_details": {
+      "reasoning_tokens": 130
+    },
+    "total_tokens": 832
+  }
+}

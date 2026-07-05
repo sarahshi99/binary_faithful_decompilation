@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: TinyCC::arm64-asm.c::is_valid_movw_shift::0010::b17f74db7409\nProject: TinyCC\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: int is_valid_movw_shift(int shift, int is_64bit)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/TinyCC_arm64-asm.c_is_valid_movw_shift_0010_b17f74db7409_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <is_valid_movw_shift>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t89 7d fc             \tmov    %edi,-0x4(%rbp)\n   7:\t89 75 f8             \tmov    %esi,-0x8(%rbp)\n   a:\t83 7d fc 00          \tcmpl   $0x0,-0x4(%rbp)\n   e:\t78 0a                \tjs     1a <is_valid_movw_shift+0x1a>\n  10:\t8b 45 fc             \tmov    -0x4(%rbp),%eax\n  13:\t83 e0 0f             \tand    $0xf,%eax\n  16:\t85 c0                \ttest   %eax,%eax\n  18:\t74 07                \tje     21 <is_valid_movw_shift+0x21>\n  1a:\tb8 00 00 00 00       \tmov    $0x0,%eax\n  1f:\teb 23                \tjmp    44 <is_valid_movw_shift+0x44>\n  21:\t83 7d f8 00          \tcmpl   $0x0,-0x8(%rbp)\n  25:\t74 07                \tje     2e <is_valid_movw_shift+0x2e>\n  27:\tb8 30 00 00 00       \tmov    $0x30,%eax\n  2c:\teb 05                \tjmp    33 <is_valid_movw_shift+0x33>\n  2e:\tb8 10 00 00 00       \tmov    $0x10,%eax\n  33:\t3b 45 fc             \tcmp    -0x4(%rbp),%eax\n  36:\t7d 07                \tjge    3f <is_valid_movw_shift+0x3f>\n  38:\tb8 00 00 00 00       \tmov    $0x0,%eax\n  3d:\teb 05                \tjmp    44 <is_valid_movw_shift+0x44>\n  3f:\tb8 01 00 00 00       \tmov    $0x1,%eax\n  44:\t5d                   \tpop    %rbp\n  45:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint is_valid_movw_shift(int shift,int is_64bit)\n\n{\n  int iVar1;\n  int is_64bit_local;\n  int shift_local;\n  \n  if ((shift < 0) || ((shift & 0xfU) != 0)) {\n    iVar1 = 0;\n  }\n  else {\n    if (is_64bit == 0) {\n      iVar1 = 0x10;\n    }\n    else {\n      iVar1 = 0x30;\n    }\n    if (iVar1 < shift) {\n      iVar1 = 0;\n    }\n    else {\n      iVar1 = 1;\n    }\n  }\n  return iVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "TinyCC::arm64-asm.c::is_valid_movw_shift::0010::b17f74db7409::llm::gcc_O0::P1",
+    "function_id": "TinyCC::arm64-asm.c::is_valid_movw_shift::0010::b17f74db7409",
+    "function_name": "is_valid_movw_shift",
+    "project": "TinyCC",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

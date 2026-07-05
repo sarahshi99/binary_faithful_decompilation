@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: sbase::cron.c::isleap::0001::0fde71268ef6\nProject: sbase\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: int isleap(int year)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sbase_cron.c_isleap_0001_0fde71268ef6_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <isleap>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t89 7d fc             \tmov    %edi,-0x4(%rbp)\n   7:\t8b 55 fc             \tmov    -0x4(%rbp),%edx\n   a:\t48 63 c2             \tmovslq %edx,%rax\n   d:\t48 69 c0 1f 85 eb 51 \timul   $0x51eb851f,%rax,%rax\n  14:\t48 c1 e8 20          \tshr    $0x20,%rax\n  18:\tc1 f8 07             \tsar    $0x7,%eax\n  1b:\t89 d1                \tmov    %edx,%ecx\n  1d:\tc1 f9 1f             \tsar    $0x1f,%ecx\n  20:\t29 c8                \tsub    %ecx,%eax\n  22:\t69 c8 90 01 00 00    \timul   $0x190,%eax,%ecx\n  28:\t89 d0                \tmov    %edx,%eax\n  2a:\t29 c8                \tsub    %ecx,%eax\n  2c:\t85 c0                \ttest   %eax,%eax\n  2e:\t75 07                \tjne    37 <isleap+0x37>\n  30:\tb8 01 00 00 00       \tmov    $0x1,%eax\n  35:\teb 3b                \tjmp    72 <isleap+0x72>\n  37:\t8b 55 fc             \tmov    -0x4(%rbp),%edx\n  3a:\t48 63 c2             \tmovslq %edx,%rax\n  3d:\t48 69 c0 1f 85 eb 51 \timul   $0x51eb851f,%rax,%rax\n  44:\t48 c1 e8 20          \tshr    $0x20,%rax\n  48:\tc1 f8 05             \tsar    $0x5,%eax\n  4b:\t89 d1                \tmov    %edx,%ecx\n  4d:\tc1 f9 1f             \tsar    $0x1f,%ecx\n  50:\t29 c8                \tsub    %ecx,%eax\n  52:\t6b c8 64             \timul   $0x64,%eax,%ecx\n  55:\t89 d0                \tmov    %edx,%eax\n  57:\t29 c8                \tsub    %ecx,%eax\n  59:\t85 c0                \ttest   %eax,%eax\n  5b:\t75 07                \tjne    64 <isleap+0x64>\n  5d:\tb8 00 00 00 00       \tmov    $0x0,%eax\n  62:\teb 0e                \tjmp    72 <isleap+0x72>\n  64:\t8b 45 fc             \tmov    -0x4(%rbp),%eax\n  67:\t83 e0 03             \tand    $0x3,%eax\n  6a:\t85 c0                \ttest   %eax,%eax\n  6c:\t0f 94 c0             \tsete   %al\n  6f:\t0f b6 c0             \tmovzbl %al,%eax\n  72:\t5d                   \tpop    %rbp\n  73:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint isleap(int year)\n\n{\n  uint uVar1;\n  int year_local;\n  \n  if (year % 400 == 0) {\n    uVar1 = 1;\n  }\n  else if (year % 100 == 0) {\n    uVar1 = 0;\n  }\n  else {\n    uVar1 = (uint)((year & 3U) == 0);\n  }\n  return uVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "sbase::cron.c::isleap::0001::0fde71268ef6::llm::gcc_O0::P2",
+    "function_id": "sbase::cron.c::isleap::0001::0fde71268ef6",
+    "function_name": "isleap",
+    "project": "sbase",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

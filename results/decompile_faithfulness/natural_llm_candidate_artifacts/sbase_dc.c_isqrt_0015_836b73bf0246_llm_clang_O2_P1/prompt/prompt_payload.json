@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: sbase::dc.c::isqrt::0015::836b73bf0246\nProject: sbase\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: int isqrt(int n)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sbase_dc.c_isqrt_0015_836b73bf0246_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <isqrt>:\n   0:\t85 ff                \ttest   %edi,%edi\n   2:\t7e 35                \tjle    39 <isqrt+0x39>\n   4:\tb9 01 00 00 00       \tmov    $0x1,%ecx\n   9:\t83 ff 01             \tcmp    $0x1,%edi\n   c:\t74 28                \tje     36 <isqrt+0x36>\n   e:\t8d 47 01             \tlea    0x1(%rdi),%eax\n  11:\tc1 e8 1f             \tshr    $0x1f,%eax\n  14:\t8d 14 07             \tlea    (%rdi,%rax,1),%edx\n  17:\t83 c2 01             \tadd    $0x1,%edx\n  1a:\td1 fa                \tsar    %edx\n  1c:\t39 fa                \tcmp    %edi,%edx\n  1e:\t7d 1c                \tjge    3c <isqrt+0x3c>\n  20:\t89 d1                \tmov    %edx,%ecx\n  22:\t89 f8                \tmov    %edi,%eax\n  24:\t99                   \tcltd   \n  25:\tf7 f9                \tidiv   %ecx\n  27:\t01 c8                \tadd    %ecx,%eax\n  29:\t89 c2                \tmov    %eax,%edx\n  2b:\tc1 ea 1f             \tshr    $0x1f,%edx\n  2e:\t01 c2                \tadd    %eax,%edx\n  30:\td1 fa                \tsar    %edx\n  32:\t39 ca                \tcmp    %ecx,%edx\n  34:\t7c ea                \tjl     20 <isqrt+0x20>\n  36:\t89 c8                \tmov    %ecx,%eax\n  38:\tc3                   \tretq   \n  39:\t31 c0                \txor    %eax,%eax\n  3b:\tc3                   \tretq   \n  3c:\t89 f8                \tmov    %edi,%eax\n  3e:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint isqrt(int n)\n\n{\n  int iVar1;\n  int iVar2;\n  \n                    /* Unresolved local var: int x@[???]\n                       Unresolved local var: int x1@[???] */\n  if (n < 1) {\n    return 0;\n  }\n  iVar1 = 1;\n  if (n != 1) {\n    iVar2 = (n - (n + 1 >> 0x1f)) + 1 >> 1;\n    if (n <= iVar2) {\n      return n;\n    }\n    do {\n      iVar1 = iVar2;\n      iVar2 = (n / iVar1 + iVar1) / 2;\n    } while (iVar2 < iVar1);\n  }\n  return iVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "sbase::dc.c::isqrt::0015::836b73bf0246::llm::clang_O2::P1",
+    "function_id": "sbase::dc.c::isqrt::0015::836b73bf0246",
+    "function_name": "isqrt",
+    "project": "sbase",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: chibicc::tokenize.c::from_hex::0005::45632cc30325\nProject: chibicc\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: int from_hex(char c)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/chibicc_tokenize.c_from_hex_0005_45632cc30325_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <from_hex>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t89 f8                \tmov    %edi,%eax\n   6:\t88 45 fc             \tmov    %al,-0x4(%rbp)\n   9:\t80 7d fc 2f          \tcmpb   $0x2f,-0x4(%rbp)\n   d:\t7e 0f                \tjle    1e <from_hex+0x1e>\n   f:\t80 7d fc 39          \tcmpb   $0x39,-0x4(%rbp)\n  13:\t7f 09                \tjg     1e <from_hex+0x1e>\n  15:\t0f be 45 fc          \tmovsbl -0x4(%rbp),%eax\n  19:\t83 e8 30             \tsub    $0x30,%eax\n  1c:\teb 1c                \tjmp    3a <from_hex+0x3a>\n  1e:\t80 7d fc 60          \tcmpb   $0x60,-0x4(%rbp)\n  22:\t7e 0f                \tjle    33 <from_hex+0x33>\n  24:\t80 7d fc 66          \tcmpb   $0x66,-0x4(%rbp)\n  28:\t7f 09                \tjg     33 <from_hex+0x33>\n  2a:\t0f be 45 fc          \tmovsbl -0x4(%rbp),%eax\n  2e:\t83 e8 57             \tsub    $0x57,%eax\n  31:\teb 07                \tjmp    3a <from_hex+0x3a>\n  33:\t0f be 45 fc          \tmovsbl -0x4(%rbp),%eax\n  37:\t83 e8 37             \tsub    $0x37,%eax\n  3a:\t5d                   \tpop    %rbp\n  3b:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint from_hex(char c)\n\n{\n  int iVar1;\n  char c_local;\n  \n  if ((c < '0') || ('9' < c)) {\n    if ((c < 'a') || ('f' < c)) {\n      iVar1 = c + -0x37;\n    }\n    else {\n      iVar1 = c + -0x57;\n    }\n  }\n  else {\n    iVar1 = c + -0x30;\n  }\n  return iVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "chibicc::tokenize.c::from_hex::0005::45632cc30325::llm::gcc_O0::P2",
+    "function_id": "chibicc::tokenize.c::from_hex::0005::45632cc30325",
+    "function_name": "from_hex",
+    "project": "chibicc",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

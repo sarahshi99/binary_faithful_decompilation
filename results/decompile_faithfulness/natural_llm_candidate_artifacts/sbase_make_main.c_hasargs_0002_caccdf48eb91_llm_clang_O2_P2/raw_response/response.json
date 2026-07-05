@@ -1,0 +1,40 @@
+{
+  "created_at": 1783259659,
+  "id": "resp_0d8889837104ea60016a4a620b32688191a4199eb649aa72a1",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSmISDAtBduYEK25TrfO4-jPJuOkr5r1FLEPmClHUtRIfVjeYgETBb2IgcQsnhvSJ9zQ0oIkvXUAzscLzOJk9BNRerfpfAoVG3MVEJPrePHRuh9rJxEzXA08NfAx8stavgSBUeLKNTsznTdoCETK4qvIiXaTniVAfQe7WS_bg08U4ojktXivIK9Pe2n2BySXRpAE1A6O8r-EeW5Ooca4Jn82Vx67m6TS2KEwXwZNO_MucyDytL7S1VYRhmscn0-y7QDj9riNBdx4HZj0j30o_wOIeiOqVEuGbUYfbpejg0yaclxG7Viq8-KRvGLwL3yIFHtrjzHXrrLZiUuMLC8811wwu3vvWaC_7Pti0JUq3or4HOyD4wQY4beTR-W7oN8v6sbqT9ES4-FoxAk7e5z4739OEutncqj4pQPYT4L5h6e_-1qxBDJXoCCJLOJ0ZezBAZxpED5rCj0g3P4FHdRCMg3yUozVK0ZG25eqsej4XXtS_ew-vVhefp4xIRnufHOf9Y11wpX1LWkpjuCKNQTc0Bb_qLemHrXgWFn3cMPeIqdz0aAF-0yCuYcExKsbC7S2NyB-mcVqXVT1fKPkIpnal73aPROvtrGcl3opIfl1x87CQJyqnamJjRdRPalC0tVpu_Rf-EYHu39e3PxcgNamg-URR5G08kJRoFMowlBPpYAcxkdMuaKYwNyAljbz1lg0Zbd_zA9tRakZ5XCjK8upG4hJvksM2gny-YOs2FTj2rIDmNXPO-2Rmx1Rap0wXqkdg0qqgfo9NZ6JI7AHOL6k4DuTZ6mUzs6T1ouy24VM5vDCQjAvIeBQeBfJzEJ2-CUXzP95MUIjf3mzFf3n-j7bPS7vPgeZT8wpUkEuz8bSWpD5za-1CavOTWkorU8HMG_L0c5lMD_YTwJpmxEMLXORchHMo8mCbfx3Tz38eg7uo3Ab3kVc1wrEmiZkT6T0ekBbWq4abGSy2GOf3SuaeXfdZhjiQlBXK-R5SrsIBnJEx1MmVQuaqO5GY6Q9p28JCHgeMWirba78fWV-lCxv0HrciaGfCuV7wp7tVklU0YsGSjbdoLPNIShTb7_HC-_VG8UyykbdJwf2fWz0MdUfI0gyAUgwNBb-U7RSKThBb2NlSh7RryvcLC_XCI3Sw02_eAjR7JtllYiSD-JD_5sbDEuckQiw3fgEnny2CAiHlDvVvSl26Q9yREP34rgdDp_jV56jhXaJCu8RL42c39HepQkeR51ojAdapv6CqiAPZZ-HqvNwpw7g2srbkDIX3E_hDpkW7wCWsrVSNIIhm6I7e2WQ7NH4TEdeB6TdIw9f8kbhUNkfKhGwZHMnHmgXDiRyRjvWazxWm4EIFnjASKTGVNnjyDGw4J0PJFZdyYfgmvMy4Q7lKjoTCUasYt5De9UjtvTaCXSIg2j_2g16ON89zJpBM_1G0Q8gRM-2VwiOScwMB-Su0RQnFdFfSYDtH0SHBK4XCQnCHYS1A9BDCDW0lhUGYAQRMZ1h9y-AjGVXiF8djlD3E6Z9pMZH1dV8UofXUlENevUhFb8jF6bpTAnpwNPxQoE5u0hqkTw6KhPkkDmYmiSDFkhduiebo6k-ldv-ChTQ14v2HU8YYG9vtt0d_vSBNrTB-qg==",
+      "id": "item_rN4vbm5RKAiCdFlC",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int hasargs(int c)\n{\n    unsigned int x = (unsigned int)c - 0x66u;\n    return (x & 0xfffffffbu) == 0;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_0d8889837104ea60016a4a6212b7b8819184c53cccc9db8537",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 370,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 204,
+    "output_tokens_details": {
+      "reasoning_tokens": 159
+    },
+    "total_tokens": 574
+  }
+}

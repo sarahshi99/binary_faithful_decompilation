@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: mbedtls::library_x509.c::nibble_to_hex_digit::0015::b855ad07642b\nProject: mbedtls\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: char nibble_to_hex_digit(int i)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/mbedtls_library_x509.c_nibble_to_hex_digit_0015_b855ad07642b_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <nibble_to_hex_digit>:\n   0:\t83 ff 0a             \tcmp    $0xa,%edi\n   3:\tb9 30 00 00 00       \tmov    $0x30,%ecx\n   8:\tb8 37 00 00 00       \tmov    $0x37,%eax\n   d:\t0f 4c c1             \tcmovl  %ecx,%eax\n  10:\t01 f8                \tadd    %edi,%eax\n  12:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nchar nibble_to_hex_digit(int i)\n\n{\n  char cVar1;\n  \n  cVar1 = '7';\n  if (i < 10) {\n    cVar1 = '0';\n  }\n  return cVar1 + (char)i;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "mbedtls::library_x509.c::nibble_to_hex_digit::0015::b855ad07642b::llm::clang_O2::P2",
+    "function_id": "mbedtls::library_x509.c::nibble_to_hex_digit::0015::b855ad07642b",
+    "function_name": "nibble_to_hex_digit",
+    "project": "mbedtls",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

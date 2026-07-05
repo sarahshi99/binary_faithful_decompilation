@@ -1,0 +1,40 @@
+{
+  "created_at": 1783258041,
+  "id": "resp_0f042abc8c16cf06016a4a5bb9904c8191b0ceb49401729b74",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSlu_9mT99POA8xJ40ix6VbIuB3Had5GuN9uS0HihVyCYxqZxqb7LRyHJnFEg1_LzR_vY8JB2ZChca9nFWv6ttHaWfNFGylQLzfwI0_2pDbQfaCmTUHVQfs6ABlxXB3byEWbwdOZGncGW5Goux0nP4rKcXVM1Ubv9PT-1fJks-ICvncvNL5SdjXeESFE2cJ45gFMBVVr2a8D1K6_p4vz5rnCktHLFxQ-soMbH-GZJM_r7vwyTg62XSezRLpWhd_hdc6Yx-oZq76_27Yak3pMRO3ZnR-MFeIgrz2pY8j0ZP8yoSQvaoSboCgKxjIOzVFi6JuYj2SWNU9zkiOywwQALtnSzbULhCJEfOEvYO8e5odVi-6MsJKQ9_lrl2GFNIA3ZNlmcYTXZyEdE9sSnQvDhTZ7-RACty7dVJdwTwxDcsnHI4HGzH5Gn6I2UK_HSVGaMrmTATXYWPZqgGtmwFSBDpg5FzyBF-WYlGnmKmbaPKu83K8OPEIZgg_rSylIRfzyDYJBRKGR8T2RNA7_htTOiQzMNjlXyt5g_lkcJjf0y_nYxNtgbHCnM7frNUyPQ5uAbNh0R23s7pscIIP14cST6_28T0I7FylcPC_XEZOzLXRgLzZA73uoNH16YRNXCp4ezIFdBQkF3AMyQTM5QEA4psWyv3ixP5s4gSqVyoOmpC5Gxym4ZIx5xlDDVwx_752bLoGJLF69y3WOd9XZX9sJOtZcf10FLH2fwplYg-HK_X_49Np5y30apV9QWwrhrApHZrwI0zRm7n_nmNWIgJh2DCIj3zBg7a3JWNKHBpSLG2w7_eiwagm_alF9tiiwcn-CpE1MoTThikIBNPpJYSqb5WSbtGKeSqGp9_Aoy9aRpWYfWuxBfwxrEskD68b4ItpXhsDLpHAMReljUHqQu05zjRhxLrxzT_xmF5-5F9gORI61gCYtfg-q_ujEnQd7Mjlmd0QNC6KUzQgc-NeNMLcvDZwqkIJcxpS_m-N7S3VsuHiD6ukdYGpAe2wIkKl8Iny2lcfLjjo4kwWJ6MoxiCD3VpFyYsnopcZo5IE4XWJ4DhQfj9RaF_jxZSam1sGlUic7LkqWoYZvWMU-f2ruLcz6B8QkDhaHAhAnpVgHWVgM6yfHl3AcfhcvuKLKuvAPRQB-YWrqYyqUoZyBUIiwbirGEA1bTVVNKbTW7fKSbkw0xyIpo7_onT6Vt37iSPbV60CftwAag4AREg3lv-6o-zgf932PLMILpUl1SbnLOLW_Mf4Gk5Jjaw1VXJPf30oIiEN8d3JWSAeA_SUrLly6zP1nu6CnsL4JPFidCrY9EcaETB6CwOQt_b9L8j1dQ0r9zAemuWXKqgmB5ecs2hItZNMcbp8eEaGkbXrpqJfwc4fWzvT7ZvYP_wS0PFCcyEvF8PeHd_MuNZuIbIx7agN1bgWSXehfmca0l7qvXrsTCxLkoI6scoA-qcSCBojOBF2iIWUGF8_2aRJ8P1E2nEPQQr9s6h8DTRLrHzHzgzWeSqvq1EtsfFgvIb3ajL1w0KjvbfODiUyn4XwN4wJivPdXRVAAgGayV-Zoiz2an2M2GczAavzCGRyX3y0s7S8uDPahHfK_9UnBuSN3CRRio8_mVNmfQYV54_Q==",
+      "id": "item_aIcFbHuh9M4SJcMx",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int isid(int c)\n{\n    return c == '_' || (unsigned int)(c - '0') < 10U || (unsigned int)((c & 0xffffffdfU) - 'A') < 26U;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_0f042abc8c16cf06016a4a5bbfe47881918af489ffee65ae6c",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 572,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 199,
+    "output_tokens_details": {
+      "reasoning_tokens": 144
+    },
+    "total_tokens": 771
+  }
+}

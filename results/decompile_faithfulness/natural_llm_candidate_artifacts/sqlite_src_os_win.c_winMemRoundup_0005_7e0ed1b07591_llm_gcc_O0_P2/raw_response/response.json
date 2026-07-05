@@ -1,0 +1,40 @@
+{
+  "created_at": 1783260206,
+  "id": "resp_0322287b559080a2016a4a642e4e788190a78b5ceaa885fe03",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSmQz8TAYL0OQaS27XkzTDJX9ThIc4h4CPUPbRDZanve8wQROL9HnDNsTOHewizqxRZ-fIOsgB4iztyp7PSt2w3Eoh8RvPeDQkrQdXVdYjOIaOddjUDKXmd6FwNq17rQeOWE-SmQn1wSI4GymjD4Vzw_ISEw6C99bELtsse8Vg0VfNOv-i5Qbp-v3cwgJGCrPd8CAfmxNwKccrVAd-HpB596YndDNfUeWQHI1hiIbl_ihmj63r1aVP1m5YatlngLG-TUHGBi2K0N3jg9BC00Lwz_9V-R4b3vC-3xyCKwtKzPdz7Ysx95fF7pkgBlran_CqwrzYuQ3tlPgXS4nohejWNMfQbqBfrCewsiLp7Q2BSgn8e36rMCVG0Hgsf6SyUHgjtmnyQzG9RJ0HijneywOrtEywlp1BRVwNU6vZ54oA7r42bROBYjSsleqZQo05G9FuhTneyAo2olrkRHHnuN9CD9B5OeOkOVE664lZsvyaARis8M2NisDSvy5w9U5jGrBu1DHowu-uBPMkQZshTxjyC8UQqegsXBLb3R5fXtvl8unVnxH58_ieSAtvprJJeUZX48VHa5lzzoSgfvPYgGjDYJM-7zHto_wFF7dPAdplHdfx1GgcZkvKu-3SlBWjU2ap-Ic6WHwlWoeCC827F9f-gShBK4Az49iGbn_xkxrukPSaEMaeWdVg6wHNDzFjv3qBW-hUoeuXDroDAEh-ASVw4Y-zBCFL1cjEAEFTBnE-39L-46FGVjtKhJAYtfTqQ9uZyyxeWAFvWunG-c1aWIX1i8WpYuJwg5dV82UgRJhgxvZ_3a2NkU6WlVR846FtFDi147hKjWwDYfxJF2P8RFIkvGC6OF_eCQ0ctsTDLvAGvINNbg-HSnTeiDiSd3PwaRdjUK0PFnMOA6b8p0zCOtiHGeJjkeczzYoPjXEVpQ4lOWSgWZotuO314ppyp3-VjJHRjEWXJJiAnZhFSQct8G637ltzA==",
+      "id": "item_S125t22XqziEtitk",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int winMemRoundup(int n) {\n    return n;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_0322287b559080a2016a4a64336f1c8190ade525118077de9f",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 387,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 31,
+    "output_tokens_details": {
+      "reasoning_tokens": 11
+    },
+    "total_tokens": 418
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "created_at": 1783259119,
+  "id": "resp_0928a0e90624c4fd016a4a5feff0188191b8eabbf3d41f9490",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSl_0bwrzh4CNoauoPQeEcV9fklXNn0vF3TChuY9EHX_q7z_KUOSlQvDXa359qAPthgUIzHq5qzO6wRuVO2ArbNP0TW-vnsItQD7tayq6R_qnjMR_N19qHsvdy1Q3pRxms4EGT_qyRZ8NVeQu5t9b7qinYLHDC4iJ0EsysQVS26sMibi1HJ1aV8rMMVfaFuX4sYUStJYiOH4WeXkCoNWmizpTN0tCYFEAcxa_PmFtOPNyx2qt1VW_tgTS-2ZWlFaC1md4T8Hs5AuDTz9MGvVfchfOHbicouzFSvTyurY499WhBVS1fjN4F2Q9UKj3FJQJInSYvnGO0Y93mIY9s1ErZL9SApd801yYP-ytOcv6FghXX30Ha7alqAFxFuint3kl1X6kZk_RGWszxcTazBBkiNDIGoB5mBvTfJcKGA9yJCQRiE2zqGqHEWkZyLC1PsYwWTzl2-vtGdLqm7pQA8Y8U5inkhsJ-dsTbBZpBgvFDebnBbgSRqfQi_HXqWxTxNSlDndyod05rQZGLFEDkaYTmRBKu602p5EaTH16kfSlTgwBGzq8Wt5QvT9T2PkrMhiYipIr6ljvg9EON_s44Bqbhe_cV3li4_7hnooOQEMuxUTgf7XEZqS2uVQo8ekhU0SKAznNBDwuCl3Bl-MbO-a6nw_fG3CwzeLGaxsYb5hreJPsA3zdZ6qprK0ZzYd_Bc-jvNLiyWOQPKEp3JzYpbvkbrnnIrNRCBdtmkwu6ZlWbwkVJbyJn-aVDJZSRk_NCclgblElc6Lpvtbomwb5Czsob4zY0ymkV-UZmSprrZBZRt22ziKZKL_6VFGL6V3VMnRMRKitCPaPAL4o_tf7c_9kCYPlMW_053Q4gAPRtxKL-lbgjXXBaXujN018wWkGnb5QoquYTtBlEa8zBV2tFi3fFX41Y2krDCp4P5CWSS9KEZ47PjWHwhrfEJWiOqh2m3DNJeLhm-4ySJEP7-VnZKoOvpvx4gBN8Xjr3lxS11AGbIxQFyPtNXd6tv1uQDMLgqBz6oNu_0PwMuKbn4HAWS_y5BXPFY9txsXrHke8iCvG_DWF8rfmusfrHy-cM-lP2ta9a1CyhHG_wxTxTFC1KOpUTCyhR914P_k0TiaaWYZK7P2peGroNZ2eBPNwx7ZD0EzON5MU7YG_FkVx57RvOLSpqpDFGMaUv_r50vw6uLyniVDcDb3HFfIbM3EcSWURD-4sOOftoIEDgjabBHCOkJnEQDwcFFmfV7fL9ytT2o8ilvQmael3UNecpZbyYE-VrAS9KLmQmkx8B--Jhba17ng7e9oxV4-fyQ3pKzQ8L3sjeJkbVN_gupPGhfG8rXx7H32zPdME-72BlJq6k6wvfQ8TkEf2KQ==",
+      "id": "item_kqM0nR75oJr9v8s1",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int hexval(unsigned int c)\n{\n\tif (c - '0' < 10) return c - '0';\n\tc |= 32;\n\tif (c - 'a' < 6) return c - 'W';\n\treturn -1;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_0928a0e90624c4fd016a4a5ff4dd6081919008bcaa33f4bd9b",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 804,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 152,
+    "output_tokens_details": {
+      "reasoning_tokens": 94
+    },
+    "total_tokens": 956
+  }
+}

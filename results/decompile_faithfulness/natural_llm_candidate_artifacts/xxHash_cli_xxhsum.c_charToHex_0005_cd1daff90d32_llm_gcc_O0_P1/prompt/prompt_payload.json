@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: xxHash::cli_xxhsum.c::charToHex::0005::cd1daff90d32\nProject: xxHash\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: int charToHex(char c)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/xxHash_cli_xxhsum.c_charToHex_0005_cd1daff90d32_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <charToHex>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t89 f8                \tmov    %edi,%eax\n   6:\t88 45 ec             \tmov    %al,-0x14(%rbp)\n   9:\tc7 45 fc ff ff ff ff \tmovl   $0xffffffff,-0x4(%rbp)\n  10:\t80 7d ec 2f          \tcmpb   $0x2f,-0x14(%rbp)\n  14:\t7e 12                \tjle    28 <charToHex+0x28>\n  16:\t80 7d ec 39          \tcmpb   $0x39,-0x14(%rbp)\n  1a:\t7f 0c                \tjg     28 <charToHex+0x28>\n  1c:\t0f be 45 ec          \tmovsbl -0x14(%rbp),%eax\n  20:\t83 e8 30             \tsub    $0x30,%eax\n  23:\t89 45 fc             \tmov    %eax,-0x4(%rbp)\n  26:\teb 2e                \tjmp    56 <charToHex+0x56>\n  28:\t80 7d ec 40          \tcmpb   $0x40,-0x14(%rbp)\n  2c:\t7e 12                \tjle    40 <charToHex+0x40>\n  2e:\t80 7d ec 46          \tcmpb   $0x46,-0x14(%rbp)\n  32:\t7f 0c                \tjg     40 <charToHex+0x40>\n  34:\t0f be 45 ec          \tmovsbl -0x14(%rbp),%eax\n  38:\t83 e8 37             \tsub    $0x37,%eax\n  3b:\t89 45 fc             \tmov    %eax,-0x4(%rbp)\n  3e:\teb 16                \tjmp    56 <charToHex+0x56>\n  40:\t80 7d ec 60          \tcmpb   $0x60,-0x14(%rbp)\n  44:\t7e 10                \tjle    56 <charToHex+0x56>\n  46:\t80 7d ec 66          \tcmpb   $0x66,-0x14(%rbp)\n  4a:\t7f 0a                \tjg     56 <charToHex+0x56>\n  4c:\t0f be 45 ec          \tmovsbl -0x14(%rbp),%eax\n  50:\t83 e8 57             \tsub    $0x57,%eax\n  53:\t89 45 fc             \tmov    %eax,-0x4(%rbp)\n  56:\t8b 45 fc             \tmov    -0x4(%rbp),%eax\n  59:\t5d                   \tpop    %rbp\n  5a:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint charToHex(char c)\n\n{\n  char c_local;\n  int result;\n  \n  result = -1;\n  if ((c < '0') || ('9' < c)) {\n    if ((c < 'A') || ('F' < c)) {\n      if (('`' < c) && (c < 'g')) {\n        result = c + -0x57;\n      }\n    }\n    else {\n      result = c + -0x37;\n    }\n  }\n  else {\n    result = c + -0x30;\n  }\n  return result;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "xxHash::cli_xxhsum.c::charToHex::0005::cd1daff90d32::llm::gcc_O0::P1",
+    "function_id": "xxHash::cli_xxhsum.c::charToHex::0005::cd1daff90d32",
+    "function_name": "charToHex",
+    "project": "xxHash",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

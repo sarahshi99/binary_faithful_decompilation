@@ -1,0 +1,8 @@
+{
+  "compile_probe_uses_fixtures_or_labels": false,
+  "compile_probe_uses_trusted_source": false,
+  "harness_source_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase1h_natural_llm/generation/compile_probe/musl_src_network_inet_pton.c_hexval_0001_a0a6dbc2a411_musl_src_network_inet_pton.c_hexval_0001_a0a6dbc2a411_llm_gcc_O0_P1_db407f11d7ed.c",
+  "ok": true,
+  "reason": "ok",
+  "stderr_tail": ""
+}

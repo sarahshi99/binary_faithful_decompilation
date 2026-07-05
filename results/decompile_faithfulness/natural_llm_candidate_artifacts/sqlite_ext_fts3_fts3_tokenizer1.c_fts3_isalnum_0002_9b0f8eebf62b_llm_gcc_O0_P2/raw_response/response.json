@@ -1,0 +1,33 @@
+{
+  "created_at": 1783259977,
+  "id": "resp_08e9a834fb646fe2016a4a634965448195923d787aa3a446f1",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int fts3_isalnum(int x)\n{\n    if ((((x < 0x30) || (0x39 < x)) && ((x < 0x41 || (0x5a < x)))) && ((x < 0x61 || (0x7a < x)))) {\n        return 0;\n    }\n    return 1;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_08e9a834fb646fe2016a4a634a423c8195b913f0a052fa826b",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 887,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 81,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 968
+  }
+}

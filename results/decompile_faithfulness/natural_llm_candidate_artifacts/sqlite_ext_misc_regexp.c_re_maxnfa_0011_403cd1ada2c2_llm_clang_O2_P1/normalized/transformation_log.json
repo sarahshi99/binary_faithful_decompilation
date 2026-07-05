@@ -1,0 +1,14 @@
+{
+  "allowed_operations": [
+    "remove_markdown_fences",
+    "extract_first_complete_c_function",
+    "replace_declaration_with_required_signature",
+    "syntax_only_parameter_name_alignment"
+  ],
+  "candidate_id": "sqlite::ext_misc_regexp.c::re_maxnfa::0011::403cd1ada2c2::llm::clang_O2::P1",
+  "consulted_fixtures_or_labels": false,
+  "consulted_trusted_source": false,
+  "forbidden_semantic_repair_used": false,
+  "parse_reason": "ok",
+  "parse_status": "parsed_function"
+}

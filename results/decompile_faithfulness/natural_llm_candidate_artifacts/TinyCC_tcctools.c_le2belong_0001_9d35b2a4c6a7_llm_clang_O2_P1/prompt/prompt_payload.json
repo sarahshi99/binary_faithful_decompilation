@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: TinyCC::tcctools.c::le2belong::0001::9d35b2a4c6a7\nProject: TinyCC\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: unsigned long le2belong(unsigned long ul)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/TinyCC_tcctools.c_le2belong_0001_9d35b2a4c6a7_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <le2belong>:\n   0:\t48 89 f8             \tmov    %rdi,%rax\n   3:\t48 89 f9             \tmov    %rdi,%rcx\n   6:\t48 c1 e9 08          \tshr    $0x8,%rcx\n   a:\t81 e1 00 ff 00 00    \tand    $0xff00,%ecx\n  10:\t89 c2                \tmov    %eax,%edx\n  12:\tc1 ea 18             \tshr    $0x18,%edx\n  15:\t48 09 ca             \tor     %rcx,%rdx\n  18:\t89 c1                \tmov    %eax,%ecx\n  1a:\tc1 e1 18             \tshl    $0x18,%ecx\n  1d:\t48 09 d1             \tor     %rdx,%rcx\n  20:\tc1 e0 08             \tshl    $0x8,%eax\n  23:\t25 00 00 ff 00       \tand    $0xff0000,%eax\n  28:\t48 09 c8             \tor     %rcx,%rax\n  2b:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nulong le2belong(ulong ul)\n\n{\n  return (ulong)(((uint)ul & 0xff00) << 8) |\n         (ulong)((uint)ul << 0x18) | ul >> 0x18 & 0xff | (ulong)((uint)(ul >> 8) & 0xff00);\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "TinyCC::tcctools.c::le2belong::0001::9d35b2a4c6a7::llm::clang_O2::P1",
+    "function_id": "TinyCC::tcctools.c::le2belong::0001::9d35b2a4c6a7",
+    "function_name": "le2belong",
+    "project": "TinyCC",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

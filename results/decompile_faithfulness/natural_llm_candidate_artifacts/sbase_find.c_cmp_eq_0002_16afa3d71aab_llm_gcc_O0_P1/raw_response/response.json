@@ -1,0 +1,33 @@
+{
+  "created_at": 1783259582,
+  "id": "resp_06793096deaffafd016a4a61be71148191a98f4e3108a36235",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int cmp_eq(int a, int b)\n{\n    return a == b;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_06793096deaffafd016a4a61bf6e108191a033ad790cc508f1",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 467,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 21,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 488
+  }
+}

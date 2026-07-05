@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: musl::src_ctype_isspace.c::isspace::0001::93f674d2bcdd\nProject: musl\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: int isspace(int c)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/musl_src_ctype_isspace.c_isspace_0001_93f674d2bcdd_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <isspace>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t89 7d fc             \tmov    %edi,-0x4(%rbp)\n   7:\t83 7d fc 20          \tcmpl   $0x20,-0x4(%rbp)\n   b:\t74 0b                \tje     18 <isspace+0x18>\n   d:\t8b 45 fc             \tmov    -0x4(%rbp),%eax\n  10:\t83 e8 09             \tsub    $0x9,%eax\n  13:\t83 f8 04             \tcmp    $0x4,%eax\n  16:\t77 07                \tja     1f <isspace+0x1f>\n  18:\tb8 01 00 00 00       \tmov    $0x1,%eax\n  1d:\teb 05                \tjmp    24 <isspace+0x24>\n  1f:\tb8 00 00 00 00       \tmov    $0x0,%eax\n  24:\t5d                   \tpop    %rbp\n  25:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint isspace(int c)\n\n{\n  int iVar1;\n  int c_local;\n  \n  if ((c == 0x20) || (c - 9U < 5)) {\n    iVar1 = 1;\n  }\n  else {\n    iVar1 = 0;\n  }\n  return iVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "musl::src_ctype_isspace.c::isspace::0001::93f674d2bcdd::llm::gcc_O0::P1",
+    "function_id": "musl::src_ctype_isspace.c::isspace::0001::93f674d2bcdd",
+    "function_name": "isspace",
+    "project": "musl",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

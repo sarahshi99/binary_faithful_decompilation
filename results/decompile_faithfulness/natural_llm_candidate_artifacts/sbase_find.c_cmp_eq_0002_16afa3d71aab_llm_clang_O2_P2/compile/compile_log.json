@@ -1,0 +1,8 @@
+{
+  "compile_probe_uses_fixtures_or_labels": false,
+  "compile_probe_uses_trusted_source": false,
+  "harness_source_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase1h_natural_llm/generation/compile_probe/sbase_find.c_cmp_eq_0002_16afa3d71aab_sbase_find.c_cmp_eq_0002_16afa3d71aab_llm_clang_O2_P2_08dd7393b748.c",
+  "ok": true,
+  "reason": "ok",
+  "stderr_tail": ""
+}

@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: sbase::make_parser.c::internal::0007::6720595969ae\nProject: sbase\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: int internal(int ch)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sbase_make_parser.c_internal_0007_6720595969ae_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <internal>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t89 7d fc             \tmov    %edi,-0x4(%rbp)\n   7:\t8b 45 fc             \tmov    -0x4(%rbp),%eax\n   a:\t83 e8 2a             \tsub    $0x2a,%eax\n   d:\t83 f8 16             \tcmp    $0x16,%eax\n  10:\t0f 97 c2             \tseta   %dl\n  13:\t84 d2                \ttest   %dl,%dl\n  15:\t75 21                \tjne    38 <internal+0x38>\n  17:\tba 01 00 64 00       \tmov    $0x640001,%edx\n  1c:\t89 c1                \tmov    %eax,%ecx\n  1e:\t48 d3 ea             \tshr    %cl,%rdx\n  21:\t48 89 d0             \tmov    %rdx,%rax\n  24:\t83 e0 01             \tand    $0x1,%eax\n  27:\t48 85 c0             \ttest   %rax,%rax\n  2a:\t0f 95 c0             \tsetne  %al\n  2d:\t84 c0                \ttest   %al,%al\n  2f:\t74 07                \tje     38 <internal+0x38>\n  31:\tb8 01 00 00 00       \tmov    $0x1,%eax\n  36:\teb 05                \tjmp    3d <internal+0x3d>\n  38:\tb8 00 00 00 00       \tmov    $0x0,%eax\n  3d:\t5d                   \tpop    %rbp\n  3e:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint internal(int ch)\n\n{\n  int iVar1;\n  int ch_local;\n  \n  if ((ch - 0x2aU < 0x17) && ((0x640001UL >> ((byte)(ch - 0x2aU) & 0x3f) & 1) != 0)) {\n    iVar1 = 1;\n  }\n  else {\n    iVar1 = 0;\n  }\n  return iVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "sbase::make_parser.c::internal::0007::6720595969ae::llm::gcc_O0::P2",
+    "function_id": "sbase::make_parser.c::internal::0007::6720595969ae",
+    "function_name": "internal",
+    "project": "sbase",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

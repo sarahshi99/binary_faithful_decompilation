@@ -1,0 +1,40 @@
+{
+  "created_at": 1783258019,
+  "id": "resp_010c53f0af9254bf016a4a5ba3e75481909c3b7b61e37edb72",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSlumkpLrCWrybQb9fCt9bu_mzWs0iushsuVrKfph3XIb2AC3wJ2pAzPMssUgd0W_ZkiWijcRWMU1isAfVsBlOYJEvO-Un8cmpav8rFCSWjL_T_2PrynkOi97OrBXKNJvLRpLk27uZBL7R7J0dRe8BdpYwNu55uvEPcT4i2bqUQr6LKN12BIZxO2jEu2nRRRysbscWCAXb1kmThhUH2eNQqtgtYOg_C-9D86Mq0I44n6xAcs2jTzun7baVhQderLOOoGa50giLNg0B6wAv_CutR_lDwV819VXfdWxZ20fsrwHnZ1Zl3Pc_XbknlpUkR1p11SXsa97ppuFhpbajaPciiny1GdNGkq6evAnvuWY7kTWBrsAzgkY0B7XUgTIh6CsPL9PdoWWftIU3ABLDA3OhNaXnNi7LgXm9DXBU2zyyeiv8i0TwHiUuQXUzClkjlJPBusUdE5NNeeY3o0i8OIg9x7juFyAOId1GQsipVAoFoKJ9eTR5TYq-OBcNU8KjXoAFMfvTOenEg7Uw4gNljMHA2UDagCM96VabZMuF__SOiOjAHDf2vV9ZMHFn06bljlOCcqybZQNgqhcmvM7KtVloMy_kbuqmZPtq_QNTp3CyWUGKOEQtxdoCyKyFLvA80WnY8bUnFcxV-CqfhzGHUCx3ZZRgNV7y4HAvmAc0MC1zMcYBv11ZmSZQ95p4N1YX3HZQ82lr-pNgyYkvhbyS5l9ax2v3O88GRAz8R0CisFbIXc7oRPdh7whhb-A5Io9NMpEmy1t68UxQxKyuAX3-VhUdvHEVou9jNikh0Ywj14WzBKmOg7YILkb5UsnTCJm3MxjawZS357mkL3KWpKwohI91dtWcODCRpeC99iM5fPuDrKsRdMofEbh9_vO44iLoh6tNarz_EChwjDYdDO056RsbFNIElT3pW_fCCavi-XZgR9LcwdwrnucdlO2bPkD5gOp10oS8ihkHDPVISyejxVaAHc1zwGbZuiSKUCrDiGztAPjB9H-WwPTr5OUxcd3wyxAAlxvh539A_mBbxtQ4O4jQy9mCHjZRb8WRXVuImrFCGMJMmo=",
+      "id": "item_LK7DltDfm0OAez8f",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "unsigned long arm64_pe_param_off(unsigned long a)\n{\n    if (a < 0x10UL) {\n        return (a & ~1UL) * 4UL + 0xa0UL;\n    }\n    if (a < 0x20UL) {\n        return ((a * 8UL - 0x80UL) & ~0xfUL) + 0x10UL;\n    }\n    return (a + 0xc0UL) & ~1UL;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_010c53f0af9254bf016a4a5ba6a7108190b27c44bffaa09732",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 720,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 133,
+    "output_tokens_details": {
+      "reasoning_tokens": 22
+    },
+    "total_tokens": 853
+  }
+}

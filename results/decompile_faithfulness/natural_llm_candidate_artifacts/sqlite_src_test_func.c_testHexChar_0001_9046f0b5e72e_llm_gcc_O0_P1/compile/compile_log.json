@@ -1,0 +1,8 @@
+{
+  "compile_probe_uses_fixtures_or_labels": false,
+  "compile_probe_uses_trusted_source": false,
+  "harness_source_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase1h_natural_llm/generation/compile_probe/sqlite_src_test_func.c_testHexChar_0001_9046f0b5e72e_sqlite_src_test_func.c_testHexChar_0001_9046f0b5e72e_llm_gcc_O0_P1_db407f11d7ed.c",
+  "ok": true,
+  "reason": "ok",
+  "stderr_tail": ""
+}

@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: sbase::find.c::cmp_gt::0001::7383663fc3bf\nProject: sbase\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: int cmp_gt(int a, int b)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sbase_find.c_cmp_gt_0001_7383663fc3bf_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <cmp_gt>:\n   0:\t31 c0                \txor    %eax,%eax\n   2:\t39 f7                \tcmp    %esi,%edi\n   4:\t0f 9f c0             \tsetg   %al\n   7:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint cmp_gt(int a,int b)\n\n{\n  return (int)(b < a);\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "sbase::find.c::cmp_gt::0001::7383663fc3bf::llm::clang_O2::P2",
+    "function_id": "sbase::find.c::cmp_gt::0001::7383663fc3bf",
+    "function_name": "cmp_gt",
+    "project": "sbase",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

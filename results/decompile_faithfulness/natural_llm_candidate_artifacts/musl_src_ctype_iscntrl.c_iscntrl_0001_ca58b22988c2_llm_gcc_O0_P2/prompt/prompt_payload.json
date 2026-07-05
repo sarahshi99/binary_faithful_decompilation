@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: musl::src_ctype_iscntrl.c::iscntrl::0001::ca58b22988c2\nProject: musl\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: int iscntrl(int c)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/musl_src_ctype_iscntrl.c_iscntrl_0001_ca58b22988c2_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <iscntrl>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t89 7d fc             \tmov    %edi,-0x4(%rbp)\n   7:\t8b 45 fc             \tmov    -0x4(%rbp),%eax\n   a:\t83 f8 1f             \tcmp    $0x1f,%eax\n   d:\t76 06                \tjbe    15 <iscntrl+0x15>\n   f:\t83 7d fc 7f          \tcmpl   $0x7f,-0x4(%rbp)\n  13:\t75 07                \tjne    1c <iscntrl+0x1c>\n  15:\tb8 01 00 00 00       \tmov    $0x1,%eax\n  1a:\teb 05                \tjmp    21 <iscntrl+0x21>\n  1c:\tb8 00 00 00 00       \tmov    $0x0,%eax\n  21:\t5d                   \tpop    %rbp\n  22:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint iscntrl(int c)\n\n{\n  int iVar1;\n  int c_local;\n  \n  if (((uint)c < 0x20) || (c == 0x7f)) {\n    iVar1 = 1;\n  }\n  else {\n    iVar1 = 0;\n  }\n  return iVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "musl::src_ctype_iscntrl.c::iscntrl::0001::ca58b22988c2::llm::gcc_O0::P2",
+    "function_id": "musl::src_ctype_iscntrl.c::iscntrl::0001::ca58b22988c2",
+    "function_name": "iscntrl",
+    "project": "musl",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

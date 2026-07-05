@@ -1,0 +1,40 @@
+{
+  "created_at": 1783258969,
+  "id": "resp_0d4b3b968906323d016a4a5f597264819a950d69c61a636587",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSl9eLRY3bzA7SLhfSDLy9j9P9pMXpBQgVue7kLxEQEz1qq-CmIt5CXaJkFYu4XHCZxZKA48T_ipX2Gx57dsLBvEG_GRuUQ_ld7f1LMfv50ImvN8nwoelffXKxSx_AlTv1Tg7qCfrzSkQQMp5dWK2f73QhQxsUaOPB0XS2Gj2Vk7OO65PYlhDKeRrPClQVyNk3GVJh1yjwx4ZUq4HbsYa4j6RLfWvoW0fQR_IVifPvitslSHn4N-De2EEsYa9XLKCcRFGy_I8BdIX-4wv9YGIV1xMUkpYrN4eJL4nwDYI1VwHiXvG_dNNGWx-McdRs2tg8ZRfsvslHl4PzP5tndR_KuevBswUI8NR5ep3igLd_fjQaO0VgRlFM5frpROVWmoxZIGiePdfv9f39yhz5Da-RV-hINC6ppAIHDMwy4QbJ7m1csg211jIwMa8LR2R8y7lhAz0brHGzw1ER6LiYs23-lVf4io_zChk5PtE9hAPTkF2a7axZHcMkFf8WESVxxnNGIHW_BS5deGbUj7rvZV8_Z0pq2467U6vFiIniHJiC4BGYnkII1FBQyloU8KjXnAVeSxYBKznCIpfvVRpzFHy25HymgX1A0bvjIoZYYibM51NFo6oiDOmm7opK6IT_iNIeVCucYO3_lXXVOqgxUZGesBs2hcQt-7HWZpJZyyDwRhXxbrkxtDJNVH2preawDAwiWRIRYLT9icxzRyDjnAf5-nvYZwXRXszBK5jYxa3-dJDc5SPb8e0BNA7Ru5n6l8jCFgN2Cy-sxmdSYyAl3u-t-2tPPDB5Gh-RAZRu45NSV6O3Hzp6WzZ_gbGGLPr9hhDclW468cJ1yd6FxLyGU-XX1AUti1sp2rJkWkgOIlbXW-osBQtMTsp1oYM52MPbMV6M8DA1GFFR7xAoEj3n7Ig71fJzyl_Lw2OFqtmIjG75kjEcwPIC5Jtmbd86DMH4yvnYr-gwm0DVjC44uJlpHNx3P4bJuikG2mKI_RQYsYAZ3XcvV57DTqJ_xXaKdnpj9FT80Tuc5ZT1AgNGXMqnfGEYT1UymkevcBayCKOD2wCIZsui8JTo3HHWwSGijJ-APc3JROit5HMJYp9iYy_l5dTcym4ju_FvfobtmDcwLPDjUFIHtB71PYswtAH9RuuaBmyKJhnYlIPOrZM_L2QDL8qIwoYJ6aMmvHH6GKZmxlqv-bVc8m41_Itp3QjrdUxgz6GNHF-Jh5NYXMO_j27v9FYYhZ4wnjVZVPkqO1CXjXpN1lKDHufa7maiYlnc9qwhhwr_err3HKMsfpIx1oKOiydBNxCs88gNbL7W62U3LTHXCucI-jzz3zpQchzihkTQ52rixAxF5QjPjSuaZbJ4L4jZiLz__-F9Z8gRCDWywLteGrfGCo=",
+      "id": "item_XVsyxjf5DidZsF84",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int iscntrl(int c)\n{\n    return c == 0x7f || (unsigned)c < 0x20;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_0d4b3b968906323d016a4a5f5e08e8819ab22964357c737098",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 424,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 134,
+    "output_tokens_details": {
+      "reasoning_tokens": 100
+    },
+    "total_tokens": 558
+  }
+}

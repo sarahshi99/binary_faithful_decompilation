@@ -1,0 +1,27 @@
+{
+  "api_key_env": "OPENAI_API_KEY",
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 8.18804561800789,
+      "status": 200
+    }
+  ],
+  "endpoint": "https://wokeme.dpdns.org/v1/responses",
+  "generation_parameters": {
+    "max_output_tokens": 2048,
+    "stream": false,
+    "temperature": 0,
+    "top_p": 1,
+    "top_p_payload_status": "omitted_after_provider_rejected_explicit_default_before_any_candidate_response"
+  },
+  "request_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "TinyCC::x86_64-gen.c::using_regs::0004::b9ec9c9e28b6::llm::gcc_O0::P2",
+    "function_id": "TinyCC::x86_64-gen.c::using_regs::0004::b9ec9c9e28b6",
+    "function_name": "using_regs",
+    "project": "TinyCC",
+    "prompt_family": "P2"
+  }
+}

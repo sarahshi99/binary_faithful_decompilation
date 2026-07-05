@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: sbase::cron.c::isleap::0001::0fde71268ef6\nProject: sbase\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: int isleap(int year)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sbase_cron.c_isleap_0001_0fde71268ef6_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <isleap>:\n   0:\t69 c7 29 5c 8f c2    \timul   $0xc28f5c29,%edi,%eax\n   6:\t05 50 b8 1e 05       \tadd    $0x51eb850,%eax\n   b:\t89 c1                \tmov    %eax,%ecx\n   d:\tc1 c9 04             \tror    $0x4,%ecx\n  10:\t81 f9 0b d7 a3 00    \tcmp    $0xa3d70b,%ecx\n  16:\t72 14                \tjb     2c <isleap+0x2c>\n  18:\tc1 c8 02             \tror    $0x2,%eax\n  1b:\t3d 29 5c 8f 02       \tcmp    $0x28f5c29,%eax\n  20:\t72 10                \tjb     32 <isleap+0x32>\n  22:\t31 c0                \txor    %eax,%eax\n  24:\t40 f6 c7 03          \ttest   $0x3,%dil\n  28:\t0f 94 c0             \tsete   %al\n  2b:\tc3                   \tretq   \n  2c:\tb8 01 00 00 00       \tmov    $0x1,%eax\n  31:\tc3                   \tretq   \n  32:\t31 c0                \txor    %eax,%eax\n  34:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint isleap(int year)\n\n{\n  uint uVar1;\n  \n  uVar1 = year * -0x3d70a3d7 + 0x51eb850;\n  if ((uVar1 >> 4 | year * -0x70000000) < 0xa3d70b) {\n    return 1;\n  }\n  if (0x28f5c28 < (uVar1 >> 2 | year * 0x40000000)) {\n    return (uint)((year & 3U) == 0);\n  }\n  return 0;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "sbase::cron.c::isleap::0001::0fde71268ef6::llm::clang_O2::P1",
+    "function_id": "sbase::cron.c::isleap::0001::0fde71268ef6",
+    "function_name": "isleap",
+    "project": "sbase",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

@@ -1,0 +1,27 @@
+{
+  "api_key_env": "OPENAI_API_KEY",
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 7.553634227020666,
+      "status": 200
+    }
+  ],
+  "endpoint": "https://wokeme.dpdns.org/v1/responses",
+  "generation_parameters": {
+    "max_output_tokens": 2048,
+    "stream": false,
+    "temperature": 0,
+    "top_p": 1,
+    "top_p_payload_status": "omitted_after_provider_rejected_explicit_default_before_any_candidate_response"
+  },
+  "request_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "libb64::src_cencode.c::base64_encode_value::0001::6dca5895e15c::llm::clang_O2::P1",
+    "function_id": "libb64::src_cencode.c::base64_encode_value::0001::6dca5895e15c",
+    "function_name": "base64_encode_value",
+    "project": "libb64",
+    "prompt_family": "P1"
+  }
+}

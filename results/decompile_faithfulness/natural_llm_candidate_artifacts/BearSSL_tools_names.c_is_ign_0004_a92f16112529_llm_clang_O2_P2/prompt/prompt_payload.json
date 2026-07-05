@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: BearSSL::tools_names.c::is_ign::0004::a92f16112529\nProject: BearSSL\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: int is_ign(int c)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/BearSSL_tools_names.c_is_ign_0004_a92f16112529_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <is_ign>:\n   0:\t31 c0                \txor    %eax,%eax\n   2:\t85 ff                \ttest   %edi,%edi\n   4:\t74 22                \tje     28 <is_ign+0x28>\n   6:\tb8 01 00 00 00       \tmov    $0x1,%eax\n   b:\t83 ff 21             \tcmp    $0x21,%edi\n   e:\t7c 18                \tjl     28 <is_ign+0x28>\n  10:\t83 c7 d5             \tadd    $0xffffffd5,%edi\n  13:\t83 ff 34             \tcmp    $0x34,%edi\n  16:\t77 11                \tja     29 <is_ign+0x29>\n  18:\t48 b9 1d 80 00 00 00 \tmovabs $0x1000000000801d,%rcx\n  1f:\t00 10 00 \n  22:\t48 0f a3 f9          \tbt     %rdi,%rcx\n  26:\t73 01                \tjae    29 <is_ign+0x29>\n  28:\tc3                   \tretq   \n  29:\t31 c0                \txor    %eax,%eax\n  2b:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint is_ign(int c)\n\n{\n  int iVar1;\n  \n  iVar1 = 0;\n  if (((c != 0) && (iVar1 = 1, 0x20 < c)) &&\n     ((0x34 < c - 0x2bU || ((0x1000000000801dU >> ((ulong)(c - 0x2bU) & 0x3f) & 1) == 0)))) {\n    return 0;\n  }\n  return iVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "BearSSL::tools_names.c::is_ign::0004::a92f16112529::llm::clang_O2::P2",
+    "function_id": "BearSSL::tools_names.c::is_ign::0004::a92f16112529",
+    "function_name": "is_ign",
+    "project": "BearSSL",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

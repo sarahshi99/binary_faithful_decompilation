@@ -1,0 +1,40 @@
+{
+  "created_at": 1783260136,
+  "id": "resp_0bd08e3278157989016a4a63e813508191aca3fb0eb3c65df3",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSmPwY8_0e3trBCaxUSp7J9MOc5g3hTYeAhcQBho3Kj7tiSWrANNDeuNZoHEV6FBdva9Qg3Hz366BGGTm8Q0Y805bObNCy59yRXG0pMn-8eRwrh1eYOeHGLYI7ZcIdA0ZvcjDDZ1esQ969DFvhsYFKteJrupu5NyogU0J6PzMw5R3zl3W4ulM2UAyPH4awlRhEZ5yNTKctGzjFQYs2PLfaXHLZ-O3UdsGJRsZV-0FGIzY_lFenuXPyeetQSe_8sMqVeyGuf6d-SU_F5I8kGB5KWbg7q-Dq44D-L5ptjGut9tbLSqYW3vxc6AgAcUgCgODQWm2JLC8uYdv9NGgtPs3wQ7UuToGWIPr8rEK0UmKd0mBXb9WZyHiJWCKtCJ_2FOf6N3WdGdcE7caeyYJ0axagQ9KpSt6myXgsSi-dn80RXW9j94d5pPBiuejPfHZUtRJfKOJ52HGis9SwDx4BEHNYvu7EavdXCs5YnqNlvE1giiGFDhrCnHxkJyQVs1z_Wnwrv4FWjjGQ-4p7o_yBBahwY21X1cYIFkCXkHS8Sr-18Z46qh_YlDRC5BYuMo9Enr3EnMCkSD_VcrUsxljKGIeYx52jO4j7DVCD6sXEK_MsrC5H3PHtKGyzz-Cgu2qOgY5Y2MAx9AhBNEc5BHdDF2aOsl_VeTCQiCcGQoKlW5wzsRIk_3UVdup9OOu8B1iPFdGX5Jn2lkPL5n0FXVKKd-XDIrjmp-fFyMwckkExnWiFDmsvI1F_fA5Ca9WT3-fc5BRxXkMIT0aoILWbPwWEadd5NG9G4hOJhevkKD8Jq1C0pzO6XgqnoZxKirihHIopfzYhWBg_V5O8pVPkUULhZTmb-J7LxB4OK55IQNrNqwMzWGPtXRfxNmTdEFzgHnTaR2hysWqD9p1Pz9wQhBkV1Hx5n0Ri9Cb41f4wTrmQP07BKdMlxKDBKXpmfu-tLC2BwZAQpeZPzj7lk8OTgZzRlHYxFFshpodAQLEx_mQyTP9URqeSd-iAW2ey6QRYa00yXWTQS_kQwTAuHFdXde1C6EdNBgE1CoeRKFTXo653QnLy3eZgNpZYHmXvUzwd9PaRQXTjGVbFIutxqiARl_fgu194La0Y8-vQzJZIevrGQt0QsO4K4oHjkkzIj-7x5Q0ZSvTKq1nCm54N3iGVZd3ZnXS5EsLaAfk4zjgLNFq2bGArFPKAbjj9As9BrCuNPr6iyHtf6cwrhaksGOrfCz4kMqi385qHVfbvbrKGbnDFPgVDLlzm-n0OI10u-fSoFF7oZCs_JccbTU8t63cI02FAYFOBPQfXutTm0hHt0WvkwD-8JjqyEJZ8nB7-9qdNL3xeWhzuXgUfYpL2R-EDq2d-gchQ6SBE6BmT6-wedcXPx9UMMlKSEdPRKMR_IDSQCRqequwwzO4pSWDLekc-BYBOtjcEP3TGz_QmwrEggpWX4u5BR5yt-8Uzw8QU70Y-GedpzzRfrFnNtJcf2Nv-Ij8Bui_W4LnyQ==",
+      "id": "item_Z2hyuJqx4bpkUCrb",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int memsys5Log(int iValue){\n  int iLog;\n  for(iLog=0; iLog<31 && (1<<iLog)<iValue; iLog++){}\n  return iLog;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_0bd08e3278157989016a4a63f0e9788191b497dcc419457b72",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 730,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 173,
+    "output_tokens_details": {
+      "reasoning_tokens": 122
+    },
+    "total_tokens": 903
+  }
+}

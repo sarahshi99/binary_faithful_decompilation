@@ -1,0 +1,40 @@
+{
+  "created_at": 1783258923,
+  "id": "resp_0a13e25c55743f90016a4a5f2b04b081919a65235ab9adc852",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSl8yYQezYIqTxrpH6QCxNKslLpA46A-8MyhwfwzA_XcvWFvpDzxXc_W3XjVZBLtyVVTVgOVSBAvqut7s7X9Sema_4vOjYJamsTrVcdy1DXGn9Ngo4BOFrm1BGWkKJWzfuPreTliF-AELwAnKgF0uA2x5wIksbL1VQqfWS7-kadb6cEyJwM42vahxAyxfzVnqR79B-U7dbDTttfEcCzvhPvJxjpOgbCfBWzIaQKDA7cqQKgDXs93gUOWlWzWunOxG9-5FNSQvx6SN77WroMs1M3cNh3_u_cokYiYUd33Sp2HrXOsQooTgxVq2dgGo4QeYgqadTiQOOo2g00Hwj-ZBGhFkGQZA_TnnmFnkh37e2oMjnNsufPWPiOMUO_FQmyTJ14fNoumNla2OHti8Q6PqYzXX7Z1baOVhwVSx_QtwC0B7SSDajKMOXqkvR-Wy7_i0A8BxTauyXXkQvQilYy1p-nwugaCiS-ffGh3RKq5TqwP4G-dZF5AmaBepncyjXxQjB-nJ1HsPqLcqQ0V1genCySnjnFsIu_dRTemIK0iAQEadNUfJb_IqKy3aQ1sTWTVGgOQejKn3-Ao-1CyZldbVQXP3zem7kji1Yu-oW_raSaqrSq_VEE2AgYtN6Jh5-KaQKu4nHaIc0-OGlhA1TiLRcJddB83u0AQPFEZZJdah02cDher0fEkFidQ0netZnTHq0VNcFwhH_e_Z7yes6htt230QVUuxZL9AymNMATxzbtxoJR1u2V2lwcPizmfzn53nDNe2u1p_NaknomJsRlou7FaTucywc6sA09jjLoiZSz4Q_yo5_XMcUXi1feBR00V52deAedfcNIH3daMXc1GBkVzK1qdPyLBobCFAcMMWzSXbkZcwiMndsjNaklwvZZmLenF9fEdpq1kNBohGI6nBMAT8PxxlgSkfWqS-eC7Vcd-s4C2CnzD2NFX0Nd4FQU54DvrHs3ewl1jRoxYX--3XOk8ra_heE9oLEZjmxVgmQGKGdV_k7Nt4glz6iu87bKYBmJxIGCMMqghf0PvpFMtRMgGoJBDLoDftvB1Wams9VpLoLtxvyAyFk-g5N_xMKUZFzpPHUcKoVt0wI8Vqi58S43ChL1pTmgBth6eBpO3XxI2OYhBJTJ5SCydhC2v3phxtNW_ENn1WCCV8baWti1tIWYxndEaQwEW3dI6IaID5c7ZGsQkAcFP1oDTRYNAsfxnJOpUElxiFVDWkibtBIMgbTRc42g_Pju54uAOiyx6Wp_c9f1Tt_IYJ7DnW3G2XAqG4lKvdKq0KehHZOfnQiJoA0Kc1mZvEXSHOqDmQqHgmnB5OWyDOLgXfBW4hfZlLR-vZdeSSpSCkr0pCvXNvdr__L_Hdqnzg17-nlo92_7eE6bNrcCHe3Zjpd65PS9KlTrGizIKzvirNI3hDDSZw4pSVjd7Rr1nFErNAzWkFZcH_lqmcssV8KrCyrMRV4TGXXCqwm2WXNMGwoVRB7Klqd9nmKF2o6BbLRvuM27PaLgXgVlD70SPGDwsNifF5AfHkterFJbcgYWpizjJlfZOqZyBv7pmMj505TYQ-GWHstPzFznUJIuYnBRJhc-cHu7BanKDeNtD8scgtBbU5qdRraY9uKNUhzwHVeWFN6CiahgIe5xXjTBsN0DulFgyBqs-RO0wkyvMfwXni7FvO7X7tlcGXFf9i4yVT5FE65lJ3JqpE39JD0X__KpomUgvmocgBU4KBvf10QlCZYXbkOH44rHLD-csySw==",
+      "id": "item_h0RQgnMIow9jfWDU",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int isalpha(int c)\n{\n    return (((unsigned)c | 32u) - 97u) < 26u;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_0a13e25c55743f90016a4a5f328ae48191af76c357ca920873",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 402,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 204,
+    "output_tokens_details": {
+      "reasoning_tokens": 170
+    },
+    "total_tokens": 606
+  }
+}

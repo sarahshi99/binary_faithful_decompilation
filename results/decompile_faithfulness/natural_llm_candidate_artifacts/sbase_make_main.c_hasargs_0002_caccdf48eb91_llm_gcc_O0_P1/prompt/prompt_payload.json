@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: sbase::make_main.c::hasargs::0002::caccdf48eb91\nProject: sbase\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: int hasargs(int c)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sbase_make_main.c_hasargs_0002_caccdf48eb91_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <hasargs>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t89 7d fc             \tmov    %edi,-0x4(%rbp)\n   7:\t83 7d fc 66          \tcmpl   $0x66,-0x4(%rbp)\n   b:\t74 06                \tje     13 <hasargs+0x13>\n   d:\t83 7d fc 6a          \tcmpl   $0x6a,-0x4(%rbp)\n  11:\t75 07                \tjne    1a <hasargs+0x1a>\n  13:\tb8 01 00 00 00       \tmov    $0x1,%eax\n  18:\teb 05                \tjmp    1f <hasargs+0x1f>\n  1a:\tb8 00 00 00 00       \tmov    $0x0,%eax\n  1f:\t5d                   \tpop    %rbp\n  20:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint hasargs(int c)\n\n{\n  int iVar1;\n  int c_local;\n  \n  if ((c == 0x66) || (c == 0x6a)) {\n    iVar1 = 1;\n  }\n  else {\n    iVar1 = 0;\n  }\n  return iVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "sbase::make_main.c::hasargs::0002::caccdf48eb91::llm::gcc_O0::P1",
+    "function_id": "sbase::make_main.c::hasargs::0002::caccdf48eb91",
+    "function_name": "hasargs",
+    "project": "sbase",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

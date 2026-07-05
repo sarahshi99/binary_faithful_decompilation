@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: musl::src_stdlib_abs.c::abs::0001::7d806d7b2171\nProject: musl\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: int abs(int a)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/musl_src_stdlib_abs.c_abs_0001_7d806d7b2171_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <abs>:\n   0:\t89 f8                \tmov    %edi,%eax\n   2:\tf7 d8                \tneg    %eax\n   4:\t0f 4c c7             \tcmovl  %edi,%eax\n   7:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint abs(int a)\n\n{\n  int iVar1;\n  \n  iVar1 = -a;\n  if (0 < a) {\n    iVar1 = a;\n  }\n  return iVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "musl::src_stdlib_abs.c::abs::0001::7d806d7b2171::llm::clang_O2::P1",
+    "function_id": "musl::src_stdlib_abs.c::abs::0001::7d806d7b2171",
+    "function_name": "abs",
+    "project": "musl",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: BearSSL::tools_names.c::hexval::0008::993a0d3d1ea6\nProject: BearSSL\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: int hexval(int c)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/BearSSL_tools_names.c_hexval_0008_993a0d3d1ea6_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <hexval>:\n   0:\t8d 47 d0             \tlea    -0x30(%rdi),%eax\n   3:\t83 f8 0a             \tcmp    $0xa,%eax\n   6:\t72 1f                \tjb     27 <hexval+0x27>\n   8:\t8d 47 bf             \tlea    -0x41(%rdi),%eax\n   b:\t83 f8 05             \tcmp    $0x5,%eax\n   e:\t77 06                \tja     16 <hexval+0x16>\n  10:\t83 c7 c9             \tadd    $0xffffffc9,%edi\n  13:\t89 f8                \tmov    %edi,%eax\n  15:\tc3                   \tretq   \n  16:\t8d 47 9f             \tlea    -0x61(%rdi),%eax\n  19:\t83 c7 a9             \tadd    $0xffffffa9,%edi\n  1c:\t83 f8 06             \tcmp    $0x6,%eax\n  1f:\tb8 ff ff ff ff       \tmov    $0xffffffff,%eax\n  24:\t0f 42 c7             \tcmovb  %edi,%eax\n  27:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint hexval(int c)\n\n{\n  uint uVar1;\n  \n  uVar1 = c - 0x30U;\n  if (9 < c - 0x30U) {\n    if (c - 0x41U < 6) {\n      return c + -0x37;\n    }\n    uVar1 = 0xffffffff;\n    if (c - 0x61U < 6) {\n      uVar1 = c - 0x57;\n    }\n  }\n  return uVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "BearSSL::tools_names.c::hexval::0008::993a0d3d1ea6::llm::clang_O2::P2",
+    "function_id": "BearSSL::tools_names.c::hexval::0008::993a0d3d1ea6",
+    "function_name": "hexval",
+    "project": "BearSSL",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

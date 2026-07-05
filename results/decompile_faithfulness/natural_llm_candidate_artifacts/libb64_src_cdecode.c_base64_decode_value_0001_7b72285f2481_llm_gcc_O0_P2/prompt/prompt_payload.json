@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: libb64::src_cdecode.c::base64_decode_value::0001::7b72285f2481\nProject: libb64\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: int base64_decode_value(signed char value_in)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/libb64_src_cdecode.c_base64_decode_value_0001_7b72285f2481_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <base64_decode_value>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t89 f8                \tmov    %edi,%eax\n   6:\t88 45 fc             \tmov    %al,-0x4(%rbp)\n   9:\t80 7d fc 2a          \tcmpb   $0x2a,-0x4(%rbp)\n   d:\t7f 07                \tjg     16 <base64_decode_value+0x16>\n   f:\tb8 ff ff ff ff       \tmov    $0xffffffff,%eax\n  14:\teb 27                \tjmp    3d <base64_decode_value+0x3d>\n  16:\t0f b6 45 fc          \tmovzbl -0x4(%rbp),%eax\n  1a:\t83 e8 2b             \tsub    $0x2b,%eax\n  1d:\t88 45 fc             \tmov    %al,-0x4(%rbp)\n  20:\t80 7d fc 4f          \tcmpb   $0x4f,-0x4(%rbp)\n  24:\t7e 07                \tjle    2d <base64_decode_value+0x2d>\n  26:\tb8 ff ff ff ff       \tmov    $0xffffffff,%eax\n  2b:\teb 10                \tjmp    3d <base64_decode_value+0x3d>\n  2d:\t0f be 45 fc          \tmovsbl -0x4(%rbp),%eax\n  31:\t48 98                \tcltq   \n  33:\t0f b6 80 00 00 00 00 \tmovzbl 0x0(%rax),%eax\n  3a:\t0f be c0             \tmovsbl %al,%eax\n  3d:\t5d                   \tpop    %rbp\n  3e:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint base64_decode_value(char value_in)\n\n{\n  int iVar1;\n  char value_in_local;\n  \n  if (value_in < '+') {\n    iVar1 = -1;\n  }\n  else if ((char)(value_in + -0x2b) < 'P') {\n    iVar1 = (int)base64_decode_value::decoding[(int)(char)(value_in + -0x2b)];\n  }\n  else {\n    iVar1 = -1;\n  }\n  return iVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "libb64::src_cdecode.c::base64_decode_value::0001::7b72285f2481::llm::gcc_O0::P2",
+    "function_id": "libb64::src_cdecode.c::base64_decode_value::0001::7b72285f2481",
+    "function_name": "base64_decode_value",
+    "project": "libb64",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

@@ -1,0 +1,40 @@
+{
+  "created_at": 1783259049,
+  "id": "resp_091b8d1f3619bfee016a4a5fa9b7e08191a3fcfa819e5413c6",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSl-xf1ySPBrXZ3EoSA4D7tI4rrhoJvCtHPgMZahr8721KRQkws3CYB_s6V1Rj8pVIpq9c1YbWKfmOY6nqvsnjLLuxfh3h0DNhZ0kS-Nr8KFV1_HtI7VGKFae381hEDGWSB_5cTmIHXrmCRmzfau6Ki_XnBWLKLmgIwTVCcWuVskB0RoOt3PumOtRms3RjB1Jm-mVvfVyrlYDZrzJeU0fEQZ52GNa3aCezVnmF8-VibzQW3RMTOKEaLSO2anwoXpQQcACXn34xCbs9K8WvWDckzQcThMM8bnOrABvzuQyzAZZdhG_3OBUgilCCJlQMHQmVizQemd_LnOAHdcasoMwxJC31Ks7_lpZZj8tpQRHn2x600JsY0m7oW7dOl_SQjMN6a2shjNGItymsfWfIbUUL9mwc4JODPczCgkJuKe8pc5CPfpbB3zn4luiGUsR0_wanwNdBJ1hFlIm96_wJkXdEuybwTu0M30qDsSnncV6zmXsrD95GWDj7OuytsS4ZEdgk3TEA82AoSZNcPE0CsOeBB_BekWBiUymUrwANl99Ul6ATxgO5H8wzX5adFZ-NuyDOWl_xCBcYgSff1Kw_lqC99-4-qfVIV6Snz8sgiu2atADvqyvT9tHt6jfgwj_sUSaWdIkBV9Z7LWJEfohyVIjKkfjqwcPMSMGVZMM5I2XFALLcnlMLo8KKfcIGwCUYyLLl3kuJdMjcNKXvbr_MVNBsm65FEbv3Cjur3FY4nMhii72_36YD-4C35p5-R4MVwOVFUE66ZmJZSq0pVbKuQSaDoQPk8pKkMCwWNGmuubmFOjTlA0kU9ZkOjwVwfL2nwXg4SDcLntZtNQpFspDwrR29yLtUYBxenaP6JqSCcDZxCCc252QGJCC4Qj_2AvxnzWvatNMvW3znyNODTd_F6QjJEZj-IaH8eAxecjGAWZNcCuokgDau-jRYpVm-mNTohSbiX4n2lEwuJk9190f4igqi8vIdz01p-_3A6r7rhtAbLddgNvc_FUOKQJkSSl__hl0kId_i_Qddi2MfYHaOq-NuIfdp2mDzxQegbouPJ0_wb8mQf7tZ_kocFoEsNeDaSgpyHtChIfooaiH1yfWXaOHiU6C6kjkfKX8zxvsNempyuZoatEyj3QNIOmrX-D7tCLKqw4BbbEPgxMvIa0yUAqCp8cIKIo2Xs4EOa8DNgds9HOLQNHG4JKiYZcDTtgy8zVv9Ine4jlFxW8d-E6ejfzbTVqtA7N60xfeX694SQLnkBwKYaaVP2Rgoyq4So26NJRApOUQ0e_bfWYZIXwrZr8qz8RMZVKjDSLOVaK5TWHoSHNgg_Nf8NfiEZJSxdlpH0d2zRxNov50DEfHZLOot3ozsASilSAMp80JT3zJ0ZzNLcKAa5w5twelE0oLlW0bRMtZj0qsqXrr4RFRFSwxIxJYhvEL7UjjKkQuPZkLCN13EPgcM8bqxFJwO_0y1-sjdE5DAhQTGQ7rYQtB1e3QPZTZVHADtSaq_u8InVTABGChxDAzxTzNM8pEV1Dc8aty4ceAY7nlIppQ7hz2mz50UfQ8KUTdDPzxQhtJvAppw3YN6Yv8VKI2GHvbWGAXVlKrYZxm1QiO0KMN2kWAHNmvRS0AEn1bfAUwib9IUzBI95PeIqal1-M=",
+      "id": "item_ZcXDQooEuM535hGc",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int isspace(int c)\n{\n    return c == 32 || ((unsigned)c - 9u) <= 4u;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_091b8d1f3619bfee016a4a5fb14204819186e652620e8e8e2a",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 626,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 203,
+    "output_tokens_details": {
+      "reasoning_tokens": 169
+    },
+    "total_tokens": 829
+  }
+}

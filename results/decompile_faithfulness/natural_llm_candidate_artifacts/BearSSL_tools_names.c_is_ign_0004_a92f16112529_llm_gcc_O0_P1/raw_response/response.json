@@ -1,0 +1,40 @@
+{
+  "created_at": 1783257970,
+  "id": "resp_0b548cc7cb30a473016a4a5b72b65881918ca2ca3df1dfb6a3",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSlt1VcZQQhFTASJ_KSj2lpyh8glWwhuPVSct3zmCTYj6uPeMeqc1DErTIHi48RYmR0lQNKuxVOXpkwdPMeKLJljDOH-tCvdInQwUV0Qi32wqOGmbfjjZR-FXFuabX6UW4QDsPh_Wxn15a9nSzg-iKs0HK0QMy3M1D8lrWuAbtW1SMIa5HkN5DE8B_7AAOx6L3bLpSgRJ-v8n2AHzOZQWtDmz-bmbNWSRScY1zeLNUPsqd8afcN2ehO-R7mEt8m9iMQrU11ykL62Il26y_a7ekM9KKTGOwsFOk0opHRQyHIrtqOfwhJ0r6h6UxWcvjICvBzvz-NP5czkpxnnchV70a2_snT2kRBj893ywvhEqzq7gVfDouBb6TjzaFRe-0M-ePc70bhVfE3A7A5nxbIj5gU7c50BPzgeQs5SkGJSGUYJHQoVXi9I0L1dtRUwAnP00cTVjVAy1LSGNuJUftZE4-mZNaf9g-fA5Y2FA6fLOqcP_khq5jw2_aOxBhQRWJMT7JnF6WjkeKiRir2XieNm2qt_mAi5zZuX1NKlFURfXvLp0om7XAy8nE_j3hPAUpwDsxrCUWfB20FXhPr0bFFz4gtcDdDD5DRkYc1Er_Lpr9l3Vv9ClqnJcQmL-6RIBy88-SYF6uDB4rkKB4chUNIl4G0_CFQR4nbP6I33tnPyFJRiZu4YMlZcvFmM4IqhFUUFN5XME0yNIsKnn2jbuxME1g_iMeYat_iryb4dYKxdQ8lwA22AjYCbs_ydlVYTq9GWQgJUGwUX9f7NkjxBRxXHCrhG4pRA6nmVmteu9dq_avJPFYqAN1PFT1XyqXO0dsnUh1yqqnDsmM9-UzH0NxuOooID97kEuqnHO1EzFYlMLioH8qEjNCPTPo68PeiXm5-m5yC2EW1ZouJn3SJefjbwc1F3d27KRnwaCZWqFD6C8mGqudjWYlOF7LZoPcZ1yp5zLoX_T6QD8ELR8xafM0Z2s9TCmiZprNzl8aeNSFXuZOhkt_Q8nSOZTTDez9l6P2e-6mJGx-oL-hbSco2Ch_G7f92xP9g==",
+      "id": "item_VtclHjgLf3LI8Eb6",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int is_ign(int c)\n{\n    if (c == 0) {\n        return 0;\n    }\n    if (c <= 0x20 || c == '-' || c == '_' || c == '.' || c == '/' || c == '+' || c == ':') {\n        return 1;\n    }\n    return 0;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_0b548cc7cb30a473016a4a5b75f4888191951f6fe20ddadde6",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1033,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 104,
+    "output_tokens_details": {
+      "reasoning_tokens": 26
+    },
+    "total_tokens": 1137
+  }
+}

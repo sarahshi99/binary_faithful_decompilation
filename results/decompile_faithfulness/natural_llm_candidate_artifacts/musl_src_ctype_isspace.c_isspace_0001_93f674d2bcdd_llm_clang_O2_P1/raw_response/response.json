@@ -1,0 +1,40 @@
+{
+  "created_at": 1783259023,
+  "id": "resp_089d45800298929a016a4a5f8fa14c81918bee9359410aa779",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSl-V0Pq7iDO5ZNtFUKCSNUyTlNNFmRrSm_Fucq9Oo2drZtiZapfH6RSv4DmZ6sWV02-qBbRz7aZvdTCzLN88RHsL3BwbEZ_BUV4hVclU-0t1tDEkwQPNiViQaMXxHwccQcaS1Ki8uFJ1BnnTqkfqOa6CHgM2rBdMyZk3yzjyOqsMTFNXs7gjI4d7lYWUqDkwkLyZo-dXHF4fv_nZ1dzbL7T6qz2uTDsVi08okfo0M2onhcV6O_IykD-5ecQitt9rb7IXWsZomVmeGtrMAvrhJgqSaBr_N-374NC98ujzUtKuqTsGp_MiKOKdEkIt084bYPIZq7J73cdJEwPYhIajNh85aIPK8vwmXh8rgZem08go6Drw3RMEX224hWKaADT7tZHoBE0pumnuHdu16l9QbXoRKXM62b3uLY_50Mz5pVdTBRw5n7B65rDB4vgVpblAF8Luei1oaa5t6yNSmmlUsX_0F8auvwCl7k-Cc49GmENI4abXV0Zzbm2w8xiEQcGxOFGvXCDOiW2qkPAMDsLtdunyF4Irwe-Mzkcy5D2tZRHYapbGZP6deozkET-aKRvdtUCDjxTJSgC0KeZ_S9GcaVy1eJ_fZLswmO3m4h5Kz7C3GZu8AE4Z2AHFSKi5P4Ht0kJbF4j4iLuWHpDpNUVfQWNMaJJFOujXrCUi11Yv94ZpDJVdAKblpDvCt3sXi_JTTDSB3rB02DwbJRB24AuuDrxEPN3rIhKMtrnxRPQShvr6PsVtQ-xmPPXM8gZP8NkiZ4D2SCbcA-XQbqdoZlzbzt7IPcLPa2xIqsry2WlpDGAtQY_HbpV4_vondq3QcH3dI8YOOOyIEhldYK5hTIumWbGI1teQsyZdgq-HoxdFJ8HH0OlyVGkdNo68yX0abL2xIb44xwDgg2TSnd6rQ4ScWnLXC3-70KdLYIA8pbXGt4DS6tSA7aBhTwpVZFhRC6lH5z5iGGF0tYaIKG-V4EixmB-KCGv-Kw9zhyScHrjdaKFlnwXc33nUd_acc0H3WsbPwyKXMUsrIbKPbzQZtIlIYzzpPeCbi03N3fdtZlxq3SHrReuqrFP1YYY65gTxZFk0kamRKUyvtq0Nu_jac_m4C-up_N1XHDHNQp9pta1nek5daHw00HajWNF1Gr7LSmm3a1t7jXoMPrXpEC6S2zBmrPU8m1BbcsV9j_4lWZAkDmB1jQ6iVKgonYBSU-phN-BUeUHonudDcr4lIKWlfkltLSabughYpICQhTlBXq885lgWdTNA9q96sKl7yXtarTb_MZ4wO9XLFowm0SSk9kYZqP1yetzSV9ObYiSPvgSaeU8DNG9rs5D5IDmIo8d_5aAfifEr9K37Jm44PzwXW-l00dh0GzQcixISsfDXWdvvfv33FtoTdzp-bJGuXGp4c5RoM6HgLMuRr7hdwqn618pATrRXJ8kwhtIMviIoLPlgqCu7affQ9xko0FElN3-3nMBYUmWWQwq_she4xV3oMEyKFIOmrNKZ3dlQDpq3XOyltVvD3bNHhr1sVHEHMA0Gja9-Z-iLqZDp_1OrH3L22ChNV0mpbw==",
+      "id": "item_Nkv0wktmGlbVo39i",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int isspace(int c)\n{\n    return (unsigned)c - 9 < 5 || c == 32;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_089d45800298929a016a4a5f95dfcc81918af7a6d458115901",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 428,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 174,
+    "output_tokens_details": {
+      "reasoning_tokens": 143
+    },
+    "total_tokens": 602
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: musl::src_ctype_iscntrl.c::iscntrl::0001::ca58b22988c2\nProject: musl\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: int iscntrl(int c)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/musl_src_ctype_iscntrl.c_iscntrl_0001_ca58b22988c2_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <iscntrl>:\n   0:\t83 ff 20             \tcmp    $0x20,%edi\n   3:\t0f 92 c0             \tsetb   %al\n   6:\t83 ff 7f             \tcmp    $0x7f,%edi\n   9:\t0f 94 c1             \tsete   %cl\n   c:\t08 c1                \tor     %al,%cl\n   e:\t0f b6 c1             \tmovzbl %cl,%eax\n  11:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint iscntrl(int c)\n\n{\n  return (int)(c == 0x7f || (uint)c < 0x20);\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "musl::src_ctype_iscntrl.c::iscntrl::0001::ca58b22988c2::llm::clang_O2::P2",
+    "function_id": "musl::src_ctype_iscntrl.c::iscntrl::0001::ca58b22988c2",
+    "function_name": "iscntrl",
+    "project": "musl",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

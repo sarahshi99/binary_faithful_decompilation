@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: TinyCC::x86_64-gen.c::using_regs::0004::b9ec9c9e28b6\nProject: TinyCC\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: int using_regs(int size)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/TinyCC_x86_64-gen.c_using_regs_0004_b9ec9c9e28b6_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <using_regs>:\n   0:\t83 ff 09             \tcmp    $0x9,%edi\n   3:\t0f 9c c0             \tsetl   %al\n   6:\t8d 4f ff             \tlea    -0x1(%rdi),%ecx\n   9:\t85 cf                \ttest   %ecx,%edi\n   b:\t0f 94 c1             \tsete   %cl\n   e:\t20 c1                \tand    %al,%cl\n  10:\t0f b6 c1             \tmovzbl %cl,%eax\n  13:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint using_regs(int size)\n\n{\n  return (int)((size & size - 1U) == 0 && size < 9);\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "TinyCC::x86_64-gen.c::using_regs::0004::b9ec9c9e28b6::llm::clang_O2::P1",
+    "function_id": "TinyCC::x86_64-gen.c::using_regs::0004::b9ec9c9e28b6",
+    "function_name": "using_regs",
+    "project": "TinyCC",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

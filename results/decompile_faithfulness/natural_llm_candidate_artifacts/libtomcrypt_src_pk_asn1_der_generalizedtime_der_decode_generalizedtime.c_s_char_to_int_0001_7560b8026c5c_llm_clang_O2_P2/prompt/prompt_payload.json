@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: libtomcrypt::src_pk_asn1_der_generalizedtime_der_decode_generalizedtime.c::s_char_to_int::0001::7560b8026c5c\nProject: libtomcrypt\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: int s_char_to_int(unsigned char x)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/libtomcrypt_src_pk_asn1_der_generalizedtime_der_decode_generalizedtime.c_s_char_to_int_0001_7560b8026c5c_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <s_char_to_int>:\n   0:\t40 80 c7 d0          \tadd    $0xd0,%dil\n   4:\t40 80 ff 09          \tcmp    $0x9,%dil\n   8:\t77 05                \tja     f <s_char_to_int+0xf>\n   a:\t40 0f b6 c7          \tmovzbl %dil,%eax\n   e:\tc3                   \tretq   \n   f:\tb8 64 00 00 00       \tmov    $0x64,%eax\n  14:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint s_char_to_int(uchar x)\n\n{\n  if ((byte)(x - 0x30) < 10) {\n    return (int)(byte)(x - 0x30);\n  }\n  return 100;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "libtomcrypt::src_pk_asn1_der_generalizedtime_der_decode_generalizedtime.c::s_char_to_int::0001::7560b8026c5c::llm::clang_O2::P2",
+    "function_id": "libtomcrypt::src_pk_asn1_der_generalizedtime_der_decode_generalizedtime.c::s_char_to_int::0001::7560b8026c5c",
+    "function_name": "s_char_to_int",
+    "project": "libtomcrypt",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

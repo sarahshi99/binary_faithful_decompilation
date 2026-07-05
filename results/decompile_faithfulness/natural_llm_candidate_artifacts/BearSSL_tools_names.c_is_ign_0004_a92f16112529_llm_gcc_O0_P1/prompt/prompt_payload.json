@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: BearSSL::tools_names.c::is_ign::0004::a92f16112529\nProject: BearSSL\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: int is_ign(int c)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/BearSSL_tools_names.c_is_ign_0004_a92f16112529_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <is_ign>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t89 7d fc             \tmov    %edi,-0x4(%rbp)\n   7:\t83 7d fc 00          \tcmpl   $0x0,-0x4(%rbp)\n   b:\t75 07                \tjne    14 <is_ign+0x14>\n   d:\tb8 00 00 00 00       \tmov    $0x0,%eax\n  12:\teb 36                \tjmp    4a <is_ign+0x4a>\n  14:\t83 7d fc 20          \tcmpl   $0x20,-0x4(%rbp)\n  18:\t7e 24                \tjle    3e <is_ign+0x3e>\n  1a:\t83 7d fc 2d          \tcmpl   $0x2d,-0x4(%rbp)\n  1e:\t74 1e                \tje     3e <is_ign+0x3e>\n  20:\t83 7d fc 5f          \tcmpl   $0x5f,-0x4(%rbp)\n  24:\t74 18                \tje     3e <is_ign+0x3e>\n  26:\t83 7d fc 2e          \tcmpl   $0x2e,-0x4(%rbp)\n  2a:\t74 12                \tje     3e <is_ign+0x3e>\n  2c:\t83 7d fc 2f          \tcmpl   $0x2f,-0x4(%rbp)\n  30:\t74 0c                \tje     3e <is_ign+0x3e>\n  32:\t83 7d fc 2b          \tcmpl   $0x2b,-0x4(%rbp)\n  36:\t74 06                \tje     3e <is_ign+0x3e>\n  38:\t83 7d fc 3a          \tcmpl   $0x3a,-0x4(%rbp)\n  3c:\t75 07                \tjne    45 <is_ign+0x45>\n  3e:\tb8 01 00 00 00       \tmov    $0x1,%eax\n  43:\teb 05                \tjmp    4a <is_ign+0x4a>\n  45:\tb8 00 00 00 00       \tmov    $0x0,%eax\n  4a:\t5d                   \tpop    %rbp\n  4b:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint is_ign(int c)\n\n{\n  int iVar1;\n  int c_local;\n  \n  if (c == 0) {\n    iVar1 = 0;\n  }\n  else if ((((c < 0x21) || (c == 0x2d)) || (c == 0x5f)) ||\n          (((c == 0x2e || (c == 0x2f)) || ((c == 0x2b || (c == 0x3a)))))) {\n    iVar1 = 1;\n  }\n  else {\n    iVar1 = 0;\n  }\n  return iVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "BearSSL::tools_names.c::is_ign::0004::a92f16112529::llm::gcc_O0::P1",
+    "function_id": "BearSSL::tools_names.c::is_ign::0004::a92f16112529",
+    "function_name": "is_ign",
+    "project": "BearSSL",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

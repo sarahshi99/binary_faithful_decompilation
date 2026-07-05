@@ -1,0 +1,40 @@
+{
+  "created_at": 1783258808,
+  "id": "resp_07ed0ea2de7ca6a6016a4a5eb87a588191872b51ae5a29929e",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSl69BWbQMAsR539lGRUscStKORljKPhqpFC6eVYtRwqoIQg860ln7G2KnY0rCYukkjuUE2kOedaBH_QNQ6zYBTj6PBk6BjXlXBQyKnvim6tim9-tcICuF0Th9XLSxVfOL_K9TiM3oarIpdQ2qG4oYym__0-9AtO1-HLd0IpHD6ScJ2T_EEb9y50JQBNH42BOhVpb-O-8BrrwI9rvuC62Cd6l7-2IX7RsF_7yGYwKA2B5jjbTaW4ua2E4uhrWkMZ0BbleJmf59NZIu-HJeyJzdsGRQlaOT6KwNRpg_4BdXpBTJuJUvVme17_LPz03VxAoJzHEM0p1j6fO17YqCMQGZmos7GJkyXUP5WO4jMlHjo4VxM3uItkvhPM9VBQm7k2vEYBzFh1xL0zjE2UKhj6XHVO0WGXRb_GZbPOlPqnVfomNriQyiS-KbSyAqGZ5upOPflmT6n9e-rbNhKPVhgaVMqknjnKWahvNSK6JFkp6D_klt-_k89He2zijqIij1naTIiTzi5ThwO0oy-3uYgcJRkGLZbBmBEHBgtUf0YkWSYEROFdXmZauAbDEDnH-kShOXPvgqUTVI3Iz7GbYa2sJ6K8G5qN0GejpzR3VB6Uob8vLrfms9VXyKWZpTxieHufTQAa2h7x6t_MedQdzvrwLxc0neuFLBKj9YV-srXKdRQ8nVWvCnA82wUcNKvg2g9saYGR8Vkjc4Y6tvf13jwR3I5HrLzVQQ8o5O5gBmoQbcfnqXhTzo8eIk07IJegySd-8bmyrw8CXgLr89ki7xwj0x-wibHC4lkvnOoPA_38D0kyCiMt351sTUaaUpnLYLfIRFPmnFTH7_En2VtAE6rZY-tBjX5JC2QzGrQifn9bKhKyKND6rjPIGeW5GAK2chB58ouAKFw9WQriNlr7a2Y8PFs0yaV_io71-QV4rmFk2zkkBdC2g551I4V9oiTxx2u_pMCtZIQPec3iXyvRL3_4YRLoWiSgF-_5T5C9DCXsS3r1nnp5H-KVLPQeeSaXdUDBeFfuU",
+      "id": "item_c57lJY3wHWGqYhGc",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int s_char_to_int(unsigned char x)\n{\n    switch (x) {\n        case '0': return 0;\n        case '1': return 1;\n        case '2': return 2;\n        case '3': return 3;\n        case '4': return 4;\n        case '5': return 5;\n        case '6': return 6;\n        case '7': return 7;\n        case '8': return 8;\n        case '9': return 9;\n        default: return 100;\n    }\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_07ed0ea2de7ca6a6016a4a5ebd0ab08191a3d360aac40c8bbb",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1293,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 139,
+    "output_tokens_details": {
+      "reasoning_tokens": 17
+    },
+    "total_tokens": 1432
+  }
+}

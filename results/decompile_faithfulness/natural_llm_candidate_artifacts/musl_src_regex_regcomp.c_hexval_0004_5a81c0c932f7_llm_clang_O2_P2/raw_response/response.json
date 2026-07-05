@@ -1,0 +1,40 @@
+{
+  "created_at": 1783259108,
+  "id": "resp_0e59c134955588e4016a4a5fe41b98819883b26aeae295c0c1",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSl_t9dR4G6gLsOc37ke5wOPi0IIs7uPoifTddZFie5-DOvWmxWbwhcSXkvEoKTEoxEizwO-LYOWGCASiLHdPXoqBv11kM3FIDaPVsycNNnqIEBeFWTHMSDhgVwy6sfLQidpTEOwl7MmJTa5Z8WNcm8x0dsMyB2EAfoslj1MJquXUr65MN9hV5ut-Jix32PuEFUTVkh54AoiSZsEyF4n8ZvsYe-L5VscomqQQGqZevWDOeRTtEuMbduOdTa0mrcEXzIq9KDrzXELuoqSEdC97axPE1xs70CM7fg06PKAaM-g4g6JgTzyegnRaacDKBfsE1lxsJ-g6AJL4QKGeddDOr7jBb3s8-Ufn8wU3fZW5lO9Ic7uH_rG6N6UrYur428eomeA94A9mgr3XH9agfXO9uVg4P9c-SQH1MSYfrQskBbktEeSftYd-HxrBMyOz-tE2sCawGWlonF6_y78xOSAHQLwS1hCQaPh1gQfbB62_xpxWXw-fi_5qqFeYWFRiuV0ywxYTpgDjD5mK5CNacD_8EhkdJUNXXtTLPfX6mA9Drk5MWTNvHqwyygmw6O3acxa0MAtCrVrcVdU7Anp1t5x69eB9DgAgvTQE5aWnUDw0VPIHBILSFVHeOiWZBBKgA9OaPagAqAurEMd-r3ar7E0hW6pl_pwXkQo5JQeHtj_TQfDoMN7J4iuh3Z179wQK6huHRw5mCiH4dhoLfYLE-JXQqABg28g7lVB3yd_mB3XePn6H3797rHA3nnI4qncYvdWi5tYgRvN6izABF8-PsnPDIPfh9ulFQJ_MfRWs01TqxCFy9M-mrkxfb20M5eTTu_U5FtrcqnIpznDxga5qm66VANgad3Scve6YoQqpc5dRCOYv4r2HjKKDQ9FwR8eNGPaXLksLKDQWTkBLXDW1IWZMF4KGMGrX5wqgA44RPndYkww-xQbtYzUm0aZljqEbpkzCeU8yss7F8AJv8sP-oabDPXlINb7Ex0AK1nBF3PTMMzPC6s4wOBT-XIAkSbDVMWXJ7xKtZ0NASVwY6r9qR0WtAh7FY3ZyOoxgy8CV1bc7k18X121i7keQO5uG0UzeHwwVxvjzF0aTX83ABSSUt5PTRDK2-hVFhkEZOWdzxdzMUo6seTGzOW5G3oH7J2Qc6pxNxlFpdLOOj2UMPobbQiN_vh2v-kiFX37FItuBQtUxFPa24Uzb2wwAeObyG0-gcmJpqf3JI6PY2H8P_TAZUSsWoK66uJkWg9e2uF0OrLk6RWczGmFhOv00N3Mlo1lGbyaNgcLpFDgFRRlnP4DcPB1smWhIsDi0JdCkgaPEidJfINMdNmuP_tkD6KWuHsVBS3m9yia1hgzriW9kf7wy9nn3YJ0i8RsjpaNUuUbKVyqwYcyKRqDBkOrLs4v9NOiQ621yLBhTItmlhxCsMBDm6WRa40BtiQlaRnOL4Jhb7xSMLlfanoUDL1YV7WNHGJXgqQT44jkNYlHP5UDbrS-Z0UfP8bGsr2qa9bV1GrnfwbLP22SrFljUuHRwAjWpI6MNgDMPqF9I6sTqbIXIu0rqkxvRA6xxVMoLdYzZJ3z7oOnMqxzRDZkpfZy6rCZSIGSF7-E0vsqD5jgAyArIVeBjFtco-iU6aZ296J8DEXUqxk_kQLF_4YbqooiFIKTMnAOihEEnroQFMsDPposZFeNsapEnsGyse_0bzHjygTqUjI27EMrAcBbXErIAEgdk9ydM8i5hCKHLXpxuYUMwArrnD1MTw2iYBz9hlurll7ZPNhAueYqkX_a4S3GJx10TaBlRJ1a6ZlNd6tj8k8zCyhs8sxh4ZhPoaA==",
+      "id": "item_k1uk6JVinGStWGWB",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int hexval(unsigned int c)\n{\n    unsigned int v = c - 0x30;\n    if (v < 10)\n        return (int)v;\n    c |= 0x20;\n    if (c - 0x61 < 6)\n        return (int)(c - 0x57);\n    return -1;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_0e59c134955588e4016a4a5fed46988198a44c3e9c359b4008",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 572,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 285,
+    "output_tokens_details": {
+      "reasoning_tokens": 206
+    },
+    "total_tokens": 857
+  }
+}

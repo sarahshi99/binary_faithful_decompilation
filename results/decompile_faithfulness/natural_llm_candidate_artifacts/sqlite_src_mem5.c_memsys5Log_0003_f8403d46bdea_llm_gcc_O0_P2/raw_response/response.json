@@ -1,0 +1,40 @@
+{
+  "created_at": 1783260146,
+  "id": "resp_07ebde897c64da51016a4a63f25b508190a93d36daee43bbb2",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSmP4ZDpzWRYqSKfDCgZV16eFeA_TZWtNaRsJ5qVcU7bQI1H_paYg99sYPtrUmcjplxPXzbFj7pLIJP1Q3uMalRwruZ2oh6daddJZHz9oqjfL0NRvGM0m7_QFKzo0xkLvKic_1QjO45A624jMl1PuJOiy-LFbEDYZ2Mvky3kk4ICEzQlx3I-b0tPviBxh91JGC34xYUGFO2g9WamNdhaojpSXsVzCYSdWCu_36eyllFSBfN1dfr5nEmV1oIuWzpzpfUUz4rGWxU6sTEN1wKYPwGijWy50VYdUBsAF7xq0t859y6e7JCfB04G9TOwc8lUsCj9HAFojEn-uoko68Wj_SgVgciSABf_qtdGqEN8OTDs39H5DA13R5zsxHMvPQpB5bNnSLVV_A0npKOibFRJFUyXAQzpjQnb_sly_GOX8aHwCU-UlM6JRgy9sIUj9vqbhv0Gakh0n6yLjdcN_z46vAj9DemTFLEMI3iXVDXwSU8s5C2AM9tG-Da3e9K8lp_NXTlbmJfk40BRILaodQThzYUpc9JRJjhpbrQ1dgQa8qD029XtC39NQGAD1vTr4VrAjy-K5rMMrK-TqJ17dV69tSuh-BVPT_j8ZYDMS8QfhDosF1E_T6OBAt6PIA_EjYoA4jd67_xnqpYvOdQfUDk7wNV58MYtUEJqmO7MeSIQYYIvjeTy2oQJG9i_Ao85dMD7XyydUqMW3pd319o2OSG_4rlgrrVd3zvFkzJyy34AuwSPL6bbFcT3op0xE4ae-geq4opqDcwFKBnqvd3UlQzkCbBH7GVoVGe4pIS6QtTFU4m9f2tE4DlmM441keGEbxPiH6rxeTRurKYtFikOGjJfY1GwkIQdXRXQM6kd-f70l5GKajx0W4aUWcJY8i592Dc6LAR41B4wyG9Qz5_fws13HRxF4atuCTs8pnOgLM1M8V7c0dXs7ebvXtqQigJrRQVzRX57USU74OTMzXUZ1wJEngdhJ9PRPwbv7KU2S3RHTLSwUMGEDISJFnKs1XxygT91HNyepMINK4zcnkt7p2G9z0Ni7FzVASgAqyIMdYcoVFk3BzsOItMTdtEaK_IUZMroWHttmYbOZkK9oCOegFcgTDFoZVE5FlBBWn9IQIaIoOlI4W6Rx-uWBGvj_dBS6HiCdeiaQBagPnfe1aj1gcDsnGjf3buj74lN2byYKjuyR8B8DDjlv9zvQpCyPm-RI4JLtyaVB7corlrXSmxQqM-cT8YybXqcVTOUeF_AgjvBh73nKn8rV-Z8LtCTglE8nJTZAp21QRQ69VMvyd5y-iHmyN_Kk6YQUsLT8sqAOuwrrKq1QgkEIMuX3wHXfFhftI7nVRRCDEp_-jvtSA-Auq-SrzZkh1gg-hyLASAUZ9H6Iv2WsnR3pw09YaPVknbYRs-MjO_uV8o_8M3W9qJ-vkLWxCJDTr9K6x_hsFyKYLkxImDwthcIW5uP4QLq17zPG0ME1HeGdMKJb5mgcpgk2Vb7BNL7o35lCABCfQR4xJFV8gQFcTgbQdSY_d6P-owlRuMmwuqGF",
+      "id": "item_IYSKAdp1B7uAlmzZ",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int memsys5Log(int iValue)\n{\n    int iLog;\n\n    for (iLog = 0; iLog < 31 && (1 << iLog) < iValue; iLog++) {\n    }\n\n    return iLog;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_07ebde897c64da51016a4a63f8c014819087988777685ef7e9",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 738,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 201,
+    "output_tokens_details": {
+      "reasoning_tokens": 143
+    },
+    "total_tokens": 939
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: TinyCC::conftest.c::isid::0001::8f9cf31cf5da\nProject: TinyCC\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: int isid(int c)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/TinyCC_conftest.c_isid_0001_8f9cf31cf5da_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <isid>:\n   0:\t89 f8                \tmov    %edi,%eax\n   2:\t83 e0 df             \tand    $0xffffffdf,%eax\n   5:\t83 c0 bf             \tadd    $0xffffffbf,%eax\n   8:\t83 f8 1a             \tcmp    $0x1a,%eax\n   b:\t0f 92 c0             \tsetb   %al\n   e:\t8d 4f d0             \tlea    -0x30(%rdi),%ecx\n  11:\t83 f9 0a             \tcmp    $0xa,%ecx\n  14:\t0f 92 c1             \tsetb   %cl\n  17:\t83 ff 5f             \tcmp    $0x5f,%edi\n  1a:\t0f 94 c2             \tsete   %dl\n  1d:\t08 ca                \tor     %cl,%dl\n  1f:\t08 c2                \tor     %al,%dl\n  21:\t0f b6 c2             \tmovzbl %dl,%eax\n  24:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint isid(int c)\n\n{\n  return (int)((c == 0x5f || c - 0x30U < 10) || (c & 0xffffffdfU) - 0x41 < 0x1a);\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "TinyCC::conftest.c::isid::0001::8f9cf31cf5da::llm::clang_O2::P1",
+    "function_id": "TinyCC::conftest.c::isid::0001::8f9cf31cf5da",
+    "function_name": "isid",
+    "project": "TinyCC",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

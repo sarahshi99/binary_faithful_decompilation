@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: sqlite::src_mem5.c::memsys5Log::0003::f8403d46bdea\nProject: sqlite\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: int memsys5Log(int iValue)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sqlite_src_mem5.c_memsys5Log_0003_f8403d46bdea_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <memsys5Log>:\n   0:\tb9 ff ff ff ff       \tmov    $0xffffffff,%ecx\n   5:\t66 2e 0f 1f 84 00 00 \tnopw   %cs:0x0(%rax,%rax,1)\n   c:\t00 00 00 \n   f:\t90                   \tnop\n  10:\t83 c1 01             \tadd    $0x1,%ecx\n  13:\tb8 01 00 00 00       \tmov    $0x1,%eax\n  18:\td3 e0                \tshl    %cl,%eax\n  1a:\t83 f9 1e             \tcmp    $0x1e,%ecx\n  1d:\t77 04                \tja     23 <memsys5Log+0x23>\n  1f:\t39 f8                \tcmp    %edi,%eax\n  21:\t7c ed                \tjl     10 <memsys5Log+0x10>\n  23:\t89 c8                \tmov    %ecx,%eax\n  25:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint memsys5Log(int iValue)\n\n{\n  uint uVar1;\n  \n                    /* Unresolved local var: int iLog@[???] */\n  uVar1 = 0xffffffff;\n  do {\n    uVar1 = uVar1 + 1;\n    if (0x1e < uVar1) {\n      return uVar1;\n    }\n  } while (1 << ((byte)uVar1 & 0x1f) < iValue);\n  return uVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "sqlite::src_mem5.c::memsys5Log::0003::f8403d46bdea::llm::clang_O2::P2",
+    "function_id": "sqlite::src_mem5.c::memsys5Log::0003::f8403d46bdea",
+    "function_name": "memsys5Log",
+    "project": "sqlite",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

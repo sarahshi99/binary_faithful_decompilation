@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: musl::src_regex_regcomp.c::hexval::0004::5a81c0c932f7\nProject: musl\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: int hexval(unsigned int c)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/musl_src_regex_regcomp.c_hexval_0004_5a81c0c932f7_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <hexval>:\n   0:\t8d 47 d0             \tlea    -0x30(%rdi),%eax\n   3:\t83 f8 0a             \tcmp    $0xa,%eax\n   6:\t72 14                \tjb     1c <hexval+0x1c>\n   8:\t83 cf 20             \tor     $0x20,%edi\n   b:\t8d 47 9f             \tlea    -0x61(%rdi),%eax\n   e:\t83 c7 a9             \tadd    $0xffffffa9,%edi\n  11:\t83 f8 06             \tcmp    $0x6,%eax\n  14:\tb8 ff ff ff ff       \tmov    $0xffffffff,%eax\n  19:\t0f 42 c7             \tcmovb  %edi,%eax\n  1c:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint hexval(uint c)\n\n{\n  uint uVar1;\n  \n  uVar1 = c - 0x30;\n  if (9 < c - 0x30) {\n    uVar1 = 0xffffffff;\n    if ((c | 0x20) - 0x61 < 6) {\n      uVar1 = (c | 0x20) - 0x57;\n    }\n  }\n  return uVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "musl::src_regex_regcomp.c::hexval::0004::5a81c0c932f7::llm::clang_O2::P2",
+    "function_id": "musl::src_regex_regcomp.c::hexval::0004::5a81c0c932f7",
+    "function_name": "hexval",
+    "project": "musl",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

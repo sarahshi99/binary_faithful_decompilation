@@ -1,0 +1,40 @@
+{
+  "created_at": 1783259673,
+  "id": "resp_03c6ff64dbecbaa9016a4a6219b060819191cb6a5e90172577",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSmIedRm8a-JkvvBaZJzNTq0gQ357-S4bxBHQwz_NHNcBx232u7TejIIscT3oQtladXqHXlIrRXfy3NTlCGCZacUvcecupcI5oOHoig4AL9fsXNzKteUrMhA6DyTAGwBopUFgtlY1en4c5D9DK7fjB10XdhSFHYQIx-5q8a8junw2LhrJylEkh1pxIjqX-l_dZl9m4XtAfLovHzli3wdXEinoCTpTUER4s5RfJTo3lzjDKFcJ3b3bHIgQBJk-SrTZ7gNHLbH3YULgcymE1pBdHesT9G4MQMPMO7cbHae0c3JRmhX0qwVaftvro1z3LVr-alxtTNKv7Lo8YxtgiGqsN8RGkpd870UBmJfpAXzeLRdZDFLj-u5wBSN4Yy5ZbgpiiQPcz28nYkAg1Er3vNTE31fawo16zOcCA2YbOOxG3ZTJ85O6pe-xQ2DY2NeVkAU3eIkLhuQ5L1tL6CK5dNRglmUT3UsBmoJZWBiufXzZKca9KbNvq_oexY1ylAwCNBi8JJyYRRzoORnWGQgmgVWCDH7cGMCS9pyIPjSnezYfUplHZSpvHYDNSoiaj4YDb2s_b3Z7OWA4txzPdyvwOlwAfDGUQ3-KTj5vLCg3jCLUya1pbCy_rYFMv5STIGOM-DBHJi3W-IcKr0Rgf8t2fTyCb6Cl5AbCHeKjz1kbcAz5j0s6xyKW9MmGzKWlewFqmaqPk5H-AKin5QIO5_zr_9_voLgeSNxtwrASg3KyusE7Eccz_e7KPZTe8mZacVUPIOQmHidbTKgOo7i_wqzmoThADyFSebc4VmlAy01rB2eRyQ7FhUBKqo-r43hcHdUW80B6gVYn-SzrIWfcEwHJO_BAIjUCkoPbCMgCdnpc_9-G68FEDsTtrXTk_HtPorEUHzlAOA_p8Whi_nGIXOaMeOkJiK7DMmOwmcFdXvIAN-NSb9FYxlpCyBbh7NCdzx4G6brTaRZNHuBVeh5jfrG1evW5DzqMkNPmubewyQmpFeUSi6Q2ahT8wRlm11KPl8hno3WI5XnvwUpXrpp0vc7FlG_pr2NkttUcs1XkW1si58wBFRx3HLlY6HUJq2UgrqItBoGTpe_PdL1CxaZTvQRMgLVih_8ShWyAoodnQTRmYsmpQZgflDwiTk7fMZ2Vv0ZrfDLFqzdbkUHjbZwrxYy09dbfsbkV06Ymg17H0BghgZT8FRCrcgwYRSF3eHVkV0WmsX25FjPT7T2a5ZW4xOq7DvcsGKQqmTTb-dZbfPaIUn9my5hdwCNzYkF9XT4r13o7PWk9xtAo_5uPGLsqTUEPsNAOUHhh9J97fbdreO3qsJHhTXeVwi8ArAwLRSq1X1z_IQjdyPz8",
+      "id": "item_Tb3JDwZqcjXqS9n4",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int internal(int ch)\n{\n    unsigned int x = (unsigned int)ch - 0x2aU;\n    return x < 0x17U && ((0x640001U >> (x & 31U)) & 1U);\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_03c6ff64dbecbaa9016a4a621e3b388191a91bc4b4c4dd91d6",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 500,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 150,
+    "output_tokens_details": {
+      "reasoning_tokens": 90
+    },
+    "total_tokens": 650
+  }
+}

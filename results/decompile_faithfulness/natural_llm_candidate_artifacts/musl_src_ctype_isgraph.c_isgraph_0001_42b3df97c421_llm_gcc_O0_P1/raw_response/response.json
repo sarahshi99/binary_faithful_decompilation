@@ -1,0 +1,40 @@
+{
+  "created_at": 1783259005,
+  "id": "resp_0a3b42c1845b6edc016a4a5f7d664081918c26fa5dbf2163f1",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSl-FfUIn-ltZXQp4YFhEfLUkoCe1DLynm2EN9arxzEdsNedXOgiF-yNPoUNR502ahW2-iWdg2KKHAq4k4t7DQkGzGmXRnb1zvbw4_IpjSsX1A8puGRaFBiZ5u78WwV3H94vw02WLxw1U3gjvtOe-Hm2yh3QGD3Sh89RLVNrmCw9dDnMOYIT84E21S7myYUj9emRHdj8rlBM4Wi6wpcFxIyyK3jo2ij7yA4Sa74ys3m7Gip6yAAaREUNEsyaFCt868_yKfS5--SOuBfxEt0kpgq5kx4v9Ph251Cv1Q_zCxy69uvd0R5Gmds3T5AKAwXGlH-FXtna_oKgGmCdSZGMPMu1PFCgCYeyu6pOHTr3UL430Z7UMNYyrBtuxuXYbdOxCelC86GBqkMCrCbSTr1DVcng6SjJmapzJWzgaTHGRyBqAWr1t4iC-TvIHWqu9msY9qKN_qNz1p_GkMOFzP05wJLUXrZ1JWYQZ8vLAUoAu45UEspcXim4slHW8r_jU_soxSQn6lwx1J-d0WdVX8bYax1saseZHHyGhR171MiaZXkHeBhwlBE5-79N9M4ExkGoZj1I_rNEabPL4A2ZHRkpV3DmzKM0yPZ5dt-SOzpTbLueUuJaYwNV4NjwCOTc4_Y4lu6cf09JQnUDJrOLGU7ji9Zo1dSZ51Y7v7Fnj4ApnvY3RH6-JhVzQeSbhT8ziLjsxFGRM3ipmjyZNr0zdqAyAwadpFj2D6JdWnwoxUZnRYZKL2Oxez36mnoFZ70lqOiJeNCLRMlLAUQ_qNYonD1DaTQRHcCeY4JXiD-81m1K9qHI6aDegb2asetJ2qMWe811YYfcgOeRERsIHPpQPBMKTa0K-NiHe-aTYxFp1AlAYK7TOW0ZCTJPgCo1FjXjsQbxhPDmktnqGon7VqohOfvFaQ3cNjVCAMqLshdCxVxFN3BBYpD3A_I0qbT07-RF9lmhwCA8gniZS-m6TM8eUYvp4r1JLo20CGq2B3mCHKVkiZE0_Llz6rLMQjBNqj4tpeVLR-csrAXZnQEQfHl5Fn9s8UdPXkWbumYQCtLsp_kMwQ0ErnRlhFdpEXYcB7dd9U-2UiW2yYWjP0TplnjLHr1yfQyZIlCaaPwHqfzAlNhKJJ6m-Vq0iIHie-4VgPZjaUgHcda3z6rM6IYBomknUoTI2DXoYE0wAu0O0rO16ufhMlYUep1Slnuu9mZA_fHBdNW6x9QHj0d-Nvn_GNiZeI24UDQk9e3WVdNPQCD4obAxc5uHFGnRBRnmTKH6h3aLlr0ORRltFDOwaUKIZLIptW6MZs44TD7qWwikKleIhwJYRieGK9ymRLAVSYqAaBpNBqi8QyEQ7aXzRYhpF2LDKNXJWPFtk2Fo8hDTh3Gp13AXe_uk9CCxj66wOL_PtGkL-uuMzUiFRZIB-qF6797f31TBvr05FOt_yEEo4LJ0JQgETgIVt6CcVQjduNvuS4l5s55BPpZWHNEtqC-vMDnd_6vpcjLeOL10WoL-6QpUwV6Loo4vFdbls_n3kfos6z9sAWi-x4CBiWY4JG-Z0kye3atbo0BIEOBWJvTzQYU7dL6CDkhCle1eJ6rLISeeUM6q7X-VP7hYo0Qi7hdlSA58V5W-4dApZdAVGIUvokQ392BfK5LqNPNEHiaj7XNLREGdAC0EDNQEl",
+      "id": "item_ocmG9IXvaxQIIeNR",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int isgraph(int c)\n{\n    return (unsigned)c - 0x21U < 0x5e;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_0a3b42c1845b6edc016a4a5f8586188191a00f6c90a43dccd1",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 470,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 217,
+    "output_tokens_details": {
+      "reasoning_tokens": 185
+    },
+    "total_tokens": 687
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: sbase::find.c::cmp_lt::0003::3ff7fb5ec166\nProject: sbase\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: int cmp_lt(int a, int b)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sbase_find.c_cmp_lt_0003_3ff7fb5ec166_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <cmp_lt>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t89 7d fc             \tmov    %edi,-0x4(%rbp)\n   7:\t89 75 f8             \tmov    %esi,-0x8(%rbp)\n   a:\t8b 45 fc             \tmov    -0x4(%rbp),%eax\n   d:\t3b 45 f8             \tcmp    -0x8(%rbp),%eax\n  10:\t0f 9c c0             \tsetl   %al\n  13:\t0f b6 c0             \tmovzbl %al,%eax\n  16:\t5d                   \tpop    %rbp\n  17:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint cmp_lt(int a,int b)\n\n{\n  int b_local;\n  int a_local;\n  \n  return (int)(a < b);\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "sbase::find.c::cmp_lt::0003::3ff7fb5ec166::llm::gcc_O0::P2",
+    "function_id": "sbase::find.c::cmp_lt::0003::3ff7fb5ec166",
+    "function_name": "cmp_lt",
+    "project": "sbase",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

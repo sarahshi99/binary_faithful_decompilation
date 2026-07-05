@@ -1,0 +1,40 @@
+{
+  "created_at": 1783259059,
+  "id": "resp_0585550812dac913016a4a5fb366e881919928652ee049078c",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSl-8CneRr7PmfZUe0WPyd_omTToMYxla-JOUgmJh9WA__fjc_KSEcDyaoT9GZ36D6fMMRR3xY2WGXqGH08OCpMrIbvZ6t-Gbo9Xmk4LWyo8YNYxQoArH-41c4g3VkhvS2Oi4tOM4e8Zd72n8FMHrRI8t_8ovXZFScePjPNkr1mFIlsqsZWnxT25iAoatZzqIYjbQK6Kz9q9KVf4vhbWYDB43UVy9fpAhtqeweq4R4eOwNFcNIbuPFptjbWEd1zfWYD48JpyaWrsTO2YM1i8hsVYhwI801BpM7CEFm4RGVbst5Cz9LnB45pTdJfF2XP-qdajCfETwyR2N62xXfvgUCi0S9ZklOLYvfdxs9brN62QI4jvRl2mA0myDFU5uo3pJendYI3eCSoCXwcuv3zhSHebv4vQKGemPtsgUp1KX8E7ovdlx9ki73VbrRCc0UUvWtbPQKfq32pyP7RWIXYjivSUhbCe_o6bwpitXnVhm4U3Foy2GODuAVy8uuZgxg5W43eBPayKnwXOftpTIddAgRLcob2amxkQMTfHfDNRqzt5LhOBR5YwNC44N-cwOtAdx8_fXjdYZRky9XrHZ3h1-XrtmLt4TxqC7VQYh23dbarJvFWcThiBHeSPe0cHwZ6H7_ruToLdDfC2h9-8AfroYpoUbyRpB8RS21Y2tWVrv_BB0PGC3yACKLMaUke1c0XF61RjEe6I9ClTgLJqprB7SZAURWWX_CDTxRscMpvME9HGVz1qFn-bJhB5XyoE9PUw8ajNMnc_RUgId9Atg2R8TV8-Vz-_oT8fktpZu6kJs0WinszFb-bYqISr2-6jR3wX9rOfeXEBwFBDW4KHVIWapy8XEJDhNimGZqy4sUbRgUAGPUenQBxy-XvUS1R07_K2f_sYpMh8f7aGE487aYwPDKoB2Pec6XgdDkNuCGGY5T7nNxzLAlMlUx4X_s8qvPBplNZPB9M5ueU8wWkHsUcXO66LulR-tmiJ4YJPeD62srNi_yQlCJVW4Ac74QWKid4HB3cGfaPjzjZTLNFyiH__Ysb_U6B-px1IULFaqHvJ6N3EFMb8IUfBLLDTY4drhaZHM7LRu7pClG3KxmbEtZwWa-EDfjjiLAOWpDla78yylIIc2leQiNd6eMOFeMNrjqECi7I3VaixpAzjYk_xMirgppbv2TYUHKBZMRod2nUZ7lKVLeqmwP1hkCiFpXnSgAuTHdyetdDarugNS0IdmGwGNrfRG9g0KwgWPucC8dyQ2aJ4UVvQW4VC6Ufielk4pBdprgcRqyV1uJBHczxyXSJQoSBH_HwmLmM5q7ZOESAzfU-rOe_qJrT8iA57BLxTxbBSL5K2XxqEGKX0uEXzjRTKkU7aUnPsNiem7zdZYZaIMZ477ZyIsDJj4pD1gCoqZJX9IU4TVkvWtKG7csVgmJorg2vi48RWCp99HAzzXTfdpkuzfDnOS0ixSTymfBS5-gGcefhf9_moKTnThugrifJJZoiEN2BcjfvEeEUtYKcomxRUU6W4-PPLf5CUkisoZfc1I3Ugg1zSiyzQaRlw-xUB4EgsFR-_VubZO8o6e5OUlYMoayTpeh2-kGu5s76g0JvGYmUrtDOwYaH-ErTrPx2k9kggWdoTB4rfvtdHb4TQIOovnLCwtiUUw5U24ielqVH10KzDUmEPclIH3VZu-7jHjBiIFQ29GsgGkCnNYXaSLNoyH6CM1tFASTk-VfYkD_SzUzM_YgVNLmXnzeKdnw1hHJGqxUA==",
+      "id": "item_RbXhAX7iOiR9rETY",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int hexval(unsigned int c)\n{\n    unsigned int x = c - '0';\n    if (x < 10) return (int)x;\n    c |= 0x20;\n    if (c - 'a' < 6) return (int)(c - 'a' + 10);\n    return -1;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_0585550812dac913016a4a5fbc60348191a10ff2ed6ad11a54",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 565,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 269,
+    "output_tokens_details": {
+      "reasoning_tokens": 193
+    },
+    "total_tokens": 834
+  }
+}

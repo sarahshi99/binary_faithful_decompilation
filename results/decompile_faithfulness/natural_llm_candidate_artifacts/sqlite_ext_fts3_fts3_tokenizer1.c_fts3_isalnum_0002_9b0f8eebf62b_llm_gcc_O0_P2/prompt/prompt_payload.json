@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: sqlite::ext_fts3_fts3_tokenizer1.c::fts3_isalnum::0002::9b0f8eebf62b\nProject: sqlite\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: int fts3_isalnum(int x)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sqlite_ext_fts3_fts3_tokenizer1.c_fts3_isalnum_0002_9b0f8eebf62b_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <fts3_isalnum>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t89 7d fc             \tmov    %edi,-0x4(%rbp)\n   7:\t83 7d fc 2f          \tcmpl   $0x2f,-0x4(%rbp)\n   b:\t7e 06                \tjle    13 <fts3_isalnum+0x13>\n   d:\t83 7d fc 39          \tcmpl   $0x39,-0x4(%rbp)\n  11:\t7e 18                \tjle    2b <fts3_isalnum+0x2b>\n  13:\t83 7d fc 40          \tcmpl   $0x40,-0x4(%rbp)\n  17:\t7e 06                \tjle    1f <fts3_isalnum+0x1f>\n  19:\t83 7d fc 5a          \tcmpl   $0x5a,-0x4(%rbp)\n  1d:\t7e 0c                \tjle    2b <fts3_isalnum+0x2b>\n  1f:\t83 7d fc 60          \tcmpl   $0x60,-0x4(%rbp)\n  23:\t7e 0d                \tjle    32 <fts3_isalnum+0x32>\n  25:\t83 7d fc 7a          \tcmpl   $0x7a,-0x4(%rbp)\n  29:\t7f 07                \tjg     32 <fts3_isalnum+0x32>\n  2b:\tb8 01 00 00 00       \tmov    $0x1,%eax\n  30:\teb 05                \tjmp    37 <fts3_isalnum+0x37>\n  32:\tb8 00 00 00 00       \tmov    $0x0,%eax\n  37:\t5d                   \tpop    %rbp\n  38:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint fts3_isalnum(int x)\n\n{\n  int iVar1;\n  int x_local;\n  \n  if ((((x < 0x30) || (0x39 < x)) && ((x < 0x41 || (0x5a < x)))) && ((x < 0x61 || (0x7a < x)))) {\n    iVar1 = 0;\n  }\n  else {\n    iVar1 = 1;\n  }\n  return iVar1;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "sqlite::ext_fts3_fts3_tokenizer1.c::fts3_isalnum::0002::9b0f8eebf62b::llm::gcc_O0::P2",
+    "function_id": "sqlite::ext_fts3_fts3_tokenizer1.c::fts3_isalnum::0002::9b0f8eebf62b",
+    "function_name": "fts3_isalnum",
+    "project": "sqlite",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: musl::src_ctype_isalpha.c::isalpha::0001::279b5a02fc43\nProject: musl\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: int isalpha(int c)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/musl_src_ctype_isalpha.c_isalpha_0001_279b5a02fc43_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <isalpha>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t89 7d fc             \tmov    %edi,-0x4(%rbp)\n   7:\t8b 45 fc             \tmov    -0x4(%rbp),%eax\n   a:\t83 c8 20             \tor     $0x20,%eax\n   d:\t83 e8 61             \tsub    $0x61,%eax\n  10:\t83 f8 19             \tcmp    $0x19,%eax\n  13:\t0f 96 c0             \tsetbe  %al\n  16:\t0f b6 c0             \tmovzbl %al,%eax\n  19:\t5d                   \tpop    %rbp\n  1a:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint isalpha(int c)\n\n{\n  int c_local;\n  \n  return (int)((c | 0x20U) - 0x61 < 0x1a);\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "musl::src_ctype_isalpha.c::isalpha::0001::279b5a02fc43::llm::gcc_O0::P2",
+    "function_id": "musl::src_ctype_isalpha.c::isalpha::0001::279b5a02fc43",
+    "function_name": "isalpha",
+    "project": "musl",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

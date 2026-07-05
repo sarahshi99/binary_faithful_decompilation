@@ -1,0 +1,40 @@
+{
+  "created_at": 1783258975,
+  "id": "resp_0b01bf9c6a8e68d6016a4a5f5fd3748191b78ba09d843c39de",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSl9k-a8MB27RqrcngX_mH-RLAZ1rpdq0TsqnSVtBqqnasvu0JRcF9uaVE9MV5-nK_ZvLRzF4dW9FvvVJOZe7BdNf-2n05Llare-io0ll3J5k3dDuZ4D8EtpRb-B3SXpSCdrunL7uuGUaqdI5boyKJ6XVzESyxl7gNqQBrxPccRY8--SFk6V-B_AluiGrx6FVjqfa9LrmRGASMrv7kno20MgRTqqg4ReKeSP2DQhcMxXewCLU9MaXejQR6uBSnLbM-rjCIc1k9q21KdOY1TxthunhvV4nEXU4PQd__qLH55TG34JWngiUqWAgneO96cRTLFWa5sZPxDol_oDf9FTQWLcliNSgrsTsAdjP6owZEPwgejfKd88bzwYQBPxSGTKoFUbGwDgPSWRf_PsKO-0a21rbFpUUedWdRfawmv1HReZbWs26_7P9KP4lihykxG921UVSdwkeGUH7PPZE8GlFYqu6PkpXUXMLdrKIyDF9iOD_OKedWomRmKURuo-82eItn3hG7t2AC3dNX6Numqypw_G5Xhkd1l1ie8ISj3c54L9deTqDmu6SFPv68naxFt4fsmhcY4GSHiKFPrQAhg5PuujK8m2Bu3-NDLgSY3JJxPx9kuq7z6KNHwWPSlBl2SY48o_gkuJQSzSncu4E2F3POi_S3xAYpUHaU2qffdy1IwLdii5d_B-77LbU5VgGBtEaHPiepdoIDo_IL5lnIL8K9zLNrfPq6aVWFlikJUGFa3GbA8t1BtuxftYyK-TejFGTSDiM1J-fo1Zh6myiaIwBds4MOJf1myLPenVKIZkWbgjNMWhab3H-qCVO9Ofr-ec1wdiGDZOr8ChA6GFMAQXJleR_AlJPpUoPfPMrTmOJY2wN_m-r3euL4bij7jPRcWqAimGbI51n5nGCZux2o9xtevnyvkI8nMB74sRWqgyY8IoWU6LzTnuL_v64bc38pFYP9EnjfK6BzP4O2nz3zDWjKjy063eImn3WcEAfQkGM9TzXwFBTss0-d6wkLjc1E-eI7zpUiJ89RB4UgN4uAIEvw2oCf6X3FgM_BCOirKbAlIoQUjxWRgr8eY5Ex-1r4J-ejNWJG_KMMMsQkFiEDPGDv9_MV5ntctan9o51vaD49pifoE3o-dCjNHN55uuxc4TOzr81GwH07UdHtb0ovY-GjOkID0dCuDcqRi4MnpeWVNTSkEEg1W2weEF-UKSgdnrPC5yrxhv0So3-kAbwg5MG2KiEfEBub-OcJqPZSFJvBKaKbhshU_2t275E3fq6yV9pZeiR2Wu0n8XLBPzow3WM7nuFyw==",
+      "id": "item_6oSfsYBgqebh0yyX",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int iscntrl(int c)\n{\n    return (unsigned)c < 0x20 || c == 0x7f;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_0b01bf9c6a8e68d6016a4a5f648c9c819195e702ebdb9f73da",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 609,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 123,
+    "output_tokens_details": {
+      "reasoning_tokens": 89
+    },
+    "total_tokens": 732
+  }
+}

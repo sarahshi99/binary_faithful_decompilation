@@ -1,0 +1,40 @@
+{
+  "created_at": 1783258907,
+  "id": "resp_0ced8a34d9ddbb8f016a4a5f1bc6e0819189e1614adf2f8324",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSl8gFEEXJmXVvXRLeeWTPfjrhV48_5KdDtd8m_9yiw52j0r-co3hivVAhXvqzOVrcyLVRwRQwUePVlU408wTcffO5PaRl_1cV-qxE8XpA7d5qaMag3r7ey_zOLZBtW2L1e1duJiRTADskqzynyB7j4ubExd_5KS95W2v1IFc8O5MNqbnx7bm2Q2o3jI3Lz8iUWcQfan8RJvZud3ahdReaJVMvum2mE8j3I3cDUgza2tpEODYM1HyBDDbjOa6EuzEQZxkzZlPHp5aVmklYqhh_ZK34aD18IwnKNNpuDHlowZVTz8-gBvRwYTUsloh8RDCTzQWe8NE2FpF0ryg0eVnkZUQqHHnm6psENIjhm1CmUyOnEKr0dDOPLiriJ8-QHdDXSsipN_QfF649e5jsLzPgOp4bXIMDM0RHOPaLNFqEtDXeXdbRcdPzdwtXNM6tib79yRt0Gc667GAgWpZBLwrnVk8tOuZn0446gQ6WqUsCrw1I9f7ubU3MscAcYzTK0xnf2s-4P07T6CD83KXBk7tJRwHW1a6xuExPibip-SYGAdVjp9-HjoGHb_RFkq8MFzcFdmozvO8RbSCdTLvkJJaYxDaz1ELNEf7gEAowGzjyMm1XFTU8xt0iUI1U9qPCiIqV8M8nEoodg4EZ4bDUHTtf7mK6432nARL-VCzlnIZGVqfr9GHvdFcnF1VjKXDyzot-xxJsF6ScQESPaOH20REr6uYv83CDzI6TQf6_9KF7LjdIC1oZN-Y61P50k_1Yi4mf_K04FmhZZNphuwjpkI37khnydGGtBcAsv1yeocs-DpZE-iicDI1Q-ch83K5AMY89XlLeOecaVqpRREIJrm6Wre_HfMGaiWmE5IH37JaUax3QiE7ODeZvS60Kq8USMzzFIOSA-cJMAh5H_81rIrrMEcnOiIkhrUyJghnmzdM1SlzQ8uJz5WNIZy253omHkc3vsyFfqiLhWmPuBtoA70s6mMa644aAiUXuCldKK3OZZp4eK9nmL_3Mh-wuHRjBsHdx_yK3JuUxp9fcAmvEyHpqehhZxlAEsbaWLHy_z9L6NpWnuhH_2Uh0ZzWlGZ6D9cb0oBxEMMHXbmNXDm9kgyd3YSEJRH02UE0KKZeBcXpOLwcQsp0DxWuQw8EcF1kK-O7tpM9z3P_G5hLt0dfhZynG_5N-vuU-9w_NspDfcm4fl15-CiK1h22ygR5GYh6Ux9--R27i9rchB362kit7oJaBaOHfZcMiqjNadihmE2TOGbD0DPW5Nu6TN6w2odArGAVByq5BNOI4dnA_qTQUHz6e3sv3SUd61sRSdn7N4ECUosTQQPm__UirNPB0GJ9lsEQlnvxFci7pdnYc6bPMm6swBTUv7D4unHnl4MMftisQe6zJfPvh_a7wM6Y5zoxB20YtxzSTVgi13qFgVtn41q-M9h-WetRJZ7WINfSisyb0dLle5hgQ-qu8Dn-07K5VzyU4cig",
+      "id": "item_Glqe6SHgf7EpeNUX",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int hex_to_int(char c)\n{\n    if (c >= '0' && c <= '9')\n        return c - '0';\n    if (c >= 'a' && c <= 'f')\n        return c - 'a' + 10;\n    if (c >= 'A' && c <= 'F')\n        return c - 'A' + 10;\n    return -1;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_0ced8a34d9ddbb8f016a4a5f209e908191a91476a793c66a5b",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 1093,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 191,
+    "output_tokens_details": {
+      "reasoning_tokens": 100
+    },
+    "total_tokens": 1284
+  }
+}

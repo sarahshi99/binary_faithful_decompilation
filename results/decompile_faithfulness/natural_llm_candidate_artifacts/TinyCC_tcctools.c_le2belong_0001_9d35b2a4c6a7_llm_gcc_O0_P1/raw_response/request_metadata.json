@@ -1,0 +1,27 @@
+{
+  "api_key_env": "OPENAI_API_KEY",
+  "attempts": [
+    {
+      "attempt": 1,
+      "elapsed_s": 37.709839488961734,
+      "status": 200
+    }
+  ],
+  "endpoint": "https://wokeme.dpdns.org/v1/responses",
+  "generation_parameters": {
+    "max_output_tokens": 2048,
+    "stream": false,
+    "temperature": 0,
+    "top_p": 1,
+    "top_p_payload_status": "omitted_after_provider_rejected_explicit_default_before_any_candidate_response"
+  },
+  "request_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "TinyCC::tcctools.c::le2belong::0001::9d35b2a4c6a7::llm::gcc_O0::P1",
+    "function_id": "TinyCC::tcctools.c::le2belong::0001::9d35b2a4c6a7",
+    "function_name": "le2belong",
+    "project": "TinyCC",
+    "prompt_family": "P1"
+  }
+}

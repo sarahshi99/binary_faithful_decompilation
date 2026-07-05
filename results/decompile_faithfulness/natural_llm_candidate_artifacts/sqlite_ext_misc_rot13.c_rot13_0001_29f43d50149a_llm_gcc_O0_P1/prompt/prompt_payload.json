@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: sqlite::ext_misc_rot13.c::rot13::0001::29f43d50149a\nProject: sqlite\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: unsigned char rot13(unsigned char c)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sqlite_ext_misc_rot13.c_rot13_0001_29f43d50149a_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <rot13>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t89 f8                \tmov    %edi,%eax\n   6:\t88 45 fc             \tmov    %al,-0x4(%rbp)\n   9:\t80 7d fc 60          \tcmpb   $0x60,-0x4(%rbp)\n   d:\t76 16                \tjbe    25 <rot13+0x25>\n   f:\t80 7d fc 7a          \tcmpb   $0x7a,-0x4(%rbp)\n  13:\t77 10                \tja     25 <rot13+0x25>\n  15:\t80 45 fc 0d          \taddb   $0xd,-0x4(%rbp)\n  19:\t80 7d fc 7a          \tcmpb   $0x7a,-0x4(%rbp)\n  1d:\t76 20                \tjbe    3f <rot13+0x3f>\n  1f:\t80 6d fc 1a          \tsubb   $0x1a,-0x4(%rbp)\n  23:\teb 1a                \tjmp    3f <rot13+0x3f>\n  25:\t80 7d fc 40          \tcmpb   $0x40,-0x4(%rbp)\n  29:\t76 14                \tjbe    3f <rot13+0x3f>\n  2b:\t80 7d fc 5a          \tcmpb   $0x5a,-0x4(%rbp)\n  2f:\t77 0e                \tja     3f <rot13+0x3f>\n  31:\t80 45 fc 0d          \taddb   $0xd,-0x4(%rbp)\n  35:\t80 7d fc 5a          \tcmpb   $0x5a,-0x4(%rbp)\n  39:\t76 04                \tjbe    3f <rot13+0x3f>\n  3b:\t80 6d fc 1a          \tsubb   $0x1a,-0x4(%rbp)\n  3f:\t0f b6 45 fc          \tmovzbl -0x4(%rbp),%eax\n  43:\t5d                   \tpop    %rbp\n  44:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nuchar rot13(uchar c)\n\n{\n  uchar c_local;\n  \n  if ((c < 0x61) || (0x7a < c)) {\n    c_local = c;\n    if ((0x40 < c) && ((c < 0x5b && (c_local = c + 0xd, 0x5a < c_local)))) {\n      c_local = c + 0xf3;\n    }\n  }\n  else {\n    c_local = c + 0xd;\n    if (0x7a < c_local) {\n      c_local = c + 0xf3;\n    }\n  }\n  return c_local;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "sqlite::ext_misc_rot13.c::rot13::0001::29f43d50149a::llm::gcc_O0::P1",
+    "function_id": "sqlite::ext_misc_rot13.c::rot13::0001::29f43d50149a",
+    "function_name": "rot13",
+    "project": "sqlite",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

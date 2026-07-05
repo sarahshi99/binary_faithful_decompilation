@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: TinyCC::tcctools.c::le2belong::0001::9d35b2a4c6a7\nProject: TinyCC\nBuild view: gcc_O0\nTarget architecture: x86_64\nRequired signature: unsigned long le2belong(unsigned long ul)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/TinyCC_tcctools.c_le2belong_0001_9d35b2a4c6a7_ghidra_gcc_O0/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <le2belong>:\n   0:\t55                   \tpush   %rbp\n   1:\t48 89 e5             \tmov    %rsp,%rbp\n   4:\t48 89 7d f8          \tmov    %rdi,-0x8(%rbp)\n   8:\t48 8b 45 f8          \tmov    -0x8(%rbp),%rax\n   c:\t48 c1 e8 08          \tshr    $0x8,%rax\n  10:\t25 00 ff 00 00       \tand    $0xff00,%eax\n  15:\t48 89 c2             \tmov    %rax,%rdx\n  18:\t48 8b 45 f8          \tmov    -0x8(%rbp),%rax\n  1c:\t48 c1 e8 18          \tshr    $0x18,%rax\n  20:\t0f b6 c0             \tmovzbl %al,%eax\n  23:\t48 09 c2             \tor     %rax,%rdx\n  26:\t48 8b 45 f8          \tmov    -0x8(%rbp),%rax\n  2a:\t48 c1 e0 18          \tshl    $0x18,%rax\n  2e:\t89 c0                \tmov    %eax,%eax\n  30:\t48 01 c2             \tadd    %rax,%rdx\n  33:\t48 8b 45 f8          \tmov    -0x8(%rbp),%rax\n  37:\t48 c1 e0 08          \tshl    $0x8,%rax\n  3b:\t25 00 00 ff 00       \tand    $0xff0000,%eax\n  40:\t48 01 d0             \tadd    %rdx,%rax\n  43:\t5d                   \tpop    %rbp\n  44:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nulong le2belong(ulong ul)\n\n{\n  ulong ul_local;\n  \n  return (ulong)((uint)(ul << 8) & 0xff0000) +\n         ((ulong)((uint)(ul >> 8) & 0xff00) | ul >> 0x18 & 0xff) + (ul & 0xff) * 0x1000000;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "gcc_O0",
+    "candidate_id": "TinyCC::tcctools.c::le2belong::0001::9d35b2a4c6a7::llm::gcc_O0::P1",
+    "function_id": "TinyCC::tcctools.c::le2belong::0001::9d35b2a4c6a7",
+    "function_name": "le2belong",
+    "project": "TinyCC",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

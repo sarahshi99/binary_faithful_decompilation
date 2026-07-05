@@ -1,0 +1,33 @@
+{
+  "created_at": 1783258110,
+  "id": "resp_075c00533cb1c365016a4a5bfe03f48191ab8c9f5ba5257d8d",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int dwarf_uleb128_size(unsigned long long value)\n{\n    int size = 0;\n    do {\n        value >>= 7;\n        size++;\n    } while (value != 0);\n    return size;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_075c00533cb1c365016a4a5bff4f008191ab99cec8b4a65bd4",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 539,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 50,
+    "output_tokens_details": {
+      "reasoning_tokens": 0
+    },
+    "total_tokens": 589
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: chibicc::tokenize.c::from_hex::0005::45632cc30325\nProject: chibicc\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: int from_hex(char c)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/chibicc_tokenize.c_from_hex_0005_45632cc30325_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <from_hex>:\n   0:\t8d 47 9f             \tlea    -0x61(%rdi),%eax\n   3:\t31 c9                \txor    %ecx,%ecx\n   5:\t3c 05                \tcmp    $0x5,%al\n   7:\t0f 97 c1             \tseta   %cl\n   a:\t8d 47 d0             \tlea    -0x30(%rdi),%eax\n   d:\tc1 e1 05             \tshl    $0x5,%ecx\n  10:\t83 c1 a9             \tadd    $0xffffffa9,%ecx\n  13:\t3c 0a                \tcmp    $0xa,%al\n  15:\tb8 d0 ff ff ff       \tmov    $0xffffffd0,%eax\n  1a:\t0f 43 c1             \tcmovae %ecx,%eax\n  1d:\t01 f8                \tadd    %edi,%eax\n  1f:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint from_hex(char c)\n\n{\n  int iVar1;\n  undefined3 in_register_00000039;\n  \n  iVar1 = -0x30;\n  if (9 < (byte)(c - 0x30U)) {\n    iVar1 = (uint)(5 < (byte)(c + 0x9fU)) * 0x20 + -0x57;\n  }\n  return iVar1 + CONCAT31(in_register_00000039,c);\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "chibicc::tokenize.c::from_hex::0005::45632cc30325::llm::clang_O2::P1",
+    "function_id": "chibicc::tokenize.c::from_hex::0005::45632cc30325",
+    "function_name": "from_hex",
+    "project": "chibicc",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

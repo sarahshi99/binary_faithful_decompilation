@@ -1,0 +1,40 @@
+{
+  "created_at": 1783258113,
+  "id": "resp_0589d421f93b3efd016a4a5c01ba0c8191a37d2c7222f3b098",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSlwDBHs8HFQr75OfxtX6Ik37eDEeJvR_o3nnFsiUEPmUGiK92vOOjvNWVTDeMBJeK6zULOmCJw0jssrh0xPqzPf1MP0fb8Zwn4h_-HM3-0kTWTqNIhuy_Ji9Q_NudnW0cp2PbkGND5iS5tUQxfwiqIAkoCS8ZeczYMy38SF6rR_4dcd72q66IwtpkkfQpMYMY7rD-8M4q55mkkbrzj5oFYtLgCU749ikMm-2KmXyfHDLew7wu6rRZ5Tk2mysnsfFbImFdafIRd2LDj7m6cX6dQIi2wN6ZQl9-f9wqjouCrNv7EYsvc-aNpOOkkZLMw8BbVRWlSMTCv45dPcAbw4IZQwMaFWUZ6IcuGTSWzlVz-lmJB8MBDbAT2hCGohuoRPSK6MfnY2IzT73e2Zh6ERexrpfmIF--EqPf1YPDAHMSAHZw8Wsz2itNXGYNXxy2dezZ7y1MN_7N5QZtyNlwBD-TgG_6_Gyj4PxZDewBdg9dSyiX1EpmeLVrl6oG8tpRhb280AmvP0WSmIyjdSPfIQsLiQf3NN2w1EghVA1ASGx1qjVnC4DOXmQD5i65ZvGsqC4QDrXB54ixIra9FM0mcdcuX_h8R-GOPUomhqerHgHADLsS1aT-a0h7J72I7HVXLo4rL3OLqKEawanDWfa3KGrHosZoxzKhG0pZb6w-O0l9UN1moDxe6XztiihpIWunPiqcJG0XtJdTgi2savDe9y5Mk4sPdTBl1L5PizzbQWtRTboRBdXH9EOrVCqXmkAdsP8_aMJ1ihqkb0KK8Lp0oxeK6-U9oPk5inN9XQM996R9TF73JlGmBC2J9-qhRttq3BKTQ3A-yTbwIyURj9N4_cg4BIPtV2Gg1LQgMFGlFYMiTnWAzccQfuIzIJVVpMQF9_Ts_f62e1SJN42MkcBSPKK42v6OlQr4YD0OkdT0SZFLvxf6trxooggeJHa03BH3MDCe5iBTvtwcG4P0558x3re_4IQwUT5Z9GPLybM6Eae7XZSCxE=",
+      "id": "item_LTHGFlGb2FKfJzsX",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int dwarf_uleb128_size(unsigned long long value)\n{\n    int size = 0;\n    do {\n        value >>= 7;\n        size++;\n    } while (value != 0);\n    return size;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_0589d421f93b3efd016a4a5c03603481918f8aeb74821cd707",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 547,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 67,
+    "output_tokens_details": {
+      "reasoning_tokens": 15
+    },
+    "total_tokens": 614
+  }
+}

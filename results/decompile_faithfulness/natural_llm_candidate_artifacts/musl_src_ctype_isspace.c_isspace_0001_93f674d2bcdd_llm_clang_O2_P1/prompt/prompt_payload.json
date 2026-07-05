@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "You are reconstructing one C function from a sealed binary-view artifact.\nUse only the signature, build-view metadata, target-function disassembly, and\nsame-view decompiler pseudocode provided below. Do not assume access to the\noriginal source. Produce exactly one compilable C function with the requested\nsignature. Return only C code for the function, with no Markdown fences and no\nexplanation.\n\nFunction ID: musl::src_ctype_isspace.c::isspace::0001::93f674d2bcdd\nProject: musl\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: int isspace(int c)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/musl_src_ctype_isspace.c_isspace_0001_93f674d2bcdd_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <isspace>:\n   0:\t83 ff 20             \tcmp    $0x20,%edi\n   3:\t0f 94 c0             \tsete   %al\n   6:\t83 c7 f7             \tadd    $0xfffffff7,%edi\n   9:\t83 ff 05             \tcmp    $0x5,%edi\n   c:\t0f 92 c1             \tsetb   %cl\n   f:\t08 c1                \tor     %al,%cl\n  11:\t0f b6 c1             \tmovzbl %cl,%eax\n  14:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nint isspace(int c)\n\n{\n  return (int)(c - 9U < 5 || c == 0x20);\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "musl::src_ctype_isspace.c::isspace::0001::93f674d2bcdd::llm::clang_O2::P1",
+    "function_id": "musl::src_ctype_isspace.c::isspace::0001::93f674d2bcdd",
+    "function_name": "isspace",
+    "project": "musl",
+    "prompt_family": "P1"
+  },
+  "stream": false,
+  "temperature": 0
+}

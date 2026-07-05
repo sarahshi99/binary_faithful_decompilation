@@ -1,0 +1,14 @@
+{
+  "allowed_operations": [
+    "remove_markdown_fences",
+    "extract_first_complete_c_function",
+    "replace_declaration_with_required_signature",
+    "syntax_only_parameter_name_alignment"
+  ],
+  "candidate_id": "sbase::make_main.c::hasargs::0002::caccdf48eb91::llm::gcc_O0::P1",
+  "consulted_fixtures_or_labels": false,
+  "consulted_trusted_source": false,
+  "forbidden_semantic_repair_used": false,
+  "parse_reason": "ok",
+  "parse_status": "parsed_function"
+}

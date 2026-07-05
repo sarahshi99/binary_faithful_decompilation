@@ -1,0 +1,26 @@
+{
+  "input": [
+    {
+      "content": [
+        {
+          "text": "Write an independent clean C reconstruction for the scalar function described\nby this sealed binary view. Preserve the observable return behavior implied by\nthe target-function disassembly and same-view pseudocode. Do not use or infer\nfrom original source text, tests, fixtures, witnesses, or feedback. Produce\nexactly one compilable C function with the requested signature. Return only C\ncode for the function, with no Markdown fences and no explanation.\n\nFunction ID: sqlite::ext_misc_rot13.c::rot13::0001::29f43d50149a\nProject: sqlite\nBuild view: clang_O2\nTarget architecture: x86_64\nRequired signature: unsigned char rot13(unsigned char c)\n\nTarget-function disassembly:\n\n/home/shx/projects/binary_faithful_decompilation/results/decompile_faithfulness/holdout_candidate_artifacts/natural_ghidra/sqlite_ext_misc_rot13.c_rot13_0001_29f43d50149a_ghidra_clang_O2/binary/function.bin:     file format elf64-x86-64\n\n\nDisassembly of section .text:\n\n0000000000000000 <rot13>:\n   0:\t8d 47 9f             \tlea    -0x61(%rdi),%eax\n   3:\t3c 19                \tcmp    $0x19,%al\n   5:\t77 15                \tja     1c <rot13+0x1c>\n   7:\t40 80 ff 6d          \tcmp    $0x6d,%dil\n   b:\tb9 f3 00 00 00       \tmov    $0xf3,%ecx\n  10:\tb8 0d 00 00 00       \tmov    $0xd,%eax\n  15:\t0f 47 c1             \tcmova  %ecx,%eax\n  18:\t40 00 f8             \tadd    %dil,%al\n  1b:\tc3                   \tretq   \n  1c:\t8d 47 bf             \tlea    -0x41(%rdi),%eax\n  1f:\t8d 4f 0d             \tlea    0xd(%rdi),%ecx\n  22:\t8d 57 f3             \tlea    -0xd(%rdi),%edx\n  25:\t80 f9 5a             \tcmp    $0x5a,%cl\n  28:\t0f b6 d2             \tmovzbl %dl,%edx\n  2b:\t0f b6 c9             \tmovzbl %cl,%ecx\n  2e:\t0f 47 ca             \tcmova  %edx,%ecx\n  31:\t3c 1a                \tcmp    $0x1a,%al\n  33:\t40 0f b6 c7          \tmovzbl %dil,%eax\n  37:\t0f 42 c1             \tcmovb  %ecx,%eax\n  3a:\tc3                   \tretq\n\nSame-view raw Ghidra pseudocode, if available:\n\nuchar rot13(uchar c)\n\n{\n  byte bVar1;\n  char cVar2;\n  \n  if ((byte)(c + 0x9f) < 0x1a) {\n    cVar2 = '\\r';\n    if (0x6d < c) {\n      cVar2 = -0xd;\n    }\n    return cVar2 + c;\n  }\n  bVar1 = c + 0xd;\n  if (0x5a < (byte)(c + 0xd)) {\n    bVar1 = c - 0xd;\n  }\n  if ((byte)(c + 0xbf) < 0x1a) {\n    c = bVar1;\n  }\n  return c;\n}\n",
+          "type": "input_text"
+        }
+      ],
+      "role": "user"
+    }
+  ],
+  "max_output_tokens": 2048,
+  "model": "gpt-5.5",
+  "phase1h_metadata": {
+    "allowed_prompt_inputs_only": true,
+    "build_view": "clang_O2",
+    "candidate_id": "sqlite::ext_misc_rot13.c::rot13::0001::29f43d50149a::llm::clang_O2::P2",
+    "function_id": "sqlite::ext_misc_rot13.c::rot13::0001::29f43d50149a",
+    "function_name": "rot13",
+    "project": "sqlite",
+    "prompt_family": "P2"
+  },
+  "stream": false,
+  "temperature": 0
+}

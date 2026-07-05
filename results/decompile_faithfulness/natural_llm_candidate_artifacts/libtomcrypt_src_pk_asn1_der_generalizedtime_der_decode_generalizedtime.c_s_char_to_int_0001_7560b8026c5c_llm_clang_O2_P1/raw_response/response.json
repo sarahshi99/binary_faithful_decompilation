@@ -1,0 +1,40 @@
+{
+  "created_at": 1783258754,
+  "id": "resp_0934adee62a3fdc8016a4a5e82c238819a9301e3dc5ee8763e",
+  "model": "gpt-5.5",
+  "object": "response",
+  "output": [
+    {
+      "encrypted_content": "gAAAAABqSl6KvlMe-4-REyyqG-UK5KomabZYpq8OIybDyo7cHCqAJiHu512wujlHNcwPlDCJ-3mQHr8R7p6mHCf3-qAS-xQeUfQMa1tYAkJRmJ7l0PDXH9AKAKNjgO0OP1en1qoGyjShw8xBch92_prtEwPP0lt6xysZCP8ygOnhs35QgYNvlDZ-w_pCOulVbssJ5ylHGVo39JAd6urv5cAHKS1xzz0d-jyZU6nV_zeSVQPY176CQUfoK73OYGtLbQ4JOtcgTHQnHqxU74Z0bkrcZ6muoJNPCTyqPPmGOcsDocnJKdINAa1SLjXI4P536nCYB9ksbFc-9kawtUYw_bRRmUSnocJvfWTVJfYq8nG26A1wB6VdKCcdHq_XzKJNzuDqSohm7ogMdnaj6tQKPHq7z0GMcOv5thcwLCsAlh-y4P5u-h5YxWdAEciIdfrDQeqB6LGbz9fNuJs32IbmOaQgjkAleeAkZPSvEpZhMql6z5Sj7tVJe6C1CTm4XoiyMgYz-88juhZTdQz1y3tc7nGU0PFHyonMU0ySBGW6L1yRSQ3valOkuW4ub1os4d7MlJTlOFqTDz_g0o3mbEobryYih2ZGG5kgeR_iw91YlwYCDvE6gdMjHqgWorAhgJhbLReafCwcZB4dThwioas4VuKXlUUYHYG7vKIeXjAPyKvoITC1bYtGlk1HYuMI-uDFyabui888iq4UoqyH3Wgsk5-VOQajkJ7POIYYpL571gXZw60B8KAm8Tlp0--PhObGuBAHSOleSQeVCT8kudkW4vhaFjesCuMsJuQB_eZkLZJxrdT4d7yTiaf5oE7_Vw_lBJwnzaPLoCtWocIr9AXe3L8XnwoaO-yFI1HqUn8lgiZeM6DQ5F8gDgEXN8gmNhvwL60NjrfLu99E6B5UzaQkAcN50jmcISDJbBB5f8vRiDKx_gQ0l9AMQvrqF82Qlj1Eh2CbauLntO1K-w-vhS7JyNFDMuzjvHfNDxCDEu2ZsV6_j764VvIQuuX6qD0GM9QU6VLrRNcJooscs0rQ8rt6ubwvlGq0qNgQFfoYrTU4FYMsGgUHYUCbbav0XOJjN4pqLhqoeCfKKgbJkUgGv9eXU8AvstOgL6V2ZCslnB9v3VU3AF_xx9kbo5oYehCfpUxIVCJVcxrMzkCYP2nX1UR47L29c4E7CS3qi_Jgmpt7MRsx9NRM1vSo2AA_b5_yvXb3KK02_rOut7M1UBuVqjaKxACi1BrB65xhvqNS6eTEhRtVYkq5H6JCRtnrykgsgpib76oQWIQAfQgCcWE2KG7xKLQK6OmrxvmwtRKetLo3lBTuQzFhPrwL78mDiUaqlPyRqHHgOfxePlY7CSxy565ucNmtN-nmb6l9xDAVH_UwagpvLRsvNO_1U_EyOMi7MEW080p3pNKZd3ZQpPeZj36rv6Fm_v6Ji5RSyzysoGRL5fXK8NOrGCFnmeiCzd7bxa-sfvq2nmfo2lXhNBreoaNSosHbygVC-SbPLv-sDLzRiJbf68zWijP7AE0KF3t0-kvzSRAJVTEZFnhBlnR3FtnYJQx4x4H5rGR-0HuakOicd7D079snQa7sleBpga4nU9NDPZmwMIY7t9An9hgpzhcVuzxuqdRe0q5t3PgdkjPpz-IDJ0yxz-C2Rd_cWH2CvkRwxBTZA3LlCH0N",
+      "id": "item_Dsdk2pZ7DJSKLSFo",
+      "status": "completed",
+      "summary": [],
+      "type": "reasoning"
+    },
+    {
+      "content": [
+        {
+          "annotations": [],
+          "text": "int s_char_to_int(unsigned char x)\n{\n    if ((unsigned char)(x - 0x30) < 10) {\n        return (int)(unsigned char)(x - 0x30);\n    }\n    return 100;\n}",
+          "type": "output_text"
+        }
+      ],
+      "id": "msg_0934adee62a3fdc8016a4a5e8a03d0819a9ab4a1310f857bb7",
+      "role": "assistant",
+      "status": "completed",
+      "type": "message"
+    }
+  ],
+  "status": "completed",
+  "usage": {
+    "input_tokens": 467,
+    "input_tokens_details": {
+      "cached_tokens": 0
+    },
+    "output_tokens": 230,
+    "output_tokens_details": {
+      "reasoning_tokens": 173
+    },
+    "total_tokens": 697
+  }
+}

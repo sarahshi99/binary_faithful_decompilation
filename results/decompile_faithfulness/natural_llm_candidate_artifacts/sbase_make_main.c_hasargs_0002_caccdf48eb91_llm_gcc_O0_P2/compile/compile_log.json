@@ -1,0 +1,8 @@
+{
+  "compile_probe_uses_fixtures_or_labels": false,
+  "compile_probe_uses_trusted_source": false,
+  "harness_source_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase1h_natural_llm/generation/compile_probe/sbase_make_main.c_hasargs_0002_caccdf48eb91_sbase_make_main.c_hasargs_0002_caccdf48eb91_llm_gcc_O0_P2_3398b658975a.c",
+  "ok": true,
+  "reason": "ok",
+  "stderr_tail": ""
+}
