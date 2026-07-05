@@ -4,6 +4,7 @@ import argparse
 import ast
 import csv
 import hashlib
+import http.client
 import itertools
 import json
 import os
@@ -436,7 +437,7 @@ def call_model_api(payload: dict[str, Any], api_key: str) -> tuple[dict[str, Any
             attempts.append({"attempt": attempt, "status": exc.code, "elapsed_s": time.perf_counter() - started, "error": raw_error[-1000:]})
             if exc.code < 500:
                 raise RuntimeError(f"model API request failed with HTTP {exc.code}: {raw_error[-1000:]}")
-        except (urllib.error.URLError, TimeoutError, socket.timeout) as exc:
+        except (urllib.error.URLError, TimeoutError, socket.timeout, http.client.RemoteDisconnected) as exc:
             attempts.append({"attempt": attempt, "status": "url_error", "elapsed_s": time.perf_counter() - started, "error": str(exc)})
         time.sleep(1.0 * attempt)
     raise RuntimeError(f"model API request failed after retries: {attempts}")
