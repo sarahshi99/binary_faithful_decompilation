@@ -2229,3 +2229,7 @@ def git_output(repo_root: Path, args: list[str]) -> str:
 
 def now_utc() -> str:
     return datetime.now(timezone.utc).isoformat()
+
+
+if __name__ == "__main__":
+    main()
