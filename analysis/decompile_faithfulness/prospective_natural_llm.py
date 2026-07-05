@@ -10,6 +10,7 @@ import os
 import platform
 import re
 import shutil
+import socket
 import statistics
 import subprocess
 import sys
@@ -435,7 +436,7 @@ def call_model_api(payload: dict[str, Any], api_key: str) -> tuple[dict[str, Any
             attempts.append({"attempt": attempt, "status": exc.code, "elapsed_s": time.perf_counter() - started, "error": raw_error[-1000:]})
             if exc.code < 500:
                 raise RuntimeError(f"model API request failed with HTTP {exc.code}: {raw_error[-1000:]}")
-        except (urllib.error.URLError, TimeoutError) as exc:
+        except (urllib.error.URLError, TimeoutError, socket.timeout) as exc:
             attempts.append({"attempt": attempt, "status": "url_error", "elapsed_s": time.perf_counter() - started, "error": str(exc)})
         time.sleep(1.0 * attempt)
     raise RuntimeError(f"model API request failed after retries: {attempts}")
