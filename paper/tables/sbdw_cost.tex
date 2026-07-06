@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\small
+\begin{tabular}{llll}
+\toprule
+Cost & Candidates/source & Source exec. & Seconds \\
+\midrule
+source\_pool\_generation &  & 0 & 0.0820 \\
+source\_instrumentation\_compile &  & 0 & 3.6347 \\
+source\_only\_execution &  & 19392 & 90.7498 \\
+source\_only\_selection &  & 0 & 50.4810 \\
+per\_candidate\_audit\_execution\_median & 1 & 0 & 0.0150 \\
+amortized\_end\_to\_end & 1 & 19392.0 & 144.9626 \\
+amortized\_end\_to\_end & 2 & 9696.0 & 72.4888 \\
+amortized\_end\_to\_end & 4 & 4848.0 & 36.2519 \\
+amortized\_end\_to\_end & 8 & 2424.0 & 18.1335 \\
+amortized\_end\_to\_end & 16 & 1212.0 & 9.0743 \\
+\bottomrule
+\end{tabular}
+\caption{SBDW cost accounting}
+\end{table}
