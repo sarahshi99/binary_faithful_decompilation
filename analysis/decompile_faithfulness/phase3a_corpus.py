@@ -28,6 +28,7 @@ TARGET_FUNCTIONS = 120
 MIN_FEASIBLE_FUNCTIONS = 80
 MIN_PROJECTS = 12
 PROJECT_CAP = 10
+REDUCED_PROJECT_SHARE_CAP = 0.15
 FIXTURES_PER_FUNCTION = 4
 MAX_DOMAIN_SIZE = 32768
 
@@ -830,39 +831,64 @@ def render_harness(function: FunctionRecord, args_list: list[tuple[int, ...]]) -
 
 
 def primary_satisfies_full_target(eligible: list[FunctionRecord]) -> bool:
-    return len({item.project for item in eligible}) >= MIN_PROJECTS and sampling_capacity(eligible) >= TARGET_FUNCTIONS
+    return len({item.project for item in eligible}) >= MIN_PROJECTS and sampling_capacity(eligible, PROJECT_CAP) >= TARGET_FUNCTIONS
 
 
 def corpus_gate(eligible: list[FunctionRecord]) -> dict[str, Any]:
     projects = {item.project for item in eligible}
-    capacity = sampling_capacity(eligible)
+    full_capacity = sampling_capacity(eligible, PROJECT_CAP)
+    reduced_capacity = reduced_sampling_capacity(eligible)
+    reduced_cap = project_cap_for_target(reduced_capacity)
     if len(projects) < MIN_PROJECTS:
         status = "stopped_before_fixture_generation_insufficient_project_count"
         target = 0
-    elif capacity >= TARGET_FUNCTIONS:
+        project_cap = PROJECT_CAP
+    elif full_capacity >= TARGET_FUNCTIONS:
         status = "target_120_available"
         target = TARGET_FUNCTIONS
-    elif len(eligible) >= MIN_FEASIBLE_FUNCTIONS and capacity >= MIN_FEASIBLE_FUNCTIONS:
+        project_cap = PROJECT_CAP
+    elif len(eligible) >= MIN_FEASIBLE_FUNCTIONS and reduced_capacity >= MIN_FEASIBLE_FUNCTIONS:
         status = "reduced_feasible"
-        target = min(capacity, len(eligible))
+        target = reduced_capacity
+        project_cap = reduced_cap
     else:
         status = "stopped_before_fixture_generation_insufficient_eligible_functions"
         target = 0
+        project_cap = reduced_cap
     return {
         "status": status,
         "eligible_function_count": len(eligible),
         "eligible_project_count": len(projects),
-        "sampling_capacity_under_project_cap": capacity,
+        "sampling_capacity_under_project_cap": full_capacity,
+        "reduced_sampling_capacity_under_share_cap": reduced_capacity,
+        "project_cap_used": project_cap,
         "target_selected_functions": target,
     }
 
 
-def sampling_capacity(eligible: list[FunctionRecord]) -> int:
+def project_cap_for_target(target: int) -> int:
+    if target >= TARGET_FUNCTIONS:
+        return PROJECT_CAP
+    return max(PROJECT_CAP, int(target * REDUCED_PROJECT_SHARE_CAP))
+
+
+def reduced_sampling_capacity(eligible: list[FunctionRecord]) -> int:
+    target = min(len(eligible), TARGET_FUNCTIONS - 1)
+    for _ in range(8):
+        capacity = min(len(eligible), sampling_capacity(eligible, project_cap_for_target(target)))
+        if capacity == target:
+            return capacity
+        target = capacity
+    return target
+
+
+def sampling_capacity(eligible: list[FunctionRecord], project_cap: int) -> int:
     counts = Counter(item.project for item in eligible)
-    return sum(min(PROJECT_CAP, count) for count in counts.values())
+    return sum(min(project_cap, count) for count in counts.values())
 
 
 def select_functions(eligible: list[FunctionRecord], target: int) -> list[FunctionRecord]:
+    project_cap = project_cap_for_target(target)
     by_project: dict[str, list[FunctionRecord]] = {}
     for item in eligible:
         by_project.setdefault(item.project, []).append(item)
@@ -873,11 +899,11 @@ def select_functions(eligible: list[FunctionRecord], target: int) -> list[Functi
     selected: list[FunctionRecord] = []
     selected_ids: set[str] = set()
     project_counts = Counter()
-    represented = choose_represented_projects(by_project, project_order, target)
+    represented = choose_represented_projects(by_project, project_order, target, project_cap)
     min_each = 5 if target >= MIN_PROJECTS * 5 else 1
     for project in represented:
-        for _ in range(min(min_each, len(by_project[project]), PROJECT_CAP)):
-            pick = best_candidate(by_project[project], selected_ids, selected, project_counts, target)
+        for _ in range(min(min_each, len(by_project[project]), project_cap)):
+            pick = best_candidate(by_project[project], selected_ids, selected, project_counts, target, project_cap)
             if pick is None:
                 break
             selected.append(pick)
@@ -886,9 +912,9 @@ def select_functions(eligible: list[FunctionRecord], target: int) -> list[Functi
     while len(selected) < target:
         choices = []
         for project in represented:
-            if project_counts[project] >= PROJECT_CAP:
+            if project_counts[project] >= project_cap:
                 continue
-            pick = best_candidate(by_project[project], selected_ids, selected, project_counts, target)
+            pick = best_candidate(by_project[project], selected_ids, selected, project_counts, target, project_cap)
             if pick is not None:
                 choices.append(pick)
         if not choices:
@@ -903,7 +929,7 @@ def select_functions(eligible: list[FunctionRecord], target: int) -> list[Functi
     return selected[:target]
 
 
-def choose_represented_projects(by_project: dict[str, list[FunctionRecord]], project_order: list[str], target: int) -> list[str]:
+def choose_represented_projects(by_project: dict[str, list[FunctionRecord]], project_order: list[str], target: int, project_cap: int) -> list[str]:
     max_projects_by_min = max(MIN_PROJECTS, target // 5)
     represented = []
     capacity = 0
@@ -911,7 +937,7 @@ def choose_represented_projects(by_project: dict[str, list[FunctionRecord]], pro
         if len(represented) >= max_projects_by_min and capacity >= target:
             break
         represented.append(project)
-        capacity += min(PROJECT_CAP, len(by_project[project]))
+        capacity += min(project_cap, len(by_project[project]))
         if len(represented) >= MIN_PROJECTS and capacity >= target and len(represented) * 5 >= target:
             break
     return represented
@@ -923,8 +949,9 @@ def best_candidate(
     selected: list[FunctionRecord],
     project_counts: Counter[str],
     target: int,
+    project_cap: int,
 ) -> FunctionRecord | None:
-    available = [item for item in candidates if item.function_id not in selected_ids and project_counts[item.project] < PROJECT_CAP]
+    available = [item for item in candidates if item.function_id not in selected_ids and project_counts[item.project] < project_cap]
     if not available:
         return None
     available.sort(key=lambda item: (-selection_gain(item, selected, target), stable_random_key(item.function_id, SAMPLING_SEED), item.function_id))
@@ -1094,9 +1121,9 @@ def write_feasibility_amendment(path: Path, gate: dict[str, Any], eligible: list
                 "",
                 f"The reduced corpus size is {gate['target_selected_functions']} selected functions.",
                 "",
-                "Project diversity remains preserved by retaining at least 12 represented projects where available, preserving the maximum 10 functions per project, and preventing any single project from dominating the corpus.",
+                "Project diversity remains preserved by retaining at least 12 represented projects where available, preserving the maximum 10 functions per project where possible, and preventing any single project from exceeding 15% of the reduced corpus.",
                 "",
-                f"The largest eligible project contributes {max_project} eligible functions before cap enforcement; selected functions remain capped at {PROJECT_CAP} per project.",
+                f"The largest eligible project contributes {max_project} eligible functions before cap enforcement; selected functions remain capped at {gate['project_cap_used']} per project for the reduced corpus.",
                 "",
                 "Structural-feature reporting and complete exact-domain labeling remain unchanged.",
                 "",

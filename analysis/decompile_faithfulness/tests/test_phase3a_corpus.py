@@ -89,6 +89,24 @@ class Phase3aCorpusTest(unittest.TestCase):
         self.assertEqual(gate["status"], "reduced_feasible")
         self.assertEqual(gate["target_selected_functions"], 84)
 
+    def test_reduced_sampling_uses_share_cap_when_strict_cap_is_short(self) -> None:
+        counts = [43, 10, 9, 9, 8, 4, 4, 3, 3, 3, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1]
+        funcs = [
+            _function(project=f"p{project}", function_id=f"p{project}::f{index:02d}", project_order=project)
+            for project, count in enumerate(counts)
+            for index in range(count)
+        ]
+        gate = corpus.corpus_gate(funcs)
+        self.assertEqual(gate["status"], "reduced_feasible")
+        self.assertEqual(gate["target_selected_functions"], 80)
+        self.assertEqual(gate["project_cap_used"], 12)
+        selected = corpus.select_functions(funcs, 80)
+        by_project = {}
+        for item in selected:
+            by_project[item.project] = by_project.get(item.project, 0) + 1
+        self.assertEqual(len(selected), 80)
+        self.assertLessEqual(max(by_project.values()), 12)
+
     def test_feasibility_amendment_is_not_rewritten_after_commit(self) -> None:
         funcs = [_function()]
         gate = {
