@@ -291,3 +291,22 @@ No candidate generation occurred in this milestone.
 No semantic labeling occurred in this milestone.
 
 No auditor was run in this milestone.
+
+## Candidate Generation, Labeling, And Natural-Error Census Milestone
+
+Updated: 2026-07-07T15:40:43Z
+
+- Branch: `phase3a-prospective-natural-error-census`
+- Pre-candidate HEAD: `7321baeeff5159f1809eae04a06a72669e2ab13b`
+- Candidate seal hash: `e34f3c7532a8a2b399ef5be4c7a931b3f4d5e7c982c6f5d29adb14a89c8971f4`
+- Candidate seal commit: pending commit immediately after seal creation.
+- Verified function/fixture seal: `2bba63e1a191050f2ec0e15a8f58ed7eff9a5c9bf1f21b672b7ab9bfc64c1494`
+- Available producers: `Ghidra 12.1.2`, `angr 9.2.102`, `LLM4Decompile 22B v2`, `mycodex gpt-5.5`.
+- Blocked producers: `RetDec`.
+- Candidate attempts by producer/build view: `{"angr/clang_O2": 80, "angr/gcc_O0": 80, "ghidra/clang_O2": 80, "ghidra/gcc_O0": 80, "llm4decompile/clang_O2": 80, "llm4decompile/gcc_O0": 80, "mycodex_api/clang_O2": 80, "mycodex_api/gcc_O0": 80}`
+- Parse-ready count: `240`
+- Compile-ready count: `215`
+- Semantic labeling: not run yet; candidate seal created first.
+
+No auditing policy was run. libFuzzer was not run. No budget curves or auditor tables were generated.
+
