@@ -1,0 +1,576 @@
+{
+  "auditor_execution": "not_run",
+  "blocker_analysis": {
+    "eligible_functions_outside_largest_project": 68,
+    "largest_project": "ccan",
+    "largest_project_eligible_count": 43,
+    "not_due_to_argument_count_quota": true,
+    "not_due_to_auditor_behavior": true,
+    "not_due_to_candidate_results_or_labels": true,
+    "not_due_to_conservative_feasibility_amendment": true,
+    "not_due_to_exclusion_of_otherwise_usable_projects": true,
+    "not_due_to_sampler_implementation": true,
+    "not_due_to_structural_quota": true,
+    "primary_reason": "project_capacity_and_dominance_constraints",
+    "strict_10_per_project_capacity": 78,
+    "targets_above_80_requiring_largest_project_over_share_goal": [
+      {
+        "dominance_cap_for_target": 10,
+        "minimum_required_from_largest_project": 52,
+        "minimum_required_largest_project_share": 0.433333,
+        "target": 120
+      },
+      {
+        "dominance_cap_for_target": 11,
+        "minimum_required_from_largest_project": 43,
+        "minimum_required_largest_project_share": 0.387387,
+        "target": 111
+      },
+      {
+        "dominance_cap_for_target": 10,
+        "minimum_required_from_largest_project": 36,
+        "minimum_required_largest_project_share": 0.346154,
+        "target": 104
+      },
+      {
+        "dominance_cap_for_target": 10,
+        "minimum_required_from_largest_project": 32,
+        "minimum_required_largest_project_share": 0.32,
+        "target": 100
+      },
+      {
+        "dominance_cap_for_target": 14,
+        "minimum_required_from_largest_project": 28,
+        "minimum_required_largest_project_share": 0.291667,
+        "target": 96
+      },
+      {
+        "dominance_cap_for_target": 13,
+        "minimum_required_from_largest_project": 22,
+        "minimum_required_largest_project_share": 0.244444,
+        "target": 90
+      }
+    ]
+  },
+  "candidate_generation": "not_run",
+  "candidate_or_label_artifact_guard": {
+    "ok": true,
+    "present_paths": []
+  },
+  "created_at_utc": "2026-07-07T11:11:22Z",
+  "decision": {
+    "expansion_target": null,
+    "maximum_feasible_target": 80,
+    "maximum_feasible_target_among_requested_targets": 80,
+    "reason": "project_capacity_and_dominance_constraints",
+    "status": "no_expansion_feasible_above_80",
+    "v1_remains_canonical_for_now": true,
+    "v2_seal_created": false,
+    "v2_selection_created": false
+  },
+  "eligible_summary": {
+    "by_argument_count": {
+      "1": 91,
+      "2": 12,
+      "3": 8
+    },
+    "by_domain_size": {
+      "11": 3,
+      "128": 87,
+      "4096": 20,
+      "5": 1
+    },
+    "by_project": {
+      "brotli": 3,
+      "c-ares": 1,
+      "ccan": 43,
+      "cmark": 9,
+      "freetype": 2,
+      "htslib": 8,
+      "jansson": 1,
+      "json-c": 1,
+      "klib": 3,
+      "libevent": 4,
+      "libidn2": 2,
+      "libucl": 2,
+      "libuv": 3,
+      "libxdiff": 1,
+      "lz4": 1,
+      "mpack": 1,
+      "nanoprintf": 10,
+      "nghttp2": 4,
+      "open62541": 2,
+      "pcre2": 1,
+      "zstd": 9
+    },
+    "count": 111,
+    "structural_features": {
+      "bitwise": 40,
+      "branches4": 4,
+      "interacting_args": 17,
+      "lookup": 8,
+      "loop": 12,
+      "switch_like": 1
+    }
+  },
+  "maximum_feasible_target_in_80_to_120_range": 80,
+  "method_constraints": {
+    "inputs_not_used": [
+      "candidate-generation success",
+      "semantic labels",
+      "mismatch witnesses",
+      "auditor behavior",
+      "libFuzzer results"
+    ],
+    "inputs_used": [
+      "committed eligibility census",
+      "committed selected-functions v1 file",
+      "committed project manifest",
+      "precomputed source structural features",
+      "declared exact-domain feasibility",
+      "source sanitizer feasibility"
+    ],
+    "strict_project_cap": 10,
+    "target_100_or_above_share_goal": "no project above 10% where possible",
+    "target_80_to_99_share_goal": "no project above 15%",
+    "targets_evaluated_in_order": [
+      120,
+      111,
+      104,
+      100,
+      96,
+      90,
+      80
+    ]
+  },
+  "phase": "phase3a_corpus_expansion_audit",
+  "project_manifest_summary": {
+    "acquisition_errors": [
+      {
+        "project": "qbe",
+        "reason": "existing_checkout_without_resolved_head",
+        "repository": "https://c9x.me/git/qbe.git"
+      }
+    ],
+    "projects_acquired": 38,
+    "projects_scanned": 39,
+    "projects_yielding_eligible_functions": 21
+  },
+  "schema_version": 1,
+  "scope": "pre_candidate_corpus_work_only",
+  "selected_count": 80,
+  "selected_function_ids": [
+    "brotli::c_enc_encode.c::BrotliEncoderMaxCompressedSize::0007::2bb0ac63e571",
+    "brotli::c_enc_encode.c::HashTableSize::0005::4730b6b6e775",
+    "brotli::c_enc_encode.c::WrapPosition::0004::4262ee5ab769",
+    "c-ares::src_lib_str_ares_str.c::ares_tolower::0004::09fbebf5e8e1",
+    "ccan::ccan_antithread_alloc_bitops.c::align_up::0004::5227265c66cd",
+    "ccan::ccan_bitops_bitops.c::bitops_weight64::0008::332172c9358f",
+    "ccan::ccan_crypto_sha256_sha256.c::Ch::0001::2305e0640532",
+    "ccan::ccan_crypto_sha256_sha256.c::Maj::0002::5e63c5eed525",
+    "ccan::ccan_crypto_sha512_sha512.c::Ch::0001::10bfb14df60c",
+    "ccan::ccan_crypto_sha512_sha512.c::Maj::0002::4341925410a0",
+    "ccan::ccan_darray_darray.h::darray_next_alloc::0001::e39261abae29",
+    "ccan::ccan_md4_md4.c::F::0002::11d31d4f1b7d",
+    "ccan::ccan_md4_md4.c::G::0003::ffb9501febd3",
+    "ccan::ccan_md4_md4.c::H::0004::535318f1ae4c",
+    "ccan::ccan_permutation_permutation.c::permutation_count::0001::91c2dd9a79f1",
+    "ccan::junkcode_tterribe_email.unc.edu-nmbrthry_gcd.c::gcd::0001::f177f08f432b",
+    "cmark::src_blocks.c::S_is_line_end_char::0003::e1c0916cba9b",
+    "cmark::src_blocks.c::S_is_space_or_tab::0004::8ac0d2fe91dd",
+    "cmark::src_cmark_ctype.c::cmark_isalpha::0004::e3004f765231",
+    "cmark::src_cmark_ctype.c::cmark_isdigit::0003::4db7106cc43b",
+    "cmark::src_cmark_ctype.c::cmark_ispunct::0002::6d6fa08a59ba",
+    "cmark::src_cmark_ctype.c::cmark_isspace::0001::d35982db2fc1",
+    "cmark::src_inlines.c::S_is_line_end_char::0001::e4630b5a1ba3",
+    "cmark::src_inlines.c::isbacktick::0002::34658eefdb9c",
+    "cmark::src_utf8.c::cmark_utf8proc_is_space::0005::4c3eef6da0c0",
+    "freetype::src_sfnt_pngshim.c::multiply_alpha::0001::69542fe3163c",
+    "freetype::src_sfnt_sfdriver.c::sfnt_is_postscript::0001::16ffdef831c9",
+    "htslib::cram_cram_decode.c::nbits::0004::cb1244c66c9e",
+    "htslib::cram_cram_io.c::itf8_size::0014::33f5aa8539a5",
+    "htslib::cram_pooled_alloc.c::next_power_2::0001::4b1e11e601ae",
+    "htslib::hts.c::push_digit::0059::b35f1dd40434",
+    "htslib::hts_time_funcs.h::hts_leaps_to_year_start::0003::175a7ed417f0",
+    "htslib::hts_time_funcs.h::hts_year_is_leap::0002::ae2cd7fd399d",
+    "htslib::kstring.c::fast_exp::0008::939028784d18",
+    "htslib::textutils.c::hts_base64_decoded_length::0004::3bde5b536259",
+    "jansson::src_utf.c::utf8_check_first::0002::bd274d85b99c",
+    "json-c::json_tokener.c::is_ws_char::0001::919354ce6ea9",
+    "klib::kbit.h::kbi_DNAcount64::0002::3ec293d4e9c0",
+    "klib::kbit.h::kbi_popcount64::0001::b27ff1549a54",
+    "klib::krng.h::kr_splitmix64::0001::86fefd5b3221",
+    "libevent::bufferevent_openssl.c::SSL_handshake_is_ok::0007::3cc89ee51b63",
+    "libevent::evutil.c::evutil_global_setup_locks_::0036::278da0d7a858",
+    "libevent::evutil_rand.c::evutil_secure_rng_global_setup_locks_::0003::7efb4331ab02",
+    "libevent::http.c::evhttp_valid_response_code::0010::698d7ff2942e",
+    "libidn2::lib_context.c::_idn2_contexto_with_rule::0003::0792bc77a31d",
+    "libidn2::lib_punycode.c::encode_digit::0001::db84d723415b",
+    "libucl::src_mum.h::mum_hash_init::0008::8c28c78a2bec",
+    "libucl::src_ucl_parser.c::ucl_lex_is_comment::0004::14cdf1fc49d2",
+    "libuv::src_unix_core.c::next_power_of_two::0024::14d21b35bd8f",
+    "libuv::src_unix_core.c::uv_translate_sys_error::0042::4890854660b0",
+    "libuv::src_unix_os390-syscalls.c::next_power_of_two::0002::07dc76456c29",
+    "libxdiff::xutils.c::xdl_bogosqrt::0001::4a9d97f32ee4",
+    "lz4::ossfuzz_fuzz_data_producer.c::FUZZ_getRange_from_uint32::0002::6013176dac9a",
+    "mpack::src_mpack_mpack-common.c::mpack_hex_char::0002::114e163a936d",
+    "nanoprintf::nanoprintf.h::npf__id_c::0013::36e5d4fdf359",
+    "nanoprintf::nanoprintf.h::npf__id_i::0008::9a921da6f1fd",
+    "nanoprintf::nanoprintf.h::npf__id_l::0009::1fb1afad7e41",
+    "nanoprintf::nanoprintf.h::npf__id_ll::0011::fd9c9dfe998b",
+    "nanoprintf::nanoprintf.h::npf__id_s::0016::85ae8cfb335c",
+    "nanoprintf::nanoprintf.h::npf__id_sc::0014::9ad640714c4a",
+    "nanoprintf::nanoprintf.h::npf__id_uc::0015::1d6df7d4be73",
+    "nanoprintf::nanoprintf.h::npf__id_ul::0010::56c5a22467f1",
+    "nanoprintf::nanoprintf.h::npf__id_ull::0012::abd1dc192144",
+    "nanoprintf::nanoprintf.h::npf__id_us::0017::7e050f4c1030",
+    "nghttp2::lib_nghttp2_hd_huffman.h::nghttp2_huff_estimate_decode_length::0001::7090718f291b",
+    "nghttp2::lib_nghttp2_helper.c::nghttp2_should_send_window_update::0005::16ca1890ce82",
+    "nghttp2::src_timegm.c::count_leap_year::0001::b841488a50ab",
+    "nghttp2::src_timegm.c::is_leap_year::0002::b03568a36b5e",
+    "open62541::deps_mp_printf.c::is_digit_::0002::8633e37596f0",
+    "open62541::src_server_ua_subscription_event.c::UA_Ternary_not::0003::aee216f5c9c9",
+    "pcre2::src_pcre2_dftables.c::identity::0001::d5225fef2444",
+    "zstd::lib_compress_huf_compress.c::HUF_tightCompressBound::0020::3972f2d122f6",
+    "zstd::lib_compress_zstd_compress.c::ZSTD_resolveExternalSequenceValidation::0010::bc098e5a07df",
+    "zstd::lib_dictBuilder_divsufsort.c::tr_ilg::0004::605a23eee9d0",
+    "zstd::lib_legacy_zstd_v04.c::FSE_abs::0002::304e26254a8e",
+    "zstd::lib_legacy_zstd_v05.c::FSEv05_abs::0002::5301e5508968",
+    "zstd::lib_legacy_zstd_v06.c::FSEv06_abs::0001::5b4b5ea74745",
+    "zstd::lib_legacy_zstd_v07.c::FSEv07_abs::0001::99911172ff45",
+    "zstd::programs_benchzstd.c::uintSize::0001::0ff5b2068d53",
+    "zstd::programs_util.c::UTIL_countCores::0042::c5d24f6b3f7a"
+  ],
+  "selected_summary": {
+    "by_argument_count": {
+      "1": 60,
+      "2": 12,
+      "3": 8
+    },
+    "by_domain_size": {
+      "128": 59,
+      "4096": 20,
+      "5": 1
+    },
+    "by_project": {
+      "brotli": 3,
+      "c-ares": 1,
+      "ccan": 12,
+      "cmark": 9,
+      "freetype": 2,
+      "htslib": 8,
+      "jansson": 1,
+      "json-c": 1,
+      "klib": 3,
+      "libevent": 4,
+      "libidn2": 2,
+      "libucl": 2,
+      "libuv": 3,
+      "libxdiff": 1,
+      "lz4": 1,
+      "mpack": 1,
+      "nanoprintf": 10,
+      "nghttp2": 4,
+      "open62541": 2,
+      "pcre2": 1,
+      "zstd": 9
+    },
+    "count": 80,
+    "structural_features": {
+      "bitwise": 27,
+      "branches4": 3,
+      "interacting_args": 17,
+      "lookup": 8,
+      "loop": 8,
+      "switch_like": 1
+    }
+  },
+  "semantic_labeling": "not_run",
+  "target_evaluations": [
+    {
+      "at_least_12_projects_possible": true,
+      "domain_and_sanitizer_feasible_by_construction": true,
+      "dominance_cap_for_target": 10,
+      "dominance_capacity": 78,
+      "eligible_functions_outside_largest_project": 68,
+      "feasible_under_expansion_framework": false,
+      "feasible_under_strict_project_cap": false,
+      "largest_project": "ccan",
+      "largest_project_eligible_count": 43,
+      "minimum_required_from_largest_project": 52,
+      "minimum_required_largest_project_share": 0.433333,
+      "reasons": [
+        "insufficient_total_eligible_functions",
+        "strict_project_cap_capacity_shortfall",
+        "dominance_share_capacity_shortfall",
+        "largest_project_would_exceed_share_goal"
+      ],
+      "represented_projects_available": 21,
+      "strict_project_cap": 10,
+      "strict_project_cap_capacity": 78,
+      "structural_coverage_if_all_feasible_rows_considered": {
+        "bitwise": 40,
+        "branches4": 4,
+        "interacting_args": 17,
+        "lookup": 8,
+        "loop": 12,
+        "switch_like": 1
+      },
+      "structural_quota_forced": false,
+      "target": 120,
+      "total_eligible_functions": 111
+    },
+    {
+      "at_least_12_projects_possible": true,
+      "domain_and_sanitizer_feasible_by_construction": true,
+      "dominance_cap_for_target": 11,
+      "dominance_capacity": 79,
+      "eligible_functions_outside_largest_project": 68,
+      "feasible_under_expansion_framework": false,
+      "feasible_under_strict_project_cap": false,
+      "largest_project": "ccan",
+      "largest_project_eligible_count": 43,
+      "minimum_required_from_largest_project": 43,
+      "minimum_required_largest_project_share": 0.387387,
+      "reasons": [
+        "strict_project_cap_capacity_shortfall",
+        "dominance_share_capacity_shortfall",
+        "largest_project_would_exceed_share_goal"
+      ],
+      "represented_projects_available": 21,
+      "strict_project_cap": 10,
+      "strict_project_cap_capacity": 78,
+      "structural_coverage_if_all_feasible_rows_considered": {
+        "bitwise": 40,
+        "branches4": 4,
+        "interacting_args": 17,
+        "lookup": 8,
+        "loop": 12,
+        "switch_like": 1
+      },
+      "structural_quota_forced": false,
+      "target": 111,
+      "total_eligible_functions": 111
+    },
+    {
+      "at_least_12_projects_possible": true,
+      "domain_and_sanitizer_feasible_by_construction": true,
+      "dominance_cap_for_target": 10,
+      "dominance_capacity": 78,
+      "eligible_functions_outside_largest_project": 68,
+      "feasible_under_expansion_framework": false,
+      "feasible_under_strict_project_cap": false,
+      "largest_project": "ccan",
+      "largest_project_eligible_count": 43,
+      "minimum_required_from_largest_project": 36,
+      "minimum_required_largest_project_share": 0.346154,
+      "reasons": [
+        "strict_project_cap_capacity_shortfall",
+        "dominance_share_capacity_shortfall",
+        "largest_project_would_exceed_share_goal"
+      ],
+      "represented_projects_available": 21,
+      "strict_project_cap": 10,
+      "strict_project_cap_capacity": 78,
+      "structural_coverage_if_all_feasible_rows_considered": {
+        "bitwise": 40,
+        "branches4": 4,
+        "interacting_args": 17,
+        "lookup": 8,
+        "loop": 12,
+        "switch_like": 1
+      },
+      "structural_quota_forced": false,
+      "target": 104,
+      "total_eligible_functions": 111
+    },
+    {
+      "at_least_12_projects_possible": true,
+      "domain_and_sanitizer_feasible_by_construction": true,
+      "dominance_cap_for_target": 10,
+      "dominance_capacity": 78,
+      "eligible_functions_outside_largest_project": 68,
+      "feasible_under_expansion_framework": false,
+      "feasible_under_strict_project_cap": false,
+      "largest_project": "ccan",
+      "largest_project_eligible_count": 43,
+      "minimum_required_from_largest_project": 32,
+      "minimum_required_largest_project_share": 0.32,
+      "reasons": [
+        "strict_project_cap_capacity_shortfall",
+        "dominance_share_capacity_shortfall",
+        "largest_project_would_exceed_share_goal"
+      ],
+      "represented_projects_available": 21,
+      "strict_project_cap": 10,
+      "strict_project_cap_capacity": 78,
+      "structural_coverage_if_all_feasible_rows_considered": {
+        "bitwise": 40,
+        "branches4": 4,
+        "interacting_args": 17,
+        "lookup": 8,
+        "loop": 12,
+        "switch_like": 1
+      },
+      "structural_quota_forced": false,
+      "target": 100,
+      "total_eligible_functions": 111
+    },
+    {
+      "at_least_12_projects_possible": true,
+      "domain_and_sanitizer_feasible_by_construction": true,
+      "dominance_cap_for_target": 14,
+      "dominance_capacity": 82,
+      "eligible_functions_outside_largest_project": 68,
+      "feasible_under_expansion_framework": false,
+      "feasible_under_strict_project_cap": false,
+      "largest_project": "ccan",
+      "largest_project_eligible_count": 43,
+      "minimum_required_from_largest_project": 28,
+      "minimum_required_largest_project_share": 0.291667,
+      "reasons": [
+        "strict_project_cap_capacity_shortfall",
+        "dominance_share_capacity_shortfall",
+        "largest_project_would_exceed_share_goal"
+      ],
+      "represented_projects_available": 21,
+      "strict_project_cap": 10,
+      "strict_project_cap_capacity": 78,
+      "structural_coverage_if_all_feasible_rows_considered": {
+        "bitwise": 40,
+        "branches4": 4,
+        "interacting_args": 17,
+        "lookup": 8,
+        "loop": 12,
+        "switch_like": 1
+      },
+      "structural_quota_forced": false,
+      "target": 96,
+      "total_eligible_functions": 111
+    },
+    {
+      "at_least_12_projects_possible": true,
+      "domain_and_sanitizer_feasible_by_construction": true,
+      "dominance_cap_for_target": 13,
+      "dominance_capacity": 81,
+      "eligible_functions_outside_largest_project": 68,
+      "feasible_under_expansion_framework": false,
+      "feasible_under_strict_project_cap": false,
+      "largest_project": "ccan",
+      "largest_project_eligible_count": 43,
+      "minimum_required_from_largest_project": 22,
+      "minimum_required_largest_project_share": 0.244444,
+      "reasons": [
+        "strict_project_cap_capacity_shortfall",
+        "dominance_share_capacity_shortfall",
+        "largest_project_would_exceed_share_goal"
+      ],
+      "represented_projects_available": 21,
+      "strict_project_cap": 10,
+      "strict_project_cap_capacity": 78,
+      "structural_coverage_if_all_feasible_rows_considered": {
+        "bitwise": 40,
+        "branches4": 4,
+        "interacting_args": 17,
+        "lookup": 8,
+        "loop": 12,
+        "switch_like": 1
+      },
+      "structural_quota_forced": false,
+      "target": 90,
+      "total_eligible_functions": 111
+    },
+    {
+      "at_least_12_projects_possible": true,
+      "domain_and_sanitizer_feasible_by_construction": true,
+      "dominance_cap_for_target": 12,
+      "dominance_capacity": 80,
+      "eligible_functions_outside_largest_project": 68,
+      "feasible_under_expansion_framework": true,
+      "feasible_under_strict_project_cap": false,
+      "largest_project": "ccan",
+      "largest_project_eligible_count": 43,
+      "minimum_required_from_largest_project": 12,
+      "minimum_required_largest_project_share": 0.15,
+      "reasons": [
+        "strict_project_cap_capacity_shortfall"
+      ],
+      "represented_projects_available": 21,
+      "strict_project_cap": 10,
+      "strict_project_cap_capacity": 78,
+      "structural_coverage_if_all_feasible_rows_considered": {
+        "bitwise": 40,
+        "branches4": 4,
+        "interacting_args": 17,
+        "lookup": 8,
+        "loop": 12,
+        "switch_like": 1
+      },
+      "structural_quota_forced": false,
+      "target": 80,
+      "total_eligible_functions": 111
+    }
+  ],
+  "unselected_eligible_count": 31,
+  "unselected_eligible_function_ids": [
+    "ccan::ccan_antithread_alloc_tiny.c::free_array_off::0002::cadf694bc58a",
+    "ccan::ccan_antithread_alloc_tiny.c::free_array_size::0001::16f43613df1e",
+    "ccan::ccan_avl_avl.c::sign::0001::bab7568c6873",
+    "ccan::ccan_base64_base64.c::base64_decoded_length::0005::ce81739684f7",
+    "ccan::ccan_base64_base64.c::base64_encoded_length::0004::77801e80e8f6",
+    "ccan::ccan_bdelta_bdelta.c::bytes_needed_for_size::0005::f17515fff86e",
+    "ccan::ccan_bitops_bitops.c::bitops_ffs32::0001::e0c80472c49e",
+    "ccan::ccan_bitops_bitops.c::bitops_ffs64::0002::b498a3f85ca8",
+    "ccan::ccan_bitops_bitops.c::bitops_weight32::0007::083bebd88028",
+    "ccan::ccan_crc32c_crc32c.c::swap::0007::328dee192cc2",
+    "ccan::ccan_crypto_sha256_sha256.c::Sigma0::0003::f9b02a908412",
+    "ccan::ccan_crypto_sha256_sha256.c::Sigma1::0004::73b953348b44",
+    "ccan::ccan_crypto_sha256_sha256.c::sigma0::0005::1447c3839957",
+    "ccan::ccan_crypto_sha256_sha256.c::sigma1::0006::38aa2c0c8609",
+    "ccan::ccan_crypto_sha512_sha512.c::Sigma0::0003::f5cb79708055",
+    "ccan::ccan_crypto_sha512_sha512.c::Sigma1::0004::a1313870c09c",
+    "ccan::ccan_crypto_sha512_sha512.c::sigma0::0005::2b596dd36d19",
+    "ccan::ccan_crypto_sha512_sha512.c::sigma1::0006::9e0b10721940",
+    "ccan::ccan_pr_log_pr_log.h::debug_is::0001::00eed64565dd",
+    "ccan::ccan_rfc822_rfc822.h::rfc822_iswsp::0001::70f4ab3b599e",
+    "ccan::ccan_str_base32_base32.c::base32_str_size::0002::ac22c4b702a8",
+    "ccan::ccan_str_hex_hex.h::hex_data_size::0002::fe5c1ff58caa",
+    "ccan::ccan_str_hex_hex.h::hex_str_size::0001::f6fd5f4b2003",
+    "ccan::ccan_ungraph_ungraph.c::anticlockwise::0003::139e6ecb3f49",
+    "ccan::ccan_ungraph_ungraph.c::clockwise::0002::1e8a2d70cae3",
+    "ccan::ccan_ungraph_ungraph.c::opposite_dir::0001::d74a198b222d",
+    "ccan::ccan_wwviaudio_wwviaudio.c::wwviaudio_add_sound::0011::9dc635bd1c3a",
+    "ccan::ccan_wwviaudio_wwviaudio.c::wwviaudio_play_music::0010::23a242e0e78e",
+    "ccan::ccan_wwviaudio_wwviaudio.c::wwviaudio_set_sound_device::0012::243ddd946322",
+    "ccan::junkcode_dongre.avinash_gmail.com-clibutils_src_c_heap.c::pvt_clib_heap_leftchild::0002::ed1c157fb9da",
+    "ccan::junkcode_rusty_rustcorp.com.au-ntdb_open.c::next_pow2::0003::f6cd4fb00a1d"
+  ],
+  "unselected_summary": {
+    "by_argument_count": {
+      "1": 31
+    },
+    "by_domain_size": {
+      "11": 3,
+      "128": 28
+    },
+    "by_project": {
+      "ccan": 31
+    },
+    "count": 31,
+    "structural_features": {
+      "bitwise": 13,
+      "branches4": 1,
+      "interacting_args": 0,
+      "lookup": 0,
+      "loop": 4,
+      "switch_like": 0
+    }
+  },
+  "v1_expected_function_fixture_seal_sha256": "2bba63e1a191050f2ec0e15a8f58ed7eff9a5c9bf1f21b672b7ab9bfc64c1494",
+  "v1_function_fixture_seal_sha256": "2bba63e1a191050f2ec0e15a8f58ed7eff9a5c9bf1f21b672b7ab9bfc64c1494",
+  "v1_seal_matches_expected": true,
+  "v2_artifact_guard_before_expansion": {
+    "ok": true,
+    "present_paths": []
+  }
+}

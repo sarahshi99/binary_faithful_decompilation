@@ -1,6 +1,6 @@
 # Phase 3a Natural Error Census Handoff
 
-Updated: 2026-07-07T10:04:46Z
+Updated: 2026-07-07T11:14:37Z
 
 Branch: `phase3a-prospective-natural-error-census`
 
@@ -23,6 +23,7 @@ decompilation-faithfulness auditing policy has been run.
 - Producer setup and availability check: complete; producer gate passed.
 - Project eligibility census: complete.
 - Selected functions and fixtures seal: complete.
+- Pre-candidate corpus expansion audit: complete; no expansion feasible above 80.
 - Candidate generation and seal: pending.
 - Exhaustive semantic labeling: pending.
 - Census gates: pending.
@@ -133,6 +134,42 @@ pre-label, pre-auditor feasibility amendment was committed in
 The sealed reduced corpus contains 80 selected functions across 21 represented
 projects. Exact-domain labeling remains complete for future Phase 3a labeling.
 
+## Corpus Expansion Audit
+
+Artifacts:
+
+- `results/decompile_faithfulness/phase3a_corpus_expansion_audit.json`
+- `docs/paper_agent/phase3a_corpus_expansion_audit.md`
+
+This audit was run before candidate generation, semantic labeling, witness
+inspection, or auditor execution.
+
+- Status: `no_expansion_feasible_above_80`
+- Maximum feasible target across 80..120: `80`
+- Requested targets evaluated: `120`, `111`, `104`, `100`, `96`, `90`, `80`
+- V1 selected functions: `80`
+- V1 function/fixture seal: `2bba63e1a191050f2ec0e15a8f58ed7eff9a5c9bf1f21b672b7ab9bfc64c1494`
+- V2 selected-functions file created: `False`
+- V2 function/fixture seal created: `False`
+- Tests run after expansion audit: `python -m unittest discover tests` -> 194 tests passed; `python -m unittest discover analysis/decompile_faithfulness/tests` -> 100 tests passed.
+
+Reason expansion stopped at 80: project-capacity and dominance constraints.
+The strict 10-functions-per-project capacity is `78`; the 80-function corpus
+already requires the reduced-corpus 15% share cap with `ccan` contributing
+`12/80`. All unselected eligible functions are from `ccan`, which has `43`
+eligible functions while all other projects together contribute `68`. Any
+target above 80 would require `ccan` to exceed the allowed dominance share.
+
+The stop was not due to argument-count quota, structural quota, sampler
+implementation, a conservative feasibility amendment, exclusion of otherwise
+usable projects, candidate-generation results, semantic labels, mismatch
+witnesses, or auditor behavior.
+
+No corpus expansion amendment was created. No v2 selected-functions file,
+v2 fixtures, or v2 seal was created. The v1 80-function corpus remains the
+canonical Phase 3a function/fixture corpus for future candidate generation
+unless a new pre-candidate instruction changes the constraints.
+
 ## Authorization Status
 
 Phase 3a completed project acquisition and function corpus construction after
@@ -144,7 +181,7 @@ Phase 3b auditor evaluation is not authorized.
 ## Tests
 
 - `python -m unittest discover tests` -> 194 tests passed.
-- `python -m unittest discover analysis/decompile_faithfulness/tests` -> 96 tests passed.
+- `python -m unittest discover analysis/decompile_faithfulness/tests` -> 100 tests passed.
 
 ## Audit Policy Prohibition Confirmation
 
