@@ -161,3 +161,51 @@ No execution of the following occurred in Phase 3a producer setup:
 
 No auditor result tables, budget curves, or auditor detection checks were
 generated.
+
+## Function Corpus And Fixture Seal Milestone
+
+Updated: 2026-07-07T05:38:30Z
+
+- Branch: `phase3a-prospective-natural-error-census`
+- Current HEAD at corpus command run: `5532b6d4f601a8d926ca19f1d911ac6a16999f83`
+- Producer setup commit: `5532b6d`
+- Projects scanned: `39`
+- Projects represented: `0`
+- Primary projects used: `0`
+- Fallback projects used: `0`
+- Fallback needed: `True`
+- Eligible function count: `0`
+- Selected function count: `0`
+- Selected functions by project: `{}`
+- Selected functions by argument count: `{}`
+- Structural-feature coverage: `{}`
+- Exact-domain size distribution: `{}`
+- Exclusion counts and reasons: `{"project_acquisition_failed:couldnt_connect_to_server": 39}`
+- Feasibility amendment needed: `False`
+- Fixture count: `0`
+- Function/fixture seal hash: ``
+- Tests run: `python -m unittest discover tests` -> 194 passed; `python -m unittest discover analysis/decompile_faithfulness/tests` -> 92 passed.
+
+Gate status: `stopped_before_fixture_generation_insufficient_project_count`.
+
+Blocker: project acquisition could not complete. All 39 preregistered primary
+and fallback project clone attempts failed inside the sandbox with `Couldn't
+connect to server`. An escalated rerun of the same corpus acquisition command
+was requested, but the approval service rejected it with `model not found:
+codex-auto-review`. No alternate project pool, cached prior-phase project, or
+substitute source corpus was used.
+
+Function/fixture seal status: not created, because the preregistered stop rule
+triggered before fixture generation. There are fewer than 12 projects with
+eligible functions and fewer than 80 eligible functions.
+
+Push status: initial `git push -u origin
+phase3a-prospective-natural-error-census` failed before this milestone with
+`Permission to sarahshi99/binary_faithful_decompilation.git denied to deploy
+key`. A final push attempt should be retried after credentials are fixed.
+
+No candidate generation occurred in this milestone.
+
+No semantic labeling occurred in this milestone.
+
+No auditor was run in this milestone.

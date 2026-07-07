@@ -1,0 +1,1086 @@
+{
+  "acquisition_errors": [
+    {
+      "project": "libyaml",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libyaml'...\nfatal: unable to access 'https://github.com/yaml/libyaml.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/yaml/libyaml.git"
+    },
+    {
+      "project": "jansson",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/jansson'...\nfatal: unable to access 'https://github.com/akheron/jansson.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/akheron/jansson.git"
+    },
+    {
+      "project": "expat",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/expat'...\nfatal: unable to access 'https://github.com/libexpat/libexpat.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/libexpat/libexpat.git"
+    },
+    {
+      "project": "lz4",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/lz4'...\nfatal: unable to access 'https://github.com/lz4/lz4.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/lz4/lz4.git"
+    },
+    {
+      "project": "zstd",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/zstd'...\nfatal: unable to access 'https://github.com/facebook/zstd.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/facebook/zstd.git"
+    },
+    {
+      "project": "libpng",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libpng'...\nfatal: unable to access 'https://github.com/pnggroup/libpng.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/pnggroup/libpng.git"
+    },
+    {
+      "project": "libjpeg-turbo",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libjpeg-turbo'...\nfatal: unable to access 'https://github.com/libjpeg-turbo/libjpeg-turbo.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/libjpeg-turbo/libjpeg-turbo.git"
+    },
+    {
+      "project": "utf8proc",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/utf8proc'...\nfatal: unable to access 'https://github.com/JuliaStrings/utf8proc.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/JuliaStrings/utf8proc.git"
+    },
+    {
+      "project": "cmark",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/cmark'...\nfatal: unable to access 'https://github.com/commonmark/cmark.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/commonmark/cmark.git"
+    },
+    {
+      "project": "miniz",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/miniz'...\nfatal: unable to access 'https://github.com/richgel999/miniz.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/richgel999/miniz.git"
+    },
+    {
+      "project": "mpack",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/mpack'...\nfatal: unable to access 'https://github.com/ludocode/mpack.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/ludocode/mpack.git"
+    },
+    {
+      "project": "parson",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/parson'...\nfatal: unable to access 'https://github.com/kgabis/parson.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/kgabis/parson.git"
+    },
+    {
+      "project": "picohttpparser",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/picohttpparser'...\nfatal: unable to access 'https://github.com/h2o/picohttpparser.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/h2o/picohttpparser.git"
+    },
+    {
+      "project": "klib",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/klib'...\nfatal: unable to access 'https://github.com/attractivechaos/klib.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/attractivechaos/klib.git"
+    },
+    {
+      "project": "bstrlib",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/bstrlib'...\nfatal: unable to access 'https://github.com/websnarf/bstrlib.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/websnarf/bstrlib.git"
+    },
+    {
+      "project": "libcsv",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libcsv'...\nfatal: unable to access 'https://github.com/rgamble/libcsv.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/rgamble/libcsv.git"
+    },
+    {
+      "project": "nanoprintf",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/nanoprintf'...\nfatal: unable to access 'https://github.com/charlesnicholson/nanoprintf.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/charlesnicholson/nanoprintf.git"
+    },
+    {
+      "project": "sds",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/sds'...\nfatal: unable to access 'https://github.com/antirez/sds.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/antirez/sds.git"
+    },
+    {
+      "project": "libconfuse",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libconfuse'...\nfatal: unable to access 'https://github.com/libconfuse/libconfuse.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/libconfuse/libconfuse.git"
+    },
+    {
+      "project": "libucl",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libucl'...\nfatal: unable to access 'https://github.com/vstakhov/libucl.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/vstakhov/libucl.git"
+    },
+    {
+      "project": "json-c",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/json-c'...\nfatal: unable to access 'https://github.com/json-c/json-c.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/json-c/json-c.git"
+    },
+    {
+      "project": "yyjson",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/yyjson'...\nfatal: unable to access 'https://github.com/ibireme/yyjson.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/ibireme/yyjson.git"
+    },
+    {
+      "project": "qbe",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/qbe'...\nfatal: unable to access 'https://c9x.me/git/qbe.git/': Couldn't connect to server\n",
+      "repository": "https://c9x.me/git/qbe.git"
+    },
+    {
+      "project": "htslib",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/htslib'...\nfatal: unable to access 'https://github.com/samtools/htslib.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/samtools/htslib.git"
+    },
+    {
+      "project": "libevent",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libevent'...\nfatal: unable to access 'https://github.com/libevent/libevent.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/libevent/libevent.git"
+    },
+    {
+      "project": "libuv",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libuv'...\nfatal: unable to access 'https://github.com/libuv/libuv.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/libuv/libuv.git"
+    },
+    {
+      "project": "brotli",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/brotli'...\nfatal: unable to access 'https://github.com/google/brotli.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/google/brotli.git"
+    },
+    {
+      "project": "nghttp2",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/nghttp2'...\nfatal: unable to access 'https://github.com/nghttp2/nghttp2.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/nghttp2/nghttp2.git"
+    },
+    {
+      "project": "c-ares",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/c-ares'...\nfatal: unable to access 'https://github.com/c-ares/c-ares.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/c-ares/c-ares.git"
+    },
+    {
+      "project": "cwalk",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/cwalk'...\nfatal: unable to access 'https://github.com/likle/cwalk.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/likle/cwalk.git"
+    },
+    {
+      "project": "mxml",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/mxml'...\nfatal: unable to access 'https://github.com/michaelrsweet/mxml.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/michaelrsweet/mxml.git"
+    },
+    {
+      "project": "libxdiff",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libxdiff'...\nfatal: unable to access 'https://github.com/libgit2/xdiff.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/libgit2/xdiff.git"
+    },
+    {
+      "project": "ccan",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/ccan'...\nfatal: unable to access 'https://github.com/rustyrussell/ccan.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/rustyrussell/ccan.git"
+    },
+    {
+      "project": "open62541",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/open62541'...\nfatal: unable to access 'https://github.com/open62541/open62541.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/open62541/open62541.git"
+    },
+    {
+      "project": "pcre2",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/pcre2'...\nfatal: unable to access 'https://github.com/PCRE2Project/pcre2.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/PCRE2Project/pcre2.git"
+    },
+    {
+      "project": "libunistring",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libunistring'...\nfatal: unable to access 'https://git.savannah.gnu.org/git/libunistring.git/': Couldn't connect to server\n",
+      "repository": "https://git.savannah.gnu.org/git/libunistring.git"
+    },
+    {
+      "project": "libidn2",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libidn2'...\nfatal: unable to access 'https://gitlab.com/libidn/libidn2.git/': Couldn't connect to server\n",
+      "repository": "https://gitlab.com/libidn/libidn2.git"
+    },
+    {
+      "project": "freetype",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/freetype'...\nfatal: unable to access 'https://gitlab.freedesktop.org/freetype/freetype.git/': Couldn't connect to server\n",
+      "repository": "https://gitlab.freedesktop.org/freetype/freetype.git"
+    },
+    {
+      "project": "harfbuzz",
+      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/harfbuzz'...\nfatal: unable to access 'https://github.com/harfbuzz/harfbuzz.git/': Couldn't connect to server\n",
+      "repository": "https://github.com/harfbuzz/harfbuzz.git"
+    }
+  ],
+  "branch": "phase3a-prospective-natural-error-census",
+  "created_at_utc": "2026-07-07T05:38:30Z",
+  "forbidden_prior_projects": [
+    "BearSSL",
+    "CodeFuse-DeBench",
+    "TinyCC",
+    "cJSON",
+    "c_algorithms",
+    "chibicc",
+    "inih",
+    "libb64",
+    "libdeflate",
+    "libtomcrypt",
+    "libtommath",
+    "mbedtls",
+    "musl",
+    "sbase",
+    "sqlite",
+    "thealgorithms_c",
+    "tiny-AES-c",
+    "uthash",
+    "xxHash",
+    "zlib"
+  ],
+  "preregistration_commit": "2b0e62472b3ee766bba9f64a440d52f0f53bedf9",
+  "producer_setup_commit": "5532b6d",
+  "projects": [
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/yaml/libyaml.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libyaml",
+      "order": 1,
+      "pinned_commit": "",
+      "pool": "primary",
+      "project": "libyaml",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/akheron/jansson.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/jansson",
+      "order": 2,
+      "pinned_commit": "",
+      "pool": "primary",
+      "project": "jansson",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/libexpat/libexpat.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/expat",
+      "order": 3,
+      "pinned_commit": "",
+      "pool": "primary",
+      "project": "expat",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/lz4/lz4.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/lz4",
+      "order": 4,
+      "pinned_commit": "",
+      "pool": "primary",
+      "project": "lz4",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/facebook/zstd.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/zstd",
+      "order": 5,
+      "pinned_commit": "",
+      "pool": "primary",
+      "project": "zstd",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/pnggroup/libpng.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libpng",
+      "order": 6,
+      "pinned_commit": "",
+      "pool": "primary",
+      "project": "libpng",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/libjpeg-turbo/libjpeg-turbo.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libjpeg-turbo",
+      "order": 7,
+      "pinned_commit": "",
+      "pool": "primary",
+      "project": "libjpeg-turbo",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/JuliaStrings/utf8proc.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/utf8proc",
+      "order": 8,
+      "pinned_commit": "",
+      "pool": "primary",
+      "project": "utf8proc",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/commonmark/cmark.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/cmark",
+      "order": 9,
+      "pinned_commit": "",
+      "pool": "primary",
+      "project": "cmark",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/richgel999/miniz.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/miniz",
+      "order": 10,
+      "pinned_commit": "",
+      "pool": "primary",
+      "project": "miniz",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/ludocode/mpack.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/mpack",
+      "order": 11,
+      "pinned_commit": "",
+      "pool": "primary",
+      "project": "mpack",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/kgabis/parson.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/parson",
+      "order": 12,
+      "pinned_commit": "",
+      "pool": "primary",
+      "project": "parson",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/h2o/picohttpparser.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/picohttpparser",
+      "order": 13,
+      "pinned_commit": "",
+      "pool": "primary",
+      "project": "picohttpparser",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/attractivechaos/klib.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/klib",
+      "order": 14,
+      "pinned_commit": "",
+      "pool": "primary",
+      "project": "klib",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/websnarf/bstrlib.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/bstrlib",
+      "order": 15,
+      "pinned_commit": "",
+      "pool": "primary",
+      "project": "bstrlib",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/rgamble/libcsv.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libcsv",
+      "order": 16,
+      "pinned_commit": "",
+      "pool": "primary",
+      "project": "libcsv",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/charlesnicholson/nanoprintf.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/nanoprintf",
+      "order": 17,
+      "pinned_commit": "",
+      "pool": "primary",
+      "project": "nanoprintf",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/antirez/sds.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/sds",
+      "order": 18,
+      "pinned_commit": "",
+      "pool": "primary",
+      "project": "sds",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/libconfuse/libconfuse.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libconfuse",
+      "order": 19,
+      "pinned_commit": "",
+      "pool": "primary",
+      "project": "libconfuse",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/vstakhov/libucl.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libucl",
+      "order": 20,
+      "pinned_commit": "",
+      "pool": "primary",
+      "project": "libucl",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/json-c/json-c.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/json-c",
+      "order": 21,
+      "pinned_commit": "",
+      "pool": "fallback",
+      "project": "json-c",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/ibireme/yyjson.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/yyjson",
+      "order": 22,
+      "pinned_commit": "",
+      "pool": "fallback",
+      "project": "yyjson",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://c9x.me/git/qbe.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/qbe",
+      "order": 23,
+      "pinned_commit": "",
+      "pool": "fallback",
+      "project": "qbe",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/samtools/htslib.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/htslib",
+      "order": 24,
+      "pinned_commit": "",
+      "pool": "fallback",
+      "project": "htslib",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/libevent/libevent.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libevent",
+      "order": 25,
+      "pinned_commit": "",
+      "pool": "fallback",
+      "project": "libevent",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/libuv/libuv.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libuv",
+      "order": 26,
+      "pinned_commit": "",
+      "pool": "fallback",
+      "project": "libuv",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/google/brotli.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/brotli",
+      "order": 27,
+      "pinned_commit": "",
+      "pool": "fallback",
+      "project": "brotli",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/nghttp2/nghttp2.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/nghttp2",
+      "order": 28,
+      "pinned_commit": "",
+      "pool": "fallback",
+      "project": "nghttp2",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/c-ares/c-ares.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/c-ares",
+      "order": 29,
+      "pinned_commit": "",
+      "pool": "fallback",
+      "project": "c-ares",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/likle/cwalk.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/cwalk",
+      "order": 30,
+      "pinned_commit": "",
+      "pool": "fallback",
+      "project": "cwalk",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/michaelrsweet/mxml.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/mxml",
+      "order": 31,
+      "pinned_commit": "",
+      "pool": "fallback",
+      "project": "mxml",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/libgit2/xdiff.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libxdiff",
+      "order": 32,
+      "pinned_commit": "",
+      "pool": "fallback",
+      "project": "libxdiff",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/rustyrussell/ccan.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/ccan",
+      "order": 33,
+      "pinned_commit": "",
+      "pool": "fallback",
+      "project": "ccan",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/open62541/open62541.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/open62541",
+      "order": 34,
+      "pinned_commit": "",
+      "pool": "fallback",
+      "project": "open62541",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/PCRE2Project/pcre2.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/pcre2",
+      "order": 35,
+      "pinned_commit": "",
+      "pool": "fallback",
+      "project": "pcre2",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://git.savannah.gnu.org/git/libunistring.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libunistring",
+      "order": 36,
+      "pinned_commit": "",
+      "pool": "fallback",
+      "project": "libunistring",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://gitlab.com/libidn/libidn2.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libidn2",
+      "order": 37,
+      "pinned_commit": "",
+      "pool": "fallback",
+      "project": "libidn2",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://gitlab.freedesktop.org/freetype/freetype.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/freetype",
+      "order": 38,
+      "pinned_commit": "",
+      "pool": "fallback",
+      "project": "freetype",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    },
+    {
+      "acquired": false,
+      "acquisition_date": "2026-07-07",
+      "canonical_repository": "https://github.com/harfbuzz/harfbuzz.git",
+      "eligible_function_count": 0,
+      "license_metadata": [
+        {
+          "path": "",
+          "sha256": "",
+          "status": "not_found_or_unavailable"
+        }
+      ],
+      "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/harfbuzz",
+      "order": 39,
+      "pinned_commit": "",
+      "pool": "fallback",
+      "project": "harfbuzz",
+      "resolved_commit": "",
+      "source_file_hashes": [],
+      "source_files_scanned": 0,
+      "yielded_eligible_functions": false
+    }
+  ],
+  "schema_version": 1
+}
