@@ -91,6 +91,15 @@ class Phase3aCorpusTest(unittest.TestCase):
             corpus.write_feasibility_amendment(path, gate, funcs)
             self.assertEqual(path.read_text(encoding="utf-8"), "already committed\n")
 
+    def test_existing_checkout_without_head_is_not_acquired(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "project"
+            (path / ".git").mkdir(parents=True)
+            with mock.patch.object(corpus, "git_at", return_value=""):
+                result = corpus.acquire_project(Path(tmp), path, "https://example.invalid/repo.git", Path(tmp) / "log.jsonl")
+        self.assertFalse(result["ok"])
+        self.assertEqual(result["reason"], "existing_checkout_without_resolved_head")
+
     def test_fixture_generation_source_agnostic_and_reproducible(self) -> None:
         left = _function(source="int f(int x) { return x + 'A'; }")
         right = _function(source="int f(int x) { return x + 'Z'; }")

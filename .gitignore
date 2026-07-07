@@ -35,6 +35,9 @@ analysis_outputs/decompile_faithfulness/holdout_phase1e/
 analysis_outputs/decompile_faithfulness/phase1g_wallclock/
 analysis_outputs/decompile_faithfulness/phase1h_natural_llm/
 analysis_outputs/decompile_faithfulness/phase2a_sbdw/
+analysis_outputs/decompile_faithfulness/phase3a_corpus/
+
+backups/
 
 results/decompile_faithfulness/natural_llm_first_witness.csv
 results/decompile_faithfulness/natural_llm_policy_traces.jsonl

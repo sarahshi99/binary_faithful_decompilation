@@ -420,11 +420,15 @@ def acquire_and_scan_pool(
 
 def acquire_project(repo_root: Path, path: Path, url: str, command_log: Path) -> dict[str, Any]:
     if path.exists() and (path / ".git").exists():
+        if not git_at(path, ["rev-parse", "HEAD"]):
+            return {"ok": False, "reason": "existing_checkout_without_resolved_head"}
         return {"ok": True, "reason": "existing_checkout"}
     path.parent.mkdir(parents=True, exist_ok=True)
     result = run_command(["git", "clone", "--depth", "1", url, str(path)], repo_root, command_log, timeout_s=240)
     if result.returncode != 0:
         return {"ok": False, "reason": (result.stderr or result.stdout)[-1000:]}
+    if not git_at(path, ["rev-parse", "HEAD"]):
+        return {"ok": False, "reason": "clone_without_resolved_head"}
     return {"ok": True, "reason": "cloned"}
 
 
