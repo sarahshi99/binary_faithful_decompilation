@@ -1,0 +1,199 @@
+{
+  "phase": "phase3a",
+  "title": "Auditing the Auditors: Witness Leakage and Generalization in Decompilation Faithfulness Testing",
+  "purpose": "Producer setup and availability gate for prospective natural semantic-error census.",
+  "created_utc": "2026-07-07T04:51:30Z",
+  "branch": "phase3a-prospective-natural-error-census",
+  "base_branch": "phase2a-source-behavioral-diversity-prototype",
+  "base_head": "a2c975609aed5975431ec1a770c9cd92c37c2b1f",
+  "preregistration_commit": "2b0e62472b3ee766bba9f64a440d52f0f53bedf9",
+  "audit_policy_execution": {
+    "status": "not_run",
+    "confirmation": "No Phase 1/2 auditing policy, libFuzzer, budget curve, or auditor-like method was run during producer setup."
+  },
+  "availability_gate": {
+    "minimum_available_producers_required": 3,
+    "available_producer_count": 4,
+    "available_producers": [
+      "ghidra",
+      "angr",
+      "llm4decompile",
+      "mycodex_api"
+    ],
+    "blocked_producers": [
+      "retdec"
+    ],
+    "preferred_mix_satisfied": true,
+    "traditional_decompiler_available": true,
+    "neural_or_api_available": true,
+    "additional_independent_producer_available": true,
+    "decision": "proceed_to_function_corpus_phase"
+  },
+  "producers": {
+    "ghidra": {
+      "producer_status": "available",
+      "version": "12.1.2",
+      "installation_path": "analysis_outputs/decompile_faithfulness/phase6r_tools/ghidra_user/ghidra_12.1.2_PUBLIC",
+      "analyzeHeadless_path": "analysis_outputs/decompile_faithfulness/phase6r_tools/ghidra_user/ghidra_12.1.2_PUBLIC/support/analyzeHeadless",
+      "java_home": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase6r_tools/ghidra_user/root/usr/lib/jvm/java-21-openjdk-amd64",
+      "path_prefix": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase6r_tools/ghidra_user/root/usr/lib/jvm/java-21-openjdk-amd64/bin",
+      "java_version": "openjdk version \"21.0.7\" 2025-04-15",
+      "smoke_test": {
+        "command": "JAVA_HOME=/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase6r_tools/ghidra_user/root/usr/lib/jvm/java-21-openjdk-amd64 PATH=/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase6r_tools/ghidra_user/root/usr/lib/jvm/java-21-openjdk-amd64/bin:$PATH analysis_outputs/decompile_faithfulness/phase6r_tools/ghidra_user/ghidra_12.1.2_PUBLIC/support/analyzeHeadless /tmp phase3a_ghidra_smoke2 -import /bin/true -deleteProject -noanalysis",
+        "input": "/bin/true",
+        "uses_prior_phase_function": false,
+        "result": "passed"
+      }
+    },
+    "angr": {
+      "producer_status": "available",
+      "environment": "/home/shx/.venvs/phase3a-angr",
+      "install_command": "/home/shx/.venvs/phase3a-angr/bin/python -m pip install angr==9.2.102",
+      "python_version": "3.9.23",
+      "angr_version": "9.2.102",
+      "claripy_version": "9.2.102",
+      "z3_version": "4.10.2",
+      "smoke_test": {
+        "command": "/home/shx/.venvs/phase3a-angr/bin/python -c \"import angr; p=angr.Project('/bin/true', auto_load_libs=False); cfg=p.analyses.CFGFast(normalize=True); main=p.kb.functions.function(name='main'); d=p.analyses.Decompiler(main, cfg=cfg.model); print(str(d.codegen.text)[:160])\"",
+        "input": "/bin/true",
+        "uses_prior_phase_function": false,
+        "result": "passed",
+        "decompiler_class": "Decompiler"
+      }
+    },
+    "retdec": {
+      "producer_status": "blocked",
+      "attempted_version_or_commit": "53e55b4b26e9b843787f0e06d867441e32b1604e",
+      "repository": "https://github.com/avast/retdec",
+      "source_path": "external/phase3a_tools/retdec-v5.0",
+      "setup_attempts": [
+        {
+          "attempt": "path_and_package_search",
+          "commands": [
+            "command -v retdec-decompiler",
+            "apt-cache search retdec",
+            "conda search -c conda-forge retdec"
+          ],
+          "result": "no usable retdec-decompiler executable or package found"
+        },
+        {
+          "attempt": "source_build_ninja_cmake_4_3_4",
+          "build_directory": "external/phase3a_tools/retdec-v5.0-build",
+          "commands": [
+            "/home/shx/.venvs/phase3a-retdec-build/bin/python -m pip install cmake ninja",
+            "conda install -p /home/shx/.conda/envs/phase3a-retdec-build autoconf automake libtool pkg-config m4",
+            "PATH=/home/shx/.conda/envs/phase3a-retdec-build/bin:/home/shx/.venvs/phase3a-retdec-build/bin:$PATH /home/shx/.venvs/phase3a-retdec-build/bin/cmake --build external/phase3a_tools/retdec-v5.0-build --target retdec-decompiler -j 4"
+          ],
+          "result": "failed",
+          "blocker": "Vendored LLVM requires CMake compatibility with cmake_minimum_required(VERSION 3.4.3), which CMake 4.3.4 rejects; YARA configure also received MAKE=OFF from the Ninja/CMake cache."
+        },
+        {
+          "attempt": "source_build_unix_makefiles_cmake_3_27_9",
+          "build_directory": "external/phase3a_tools/retdec-v5.0-build-make",
+          "commands": [
+            "/home/shx/.venvs/phase3a-retdec-build/bin/python -m pip install 'cmake==3.27.9'",
+            "PATH=/home/shx/.conda/envs/phase3a-retdec-build/bin:/home/shx/.venvs/phase3a-retdec-build/bin:$PATH /home/shx/.venvs/phase3a-retdec-build/bin/cmake -S external/phase3a_tools/retdec-v5.0 -B external/phase3a_tools/retdec-v5.0-build-make -G 'Unix Makefiles' -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/shx/projects/binary_faithful_decompilation/external/phase3a_tools/retdec-v5.0-install -DOPENSSL_ROOT_DIR=/home/shx/miniconda3 -DOPENSSL_INCLUDE_DIR=/home/shx/miniconda3/include -DOPENSSL_SSL_LIBRARY=/home/shx/miniconda3/lib/libssl.so -DOPENSSL_CRYPTO_LIBRARY=/home/shx/miniconda3/lib/libcrypto.so -DZLIB_INCLUDE_DIR=/home/shx/miniconda3/envs/llmxy/include -DZLIB_LIBRARY=/home/shx/miniconda3/envs/llmxy/lib/libz.so -DRETDEC_COMPILE_YARA=OFF",
+            "PATH=/home/shx/.conda/envs/phase3a-retdec-build/bin:/home/shx/.venvs/phase3a-retdec-build/bin:$PATH /home/shx/.venvs/phase3a-retdec-build/bin/cmake --build external/phase3a_tools/retdec-v5.0-build-make --target retdec-decompiler -j 4"
+          ],
+          "worker_count": 4,
+          "result": "failed",
+          "blocker": "The configure step succeeded, but the build could not download official RetDec dependencies inside the restricted network. Escalated rerun was rejected by the approval service with: model not found: codex-auto-review."
+        }
+      ],
+      "replacement_policy": "No substitute decompiler was used."
+    },
+    "llm4decompile": {
+      "producer_status": "available",
+      "repository": "https://github.com/albertan017/LLM4Decompile.git",
+      "repository_commit": "85b364bf093eb2ee4f3687cfe38a203fca89f23e",
+      "model_identifier": "LLM4Binary/llm4decompile-22b-v2",
+      "model_snapshot": "be2ac0bbb3bfa508d9f8a4790329250f1cb13ddc",
+      "model_path": "/home/shx/.cache/huggingface/hub/models--LLM4Binary--llm4decompile-22b-v2/snapshots/be2ac0bbb3bfa508d9f8a4790329250f1cb13ddc",
+      "model_size_on_disk": "42G",
+      "model_family": "LLM4Decompile-Ref V2",
+      "input_contract": "Ghidra pseudocode derived from the same selected function binary/build view, plus sealed signature and build metadata; no trusted source body, fixtures, labels, witnesses, extracted source literals, auditor probes, or Phase 1/2 failure examples.",
+      "dream_coder_substitution": "forbidden_and_not_used",
+      "framework_versions": {
+        "torch": "2.5.1+cu121",
+        "cuda_runtime_reported_by_torch": "12.1",
+        "transformers": "4.38.2",
+        "huggingface_hub": "0.36.2",
+        "accelerate": "1.13.0",
+        "driver_version": "580.159.03"
+      },
+      "gpu": {
+        "name": "NVIDIA H200 NVL",
+        "total_memory_mib": 143771,
+        "precision": "bfloat16",
+        "maximum_batch_size_tested": 1,
+        "model_memory_mib_after_load": 43329.4,
+        "peak_memory_mib_during_generate": 43392.7,
+        "note": "A separate non-Phase-3a dllm_infilling process was using about 19 GiB during setup; it was not killed or used by Phase 3a."
+      },
+      "decoding_parameters": {
+        "do_sample": false,
+        "max_new_tokens_smoke_test": 32,
+        "batch_size_smoke_test": 1
+      },
+      "smoke_test": {
+        "uses_prior_phase_function": false,
+        "prompt_type": "synthetic Ghidra-like pseudocode",
+        "prompt_sha256": "460f7838af094205f4626a121d4d53aa2b4c06ef354e71402abe4a477d2bdf38",
+        "tokenizer_loader": "PreTrainedTokenizerFast(tokenizer.json)",
+        "input_tokens": 48,
+        "output_tokens": 21,
+        "load_s": 9.784,
+        "generate_s": 1.566,
+        "total_s": 11.416,
+        "result": "passed",
+        "output_preview": "int func0(int x, int y) {\\n  return x + y;\\n}"
+      },
+      "model_file_hashes_sha256": {
+        ".gitattributes": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
+        "LICENSE": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "README.md": "1236acbc390e95c0dbccdcb6e002877470f0d0c3d8b661a63fb0225e9bfd0259",
+        "config.json": "1b0310d1f98abb41142114ab993fb5f699066fab9f83059958c618dd2abd0d66",
+        "convert_mistral_weights_to_hf-22B.py": "c4dce6bfe52ba1616c114a18fa133c2e3c6a29201f74e61c62cc408a4b837fce",
+        "generation_config.json": "03ad60d1e261480774937329d6b1bcf5ea5db925360e59201f57476078bf6c44",
+        "model-00001-of-00009.safetensors": "042e004e6b96590b58ad96cf7e894b5885b901ddc9473ecad278c6a046fb2f9a",
+        "model-00002-of-00009.safetensors": "7dddc146e11aece252c6e632c8d745cb6fcce391dca97999df21e555f260091a",
+        "model-00003-of-00009.safetensors": "90ef3a481570204d0269dbb057e7c114943fb7183043fedbfe82c60ea05631e2",
+        "model-00004-of-00009.safetensors": "60303704557eac02c2b6f7ad8f3696ae5e6d5dfa62ee3f578e1946e495892e82",
+        "model-00005-of-00009.safetensors": "e3a955359951b07bda59d17310860c1749255bd0c4f04ff985180e0b25df33d0",
+        "model-00006-of-00009.safetensors": "4ce0365da717f6b313ce5c1b84f6a43ee9ae33b93368f3a25d11f0c9ec876ea0",
+        "model-00007-of-00009.safetensors": "28fd5c9f3e2193a7cec5ceffcf205c698c02a2e59f9435099507febe878f3142",
+        "model-00008-of-00009.safetensors": "5339bdc8151876346906037c5ac5ec612e12432744201694a2520f1eb4f33dc2",
+        "model-00009-of-00009.safetensors": "61d3880f6227dbcd4849152a2ed6e1774f1412e6c0f8afe42e9980ebed6ecb29",
+        "model.safetensors.index.json": "af67fe68956a7a93d0bf1a1799a08b0c5be1868852229c9318f3d16fe59a3230",
+        "special_tokens_map.json": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0",
+        "tokenizer.json": "722f46f56e1dd32bdd7288f5257e749f34303c5be777712d4319c0cd4987c1dc",
+        "tokenizer.model": "9addc8bdce5988448ae81b729336f43a81262160ae8da760674badab9d4c7d33",
+        "tokenizer_config.json": "727359d715d3196d0cf3a0b9a01743e684eaf9f5e24d2f78fddcdc6b23d83d07"
+      }
+    },
+    "mycodex_api": {
+      "producer_status": "available",
+      "provider_name": "mycodex",
+      "base_url": "https://wokeme.dpdns.org/v1",
+      "endpoint": "https://wokeme.dpdns.org/v1/responses",
+      "wire_api": "responses",
+      "api_key_env": "OPENAI_API_KEY",
+      "requested_model": "gpt-5.5",
+      "returned_model": "gpt-5.5",
+      "generation_parameters": {
+        "temperature": 0,
+        "max_output_tokens": 2048,
+        "stream": false
+      },
+      "candidate_request_policy": "One fixed reconstruction prompt per selected function/build view; no multiple responses and selection.",
+      "smoke_test": {
+        "uses_prior_phase_function": false,
+        "request_id": "resp_01bf9d56c7c616b3016a4c771b4f308191a05dbc161e11e720",
+        "status": 200,
+        "returned_model": "gpt-5.5",
+        "usage_total_tokens": 36,
+        "result": "passed"
+      }
+    }
+  }
+}
