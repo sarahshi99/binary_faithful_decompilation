@@ -299,7 +299,7 @@ Updated: 2026-07-07T15:44:32Z
 - Branch: `phase3a-prospective-natural-error-census`
 - Pre-candidate HEAD: `7321baeeff5159f1809eae04a06a72669e2ab13b`
 - Candidate seal commit and hash: `133c57ba3b9237b65f4caec8334f96b9db8b36d0` / `e34f3c7532a8a2b399ef5be4c7a931b3f4d5e7c982c6f5d29adb14a89c8971f4`
-- Labeling result commit and final HEAD: pending final commit.
+- Labeling result commit: `4c3710a0ed9973db1e1f9ea4cfe0c6b8dc767b67`.
 - Verified function/fixture seal: `2bba63e1a191050f2ec0e15a8f58ed7eff9a5c9bf1f21b672b7ab9bfc64c1494`
 - Available producers: `Ghidra 12.1.2`, `angr 9.2.102`, `LLM4Decompile 22B v2`, `mycodex gpt-5.5`.
 - Blocked producers: `RetDec`.
