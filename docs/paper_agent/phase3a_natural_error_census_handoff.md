@@ -1,6 +1,6 @@
 # Phase 3a Natural Error Census Handoff
 
-Updated: 2026-07-07T04:51:30Z
+Updated: 2026-07-07T06:25:42Z
 
 Branch: `phase3a-prospective-natural-error-census`
 
@@ -21,8 +21,8 @@ decompilation-faithfulness auditing policy has been run.
 - Repository/server sanity check: complete before Phase 3a branch creation.
 - Preregistration: complete and committed.
 - Producer setup and availability check: complete; producer gate passed.
-- Project eligibility census: pending.
-- Selected functions and fixtures seal: pending.
+- Project eligibility census: complete.
+- Selected functions and fixtures seal: complete.
 - Candidate generation and seal: pending.
 - Exhaustive semantic labeling: pending.
 - Census gates: pending.
@@ -105,10 +105,11 @@ No Phase 3a candidate requests have been made yet.
 
 ## Current Counts
 
-- Projects scanned: 0.
-- Projects represented: 0.
-- Eligible functions: 0.
-- Selected functions: 0.
+- Projects scanned: 39.
+- Projects represented: 21.
+- Eligible functions: 111.
+- Selected functions: 80.
+- Fixtures: 320.
 - Candidate attempts: 0.
 - Parse-ready candidates: 0.
 - Compile-ready candidates: 0.
@@ -119,32 +120,31 @@ No Phase 3a candidate requests have been made yet.
 - Low-density natural wrong candidates: 0.
 - Multi-argument/loop/lookup natural wrong candidates: 0.
 
-These counts are zero because the run has not yet entered project acquisition
-or candidate generation.
+Candidate and label counts remain zero because Phase 3a has not yet entered
+candidate generation or semantic labeling.
 
 ## Corpus Target Status
 
-The original target of 120 selected functions remains active. No pre-label
-function-corpus feasibility amendment has been used.
+The original 120-function target was infeasible under the preregistered
+per-project cap after the primary/fallback census. A pre-candidate,
+pre-label, pre-auditor feasibility amendment was committed in
+`docs/paper_agent/phase3a_function_corpus_feasibility_amendment.md`.
+
+The sealed reduced corpus contains 80 selected functions across 21 represented
+projects. Exact-domain labeling remains complete for future Phase 3a labeling.
 
 ## Authorization Status
 
-Phase 3a is authorized to proceed to project acquisition and function corpus
-construction because the producer availability gate passed.
+Phase 3a completed project acquisition and function corpus construction after
+the producer availability gate passed. Candidate generation has not begun and
+should not begin until explicitly instructed.
 
 Phase 3b auditor evaluation is not authorized.
 
 ## Tests
 
-No new tests were run after the preregistration commit during producer setup.
-The next test run must use explicit discovery commands:
-
-```sh
-python -m unittest discover tests
-python -m unittest discover analysis/decompile_faithfulness/tests
-```
-
-Any new Phase 3a tests outside those discovery paths must be run directly.
+- `python -m unittest discover tests` -> 194 tests passed.
+- `python -m unittest discover analysis/decompile_faithfulness/tests` -> 96 tests passed.
 
 ## Audit Policy Prohibition Confirmation
 
@@ -162,47 +162,55 @@ No execution of the following occurred in Phase 3a producer setup:
 No auditor result tables, budget curves, or auditor detection checks were
 generated.
 
-## Function Corpus And Fixture Seal Milestone
+## Infrastructure Recovery
 
-Updated: 2026-07-07T05:38:30Z
+Recovery log:
+`docs/paper_agent/phase3a_infrastructure_recovery_log.md`.
 
 - Branch: `phase3a-prospective-natural-error-census`
-- Current HEAD at corpus command run: `5532b6d4f601a8d926ca19f1d911ac6a16999f83`
+- Local HEAD before recovery: `c647f856e69da0dcc0037abd44f8976af3d70d10`
+- Backup bundle: `backups/phase3a_corpus_blocker_c647f85.bundle`
+- Bundle verification: passed.
+- Patch backups: `backups/0001-Preregister-Phase-3a-natural-error-census.patch`, `backups/0002-Record-Phase-3a-producer-availability.patch`, `backups/0003-Add-Phase-3a-corpus-blocker-census.patch`
+- Push credential diagnosis: origin uses an SSH deploy key that authenticates as `sarahshi99/dllm_infilling`, not as a write-capable credential for `sarahshi99/binary_faithful_decompilation`.
+- Final push status before this handoff update: `push_blocked_no_write_credential`.
+- Network diagnosis: direct sandbox networking could not reach GitHub, but approved host-side `git clone` / `git ls-remote` commands could reach external project repositories.
+- Direct clone status: unblocked for 37 of 39 preregistered projects. `libyaml` still failed acquisition and `qbe` had no resolved checkout HEAD; both are recorded as acquisition failures.
+- Proxy or mirror mode used: no mirror mode was used; no unverified cached source tree was treated as newly acquired.
+- Source acquisition status: unblocked enough to complete the preregistered primary/fallback census and proceed to reduced-feasible corpus sealing.
+- Corpus acquisition rerun: yes, after the infrastructure recovery amendment and feasibility amendment were committed.
+
+No candidate generation occurred during infrastructure recovery.
+
+No semantic labeling occurred during infrastructure recovery.
+
+No auditor was run during infrastructure recovery.
+
+## Function Corpus And Fixture Seal Milestone
+
+Updated: 2026-07-07T06:23:40Z
+
+- Branch: `phase3a-prospective-natural-error-census`
+- Current HEAD: `14c93067f58713d12a8f0a26f4bb8c02f86cc9ff`
 - Producer setup commit: `5532b6d`
 - Projects scanned: `39`
-- Projects represented: `0`
-- Primary projects used: `0`
-- Fallback projects used: `0`
+- Projects represented: `21`
+- Primary projects used: `19`
+- Fallback projects used: `18`
 - Fallback needed: `True`
-- Eligible function count: `0`
-- Selected function count: `0`
-- Selected functions by project: `{}`
-- Selected functions by argument count: `{}`
-- Structural-feature coverage: `{}`
-- Exact-domain size distribution: `{}`
-- Exclusion counts and reasons: `{"project_acquisition_failed:couldnt_connect_to_server": 39}`
-- Feasibility amendment needed: `False`
-- Fixture count: `0`
-- Function/fixture seal hash: ``
-- Tests run: `python -m unittest discover tests` -> 194 passed; `python -m unittest discover analysis/decompile_faithfulness/tests` -> 92 passed.
+- Eligible function count: `111`
+- Selected function count: `80`
+- Selected functions by project: `{"brotli": 3, "c-ares": 1, "ccan": 12, "cmark": 9, "freetype": 2, "htslib": 8, "jansson": 1, "json-c": 1, "klib": 3, "libevent": 4, "libidn2": 2, "libucl": 2, "libuv": 3, "libxdiff": 1, "lz4": 1, "mpack": 1, "nanoprintf": 10, "nghttp2": 4, "open62541": 2, "pcre2": 1, "zstd": 9}`
+- Selected functions by argument count: `{"1": 60, "2": 12, "3": 8}`
+- Structural-feature coverage: `{"arity_1": 60, "arity_2": 12, "arity_3": 8, "bitwise": 27, "branches4": 3, "interacting_args": 17, "lookup": 8, "loop": 8, "switch_like": 1}`
+- Exact-domain size distribution: `{"128": 59, "4096": 20, "5": 1}`
+- Exclusion counts and reasons: `{"compile_failure": 28, "dependency_blacklist": 48, "external_function_call": 180, "macro_or_external_identifier": 65, "project_acquisition_failed": 1, "project_acquisition_failed:couldnt_connect_to_server": 1, "runtime_failure_1": 6, "signature_filter_failed": 7410, "unsupported_or_oversized_domain": 3}`
+- Feasibility amendment needed: `True`
+- Fixture count: `320`
+- Function/fixture seal hash: `9db0d705ac52a5cbb8db15dca9a0b8dba06cce5f244ca0deba2efd41895ba3fe`
+- Tests run: `python -m unittest discover tests` -> 194 tests passed; `python -m unittest discover analysis/decompile_faithfulness/tests` -> 96 tests passed.
 
-Gate status: `stopped_before_fixture_generation_insufficient_project_count`.
-
-Blocker: project acquisition could not complete. All 39 preregistered primary
-and fallback project clone attempts failed inside the sandbox with `Couldn't
-connect to server`. An escalated rerun of the same corpus acquisition command
-was requested, but the approval service rejected it with `model not found:
-codex-auto-review`. No alternate project pool, cached prior-phase project, or
-substitute source corpus was used.
-
-Function/fixture seal status: not created, because the preregistered stop rule
-triggered before fixture generation. There are fewer than 12 projects with
-eligible functions and fewer than 80 eligible functions.
-
-Push status: initial `git push -u origin
-phase3a-prospective-natural-error-census` failed before this milestone with
-`Permission to sarahshi99/binary_faithful_decompilation.git denied to deploy
-key`. A final push attempt should be retried after credentials are fixed.
+Gate status: `reduced_feasible`.
 
 No candidate generation occurred in this milestone.
 
