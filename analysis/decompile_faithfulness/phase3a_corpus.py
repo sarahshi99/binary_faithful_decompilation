@@ -101,6 +101,30 @@ FORBIDDEN_PRIOR_PROJECTS = {
     "sbase",
 }
 
+FORBIDDEN_SOURCE_PATH_TOKENS = {
+    "bearssl",
+    "c_algorithms",
+    "chibicc",
+    "codefuse",
+    "cjson",
+    "inih",
+    "libb64",
+    "libdeflate",
+    "libtomcrypt",
+    "libtommath",
+    "mbedtls",
+    "musl",
+    "sbase",
+    "sqlite",
+    "thealgorithms",
+    "tiny-aes",
+    "tiny_aes",
+    "tinycc",
+    "uthash",
+    "xxhash",
+    "zlib",
+}
+
 SCALAR_TYPES = {
     "char",
     "signed char",
@@ -1336,8 +1360,12 @@ def iter_source_files(root: Path) -> Iterable[Path]:
     for path in sorted(root.rglob("*")):
         if not path.is_file() or path.suffix.lower() not in {".c", ".h"}:
             continue
-        parts = {part.lower() for part in path.relative_to(root).parts[:-1]}
+        rel = path.relative_to(root)
+        parts = {part.lower() for part in rel.parts[:-1]}
         if parts & SKIP_DIR_PARTS:
+            continue
+        rel_text = rel.as_posix().lower()
+        if any(token in rel_text for token in FORBIDDEN_SOURCE_PATH_TOKENS):
             continue
         yield path
 

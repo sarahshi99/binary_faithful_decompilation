@@ -14,6 +14,17 @@ class Phase3aCorpusTest(unittest.TestCase):
         names = {name for name, _url in corpus.PRIMARY_PROJECT_POOL + corpus.FALLBACK_PROJECT_POOL}
         self.assertFalse(names & corpus.FORBIDDEN_PRIOR_PROJECTS)
 
+    def test_vendored_prior_phase_source_paths_are_excluded(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            allowed = root / "src" / "scalar.c"
+            blocked_musl = root / "deps" / "musl_inet_pton.c"
+            blocked_mbedtls = root / "src" / "bufferevent_mbedtls.c"
+            for path in [allowed, blocked_musl, blocked_mbedtls]:
+                path.parent.mkdir(parents=True, exist_ok=True)
+                path.write_text("int f(int x) { return x; }\n", encoding="utf-8")
+            self.assertEqual([path.relative_to(root).as_posix() for path in corpus.iter_source_files(root)], ["src/scalar.c"])
+
     def test_exact_domain_construction(self) -> None:
         self.assertEqual(corpus.type_domain("char", 1, {}), tuple(range(0, 128)))
         self.assertEqual(corpus.type_domain("int", 1, {}), tuple(range(-64, 64)))
