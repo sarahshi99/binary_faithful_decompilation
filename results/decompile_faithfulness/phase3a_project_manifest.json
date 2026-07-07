@@ -1,18 +1,13 @@
 {
   "acquisition_errors": [
     {
-      "project": "libyaml",
-      "reason": "Cloning into '/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libyaml'...\nfatal: unable to access 'https://github.com/yaml/libyaml.git/': Couldn't connect to server\n",
-      "repository": "https://github.com/yaml/libyaml.git"
-    },
-    {
       "project": "qbe",
       "reason": "existing_checkout_without_resolved_head",
       "repository": "https://c9x.me/git/qbe.git"
     }
   ],
   "branch": "phase3a-prospective-natural-error-census",
-  "created_at_utc": "2026-07-07T06:23:33Z",
+  "created_at_utc": "2026-07-07T10:02:14Z",
   "forbidden_prior_projects": [
     "BearSSL",
     "CodeFuse-DeBench",
@@ -39,25 +34,65 @@
   "producer_setup_commit": "5532b6d",
   "projects": [
     {
-      "acquired": false,
+      "acquired": true,
       "acquisition_date": "2026-07-07",
       "canonical_repository": "https://github.com/yaml/libyaml.git",
       "eligible_function_count": 0,
       "license_metadata": [
         {
-          "path": "",
-          "sha256": "",
-          "status": "not_found_or_unavailable"
+          "path": "License",
+          "sha256": "c40112449f254b9753045925248313e9270efa36d226b22d82d4cc6c43c57f29"
         }
       ],
       "local_path": "/home/shx/projects/binary_faithful_decompilation/external/phase3a_projects/libyaml",
       "order": 1,
-      "pinned_commit": "",
+      "pinned_commit": "893682bb98d5ed663a3e314c46dceaf9b1c8802f",
       "pool": "primary",
       "project": "libyaml",
-      "resolved_commit": "",
-      "source_file_hashes": [],
-      "source_files_scanned": 0,
+      "resolved_commit": "893682bb98d5ed663a3e314c46dceaf9b1c8802f",
+      "source_file_hashes": [
+        {
+          "path": "include/yaml.h",
+          "sha256": "5dfca217235c26810a0ab2f52c328fd3b95fd2ee244fab12f1b0f72d63da2780"
+        },
+        {
+          "path": "src/api.c",
+          "sha256": "71f9263a2c77237762c8fa5e7c3d2bdd35723ecf1e2898222c7a603a5bf3f2db"
+        },
+        {
+          "path": "src/dumper.c",
+          "sha256": "56fe41a1db73e1b9342b9381856e1fade8ea339a0b723bef90e7e1e8638bc441"
+        },
+        {
+          "path": "src/emitter.c",
+          "sha256": "fbec4f702153929ad1421636ab0f5ecded140f0f37014d5ab3c65dfecd7e0743"
+        },
+        {
+          "path": "src/loader.c",
+          "sha256": "68424f0b29e16434e7f2c0838b26dd4b68e04b567ad40f4f4c1bc61cd8e93479"
+        },
+        {
+          "path": "src/parser.c",
+          "sha256": "3df3106f1b045da438a3bfba316efcee246573565122ea68095a4e8ef7d2ea23"
+        },
+        {
+          "path": "src/reader.c",
+          "sha256": "c428a44b177391557bdf49177c1dc0216edf2a2bbe0e24ca2ef2725ef7f01e9d"
+        },
+        {
+          "path": "src/scanner.c",
+          "sha256": "a853092204abb33d7f79b3da7a19f8df14c156c5cca738f1bb54c19d1f52f2e2"
+        },
+        {
+          "path": "src/writer.c",
+          "sha256": "44a75c870a0b7039e37b457850b31748a69ce3bf1bf39950e7b855acef472de2"
+        },
+        {
+          "path": "src/yaml_private.h",
+          "sha256": "8dffe95c784665eba4ee88169456ebd41137a6d80ad13d536df6ad10d7a4d459"
+        }
+      ],
+      "source_files_scanned": 10,
       "yielded_eligible_functions": false
     },
     {

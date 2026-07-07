@@ -4,19 +4,19 @@
     "docs/paper_agent/phase3a_function_corpus_feasibility_amendment.md": "efd4d7243361149f93f4de1ad6936d3fce794b28f2ab115eaff49656c7721872",
     "docs/paper_agent/phase3a_natural_error_census_preregistration.md": "3491d7c21fca0f53c867b4610057959c9553934fc338a42541419f8ec6ee1733",
     "docs/paper_agent/phase3a_producer_setup_log.md": "2185f2e5b50fe056ef508493340f2a35273fa73a5aa19fb7f9ecab7610dae32e",
-    "results/decompile_faithfulness/phase3a_corpus_execution_log.jsonl": "2b0120ecad2acb28a2c79f6266e4b942c72d4f287ede64018d2d707b0a82b26b",
-    "results/decompile_faithfulness/phase3a_eligibility_census.csv": "fa94738f119ff4be8a2dd6367fdb33328a6ab27b0d7cb85d8ea59771aa0b17e4",
-    "results/decompile_faithfulness/phase3a_exclusions.jsonl": "cf541cb15e53b8a8c5a26923fcd06a065f60d263563a5aaf8944b6f34b36fdca",
+    "results/decompile_faithfulness/phase3a_corpus_execution_log.jsonl": "d65ea5c002848c967c0ba9d8c70da6b74b696df88d5483e7eca5d45fff950d89",
+    "results/decompile_faithfulness/phase3a_eligibility_census.csv": "fa9592f3f0c5f8ee05fe0ec7ef5fe5ee610daa435c0bc6546fc12246e9ba1814",
+    "results/decompile_faithfulness/phase3a_exclusions.jsonl": "3c0c9b389a1777ce16fc27f44995763e4950133eadec4aea88e33ecb0c6277a2",
     "results/decompile_faithfulness/phase3a_fixtures.jsonl": "b5b0b8205039d8b6bfd303c616999016db4e707308838a657e8a50e48abcecaf",
     "results/decompile_faithfulness/phase3a_producer_availability.json": "06582c569a2f6e817b0784fd1de15a121ef07986f4d79398653f799b815e9471",
-    "results/decompile_faithfulness/phase3a_project_manifest.json": "03b327a0e298936d89a7649cef5325c3ff90c843ccb8e797988394ab38f01555",
+    "results/decompile_faithfulness/phase3a_project_manifest.json": "afa10846200144c30404e7d3a489e10a6613bafa5e8139a7f12ee967fd1963cf",
     "results/decompile_faithfulness/phase3a_selected_functions.csv": "dd5eccddeabf081ff7da8ccd9852bc128932a5ddd879e755ed3542db131cbc0b"
   },
   "auditor_execution": "not_run",
   "base_head": "a2c975609aed5975431ec1a770c9cd92c37c2b1f",
   "branch": "phase3a-prospective-natural-error-census",
   "candidate_generation": "not_run",
-  "created_at_utc": "2026-07-07T06:23:40Z",
+  "created_at_utc": "2026-07-07T10:02:21Z",
   "declared_domains_sha256": "7566a1c940fe2da6112803b36ea50e0d06c1018791becbcfa3d468dad3c4ad6d",
   "fallback_used": true,
   "fixture_count": 320,
@@ -31,7 +31,7 @@
     "status": "reduced_feasible",
     "target_selected_functions": 80
   },
-  "head": "14c93067f58713d12a8f0a26f4bb8c02f86cc9ff",
+  "head": "76a6969fe138efe5bc250c34d41b7e4dc6df3b3d",
   "preregistration_commit": "2b0e62472b3ee766bba9f64a440d52f0f53bedf9",
   "producer_setup_commit": "5532b6d",
   "sampling_seed": 2026070701,
@@ -121,6 +121,56 @@
   ],
   "semantic_labeling": "not_run",
   "source_file_hashes": [
+    {
+      "path": "include/yaml.h",
+      "project": "libyaml",
+      "sha256": "5dfca217235c26810a0ab2f52c328fd3b95fd2ee244fab12f1b0f72d63da2780"
+    },
+    {
+      "path": "src/api.c",
+      "project": "libyaml",
+      "sha256": "71f9263a2c77237762c8fa5e7c3d2bdd35723ecf1e2898222c7a603a5bf3f2db"
+    },
+    {
+      "path": "src/dumper.c",
+      "project": "libyaml",
+      "sha256": "56fe41a1db73e1b9342b9381856e1fade8ea339a0b723bef90e7e1e8638bc441"
+    },
+    {
+      "path": "src/emitter.c",
+      "project": "libyaml",
+      "sha256": "fbec4f702153929ad1421636ab0f5ecded140f0f37014d5ab3c65dfecd7e0743"
+    },
+    {
+      "path": "src/loader.c",
+      "project": "libyaml",
+      "sha256": "68424f0b29e16434e7f2c0838b26dd4b68e04b567ad40f4f4c1bc61cd8e93479"
+    },
+    {
+      "path": "src/parser.c",
+      "project": "libyaml",
+      "sha256": "3df3106f1b045da438a3bfba316efcee246573565122ea68095a4e8ef7d2ea23"
+    },
+    {
+      "path": "src/reader.c",
+      "project": "libyaml",
+      "sha256": "c428a44b177391557bdf49177c1dc0216edf2a2bbe0e24ca2ef2725ef7f01e9d"
+    },
+    {
+      "path": "src/scanner.c",
+      "project": "libyaml",
+      "sha256": "a853092204abb33d7f79b3da7a19f8df14c156c5cca738f1bb54c19d1f52f2e2"
+    },
+    {
+      "path": "src/writer.c",
+      "project": "libyaml",
+      "sha256": "44a75c870a0b7039e37b457850b31748a69ce3bf1bf39950e7b855acef472de2"
+    },
+    {
+      "path": "src/yaml_private.h",
+      "project": "libyaml",
+      "sha256": "8dffe95c784665eba4ee88169456ebd41137a6d80ad13d536df6ad10d7a4d459"
+    },
     {
       "path": "android/jansson_config.h",
       "project": "jansson",

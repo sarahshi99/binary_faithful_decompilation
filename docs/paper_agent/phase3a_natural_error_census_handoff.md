@@ -1,6 +1,6 @@
 # Phase 3a Natural Error Census Handoff
 
-Updated: 2026-07-07T06:25:42Z
+Updated: 2026-07-07T10:04:46Z
 
 Branch: `phase3a-prospective-natural-error-census`
 
@@ -172,10 +172,10 @@ Recovery log:
 - Backup bundle: `backups/phase3a_corpus_blocker_c647f85.bundle`
 - Bundle verification: passed.
 - Patch backups: `backups/0001-Preregister-Phase-3a-natural-error-census.patch`, `backups/0002-Record-Phase-3a-producer-availability.patch`, `backups/0003-Add-Phase-3a-corpus-blocker-census.patch`
-- Push credential diagnosis: origin uses an SSH deploy key that authenticates as `sarahshi99/dllm_infilling`, not as a write-capable credential for `sarahshi99/binary_faithful_decompilation`.
-- Final push status before this handoff update: `push_blocked_no_write_credential`.
+- Push credential diagnosis during recovery: origin initially used an SSH deploy key that authenticated as `sarahshi99/dllm_infilling`, not as a write-capable credential for `sarahshi99/binary_faithful_decompilation`.
+- Push status after user-side credential fix: `git push -u origin phase3a-prospective-natural-error-census` returned `Everything up-to-date`, and `git ls-remote --heads origin phase3a-prospective-natural-error-census` returned `76a6969fe138efe5bc250c34d41b7e4dc6df3b3d`.
 - Network diagnosis: direct sandbox networking could not reach GitHub, but approved host-side `git clone` / `git ls-remote` commands could reach external project repositories.
-- Direct clone status: unblocked for 37 of 39 preregistered projects. `libyaml` still failed acquisition and `qbe` had no resolved checkout HEAD; both are recorded as acquisition failures.
+- Direct clone status after resume: unblocked for 38 of 39 preregistered projects. `libyaml` was acquired and pinned to `893682bb98d5ed663a3e314c46dceaf9b1c8802f`; `qbe` still had no resolved checkout HEAD and is recorded as an acquisition failure.
 - Proxy or mirror mode used: no mirror mode was used; no unverified cached source tree was treated as newly acquired.
 - Source acquisition status: unblocked enough to complete the preregistered primary/fallback census and proceed to reduced-feasible corpus sealing.
 - Corpus acquisition rerun: yes, after the infrastructure recovery amendment and feasibility amendment were committed.
@@ -186,16 +186,53 @@ No semantic labeling occurred during infrastructure recovery.
 
 No auditor was run during infrastructure recovery.
 
-## Function Corpus And Fixture Seal Milestone
+## Resume Verification And Network Rediagnosis
 
-Updated: 2026-07-07T06:23:40Z
+Resume verification date: `Tue Jul  7 09:54:58 UTC 2026`.
 
 - Branch: `phase3a-prospective-natural-error-census`
-- Current HEAD: `14c93067f58713d12a8f0a26f4bb8c02f86cc9ff`
+- Local HEAD at resume: `76a6969fe138efe5bc250c34d41b7e4dc6df3b3d`
+- Remote branch HEAD at resume: `76a6969fe138efe5bc250c34d41b7e4dc6df3b3d`
+- Remote: `git@github-bfd:sarahshi99/binary_faithful_decompilation.git`
+- Git LFS status: clean; no staged or unstaged LFS objects.
+
+Producer setup remained valid without reinstalling producers:
+
+- Ghidra 12.1.2 headless smoke on `/bin/true`: passed with explicit Java 21 environment.
+- Java version: OpenJDK `21.0.7`.
+- angr import/version check: angr `9.2.102`, claripy `9.2.102`, z3 `4.10.2`.
+- LLM4Decompile 22B v2 local snapshot: present; tokenizer SHA-256 `722f46f56e1dd32bdd7288f5257e749f34303c5be777712d4319c0cd4987c1dc`.
+- Fixed `mycodex` API configuration: `OPENAI_API_KEY` present; no candidate requests were made.
+- RetDec: still blocked; no `retdec-decompiler` executable was found on `PATH`.
+
+Network rediagnosis:
+
+- Proxy environment: `HTTP_PROXY=http://127.0.0.1:7890`, `HTTPS_PROXY=http://127.0.0.1:7890`, `ALL_PROXY=http://127.0.0.1:7890`.
+- Sandbox DNS checks for `github.com`, `api.github.com`, and `gitlab.com`: failed with `gaierror(-2, 'Name or service not known')`.
+- `curl -I --max-time 20 https://github.com`: failed with `Couldn't connect to server`.
+- `curl -I --max-time 20 https://api.github.com`: failed with `Couldn't connect to server`.
+- `git ls-remote https://github.com/yaml/libyaml.git HEAD`: succeeded, returning `893682bb98d5ed663a3e314c46dceaf9b1c8802f`.
+- `git ls-remote https://github.com/akheron/jansson.git HEAD`: succeeded, returning `a8b3c5999e752d895030360c553ba66fa6630ed0`.
+- `git ls-remote https://github.com/lz4/lz4.git HEAD`: succeeded, returning `0774d05537f9762f838f7ab541b7765f1a729cb5`.
+
+Source acquisition decision: direct source acquisition through git was usable.
+The corpus script's first internal `libyaml` clone attempt still reported
+`Couldn't connect to server`, so `libyaml` was acquired through the verified
+top-level `git clone` path and then rerun through the normal corpus scanner and
+seal pipeline. No mirror mode, fake data, unpinned local source tree, or Phase
+1/2 source project was used.
+
+## Function Corpus And Fixture Seal Milestone
+
+Updated: 2026-07-07T10:02:21Z
+
+- Branch: `phase3a-prospective-natural-error-census`
+- Current HEAD at corpus command and seal generation: `76a6969fe138efe5bc250c34d41b7e4dc6df3b3d`
+- Remote branch HEAD at resume: `76a6969fe138efe5bc250c34d41b7e4dc6df3b3d`
 - Producer setup commit: `5532b6d`
 - Projects scanned: `39`
 - Projects represented: `21`
-- Primary projects used: `19`
+- Primary projects used: `20`
 - Fallback projects used: `18`
 - Fallback needed: `True`
 - Eligible function count: `111`
@@ -204,10 +241,10 @@ Updated: 2026-07-07T06:23:40Z
 - Selected functions by argument count: `{"1": 60, "2": 12, "3": 8}`
 - Structural-feature coverage: `{"arity_1": 60, "arity_2": 12, "arity_3": 8, "bitwise": 27, "branches4": 3, "interacting_args": 17, "lookup": 8, "loop": 8, "switch_like": 1}`
 - Exact-domain size distribution: `{"128": 59, "4096": 20, "5": 1}`
-- Exclusion counts and reasons: `{"compile_failure": 28, "dependency_blacklist": 48, "external_function_call": 180, "macro_or_external_identifier": 65, "project_acquisition_failed": 1, "project_acquisition_failed:couldnt_connect_to_server": 1, "runtime_failure_1": 6, "signature_filter_failed": 7410, "unsupported_or_oversized_domain": 3}`
+- Exclusion counts and reasons: `{"compile_failure": 28, "dependency_blacklist": 48, "external_function_call": 180, "macro_or_external_identifier": 65, "project_acquisition_failed": 1, "runtime_failure_1": 6, "signature_filter_failed": 7540, "unsupported_or_oversized_domain": 3}`
 - Feasibility amendment needed: `True`
 - Fixture count: `320`
-- Function/fixture seal hash: `9db0d705ac52a5cbb8db15dca9a0b8dba06cce5f244ca0deba2efd41895ba3fe`
+- Function/fixture seal hash: `2bba63e1a191050f2ec0e15a8f58ed7eff9a5c9bf1f21b672b7ab9bfc64c1494`
 - Tests run: `python -m unittest discover tests` -> 194 tests passed; `python -m unittest discover analysis/decompile_faithfulness/tests` -> 96 tests passed.
 
 Gate status: `reduced_feasible`.
