@@ -294,19 +294,42 @@ No auditor was run in this milestone.
 
 ## Candidate Generation, Labeling, And Natural-Error Census Milestone
 
-Updated: 2026-07-07T15:40:43Z
+Updated: 2026-07-07T15:44:32Z
 
 - Branch: `phase3a-prospective-natural-error-census`
 - Pre-candidate HEAD: `7321baeeff5159f1809eae04a06a72669e2ab13b`
-- Candidate seal hash: `e34f3c7532a8a2b399ef5be4c7a931b3f4d5e7c982c6f5d29adb14a89c8971f4`
-- Candidate seal commit: pending commit immediately after seal creation.
+- Candidate seal commit and hash: `133c57ba3b9237b65f4caec8334f96b9db8b36d0` / `e34f3c7532a8a2b399ef5be4c7a931b3f4d5e7c982c6f5d29adb14a89c8971f4`
+- Labeling result commit and final HEAD: pending final commit.
 - Verified function/fixture seal: `2bba63e1a191050f2ec0e15a8f58ed7eff9a5c9bf1f21b672b7ab9bfc64c1494`
 - Available producers: `Ghidra 12.1.2`, `angr 9.2.102`, `LLM4Decompile 22B v2`, `mycodex gpt-5.5`.
 - Blocked producers: `RetDec`.
 - Candidate attempts by producer/build view: `{"angr/clang_O2": 80, "angr/gcc_O0": 80, "ghidra/clang_O2": 80, "ghidra/gcc_O0": 80, "llm4decompile/clang_O2": 80, "llm4decompile/gcc_O0": 80, "mycodex_api/clang_O2": 80, "mycodex_api/gcc_O0": 80}`
 - Parse-ready count: `240`
 - Compile-ready count: `215`
-- Semantic labeling: not run yet; candidate seal created first.
+- Semantic-wrong count: `10`
+- Fixture-passing semantic-wrong count: `0`
+- Fixture-failing semantic-wrong count: `10`
+- No-mismatch count: `194`
+- Non-evaluable count and reasons: `{"compile_failure": 25, "compiler_unavailable:clang": 320, "llm4decompile_exception": 80, "runtime_failure_1": 10, "runtime_failure_124": 1}`
+- Natural wrong counts by project: `{}`
+- Natural wrong counts by function: `{}`
+- Natural wrong counts by producer: `{}`
+- Natural wrong counts by build view: `{}`
+- Preliminary error-category counts: `{}`
+- Low-density count: `0`
+- Multi-argument/loop/lookup error count: `0`
+- API usage and cost: `80` fixed `mycodex` candidate requests completed. Sealed response usage totals were `38,680` input tokens, `18,887` output tokens, and `57,567` total tokens. Cost was not computed because provider pricing is not sealed in Phase 3a.
+- LLM4Decompile GPU time, batch size, precision, peak memory: batch size `1`, precision `bfloat16`. Full candidate inference was attempted after the candidate-generation code change that used the setup-validated local tokenizer path, but all 80 GCC-O0 LLM4Decompile attempts failed before producing candidate text with `ValueError("The following model_kwargs are not used by the model: ['token_type_ids'] ...")`. These failures are sealed as `decompilation_failure`; after the candidate seal commit and label observation, no LLM4Decompile retry, helper repair, model substitution, or regenerated candidate was performed.
+- Exact census-gate outcome: minimum `failed`, strong `failed`.
+- Phase 3b auditor evaluation authorized: `False`.
+- Tests run: `python -m unittest discover tests` -> 194 tests passed; `python -m unittest discover analysis/decompile_faithfulness/tests` -> 108 tests passed.
+
+Stop-rule outcome: the complete sealed candidate matrix produced `10`
+semantic-wrong candidates, but all `10` failed at least one of the four sealed
+fixtures. The primary natural-error population therefore contains `0`
+fixture-passing natural semantic-wrong candidates, below the minimum viable
+CCF-A empirical-population gate of `25`. The available natural-error population
+is insufficient for the planned CCF-A empirical paper. No additional projects,
+prompts, controlled mutations, gate changes, or auditor evaluation were added.
 
 No auditing policy was run. libFuzzer was not run. No budget curves or auditor tables were generated.
-

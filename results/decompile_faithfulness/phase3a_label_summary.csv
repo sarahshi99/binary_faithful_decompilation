@@ -1,0 +1,10 @@
+metric,count
+label:no_mismatch_under_exact_audit_domain,194
+label:non_evaluable,436
+label:semantic_wrong,10
+fixture_replay:fixture_failing_semantic_wrong,10
+non_evaluable_reason:compiler_unavailable:clang,320
+non_evaluable_reason:llm4decompile_exception,80
+non_evaluable_reason:compile_failure,25
+non_evaluable_reason:runtime_failure_1,10
+non_evaluable_reason:runtime_failure_124,1

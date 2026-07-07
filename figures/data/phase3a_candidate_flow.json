@@ -1,0 +1,10 @@
+{
+  "candidate_attempts": 640,
+  "compile_ready": 215,
+  "fixture_failing_semantic_wrong": 10,
+  "fixture_passing_semantic_wrong": 0,
+  "no_mismatch": 194,
+  "non_evaluable": 436,
+  "parse_ready": 240,
+  "semantic_wrong": 10
+}
