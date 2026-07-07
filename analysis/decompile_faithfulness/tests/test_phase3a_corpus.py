@@ -78,6 +78,19 @@ class Phase3aCorpusTest(unittest.TestCase):
         self.assertEqual(gate["status"], "reduced_feasible")
         self.assertEqual(gate["target_selected_functions"], 84)
 
+    def test_feasibility_amendment_is_not_rewritten_after_commit(self) -> None:
+        funcs = [_function()]
+        gate = {
+            "sampling_capacity_under_project_cap": 80,
+            "eligible_project_count": 12,
+            "target_selected_functions": 80,
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "amendment.md"
+            path.write_text("already committed\n", encoding="utf-8")
+            corpus.write_feasibility_amendment(path, gate, funcs)
+            self.assertEqual(path.read_text(encoding="utf-8"), "already committed\n")
+
     def test_fixture_generation_source_agnostic_and_reproducible(self) -> None:
         left = _function(source="int f(int x) { return x + 'A'; }")
         right = _function(source="int f(int x) { return x + 'Z'; }")

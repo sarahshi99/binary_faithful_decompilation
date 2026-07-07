@@ -1049,6 +1049,8 @@ def build_project_manifest(records: list[dict[str, Any]], acquisition_errors: li
 
 
 def write_feasibility_amendment(path: Path, gate: dict[str, Any], eligible: list[FunctionRecord]) -> None:
+    if path.exists():
+        return
     counts = Counter(item.project for item in eligible)
     max_project = max(counts.values()) if counts else 0
     path.write_text(
