@@ -1,0 +1,10 @@
+metric,count
+label:no_mismatch_under_exact_audit_domain,81
+label:non_evaluable,149
+label:semantic_wrong,10
+fixture_replay:fixture_failing_semantic_wrong,9
+fixture_replay:fixture_passing_semantic_wrong,1
+non_evaluable_reason:api_exception,67
+non_evaluable_reason:target_symbol_or_disassembly_missing,39
+non_evaluable_reason:compile_failure,35
+non_evaluable_reason:runtime_failure_1,8

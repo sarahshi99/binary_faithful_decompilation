@@ -1,0 +1,21 @@
+candidate_id,census_phase,project,producer,build_view,mismatch_density,mismatch_count,domain_size,primary_taxonomy_tag,fixture_replay_label,counts_for_gate
+phase3a::mpack_src_mpack_mpack-common.c_mpack_hex_char_0002_114e163a936d::angr::gcc_O0::545bd981881c,original_phase3a,mpack,angr,gcc_O0,1.0,128,128,signedness or width error,fixture_failing_semantic_wrong,0
+phase3ar::mpack_src_mpack_mpack-common.c_mpack_hex_char_0002_114e163a936d::angr::clang_O2::f2586f8a99ff,recovery_phase3ar,mpack,angr,clang_O2,1.0,128,128,signedness or width error,fixture_failing_semantic_wrong,0
+phase3a::klib_kbit.h_kbi_DNAcount64_0002_3ec293d4e9c0::angr::gcc_O0::56a8a78063e1,original_phase3a,klib,angr,gcc_O0,0.84375,3456,4096,signedness or width error,fixture_failing_semantic_wrong,0
+phase3ar::klib_kbit.h_kbi_DNAcount64_0002_3ec293d4e9c0::angr::clang_O2::fe48fa613d12,recovery_phase3ar,klib,angr,clang_O2,0.84375,3456,4096,signedness or width error,fixture_failing_semantic_wrong,0
+phase3ar::htslib_kstring.c_fast_exp_0008_939028784d18::angr::clang_O2::720a48aa6e31,recovery_phase3ar,htslib,angr,clang_O2,0.89404296875,3662,4096,signedness or width error,fixture_failing_semantic_wrong,0
+phase3a::htslib_hts.c_push_digit_0059_b35f1dd40434::angr::gcc_O0::cb84051cae68,original_phase3a,htslib,angr,gcc_O0,1.0,4096,4096,signedness or width error,fixture_failing_semantic_wrong,0
+phase3a::htslib_cram_cram_io.c_itf8_size_0014_33f5aa8539a5::angr::gcc_O0::e2750cc94554,original_phase3a,htslib,angr,gcc_O0,1.0,128,128,arithmetic error,fixture_failing_semantic_wrong,0
+phase3ar::htslib_cram_cram_io.c_itf8_size_0014_33f5aa8539a5::angr::clang_O2::a4032a2557e4,recovery_phase3ar,htslib,angr,clang_O2,0.5,64,128,arithmetic error,fixture_failing_semantic_wrong,0
+phase3a::libevent_http.c_evhttp_valid_response_code_0010_698d7ff2942e::angr::gcc_O0::3823c5ae80f3,original_phase3a,libevent,angr,gcc_O0,1.0,128,128,unknown/mixed,fixture_failing_semantic_wrong,0
+phase3ar::libevent_http.c_evhttp_valid_response_code_0010_698d7ff2942e::angr::clang_O2::f257499b56b3,recovery_phase3ar,libevent,angr,clang_O2,0.984375,126,128,unknown/mixed,fixture_failing_semantic_wrong,0
+phase3a::libuv_src_unix_core.c_uv_translate_sys_error_0042_4890854660b0::angr::gcc_O0::ce02b9acc5cb,original_phase3a,libuv,angr,gcc_O0,0.5,64,128,unknown/mixed,fixture_failing_semantic_wrong,0
+phase3a::brotli_c_enc_encode.c_BrotliEncoderMaxCompressedSize_0007_2bb0ac63e571::angr::gcc_O0::d9da52d40ebe,original_phase3a,brotli,angr,gcc_O0,1.0,128,128,signedness or width error,fixture_failing_semantic_wrong,0
+phase3ar::brotli_c_enc_encode.c_BrotliEncoderMaxCompressedSize_0007_2bb0ac63e571::angr::clang_O2::36b303ac017f,recovery_phase3ar,brotli,angr,clang_O2,0.9921875,127,128,signedness or width error,fixture_failing_semantic_wrong,0
+phase3a::nghttp2_src_timegm.c_is_leap_year_0002_b03568a36b5e::angr::gcc_O0::115b5ce32999,original_phase3a,nghttp2,angr,gcc_O0,0.125,16,128,unknown/mixed,fixture_failing_semantic_wrong,0
+phase3a::nghttp2_lib_nghttp2_helper.c_nghttp2_should_send_window_update_0005_16ca1890ce82::angr::gcc_O0::fff6e13d49e0,original_phase3a,nghttp2,angr,gcc_O0,0.734619140625,3009,4096,multi-argument interaction error,fixture_failing_semantic_wrong,0
+phase3ar::nghttp2_lib_nghttp2_helper.c_nghttp2_should_send_window_update_0005_16ca1890ce82::angr::clang_O2::50a5ee40a266,recovery_phase3ar,nghttp2,angr,clang_O2,0.5625,2304,4096,multi-argument interaction error,fixture_failing_semantic_wrong,0
+phase3a::libxdiff_xutils.c_xdl_bogosqrt_0001_4a9d97f32ee4::angr::gcc_O0::1fbc996f0f38,original_phase3a,libxdiff,angr,gcc_O0,0.5,64,128,arithmetic error,fixture_failing_semantic_wrong,0
+phase3ar::libxdiff_xutils.c_xdl_bogosqrt_0001_4a9d97f32ee4::angr::clang_O2::d97373ef7a02,recovery_phase3ar,libxdiff,angr,clang_O2,0.46875,60,128,arithmetic error,fixture_failing_semantic_wrong,0
+phase3ar::open62541_deps_mp_printf.c_is_digit__0002_8633e37596f0::angr::clang_O2::84eb73d617ae,recovery_phase3ar,open62541,angr,clang_O2,0.375,48,128,signedness or width error,fixture_passing_semantic_wrong,1
+phase3ar::libidn2_lib_punycode.c_encode_digit_0001_db84d723415b::angr::clang_O2::f3147b1c6bbb,recovery_phase3ar,libidn2,angr,clang_O2,0.984375,4032,4096,signedness or width error,fixture_failing_semantic_wrong,0

@@ -1,0 +1,11 @@
+{
+  "candidate_attempts": 640,
+  "compile_ready": 314,
+  "fixture_failing_semantic_wrong": 19,
+  "fixture_passing_semantic_wrong": 1,
+  "minimum_gate": "failed",
+  "no_mismatch": 275,
+  "non_evaluable": 345,
+  "recovered_candidate_attempts": 240,
+  "semantic_wrong": 20
+}

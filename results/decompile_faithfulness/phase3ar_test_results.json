@@ -1,0 +1,20 @@
+{
+  "confirmation": "No auditor, libFuzzer, budget curve, or auditor result table was run by Phase 3a-R recovery code.",
+  "tests": [
+    {
+      "command": "python -m unittest discover tests",
+      "result": "OK",
+      "tests": 194
+    },
+    {
+      "command": "python -m unittest discover analysis/decompile_faithfulness/tests",
+      "result": "OK",
+      "tests": 118
+    },
+    {
+      "command": "python -m unittest analysis/decompile_faithfulness/tests/test_phase3ar_recovery.py",
+      "result": "OK",
+      "tests": 10
+    }
+  ]
+}
