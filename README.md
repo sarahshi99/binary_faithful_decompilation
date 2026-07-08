@@ -14,6 +14,15 @@ The current supported claim is deliberately narrow:
 This repository does **not** claim a general binary-only verifier or decompiler
 generation SOTA.
 
+## Project Stop Status
+
+The later Phase 3 natural-error census did not produce a sufficient primary
+natural-error population for CCF-A-style auditor evaluation. See:
+
+- `docs/paper_agent/project_stop_report.md`
+- `docs/paper_agent/artifact_index.md`
+- `docs/paper_agent/future_restart_checklist.md`
+
 ## Final Method
 
 The current final method is:

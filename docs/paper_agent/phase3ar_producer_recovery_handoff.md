@@ -4,12 +4,15 @@ Updated: 2026-07-08T04:16:15Z
 
 - Branch: `phase3ar-producer-recovery-census`
 - Starting Phase 3a HEAD: `db5a9fc78e43d2702f9490184d0ae690a6a57c4d`
+- Recovery census final HEAD before documentation cleanup: `645bcba8e5198dd38031e8ad4634f074380dc49d`
+- Remote branch HEAD verified after push: `645bcba8e5198dd38031e8ad4634f074380dc49d`
+- Final push status for recovery census: pushed to `origin/phase3ar-producer-recovery-census`
 - Recovery preregistration commit: `7b01b70c8c6c96bda1faaa49367faaa7ad8313d3`
 - Clang recovery status: `available`
 - LLM4Decompile recovery status: `blocked`; blocker `gpu_smoke_escalation_rejected_by_auto_review_model_unavailable`
 - Recovery matrix size: `400`
 - Recovered candidate seal commit and hash: `7dcdfc66b06a23710c76e9915cdf87d7b0dba687` / `42249cfb4a9e47d2001efc0d5e58f69bfbe96568567b779a44aaedd2752a6c6a`
-- Recovered labeling result commit and final HEAD: pending final commit / `de03094fbd798ff7369498ff23b478ef79d163c5`
+- Recovered labeling result commit and final recovery HEAD: `de03094fbd798ff7369498ff23b478ef79d163c5` / `645bcba8e5198dd38031e8ad4634f074380dc49d`
 - Original Phase 3a candidate seal hash: `e34f3c7532a8a2b399ef5be4c7a931b3f4d5e7c982c6f5d29adb14a89c8971f4`
 - Verified function/fixture seal: `2bba63e1a191050f2ec0e15a8f58ed7eff9a5c9bf1f21b672b7ab9bfc64c1494`
 - Recovered attempts by producer/build view: `{"angr/clang_O2": 80, "ghidra/clang_O2": 80, "mycodex_api/clang_O2": 80}`
