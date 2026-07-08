@@ -28,7 +28,7 @@ CLANG = CLANG_ENV / "bin/clang"
 LLVM_NM = CLANG_ENV / "bin/llvm-nm"
 LLVM_OBJDUMP = CLANG_ENV / "bin/llvm-objdump"
 
-WORK_DIR = Path("analysis_outputs/decompile_faithfulness/phase3ar_recovery")
+WORK_DIR = Path("analysis_outputs/decompile_faithfulness/phase3ar_recovery_run2")
 RESULT_DIR = Path("results/decompile_faithfulness")
 ANALYSIS_DIR = Path("analysis/decompile_faithfulness")
 MANIFEST_PATH = RESULT_DIR / "phase3ar_candidate_manifest.jsonl"
@@ -113,6 +113,7 @@ def configure_phase3a_module(repo_root: Path) -> None:
     p3a.COMMAND_LOG = COMMAND_LOG
     p3a.BUILD_VIEWS["clang_O2"]["compiler"] = str(CLANG)
     p3a.candidate_id_for = phase3ar_candidate_id_for  # type: ignore[method-assign]
+    p3a.render_build_source = render_recovery_build_source  # type: ignore[method-assign]
     os.environ["PATH"] = str(CLANG_ENV / "bin") + os.pathsep + os.environ.get("PATH", "")
     (repo_root / WORK_DIR).mkdir(parents=True, exist_ok=True)
 
@@ -739,6 +740,30 @@ Updated: {now_utc()}
 def phase3ar_candidate_id_for(function_id: str, producer: str, build_view: str) -> str:
     digest = hashlib.sha256(f"phase3ar|{function_id}|{producer}|{build_view}".encode("utf-8")).hexdigest()[:12]
     return f"phase3ar::{corpus.safe_name(function_id)}::{producer}::{build_view}::{digest}"
+
+
+def render_recovery_build_source(function: corpus.FunctionRecord) -> str:
+    arg_rows = "\n".join(f"volatile long long phase3ar_input_{index};" for index, _ in enumerate(function.params))
+    call_args = ", ".join(f"({param.type_text})phase3ar_input_{index}" for index, param in enumerate(function.params))
+    return "\n".join(
+        [
+            "#include <stdbool.h>",
+            "#include <stddef.h>",
+            "#include <stdint.h>",
+            "",
+            function.support_source.strip(),
+            "",
+            function.source.rstrip(),
+            "",
+            "volatile long long phase3a_sink;",
+            arg_rows,
+            "int main(void) {",
+            f"    phase3a_sink = (long long){function.function_name}({call_args});",
+            "    return (int)(phase3a_sink & 0);",
+            "}",
+            "",
+        ]
+    )
 
 
 def matrix_committed(repo_root: Path) -> bool:
