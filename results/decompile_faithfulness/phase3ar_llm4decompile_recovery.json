@@ -1,0 +1,33 @@
+{
+  "adapter_change": "Filtered tokenizer output with inputs.pop(\"token_type_ids\", None) before model.generate.",
+  "batch_size": 1,
+  "blocker": "gpu_smoke_escalation_rejected_by_auto_review_model_unavailable",
+  "blocker_detail": "The attempted H200 smoke command was rejected before execution by the escalation reviewer: model not found: codex-auto-review.",
+  "created_at_utc": "2026-07-08T03:46:57Z",
+  "decoding_parameters": {
+    "batch_size": 1,
+    "do_sample": false,
+    "max_new_tokens": 768,
+    "precision": "bfloat16",
+    "temperature": 0
+  },
+  "decoding_parameters_changed": false,
+  "dream_coder_used": false,
+  "gpu_model": "GPU 0: NVIDIA H200 NVL (UUID: GPU-c55d478c-6944-066f-7e9a-8af248e4f6f1)",
+  "helper_source_sha256": "cdd07718e48ed616b154016f2842ff2942fa6f04a7b58182a0127b606c4a1451",
+  "interface_only_change": true,
+  "max_batch_size_tested": 0,
+  "model_identifier": "LLM4Binary/llm4decompile-22b-v2",
+  "model_path": "/home/shx/.cache/huggingface/hub/models--LLM4Binary--llm4decompile-22b-v2/snapshots/be2ac0bbb3bfa508d9f8a4790329250f1cb13ddc",
+  "model_snapshot": "be2ac0bbb3bfa508d9f8a4790329250f1cb13ddc",
+  "peak_memory_mib": 0,
+  "precision": "bfloat16",
+  "producer": "llm4decompile",
+  "producer_status": "blocked",
+  "prompt_template_changed": false,
+  "smoke_prompt_sha256": "fe2c2eb88c7450400fb25c78d94d5729c745fe6c646f8b862b3318ec06ce4229",
+  "smoke_status": "blocked",
+  "token_type_ids_filter_present": true,
+  "tokenizer_identity": "/home/shx/.cache/huggingface/hub/models--LLM4Binary--llm4decompile-22b-v2/snapshots/be2ac0bbb3bfa508d9f8a4790329250f1cb13ddc/tokenizer.json",
+  "tokenizer_sha256": "722f46f56e1dd32bdd7288f5257e749f34303c5be777712d4319c0cd4987c1dc"
+}

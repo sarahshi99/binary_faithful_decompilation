@@ -654,6 +654,7 @@ def main():
         try:
             prompt = item["prompt"]
             inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
+            inputs.pop("token_type_ids", None)
             before = torch.cuda.max_memory_allocated() if torch.cuda.is_available() else 0
             with torch.inference_mode():
                 outputs = model.generate(

@@ -37,6 +37,7 @@ analysis_outputs/decompile_faithfulness/phase1h_natural_llm/
 analysis_outputs/decompile_faithfulness/phase2a_sbdw/
 analysis_outputs/decompile_faithfulness/phase3a_corpus/
 analysis_outputs/decompile_faithfulness/phase3a_candidates/
+analysis_outputs/decompile_faithfulness/phase3ar_recovery/
 
 backups/
 

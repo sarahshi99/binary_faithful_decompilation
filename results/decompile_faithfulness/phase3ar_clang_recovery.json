@@ -1,0 +1,168 @@
+{
+  "angr": {
+    "argv": [
+      "/home/shx/.venvs/phase3a-angr/bin/python",
+      "-c",
+      "import json, sys, traceback\nbinary, func_name, raw_path, meta_path = sys.argv[1:5]\npayload = {\"status\": \"started\"}\ntry:\n    import angr\n    project = angr.Project(binary, auto_load_libs=False)\n    cfg = project.analyses.CFGFast(normalize=True, data_references=True)\n    func = project.kb.functions.function(name=func_name)\n    if func is None:\n        payload[\"status\"] = \"missing_function\"\n        open(raw_path, \"w\", encoding=\"utf-8\").write(\"\")\n    else:\n        decomp = project.analyses.Decompiler(func, cfg=cfg.model)\n        text = str(decomp.codegen.text if decomp.codegen is not None else \"\")\n        open(raw_path, \"w\", encoding=\"utf-8\").write(text + (\"\" if text.endswith(\"\\n\") else \"\\n\"))\n        payload.update({\"status\": \"decompiled\" if text.strip() else \"empty_output\", \"text_len\": len(text)})\nexcept Exception as exc:\n    payload.update({\"status\": \"exception\", \"error\": repr(exc), \"traceback_tail\": traceback.format_exc()[-2000:]})\n    open(raw_path, \"w\", encoding=\"utf-8\").write(\"\")\nopen(meta_path, \"w\", encoding=\"utf-8\").write(json.dumps(payload, sort_keys=True) + \"\\n\")\nsys.exit(0 if payload.get(\"status\") == \"decompiled\" else 2)\n",
+      "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/synthetic_scalar.exe",
+      "synthetic_scalar",
+      "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/angr_raw.c",
+      "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/angr_meta.json"
+    ],
+    "elapsed_s": 1.092,
+    "returncode": 0,
+    "stderr_tail": "",
+    "stdout_tail": ""
+  },
+  "angr_consumed_binary": true,
+  "angr_metadata": {
+    "status": "decompiled",
+    "text_len": 123
+  },
+  "angr_python": "/home/shx/.venvs/phase3a-angr/bin/python",
+  "clang_version": {
+    "argv": [
+      "/home/shx/.conda/envs/phase3ar-clang/bin/clang",
+      "--version"
+    ],
+    "elapsed_s": 0.024,
+    "returncode": 0,
+    "stderr_tail": "",
+    "stdout_tail": "clang version 17.0.6 (https://github.com/conda-forge/clangdev-feedstock 8d7a58135ca9bf5ee26df8d4df19e052c3446255)\nTarget: x86_64-conda-linux-gnu\nThread model: posix\nInstalledDir: /home/shx/.conda/envs/phase3ar-clang/bin\nConfiguration file: /home/shx/.conda/envs/phase3ar-clang/bin/x86_64-conda-linux-gnu-clang.cfg\n"
+  },
+  "compile": {
+    "argv": [
+      "/home/shx/.conda/envs/phase3ar-clang/bin/clang",
+      "-std=c11",
+      "-Wall",
+      "-Wextra",
+      "-O2",
+      "-g",
+      "-fno-inline",
+      "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/synthetic_scalar_function.c",
+      "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/synthetic_scalar_driver.c",
+      "-o",
+      "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/synthetic_scalar.exe"
+    ],
+    "elapsed_s": 0.104,
+    "returncode": 0,
+    "stderr_tail": "",
+    "stdout_tail": ""
+  },
+  "compile_ok": true,
+  "compiler_path": "/home/shx/.conda/envs/phase3ar-clang/bin/clang",
+  "created_at_utc": "2026-07-08T03:39:48Z",
+  "disassembly": {
+    "argv": [
+      "/home/shx/.conda/envs/phase3ar-clang/bin/llvm-objdump",
+      "-d",
+      "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/synthetic_scalar.exe"
+    ],
+    "elapsed_s": 0.019,
+    "returncode": 0,
+    "stderr_tail": "",
+    "stdout_tail": "q\t%rsi\n    10c2: 74 14                        \tje\t0x10d8 <register_tm_clones+0x38>\n    10c4: 48 8b 05 0d 2f 00 00         \tmovq\t0x2f0d(%rip), %rax      # 0x3fd8 <synthetic_scalar_function.c+0x3fd8>\n    10cb: 48 85 c0                     \ttestq\t%rax, %rax\n    10ce: 74 08                        \tje\t0x10d8 <register_tm_clones+0x38>\n    10d0: ff e0                        \tjmpq\t*%rax\n    10d2: 66 0f 1f 44 00 00            \tnopw\t(%rax,%rax)\n    10d8: c3                           \tretq\n    10d9: 0f 1f 80 00 00 00 00         \tnopl\t(%rax)\n\n00000000000010e0 <__do_global_dtors_aux>:\n    10e0: f3 0f 1e fa                  \tendbr64\n    10e4: 80 3d 25 2f 00 00 00         \tcmpb\t$0x0, 0x2f25(%rip)      # 0x4010 <completed.0>\n    10eb: 75 2b                        \tjne\t0x1118 <__do_global_dtors_aux+0x38>\n    10ed: 55                           \tpushq\t%rbp\n    10ee: 48 83 3d ea 2e 00 00 00      \tcmpq\t$0x0, 0x2eea(%rip)      # 0x3fe0 <synthetic_scalar_function.c+0x3fe0>\n    10f6: 48 89 e5                     \tmovq\t%rsp, %rbp\n    10f9: 74 0c                        \tje\t0x1107 <__do_global_dtors_aux+0x27>\n    10fb: 48 8b 3d 06 2f 00 00         \tmovq\t0x2f06(%rip), %rdi      # 0x4008 <__dso_handle>\n    1102: e8 29 ff ff ff               \tcallq\t0x1030 <__cxa_finalize@plt>\n    1107: e8 64 ff ff ff               \tcallq\t0x1070 <deregister_tm_clones>\n    110c: c6 05 fd 2e 00 00 01         \tmovb\t$0x1, 0x2efd(%rip)      # 0x4010 <completed.0>\n    1113: 5d                           \tpopq\t%rbp\n    1114: c3                           \tretq\n    1115: 0f 1f 00                     \tnopl\t(%rax)\n    1118: c3                           \tretq\n    1119: 0f 1f 80 00 00 00 00         \tnopl\t(%rax)\n\n0000000000001120 <frame_dummy>:\n    1120: f3 0f 1e fa                  \tendbr64\n    1124: e9 77 ff ff ff               \tjmp\t0x10a0 <register_tm_clones>\n    1129: 0f 1f 80 00 00 00 00         \tnopl\t(%rax)\n\n0000000000001130 <synthetic_scalar>:\n    1130: 40 f6 c7 01                  \ttestb\t$0x1, %dil\n    1134: 8d 4c 7f 05                  \tleal\t0x5(%rdi,%rdi,2), %ecx\n    1138: 8d 44 7f f9                  \tleal\t-0x7(%rdi,%rdi,2), %eax\n    113c: 0f 44 c1                     \tcmovel\t%ecx, %eax\n    113f: c3                           \tretq\n\n0000000000001140 <main>:\n    1140: 50                           \tpushq\t%rax\n    1141: bf 03 00 00 00               \tmovl\t$0x3, %edi\n    1146: e8 e5 ff ff ff               \tcallq\t0x1130 <synthetic_scalar>\n    114b: 31 c9                        \txorl\t%ecx, %ecx\n    114d: 83 f8 02                     \tcmpl\t$0x2, %eax\n    1150: 0f 95 c1                     \tsetne\t%cl\n    1153: 89 c8                        \tmovl\t%ecx, %eax\n    1155: 59                           \tpopq\t%rcx\n    1156: c3                           \tretq\n\nDisassembly of section .fini:\n\n0000000000001158 <_fini>:\n    1158: f3 0f 1e fa                  \tendbr64\n    115c: 48 83 ec 08                  \tsubq\t$0x8, %rsp\n    1160: 48 83 c4 08                  \taddq\t$0x8, %rsp\n    1164: c3                           \tretq\n"
+  },
+  "disassembly_found": true,
+  "ghidra": {
+    "argv": [
+      "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase6r_tools/ghidra_user/ghidra_12.1.2_PUBLIC/support/analyzeHeadless",
+      "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/ghidra_projects",
+      "phase3ar_synth",
+      "-import",
+      "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/synthetic_scalar.exe",
+      "-scriptPath",
+      "/home/shx/projects/binary_faithful_decompilation/analysis/decompile_faithfulness/ghidra_scripts",
+      "-postScript",
+      "ExportFunctionDecomp.java",
+      "synthetic_scalar",
+      "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/ghidra_raw.c",
+      "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/ghidra_meta.json",
+      "-deleteProject"
+    ],
+    "elapsed_s": 8.151,
+    "returncode": 0,
+    "stderr_tail": "openjdk version \"21.0.7\" 2025-04-15\nOpenJDK Runtime Environment (build 21.0.7+6-Ubuntu-0ubuntu120.04)\nOpenJDK 64-Bit Server VM (build 21.0.7+6-Ubuntu-0ubuntu120.04, mixed mode)\n",
+    "stdout_tail": "xup Installer                       0.002 secs\n    Create Address Tables                      0.004 secs\n    Create Function                            0.000 secs\n    DWARF                                      0.084 secs\n    Data Reference                             0.012 secs\n    Decompiler Switch Analysis                 0.839 secs\n    Demangler GNU                              0.017 secs\n    Disassemble Entry Points                   0.050 secs\n    ELF Scalar Operand References              0.004 secs\n    Embedded Media                             0.003 secs\n    External Entry References                  0.001 secs\n    Function ID                                0.035 secs\n    Function Start Pre Search                  0.003 secs\n    Function Start Search                      0.038 secs\n    Function Start Search After Code           0.001 secs\n    Function Start Search After Data           0.001 secs\n    GCC Exception Handlers                     0.025 secs\n    Non-Returning Functions - Discovered       0.000 secs\n    Non-Returning Functions - Known            0.001 secs\n    Reference                                  0.010 secs\n    Shared Return Calls                        0.004 secs\n    Stack                                      0.023 secs\n    Subroutine References                      0.002 secs\n    Subroutine References - One Time           0.001 secs\n    x86 Constant Reference Analyzer            0.037 secs\n-----------------------------------------------------\n     Total Time   2 secs\n-----------------------------------------------------\n (AutoAnalysisManager)  \nINFO  REPORT: Analysis succeeded for file: file:///home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/synthetic_scalar.exe (HeadlessAnalyzer)  \nINFO  REPORT: Execute script: ExportFunctionDecomp.java 'synthetic_scalar' '/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/ghidra_raw.c' '/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/ghidra_meta.json'  (HeadlessAnalyzer)  \nINFO  SCRIPT: /home/shx/projects/binary_faithful_decompilation/analysis/decompile_faithfulness/ghidra_scripts/ExportFunctionDecomp.java (HeadlessAnalyzer)  \nINFO  ANALYZING changes made by post scripts: file:///home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/synthetic_scalar.exe (HeadlessAnalyzer)  \nINFO  REPORT: Post-analysis succeeded for file: file:///home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/synthetic_scalar.exe (HeadlessAnalyzer)  \nINFO  /synthetic_scalar.exe: file created (shx) (LocalFileSystem)  \nINFO  REPORT: Save succeeded for: /synthetic_scalar.exe (phase3ar_synth:/synthetic_scalar.exe) (HeadlessAnalyzer)  \nINFO  REPORT: Import succeeded (HeadlessAnalyzer)  \n"
+  },
+  "ghidra_consumed_binary": true,
+  "ghidra_headless_path": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase6r_tools/ghidra_user/ghidra_12.1.2_PUBLIC/support/analyzeHeadless",
+  "ghidra_metadata": {
+    "c_size": 199,
+    "entry": "00101130",
+    "error": "",
+    "function_name": "synthetic_scalar",
+    "signature": "int __stdcall synthetic_scalar(int x)",
+    "status": "decompiled"
+  },
+  "harness_build": {
+    "argv": [
+      "/home/shx/.conda/envs/phase3ar-clang/bin/clang",
+      "-std=c11",
+      "-Wall",
+      "-Wextra",
+      "-O2",
+      "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/synthetic_scalar_function.c",
+      "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/harness.c",
+      "-o",
+      "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/harness.exe"
+    ],
+    "elapsed_s": 0.108,
+    "returncode": 0,
+    "stderr_tail": "",
+    "stdout_tail": ""
+  },
+  "harness_ok": true,
+  "harness_run": {
+    "argv": [
+      "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/harness.exe"
+    ],
+    "elapsed_s": 0.002,
+    "returncode": 0,
+    "stderr_tail": "",
+    "stdout_tail": ""
+  },
+  "install_or_activation_commands": [
+    "conda create -y -p /home/shx/.conda/envs/phase3ar-clang -c conda-forge clang=17 llvm-tools"
+  ],
+  "java_home": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase6r_tools/ghidra_user/root/usr/lib/jvm/java-21-openjdk-amd64",
+  "llvm_nm_path": "/home/shx/.conda/envs/phase3ar-clang/bin/llvm-nm",
+  "llvm_nm_version": {
+    "argv": [
+      "/home/shx/.conda/envs/phase3ar-clang/bin/llvm-nm",
+      "--version"
+    ],
+    "elapsed_s": 0.016,
+    "returncode": 0,
+    "stderr_tail": "",
+    "stdout_tail": "llvm-nm, compatible with GNU nm\nLLVM (http://llvm.org/):\n  LLVM version 17.0.6\n  Optimized build.\n"
+  },
+  "llvm_objdump_path": "/home/shx/.conda/envs/phase3ar-clang/bin/llvm-objdump",
+  "llvm_objdump_version": {
+    "argv": [
+      "/home/shx/.conda/envs/phase3ar-clang/bin/llvm-objdump",
+      "--version"
+    ],
+    "elapsed_s": 0.016,
+    "returncode": 0,
+    "stderr_tail": "",
+    "stdout_tail": "LLVM (http://llvm.org/):\n  LLVM version 17.0.6\n  Optimized build.\n\n\n  Registered Targets:\n    aarch64     - AArch64 (little endian)\n    aarch64_32  - AArch64 (little endian ILP32)\n    aarch64_be  - AArch64 (big endian)\n    amdgcn      - AMD GCN GPUs\n    arm         - ARM\n    arm64       - ARM64 (little endian)\n    arm64_32    - ARM64 (little endian ILP32)\n    armeb       - ARM (big endian)\n    avr         - Atmel AVR Microcontroller\n    bpf         - BPF (host endian)\n    bpfeb       - BPF (big endian)\n    bpfel       - BPF (little endian)\n    hexagon     - Hexagon\n    lanai       - Lanai\n    loongarch32 - 32-bit LoongArch\n    loongarch64 - 64-bit LoongArch\n    mips        - MIPS (32-bit big endian)\n    mips64      - MIPS (64-bit big endian)\n    mips64el    - MIPS (64-bit little endian)\n    mipsel      - MIPS (32-bit little endian)\n    msp430      - MSP430 [experimental]\n    nvptx       - NVIDIA PTX 32-bit\n    nvptx64     - NVIDIA PTX 64-bit\n    ppc32       - PowerPC 32\n    ppc32le     - PowerPC 32 LE\n    ppc64       - PowerPC 64\n    ppc64le     - PowerPC 64 LE\n    r600        - AMD GPUs HD2XXX-HD6XXX\n    riscv32     - 32-bit RISC-V\n    riscv64     - 64-bit RISC-V\n    sparc       - Sparc\n    sparcel     - Sparc LE\n    sparcv9     - Sparc V9\n    systemz     - SystemZ\n    thumb       - Thumb\n    thumbeb     - Thumb (big endian)\n    ve          - VE\n    wasm32      - WebAssembly 32-bit\n    wasm64      - WebAssembly 64-bit\n    x86         - 32-bit X86: Pentium-Pro and above\n    x86-64      - 64-bit X86: EM64T and AMD64\n    xcore       - XCore\n"
+  },
+  "producer_status": "available",
+  "smoke_binary": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/synthetic_scalar.exe",
+  "smoke_driver_source": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/synthetic_scalar_driver.c",
+  "smoke_function_source": "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/synthetic_scalar_function.c",
+  "status": "available",
+  "symbol_found": true,
+  "symbol_metadata": {
+    "argv": [
+      "/home/shx/.conda/envs/phase3ar-clang/bin/llvm-nm",
+      "-an",
+      "/home/shx/projects/binary_faithful_decompilation/analysis_outputs/decompile_faithfulness/phase3ar_recovery/smoke/clang/synthetic_scalar.exe"
+    ],
+    "elapsed_s": 0.016,
+    "returncode": 0,
+    "stderr_tail": "",
+    "stdout_tail": "                 w _ITM_deregisterTMCloneTable\n                 w _ITM_registerTMCloneTable\n                 w __cxa_finalize@GLIBC_2.2.5\n                 w __gmon_start__\n                 U __libc_start_main@GLIBC_2.34\n0000000000000000 a \n0000000000000000 a Scrt1.o\n0000000000000000 a crtstuff.c\n0000000000000000 a crtstuff.c\n0000000000000000 a synthetic_scalar_driver.c\n0000000000000000 a synthetic_scalar_function.c\n0000000000001000 T _init\n0000000000001040 T _start\n0000000000001070 t deregister_tm_clones\n00000000000010a0 t register_tm_clones\n00000000000010e0 t __do_global_dtors_aux\n0000000000001120 t frame_dummy\n0000000000001130 T synthetic_scalar\n0000000000001140 T main\n0000000000001158 T _fini\n0000000000002000 R _IO_stdin_used\n0000000000002004 r __GNU_EH_FRAME_HDR\n00000000000020d8 r __FRAME_END__\n0000000000002100 r __abi_tag\n0000000000003e00 d __frame_dummy_init_array_entry\n0000000000003e08 d __do_global_dtors_aux_fini_array_entry\n0000000000003e10 d _DYNAMIC\n0000000000003fe8 d _GLOBAL_OFFSET_TABLE_\n0000000000004000 D __data_start\n0000000000004000 W data_start\n0000000000004008 D __dso_handle\n0000000000004010 D __TMC_END__\n0000000000004010 B __bss_start\n0000000000004010 D _edata\n0000000000004010 b completed.0\n0000000000004018 B _end\n"
+  }
+}
