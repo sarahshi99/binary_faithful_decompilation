@@ -1,0 +1,42 @@
+# Phase 3a-R Producer Recovery Handoff
+
+Updated: 2026-07-08T04:16:15Z
+
+- Branch: `phase3ar-producer-recovery-census`
+- Starting Phase 3a HEAD: `db5a9fc78e43d2702f9490184d0ae690a6a57c4d`
+- Recovery preregistration commit: `7b01b70c8c6c96bda1faaa49367faaa7ad8313d3`
+- Clang recovery status: `available`
+- LLM4Decompile recovery status: `blocked`; blocker `gpu_smoke_escalation_rejected_by_auto_review_model_unavailable`
+- Recovery matrix size: `400`
+- Recovered candidate seal commit and hash: `7dcdfc66b06a23710c76e9915cdf87d7b0dba687` / `42249cfb4a9e47d2001efc0d5e58f69bfbe96568567b779a44aaedd2752a6c6a`
+- Recovered labeling result commit and final HEAD: pending final commit / `de03094fbd798ff7369498ff23b478ef79d163c5`
+- Original Phase 3a candidate seal hash: `e34f3c7532a8a2b399ef5be4c7a931b3f4d5e7c982c6f5d29adb14a89c8971f4`
+- Verified function/fixture seal: `2bba63e1a191050f2ec0e15a8f58ed7eff9a5c9bf1f21b672b7ab9bfc64c1494`
+- Recovered attempts by producer/build view: `{"angr/clang_O2": 80, "ghidra/clang_O2": 80, "mycodex_api/clang_O2": 80}`
+- Recovered parse-ready count: `134`
+- Recovered compile-ready count: `99`
+- Recovered semantic_wrong count: `10`
+- Recovered fixture-passing semantic_wrong count: `1`
+- Recovered fixture-failing semantic_wrong count: `9`
+- Combined candidate count: `640`
+- Combined compile-ready count: `314`
+- Combined semantic_wrong count: `20`
+- Combined fixture-passing semantic_wrong count: `1`
+- Combined no_mismatch count: `275`
+- Combined non_evaluable count and reasons: `{"api_exception": 67, "compile_failure": 60, "compiler_unavailable:clang": 80, "llm4decompile_exception": 80, "runtime_failure_1": 18, "runtime_failure_124": 1, "target_symbol_or_disassembly_missing": 39}`
+- Natural wrong counts by project: `{"open62541": 1}`
+- Natural wrong counts by function: `{"open62541::deps_mp_printf.c::is_digit_::0002::8633e37596f0": 1}`
+- Natural wrong counts by producer: `{"angr": 1}`
+- Natural wrong counts by build view: `{"clang_O2": 1}`
+- Preliminary error-category counts: `{"signedness or width error": 1}`
+- Low-density count: `0`
+- Multi-argument/loop/lookup error count: `0`
+- mycodex API usage and cost: `67` attempted mycodex Clang-O2 recovery requests were blocked locally by sandbox network permissions (`URLError(PermissionError(1, 'Operation not permitted'))`); no provider response IDs or usage were returned, and no post-label retry was performed.
+- LLM4Decompile GPU time, batch size, precision, peak memory: GPU smoke/generation blocked by escalation infrastructure; batch size `1`, precision `bfloat16`, peak memory `0`.
+- Exact census-gate outcome: minimum `failed`, strong `failed`.
+- Phase 3b auditor evaluation authorized: `False`
+- Tests run: `{"confirmation": "No auditor, libFuzzer, budget curve, or auditor result table was run by Phase 3a-R recovery code.", "tests": [{"command": "python -m unittest discover tests", "result": "OK", "tests": 194}, {"command": "python -m unittest discover analysis/decompile_faithfulness/tests", "result": "OK", "tests": 118}, {"command": "python -m unittest analysis/decompile_faithfulness/tests/test_phase3ar_recovery.py", "result": "OK", "tests": 10}]}`
+- Confirmation: no auditing policy was run.
+- Confirmation: libFuzzer was not run.
+- Confirmation: no budget curves or auditor tables were generated.
+- Exact recommendation: `report remaining infrastructure blocker`.

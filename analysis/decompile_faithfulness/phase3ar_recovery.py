@@ -723,7 +723,7 @@ Updated: {now_utc()}
 - Preliminary error-category counts: `{json.dumps(gate["category_counts"], sort_keys=True)}`
 - Low-density count: `{gate["low_density_count"]}`
 - Multi-argument/loop/lookup error count: `{gate["multi_argument_loop_lookup_count"]}`
-- mycodex API usage and cost: request/response metadata sealed where requests completed; cost not computed because provider pricing is not sealed.
+- mycodex API usage and cost: `{sum(1 for row in recovered_rows if row.get("producer") == "mycodex_api" and row.get("non_evaluable_reason") == "api_exception")}` attempted mycodex Clang-O2 recovery requests were blocked locally by sandbox network permissions (`URLError(PermissionError(1, 'Operation not permitted'))`); no provider response IDs or usage were returned, and no post-label retry was performed.
 - LLM4Decompile GPU time, batch size, precision, peak memory: GPU smoke/generation blocked by escalation infrastructure; batch size `{p3a.LLM_DECODING["batch_size"]}`, precision `{p3a.LLM_DECODING["precision"]}`, peak memory `0`.
 - Exact census-gate outcome: minimum `{gate["minimum_gate_status"]}`, strong `{gate["strong_gate_status"]}`.
 - Phase 3b auditor evaluation authorized: `{gate["phase3b_authorized_for_review"]}`
